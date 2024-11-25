@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-25 20:27+0000\n"
-"PO-Revision-Date: 2024-11-25 20:22+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2024-11-25 22:05+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Dutch <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch <http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/components/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../source/components/nethsm/administration.rst:2
@@ -2574,6 +2575,8 @@ msgid ""
 "Please refer to the following chapters to learn more about the NetHSM "
 "container images."
 msgstr ""
+"Raadpleeg de volgende hoofdstukken voor meer informatie over de NetHSM "
+"container images."
 
 #: ../source/components/nethsm/container/production-image.rst:2
 #, fuzzy
@@ -2589,6 +2592,12 @@ msgid ""
 "encryption. The image is distributed as OCI image and can be run locally "
 "with a compatible executor such as Docker and Podman."
 msgstr ""
+"De productie-image is bedoeld voor productieomgevingen met hoge "
+"beveiligingseisen. Het vereist een externe etcd key-value store die "
+"verbonden is via een versleutelde verbinding. Het NetHSM proces kan worden "
+"uitgevoerd met hardware-gebaseerde scheiding (KVM) en apparaatspecifieke "
+"versleuteling. Het image wordt gedistribueerd als OCI image en kan lokaal "
+"worden uitgevoerd met een compatibele executor zoals Docker en Podman."
 
 #: ../source/components/nethsm/container/container-hardware-restriction.rst.inc:1
 msgid ""
@@ -2627,6 +2636,11 @@ msgid ""
 "<https://registry.git.nitrokey.com/distribution/nethsm>`_ using the "
 "credentials provided after purchase."
 msgstr ""
+"De NetHSM productiecontainer is een product voor betalende klanten en kan "
+"hier worden gekocht ` <https://www.nitrokey.com/contact>` __. De image kan "
+"worden verkregen van `Nitrokey NetHSM register <https://registry.git.nitrokey"
+".com/distribution/nethsm>`_ met behulp van de referenties die na aankoop "
+"worden verstrekt."
 
 #: ../source/components/nethsm/container/production-image.rst:16
 msgid ""
@@ -2636,17 +2650,24 @@ msgid ""
 "existent so that the entropy used and provided by the NetHSM depends on "
 "the platform's entropy."
 msgstr ""
+"De veiligheid van de NetHSM softwarecontainer hangt sterk af van de "
+"veiligheid van het platform. Een gecompromitteerd platform kan gemakkelijk "
+"een NetHSM software container die het uitvoert compromitteren. Daarnaast "
+"bestaat de TRNG niet zodat de entropie die gebruikt en geleverd wordt door "
+"de NetHSM afhangt van de entropie van het platform."
 
 #: ../source/components/nethsm/container/production-image.rst:21
 #: ../source/components/nethsm/container/test-image.rst:19
 msgid "Tagging Policy"
-msgstr ""
+msgstr "Tagging-beleid"
 
 #: ../source/components/nethsm/container/production-image.rst:23
 msgid ""
 "The images in the repository are tagged with the Git commit hash and the "
 "version of the release. The latest image is tagged with ``latest``."
 msgstr ""
+"De afbeeldingen in het archief worden gelabeld met de Git commit hash en de "
+"versie van de uitgave. De nieuwste image is gelabeld met ``latest``."
 
 #: ../source/components/nethsm/container/production-image.rst:27
 #, fuzzy
@@ -2657,13 +2678,15 @@ msgstr "Belangrijkste operaties"
 msgid ""
 "The image can be run in two modes of operation, i.e. Unix process or "
 "unikernel."
-msgstr ""
+msgstr "De image kan in twee modi draaien, namelijk Unix proces of unikernel."
 
 #: ../source/components/nethsm/container/production-image.rst:31
 msgid ""
 "The Unix process mode runs NetHSM as a process on top of the operating "
 "system."
 msgstr ""
+"De Unix procesmodus draait NetHSM als een proces bovenop het "
+"besturingssysteem."
 
 #: ../source/components/nethsm/container/production-image.rst:33
 msgid ""
@@ -2672,10 +2695,16 @@ msgid ""
 "is only available on Linux and requires access to the ``/dev/tun`` and "
 "``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
 msgstr ""
+"De unikernel-modus draait NetHSM als gast in een virtuele machine op basis "
+"van KVM en biedt een sterke scheiding van het host-besturingssysteem. Deze "
+"modus is alleen beschikbaar op Linux en vereist toegang tot de ``/dev/tun`` "
+"en ``/dev/kvm`` apparaatknooppunten en de ``NET_ADMIN`` mogelijkheid."
 
 #: ../source/components/nethsm/container/production-image.rst:38
 msgid "For security choose to run the container in the unikernel mode."
 msgstr ""
+"Kies er voor de veiligheid voor om de container in unikernel modus te "
+"draaien."
 
 #: ../source/components/nethsm/container/production-image.rst:40
 msgid ""
@@ -2683,6 +2712,9 @@ msgid ""
 "chapter `Configuration <container.html#production-image-"
 "configuration>`__)."
 msgstr ""
+"De modus kan worden ingesteld met de omgevingsvariabele ``MODE`` (zie "
+"volgende hoofdstuk `Configuratie <container.html#production-image-"
+"configuration>`__)."
 
 #: ../source/components/nethsm/container/production-image.rst:43
 #: ../source/components/nethsm/container/test-image.rst:25
@@ -2701,17 +2733,17 @@ msgstr "De container kan als volgt worden uitgevoerd."
 #: ../source/components/nethsm/container/production-image.rst:48
 #: ../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
-msgstr ""
+msgstr "Omgevingsvariabele"
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
-msgstr ""
+msgstr "`DEBUG_LOG`"
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
-msgstr ""
+msgstr "Schakelt uitgebreide logboekregistratie voor NetHSM in."
 
 #: ../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
@@ -2721,6 +2753,8 @@ msgstr "PIN deblokkeren"
 #: ../source/components/nethsm/container/production-image.rst:52
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr ""
+"Een ingesteld ontgrendelingswachtwoord ontgrendelt de container automatisch "
+"tijdens het starten."
 
 #: ../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
@@ -2730,6 +2764,7 @@ msgstr "``time``"
 #: ../source/components/nethsm/container/production-image.rst:54
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr ""
+"De modus accepteert de waarden `unix` of `unikernel`, standaard staat `unix`."
 
 #: ../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
@@ -2738,7 +2773,7 @@ msgstr "``PKCS1``"
 
 #: ../source/components/nethsm/container/production-image.rst:56
 msgid "The URL/IP address of the host running the etcd service."
-msgstr ""
+msgstr "Het URL/IP-adres van de host waarop de etcd-service draait."
 
 #: ../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
@@ -2747,7 +2782,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:58
 msgid "The port running the etcd service, defaults to `2379`."
-msgstr ""
+msgstr "De poort waarop de etcd-service draait, standaard `2379`."
 
 #: ../source/components/nethsm/container/production-image.rst:60
 #, fuzzy
@@ -2788,10 +2823,12 @@ msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
 msgstr ""
+"De container runtime geheimen zoals certificaten en privésleutels moeten "
+"worden ingesteld met de geheimenfunctie van Docker of Podman."
 
 #: ../source/components/nethsm/container/production-image.rst:70
 msgid "Secret variable"
-msgstr ""
+msgstr "Geheime variabele"
 
 #: ../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
@@ -2801,6 +2838,8 @@ msgstr "``USER_ID``"
 #: ../source/components/nethsm/container/production-image.rst:72
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr ""
+"CA-certificaat dat het clientcertificaat en servercertificaat heeft "
+"ondertekend."
 
 #: ../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
@@ -2812,6 +2851,8 @@ msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
 msgstr ""
+"Cliëntcertificaat voor verificatie van het NetHSM proces met de "
+"sleutelwaardenopslag."
 
 #: ../source/components/nethsm/container/production-image.rst:76
 #, fuzzy
@@ -2823,6 +2864,8 @@ msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
 msgstr ""
+"Cliëntsleutel voor authenticatie van het NetHSM proces met de sleutel-waarde "
+"opslag."
 
 #: ../source/components/nethsm/container/production-image.rst:78
 #, fuzzy
@@ -2831,7 +2874,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:78
 msgid "Server certificate for the API of the key-value store."
-msgstr ""
+msgstr "Servercertificaat voor de API van de sleutelwaardenopslag."
 
 #: ../source/components/nethsm/container/production-image.rst:80
 #, fuzzy
@@ -2840,11 +2883,11 @@ msgstr "Server sleutel"
 
 #: ../source/components/nethsm/container/production-image.rst:80
 msgid "Server key for the API of the key-value store."
-msgstr ""
+msgstr "Server sleutel voor de API van de sleutelwaarde opslag."
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid "``device_key``"
-msgstr ""
+msgstr "`device_key`"
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid ""
@@ -2853,6 +2896,10 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ in the system design."
 msgstr ""
+"De apparaatsleutel van het NetHSM proces. Raadpleeg het hoofdstuk `"
+"Terminologie en conventies <https://github.com/Nitrokey/nethsm/blob/main/"
+"docs/system-design.md#terminology-and-conventions>`__ in het systeemontwerp "
+"voor meer informatie over de apparaatsleutel."
 
 #: ../source/components/nethsm/container/production-image.rst:88
 #: ../source/components/nethsm/container/test-image.rst:36
@@ -2878,6 +2925,10 @@ msgid ""
 "how to run the container with the provided compose files or with the "
 "_run_ command."
 msgstr ""
+"De productiecontainer ondersteunt twee `werkingsmodi <container.html#Modes "
+"of Operation>`__. In de volgende hoofdstukken wordt beschreven hoe de "
+"container wordt uitgevoerd met de meegeleverde samenstelbestanden of met het "
+"commando _run_."
 
 #: ../source/components/nethsm/container/production-image.rst:93
 #, fuzzy
@@ -2891,6 +2942,10 @@ msgid ""
 "/compose-unix.yaml>`__. Make sure you have the necessary files for the "
 "secrets, mentioned in the compose file, available."
 msgstr ""
+"Je kunt een meegeleverd samenstelbestand `hier <https://raw.githubusercontent"
+".com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unix.yaml>`"
+"__. Zorg ervoor dat je de benodigde bestanden voor de geheimen, genoemd in "
+"het compose bestand, beschikbaar hebt."
 
 #: ../source/components/nethsm/container/production-image.rst:98
 #: ../source/components/nethsm/container/production-image.rst:128
@@ -2901,6 +2956,11 @@ msgid ""
 "configuration options, as described in chapter `Configuration "
 "<container.html#production-image-configuration>`__."
 msgstr ""
+"Om de container te draaien zonder het compose bestand moet je zelf een "
+"externe etcd voorzien. `Hier <https://quay.io/coreos/etcd>`__ vind je de "
+"aanbevolen container image voor etcd. Zorg ervoor dat je de "
+"configuratieopties doorgeeft, zoals beschreven in hoofdstuk `Configuratie "
+"<container.html#production-image-configuration>`__."
 
 #: ../source/components/nethsm/container/production-image.rst:102
 #: ../source/components/nethsm/container/production-image.rst:132
@@ -2947,7 +3007,7 @@ msgstr ""
 
 #: ../source/components/nethsm/container/production-image.rst:123
 msgid "Unikernel Mode"
-msgstr ""
+msgstr "Unikernel-modus"
 
 #: ../source/components/nethsm/container/production-image.rst:125
 msgid ""
@@ -2956,6 +3016,10 @@ msgid ""
 "/compose-unikernel.yaml>`__. Make sure you have the necessary files for "
 "the secrets, mentioned in the compose file, available."
 msgstr ""
+"Je kunt een meegeleverd samenstelbestand `hier <https://raw.githubusercontent"
+".com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unikernel."
+"yaml>`__. Zorg ervoor dat je de benodigde bestanden voor de geheimen, "
+"genoemd in het compose bestand, beschikbaar hebt."
 
 #: ../source/components/nethsm/container/production-image.rst:145
 msgid ""
@@ -2982,12 +3046,21 @@ msgid ""
 "unencrypted. The image is distributed as OCI image and can be run locally"
 " with a compatible executor such as Docker and Podman."
 msgstr ""
+"Het testimage wordt geleverd voor test- en ontwikkelingsdoeleinden. Het "
+"biedt niet de mogelijkheid om het NetHSM proces met hardware-gebaseerde "
+"scheiding (KVM) uit te voeren, om de data store te versleutelen, of om een "
+"externe etcd te gebruiken. De verbinding tussen het NetHSM proces en de "
+"geïntegreerde key-value opslag is niet versleuteld. Het image wordt "
+"gedistribueerd als OCI image en kan lokaal worden uitgevoerd met een "
+"compatibele executor zoals Docker en Podman."
 
 #: ../source/components/nethsm/container/test-image.rst:11
 msgid ""
 "The image can be obtained from `Docker Hub "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_."
 msgstr ""
+"Het image kan worden verkregen van `Docker Hub <https://hub.docker.com/r/"
+"nitrokey/nethsm>`_."
 
 #: ../source/components/nethsm/container/test-image.rst:15
 msgid ""
@@ -2995,6 +3068,9 @@ msgid ""
 " use cases. For production environments with high security demands you "
 "must use the production image."
 msgstr ""
+"Gebruik de testimage in geen geval voor productiegegevens en use cases. Voor "
+"productieomgevingen met hoge beveiligingseisen moet je de productie-image "
+"gebruiken."
 
 #: ../source/components/nethsm/container/test-image.rst:21
 msgid ""
@@ -3002,10 +3078,13 @@ msgid ""
 " main branch of the `repository <https://github.com/nitrokey/nethsm>`__. "
 "The latest image is tagged with ``testing``."
 msgstr ""
+"De afbeeldingen in het archief zijn gelabeld met de Git commit hash van de "
+"hoofdbranch van het `archief <https://github.com/nitrokey/nethsm>`__. De "
+"nieuwste afbeelding is getagd met ``testing``."
 
 #: ../source/components/nethsm/container/test-image.rst:27
 msgid "The image can be configured with the following environment variables."
-msgstr ""
+msgstr "De image kan worden geconfigureerd met de volgende omgevingsvariabelen."
 
 #: ../source/components/nethsm/container/test-image.rst:51
 #, fuzzy
@@ -3641,6 +3720,8 @@ msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
 msgstr ""
+"NetHSM `container images <container/index.html>`__ zijn beschikbaar voor "
+"testen en productie."
 
 #: ../source/components/nethsm/integration.rst:36
 msgid "Integration Into Custom Application"
@@ -9927,7 +10008,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:10
 #: ../source/components/nitrokeys/features/u2f/index.rst:13
 msgid "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:13
 #: ../source/components/nitrokeys/features/fido2/index.rst:11
@@ -9958,7 +10039,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:11
 #: ../source/components/nitrokeys/features/u2f/index.rst:14
 msgid "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:14
 #: ../source/components/nitrokeys/features/fido2/index.rst:12
@@ -10024,6 +10105,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:16
 msgid "`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 msgstr ""
+"`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:16
 #: ../source/components/nitrokeys/features/fido2/index.rst:14
@@ -10057,6 +10139,7 @@ msgid ""
 "`Nitrokey Storage 2 "
 "<https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 msgstr ""
+"`Nitrokey Opslag 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:18
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:19
@@ -10181,7 +10264,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:24
 #: ../source/components/nitrokeys/features/u2f/index.rst:25
 msgid "⨯"
-msgstr ""
+msgstr "⨯"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:25
 #: ../source/components/nitrokeys/features/fido2/index.rst:16
@@ -10377,7 +10460,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Website Login"
-msgstr ""
+msgstr "Inloggen website"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 #, fuzzy
@@ -10386,7 +10469,7 @@ msgstr "Nextcloud"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Passwordless Microsoft Login (Windows only)"
-msgstr ""
+msgstr "Wachtwoordloze Microsoft-login (alleen Windows)"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:2
 #: ../source/components/nitrokeys/features/index.rst:4
@@ -10681,7 +10764,7 @@ msgstr "img11"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
-msgstr ""
+msgstr "2FA Website Aanmelden"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:11
 #: ../source/components/nitrokeys/fido2/getting-started.rst:4
@@ -11730,11 +11813,11 @@ msgstr "Start"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "GPA"
-msgstr ""
+msgstr "GPA"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "DNSSEC (Linux only)"
-msgstr ""
+msgstr "DNSSEC (alleen Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:2
@@ -11755,7 +11838,7 @@ msgstr "Import Sleutel"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Stunnel (Linux only)"
-msgstr ""
+msgstr "Stunnel (alleen Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #, fuzzy
@@ -11764,7 +11847,7 @@ msgstr "De certificeringsinstantie"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Ipsec (Linux only)"
-msgstr ""
+msgstr "Ipsec (alleen Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/hsm/n-of-m-schemes.rst:2
@@ -11968,7 +12051,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/u2f/index.rst:2
 msgid "U2F"
-msgstr ""
+msgstr "U2F"
 
 #: ../source/components/nitrokeys/features/index.rst:4
 #, fuzzy
@@ -12004,7 +12087,7 @@ msgstr "Windows installeren"
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/misc/index.rst:2
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diverse"
 
 #: ../source/components/nitrokeys/features/index.rst:2
 #: ../source/components/nitrokeys/index.rst:4
@@ -13131,17 +13214,17 @@ msgstr "Arch Linux"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:8
 msgid "Smart Policy (Windows)"
-msgstr ""
+msgstr "Slim beleid (Windows)"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:2
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "Desktop Login"
-msgstr ""
+msgstr "Desktop-login"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:2
 msgid "PAM"
-msgstr ""
+msgstr "PAM"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:11
 msgid "How to Setup The Login"
@@ -13912,7 +13995,7 @@ msgstr "Harde schijf-codering op Linux met LUKS/dm-crypt"
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:69
 msgid "For setting up LUKS Disk Encryption follow our guide:"
-msgstr ""
+msgstr "Volg onze handleiding voor het instellen van LUKS-schijfversleuteling:"
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:77
 msgid ""
@@ -14455,7 +14538,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GPGTools on macOS"
-msgstr ""
+msgstr "GPGTools op macOS"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/ipsec.rst:2
@@ -14491,7 +14574,7 @@ msgstr "De certificeringsinstantie"
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GnuPG with Fedora"
-msgstr ""
+msgstr "GnuPG met Fedora"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #, fuzzy
@@ -15316,7 +15399,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 msgid "/bs/"
-msgstr ""
+msgstr "/bs/"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 #: ../source/components/shared-faqs/algos.rst.inc:6
@@ -16963,7 +17046,7 @@ msgstr "Gemakkelijk-RSA installeren"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/index.rst:8
 msgid "Viscosity"
-msgstr ""
+msgstr "Viscositeit"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -17342,6 +17425,11 @@ msgid ""
 "therefore the rest of the guide is applicable for the HSM 2 and other "
 "Nitrokeys). This page describes the usage of S/MIME email encryption."
 msgstr ""
+"Als je twijfelt welke je moet kiezen, moet je OpenPGP gebruiken, zie `hier "
+"<../openpgp/index.html>`_ (niet van toepassing op de Nitrokey HSM 2, de "
+"Nitrokey HSM 2 ondersteunt momenteel echter de S/MIME/X.509 standaard, "
+"daarom is de rest van de gids van toepassing op de HSM 2 en andere Nitrokeys)"
+". Deze pagina beschrijft het gebruik van S/MIME e-mailcodering."
 
 #: ../source/components/nitrokeys/features/openpgp-card/smime/index.rst:42
 #, fuzzy
@@ -19014,6 +19102,8 @@ msgid ""
 "For the Nitrokey 3 the Nitrokey App 2 has to be used to set up TOTP. See "
 ":doc:`../../../software/nk-app2/index`."
 msgstr ""
+"Voor de Nitrokey 3 moet de Nitrokey App 2 worden gebruikt om TOTP in te "
+"stellen. Zie :doc:`../../../software/nk-app2/index`."
 
 #: ../source/components/nitrokeys/features/totp/general.rst:15
 msgid ""
@@ -19206,7 +19296,7 @@ msgstr "Instructies"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 #, fuzzy
@@ -20308,7 +20398,7 @@ msgstr "Controleer eerst de:"
 #: ../source/components/nitrokeys/start/index.rst:15
 #: ../source/components/nitrokeys/storage/index.rst:15
 msgid "and the product guides:"
-msgstr ""
+msgstr "en de productgidsen:"
 
 #: ../source/components/nitrokeys/fido2/index.rst:23
 #: ../source/components/nitrokeys/hsm/index.rst:15
@@ -20317,12 +20407,12 @@ msgstr ""
 #: ../source/components/nitrokeys/start/index.rst:25
 #: ../source/components/nitrokeys/storage/index.rst:24
 msgid "or check out the features:"
-msgstr ""
+msgstr "of bekijk de functies:"
 
 #: ../source/components/nitrokeys/fido2/index.rst:25
 #: ../source/components/nitrokeys/nitrokey3/index.rst:30
 msgid "`FIDO2 <../features/fido2/index.html>`_"
-msgstr ""
+msgstr "`FIDO2 <../features/fido2/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/index.rst:26
 #: ../source/components/nitrokeys/nitrokey3/index.rst:31
@@ -20330,7 +20420,7 @@ msgstr ""
 #: ../source/components/nitrokeys/storage/index.rst:26
 #: ../source/components/nitrokeys/u2f/index.rst:8
 msgid "`U2F <../features/u2f/index.html>`_"
-msgstr ""
+msgstr "`U2F <../features/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/reset.rst:2
 msgid "Nitrokey Reset"
@@ -20372,7 +20462,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/fido2/reset.rst:19
 msgid "Or by using these instructions (Windows only):"
-msgstr ""
+msgstr "Of door deze instructies te gebruiken (alleen Windows):"
 
 #: ../source/components/nitrokeys/fido2/reset.rst:22
 msgid "Windows 10"
@@ -20902,7 +20992,7 @@ msgstr "Nitrokey HSM 2"
 
 #: ../source/components/nitrokeys/hsm/index.rst:17
 msgid "`HSM <../features/hsm/index.html>`_"
-msgstr ""
+msgstr "`HSM <../features/hsm/index.html>`_"
 
 #: ../source/components/nitrokeys/index.rst:4
 #, fuzzy
@@ -21578,11 +21668,11 @@ msgstr "Problemen oplossen"
 #: ../source/components/nitrokeys/start/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:28
 msgid "`OpenPGP Card <../features/openpgp-card/index.html>`_"
-msgstr ""
+msgstr "`OpenPGP-kaart <../features/openpgp-card/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:33
 msgid "`Password Safe <../features/password-safe/index.html>`_"
-msgstr ""
+msgstr "`Wachtwoord veilig <../features/password-safe/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:35
 #, fuzzy
@@ -21751,11 +21841,13 @@ msgstr "geen"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:25
 msgid "`U2F`_"
-msgstr ""
+msgstr "`U2F`_"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:26
 msgid "Predecessor of FIDO2 mainly used for Two-Factor Authentication"
 msgstr ""
+"Voorganger van FIDO2, voornamelijk gebruikt voor authenticatie met twee "
+"factoren"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:30
 msgid "`OpenPGP Card`_"
@@ -22281,6 +22373,7 @@ msgstr ""
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:18
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr ""
+"Nitrokey kaartlezer stuurprogramma kan niet worden geïnstalleerd in Windows"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid ""
@@ -22289,6 +22382,10 @@ msgid ""
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``."
 msgstr ""
+"Op Windows mislukt de initialisatie van het stuurprogramma voor de generieke "
+"smartcardlezer. De gerapporteerde apparaatstatus is ``This device is not "
+"working properly because Windows cannot load the drivers required for this "
+"device. (Code 31)``."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:23
 msgid ""
@@ -22296,12 +22393,18 @@ msgid ""
 "default Windows uses UMDF2, which fails to initialize and therefore is "
 "not loaded for the Nitrokey."
 msgstr ""
+"Windows heeft twee generieke smartcardlezerdrivers (WUDF en UMDF2). "
+"Standaard gebruikt Windows UMDF2, dat niet kan worden geïnitialiseerd en "
+"daarom niet wordt geladen voor de Nitrokey."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:26
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
 msgstr ""
+"Om een succesvolle stuurprogramma-initialisatie te garanderen, voeg je een "
+"herkansing toe voor de apparaatinitialisatie. Voeg in het register de "
+"volgende registersleutel toe."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:47
@@ -22314,24 +22417,28 @@ msgid ""
 "Path: "
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers``"
 msgstr ""
+"Pad: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/"
+"bs/Readers``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Key: ``RetryDeviceInitialize``"
-msgstr ""
+msgstr "Pad: <x id=\"6\"></x>`<x id=\"8\"></x><x id=\"73\"></x>`"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Type: ``DWORD (32-bit)``"
-msgstr ""
+msgstr "Type: `DWORD (32-bit)`"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Data: ``1``"
-msgstr ""
+msgstr "Volg onze handleiding voor het instellen van LUKS-schijfversleuteling:"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:41
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
 msgstr ""
+"De registersleutel is beschikbaar voor Windows 10 (versie 1903 (19H1) en "
+"later) en Windows 11."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:43
 msgid ""
@@ -22339,6 +22446,9 @@ msgid ""
 "initialization you may have to remove them from the registry. In the "
 "registry delete the following registry path."
 msgstr ""
+"Als de smartcardlezer al eerder was geïnstalleerd met een mislukte "
+"initialisatie, moet je deze mogelijk verwijderen uit het register. Verwijder "
+"in het register het volgende registerpad."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid ""
@@ -22346,18 +22456,24 @@ msgid ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 msgstr ""
+"Pad: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/"
+"bs/Readers/bs/Nitrokey CCID/ICCD Interface 0``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:50
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
 msgstr ""
+"Als de smartcardlezer meerdere keren is geïnstalleerd, kan er meer dan één "
+"pad zijn met een verhoogd nummer aan het einde."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
 msgstr ""
+"Na een herstart wordt de Nitrokey herkend als *Microsoft Usbccid Smartcard "
+"Reader (WUDF)*."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:59
 msgid "Google and Microsoft Services"
@@ -22596,6 +22712,8 @@ msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
 " when trying to use the PIV functionality:"
 msgstr ""
+"Als pyscard niet beschikbaar is voor nitropie, kunt u de volgende "
+"foutmelding krijgen wanneer u de PIV-functionaliteit probeert te gebruiken:"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 msgid ""
@@ -22604,22 +22722,29 @@ msgid ""
 "https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-"
 "not-available for more information"
 msgstr ""
+"Dit commando vereist de pyscard bibliotheek die niet beschikbaar is op uw "
+"systeem. Raadpleeg https://docs.nitrokey.com/nitrokeys/nitrokey3/"
+"troubleshooting#pyscard-is-not-available voor meer informatie."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
 "dependencies:"
 msgstr ""
+"Installeer nitropie met de `pcsc` extra afhankelijkheden om deze fout op te "
+"lossen:"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:160
 msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pip installeer pynitrokey[pcsc] pipx installeer pynitrokey[pcsc]"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 msgid ""
 "If you install pynitrokey through another distrubition channel, please "
 "install all optional dependencies for this channel."
 msgstr ""
+"Als u pynitrokey installeert via een ander distributiekanaal, installeer dan "
+"alle optionele afhankelijkheden voor dit kanaal."
 
 #: ../source/components/nitrokeys/passkey/index.rst:2
 msgid "Nitrokey Passkey"
@@ -23148,7 +23273,7 @@ msgstr "Om libnitrokey op uw systeem te vinden gebruikt u:"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:81
 msgid "Linux Permission error"
-msgstr ""
+msgstr "Linux toestemmingsfout"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:84
 msgid ""
@@ -23334,7 +23459,7 @@ msgstr "Nitrokey Pro 2"
 #: ../source/components/nitrokeys/pro/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:27
 msgid "`TOTP <../features/totp/index.html>`_"
-msgstr ""
+msgstr "`TOTP <../features/totp/index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:29
 #: ../source/components/nitrokeys/storage/index.rst:31
@@ -23342,11 +23467,13 @@ msgid ""
 "`Automatic Screen Lock (Linux) <../features/misc/automatic-screen-"
 "lock/index.html>`_"
 msgstr ""
+"`Automatische schermvergrendeling (Linux) <../features/misc/"
+"automatic-screen-lock/index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:30
 #: ../source/components/nitrokeys/storage/index.rst:32
 msgid "`ECC <../features/misc/ecc/index.html>`_"
-msgstr ""
+msgstr "`ECC <../features/misc/ecc/index.html>`_"
 
 #: ../source/components/nitrokeys/start/factory-reset.rst:5
 #: ../source/components/nitrokeys/start/multiple-identities.rst:6
@@ -24505,7 +24632,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:14
 msgid "$ sudo apt-get update && sudo apt-get install libccid"
-msgstr ""
+msgstr "$ sudo apt-get update && sudo apt-get install libccid"
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:17
 msgid ""
@@ -24603,10 +24730,11 @@ msgstr "Nitrokey Storage 2"
 #: ../source/components/nitrokeys/storage/index.rst:29
 msgid "`Encrypted Mobile Storage <../features/encrypted-storage/index.html>`_"
 msgstr ""
+"`Versleutelde mobiele opslag <../features/encrypted-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/storage/index.rst:30
 msgid "`Hidden Storage <../features/hidden-storage/index.html>`_"
-msgstr ""
+msgstr "`Verborgen opslag <../features/hidden-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/u2f/index.rst:2
 #, fuzzy
@@ -24615,7 +24743,7 @@ msgstr "Nitrokey FIDO U2F"
 
 #: ../source/components/nitrokeys/u2f/index.rst:6
 msgid "Check out the features:"
-msgstr ""
+msgstr "Bekijk de functies:"
 
 #: ../source/components/nitropad/content/shared-index-content1.rst:11
 #: ../source/components/nitropad/content/shared-index-content1.rst:28
@@ -28580,10 +28708,12 @@ msgid ""
 "To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``),"
 " you need to install the ``pyscard`` dependency too:"
 msgstr ""
+"Om de PIV functionaliteit van nitropie te kunnen gebruiken (``nitropy nk3 "
+"piv``), moet je ook de ``pyscard`` afhankelijkheid installeren:"
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:138
 msgid "pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pipx installeer pynitrokey[pcsc]"
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:141
 msgid "Next Steps"
@@ -42280,4 +42410,3 @@ msgstr "Markeer bijgesneden uitvoer"
 #~ "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 #~ " CCID/ICCD Interface 0``"
 #~ msgstr ""
-

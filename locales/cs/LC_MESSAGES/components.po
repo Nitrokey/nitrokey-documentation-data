@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-25 20:27+0000\n"
-"PO-Revision-Date: 2024-11-25 20:21+0000\n"
+"PO-Revision-Date: 2024-11-25 22:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Czech <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/components/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../source/components/nethsm/administration.rst:2
@@ -2505,6 +2506,8 @@ msgid ""
 "Please refer to the following chapters to learn more about the NetHSM "
 "container images."
 msgstr ""
+"Další informace o obrazech kontejnerů NetHSM naleznete v následujících "
+"kapitolách."
 
 #: ../source/components/nethsm/container/production-image.rst:2
 #, fuzzy
@@ -2520,6 +2523,12 @@ msgid ""
 "encryption. The image is distributed as OCI image and can be run locally "
 "with a compatible executor such as Docker and Podman."
 msgstr ""
+"Produkční bitová kopie je určena pro produkční prostředí s vysokými nároky "
+"na zabezpečení. Vyžaduje externí úložiště klíčů etcd, které je připojeno "
+"prostřednictvím šifrovaného připojení. Proces NetHSM lze provádět s "
+"hardwarovým oddělením (KVM) a šifrováním specifickým pro zařízení. Obraz je "
+"distribuován jako obraz OCI a lze jej spustit lokálně pomocí kompatibilního "
+"spouštěče, jako je Docker a Podman."
 
 #: ../source/components/nethsm/container/container-hardware-restriction.rst.inc:1
 msgid ""
@@ -2558,6 +2567,10 @@ msgid ""
 "<https://registry.git.nitrokey.com/distribution/nethsm>`_ using the "
 "credentials provided after purchase."
 msgstr ""
+"Výrobní kontejner NetHSM je produkt určený pouze pro platící zákazníky a lze "
+"jej zakoupit na adrese `zde <https://www.nitrokey.com/contact>`__. Obraz lze "
+"získat z registru `Nitrokey NetHSM <https://registry.git.nitrokey.com/"
+"distribution/nethsm>`_ pomocí přihlašovacích údajů poskytnutých po zakoupení."
 
 #: ../source/components/nethsm/container/production-image.rst:16
 msgid ""
@@ -2567,17 +2580,23 @@ msgid ""
 "existent so that the entropy used and provided by the NetHSM depends on "
 "the platform's entropy."
 msgstr ""
+"Zabezpečení softwarového kontejneru NetHSM silně závisí na zabezpečení "
+"platformy. Kompromitovaná platforma může snadno ohrozit softwarový kontejner "
+"NetHSM, který spouští. Navíc TRNG neexistuje, takže entropie používaná a "
+"poskytovaná NetHSM závisí na entropii platformy."
 
 #: ../source/components/nethsm/container/production-image.rst:21
 #: ../source/components/nethsm/container/test-image.rst:19
 msgid "Tagging Policy"
-msgstr ""
+msgstr "Zásady označování"
 
 #: ../source/components/nethsm/container/production-image.rst:23
 msgid ""
 "The images in the repository are tagged with the Git commit hash and the "
 "version of the release. The latest image is tagged with ``latest``."
 msgstr ""
+"Obrazy v úložišti jsou označeny hashem revize systému Git a verzí vydání. "
+"Nejnovější obraz je označen ``latest``."
 
 #: ../source/components/nethsm/container/production-image.rst:27
 #, fuzzy
@@ -2589,12 +2608,16 @@ msgid ""
 "The image can be run in two modes of operation, i.e. Unix process or "
 "unikernel."
 msgstr ""
+"Obraz lze spustit ve dvou režimech provozu, tj. jako unixový proces nebo "
+"unikernel."
 
 #: ../source/components/nethsm/container/production-image.rst:31
 msgid ""
 "The Unix process mode runs NetHSM as a process on top of the operating "
 "system."
 msgstr ""
+"V režimu unixového procesu je NetHSM spuštěn jako proces nad operačním "
+"systémem."
 
 #: ../source/components/nethsm/container/production-image.rst:33
 msgid ""
@@ -2603,10 +2626,14 @@ msgid ""
 "is only available on Linux and requires access to the ``/dev/tun`` and "
 "``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
 msgstr ""
+"V režimu unikernel běží NetHSM jako host ve virtuálním počítači založeném na "
+"KVM a poskytuje silné oddělení od hostitelského operačního systému. Tento "
+"režim je k dispozici pouze v systému Linux a vyžaduje přístup k uzlům "
+"zařízení ``/dev/tun`` a ``/dev/kvm`` a schopnost ``NET_ADMIN``."
 
 #: ../source/components/nethsm/container/production-image.rst:38
 msgid "For security choose to run the container in the unikernel mode."
-msgstr ""
+msgstr "Z důvodu bezpečnosti zvolte spuštění kontejneru v režimu unikernel."
 
 #: ../source/components/nethsm/container/production-image.rst:40
 msgid ""
@@ -2614,6 +2641,8 @@ msgid ""
 "chapter `Configuration <container.html#production-image-"
 "configuration>`__)."
 msgstr ""
+"Režim lze nastavit pomocí proměnné prostředí ``MODE`` (viz následující "
+"kapitola `Konfigurace <container.html#production-image-configuration>`__)."
 
 #: ../source/components/nethsm/container/production-image.rst:43
 #: ../source/components/nethsm/container/test-image.rst:25
@@ -2632,17 +2661,17 @@ msgstr "Kontejner lze spustit následujícím způsobem."
 #: ../source/components/nethsm/container/production-image.rst:48
 #: ../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
-msgstr ""
+msgstr "Proměnná prostředí"
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
-msgstr ""
+msgstr "Nastavená odemykací fráze automaticky odemkne kontejner při spuštění."
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
-msgstr ""
+msgstr "Povoluje rozšířené protokolování pro NetHSM."
 
 #: ../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
@@ -2651,7 +2680,7 @@ msgstr "Odblokování kódu PIN"
 
 #: ../source/components/nethsm/container/production-image.rst:52
 msgid "A set unlock passphrase automatically unlocks the container during start."
-msgstr ""
+msgstr "Nastavená odemykací fráze automaticky odemkne kontejner při spuštění."
 
 #: ../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
@@ -2661,6 +2690,7 @@ msgstr "``time``"
 #: ../source/components/nethsm/container/production-image.rst:54
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr ""
+"Režim přijímá hodnoty `unix` nebo `unikernel`, výchozí hodnota je `unix`."
 
 #: ../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
@@ -2669,7 +2699,7 @@ msgstr "``PKCS1``"
 
 #: ../source/components/nethsm/container/production-image.rst:56
 msgid "The URL/IP address of the host running the etcd service."
-msgstr ""
+msgstr "Adresa URL/IP hostitele, na kterém je spuštěna služba etcd."
 
 #: ../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
@@ -2678,7 +2708,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:58
 msgid "The port running the etcd service, defaults to `2379`."
-msgstr ""
+msgstr "Port, na kterém běží služba etcd, výchozí hodnota je `2379`."
 
 #: ../source/components/nethsm/container/production-image.rst:60
 #, fuzzy
@@ -2719,10 +2749,12 @@ msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
 msgstr ""
+"Tajemství běhu kontejneru, jako jsou certifikáty a soukromé klíče, je třeba "
+"nastavit pomocí funkce secrets v nástroji Docker nebo Podman."
 
 #: ../source/components/nethsm/container/production-image.rst:70
 msgid "Secret variable"
-msgstr ""
+msgstr "Tajná proměnná"
 
 #: ../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
@@ -2732,6 +2764,8 @@ msgstr "``USER_ID``"
 #: ../source/components/nethsm/container/production-image.rst:72
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr ""
+"certifikát certifikační autority, která podepsala klientský certifikát a "
+"certifikát serveru."
 
 #: ../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
@@ -2743,6 +2777,7 @@ msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
 msgstr ""
+"Klientský certifikát pro ověřování procesu NetHSM s úložištěm hodnot klíčů."
 
 #: ../source/components/nethsm/container/production-image.rst:76
 #, fuzzy
@@ -2754,6 +2789,7 @@ msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
 msgstr ""
+"Klientský klíč pro ověřování procesu NetHSM pomocí úložiště klíč-hodnota."
 
 #: ../source/components/nethsm/container/production-image.rst:78
 #, fuzzy
@@ -2762,7 +2798,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:78
 msgid "Server certificate for the API of the key-value store."
-msgstr ""
+msgstr "Certifikát serveru pro rozhraní API úložiště hodnot klíčů."
 
 #: ../source/components/nethsm/container/production-image.rst:80
 #, fuzzy
@@ -2771,11 +2807,11 @@ msgstr "Klíč serveru"
 
 #: ../source/components/nethsm/container/production-image.rst:80
 msgid "Server key for the API of the key-value store."
-msgstr ""
+msgstr "Klíč serveru pro rozhraní API úložiště klíč-hodnota."
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid "``device_key``"
-msgstr ""
+msgstr "``device_key``"
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid ""
@@ -2784,6 +2820,9 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ in the system design."
 msgstr ""
+"Klíč zařízení procesu NetHSM. Více informací o klíči zařízení naleznete v "
+"kapitole `Terminologie a konvence <https://github.com/Nitrokey/nethsm/blob/"
+"main/docs/system-design.md#terminology-and-conventions>`__ v návrhu systému."
 
 #: ../source/components/nethsm/container/production-image.rst:88
 #: ../source/components/nethsm/container/test-image.rst:36
@@ -2809,6 +2848,9 @@ msgid ""
 "how to run the container with the provided compose files or with the "
 "_run_ command."
 msgstr ""
+"Produkční kontejner podporuje dva provozní režimy ` <container.html#Modes of "
+"Operation>` __. Následující kapitoly popisují, jak kontejner spustit pomocí "
+"dodaných souborů compose nebo pomocí příkazu _run_."
 
 #: ../source/components/nethsm/container/production-image.rst:93
 #, fuzzy
@@ -2822,6 +2864,10 @@ msgid ""
 "/compose-unix.yaml>`__. Make sure you have the necessary files for the "
 "secrets, mentioned in the compose file, available."
 msgstr ""
+"Poskytnutý soubor compose můžete získat na adrese `zde <https://raw."
+"githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/"
+"compose-unix.yaml>`__. Ujistěte se, že máte k dispozici potřebné soubory pro "
+"tajemství uvedené v souboru compose."
 
 #: ../source/components/nethsm/container/production-image.rst:98
 #: ../source/components/nethsm/container/production-image.rst:128
@@ -2832,6 +2878,10 @@ msgid ""
 "configuration options, as described in chapter `Configuration "
 "<container.html#production-image-configuration>`__."
 msgstr ""
+"Chcete-li spustit kontejner bez souboru compose, musíte sami zajistit "
+"externí etcd. `Zde <https://quay.io/coreos/etcd>`__ najdete doporučený obraz "
+"kontejneru etcd. Nezapomeňte předat konfigurační volby, jak je popsáno v "
+"kapitole `Konfigurace <container.html#production-image-configuration>`__."
 
 #: ../source/components/nethsm/container/production-image.rst:102
 #: ../source/components/nethsm/container/production-image.rst:132
@@ -2877,7 +2927,7 @@ msgstr ""
 
 #: ../source/components/nethsm/container/production-image.rst:123
 msgid "Unikernel Mode"
-msgstr ""
+msgstr "Režim Unikernel"
 
 #: ../source/components/nethsm/container/production-image.rst:125
 msgid ""
@@ -2886,6 +2936,10 @@ msgid ""
 "/compose-unikernel.yaml>`__. Make sure you have the necessary files for "
 "the secrets, mentioned in the compose file, available."
 msgstr ""
+"Poskytnutý soubor compose můžete získat na adrese `zde <https://raw."
+"githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/"
+"compose-unikernel.yaml>`__. Ujistěte se, že máte k dispozici potřebné "
+"soubory pro tajemství uvedené v souboru compose."
 
 #: ../source/components/nethsm/container/production-image.rst:145
 msgid ""
@@ -2911,12 +2965,19 @@ msgid ""
 "unencrypted. The image is distributed as OCI image and can be run locally"
 " with a compatible executor such as Docker and Podman."
 msgstr ""
+"Testovací obraz slouží k testovacím a vývojovým účelům. Nenabízí spuštění "
+"procesu NetHSM s hardwarovým oddělením (KVM), šifrování datového úložiště "
+"ani použití externího etcd. Spojení mezi procesem NetHSM a integrovaným "
+"úložištěm klíčů a hodnot je nešifrované. Obraz je distribuován jako obraz "
+"OCI a lze jej spustit lokálně pomocí kompatibilního spouštěcího programu, "
+"například Docker a Podman."
 
 #: ../source/components/nethsm/container/test-image.rst:11
 msgid ""
 "The image can be obtained from `Docker Hub "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_."
 msgstr ""
+"Obraz lze získat z `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_."
 
 #: ../source/components/nethsm/container/test-image.rst:15
 msgid ""
@@ -2924,6 +2985,9 @@ msgid ""
 " use cases. For production environments with high security demands you "
 "must use the production image."
 msgstr ""
+"Testovací bitovou kopii v žádném případě nepoužívejte pro produkční data a "
+"případy použití. Pro produkční prostředí s vysokými nároky na zabezpečení "
+"musíte použít produkční bitovou kopii."
 
 #: ../source/components/nethsm/container/test-image.rst:21
 msgid ""
@@ -2931,10 +2995,13 @@ msgid ""
 " main branch of the `repository <https://github.com/nitrokey/nethsm>`__. "
 "The latest image is tagged with ``testing``."
 msgstr ""
+"Obrázky v úložišti jsou označeny hashem revize systému Git z hlavní větve "
+"úložiště ` <https://github.com/nitrokey/nethsm>` __. Nejnovější obrázek je "
+"označen ``testing``."
 
 #: ../source/components/nethsm/container/test-image.rst:27
 msgid "The image can be configured with the following environment variables."
-msgstr ""
+msgstr "Obraz lze nakonfigurovat pomocí následujících proměnných prostředí."
 
 #: ../source/components/nethsm/container/test-image.rst:51
 #, fuzzy
@@ -3559,6 +3626,8 @@ msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
 msgstr ""
+"Obrazy kontejnerů NetHSM ` <container/index.html>` __ jsou k dispozici pro "
+"testování a produkci."
 
 #: ../source/components/nethsm/integration.rst:36
 msgid "Integration Into Custom Application"
@@ -9725,7 +9794,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:10
 #: ../source/components/nitrokeys/features/u2f/index.rst:13
 msgid "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:13
 #: ../source/components/nitrokeys/features/fido2/index.rst:11
@@ -9756,7 +9825,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:11
 #: ../source/components/nitrokeys/features/u2f/index.rst:14
 msgid "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:14
 #: ../source/components/nitrokeys/features/fido2/index.rst:12
@@ -9822,6 +9891,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:16
 msgid "`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 msgstr ""
+"`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:16
 #: ../source/components/nitrokeys/features/fido2/index.rst:14
@@ -9855,6 +9925,8 @@ msgid ""
 "`Nitrokey Storage 2 "
 "<https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 msgstr ""
+"`Úložiště Nitrokey 2 <https://docs.nitrokey.com/nitrokeys/storage/index."
+"html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:18
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:19
@@ -9979,7 +10051,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:24
 #: ../source/components/nitrokeys/features/u2f/index.rst:25
 msgid "⨯"
-msgstr ""
+msgstr "⨯"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:25
 #: ../source/components/nitrokeys/features/fido2/index.rst:16
@@ -10174,7 +10246,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Website Login"
-msgstr ""
+msgstr "Přihlášení na webové stránky"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 #, fuzzy
@@ -10183,7 +10255,7 @@ msgstr "Nextcloud"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Passwordless Microsoft Login (Windows only)"
-msgstr ""
+msgstr "Přihlášení bez hesla Microsoft (pouze pro Windows)"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:2
 #: ../source/components/nitrokeys/features/index.rst:4
@@ -10474,7 +10546,7 @@ msgstr "img11"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
-msgstr ""
+msgstr "Přihlášení na webové stránky 2FA"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:11
 #: ../source/components/nitrokeys/fido2/getting-started.rst:4
@@ -11501,11 +11573,11 @@ msgstr "Start"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "GPA"
-msgstr ""
+msgstr "GPA"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "DNSSEC (Linux only)"
-msgstr ""
+msgstr "DNSSEC (pouze Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:2
@@ -11526,7 +11598,7 @@ msgstr "Importní klíč"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Stunnel (Linux only)"
-msgstr ""
+msgstr "Stunnel (pouze pro Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #, fuzzy
@@ -11535,7 +11607,7 @@ msgstr "Certifikační autorita"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Ipsec (Linux only)"
-msgstr ""
+msgstr "Ipsec (pouze pro Linux)"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/hsm/n-of-m-schemes.rst:2
@@ -11734,7 +11806,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/u2f/index.rst:2
 msgid "U2F"
-msgstr ""
+msgstr "U2F"
 
 #: ../source/components/nitrokeys/features/index.rst:4
 #, fuzzy
@@ -11770,7 +11842,7 @@ msgstr "Instalace systému Windows"
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/misc/index.rst:2
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Různé"
 
 #: ../source/components/nitrokeys/features/index.rst:2
 #: ../source/components/nitrokeys/index.rst:4
@@ -12857,17 +12929,17 @@ msgstr "Arch Linux"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:8
 msgid "Smart Policy (Windows)"
-msgstr ""
+msgstr "Inteligentní zásady (Windows)"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:2
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "Desktop Login"
-msgstr ""
+msgstr "Přihlášení k počítači"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:2
 msgid "PAM"
-msgstr ""
+msgstr "PAM"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:11
 msgid "How to Setup The Login"
@@ -13623,7 +13695,7 @@ msgstr "Šifrování pevného disku v systému Linux pomocí LUKS/dm-crypt"
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:69
 msgid "For setting up LUKS Disk Encryption follow our guide:"
-msgstr ""
+msgstr "Nastavení šifrování disku LUKS provedete podle našeho průvodce:"
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:77
 msgid ""
@@ -14160,7 +14232,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GPGTools on macOS"
-msgstr ""
+msgstr "Nástroje GPGTools v systému macOS"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/ipsec.rst:2
@@ -14196,7 +14268,7 @@ msgstr "Certifikační autorita"
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GnuPG with Fedora"
-msgstr ""
+msgstr "GnuPG s Fedorou"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #, fuzzy
@@ -14994,7 +15066,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 msgid "/bs/"
-msgstr ""
+msgstr "/bs/"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 #: ../source/components/shared-faqs/algos.rst.inc:6
@@ -16604,7 +16676,7 @@ msgstr "Instalace systému Easy-RSA"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/index.rst:8
 msgid "Viscosity"
-msgstr ""
+msgstr "Viskozita"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -16973,6 +17045,11 @@ msgid ""
 "therefore the rest of the guide is applicable for the HSM 2 and other "
 "Nitrokeys). This page describes the usage of S/MIME email encryption."
 msgstr ""
+"Pokud váháte, který z nich zvolit, měli byste použít OpenPGP, viz `zde <../"
+"openpgp/index.html>`_ (neplatí pro Nitrokey HSM 2, Nitrokey HSM 2 však v "
+"současné době podporuje standard S/MIME/X.509, proto je zbytek příručky "
+"použitelný pro HSM 2 a další Nitrokeye). Tato stránka popisuje použití "
+"šifrování e-mailů S/MIME."
 
 #: ../source/components/nitrokeys/features/openpgp-card/smime/index.rst:42
 #, fuzzy
@@ -18613,6 +18690,8 @@ msgid ""
 "For the Nitrokey 3 the Nitrokey App 2 has to be used to set up TOTP. See "
 ":doc:`../../../software/nk-app2/index`."
 msgstr ""
+"U zařízení Nitrokey 3 je třeba k nastavení TOTP použít aplikaci Nitrokey 2. "
+"Viz :doc:`../../../software/nk-app2/index`."
 
 #: ../source/components/nitrokeys/features/totp/general.rst:15
 msgid ""
@@ -18804,7 +18883,7 @@ msgstr "Pokyny"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 #, fuzzy
@@ -19877,7 +19956,7 @@ msgstr "Nejprve zkontrolujte:"
 #: ../source/components/nitrokeys/start/index.rst:15
 #: ../source/components/nitrokeys/storage/index.rst:15
 msgid "and the product guides:"
-msgstr ""
+msgstr "a průvodce produktem:"
 
 #: ../source/components/nitrokeys/fido2/index.rst:23
 #: ../source/components/nitrokeys/hsm/index.rst:15
@@ -19886,12 +19965,12 @@ msgstr ""
 #: ../source/components/nitrokeys/start/index.rst:25
 #: ../source/components/nitrokeys/storage/index.rst:24
 msgid "or check out the features:"
-msgstr ""
+msgstr "nebo si prohlédněte funkce:"
 
 #: ../source/components/nitrokeys/fido2/index.rst:25
 #: ../source/components/nitrokeys/nitrokey3/index.rst:30
 msgid "`FIDO2 <../features/fido2/index.html>`_"
-msgstr ""
+msgstr "`FIDO2 <../features/fido2/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/index.rst:26
 #: ../source/components/nitrokeys/nitrokey3/index.rst:31
@@ -19899,7 +19978,7 @@ msgstr ""
 #: ../source/components/nitrokeys/storage/index.rst:26
 #: ../source/components/nitrokeys/u2f/index.rst:8
 msgid "`U2F <../features/u2f/index.html>`_"
-msgstr ""
+msgstr "`U2F <../features/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/reset.rst:2
 msgid "Nitrokey Reset"
@@ -19940,7 +20019,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/fido2/reset.rst:19
 msgid "Or by using these instructions (Windows only):"
-msgstr ""
+msgstr "Nebo pomocí těchto pokynů (pouze pro systém Windows):"
 
 #: ../source/components/nitrokeys/fido2/reset.rst:22
 msgid "Windows 10"
@@ -20466,7 +20545,7 @@ msgstr "Nitrokey HSM 2"
 
 #: ../source/components/nitrokeys/hsm/index.rst:17
 msgid "`HSM <../features/hsm/index.html>`_"
-msgstr ""
+msgstr "Podívejte se na <x id=\"8\"></x>overview`_ of supported use cases."
 
 #: ../source/components/nitrokeys/index.rst:4
 #, fuzzy
@@ -21133,11 +21212,11 @@ msgstr "Řešení problémů"
 #: ../source/components/nitrokeys/start/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:28
 msgid "`OpenPGP Card <../features/openpgp-card/index.html>`_"
-msgstr ""
+msgstr "`Karta OpenPGP <../features/openpgp-card/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:33
 msgid "`Password Safe <../features/password-safe/index.html>`_"
-msgstr ""
+msgstr "`Bezpečné heslo <../features/password-safe/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:35
 #, fuzzy
@@ -21303,11 +21382,11 @@ msgstr "ne"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:25
 msgid "`U2F`_"
-msgstr ""
+msgstr "`U2F`_"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:26
 msgid "Predecessor of FIDO2 mainly used for Two-Factor Authentication"
-msgstr ""
+msgstr "Předchůdce FIDO2 používaný především pro dvoufaktorové ověřování."
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:30
 msgid "`OpenPGP Card`_"
@@ -21832,7 +21911,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:18
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
-msgstr ""
+msgstr "Ovladač čtečky karet Nitrokey nelze nainstalovat do systému Windows"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid ""
@@ -21841,6 +21920,10 @@ msgid ""
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``."
 msgstr ""
+"V systému Windows selže inicializace obecného ovladače čtečky čipových "
+"karet. Hlášený stav zařízení je ``This device is not working properly "
+"because Windows cannot load the drivers required for this device. (Code "
+"31)``."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:23
 msgid ""
@@ -21848,12 +21931,17 @@ msgid ""
 "default Windows uses UMDF2, which fails to initialize and therefore is "
 "not loaded for the Nitrokey."
 msgstr ""
+"Systém Windows má dva obecné ovladače čteček čipových karet (WUDF a UMDF2). "
+"Ve výchozím nastavení systém Windows používá UMDF2, který se nepodaří "
+"inicializovat, a proto není pro Nitrokey načten."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:26
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
 msgstr ""
+"Chcete-li zajistit úspěšnou inicializaci ovladače, přidejte opakování "
+"inicializace zařízení. V registru přidejte následující klíč registru."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:47
@@ -21866,24 +21954,28 @@ msgid ""
 "Path: "
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers``"
 msgstr ""
+"Cesta: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Key: ``RetryDeviceInitialize``"
-msgstr ""
+msgstr "Cesta: <x id=\"6\"></x>`<x id=\"8\"></x><x id=\"73\"></x>`"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Type: ``DWORD (32-bit)``"
-msgstr ""
+msgstr "Typ: ``DWORD (32-bit)``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Data: ``1``"
-msgstr ""
+msgstr "Údaje: ``1``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:41
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
 msgstr ""
+"Klíč registru je k dispozici pro systémy Windows 10 (verze 1903 (19H1) a "
+"novější) a Windows 11."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:43
 msgid ""
@@ -21891,6 +21983,9 @@ msgid ""
 "initialization you may have to remove them from the registry. In the "
 "registry delete the following registry path."
 msgstr ""
+"Pokud byla čtečka čipových karet nainstalována již dříve s neúspěšnou "
+"inicializací, bude možná nutné je odstranit z registru. V registru odstraňte "
+"následující cestu k registru."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid ""
@@ -21898,18 +21993,24 @@ msgid ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 msgstr ""
+"Cesta: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers/bs/Nitrokey CCID/ICCD Interface 0``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:50
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
 msgstr ""
+"Pokud byla čtečka čipových karet dříve nainstalována vícekrát, může "
+"existovat více než jedna cesta se zvýšeným číslem na konci."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
 msgstr ""
+"Po restartu je Nitrokey rozpoznán jako *Microsoft Usbccid Smartcard Reader "
+"(WUDF)*."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:59
 msgid "Google and Microsoft Services"
@@ -22141,6 +22242,8 @@ msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
 " when trying to use the PIV functionality:"
 msgstr ""
+"Pokud není aplikace pyscard pro nitropy dostupná, může se při pokusu o "
+"použití funkce PIV zobrazit následující chyba:"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 msgid ""
@@ -22149,22 +22252,29 @@ msgid ""
 "https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-"
 "not-available for more information"
 msgstr ""
+"Tento příkaz vyžaduje knihovnu pyscard, která není ve vašem systému k "
+"dispozici. Další informace naleznete na adrese https://docs.nitrokey.com/"
+"nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
 "dependencies:"
 msgstr ""
+"Chcete-li tuto chybu opravit, nainstalujte prosím nitropy s dodatečnými "
+"závislostmi `pcsc`:"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:160
 msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 msgid ""
 "If you install pynitrokey through another distrubition channel, please "
 "install all optional dependencies for this channel."
 msgstr ""
+"Pokud instalujete pynitrokey prostřednictvím jiného distribučního kanálu, "
+"nainstalujte prosím všechny volitelné závislosti pro tento kanál."
 
 #: ../source/components/nitrokeys/passkey/index.rst:2
 msgid "Nitrokey Passkey"
@@ -22686,7 +22796,7 @@ msgstr "Pro nalezení libnitrokey v systému použijte:"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:81
 msgid "Linux Permission error"
-msgstr ""
+msgstr "Chyba oprávnění v systému Linux"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:84
 msgid ""
@@ -22865,7 +22975,7 @@ msgstr "Nitrokey Pro 2"
 #: ../source/components/nitrokeys/pro/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:27
 msgid "`TOTP <../features/totp/index.html>`_"
-msgstr ""
+msgstr "`TOTP <../features/totp/index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:29
 #: ../source/components/nitrokeys/storage/index.rst:31
@@ -22873,11 +22983,13 @@ msgid ""
 "`Automatic Screen Lock (Linux) <../features/misc/automatic-screen-"
 "lock/index.html>`_"
 msgstr ""
+"`Automatický zámek obrazovky (Linux) <../features/misc/automatic-screen-lock/"
+"index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:30
 #: ../source/components/nitrokeys/storage/index.rst:32
 msgid "`ECC <../features/misc/ecc/index.html>`_"
-msgstr ""
+msgstr "`ECC <../features/misc/ecc/index.html>`_"
 
 #: ../source/components/nitrokeys/start/factory-reset.rst:5
 #: ../source/components/nitrokeys/start/multiple-identities.rst:6
@@ -24007,7 +24119,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:14
 msgid "$ sudo apt-get update && sudo apt-get install libccid"
-msgstr ""
+msgstr "$ sudo apt-get update && sudo apt-get install libccid"
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:17
 msgid ""
@@ -24104,10 +24216,11 @@ msgstr "Nitrokey Storage 2"
 #: ../source/components/nitrokeys/storage/index.rst:29
 msgid "`Encrypted Mobile Storage <../features/encrypted-storage/index.html>`_"
 msgstr ""
+"`Šifrované mobilní úložiště <../features/encrypted-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/storage/index.rst:30
 msgid "`Hidden Storage <../features/hidden-storage/index.html>`_"
-msgstr ""
+msgstr "`Skryté úložiště <../features/hidden-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/u2f/index.rst:2
 #, fuzzy
@@ -24116,7 +24229,7 @@ msgstr "Nitrokey FIDO U2F"
 
 #: ../source/components/nitrokeys/u2f/index.rst:6
 msgid "Check out the features:"
-msgstr ""
+msgstr "Podívejte se na funkce:"
 
 #: ../source/components/nitropad/content/shared-index-content1.rst:11
 #: ../source/components/nitropad/content/shared-index-content1.rst:28
@@ -28019,10 +28132,12 @@ msgid ""
 "To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``),"
 " you need to install the ``pyscard`` dependency too:"
 msgstr ""
+"Abyste mohli používat funkce PIV v nitropy (``nitropy nk3 piv``), musíte "
+"nainstalovat také závislost ``pyscard``:"
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:138
 msgid "pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pipx install pynitrokey[pcsc]"
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:141
 msgid "Next Steps"
@@ -41164,4 +41279,3 @@ msgstr "Označit oříznutý výstup"
 #~ "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 #~ " CCID/ICCD Interface 0``"
 #~ msgstr ""
-

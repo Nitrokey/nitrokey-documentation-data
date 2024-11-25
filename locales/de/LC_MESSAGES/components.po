@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-25 20:27+0000\n"
-"PO-Revision-Date: 2024-11-25 20:23+0000\n"
+"PO-Revision-Date: 2024-11-25 22:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: German <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/de/>\n"
 "Language: de\n"
-"Language-Team: German <http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/components/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../source/components/nethsm/administration.rst:2
@@ -15561,7 +15562,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 msgid "/bs/"
-msgstr ""
+msgstr "/bs/"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 #: ../source/components/shared-faqs/algos.rst.inc:6
@@ -22655,6 +22656,7 @@ msgstr ""
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:18
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr ""
+"Nitrokey Kartenleser-Treiber kann unter Windows nicht installiert werden"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid ""
@@ -22662,7 +22664,7 @@ msgid ""
 "fails. The reported device status is ``This device is not working "
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``."
-msgstr ""
+msgstr "Pyscard ist nicht verfügbar"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:23
 msgid ""
@@ -22670,12 +22672,18 @@ msgid ""
 "default Windows uses UMDF2, which fails to initialize and therefore is "
 "not loaded for the Nitrokey."
 msgstr ""
+"Windows verfügt über zwei generische Smartcard-Lesetreiber (WUDF und UMDF2). "
+"Standardmäßig verwendet Windows UMDF2, der sich nicht initialisieren lässt "
+"und daher nicht für den Nitrokey geladen wird."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:26
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
 msgstr ""
+"Zusätzliche Funktionen wie <x id=\"25\"></x>PIV (nur Windows) <x id=\"45\"></"
+"x><x id=\"73\"></x> sind in Test-Firmware-Versionen verfügbar. Weitere "
+"Informationen finden Sie in den <x id=\"125\"></x>release notes`_ auf GitHub."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:47
@@ -22688,24 +22696,28 @@ msgid ""
 "Path: "
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers``"
 msgstr ""
+"Pfad: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Key: ``RetryDeviceInitialize``"
-msgstr ""
+msgstr "Schlüssel: ``RetryDeviceInitialize``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Type: ``DWORD (32-bit)``"
-msgstr ""
+msgstr "Typ: ``DWORD (32-bit)``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Data: ``1``"
-msgstr ""
+msgstr "Pfad: ``1<x id=\"105\"></x>`"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:41
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
 msgstr ""
+"Der Registrierungsschlüssel ist für Windows 10 (Version 1903 (19H1) und "
+"höher) und Windows 11 verfügbar."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:43
 msgid ""
@@ -22713,6 +22725,10 @@ msgid ""
 "initialization you may have to remove them from the registry. In the "
 "registry delete the following registry path."
 msgstr ""
+"Wenn der Chipkartenleser zuvor bereits installiert war und die "
+"Initialisierung fehlgeschlagen ist, müssen Sie ihn möglicherweise aus der "
+"Registrierung entfernen. Löschen Sie in der Registry den folgenden Registry-"
+"Pfad."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid ""
@@ -22720,18 +22736,24 @@ msgid ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 msgstr ""
+"Pfad: ``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers/bs/Nitrokey CCID/ICCD Interface 0``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:50
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
 msgstr ""
+"Wenn der Chipkartenleser bereits mehrfach installiert wurde, kann es mehr "
+"als einen Pfad mit einer inkrementierten Nummer am Ende geben."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
 msgstr ""
+"Nach einem Neustart wird der Nitrokey als *Microsoft Usbccid Smartcard "
+"Reader (WUDF)* erkannt."
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:59
 msgid "Google and Microsoft Services"
@@ -46379,4 +46401,3 @@ msgstr "Beschnittene Ausgabe markieren"
 #~ "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 #~ " CCID/ICCD Interface 0``"
 #~ msgstr ""
-

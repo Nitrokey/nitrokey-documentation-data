@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-25 20:27+0000\n"
-"PO-Revision-Date: 2024-11-25 20:22+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2024-11-25 22:05+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/components/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../source/components/nethsm/administration.rst:2
@@ -2283,7 +2283,7 @@ msgstr "含有"
 msgid ""
 "Please refer to the following chapters to learn more about the NetHSM "
 "container images."
-msgstr ""
+msgstr "请参阅以下章节了解 NetHSM 容器映像的更多信息。"
 
 #: ../source/components/nethsm/container/production-image.rst:2
 #, fuzzy
@@ -2299,6 +2299,10 @@ msgid ""
 "encryption. The image is distributed as OCI image and can be run locally "
 "with a compatible executor such as Docker and Podman."
 msgstr ""
+"生产镜像适用于安全性要求较高的生产环境。它需要通过加密连接的外部 etcd "
+"键值存储。NetHSM 进程可通过基于硬件的分离（KVM）和特定设备加密来执行。"
+"该镜像以 OCI 镜像的形式发布，可通过兼容的执行器（如 Docker 和 "
+"Podman）在本地运行。"
 
 #: ../source/components/nethsm/container/container-hardware-restriction.rst.inc:1
 msgid ""
@@ -2335,6 +2339,9 @@ msgid ""
 "<https://registry.git.nitrokey.com/distribution/nethsm>`_ using the "
 "credentials provided after purchase."
 msgstr ""
+"NetHSM 生产容器是仅供付费客户使用的产品，可在`这里购买<https://www.nitrokey."
+"com/contact>`__。可使用购买后提供的凭证从`硝基 NetHSM 注册表<https://registry"
+".git.nitrokey.com/distribution/nethsm>`_ 获取镜像。"
 
 #: ../source/components/nethsm/container/production-image.rst:16
 msgid ""
@@ -2344,17 +2351,20 @@ msgid ""
 "existent so that the entropy used and provided by the NetHSM depends on "
 "the platform's entropy."
 msgstr ""
+"NetHSM 软件容器的安全性在很大程度上取决于平台的安全性。"
+"被入侵的平台可以轻易入侵其执行的 NetHSM 软件容器。此外，TRNG 并不存在，因此 "
+"NetHSM 使用和提供的熵取决于平台的熵。"
 
 #: ../source/components/nethsm/container/production-image.rst:21
 #: ../source/components/nethsm/container/test-image.rst:19
 msgid "Tagging Policy"
-msgstr ""
+msgstr "标记政策"
 
 #: ../source/components/nethsm/container/production-image.rst:23
 msgid ""
 "The images in the repository are tagged with the Git commit hash and the "
 "version of the release. The latest image is tagged with ``latest``."
-msgstr ""
+msgstr "版本库中的图片都标有 Git 提交哈希值和发布版本。最新的图像标记为``latest``。"
 
 #: ../source/components/nethsm/container/production-image.rst:27
 #, fuzzy
@@ -2365,13 +2375,13 @@ msgstr "关键业务"
 msgid ""
 "The image can be run in two modes of operation, i.e. Unix process or "
 "unikernel."
-msgstr ""
+msgstr "该镜像可在两种运行模式下运行，即 Unix 进程或 unikernel。"
 
 #: ../source/components/nethsm/container/production-image.rst:31
 msgid ""
 "The Unix process mode runs NetHSM as a process on top of the operating "
 "system."
-msgstr ""
+msgstr "Unix 进程模式将 NetHSM 作为操作系统上的一个进程运行。"
 
 #: ../source/components/nethsm/container/production-image.rst:33
 msgid ""
@@ -2380,10 +2390,13 @@ msgid ""
 "is only available on Linux and requires access to the ``/dev/tun`` and "
 "``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
 msgstr ""
+"单内核模式在基于 KVM 的虚拟机中将 NetHSM "
+"作为访客运行，与主机操作系统紧密分离。该模式仅适用于 Linux，需要访问``/dev/"
+"tun`` 和``/dev/kvm`` 设备节点以及``NET_ADMIN`` 能力。"
 
 #: ../source/components/nethsm/container/production-image.rst:38
 msgid "For security choose to run the container in the unikernel mode."
-msgstr ""
+msgstr "为了安全起见，选择在单内核模式下运行容器。"
 
 #: ../source/components/nethsm/container/production-image.rst:40
 msgid ""
@@ -2391,6 +2404,8 @@ msgid ""
 "chapter `Configuration <container.html#production-image-"
 "configuration>`__)."
 msgstr ""
+"可通过环境变量``MODE`` 设置模式（见下一章`配置<container.html#production-"
+"image-configuration>`__ ）。"
 
 #: ../source/components/nethsm/container/production-image.rst:43
 #: ../source/components/nethsm/container/test-image.rst:25
@@ -2409,17 +2424,17 @@ msgstr "容器可以按以下方式执行。"
 #: ../source/components/nethsm/container/production-image.rst:48
 #: ../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
-msgstr ""
+msgstr "环境变量"
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
-msgstr ""
+msgstr "Ipsec（仅限 Linux）"
 
 #: ../source/components/nethsm/container/production-image.rst:50
 #: ../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
-msgstr ""
+msgstr "启用 NetHSM 的扩展日志记录。"
 
 #: ../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
@@ -2428,7 +2443,7 @@ msgstr "解锁密码"
 
 #: ../source/components/nethsm/container/production-image.rst:52
 msgid "A set unlock passphrase automatically unlocks the container during start."
-msgstr ""
+msgstr "设置的解锁口令会在启动过程中自动解锁容器。"
 
 #: ../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
@@ -2437,7 +2452,7 @@ msgstr "``time``"
 
 #: ../source/components/nethsm/container/production-image.rst:54
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
-msgstr ""
+msgstr "模式可接受`unix`或`unikernel`，默认为`unix`。"
 
 #: ../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
@@ -2446,7 +2461,7 @@ msgstr "``PKCS1``"
 
 #: ../source/components/nethsm/container/production-image.rst:56
 msgid "The URL/IP address of the host running the etcd service."
-msgstr ""
+msgstr "运行 etcd 服务的主机的 URL/IP 地址。"
 
 #: ../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
@@ -2455,7 +2470,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:58
 msgid "The port running the etcd service, defaults to `2379`."
-msgstr ""
+msgstr "运行 etcd 服务的端口，默认为 `2379`。"
 
 #: ../source/components/nethsm/container/production-image.rst:60
 #, fuzzy
@@ -2493,11 +2508,11 @@ msgstr "该操作不需要验证。"
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
-msgstr ""
+msgstr "容器运行时的机密（如证书和私钥）需要使用 Docker 或 Podman 的机密功能来设置。"
 
 #: ../source/components/nethsm/container/production-image.rst:70
 msgid "Secret variable"
-msgstr ""
+msgstr "秘密变量"
 
 #: ../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
@@ -2506,7 +2521,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:72
 msgid "CA certificate which signed the client certificate and server certificate."
-msgstr ""
+msgstr "签署客户端证书和服务器证书的 CA 证书。"
 
 #: ../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
@@ -2517,7 +2532,7 @@ msgstr "``--time``"
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
-msgstr ""
+msgstr "客户端证书，用于通过键值存储对 NetHSM 进程进行身份验证。"
 
 #: ../source/components/nethsm/container/production-image.rst:76
 #, fuzzy
@@ -2528,7 +2543,7 @@ msgstr "客户密钥"
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
-msgstr ""
+msgstr "客户端密钥，用于通过键值存储对 NetHSM 进程进行身份验证。"
 
 #: ../source/components/nethsm/container/production-image.rst:78
 #, fuzzy
@@ -2537,7 +2552,7 @@ msgstr "``USER_ID``"
 
 #: ../source/components/nethsm/container/production-image.rst:78
 msgid "Server certificate for the API of the key-value store."
-msgstr ""
+msgstr "键值存储 API 的服务器证书。"
 
 #: ../source/components/nethsm/container/production-image.rst:80
 #, fuzzy
@@ -2546,11 +2561,11 @@ msgstr "服务器密钥"
 
 #: ../source/components/nethsm/container/production-image.rst:80
 msgid "Server key for the API of the key-value store."
-msgstr ""
+msgstr "键值存储 API 的服务器密钥。"
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid "``device_key``"
-msgstr ""
+msgstr "``device_key``"
 
 #: ../source/components/nethsm/container/production-image.rst:82
 msgid ""
@@ -2559,6 +2574,9 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ in the system design."
 msgstr ""
+"NetHSM 进程的设备密钥。要了解有关设备键的更多信息，请参阅`Terminology and "
+"Conventions<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design."
+"md#terminology-and-conventions>`__系统设计一章。"
 
 #: ../source/components/nethsm/container/production-image.rst:88
 #: ../source/components/nethsm/container/test-image.rst:36
@@ -2584,6 +2602,8 @@ msgid ""
 "how to run the container with the provided compose files or with the "
 "_run_ command."
 msgstr ""
+"生产容器支持两种`运行模式<container.html#Modes of Operation>`__。"
+"下面几章将介绍如何使用提供的编译文件或 _run_ 命令运行容器。"
 
 #: ../source/components/nethsm/container/production-image.rst:93
 #, fuzzy
@@ -2597,6 +2617,9 @@ msgid ""
 "/compose-unix.yaml>`__. Make sure you have the necessary files for the "
 "secrets, mentioned in the compose file, available."
 msgstr ""
+"您可以从`获取所提供的编译文件<https://raw.githubusercontent.com/Nitrokey/"
+"nethsm/refs/heads/main/src/container/alpine/compose-unix."
+"yaml>`__。请确保您已准备好编译文件中提到的机密所需的文件。"
 
 #: ../source/components/nethsm/container/production-image.rst:98
 #: ../source/components/nethsm/container/production-image.rst:128
@@ -2607,6 +2630,10 @@ msgid ""
 "configuration options, as described in chapter `Configuration "
 "<container.html#production-image-configuration>`__."
 msgstr ""
+"要在不使用编译文件的情况下运行容器，您需要自己提供一个外部 "
+"etcd。`在<https://quay.io/coreos/etcd>`___，你可以找到推荐的 etcd "
+"容器镜像。请务必按照`Configuration<container.html#production-image-"
+"configuration>`__一章所述传递配置选项。"
 
 #: ../source/components/nethsm/container/production-image.rst:102
 #: ../source/components/nethsm/container/production-image.rst:132
@@ -2647,7 +2674,7 @@ msgstr "容器使用一个自签的TLS证书。请确保使用正确的连接设
 
 #: ../source/components/nethsm/container/production-image.rst:123
 msgid "Unikernel Mode"
-msgstr ""
+msgstr "单内核模式"
 
 #: ../source/components/nethsm/container/production-image.rst:125
 msgid ""
@@ -2656,6 +2683,9 @@ msgid ""
 "/compose-unikernel.yaml>`__. Make sure you have the necessary files for "
 "the secrets, mentioned in the compose file, available."
 msgstr ""
+"您可以从`获取所提供的编译文件<https://raw.githubusercontent.com/Nitrokey/"
+"nethsm/refs/heads/main/src/container/alpine/compose-unikernel."
+"yaml>`__。请确保您已准备好编译文件中提到的机密所需的文件。"
 
 #: ../source/components/nethsm/container/production-image.rst:145
 msgid ""
@@ -2680,19 +2710,24 @@ msgid ""
 "unencrypted. The image is distributed as OCI image and can be run locally"
 " with a compatible executor such as Docker and Podman."
 msgstr ""
+"测试镜像用于测试和开发目的。它不提供使用基于硬件的分离（KVM）运行 NetHSM "
+"进程、加密数据存储或使用外部 etcd 的功能。NetHSM "
+"进程与集成键值存储之间的连接未加密。该镜像以 OCI "
+"镜像的形式发布，可通过兼容的执行器（如 Docker 和 Podman）在本地运行。"
 
 #: ../source/components/nethsm/container/test-image.rst:11
 msgid ""
 "The image can be obtained from `Docker Hub "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_."
-msgstr ""
+msgstr "该镜像可从`Docker Hub<https://hub.docker.com/r/nitrokey/nethsm>`_ 获取。"
 
 #: ../source/components/nethsm/container/test-image.rst:15
 msgid ""
 "Do not use the test image under any circumstances for production data and"
 " use cases. For production environments with high security demands you "
 "must use the production image."
-msgstr ""
+msgstr "在任何情况下都不要将测试镜像用于生产数据和用例。对于安全性要求较高的生产环境"
+"，必须使用生产镜像。"
 
 #: ../source/components/nethsm/container/test-image.rst:21
 msgid ""
@@ -2700,10 +2735,12 @@ msgid ""
 " main branch of the `repository <https://github.com/nitrokey/nethsm>`__. "
 "The latest image is tagged with ``testing``."
 msgstr ""
+"版本库中的图片都标有`版本库主分支<https://github.com/nitrokey/nethsm>`__ 的 "
+"Git 提交哈希值。最新的图片标记为``testing``。"
 
 #: ../source/components/nethsm/container/test-image.rst:27
 msgid "The image can be configured with the following environment variables."
-msgstr ""
+msgstr "可以使用以下环境变量配置图像。"
 
 #: ../source/components/nethsm/container/test-image.rst:51
 #, fuzzy
@@ -3246,7 +3283,7 @@ msgstr "集装箱图像"
 msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
-msgstr ""
+msgstr "NetHSM`容器镜像<container/index.html>`__ 可用于测试和生产。"
 
 #: ../source/components/nethsm/integration.rst:36
 msgid "Integration Into Custom Application"
@@ -8493,7 +8530,7 @@ msgstr "Nitrokey FIDO2的配置如下：`这些说明<https://docs.nitrokey.com/
 #: ../source/components/nitrokeys/features/u2f/index.rst:10
 #: ../source/components/nitrokeys/features/u2f/index.rst:13
 msgid "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
-msgstr ""
+msgstr "`硝基 U2F<https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:13
 #: ../source/components/nitrokeys/features/fido2/index.rst:11
@@ -8524,7 +8561,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:11
 #: ../source/components/nitrokeys/features/u2f/index.rst:14
 msgid "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey HSM 2<https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:14
 #: ../source/components/nitrokeys/features/fido2/index.rst:12
@@ -8587,7 +8624,7 @@ msgstr "`安装pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>`
 #: ../source/components/nitrokeys/features/u2f/index.rst:13
 #: ../source/components/nitrokeys/features/u2f/index.rst:16
 msgid "`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
-msgstr ""
+msgstr "`Nitrokey Start<https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:16
 #: ../source/components/nitrokeys/features/fido2/index.rst:14
@@ -8621,6 +8658,7 @@ msgid ""
 "`Nitrokey Storage 2 "
 "<https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 msgstr ""
+"`Nitrokey Storage 2<https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:18
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:19
@@ -8745,7 +8783,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/u2f/index.rst:24
 #: ../source/components/nitrokeys/features/u2f/index.rst:25
 msgid "⨯"
-msgstr ""
+msgstr "⨯"
 
 #: ../source/components/nitrokeys/features/encrypted-storage/index.rst:25
 #: ../source/components/nitrokeys/features/fido2/index.rst:16
@@ -8921,7 +8959,7 @@ msgstr "Nitrokey Storage也能够创建隐藏卷。请看看`隐藏卷的相应�
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Website Login"
-msgstr ""
+msgstr "网站登录"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 #, fuzzy
@@ -8930,7 +8968,7 @@ msgstr "翌云"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:29
 msgid "Passwordless Microsoft Login (Windows only)"
-msgstr ""
+msgstr "无密码 Microsoft 登录（仅限 Windows）"
 
 #: ../source/components/nitrokeys/features/fido2/index.rst:2
 #: ../source/components/nitrokeys/features/index.rst:4
@@ -9209,7 +9247,7 @@ msgstr "img11"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
-msgstr ""
+msgstr "2FA 网站登录"
 
 #: ../source/components/nitrokeys/features/fido2/website.rst:11
 #: ../source/components/nitrokeys/fido2/getting-started.rst:4
@@ -10083,11 +10121,11 @@ msgstr "开始"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "GPA"
-msgstr ""
+msgstr "GPA"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "DNSSEC (Linux only)"
-msgstr ""
+msgstr "DNSSEC （仅限 Linux）"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:2
@@ -10108,7 +10146,7 @@ msgstr "进口钥匙"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Stunnel (Linux only)"
-msgstr ""
+msgstr "Stunnel （仅限 Linux）"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #, fuzzy
@@ -10117,7 +10155,7 @@ msgstr "证书颁发机构"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 msgid "Ipsec (Linux only)"
-msgstr ""
+msgstr "Ipsec（仅限 Linux）"
 
 #: ../source/components/nitrokeys/features/hsm/index.rst:29
 #: ../source/components/nitrokeys/features/hsm/n-of-m-schemes.rst:2
@@ -10298,7 +10336,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/u2f/index.rst:2
 msgid "U2F"
-msgstr ""
+msgstr "U2F"
 
 #: ../source/components/nitrokeys/features/index.rst:4
 #, fuzzy
@@ -10334,7 +10372,7 @@ msgstr "Windows 安装"
 #: ../source/components/nitrokeys/features/index.rst:4
 #: ../source/components/nitrokeys/features/misc/index.rst:2
 msgid "Miscellaneous"
-msgstr ""
+msgstr "杂项"
 
 #: ../source/components/nitrokeys/features/index.rst:2
 #: ../source/components/nitrokeys/index.rst:4
@@ -11237,17 +11275,17 @@ msgstr "Arch Linux"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:8
 msgid "Smart Policy (Windows)"
-msgstr ""
+msgstr "智能策略（Windows）"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/index.rst:2
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "Desktop Login"
-msgstr ""
+msgstr "桌面登录"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:2
 msgid "PAM"
-msgstr ""
+msgstr "PAM"
 
 #: ../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:11
 msgid "How to Setup The Login"
@@ -11887,7 +11925,7 @@ msgstr "在GNU+Linux上用LUKS/dm-crypt进行硬盘加密"
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:69
 msgid "For setting up LUKS Disk Encryption follow our guide:"
-msgstr ""
+msgstr "如需设置 LUKS 磁盘加密，请参阅我们的指南："
 
 #: ../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:77
 msgid ""
@@ -12355,7 +12393,7 @@ msgstr ""
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GPGTools on macOS"
-msgstr ""
+msgstr "macOS 上的 GPGTools"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/ipsec.rst:2
@@ -12391,7 +12429,7 @@ msgstr "证书颁发机构"
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #: ../source/components/nitrokeys/features/openpgp-card/overview.rst:54
 msgid "GnuPG with Fedora"
-msgstr ""
+msgstr "使用 Fedora 的 GnuPG"
 
 #: ../source/components/nitrokeys/features/openpgp-card/index.rst:29
 #, fuzzy
@@ -13039,7 +13077,7 @@ msgstr "下表说明了哪种算法可以在哪种设备上使用。"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 msgid "/bs/"
-msgstr ""
+msgstr "/bs/"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 #: ../source/components/shared-faqs/algos.rst.inc:6
@@ -14392,7 +14430,7 @@ msgstr "安装 Easy-RSA"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/index.rst:8
 msgid "Viscosity"
-msgstr ""
+msgstr "粘度"
 
 #: ../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -14714,6 +14752,10 @@ msgid ""
 "therefore the rest of the guide is applicable for the HSM 2 and other "
 "Nitrokeys). This page describes the usage of S/MIME email encryption."
 msgstr ""
+"如果您不确定选择哪一种，应使用 OpenPGP，请参阅`here<../openpgp/index.html>`_ "
+"（不适用于 Nitrokey HSM 2，不过 Nitrokey HSM 2 目前支持 S/MIME/X.509 标准，"
+"因此本指南的其余部分适用于 HSM 2 和其他 Nitrokeys）。本页介绍 S/MIME "
+"电子邮件加密的用法。"
 
 #: ../source/components/nitrokeys/features/openpgp-card/smime/index.rst:42
 #, fuzzy
@@ -16086,6 +16128,8 @@ msgid ""
 "For the Nitrokey 3 the Nitrokey App 2 has to be used to set up TOTP. See "
 ":doc:`../../../software/nk-app2/index`."
 msgstr ""
+"对于 Nitrokey 3，必须使用 Nitrokey App 2 设置 TOTP。请参阅 :doc:`../../../"
+"software/nk-app2/index` 。"
 
 #: ../source/components/nitrokeys/features/totp/general.rst:15
 msgid ""
@@ -16237,7 +16281,7 @@ msgstr "说明"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 msgid "Microsoft"
-msgstr ""
+msgstr "微软"
 
 #: ../source/components/nitrokeys/features/totp/index.rst:29
 #, fuzzy
@@ -17136,7 +17180,7 @@ msgstr "首先检查一下。"
 #: ../source/components/nitrokeys/start/index.rst:15
 #: ../source/components/nitrokeys/storage/index.rst:15
 msgid "and the product guides:"
-msgstr ""
+msgstr "和产品指南："
 
 #: ../source/components/nitrokeys/fido2/index.rst:23
 #: ../source/components/nitrokeys/hsm/index.rst:15
@@ -17145,12 +17189,12 @@ msgstr ""
 #: ../source/components/nitrokeys/start/index.rst:25
 #: ../source/components/nitrokeys/storage/index.rst:24
 msgid "or check out the features:"
-msgstr ""
+msgstr "或查看功能："
 
 #: ../source/components/nitrokeys/fido2/index.rst:25
 #: ../source/components/nitrokeys/nitrokey3/index.rst:30
 msgid "`FIDO2 <../features/fido2/index.html>`_"
-msgstr ""
+msgstr "`FIDO2<../features/fido2/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/index.rst:26
 #: ../source/components/nitrokeys/nitrokey3/index.rst:31
@@ -17158,7 +17202,7 @@ msgstr ""
 #: ../source/components/nitrokeys/storage/index.rst:26
 #: ../source/components/nitrokeys/u2f/index.rst:8
 msgid "`U2F <../features/u2f/index.html>`_"
-msgstr ""
+msgstr "`U2F<../features/u2f/index.html>`_"
 
 #: ../source/components/nitrokeys/fido2/reset.rst:2
 msgid "Nitrokey Reset"
@@ -17193,7 +17237,7 @@ msgstr "谷歌浏览器：通过直接链接 \"管理安全密钥\"。`chrome://
 
 #: ../source/components/nitrokeys/fido2/reset.rst:19
 msgid "Or by using these instructions (Windows only):"
-msgstr ""
+msgstr "或使用以下说明（仅限 Windows）："
 
 #: ../source/components/nitrokeys/fido2/reset.rst:22
 msgid "Windows 10"
@@ -17655,7 +17699,7 @@ msgstr "Nitrokey HSM 2"
 
 #: ../source/components/nitrokeys/hsm/index.rst:17
 msgid "`HSM <../features/hsm/index.html>`_"
-msgstr ""
+msgstr "`HSM<../features/hsm/index.html>`_"
 
 #: ../source/components/nitrokeys/index.rst:4
 #, fuzzy
@@ -18229,11 +18273,11 @@ msgstr "故障排除"
 #: ../source/components/nitrokeys/start/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:28
 msgid "`OpenPGP Card <../features/openpgp-card/index.html>`_"
-msgstr ""
+msgstr "`OpenPGP 卡<../features/openpgp-card/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:33
 msgid "`Password Safe <../features/password-safe/index.html>`_"
-msgstr ""
+msgstr "`密码保险箱<../features/password-safe/index.html>`_"
 
 #: ../source/components/nitrokeys/nitrokey3/index.rst:35
 #, fuzzy
@@ -18377,11 +18421,11 @@ msgstr "不"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:25
 msgid "`U2F`_"
-msgstr ""
+msgstr "`U2F`_"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:26
 msgid "Predecessor of FIDO2 mainly used for Two-Factor Authentication"
-msgstr ""
+msgstr "FIDO2 的前身，主要用于双因素身份验证"
 
 #: ../source/components/nitrokeys/nitrokey3/overview.rst:30
 msgid "`OpenPGP Card`_"
@@ -18832,7 +18876,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:18
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
-msgstr ""
+msgstr "无法在 Windows 上安装硝基读卡器驱动程序"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid ""
@@ -18841,6 +18885,9 @@ msgid ""
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``."
 msgstr ""
+"在 Windows 系统中，通用智能卡读写器驱动程序的初始化失败。报告的设备状态为``"
+"This device is not working properly because Windows cannot load the drivers "
+"required for this device. (Code 31)``。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:23
 msgid ""
@@ -18848,12 +18895,15 @@ msgid ""
 "default Windows uses UMDF2, which fails to initialize and therefore is "
 "not loaded for the Nitrokey."
 msgstr ""
+"Windows 有两种通用的智能卡读写器驱动程序（WUDF 和 UMDF2）。默认情况下，"
+"Windows 使用 UMDF2，但 UMDF2 无法初始化，因此无法为 ®硝基加载。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:26
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
-msgstr ""
+msgstr "为确保驱动程序初始化成功，请为设备初始化添加重试功能。在注册表中添加以下注册"
+"表键值。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:47
@@ -18866,31 +18916,34 @@ msgid ""
 "Path: "
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers``"
 msgstr ""
+"路径：``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Key: ``RetryDeviceInitialize``"
-msgstr ""
+msgstr "Key:``RetryDeviceInitialize``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Type: ``DWORD (32-bit)``"
-msgstr ""
+msgstr "类型：`DWORD (32-bit)``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid "Data: ``1``"
-msgstr ""
+msgstr "数据：`1``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:41
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
-msgstr ""
+msgstr "注册表密钥适用于 Windows 10（1903 (19H1) 及更高版本）和 Windows 11。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:43
 msgid ""
 "If the smartcard reader was before already installed with a failed "
 "initialization you may have to remove them from the registry. In the "
 "registry delete the following registry path."
-msgstr ""
+msgstr "如果智能卡阅读器之前已经安装，但初始化失败，则可能需要从注册表中删除。在注册"
+"表中删除以下注册表路径。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst
 msgid ""
@@ -18898,18 +18951,20 @@ msgid ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 msgstr ""
+"路径：``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/"
+"Calais/bs/Readers/bs/Nitrokey CCID/ICCD Interface 0``"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:50
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
-msgstr ""
+msgstr "如果智能卡读卡器安装过多次，可能会有多个路径，路径末尾的数字会递增。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
-msgstr ""
+msgstr "重启后，硝基被识别为*Microsoft Usbccid Smartcard Reader (WUDF)* 。"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:59
 msgid "Google and Microsoft Services"
@@ -19100,7 +19155,7 @@ msgstr "GnuPG：OpenPGP卡不可用"
 msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
 " when trying to use the PIV functionality:"
-msgstr ""
+msgstr "如果 pyscard 不可用于硝酸盐，则在尝试使用 PIV 功能时可能会出现以下错误："
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 msgid ""
@@ -19109,22 +19164,24 @@ msgid ""
 "https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-"
 "not-available for more information"
 msgstr ""
+"该命令需要使用 pyscard 库，而您的系统中没有该库。更多信息请查阅 https://docs."
+"nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
 "dependencies:"
-msgstr ""
+msgstr "要修复此错误，请安装带有 `pcsc` 额外依赖项的硝酸盐："
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:160
 msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
 
 #: ../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 msgid ""
 "If you install pynitrokey through another distrubition channel, please "
 "install all optional dependencies for this channel."
-msgstr ""
+msgstr "如果通过其他分发渠道安装 pynitrokey，请安装该渠道的所有可选依赖项。"
 
 #: ../source/components/nitrokeys/passkey/index.rst:2
 msgid "Nitrokey Passkey"
@@ -19583,7 +19640,7 @@ msgstr "要在你的系统上找到libnitrokey，请使用。"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:81
 msgid "Linux Permission error"
-msgstr ""
+msgstr "Linux 许可错误"
 
 #: ../source/components/nitrokeys/pro/firmware-update.rst:84
 msgid ""
@@ -19734,19 +19791,19 @@ msgstr "Nitrokey Pro 2"
 #: ../source/components/nitrokeys/pro/index.rst:27
 #: ../source/components/nitrokeys/storage/index.rst:27
 msgid "`TOTP <../features/totp/index.html>`_"
-msgstr ""
+msgstr "`TOTP<../features/totp/index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:29
 #: ../source/components/nitrokeys/storage/index.rst:31
 msgid ""
 "`Automatic Screen Lock (Linux) <../features/misc/automatic-screen-"
 "lock/index.html>`_"
-msgstr ""
+msgstr "`自动屏幕锁定 (Linux)<../features/misc/automatic-screen-lock/index.html>`_"
 
 #: ../source/components/nitrokeys/pro/index.rst:30
 #: ../source/components/nitrokeys/storage/index.rst:32
 msgid "`ECC <../features/misc/ecc/index.html>`_"
-msgstr ""
+msgstr "`ECC<../features/misc/ecc/index.html>`_"
 
 #: ../source/components/nitrokeys/start/factory-reset.rst:5
 #: ../source/components/nitrokeys/start/multiple-identities.rst:6
@@ -20684,7 +20741,7 @@ msgstr ""
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:14
 msgid "$ sudo apt-get update && sudo apt-get install libccid"
-msgstr ""
+msgstr "$ sudo apt-get update && sudo apt-get install libccid"
 
 #: ../source/components/nitrokeys/storage/getting-started.rst:17
 msgid ""
@@ -20762,11 +20819,11 @@ msgstr "Nitrokey Storage 2"
 
 #: ../source/components/nitrokeys/storage/index.rst:29
 msgid "`Encrypted Mobile Storage <../features/encrypted-storage/index.html>`_"
-msgstr ""
+msgstr "`加密移动存储<../features/encrypted-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/storage/index.rst:30
 msgid "`Hidden Storage <../features/hidden-storage/index.html>`_"
-msgstr ""
+msgstr "`隐藏式存储<../features/hidden-storage/index.html>`_"
 
 #: ../source/components/nitrokeys/u2f/index.rst:2
 #, fuzzy
@@ -20775,7 +20832,7 @@ msgstr "Nitrokey FIDO U2F"
 
 #: ../source/components/nitrokeys/u2f/index.rst:6
 msgid "Check out the features:"
-msgstr ""
+msgstr "查看功能："
 
 #: ../source/components/nitropad/content/shared-index-content1.rst:11
 #: ../source/components/nitropad/content/shared-index-content1.rst:28
@@ -24072,11 +24129,11 @@ msgstr "使用说明"
 msgid ""
 "To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``),"
 " you need to install the ``pyscard`` dependency too:"
-msgstr ""
+msgstr "要使用硝酸盐的 PIV 功能 (``nitropy nk3 piv``)，还需要安装``pyscard`` 依赖项："
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:138
 msgid "pipx install pynitrokey[pcsc]"
-msgstr ""
+msgstr "pipx install pynitrokey[pcsc]"
 
 #: ../source/components/software/nitropy/all-platforms/installation.rst:141
 msgid "Next Steps"
@@ -34418,4 +34475,3 @@ msgstr "标记裁剪的输出"
 #~ "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 #~ " CCID/ICCD Interface 0``"
 #~ msgstr ""
-
