@@ -20,9 +20,9 @@ jobs:
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
-    container: 
-      image: sphinxdoc/sphinx
-      #options: --user 1001 (only if we don't need apt-get)
+    #container: 
+    #  image: sphinxdoc/sphinx
+    #  #options: --user 1001 (only if we don't need apt-get)
 
     env:
       MAIN_LANGS: en
@@ -38,10 +38,10 @@ jobs:
           repository: nitrokey/nitrokey-documentation
           path: source.git
         
-      - name: Install additional python packages
-        run: |
-          make -C source.git venv
-          ln -s source.git/venv venv
+      #- name: Install additional python packages
+      #  run: |
+      #    make -C source.git venv
+      #    ln -s source.git/venv venv
 
       - name: Weblate - pull component repository
         run: bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} none ${{ secrets.WEBLATE_TOKEN }} pull
