@@ -32,11 +32,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Checkout source repository
-        uses: actions/checkout@v4
-        with:
-          repository: nitrokey/nitrokey-documentation
-          path: source.git
+      #- name: Checkout source repository
+      #  uses: actions/checkout@v4
+      #  with:
+      #    repository: nitrokey/nitrokey-documentation
+      #    path: source.git
         
       #- name: Install additional python packages
       #  run: |
@@ -47,7 +47,7 @@ jobs:
         run: bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} none ${{ secrets.WEBLATE_TOKEN }} pull
 
       - name: Weblate - force wait hoping for weblate to settle
-        run: sleep 120 
+        run: sleep 180 
 
       # - name: Checkout Sources
       #   uses: actions/checkout@v4
