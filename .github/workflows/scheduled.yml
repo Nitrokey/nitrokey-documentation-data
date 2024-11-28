@@ -27,14 +27,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install additional python packages
-        run: pip3 install -r requirements.txt
+      #- name: Install additional python packages
+      #  run: pip3 install -r requirements.txt
 
       - name: Checkout Sources
         uses: actions/checkout@v4
         with:
           repository: nitrokey/nitrokey-documentation
           path: source.git
+
+      - name: Install additional python packages
+        run: |
+          make -C source.git venv
+          ln -s source.git/venv venv
                     
       - name: WORKAROUND - revert replace double backslashes in .po files
         shell: bash
@@ -48,7 +53,7 @@ jobs:
           do
             mkdir -p dist/$lang
             mkdir -p build/$lang/doctrees
-            sphinx-build -j auto -b html -D language=$lang -d build/$lang/doctrees source.git/source dist/$lang
+            venv/bin/sphinx-build -j auto -b html -D language=$lang -d build/$lang/doctrees source.git/source dist/$lang
           done
 
       - name: Cleanup before packing, pack only one _images
