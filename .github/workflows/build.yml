@@ -37,8 +37,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+        with:
+          repoository: nitrokey/nitrokey-documentation
+          path: source.git
+        
       - name: Install additional python packages
-        run: pip3 install -r requirements.txt
+        run: |
+          make -C source.git venv
+          ln -s source.git/venv
+          #pip3 install -r requirements.txt
 
       - name: Weblate - pull component repository
         run: bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} none ${{ secrets.WEBLATE_TOKEN }} pull
