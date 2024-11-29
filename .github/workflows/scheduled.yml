@@ -49,6 +49,8 @@ jobs:
       - name: Build full docs (all languages)
         run: |
           cp -r locales source.git/source/locales
+          mkdir -p dist
+          cp source.git/redirects/.htaccess dist
           for lang in $MAIN_LANGS $OTHER_LANGS
           do
             mkdir -p dist/$lang
