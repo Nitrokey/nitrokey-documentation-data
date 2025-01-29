@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-01-29 08:01+0000\n"
-"PO-Revision-Date: 2025-01-28 21:01+0000\n"
+"PO-Revision-Date: 2025-01-29 08:07+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -12567,7 +12567,7 @@ msgstr "下表说明了哪种算法可以在哪种设备上使用。"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
-msgstr ""
+msgstr "此示例包含参数\"--no-verify-tls\"，因为在此阶段 NetHSM 通常使用自签名证书。"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -23650,7 +23650,7 @@ msgstr "清除用于验证其他命令的口令。"
 msgid ""
 "Delete credential with the given id. Does not fail, if the given "
 "credential does not exist. :param credid: Credential ID"
-msgstr ""
+msgstr "删除指定 id 的证书。如果给定的证书不存在，删除不会失败：证书 ID"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.encode_properties_to_send:1 of
 msgid ""
@@ -23660,18 +23660,22 @@ msgid ""
 "during registration) @param tlv: set True, if this should be encoded as "
 "TLV, as opposed to the default \"TV\", w/o L"
 msgstr ""
+"将属性结构编码为单字节 @param touch_button_required：是否要求使用触摸按钮 @"
+"param pin_based_encryption：是否要求使用 PIN 加密（仅在注册时） @param tlv："
+"如果应编码为 TLV，而不是默认的 \"TV\"，则设置为 \"True\"。"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.list:1 of
 msgid ""
 "Return a list of the registered credentials :return: List of bytestrings,"
 " or tuple of bytestrings, if \"extended\" switch is provided @deprecated"
-msgstr ""
+msgstr "返回已注册证书的列表 :return：字节字符串列表，或字节字符串元组（如果提供了 "
+"\"扩展 \"开关） @deprecated"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.list_with_properties:1 of
 msgid ""
 "Return a list of the registered credentials with properties :return: List"
 " of ListItems"
-msgstr ""
+msgstr "返回带属性的已注册凭证列表 :return：ListItems 列表"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.register:1 of
 msgid ""
@@ -23686,12 +23690,21 @@ msgid ""
 "field for Password Safe :param metadata: Metadata field for Password Safe"
 " :return: None"
 msgstr ""
+"注册新的 OTP 凭据 :param credid：凭证 ID :param secret：共享密钥 :param "
+"digits：生成代码的位数 :param kind：OTP变体--HOTP或TOTP :param algo：哈希算法"
+"--SHA1、SHA256或SHA512 :param "
+"initial_counter_value：HOTP证书的计数器初始值（仅限HOTP） :param "
+"touch_button_required：使用此凭据需要用户确认是否在场 :param "
+"pin_based_encryption：用户对基于密码的额外加密的偏好 :param login："
+"密码保险箱的登录字段 :param password: 密码保险箱的密码字段 :param metadata："
+"用于密码保险箱的元数据字段 :return：无"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.register_yk_hmac:1 of
 msgid ""
 "Register a Yubikey-compatible challenge-response slot. @param slot: "
 "challenge-response slot @param secret: the secret"
-msgstr ""
+msgstr "注册一个与 Yubikey 兼容的挑战-响应槽。@param slot：挑战-响应槽 @param "
+"secret：秘密"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.rename_credential:1 of
 msgid ""
@@ -23699,10 +23712,12 @@ msgid ""
 "cred_id: The credential ID to modify @param new_name: New ID for the "
 "credential"
 msgstr ""
+"重命名凭据。update_credential() 调用的别名。@param cred_id：要修改的凭据 ID @"
+"param new_name：凭据的新 ID"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.reset:1 of
 msgid "Remove all credentials from the database"
-msgstr ""
+msgstr "从数据库中删除所有证书"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.select:1 of
 msgid ""
@@ -23711,12 +23726,17 @@ msgid ""
 "Status structure. Challenge and Algorithm fields are None, if the "
 "passphrase is not set."
 msgstr ""
+"执行 SELECT 命令，返回设备的详细信息，包括身份验证所需的密码。 :return "
+"SelectResponse Status 结构。如果未设置口令，Challenge 和 Algorithm 字段为 "
+"None。"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.set_code:1 of
 msgid ""
 "Set the code with the defaults as suggested in the protocol "
 "specification: - https://developers.yubico.com/OATH/YKOATH_Protocol.html"
 msgstr ""
+"根据协议规范建议的默认值设置代码： - https://developers.yubico.com/OATH/"
+"YKOATH_Protocol.html"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.set_code_raw:1 of
 msgid ""
@@ -23726,6 +23746,10 @@ msgid ""
 "challenge taken from the SELECT command. :param response: The data "
 "calculated on the client, as a proof of a correct setup."
 msgstr ""
+"设置或清除用于验证其他命令的口令。原始接口：通过 "
+"PBKDF2(ID,1000)处理的用户密码，仅限于前 16 个字节。 :param challenge：从 "
+"SELECT 命令中获取的当前密码。 :param "
+"response：响应：客户端计算的数据，证明设置正确。"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.update_credential:1 of
 msgid ""
@@ -23737,6 +23761,12 @@ msgid ""
 "metadata field content @param touch_button: Set if the touch button use "
 "should be required"
 msgstr ""
+"更新凭证字段--名称、属性和 PWS "
+"字段。在更新过程中，未填充的字段不会被编码和使用（不会改变当前值）。@param "
+"cred_id：要修改的证书 ID @param new_name：证书的新 ID @param login："
+"新的登录字段内容 @param password：密码：新的登录字段内容 @param password: "
+"新的密码字段内容 @param metadata：新元数据字段内容 @param "
+"touch_button：设置是否需要使用触摸按钮"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.validate:1 of
 #, fuzzy
@@ -23749,6 +23779,8 @@ msgid ""
 "current challenge taken from the SELECT command. :param response: The "
 "response calculated against the challenge and the secret"
 msgstr ""
+"使用口令进行身份验证。:param challenge：从 SELECT 命令中获取的当前挑战。 :"
+"param response：响应：根据挑战和密码计算得出的响应。"
 
 #: nitrokey.nk3.secrets_app.SecretsApp.verify_code:1 of
 msgid ""
@@ -23757,10 +23789,13 @@ msgid ""
 "verify. u32 representation. :return: fails with OTPAppException error; "
 "returns True if code matches the value calculated internally."
 msgstr ""
+"进行输入的 OTP 代码验证（又称反向 HOTP）：凭证名称 :param code：要验证的 "
+"HOTP 代码。u32 表示。 :return: 验证失败，会出现 OTPAppException "
+"错误；如果代码与内部计算值一致，则返回 True。"
 
 #: nitrokey.nk3.secrets_app.SecretsAppExceptionID:1 of
 msgid "Bases: :py:class:`~enum.IntEnum`"
-msgstr ""
+msgstr "基础： :py:class:`~enum.IntEnum`."
 
 #: nitrokey.nk3.secrets_app.SelectResponse:1 of
 msgid ""
@@ -23768,6 +23803,9 @@ msgid ""
 "Optional[int], salt: Optional[bytes], challenge: Optional[bytes], "
 "algorithm: Optional[bytes], serial_number: Optional[bytes])"
 msgstr ""
+"SelectResponse(version：可选[字节], pin_attempt_counter：可选[int], "
+"salt：可选[字节], challenge：可选[字节], 算法：可选[字节], "
+"serial_number：可选[字节])"
 
 #: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.nk3.updates.rst:2
 #, fuzzy
@@ -23776,19 +23814,19 @@ msgstr "硝基钥匙更新工具"
 
 #: nitrokey.nk3.updates.UpdateUi:1 of
 msgid "Bases: :py:class:`~abc.ABC`"
-msgstr ""
+msgstr "基础： :py:class:`~abc.ABC`"
 
 #: nitrokey.nk3.updates.get_extra_information:1 of
 msgid ""
 "Return additional information for the device after update based on "
 "update-path"
-msgstr ""
+msgstr "根据更新路径返回设备更新后的附加信息"
 
 #: nitrokey.nk3.updates.get_finalization_wait_retries:1 of
 msgid ""
 "Return number of retries to wait for the device after update based on "
 "update-path"
-msgstr ""
+msgstr "根据 update-path 返回更新后等待设备重试的次数"
 
 #: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.nkpk.rst:2
 #, fuzzy
@@ -23810,6 +23848,8 @@ msgid ""
 "Bases: "
 ":py:class:`~nitrokey.trussed._bootloader.nrf52.TrussedBootloaderNrf52`"
 msgstr ""
+"Bases: :py:class:`~nitrokey.trussed._bootloader.nrf52."
+"TrussedBootloaderNrf52`."
 
 #: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:2
 #, fuzzy
@@ -25336,4 +25376,3 @@ msgstr "标记裁剪的输出"
 
 #~ msgid "/bs/"
 #~ msgstr "此示例包含参数\"--no-verify-tls\"，因为在此阶段 NetHSM 通常使用自签名证书。"
-
