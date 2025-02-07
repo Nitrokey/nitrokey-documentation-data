@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 16:47+0000\n"
+"POT-Creation-Date: 2025-02-07 13:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2939,7 +2939,6 @@ msgid "Key Management"
 msgstr ""
 
 #: ../../source/components/nethsm/operation.rst:14
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:55
 msgid "Generate Key"
 msgstr ""
 
@@ -6391,11 +6390,13 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:57
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:72
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:5
 msgid "LED Color"
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:57
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:72
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:5
 msgid "Event"
 msgstr ""
 
@@ -8647,6 +8648,7 @@ msgstr ""
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:13
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:19
 #: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:17
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:63
 msgid "Key Generation"
 msgstr ""
 
@@ -10811,7 +10813,7 @@ msgid "Key Slots"
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:10
-msgid "The PIV application can hold certificates for different purposes. For each purpose the private key and its corresponding certificate are stored in a key slot."
+msgid "The PIV smart card can hold certificates for different purposes. For each purpose the private key and its corresponding certificate are stored in a key slot."
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:14
@@ -10883,43 +10885,51 @@ msgid "Algorithms"
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:38
-msgid "The PIV application uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key."
+msgid "PIV uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:41
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:40
 msgid "Supported asymmetric key algorithms:"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:43
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:42
 msgid "RSA 2048"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:44
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:43
 msgid "nistp256"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:46
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:45
 msgid "Supported symmetric key algorithms:"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:48
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:47
 msgid "AES 256"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:49
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:48
 msgid "3DES (TDES)"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:52
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:51
 msgid "It is not recommended to use the 3DES (TDES) algorithm."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:57
-msgid "The PIV application can generate a new private key on the Nitrokey."
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:54
+msgid "Management Key"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:59
-msgid "The command below will create private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``."
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:56
+msgid "The default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:65
+msgid "The PIV smart card can generate a new private key on the Nitrokey."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:67
+msgid "The command below will create a private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``."
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/totp/general.rst:2
@@ -11631,7 +11641,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/index.rst:23
 #: ../../source/components/nitrokeys/hsm/index.rst:15
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:28
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:29
 #: ../../source/components/nitrokeys/pro/index.rst:24
 #: ../../source/components/nitrokeys/start/index.rst:25
 #: ../../source/components/nitrokeys/storage/index.rst:24
@@ -11639,12 +11649,12 @@ msgid "or check out the features:"
 msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/index.rst:25
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:30
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:31
 msgid "`FIDO2 <../features/fido2/index.html>`_"
 msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/index.rst:26
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:31
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:32
 #: ../../source/components/nitrokeys/pro/index.rst:26
 #: ../../source/components/nitrokeys/storage/index.rst:26
 #: ../../source/components/nitrokeys/u2f/index.rst:8
@@ -12258,6 +12268,10 @@ msgid " Set Pins"
 msgstr ""
 
 #: ../../source/components/nitrokeys/nitrokey3/index.rst:18
+msgid " LED and Touch Button"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:18
 msgid " nitropy"
 msgstr ""
 
@@ -12269,19 +12283,63 @@ msgstr ""
 msgid " Troubleshooting"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:32
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:33
 #: ../../source/components/nitrokeys/pro/index.rst:28
 #: ../../source/components/nitrokeys/start/index.rst:27
 #: ../../source/components/nitrokeys/storage/index.rst:28
 msgid "`OpenPGP Card <../features/openpgp-card/index.html>`_"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:33
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:34
 msgid "`Password Safe <../features/password-safe/index.html>`_"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/index.rst:34
+#: ../../source/components/nitrokeys/nitrokey3/index.rst:35
 msgid "`PIV (Windows only) <../features/piv/index.html>`_"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:2
+msgid "LED and Touch Button"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:7
+msgid "White blinking"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:7
+msgid "Waiting for button touch"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:9
+msgid "Red blinking"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:9
+msgid "HEADS: HOTP verification failed"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:11
+msgid "Green blinking"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:11
+msgid "HEADS: HOTP verification sucessful"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:13
+msgid "Green shining"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:13
+msgid "Processing"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:15
+msgid "Red shining"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/led.rst:15
+msgid "Device failure"
 msgstr ""
 
 #: ../../source/components/nitrokeys/nitrokey3/nitropy.rst:2
