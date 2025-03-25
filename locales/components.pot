@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-14 14:17+0000\n"
+"POT-Creation-Date: 2025-03-25 17:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8291,7 +8291,7 @@ msgid "A Nitrokey Pro 2 or Nitrokey Storage 2 `initialized <openpgp.html>`_ with
 msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/luks.rst:37
-#: ../../source/components/software/nitropy/windows/installation.rst:31
+#: ../../source/components/software/nitropy/windows/installation.rst:42
 msgid "Known Issues"
 msgstr ""
 
@@ -8687,69 +8687,81 @@ msgstr ""
 msgid "Now is good time to backup your key. Please keep this backup very secure. It is best practice to never have this key on a regular computer which has connection to the internet, so that the key never gets compromised. You can create a backup with something like:"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:208
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:207
+msgid "Optionally user can chose to export an 'encrypted backup' of the secret key ,to avoid accidental leakage of secret key (This is not a full-proof method or replacement for offline computers but should still provide good security against leakeges)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:213
+msgid "A passphrase prompt will be shown to you on running the above command. You must need to keep this passphrase safely for successful decryption of your private key."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:215
+msgid "On linux following command can be used to secure wipe and delete the unencrypted backup of key from the disk."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:222
 msgid "Key Import"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:210
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:224
 msgid "You have a main key and two subkeys which can be imported to your Nitrokey. Before proceeding please make sure that you really have a backup of the key, if you need one. The ``keytocard`` command used in the next steps will **delete** your key from your disk!"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:212
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:226
 msgid "We start the process by accessing the interactive interface of GnuPG again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either the id of the key or the email address used during key generation."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:248
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:262
 msgid "We just imported the main key to the card. Now we proceed with the two subkeys. We type ``key 1`` to select the encryption subkey and type in ``keytocard`` again and select the slot to use."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:277
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:291
 msgid "Now we deselect the first key with ``key 1`` and select the second subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards we quit and save the changes."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:320
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:334
 msgid "Your keys are now moved to the Nitrokey and thus secured in hardware. Congratulations!"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:323
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:337
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:53
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:206
 msgid "Exporting Public Key and Keyserver Usage"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:325
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:339
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:55
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:208
 msgid "Although you can start to use your Nitrokey right away after generating the keys on your system, you need to import your public key on every system, you want to use the Nitrokey on. So to be prepared you have two options: You either save the public key anywhere you like and use it on another system or you save the public key on a webpage/keyserver."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:328
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:342
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:211
 msgid "Generating a Public Key File"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:330
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:344
 msgid "To get a simple file of your public key, you can just use ``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:332
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:346
 msgid "You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg --import pubkey.asc`` and then types ``gpg --card-status`` so that the system knows where to look for this key. That’s all."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:336
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:350
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:218
 msgid "Uploading the Public Key"
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:339
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:353
 msgid "If you don't want to carry a public key file, you can upload it to keyserver. For the common SKS federated keyservers, for example, keyserver.ubuntu.com. Type ``gpg --keyserver keyserver.ubuntu.com --send-key keyID``. If you are using another machine, you can just import it by using ``gpg --keyserver keyserver.ubuntu.com --recv-key keyID``."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:341
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:355
 msgid "You can also use openpgp.keys.org. The recommended way is to do this by ``gpg --export your_address@example.net``. If you are using another machine, you can just import it by using ``gpg --auto-key-locate hkps://keys.openpgp.org``."
 msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:344
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:358
 msgid "Another possibility is to change the URL setting on your card. Start ``gpg --card-edit`` again and first set the URL where the key is situated (e.g. on the keyserver or on your webpage etc.) via the ``url`` command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit environment``."
 msgstr ""
 
@@ -16248,7 +16260,6 @@ msgstr ""
 msgid "API Reference"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/index.rst:2
 #: ../../venv/lib/python3.11/site-packages/nitrokey/__init__.py:docstring of nitrokey:1
 msgid "Nitrokey Python SDK"
 msgstr ""
@@ -16294,8 +16305,6 @@ msgstr ""
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.validate:0
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.validate_raw:0
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.verify_code:0
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_extra_information:0
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_finalization_wait_retries:0
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_utils.py:docstring of nitrokey.trussed._utils.Version.core:0
 msgid "Return type"
 msgstr ""
@@ -16321,8 +16330,6 @@ msgstr ""
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.validate:0
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.validate_raw:0
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.SecretsApp.verify_code:0
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_extra_information:0
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_finalization_wait_retries:0
 msgid "Parameters"
 msgstr ""
 
@@ -16372,7 +16379,7 @@ msgstr ""
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.Instruction:1
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.Kind:1
 #: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/secrets_app.py:docstring of nitrokey.nk3.secrets_app.Tag:1
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.UpdatePath:1
+#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.Warning:1
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_bootloader/__init__.py:docstring of nitrokey.trussed._bootloader.Model:1
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_bootloader/__init__.py:docstring of nitrokey.trussed._bootloader.Variant:1
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_device.py:docstring of nitrokey.trussed._device.App:1
@@ -16524,12 +16531,12 @@ msgstr ""
 msgid "Bases: :py:class:`~abc.ABC`"
 msgstr ""
 
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_extra_information:1
-msgid "Return additional information for the device after update based on update-path"
+#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.Warning:1
+msgid "A warning that can occur during a firmware update."
 msgstr ""
 
-#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.get_finalization_wait_retries:1
-msgid "Return number of retries to wait for the device after update based on update-path"
+#: ../../venv/lib/python3.11/site-packages/nitrokey/nk3/updates.py:docstring of nitrokey.nk3.updates.Warning:3
+msgid "By default, these warnings abort the firmware update.  This enum can be used to select types of warnings that should be ignored and not cause the firmware update to fail."
 msgstr ""
 
 #: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.nkpk.rst:2
@@ -16570,7 +16577,7 @@ msgid "Update Container Objects"
 msgstr ""
 
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_bootloader/__init__.py:docstring of nitrokey.trussed._bootloader.FirmwareContainer:1
-msgid "FirmwareContainer(version: nitrokey.trussed._utils.Version, pynitrokey: Optional[nitrokey.trussed._utils.Version], images: Dict[nitrokey.trussed._bootloader.Variant, bytes])"
+msgid "FirmwareContainer(version: nitrokey.trussed._utils.Version, pynitrokey: Optional[nitrokey.trussed._utils.Version], sdk: Optional[nitrokey.trussed._utils.Version], images: Dict[nitrokey.trussed._bootloader.Variant, bytes])"
 msgstr ""
 
 #: ../../venv/lib/python3.11/site-packages/nitrokey/trussed/_bootloader/__init__.py:docstring of nitrokey.trussed._bootloader.FirmwareMetadata:1
@@ -16711,6 +16718,10 @@ msgstr ""
 
 #: ../../source/components/software/nitrokey-sdk-py/index.rst:4
 msgid "Contents:"
+msgstr ""
+
+#: ../../source/components/software/nitrokey-sdk-py/index.rst:2
+msgid "Nitrokey Python SDK |nitrokey_sdk_version|"
 msgstr ""
 
 #: ../../source/components/software/nitropy/all-platforms/index.rst:2
@@ -16962,7 +16973,7 @@ msgid "If you already use Python on your system and are familiar with the comman
 msgstr ""
 
 #: ../../source/components/software/nitropy/windows/installation.rst:11
-msgid "How to Install"
+msgid "Using our Release"
 msgstr ""
 
 #: ../../source/components/software/nitropy/windows/installation.rst:13
@@ -16997,11 +17008,33 @@ msgstr ""
 msgid "Without administrator privileges nitropy might not be able to communicate to the device."
 msgstr ""
 
+#: ../../source/components/software/nitropy/windows/installation.rst:31
+#: ../../source/components/software/nk-app2/installation-windows.rst:26
+msgid "Using Winget"
+msgstr ""
+
 #: ../../source/components/software/nitropy/windows/installation.rst:33
+#: ../../source/components/software/nk-app2/installation-windows.rst:28
+msgid "If you don't have Winget installed on your system you can download and install it from `here <https://github.com/microsoft/winget-cli/releases>`__."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:35
+msgid "Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH.Nitropy  -e``"
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:37
+msgid "Close PowerShell and relaunch it."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:39
+msgid "You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitropy>`__."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:44
 msgid "Support for Nitrokey Start under Windows 10 is not working without installing libusb libraries (to be described)"
 msgstr ""
 
-#: ../../source/components/software/nitropy/windows/installation.rst:34
+#: ../../source/components/software/nitropy/windows/installation.rst:45
 msgid "The installer does not remove a previous installation (manually remove it using settings -> programs and apps)"
 msgstr ""
 
@@ -17152,32 +17185,60 @@ msgstr ""
 msgid "Windows Install"
 msgstr ""
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:4
-msgid "`Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the Windows installer (MSI file)."
+#: ../../source/components/software/nk-app2/installation-windows.rst:5
+msgid "Using our MSI File"
 msgstr ""
 
 #: ../../source/components/software/nk-app2/installation-windows.rst:7
-msgid "If you're using Microsoft Edge, the downloaded ``.msi`` might be marked as \"untrused\" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then \"keep\", then \"show more\" and finally \"keep anyway\"."
-msgstr ""
-
-#: ../../source/components/software/nk-app2/installation-windows.rst:9
-msgid "Execute the Windows installer to install Nitrokey App 2 to your system."
+msgid "`Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the Windows installer (MSI file)."
 msgstr ""
 
 #: ../../source/components/software/nk-app2/installation-windows.rst:10
-msgid "Start Nitrokey App 2 from your applications."
+msgid "If you're using Microsoft Edge, the downloaded ``.msi`` might be marked as \"untrused\" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then \"keep\", then \"show more\" and finally \"keep anyway\"."
 msgstr ""
 
 #: ../../source/components/software/nk-app2/installation-windows.rst:12
+msgid "Execute the Windows installer to install Nitrokey App 2 to your system."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:13
+msgid "Start Nitrokey App 2 from your applications."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:15
 msgid "Alternatively, you can download and execute the portable Windows binary without installation."
 msgstr ""
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:14
+#: ../../source/components/software/nk-app2/installation-windows.rst:17
 msgid "Silent installations are possible with the parameter **/qn**."
 msgstr ""
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:16
+#: ../../source/components/software/nk-app2/installation-windows.rst:19
 msgid "Example for a silent/mass installation"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:30
+msgid "Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH.Nitrokey-App  -e``"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:32
+msgid "You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitrokey-App>`__."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:36
+msgid "Using Chocolatey"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:38
+msgid "If you don't have Chocolatey installed on your system you can find instructions `here <https://chocolatey.org/install>`__."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:40
+msgid "Open PowerShell and run this command: ``choco install nitrokey-app2``"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:42
+msgid "You can find our package informations `here <https://community.chocolatey.org/packages/nitrokey-app2>`__."
 msgstr ""
 
 #: ../../source/components/software/nk-app2/keepassxc.rst:2

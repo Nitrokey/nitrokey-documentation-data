@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-14 14:17+0000\n"
+"POT-Creation-Date: 2025-03-25 17:06+0000\n"
 "PO-Revision-Date: 2025-03-18 13:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Japanese <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -11995,7 +11994,7 @@ msgid ""
 msgstr "Nitrokey Pro 2またはNitrokey Storage 2の`キーで初期化された<openpgp.html>`_。"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/luks.rst:37
-#: ../../source/components/software/nitropy/windows/installation.rst:31
+#: ../../source/components/software/nitropy/windows/installation.rst:42
 msgid "Known Issues"
 msgstr "既知の問題"
 
@@ -12593,11 +12592,32 @@ msgid ""
 "You can create a backup with something like:"
 msgstr "今こそ、あなたのキーをバックアップする良い機会です。このバックアップは非常に安全に保管してください。インターネットに接続されている通常のコンピュータでは、このキーを決して使用しないことをお勧めします。以下のような方法でバックアップを作成することができます。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:208
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:207
+msgid ""
+"Optionally user can chose to export an 'encrypted backup' of the secret "
+"key ,to avoid accidental leakage of secret key (This is not a full-proof "
+"method or replacement for offline computers but should still provide good"
+" security against leakeges)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:213
+msgid ""
+"A passphrase prompt will be shown to you on running the above command. "
+"You must need to keep this passphrase safely for successful decryption of"
+" your private key."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:215
+msgid ""
+"On linux following command can be used to secure wipe and delete the "
+"unencrypted backup of key from the disk."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:222
 msgid "Key Import"
 msgstr "キーインポート"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:210
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:224
 msgid ""
 "You have a main key and two subkeys which can be imported to your "
 "Nitrokey. Before proceeding please make sure that you really have a "
@@ -12607,7 +12627,7 @@ msgstr ""
 "メインキーと2つのサブキーがありますが、これらはNitrokeyにインポートすることができます。先に進む前に、必要に応じてキーのバックアップが本当にあるかどうか確認してください。次のステップで使用する``keytocard``コマンドは、ディスクからキーを"
 " **削除** します!"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:212
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:226
 msgid ""
 "We start the process by accessing the interactive interface of GnuPG "
 "again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either"
@@ -12616,7 +12636,7 @@ msgstr ""
 "まず、``gpg --edit-key --expert "
 "keyID``で再びGnuPGの対話型インターフェースにアクセスし、``keyID``には、鍵のIDか、鍵の生成時に使用したメールアドレスを指定します。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:248
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:262
 msgid ""
 "We just imported the main key to the card. Now we proceed with the two "
 "subkeys. We type ``key 1`` to select the encryption subkey and type in "
@@ -12625,7 +12645,7 @@ msgstr ""
 "メインキーをカードに取り込んだところです。次に、2つのサブキーを入力します。``key "
 "1``と入力して暗号化サブキーを選択し、``keytocard``と再度入力して使用するスロットを選択します。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:277
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:291
 msgid ""
 "Now we deselect the first key with ``key 1`` and select the second subkey"
 " with ``key 2`` and move it as well with ``keytocard``. Afterwards we "
@@ -12634,19 +12654,19 @@ msgstr ""
 "ここで、``key 1``で最初のキーを選択解除し、<xid=\"79\"></x>`key "
 "2``で2つ目のサブキーを選択し、``keytocard``で同様に移動します。その後、終了して変更を保存します。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:320
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:334
 msgid ""
 "Your keys are now moved to the Nitrokey and thus secured in hardware. "
 "Congratulations!"
 msgstr "あなたの鍵はNitrokeyに移され、こうしてハードウェアで固定されました。おめでとうございます。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:323
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:337
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:53
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:206
 msgid "Exporting Public Key and Keyserver Usage"
 msgstr "公開鍵のエクスポートと鍵サーバの利用"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:325
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:339
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:55
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:208
 msgid ""
@@ -12657,12 +12677,12 @@ msgid ""
 "another system or you save the public key on a webpage/keyserver."
 msgstr "お使いのシステムで鍵を生成した後、すぐにNitrokeyを使い始めることができますが、Nitrokeyを使用したいすべてのシステムで公開鍵をインポートする必要があります。そのための準備として、2つの選択肢があります。公開鍵を好きな場所に保存して別のシステムで使用するか、Webページ/鍵サーバに公開鍵を保存するかです。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:328
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:342
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:211
 msgid "Generating a Public Key File"
 msgstr "公開鍵ファイルの生成"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:330
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:344
 msgid ""
 "To get a simple file of your public key, you can just use ``gpg --armor "
 "--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
@@ -12673,7 +12693,7 @@ msgstr ""
 "pubkey.asc``を使用すればよいでしょう。フィンガープリントを \"keyID \"として使用するか（``gpg "
 "-K``を参照してください）、メールアドレスを識別子として使用してください。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:332
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:346
 msgid ""
 "You can carry this file with you or send it to anyone who you like. This "
 "file is not secret at all. If you want to use the Nitrokey on another "
@@ -12685,12 +12705,12 @@ msgstr ""
 " --import pubkey.asc``を介してこの公開鍵をインポートし、次に``gpg --card-"
 "status``をタイプして、システムがこの鍵をどこで探すかを知るようにします。以上です。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:336
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:350
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:218
 msgid "Uploading the Public Key"
 msgstr "公開鍵のアップロード"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:339
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:353
 #, fuzzy
 msgid ""
 "If you don't want to carry a public key file, you can upload it to "
@@ -12704,7 +12724,7 @@ msgstr ""
 "keyID``と入力することで行うことができます。別のマシンを使っている場合は、``gpg --keyserver "
 "search.keyserver.net --recv-key keyID``を使ってインポートすることができます。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:341
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:355
 msgid ""
 "You can also use openpgp.keys.org. The recommended way is to do this by "
 "``gpg --export your_address@example.net``. If you are using another "
@@ -12715,7 +12735,7 @@ msgstr ""
 "your_address@example.net``で行うことである。他のマシンを使っている場合は、``gpg --auto-key-locate"
 " hkps://keys.openpgp.org`` を使ってインポートすればよい。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:344
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:358
 #, fuzzy
 msgid ""
 "Another possibility is to change the URL setting on your card. Start "
@@ -12979,7 +12999,7 @@ msgstr "次の表は、どのアルゴリズムがどのデバイスで使用で
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
-msgstr "BIP32鍵導出機能"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -22731,9 +22751,8 @@ msgid ""
 "receiving your computer check that no tape have been removed. Then you "
 "can remove the tape and use rubbing alcohol to remove the tamper marks."
 msgstr ""
-"NitroPC Pro 2 では、筐体に改ざん防止テープを使用しています。コンピュータを受"
-"け取った後、テープが剥がされていないことを確認してください。その後、テープを"
-"剥がし、消毒用アルコールを使用して改ざん痕を取り除くことができます。"
+"NitroPC Pro 2 "
+"では、筐体に改ざん防止テープを使用しています。コンピュータを受け取った後、テープが剥がされていないことを確認してください。その後、テープを剥がし、消毒用アルコールを使用して改ざん痕を取り除くことができます。"
 
 #: ../../source/components/nitropad-nitropc/sealed-hardware.rst:46
 msgid ""
@@ -24196,7 +24215,7 @@ msgstr "三番煎じ"
 msgid "API Reference"
 msgstr "リファレンス"
 
-#: ../../source/components/software/nitrokey-sdk-py/index.rst:2 nitrokey:1 of
+#: nitrokey:1 of
 #, fuzzy
 msgid "Nitrokey Python SDK"
 msgstr "Nitrokey Pro 2"
@@ -24246,8 +24265,6 @@ msgstr "Nitrokey 3デバイスのリストアップ"
 #: nitrokey.nk3.secrets_app.SecretsApp.validate
 #: nitrokey.nk3.secrets_app.SecretsApp.validate_raw
 #: nitrokey.nk3.secrets_app.SecretsApp.verify_code
-#: nitrokey.nk3.updates.get_extra_information
-#: nitrokey.nk3.updates.get_finalization_wait_retries
 #: nitrokey.trussed._utils.Version.core of
 #, fuzzy
 msgid "Return type"
@@ -24273,9 +24290,7 @@ msgstr "キータイプ"
 #: nitrokey.nk3.secrets_app.SecretsApp.update_credential
 #: nitrokey.nk3.secrets_app.SecretsApp.validate
 #: nitrokey.nk3.secrets_app.SecretsApp.validate_raw
-#: nitrokey.nk3.secrets_app.SecretsApp.verify_code
-#: nitrokey.nk3.updates.get_extra_information
-#: nitrokey.nk3.updates.get_finalization_wait_retries of
+#: nitrokey.nk3.secrets_app.SecretsApp.verify_code of
 msgid "Parameters"
 msgstr "パラメータ"
 
@@ -24326,7 +24341,7 @@ msgstr "SecretsAppException(code: str, context: str)"
 #: nitrokey.nk3.secrets_app.Algorithm:1
 #: nitrokey.nk3.secrets_app.CCIDInstruction:1
 #: nitrokey.nk3.secrets_app.Instruction:1 nitrokey.nk3.secrets_app.Kind:1
-#: nitrokey.nk3.secrets_app.Tag:1 nitrokey.nk3.updates.UpdatePath:1
+#: nitrokey.nk3.secrets_app.Tag:1 nitrokey.nk3.updates.Warning:1
 #: nitrokey.trussed._bootloader.Model:1 nitrokey.trussed._bootloader.Variant:1
 #: nitrokey.trussed._device.App:1 nitrokey.trussed.admin_app.AdminCommand:1
 #: nitrokey.trussed.admin_app.BootMode:1
@@ -24585,17 +24600,16 @@ msgstr "Nitrokeyアップデートツール"
 msgid "Bases: :py:class:`~abc.ABC`"
 msgstr "ベース: :py:class:`~abc.ABC`"
 
-#: nitrokey.nk3.updates.get_extra_information:1 of
-msgid ""
-"Return additional information for the device after update based on "
-"update-path"
-msgstr "update-pathに基づき、アップデート後のデバイスの追加情報を返す。"
+#: nitrokey.nk3.updates.Warning:1 of
+msgid "A warning that can occur during a firmware update."
+msgstr ""
 
-#: nitrokey.nk3.updates.get_finalization_wait_retries:1 of
+#: nitrokey.nk3.updates.Warning:3 of
 msgid ""
-"Return number of retries to wait for the device after update based on "
-"update-path"
-msgstr "update-pathに基づき、アップデート後にデバイスを待機させるリトライ回数を返す。"
+"By default, these warnings abort the firmware update.  This enum can be "
+"used to select types of warnings that should be ignored and not cause the"
+" firmware update to fail."
+msgstr ""
 
 #: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.nkpk.rst:2
 #, fuzzy
@@ -24646,8 +24660,10 @@ msgid "Update Container Objects"
 msgstr "コンテナを作る。"
 
 #: nitrokey.trussed._bootloader.FirmwareContainer:1 of
+#, fuzzy
 msgid ""
 "FirmwareContainer(version: nitrokey.trussed._utils.Version, pynitrokey: "
+"Optional[nitrokey.trussed._utils.Version], sdk: "
 "Optional[nitrokey.trussed._utils.Version], images: "
 "Dict[nitrokey.trussed._bootloader.Variant, bytes])"
 msgstr ""
@@ -24888,6 +24904,11 @@ msgstr "詳細については、アプリケーション・クラスのAPIリフ
 #, fuzzy
 msgid "Contents:"
 msgstr "コメント"
+
+#: ../../source/components/software/nitrokey-sdk-py/index.rst:2
+#, fuzzy
+msgid "Nitrokey Python SDK |nitrokey_sdk_version|"
+msgstr "Nitrokey Pro 2"
 
 #: ../../source/components/software/nitropy/all-platforms/index.rst:2
 msgid "nitropy Documentation For All Platforms"
@@ -25250,8 +25271,9 @@ msgstr ""
 " :doc:`../all-platforms/installation` を参照してください。"
 
 #: ../../source/components/software/nitropy/windows/installation.rst:11
-msgid "How to Install"
-msgstr "インストール方法"
+#, fuzzy
+msgid "Using our Release"
+msgstr "タッチが解除されるまで"
 
 #: ../../source/components/software/nitropy/windows/installation.rst:13
 msgid ""
@@ -25306,13 +25328,42 @@ msgid ""
 " to the device."
 msgstr "管理者権限がない場合、nitropyがデバイスに通信できない場合があります。"
 
+#: ../../source/components/software/nitropy/windows/installation.rst:31
+#: ../../source/components/software/nk-app2/installation-windows.rst:26
+msgid "Using Winget"
+msgstr ""
+
 #: ../../source/components/software/nitropy/windows/installation.rst:33
+#: ../../source/components/software/nk-app2/installation-windows.rst:28
+msgid ""
+"If you don't have Winget installed on your system you can download and "
+"install it from `here <https://github.com/microsoft/winget-"
+"cli/releases>`__."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:35
+msgid ""
+"Open PowerShell and run this command: ``winget install "
+"--id=NitrokeyGmbH.Nitropy  -e``"
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:37
+msgid "Close PowerShell and relaunch it."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:39
+msgid ""
+"You can find our package informations `here "
+"<https://winstall.app/apps/NitrokeyGmbH.Nitropy>`__."
+msgstr ""
+
+#: ../../source/components/software/nitropy/windows/installation.rst:44
 msgid ""
 "Support for Nitrokey Start under Windows 10 is not working without "
 "installing libusb libraries (to be described)"
 msgstr "Windows 10でのNitrokey Startのサポートは、libusbライブラリをインストールしないと動作しない(予定)"
 
-#: ../../source/components/software/nitropy/windows/installation.rst:34
+#: ../../source/components/software/nitropy/windows/installation.rst:45
 msgid ""
 "The installer does not remove a previous installation (manually remove it"
 " using settings -> programs and apps)"
@@ -25511,7 +25562,11 @@ msgstr "申し込み"
 msgid "Windows Install"
 msgstr "Windowsインストール"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:4
+#: ../../source/components/software/nk-app2/installation-windows.rst:5
+msgid "Using our MSI File"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:7
 msgid ""
 "`Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the "
 "Windows installer (MSI file)."
@@ -25519,7 +25574,7 @@ msgstr ""
 "` <https://github.com/Nitrokey/nitrokey-app2/releases>`__ "
 "Windowsインストーラー（MSIファイル）をダウンロードします。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:7
+#: ../../source/components/software/nk-app2/installation-windows.rst:10
 #, fuzzy
 msgid ""
 "If you're using Microsoft Edge, the downloaded ``.msi`` might be marked "
@@ -25531,27 +25586,59 @@ msgstr ""
 "としてマークされている可能性があります。とにかく信頼できるものとしてマークするには、警告の右側にある 3 つの点をクリックし、次に "
 "\"keep\"、次に \"show more\"、最後に \"keep anyway\" を実行します。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:9
+#: ../../source/components/software/nk-app2/installation-windows.rst:12
 msgid "Execute the Windows installer to install Nitrokey App 2 to your system."
 msgstr "Windowsインストーラーを実行し、Nitrokey App 2をシステムにインストールします。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:10
+#: ../../source/components/software/nk-app2/installation-windows.rst:13
 msgid "Start Nitrokey App 2 from your applications."
 msgstr "アプリケーションからNitrokey App 2を起動します。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:12
+#: ../../source/components/software/nk-app2/installation-windows.rst:15
 msgid ""
 "Alternatively, you can download and execute the portable Windows binary "
 "without installation."
 msgstr "または、インストールせずにポータブルWindowsバイナリをダウンロードして実行することも可能です。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:14
+#: ../../source/components/software/nk-app2/installation-windows.rst:17
 msgid "Silent installations are possible with the parameter **/qn**."
 msgstr "サイレントインストールは、**/qn** パラメーターで可能です。"
 
-#: ../../source/components/software/nk-app2/installation-windows.rst:16
+#: ../../source/components/software/nk-app2/installation-windows.rst:19
 msgid "Example for a silent/mass installation"
 msgstr "サイレント・マス設置の例"
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:30
+msgid ""
+"Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH"
+".Nitrokey-App  -e``"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:32
+msgid ""
+"You can find our package informations `here "
+"<https://winstall.app/apps/NitrokeyGmbH.Nitrokey-App>`__."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:36
+msgid "Using Chocolatey"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:38
+msgid ""
+"If you don't have Chocolatey installed on your system you can find "
+"instructions `here <https://chocolatey.org/install>`__."
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:40
+msgid "Open PowerShell and run this command: ``choco install nitrokey-app2``"
+msgstr ""
+
+#: ../../source/components/software/nk-app2/installation-windows.rst:42
+msgid ""
+"You can find our package informations `here "
+"<https://community.chocolatey.org/packages/nitrokey-app2>`__."
+msgstr ""
 
 #: ../../source/components/software/nk-app2/keepassxc.rst:2
 msgid "KeePassXC"
@@ -26274,7 +26361,7 @@ msgid "Mark cropped Output"
 msgstr "マーク クロップド出力"
 
 #~ msgid "/bs/"
-#~ msgstr ""
+#~ msgstr "BIP32鍵導出機能"
 
 #~ msgid "secp256"
 #~ msgstr "secp256"
@@ -26494,3 +26581,19 @@ msgstr "マーク クロップド出力"
 
 #~ msgid "Enter the User PIN of the Nitrokey whenever prompted (default: 123456)."
 #~ msgstr "プロンプトが表示されたら、NitrokeyのユーザーPINを入力してください（デフォルト：123456）。"
+
+#~ msgid ""
+#~ "Return additional information for the "
+#~ "device after update based on update-"
+#~ "path"
+#~ msgstr "update-pathに基づき、アップデート後のデバイスの追加情報を返す。"
+
+#~ msgid ""
+#~ "Return number of retries to wait "
+#~ "for the device after update based "
+#~ "on update-path"
+#~ msgstr "update-pathに基づき、アップデート後にデバイスを待機させるリトライ回数を返す。"
+
+#~ msgid "How to Install"
+#~ msgstr "インストール方法"
+
