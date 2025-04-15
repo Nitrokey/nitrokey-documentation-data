@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-14 16:49+0000\n"
-"PO-Revision-Date: 2025-04-14 16:54+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-04-15 10:20+0000\n"
+"Last-Translator: Jan Suhr <jan@nitrokey.com>\n"
 "Language-Team: German <http://translate.nitrokey.com/projects/"
 "nitrokey-documentation/root/de/>\n"
 "Language: de\n"
@@ -1402,7 +1402,6 @@ msgid "The NetHSM can be restored from a backup file."
 msgstr "Der NetHSM kann aus einer Sicherungsdatei wiederhergestellt werden."
 
 #: ../../source/components/nethsm/administration.rst:732
-#, fuzzy
 msgid ""
 "If the NetHSM is *Unprovisioned* it will restore all *User Data* "
 "including system configuration and reboot. Therefore the system may get "
@@ -1410,9 +1409,10 @@ msgid ""
 "afterwards. The NetHSM ends in a *Locked* state."
 msgstr ""
 "Wenn der NetHSM *Unprovisioned* ist, werden alle *Benutzerdaten* "
-"einschließlich der Systemkonfiguration wiederhergestellt und das System "
-"neu gestartet. Daher kann das System anschließend andere "
-"Netzwerkeinstellungen, TLS-Zertifikate und *Unlock Passphrase* erhalten."
+"einschließlich der Systemkonfiguration wiederhergestellt und das System neu "
+"gestartet. Daher kann das System anschließend andere Netzwerkeinstellungen, "
+"TLS-Zertifikate und *Unlock Passphrase* erhalten. Das NetHSM ended im Status "
+"*Locked*."
 
 #: ../../source/components/nethsm/administration.rst:733
 msgid ""
@@ -1481,7 +1481,6 @@ msgid "Replication"
 msgstr "Wiederholung"
 
 #: ../../source/components/nethsm/administration.rst:777
-#, fuzzy
 msgid ""
 "NetHSM is stateless, so that several NetHSM devices can be used to "
 "process extremely high throughput and provide high availability. The "
@@ -1501,16 +1500,19 @@ msgid ""
 msgstr ""
 "NetHSM ist zustandslos, so dass mehrere NetHSM-Geräte verwendet werden "
 "können, um einen extrem hohen Durchsatz zu verarbeiten und eine hohe "
-"Verfügbarkeit zu gewährleisten. Das PKCS#11-Modul unterstützt einen "
-"Round-Robin-Zeitplan für einen Cluster von NetHSM-Instanzen. Mehrere "
-"Instanzen von NetHSM können über verschlüsselte Backups synchronisiert "
-"werden. Dazu lädt ein separates System Sicherungsdateien zwischen den "
-"Instanzen herunter und hoch. Dieses separate System hat keinen Zugriff "
-"auf die Backup-Daten im Klartext, da die Backup-Dateien verschlüsselt "
-"sind. Die Synchronisation kann einfach mit `pynitrokey "
-"<https://docs.nitrokey.com/software/nitropy/>`__ geskriptet werden, wie "
-"in `dieses Beispiel zeigt <https://github.com/Nitrokey/nitrokey-"
-"snippets/tree/main/nethsm/sync>`__."
+"Verfügbarkeit zu gewährleisten. Das PKCS#11-Modul unterstützt einen Round-"
+"Robin-Zeitplan für einen Cluster von NetHSM-Instanzen. Mehrere Instanzen von "
+"NetHSM können über verschlüsselte Backups synchronisiert werden. Dazu lädt "
+"ein separates System Sicherungsdateien zwischen den Instanzen herunter und "
+"hoch. Die Synchronisation kann einfach mit `pynitrokey <https://docs.nitrokey"
+".com/software/nitropy/>`__ geskriptet werden, wie in `dieses Beispiel zeigt "
+"<https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. "
+"Dieses separate System hat keinen Zugriff auf die Backup-Daten im Klartext, "
+"da die Backup-Dateien doppelt verschlüsselt sind. Das separate System ist "
+"nur im Besitz der Backup-Passphrase, nicht aber des Domänenschlüssels bzw. "
+"der Unlock-Passphrase, die die zweite Verschlüsselungsebene darstellt. "
+"Weitere Einzelheiten finden Sie im `Systemdesign <https://github.com/"
+"Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__."
 
 #: ../../source/components/nethsm/administration.rst:780
 msgid "Software Update"
@@ -3461,9 +3463,8 @@ msgstr ""
 #: ../../source/components/nethsm/getting-started.rst:93
 #: ../../source/components/nethsm/getting-started.rst:123
 #: ../../source/components/nethsm/system_recovery.rst:28
-#, fuzzy
 msgid "NetHSM 2"
-msgstr "NetHSM"
+msgstr "NetHSM 2"
 
 #: ../../source/components/nethsm/getting-started.rst:95
 #: ../../source/components/nethsm/getting-started.rst:99
@@ -3485,9 +3486,8 @@ msgstr ""
 #: ../../source/components/nethsm/getting-started.rst:106
 #: ../../source/components/nethsm/getting-started.rst:131
 #: ../../source/components/nethsm/system_recovery.rst:47
-#, fuzzy
 msgid "NetHSM 1"
-msgstr "NetHSM"
+msgstr "NetHSM 1"
 
 #: ../../source/components/nethsm/getting-started.rst:114
 msgid ""
@@ -3583,18 +3583,16 @@ msgid "NetHSM"
 msgstr "NetHSM"
 
 #: ../../source/components/nethsm/index.rst:4
-#, fuzzy
 msgid ""
 "This documentation describes the NetHSM software and hardware. The NetHSM"
 " software can be either used on the NetHSM hardware, or as a `software "
 "container <container>`__ (e.g. Docker)."
 msgstr ""
-"Diese Dokumentation beschreibt die NetHSM-Software und -Hardware. Die "
-"NetHSM-Software kann entweder auf der NetHSM-Hardware oder als `Software-"
+"Diese Dokumentation beschreibt die NetHSM-Software und -Hardware. Die NetHSM-"
+"Software kann entweder auf der NetHSM-Hardware oder als `Software-"
 "Container<container>`__ (z. B. Docker) verwendet werden."
 
 #: ../../source/components/nethsm/index.rst:6
-#, fuzzy
 msgid ""
 "The NetHSM software features a `REST API "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ to perform "
@@ -3603,11 +3601,12 @@ msgid ""
 "<../software/nitropy/index.html>`_. Alternatively `curl "
 "<https://curl.se>`_ can be used to send HTTP requests to the REST API."
 msgstr ""
-"Die NetHSM-Software verfügt über eine REST-API zur Durchführung von "
-"Installations-, Verwaltungs- und Betriebsaufgaben. Es wird empfohlen, die"
-" REST-API über das Tool `nitropy <../software/nitropy/index.html>`_ zu "
-"verwenden. Alternativ kann `curl <https://curl.se>`_ verwendet werden, um"
-" HTTP-Anfragen an die REST-API zu senden."
+"Die NetHSM-Software verfügt über eine `REST-API <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>`_ zur Durchführung von Installations-, Verwaltungs- "
+"und Betriebsaufgaben. Es wird empfohlen, die REST-API über das Tool `nitropy "
+"<../software/nitropy/index.html>`_ zu verwenden. Alternativ kann `curl "
+"<https://curl.se>`_ verwendet werden, um HTTP-Anfragen an die REST-API zu "
+"senden."
 
 #: ../../source/components/nethsm/index.rst:8
 msgid ""
@@ -3638,7 +3637,6 @@ msgstr ""
 "überspringen."
 
 #: ../../source/components/nethsm/index.rst:17
-#, fuzzy
 msgid ""
 "The examples in this documentation use the environment variable "
 "``NETHSM_HOST``, which contains the IP address or URL of the NetHSM. A "
@@ -3646,9 +3644,9 @@ msgid ""
 "can be set with the following command."
 msgstr ""
 "Die Beispiele in dieser Dokumentation verwenden die Umgebungsvariable "
-"``NETHSM_HOST``, die die IP-Adresse oder URL des NetHSM enthält. Auf "
-"einer Unix-Shell kann die Variable mit dem folgenden Befehl gesetzt "
-"werden."
+"``NETHSM_HOST``, die die IP-Adresse oder URL des NetHSM enthält. Die "
+"Standard-IP-Adresse eines NetHSM ist 192.168.1.1. Auf einer Unix-Shell kann "
+"die Variable mit dem folgenden Befehl gesetzt werden."
 
 #: ../../source/components/nethsm/integration.rst:2
 msgid "Integration"
@@ -3736,7 +3734,6 @@ msgid "Integration Into Custom Application"
 msgstr "Integration in benutzerdefinierte Anwendung"
 
 #: ../../source/components/nethsm/integration.rst:38
-#, fuzzy
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Here are our "
@@ -3747,13 +3744,14 @@ msgid ""
 " we recommend using `OpenAPI Generator <https://github.com/OpenAPITools"
 "/openapi-generator>`_."
 msgstr ""
-"Um den NetHSM in eigene Anwendungen zu integrieren, sind Client-"
-"Bibliotheken für fast alle Programmiersprachen verfügbar. Hier sind "
-"Bibliotheken für `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ "
-"und `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ sowie `diese 3rd "
-"party Rust crate <https://crates.io/crates/nethsm>`_. Für alle anderen "
-"Programmiersprachen empfehlen wir die Verwendung von `OpenAPI Generator "
-"<https://github.com/OpenAPITools/openapi-generator>`_."
+"Um den NetHSM in eigene Anwendungen zu integrieren, sind Client-Bibliotheken "
+"für fast alle Programmiersprachen verfügbar. Hier sind Bibliotheken für `"
+"Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ und `Rust "
+"<https://github.com/Nitrokey/nethsm-sdk-rs>`_ sowie `diese 3rd party Rust "
+"crate <https://crates.io/crates/nethsm>`_ und `Go Bibliothek <https://github."
+"com/borud/nethsm>`__. Für alle anderen Programmiersprachen empfehlen wir die "
+"Verwendung von `OpenAPI Generator <https://github.com/OpenAPITools/openapi-"
+"generator>`_."
 
 #: ../../source/components/nethsm/integration.rst:40
 msgid "The list of all available languages can be retrieved as follows."
@@ -4770,13 +4768,12 @@ msgid "``-m``, ``--mechanism`` ``MECHANISM``"
 msgstr "``-m``, ``--mechanism`` ``MECHANISM``"
 
 #: ../../source/components/nethsm/operation.rst:72
-#, fuzzy
 msgid ""
 "One or multiple mechanisms for the generated key. Possible values for the"
 " ``MECHANISM`` argument can be found in the table above."
 msgstr ""
-"Die Mechanismen für den generierten Schlüssel. Mögliche Werte für das "
-"Argument ``MECHANISM`` sind der obigen Tabelle zu entnehmen."
+"Ein oder mehrere Mechanismen für den generierten Schlüssel. Mögliche Werte "
+"für das Argument ``MECHANISM`` sind der obigen Tabelle zu entnehmen."
 
 #: ../../source/components/nethsm/operation.rst:84
 #: ../../source/components/nethsm/operation.rst:171
@@ -4834,12 +4831,11 @@ msgstr "Private Schlüsseldatei im PEM-Format"
 
 #: ../../source/components/nethsm/operation.rst:167
 #: ../../source/components/nethsm/operation.rst:209
-#, fuzzy
 msgid ""
 "One or multiple mechanisms for the key. Possible values for the "
 "``MECHANISM`` argument can be found in the table above."
 msgstr ""
-"Die Mechanismen für den generierten Schlüssel. Mögliche Werte für das "
+"Ein oder mehrere Mechanismen für den Schlüssel. Mögliche Werte für das "
 "Argument ``MECHANISM`` sind der obigen Tabelle zu entnehmen."
 
 #: ../../source/components/nethsm/operation.rst:171
@@ -6179,17 +6175,16 @@ msgstr ""
 "durchzuführen."
 
 #: ../../source/components/nethsm/system_recovery.rst:37
-#, fuzzy
 msgid "Connect a keyboard, monitor and the flash drive with the NetHSM."
-msgstr "Erzeugen Sie ein Schlüsselpaar und speichern Sie es auf dem NetHSM."
+msgstr ""
+"Verbinden Sie eine Tastatur, einen Monitor und das Flash-Laufwerk mit dem "
+"NetHSM."
 
 #: ../../source/components/nethsm/system_recovery.rst:38
-#, fuzzy
 msgid "Make sure the system is turned off, but connected to power."
 msgstr ""
-"Vergewissern Sie sich, dass das System ausgeschaltet, aber an das "
-"Stromnetz angeschlossen ist, und dass der Netzschalter auf der Rückseite "
-"eingeschaltet ist."
+"Vergewissern Sie sich, dass das System ausgeschaltet, aber an das Stromnetz "
+"angeschlossen."
 
 #: ../../source/components/nethsm/system_recovery.rst:39
 msgid "Turn on the NetHSM with the power button on the front."
