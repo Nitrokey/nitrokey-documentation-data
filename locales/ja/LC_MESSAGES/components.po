@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-06 11:08+0000\n"
+"POT-Creation-Date: 2025-05-07 12:09+0000\n"
 "PO-Revision-Date: 2025-05-06 11:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Japanese <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -13024,7 +13023,7 @@ msgstr "次の表は、どのアルゴリズムがどのデバイスで使用で
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
-msgstr "/bs/"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -19416,26 +19415,31 @@ msgid ""
 msgstr "あるいは、``pcscd`` を無効化またはアンインストールすることで、この競合を避けることができます。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../../source/components/software/nk-app2/keepassxc.rst:103
 msgid "pcscd: Card Not Found"
 msgstr "pcscdカードが見つかりません"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:110
+#: ../../source/components/software/nk-app2/keepassxc.rst:105
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr "**問題：** ` `pcscd`` を使用したアプリケーションで Nitrokey 3 が表示されない。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:113
+#: ../../source/components/software/nk-app2/keepassxc.rst:108
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr "**解決方法** まず、``scdaemon`` が実行されていないことを確認してください（前のセクションを参照）:："
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:118
+#: ../../source/components/software/nk-app2/keepassxc.rst:113
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr "``pcscd`` と``pcsc_scan -r`` で認識されるスマートカードをリストアップする。次のようなエントリーが表示されるはずだ："
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:126
+#: ../../source/components/software/nk-app2/keepassxc.rst:121
 msgid ""
 "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and "
 "there might be an issue with the application that tries to access it. If "
@@ -19447,10 +19451,12 @@ msgstr ""
 "のバージョンが最新であることを確認してください。``libccid`` 1.5.0 で Nitrokey 3 のサポートが追加されました。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:131
+#: ../../source/components/software/nk-app2/keepassxc.rst:126
 msgid "Updating The Device Database"
 msgstr "デバイスデータベースの更新"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:133
+#: ../../source/components/software/nk-app2/keepassxc.rst:128
 msgid ""
 "If you cannot update ``libccid`` to a supported version, you have to "
 "manually update the device database. The path of the database depends on "
@@ -19460,10 +19466,12 @@ msgstr ""
 "をサポートされているバージョンにアップデートできない場合は、手動でデバイスデータベースをアップデートする必要があります。データベースのパスはディストリビューションによって異なります："
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:136
+#: ../../source/components/software/nk-app2/keepassxc.rst:131
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr "Arch、Debian、Ubuntu：`/etc/libccid_Info.plist``"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
+#: ../../source/components/software/nk-app2/keepassxc.rst:133
 msgid ""
 "Make sure to backup the file before overwriting it. You can download an "
 "`updated device database file "
@@ -19500,31 +19508,18 @@ msgid "Pyscard is not available"
 msgstr "GnuPG: OpenPGPカードが利用できません。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:154
+#, fuzzy
 msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
-" when trying to use the PIV functionality:"
+" when trying to use the PIV functionality::"
 msgstr "ニトロピでpyscardが利用できない場合、PIV機能を使おうとすると次のようなエラーが出ることがあります："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
-msgid ""
-"This command requires the pyscard library that is not available on your "
-"system. Please consult "
-"https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-"
-"not-available for more information"
-msgstr ""
-"このコマンドは、お使いのシステムで利用できない pyscard "
-"ライブラリを必要とします。詳しくはhttps://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting"
-"#pyscard-is-not-available。"
-
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
+#, fuzzy
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
-"dependencies:"
+"dependencies::"
 msgstr "このエラーを修正するには、ニトロピを `pcsc` 追加依存ファイルとともにインストールしてください："
-
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:160
-msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
-msgstr "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]."
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 msgid ""
@@ -25879,31 +25874,31 @@ msgstr "``ADD`` をクリックし、新しいクレデンシャルを作成す�
 msgid "Select ``HMAC`` from the algorithm drop-down menu"
 msgstr "アルゴリズムのドロップダウンメニューから``HMAC`` を選択する。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:22
+#: ../../source/components/software/nk-app2/keepassxc.rst:21
 msgid "The credential is automatically named in ``HmacSlot2``."
 msgstr "クレデンシャルは自動的に``HmacSlot2`` に命名される。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:23
+#: ../../source/components/software/nk-app2/keepassxc.rst:22
 msgid "No extra attributes can be saved for the HMAC credential."
 msgstr "HMAC クレデンシャルには余分な属性を保存できない。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:24
+#: ../../source/components/software/nk-app2/keepassxc.rst:23
 msgid ""
 "The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. "
 "That is exactly 32 characters."
 msgstr "HMACシークレットは*正確に20バイト* 長く、*Base32* フォーマットでなければならない。これは正確に32文字である。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:25
+#: ../../source/components/software/nk-app2/keepassxc.rst:24
 msgid "It is possible to save exactly one HMAC secret on a Nitrokey 3."
 msgstr "Nitrokey 3に正確に1つのHMACシークレットを保存することが可能です。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:27
+#: ../../source/components/software/nk-app2/keepassxc.rst:26
 msgid ""
 "To generate a secret, there is a button in the field on the right-hand. "
 "It is also possible to enter your own secret, as long as it is compliant."
 msgstr "シークレットを生成するには、右側のフィールドにボタンがあります。準拠したものであれば、自分の秘密を入力することも可能です。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:32
+#: ../../source/components/software/nk-app2/keepassxc.rst:30
 msgid ""
 "The database can no longer be unlocked if the Nitrokey 3 is lost or "
 "unavailable! Thus, you may want to set up a second Nitrokey 3 with the "
@@ -25913,7 +25908,7 @@ msgstr ""
 "を紛失したり使用できなくなったりすると、データベースのロックを解除できなくなります！したがって、バックアップデバイスとして、同じ HMAC "
 "シークレットを持つ 2 台目の Nitrokey 3 をセットアップすることをお勧めします。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:36
+#: ../../source/components/software/nk-app2/keepassxc.rst:33
 msgid ""
 "The secret can **only** be seen before saving. If the KeePassXC database "
 "is to be used with another Nitrokey 3, the HMAC secret must be copied "
@@ -25922,57 +25917,57 @@ msgstr ""
 "秘密は**** のみ保存前に見ることができます。KeePassXC データベースを別の Nitrokey 3 で使用する場合、クレデンシャルを**"
 " 保存する前に、**** 可能な**だけである HMAC シークレットをコピーする必要があります。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:38
+#: ../../source/components/software/nk-app2/keepassxc.rst:35
 msgid "Click on ``SAVE`` to save the credential"
 msgstr "``SAVE`` をクリックし、クレデンシャルを保存する。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:41
+#: ../../source/components/software/nk-app2/keepassxc.rst:38
 msgid "First Option: Protect an Existing KeePassXC Database With a Nitrokey 3"
 msgstr "最初の選択肢既存のKeePassXCデータベースをNitrokey 3で保護する"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:43
-#: ../../source/components/software/nk-app2/keepassxc.rst:65
+#: ../../source/components/software/nk-app2/keepassxc.rst:40
+#: ../../source/components/software/nk-app2/keepassxc.rst:61
 msgid "Open KeePassXC"
 msgstr "KeePassXCを開く"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:44
+#: ../../source/components/software/nk-app2/keepassxc.rst:41
 msgid ""
 "Open the existing KeePassXC database that is to be protected with a "
 "Nitrokey 3."
 msgstr "Nitrokey 3で保護する既存のKeePassXCデータベースを開きます。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:45
+#: ../../source/components/software/nk-app2/keepassxc.rst:42
 msgid "Select ``Database`` -> ``Database Security...`` from the menu bar"
 msgstr "メニューバーから``Database`` ->``Database Security...`` を選択する。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:46
+#: ../../source/components/software/nk-app2/keepassxc.rst:43
 msgid "Select ``Security`` on the left side"
 msgstr "左側の``Security`` を選択する。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:47
+#: ../../source/components/software/nk-app2/keepassxc.rst:44
 msgid ""
 "Click on the ``Add additional protection...`` button in the ``Database "
 "Credentials`` tab"
 msgstr "``Database Credentials`` タブの``Add additional protection...`` ボタンをクリックする。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:48
-#: ../../source/components/software/nk-app2/keepassxc.rst:76
+#: ../../source/components/software/nk-app2/keepassxc.rst:45
+#: ../../source/components/software/nk-app2/keepassxc.rst:72
 msgid ""
 "Scroll down to ``Challenge-Response`` and click on ``Add Challenge-"
 "Response``"
 msgstr "``Challenge-Response`` までスクロールダウンし、``Add Challenge-Response`` をクリックする。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:49
+#: ../../source/components/software/nk-app2/keepassxc.rst:46
 msgid ""
 "Now if the Nitrokey 3 is plugged in and a HMAC was generated before, "
 "Nitrokey 3 should be displayed in the field."
 msgstr "これで、Nitrokey 3がプラグインされ、HMACが以前に生成されていれば、Nitrokey 3がフィールドに表示されるはずだ。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:51
+#: ../../source/components/software/nk-app2/keepassxc.rst:48
 msgid "Click on ``OK`` to add the Nitrokey 3 to the existing KeePassXC database"
 msgstr "``OK`` をクリックして、Nitrokey 3 を既存の KeePassXC データベースに追加します。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:55
+#: ../../source/components/software/nk-app2/keepassxc.rst:51
 msgid ""
 "By default the Nitrokey 3 is used as a second factor in addition to the "
 "passphrase. To protect the database by the Nitrokey 3 exclusively, delete"
@@ -25981,7 +25976,7 @@ msgstr ""
 "デフォルトでは、パスフレーズに加えて Nitrokey 3 が第 2 の要素として使用されます。Nitrokey 3 "
 "のみでデータベースを保護するには、``Remove Password`` ボタンをクリックしてパスフレーズを削除します。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:59
+#: ../../source/components/software/nk-app2/keepassxc.rst:54
 msgid ""
 "If the Nirokey 3 is not recognized, close KeePassXC completely. Then "
 "connect the Nitrokey 3 to your computer before restarting KeePassXC."
@@ -25989,11 +25984,11 @@ msgstr ""
 "Nirokey 3が認識されない場合、KeePassXCを完全に終了してください。その後、KeePassXCを再起動する前にNitrokey "
 "3をコンピュータに接続してください。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:64
+#: ../../source/components/software/nk-app2/keepassxc.rst:59
 msgid "Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3"
 msgstr "第二の選択肢Nitrokey 3で保護されたKeePassXCデータベースの作成"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:66
+#: ../../source/components/software/nk-app2/keepassxc.rst:62
 msgid ""
 "Select ``Database`` -> ``New Database...`` from the menu bar to create a "
 "new KeePassXC database."
@@ -26001,13 +25996,13 @@ msgstr ""
 "メニューバーから``Database`` ->``New Database...`` を選択し、新しい KeePassXC "
 "データベースを作成します。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:67
+#: ../../source/components/software/nk-app2/keepassxc.rst:63
 msgid ""
 "Fill in the display name and an optional description for your new "
 "database and click on ``Continue``"
 msgstr "新しいデータベースの表示名と説明を入力し、``Continue`` をクリックします。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:68
+#: ../../source/components/software/nk-app2/keepassxc.rst:64
 msgid ""
 "`Further database encryption settings <https://keepassxc.org/docs/>`__ "
 "can now be configured here or the default settings can be retained. The "
@@ -26016,15 +26011,15 @@ msgstr ""
 "`データベースの暗号化設定<https://keepassxc.org/docs/>`__ "
 "は、ここでさらに設定することも、デフォルト設定を保持することもできます。設定は後でデータベース設定で変更することもできます。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:71
+#: ../../source/components/software/nk-app2/keepassxc.rst:67
 msgid "Click on ``Continue`` to confirm the settings"
 msgstr "``Continue`` をクリックして設定を確認する。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:72
+#: ../../source/components/software/nk-app2/keepassxc.rst:68
 msgid "**Database Credential**"
 msgstr "**データベース・クレデンシャル**"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:74
+#: ../../source/components/software/nk-app2/keepassxc.rst:70
 msgid ""
 "Here you can enter a password as a second factor to unlock the database. "
 "To connect the Nitrokey 3 (on which the HMAC secret was generated) to the"
@@ -26034,7 +26029,7 @@ msgstr ""
 " 3 を新しい KeePassXC データベースに接続するには、``Add additional protection...`` "
 "をクリックしてください。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:77
+#: ../../source/components/software/nk-app2/keepassxc.rst:73
 msgid ""
 "Now if the Nitrokey 3 is plugged in and a HMAC was generated before, "
 "Nitrokey 3 should be displayed in the field. Click on ``Continue`` to "
@@ -26043,7 +26038,7 @@ msgstr ""
 "Nitrokey 3が接続され、以前にHMACが生成された場合、Nitrokey "
 "3がフィールドに表示されます。``Continue``をクリックして、新しいKeePassXCデータベースの作成を完了します。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:82
+#: ../../source/components/software/nk-app2/keepassxc.rst:77
 msgid ""
 "If the passphrase is left empty, the database will be protected by the "
 "Nitrokey 3 exclusively. If a passphrase is entered, the database will be "
@@ -26052,7 +26047,7 @@ msgstr ""
 "パスフレーズが空の場合、データベースは Nitrokey 3 "
 "のみによって保護されます。パスフレーズが入力されている場合、データベースはパスフレーズ**と** Nitrokey 3 によって保護されます。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:86
+#: ../../source/components/software/nk-app2/keepassxc.rst:80
 msgid ""
 "If the Nitrokey 3 is not recognized, close KeePassXC completely. Then "
 "connect the Nitrokey 3 to your computer before restarting KeePassXC."
@@ -26060,31 +26055,31 @@ msgstr ""
 "Nitrokey 3が認識されない場合、KeePassXCを完全に終了してください。KeePassXC を再起動する前に Nitrokey 3 "
 "をコンピュータに接続してください。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:89
+#: ../../source/components/software/nk-app2/keepassxc.rst:83
 msgid "Troubleshooting for Linux"
 msgstr "Linuxのトラブルシューティング"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:90
+#: ../../source/components/software/nk-app2/keepassxc.rst:84
 msgid ""
 "If the Nirokey 3 device is not recognised by `KeePassXC "
 "<https://keepassxc.org/>`__ on a Linux system:"
 msgstr "Nirokey 3デバイスがLinuxシステム上の`KeePassXC<https://keepassxc.org/>`__で認識されない場合："
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:92
+#: ../../source/components/software/nk-app2/keepassxc.rst:86
 msgid ""
 "Provided that the udev rules have been set as described `here "
 "</software/nitropy/linux/udev.html>`__."
 msgstr "udevルールが` </software/nitropy/linux/udev.html>`__の説明に従って設定されていることを条件とする。"
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:93
+#: ../../source/components/software/nk-app2/keepassxc.rst:87
 msgid "Provided that the ``pcscd service`` are has been started with:"
 msgstr "ただし、``pcscd service`` が始まっていることを条件とする："
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:99
+#: ../../source/components/software/nk-app2/keepassxc.rst:93
 msgid "Install the latest version of KeePassXC with flatpak:"
 msgstr "最新版のKeePassXCをflatpakでインストールします："
 
-#: ../../source/components/software/nk-app2/keepassxc.rst:105
+#: ../../source/components/software/nk-app2/keepassxc.rst:99
 msgid ""
 "Install ``ccid`` on Arch Linux based systems. See also: `Arch wiki: "
 "Nitrokey <https://wiki.archlinux.org/title/Nitrokey>`__."
@@ -26810,3 +26805,19 @@ msgstr "マーク クロップド出力"
 
 #~ msgid "Install `dfu-util` via Homebrew"
 #~ msgstr "*macOS のみ:* Homebrew 経由で `dfu-util` をインストールする。"
+
+#~ msgid ""
+#~ "This command requires the pyscard "
+#~ "library that is not available on "
+#~ "your system. Please consult "
+#~ "https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting"
+#~ "#pyscard-is-not-available for more "
+#~ "information"
+#~ msgstr ""
+#~ "このコマンドは、お使いのシステムで利用できない pyscard "
+#~ "ライブラリを必要とします。詳しくはhttps://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting"
+#~ "#pyscard-is-not-available。"
+
+#~ msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
+#~ msgstr "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]."
+
