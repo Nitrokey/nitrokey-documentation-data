@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-12 07:10+0000\n"
+"POT-Creation-Date: 2025-05-12 14:05+0000\n"
 "PO-Revision-Date: 2025-05-12 07:16+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
-"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5450,9 +5450,8 @@ msgid ""
 " you could also use the command line tool `dd`. Ignore any warning that a"
 " partition table is missing."
 msgstr ""
-"将安装程序映像写入 U 盘。为此，你可以使用图形工具`balenaEtcher<https://etcher"
-".balena.io/>`__。在 Linux 上，也可以使用命令行工具 "
-"`dd`。忽略任何分区表丢失的警告。"
+"将安装程序映像写入 U 盘。为此，你可以使用图形工具`balenaEtcher<https://etcher.balena.io/>`__。在 "
+"Linux 上，也可以使用命令行工具 `dd`。忽略任何分区表丢失的警告。"
 
 #: ../../source/components/nethsm/system_recovery.rst:39
 msgid ""
@@ -22916,10 +22915,476 @@ msgstr "传声器通常用于将机械振动转换成电信号。扬声器的机
 msgid "Please refer to our guide :doc:`../nitrokeys/features/fido2/nitrophone`."
 msgstr "请参阅我们的指南 :doc:`../nitrokeys/features/fido2/nitrophone` 。"
 
-#: ../../source/components/nitrophone/index.rst:19
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:2
+#: ../../source/components/nitrophone/headwind-mdm/index.rst:9
 #, fuzzy
-msgid "Mobile Device Management"
-msgstr "证书管理"
+msgid "App Installation"
+msgstr "安装"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:6
+msgid "We recommand to backup your data before installing MDM."
+msgstr "我们建议在安装 MDM 之前备份数据。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:8
+msgid ""
+"Your NitroPhone needs to be connected to the internet during the "
+"configuration and you also need a PC."
+msgstr "在配置过程中，您的 NitroPhone 需要连接到互联网，您还需要一台电脑。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:10
+#, fuzzy
+msgid ""
+"To grant special permissions you need to use ADB (Android Debug Bridge). "
+"You can use ADB directly from your web browser with WebADB (easier, "
+"recommended), or you can install the CLI tool on your computer "
+"(alternative). WebADB is currently only compatible with Chromium-based "
+"browsers (e.g. Chrome, Microsoft Edge, Opera)."
+msgstr ""
+"要授予特殊权限，需要使用 ADB（Android 调试桥）。你可以通过 WebADB 直接从浏览器使用 "
+"ADB（更简单，推荐使用），也可以在电脑上安装 CLI 工具（替代方法）。WebADB 目前只兼容基于 Chromium 的浏览器（如 "
+"Chrome、Microsoft Edge 和 Opera）。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:13
+#, fuzzy
+msgid "Installation With WebADB"
+msgstr "安装"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:15
+msgid ""
+"`Download <https://h-mdm.com/download/>`__ locally on your PC the latest "
+"HMDM Android app (launcher). It is important that this version matches "
+"your HMDM server configuration. You can also download the desired version"
+" here: `https://h-mdm.com/files/hmdm-<version>-master.apk`"
+msgstr ""
+"`在电脑上下载<https://h-mdm.com/download/>`___最新的 HMDM Android "
+"应用程序（启动器）。该版本必须与您的 HMDM "
+"服务器配置相匹配。您也可以在此处下载所需的版本：https://h-mdm.com/files/hmdm-<版本>-master.apk`。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:19
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:63
+msgid ""
+"On your NitroPhone, enable the developer options: Settings -> About Phone"
+" -> Press 6 times on \"Build number\"."
+msgstr "在 NitroPhone 上启用开发者选项：设置 -> 关于手机 -> 在 \"版本号 \"上按 6 次。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:21
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:65
+msgid ""
+"Enable USB debugging: Settings -> System -> Developer Options -> USB "
+"debugging."
+msgstr "启用 USB 调试：设置 -> 系统 -> 开发人员选项 -> USB 调试。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:23
+msgid ""
+"Connect the smartphone to the PC and change the charging connection to "
+"\"File transfer\"."
+msgstr "将智能手机连接到电脑，并将充电连接更改为 \"文件传输\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:25
+msgid "On your PC go to `WebADB <https://app.webadb.com/>`__."
+msgstr "在电脑上访问`WebADB<https://app.webadb.com/>`__。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:27
+msgid ""
+"At the top left of the page click on \"Add\" select your NitroPhone and "
+"click on \"Connect\" and click again on \"Connect\" next to \"Add\""
+msgstr "在页面左上方点击 \"添加\"，选择 NitroPhone 并点击 \"连接\"，然后再次点击 \"添加 \"旁边的 \"连接\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:29
+#, fuzzy
+msgid "On your NitroPhone allow the connection."
+msgstr "将你的Nitrokey连接到NitroPad。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:31
+#, fuzzy
+msgid ""
+"In the WebADB menu choose \"Install APK\", click on \"Open\", and choose "
+"the previously downloaded APK."
+msgstr "在 WebADB 菜单中选择 \"安装 APK\"，然后点击 \"打开 \"并选择之前下载的 APK。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:33
+msgid ""
+"Once completed, in the WebADB menu choose \"Interactive Shell\". If you "
+"have this error: \"Application error: a client-side exeption has "
+"occurred\" refresh the page or click to \"File Manager\" and go back to "
+"\"Interactive Shell\". If you see ``<your android version name>:/ $`` "
+"then you are properly connected."
+msgstr ""
+"完成后，在 WebADB 菜单中选择 \"交互式外壳\"。如果出现以下错误：\"Application error: a client-side "
+"exeption has occurred\"（应用程序错误：发生客户端异常），请刷新页面或点击 \"File "
+"Manager\"（文件管理器），然后返回 \"Interactive Shell\"（交互式外壳）。如果看到``<your android "
+"version name>:/ $``，则表示连接正确。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:37
+msgid "In the shell type:"
+msgstr "在 shell 中键入"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:44
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:98
+msgid "If it was successful it says:"
+msgstr "如果成功，就会显示"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:52
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:106
+msgid ""
+"Now you can open \"MDM agent\" on your NitroPhone. If any permissions are"
+" asked, allow them."
+msgstr "现在您可以打开 NitroPhone 上的 \"MDM 代理\"。如果要求任何权限，请允许。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:54
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:108
+msgid ""
+"Your HMDM app is ready to use. Refer to \"Register NitroPhone on HMDM "
+"Server\" at the end of this page."
+msgstr "您的 HMDM 应用程序已准备就绪。请参阅本页末尾的 \"在 HMDM 服务器上注册 NitroPhone\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:57
+#, fuzzy
+msgid "Installation With ADB"
+msgstr "安装"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:59
+msgid ""
+"`Download <https://h-mdm.com/download/>`__ locally on your PC the latest "
+"HMDM Android app (launcher). It is important that this version matches "
+"your HMDM server configuration. You can also download the desired version"
+" here: https://h-mdm.com/files/hmdm-<version>-master.apk"
+msgstr ""
+"`在电脑上下载<https://h-mdm.com/download/>`___最新的 HMDM Android "
+"应用程序（启动器）。该版本必须与您的 HMDM 服务器配置相匹配。您也可以在此处下载所需的版本： "
+"https://h-mdm.com/files/hmdm-<version>-master.apk"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:67
+msgid ""
+"On your PC, `download <https://developer.android.com/tools/releases"
+"/platform-tools#downloads>`__ ADB."
+msgstr ""
+"在电脑上，`下载<https://developer.android.com/tools/releases/platform-"
+"tools#downloads>`__ADB。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:69
+msgid "Unzip the downloaded archive and open a terminal in this folder."
+msgstr "解压缩下载的压缩包，并在此文件夹中打开终端。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:71
+msgid ""
+"Connect the NitroPhone to the PC and change the charging connection to "
+"\"File transfer\"."
+msgstr "将 NitroPhone 与电脑连接，并将充电连接更改为 \"文件传输\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:73
+msgid "Test if ``adb`` can find your NitroPhone:"
+msgstr "测试``adb`` 是否能找到您的 NitroPhone："
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:80
+msgid "You need to see your device listed in the output."
+msgstr "您需要看到输出中列出了您的设备。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:82
+#, fuzzy
+msgid "Install the HMDM app via:"
+msgstr "安装发动机："
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:89
+msgid ""
+"When the MDM installation was sucessful, the output of ``adb`` is "
+"\"Success\"."
+msgstr "当 MDM 安装成功时，``adb`` 的输出为 \"成功\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:91
+msgid "Now give the app device owner rights:"
+msgstr "现在赋予应用程序设备所有者权限："
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:111
+msgid "Register NitroPhone on HMDM Server"
+msgstr "在 HMDM 服务器上注册 NitroPhone"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:113
+msgid ""
+"Log into your server web panel and go to the \"Configurations\" tab and "
+"edit or create one configuration. For testing purposes you can try the "
+"`demo server <https://app.h-mdm.com/#/login>`__."
+msgstr ""
+"登录服务器网络面板，进入 \"配置 "
+"\"选项卡，编辑或创建一个配置。为便于测试，您可以尝试使用`演示服务器<https://app.h-mdm.com/#/login>`__。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:116
+msgid ""
+"Make sure that \"Use with default launcher\" is not selected. Click "
+"\"Save and close\"."
+msgstr "确保未选择 \"与默认启动器一起使用\"。点击 \"保存并关闭\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:119
+msgid ""
+"Now go to Devices and click on the QR code on the right hand side. Note: "
+"The QR code contains the configuration for your mobile device."
+msgstr "现在前往 \"设备\"，点击右侧的二维码。注意：二维码包含移动设备的配置。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:121
+msgid ""
+"Type in the server URL (e.g. https://mdm.nitrokey.com) and click \"Scan "
+"QR code\"."
+msgstr "输入服务器 URL（如 https://mdm.nitrokey.com），然后点击 \"扫描 QR 码\"。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:123
+msgid ""
+"In you server web panel, go to your device \"Detailed information\" by "
+"clicking into the 3 dots and verify that there is no red fields on this "
+"page."
+msgstr "在服务器网络面板中，点击 3 个点进入设备的 \"详细信息\"，确认该页面上没有红色字段。"
+
+#: ../../source/components/nitrophone/headwind-mdm/app-installation.rst:125
+msgid "Your NitroPhone is now properly registered in your HMDM server."
+msgstr "您的 NitroPhone 现在已在 HMDM 服务器中正确注册。"
+
+#: ../../source/components/nitrophone/headwind-mdm/index.rst:9
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:2
+#, fuzzy
+msgid "Server Installation"
+msgstr "安装"
+
+#: ../../source/components/nitrophone/headwind-mdm/index.rst:2
+#: ../../source/components/nitrophone/index.rst:19
+msgid "Headwind MDM (HMDM)"
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/index.rst:4
+msgid ""
+"Headwind MDM (HMDM) is a mobile device management (MDM) solution to "
+"manage NitroPhones and NitroTablets from a central interface. The "
+"software consists of a central interface (web panel) on a server and an "
+"app on every managed Nitrophone."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:4
+msgid ""
+"The recommended operating system for the installation is Ubuntu 22.04 "
+"LTS. The instructions below use this operating system."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:7
+msgid ""
+"The installation files for Headwind MDM (HMDM) can be downloaded from the"
+" official `website <https://h-mdm.com/download/>`__."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:10
+#, fuzzy
+msgid "Install Web Panel"
+msgstr "安装发动机："
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:12
+msgid ""
+"Copy the archive for installation to the server with ``scp hmdm-<VERSION"
+">-install-ubuntu.zip <user>@<hostname>:~``, while replacing ``<user>``, "
+"``<hostname>``, and ``<VERSION>`` with the respective values."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:14
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:61
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:85
+#, fuzzy
+msgid "Login to the server."
+msgstr "服务器的正面"
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:15
+msgid ""
+"Extract the archive with ``unzip hmdm-<VERSION>-install-ubuntu.zip``, "
+"while replacing ``<VERSION>`` with the respective value. Afterwards, "
+"change to the directory with the extracted files with ``cd hmdm-"
+"install/``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:17
+msgid ""
+"Update repository data and install dependencies with ``apt update && apt "
+"install -y aapt tomcat9 postgresql vim certbot unzip net-tools "
+"iptables``. Iptables is required by the installer to set firewall rules "
+"to redirect the ports *80* and *443* to the default Tomcat ports *8080* "
+"and *8443*."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:19
+msgid ""
+"Create role and database in Postgres. Make sure the database password "
+"does not contain any characters interpreted by the shell, such as ``@`` "
+"or ``&``. In the example below replace ``supersafepassword`` with your "
+"own password."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:37
+msgid ""
+"Install HMDM with ``./hmdm_install.sh``. The defaults of the binary "
+"installer are safe defaults."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:40
+msgid ""
+"When the installer asks for the PostgreSQL database, PostgreSQL user, and"
+" PostgreSQL password enter the respective values set in step 5."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:41
+msgid ""
+"When the installer asks for a domain name enter a fully-qualified domain "
+"name."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:42
+msgid ""
+"After the installation of the web panel the installer will ask if it "
+"should fetch and setup a certificate renewal process for CA using "
+"Certbot. In case you instruct the installer to retrieve a Lets Encrypt "
+"certificate, deny the installer request for sharing the mail address with"
+" the EFF. Certbot can automatically update the Tomcat configuration to "
+"use the Lets Encrypt certificate. This is recommended if this is a newly "
+"installed system and there are no other applications running on the same "
+"system. If you decided against using a Lets Encrypt certificate make sure"
+" Tomcat has access to a valid certificate."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:47
+msgid ""
+"The installer will ask if to redirect the ports *80* and *443* to the "
+"Tomcat service. This is recommended if HMDM should be reachable on HTTPS "
+"without explicitly specifying another port. If not redirected, the Tomcat"
+" server is reachable on the default ports *8080* and *8443*."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:50
+msgid ""
+"The installer will ask if it should move required APKs from ``h-mdm.com``"
+" to your server. This can be confirmed to avoid more external requests."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:52
+msgid ""
+"When the installation has finished, the installer will display "
+"information about how to reach the HMDM web panel."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:54
+msgid ""
+"Make a backup of your configuration file with ``cp "
+"/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml "
+"/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml~``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:55
+msgid ""
+"Open the website of HMDM and enter the activation code for this "
+"installation. Afterwards, login and set a new password."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:59
+msgid "Activate Multi-Tenant Mode (optional)"
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:62
+msgid ""
+"Change to the *Postgres* user account, running the database service, with"
+" ``su postgres``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:63
+msgid ""
+"Open a connection to the Postgres service and select the *hmdm* database "
+"with ``psql hmdm``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:64
+msgid ""
+"In the Postgres shell *psql>* run the following statements one after "
+"another."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:71
+msgid ""
+"Now the multi-tenancy for the admin user is activated. To manage the "
+"different tenants the web interface is used."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:74
+msgid "Login to the web interface with the admin user."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:75
+msgid ""
+"From the user menu in the top right corner, select *Master Panel*. The "
+"same menu works to go back to the *Main Panel*."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:77
+msgid ""
+"On the page the admin user can add an organization and manage shared "
+"applications."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:80
+msgid "Email Sending Functionality (optional)"
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:82
+msgid ""
+"The settings and credentials for email sending functionality can be "
+"entered during software installation. This chapter describes how to do "
+"this if it wasn't done during installation."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:86
+msgid ""
+"Change to directory ``/var/lib/tomcat9/conf/Catalina/localhost/`` with "
+"``cd /var/lib/tomcat9/conf/Catalina/localhost/``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:87
+msgid "Open the file ``ROOT.xml`` in an editor."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:88
+msgid "Towards the end of the file you can find the following configuration keys."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:102
+msgid ""
+"After changing the configuration, make again a backup of your "
+"configuration file with ``cp "
+"/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml "
+"/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml~``."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:105
+#, fuzzy
+msgid "Manage Web Panel"
+msgstr "管理钥匙 (MGM)"
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:108
+#, fuzzy
+msgid "Create a New User Account"
+msgstr "创建管理账户"
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:110
+msgid "Login to the web panel as an administrator."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:111
+#, fuzzy
+msgid "Open the *Master Panel* from the menu in the top right corner."
+msgstr "打开菜单，在菜单栏的右上方有三个点。"
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:112
+msgid ""
+"Change to the *Organizations* menu and click the *Add* button to add a "
+"new user. Fill in the respective form fields and confirm the creation "
+"with the *Save* button."
+msgstr ""
+
+#: ../../source/components/nitrophone/headwind-mdm/server-installation.rst:115
+msgid ""
+"Please note that the new user won't be automatically notified about the "
+"account. They can use the *Lost password?* feature on the login screen to"
+" reset the password for their account."
+msgstr ""
 
 #: ../../source/components/nitrophone/index.rst:2
 msgid "NitroPhone, NitroTablet"
@@ -22954,242 +23419,6 @@ msgstr "请熟悉`使用你的GrapheneOS <https://grapheneos.org/usage>`__。"
 #: ../../source/components/nitrophone/index.rst:17
 msgid "For more details, see the following pages:"
 msgstr "更多细节，请见以下几页。"
-
-#: ../../source/components/nitrophone/mdm.rst:2
-#, fuzzy
-msgid "Mobile Device Management (MDM)"
-msgstr "管理钥匙 (MGM)"
-
-#: ../../source/components/nitrophone/mdm.rst:4
-msgid "NitroPhones can be centrally managed by using open source Headwind MDM."
-msgstr "NitroPhone 可通过开源 Headwind MDM 进行集中管理。"
-
-#: ../../source/components/nitrophone/mdm.rst:6
-msgid ""
-"Depending on whether you are using the paid or gratis license, some "
-"features might be available or not."
-msgstr "根据您使用的是付费许可证还是免费许可证，有些功能可能可用，有些则不可用。"
-
-#: ../../source/components/nitrophone/mdm.rst:9
-#, fuzzy
-msgid "Install MDM on NitroPhone"
-msgstr "在Windows上安装nitropy"
-
-#: ../../source/components/nitrophone/mdm.rst:13
-msgid "We recommand to backup your data before installing MDM."
-msgstr "我们建议在安装 MDM 之前备份数据。"
-
-#: ../../source/components/nitrophone/mdm.rst:15
-msgid ""
-"Your NitroPhone needs to be connected to the internet during the "
-"configuration and you also need a PC."
-msgstr "在配置过程中，您的 NitroPhone 需要连接到互联网，您还需要一台电脑。"
-
-#: ../../source/components/nitrophone/mdm.rst:17
-#, fuzzy
-msgid ""
-"To grant special permissions you need to use ADB (Android Debug Bridge). "
-"You can use ADB directly from your web browser with WebADB (easier, "
-"recommended), or you can install the CLI tool on your computer "
-"(alternative). WebADB is currently only compatible with Chromium-based "
-"browsers (e.g. Chrome, Microsoft Edge, Opera)."
-msgstr ""
-"要授予特殊权限，需要使用 ADB（Android 调试桥）。你可以通过 WebADB 直接从浏览器使用 "
-"ADB（更简单，推荐使用），也可以在电脑上安装 CLI 工具（替代方法）。WebADB 目前只兼容基于 Chromium 的浏览器（如 "
-"Chrome、Microsoft Edge 和 Opera）。"
-
-#: ../../source/components/nitrophone/mdm.rst:20
-#, fuzzy
-msgid "Installation With WebADB"
-msgstr "安装"
-
-#: ../../source/components/nitrophone/mdm.rst:22
-msgid ""
-"`Download <https://h-mdm.com/download/>`__ locally on your PC the latest "
-"HMDM Android app (launcher). It is important that this version matches "
-"your HMDM server configuration. You can also download the desired version"
-" here: `https://h-mdm.com/files/hmdm-<version>-master.apk`"
-msgstr ""
-"`在电脑上下载<https://h-mdm.com/download/>`___最新的 HMDM Android "
-"应用程序（启动器）。该版本必须与您的 HMDM "
-"服务器配置相匹配。您也可以在此处下载所需的版本：https://h-mdm.com/files/hmdm-<版本>-master.apk`。"
-
-#: ../../source/components/nitrophone/mdm.rst:26
-#: ../../source/components/nitrophone/mdm.rst:70
-msgid ""
-"On your NitroPhone, enable the developer options: Settings -> About Phone"
-" -> Press 6 times on \"Build number\"."
-msgstr "在 NitroPhone 上启用开发者选项：设置 -> 关于手机 -> 在 \"版本号 \"上按 6 次。"
-
-#: ../../source/components/nitrophone/mdm.rst:28
-#: ../../source/components/nitrophone/mdm.rst:72
-msgid ""
-"Enable USB debugging: Settings -> System -> Developer Options -> USB "
-"debugging."
-msgstr "启用 USB 调试：设置 -> 系统 -> 开发人员选项 -> USB 调试。"
-
-#: ../../source/components/nitrophone/mdm.rst:30
-msgid ""
-"Connect the smartphone to the PC and change the charging connection to "
-"\"File transfer\"."
-msgstr "将智能手机连接到电脑，并将充电连接更改为 \"文件传输\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:32
-msgid "On your PC go to `WebADB <https://app.webadb.com/>`__."
-msgstr "在电脑上访问`WebADB<https://app.webadb.com/>`__。"
-
-#: ../../source/components/nitrophone/mdm.rst:34
-msgid ""
-"At the top left of the page click on \"Add\" select your NitroPhone and "
-"click on \"Connect\" and click again on \"Connect\" next to \"Add\""
-msgstr "在页面左上方点击 \"添加\"，选择 NitroPhone 并点击 \"连接\"，然后再次点击 \"添加 \"旁边的 \"连接\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:36
-#, fuzzy
-msgid "On your NitroPhone allow the connection."
-msgstr "将你的Nitrokey连接到NitroPad。"
-
-#: ../../source/components/nitrophone/mdm.rst:38
-#, fuzzy
-msgid ""
-"In the WebADB menu choose \"Install APK\", click on \"Open\", and choose "
-"the previously downloaded APK."
-msgstr "在 WebADB 菜单中选择 \"安装 APK\"，然后点击 \"打开 \"并选择之前下载的 APK。"
-
-#: ../../source/components/nitrophone/mdm.rst:40
-msgid ""
-"Once completed, in the WebADB menu choose \"Interactive Shell\". If you "
-"have this error: \"Application error: a client-side exeption has "
-"occurred\" refresh the page or click to \"File Manager\" and go back to "
-"\"Interactive Shell\". If you see ``<your android version name>:/ $`` "
-"then you are properly connected."
-msgstr ""
-"完成后，在 WebADB 菜单中选择 \"交互式外壳\"。如果出现以下错误：\"Application error: a client-side "
-"exeption has occurred\"（应用程序错误：发生客户端异常），请刷新页面或点击 \"File "
-"Manager\"（文件管理器），然后返回 \"Interactive Shell\"（交互式外壳）。如果看到``<your android "
-"version name>:/ $``，则表示连接正确。"
-
-#: ../../source/components/nitrophone/mdm.rst:44
-msgid "In the shell type:"
-msgstr "在 shell 中键入"
-
-#: ../../source/components/nitrophone/mdm.rst:51
-#: ../../source/components/nitrophone/mdm.rst:105
-msgid "If it was successful it says:"
-msgstr "如果成功，就会显示"
-
-#: ../../source/components/nitrophone/mdm.rst:59
-#: ../../source/components/nitrophone/mdm.rst:113
-msgid ""
-"Now you can open \"MDM agent\" on your NitroPhone. If any permissions are"
-" asked, allow them."
-msgstr "现在您可以打开 NitroPhone 上的 \"MDM 代理\"。如果要求任何权限，请允许。"
-
-#: ../../source/components/nitrophone/mdm.rst:61
-#: ../../source/components/nitrophone/mdm.rst:115
-msgid ""
-"Your HMDM app is ready to use. Refer to \"Register NitroPhone on HMDM "
-"Server\" at the end of this page."
-msgstr "您的 HMDM 应用程序已准备就绪。请参阅本页末尾的 \"在 HMDM 服务器上注册 NitroPhone\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:64
-#, fuzzy
-msgid "Installation With ADB"
-msgstr "安装"
-
-#: ../../source/components/nitrophone/mdm.rst:66
-msgid ""
-"`Download <https://h-mdm.com/download/>`__ locally on your PC the latest "
-"HMDM Android app (launcher). It is important that this version matches "
-"your HMDM server configuration. You can also download the desired version"
-" here: https://h-mdm.com/files/hmdm-<version>-master.apk"
-msgstr ""
-"`在电脑上下载<https://h-mdm.com/download/>`___最新的 HMDM Android "
-"应用程序（启动器）。该版本必须与您的 HMDM 服务器配置相匹配。您也可以在此处下载所需的版本： "
-"https://h-mdm.com/files/hmdm-<version>-master.apk"
-
-#: ../../source/components/nitrophone/mdm.rst:74
-msgid ""
-"On your PC, `download <https://developer.android.com/tools/releases"
-"/platform-tools#downloads>`__ ADB."
-msgstr ""
-"在电脑上，`下载<https://developer.android.com/tools/releases/platform-"
-"tools#downloads>`__ADB。"
-
-#: ../../source/components/nitrophone/mdm.rst:76
-msgid "Unzip the downloaded archive and open a terminal in this folder."
-msgstr "解压缩下载的压缩包，并在此文件夹中打开终端。"
-
-#: ../../source/components/nitrophone/mdm.rst:78
-msgid ""
-"Connect the NitroPhone to the PC and change the charging connection to "
-"\"File transfer\"."
-msgstr "将 NitroPhone 与电脑连接，并将充电连接更改为 \"文件传输\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:80
-msgid "Test if ``adb`` can find your NitroPhone:"
-msgstr "测试``adb`` 是否能找到您的 NitroPhone："
-
-#: ../../source/components/nitrophone/mdm.rst:87
-msgid "You need to see your device listed in the output."
-msgstr "您需要看到输出中列出了您的设备。"
-
-#: ../../source/components/nitrophone/mdm.rst:89
-#, fuzzy
-msgid "Install the HMDM app via:"
-msgstr "安装发动机："
-
-#: ../../source/components/nitrophone/mdm.rst:96
-msgid ""
-"When the MDM installation was sucessful, the output of ``adb`` is "
-"\"Success\"."
-msgstr "当 MDM 安装成功时，``adb`` 的输出为 \"成功\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:98
-msgid "Now give the app device owner rights:"
-msgstr "现在赋予应用程序设备所有者权限："
-
-#: ../../source/components/nitrophone/mdm.rst:118
-msgid "Register NitroPhone on HMDM Server"
-msgstr "在 HMDM 服务器上注册 NitroPhone"
-
-#: ../../source/components/nitrophone/mdm.rst:120
-msgid ""
-"Log into your server web panel and go to the \"Configurations\" tab and "
-"edit or create one configuration. For testing purposes you can try the "
-"`demo server <https://app.h-mdm.com/#/login>`__."
-msgstr ""
-"登录服务器网络面板，进入 \"配置 "
-"\"选项卡，编辑或创建一个配置。为便于测试，您可以尝试使用`演示服务器<https://app.h-mdm.com/#/login>`__。"
-
-#: ../../source/components/nitrophone/mdm.rst:123
-msgid ""
-"Make sure that \"Use with default launcher\" is not selected. Click "
-"\"Save and close\"."
-msgstr "确保未选择 \"与默认启动器一起使用\"。点击 \"保存并关闭\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:126
-msgid ""
-"Now go to Devices and click on the QR code on the right hand side. Note: "
-"The QR code contains the configuration for your mobile device."
-msgstr "现在前往 \"设备\"，点击右侧的二维码。注意：二维码包含移动设备的配置。"
-
-#: ../../source/components/nitrophone/mdm.rst:128
-msgid ""
-"Type in the server URL (e.g. https://mdm.nitrokey.com) and click \"Scan "
-"QR code\"."
-msgstr "输入服务器 URL（如 https://mdm.nitrokey.com），然后点击 \"扫描 QR 码\"。"
-
-#: ../../source/components/nitrophone/mdm.rst:130
-msgid ""
-"In you server web panel, go to your device \"Detailed information\" by "
-"clicking into the 3 dots and verify that there is no red fields on this "
-"page."
-msgstr "在服务器网络面板中，点击 3 个点进入设备的 \"详细信息\"，确认该页面上没有红色字段。"
-
-#: ../../source/components/nitrophone/mdm.rst:132
-msgid "Your NitroPhone is now properly registered in your HMDM server."
-msgstr "您的 NitroPhone 现在已在 HMDM 服务器中正确注册。"
 
 #: ../../source/components/nitrowall/backup-restore.rst:2
 msgid "Backup & Restore"
@@ -25811,7 +26040,7 @@ msgid "Mark cropped Output"
 msgstr "标记裁剪的输出"
 
 #~ msgid "/bs/"
-#~ msgstr "/bs/"
+#~ msgstr ""
 
 #~ msgid "secp256"
 #~ msgstr "secp256"
@@ -26078,3 +26307,22 @@ msgstr "标记裁剪的输出"
 #~ " the `dd` utility to perform the "
 #~ "write operation."
 #~ msgstr "将安装程序映像写入闪存盘。在 Linux 上，可以使用 `dd` 实用程序执行写入操作。"
+
+#~ msgid "Mobile Device Management"
+#~ msgstr "证书管理"
+
+#~ msgid "Mobile Device Management (MDM)"
+#~ msgstr "管理钥匙 (MGM)"
+
+#~ msgid "NitroPhones can be centrally managed by using open source Headwind MDM."
+#~ msgstr "NitroPhone 可通过开源 Headwind MDM 进行集中管理。"
+
+#~ msgid ""
+#~ "Depending on whether you are using "
+#~ "the paid or gratis license, some "
+#~ "features might be available or not."
+#~ msgstr "根据您使用的是付费许可证还是免费许可证，有些功能可能可用，有些则不可用。"
+
+#~ msgid "Install MDM on NitroPhone"
+#~ msgstr "在Windows上安装nitropy"
+
