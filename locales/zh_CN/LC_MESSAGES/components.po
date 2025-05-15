@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-05-15 16:59+0000\n"
-"PO-Revision-Date: 2025-05-15 16:54+0000\n"
+"PO-Revision-Date: 2025-05-15 17:05+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -12681,6 +12681,8 @@ msgstr "下表说明了哪种算法可以在哪种设备上使用。"
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
 msgstr ""
+"某些 USB 驱动器与 NetHSM 不兼容。这会导致 NetHSM 无法将其识别为启动媒体。"
+"如果 NetHSM 无法从连接的 USB 驱动器启动，请尝试不同型号的 USB 驱动器。"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -18389,6 +18391,10 @@ msgid ""
 "Common Criteria EAL 6+ security level and implements algorithms like RSA,"
 " ECC, AES, and SHA, making it ideal for the Nitrokey 3."
 msgstr ""
+"安全元素`SE050<https://www.nxp.com/products/SE050>`__是恩智浦半导体公司推出的"
+"一款防篡改芯片，具有先进的安全功能。它提供基于硬件的安全功能，包括加密操作、"
+"安全密钥存储以及物理和逻辑攻击防护。SE05X 安全元件通过了通用标准 EAL 6+ "
+"安全级别认证，实现了 RSA、ECC、AES 和 SHA 等算法，是 Nitrokey 3 的理想之选。"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:8
 msgid ""
@@ -18397,10 +18403,13 @@ msgid ""
 "not in which case a software-only implementation is used. Password Safe "
 "and FIDO2 don't use the Secure Element except for additional randomness."
 msgstr ""
+"PIV 的加密密钥存储在安全元件中。OpenPGP Card 可以配置为将加密密钥存储在安全元"
+"件中，也可以不这样做，在这种情况下，只使用软件实现。除了额外的随机性，"
+"Password Safe 和 FIDO2 不使用安全元件。"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:12
 msgid "Activation/Deactivation for OpenPGP"
-msgstr ""
+msgstr "激活/禁用 OpenPGP"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:13
 msgid ""
@@ -18408,37 +18417,38 @@ msgid ""
 "OpenPGP Card and PIV is already saved on the device. This is "
 "automatically the case after resetting the OpenPGP Card or the entire "
 "Nitrokey."
-msgstr ""
+msgstr "如果设备上没有保存 OpenPGP 卡和 PIV 的加密密钥，则默认启用安全元素。重置 "
+"OpenPGP 卡或整个硝基后，这种情况会自动出现。"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:17
 msgid ""
 "Manually activating the Secure Element for the OpenPGP Card will delete "
 "all existing keys."
-msgstr ""
+msgstr "手动激活 OpenPGP 卡的安全元素将删除所有现有密钥。"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:19
 msgid "To check whether the Secure Element for OpenPGP is activated run:"
-msgstr ""
+msgstr "要检查 OpenPGP 安全元素是否已激活，请运行"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:21
 msgid "nitropy nk3 get-config opcard.use_se050_backend"
-msgstr ""
+msgstr "硝酸盐 nk3 get-config opcard.use_se050_backend"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:23
 msgid "To enable the Secure Element:"
-msgstr ""
+msgstr "要启用安全元素："
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:25
 msgid "nitropy nk3 set-config opcard.use_se050_backend true"
-msgstr ""
+msgstr "硝酸盐 nk3 set-config opcard.use_se050_backend true"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:27
 msgid "To disable the Secure Element:"
-msgstr ""
+msgstr "要禁用安全元素："
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:29
 msgid "nitropy nk3 set-config opcard.use_se050_backend false"
-msgstr ""
+msgstr "硝酸盐 nk3 set-config opcard.use_se050_backend false"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
 #, fuzzy
@@ -18452,7 +18462,7 @@ msgstr "**安全元件支持**"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
 msgid "Without Secure Element"
-msgstr ""
+msgstr "无安全元件"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:37
 #, fuzzy
@@ -18472,7 +18482,7 @@ msgstr "rsa3072"
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:57
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:59
 msgid "⨯"
-msgstr ""
+msgstr "⨯"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:41
 #, fuzzy
@@ -18486,19 +18496,19 @@ msgstr "AES 256"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:45
 msgid "SHA 256/384/512 bit"
-msgstr ""
+msgstr "SHA 256/384/512 位"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:47
 msgid "NIST P-256 (secp256r1/prime256v1)"
-msgstr ""
+msgstr "NIST P-256 (secp256r1/prime256v1)"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:49
 msgid "NIST P-384 (secp384r1/prime384v1)"
-msgstr ""
+msgstr "NIST P-384 (secp384r1/prime384v1)"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:51
 msgid "NIST P-521 (secp521r1/prime521v1)"
-msgstr ""
+msgstr "NIST P-521 (secp521r1/prime521v1)"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:53
 #, fuzzy
@@ -18522,15 +18532,15 @@ msgstr "脑池192"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:61
 msgid "HOTP (RFC 4226)"
-msgstr ""
+msgstr "hotp (rfc 4226)"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:63
 msgid "TOTP (RFC 6238)"
-msgstr ""
+msgstr "totp （RFC 6238）"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:65
 msgid "Physical random number generator (TRNG)"
-msgstr ""
+msgstr "物理随机数发生器 (TRNG)"
 
 #: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:4
 msgid "Set PINs"
@@ -24018,7 +24028,8 @@ msgstr "Nitrowall NW750"
 msgid ""
 "Yes, but when using an eSIM it's not possible to use blue-merle to change"
 " the eUICCID. Thus for privacy reasons we don't recommend using an eSIM."
-msgstr ""
+msgstr "可以，但使用 eSIM 时，无法使用 blue-merle 更改 "
+"eUICCID。因此，出于保护隐私的考虑，我们不建议使用 eSIM。"
 
 #: ../../source/components/nitrowall/nw750/firmware-update.rst:5
 msgid ""
@@ -26561,4 +26572,3 @@ msgstr "标记裁剪的输出"
 
 #~ msgid "For security choose to run the container in the unikernel mode."
 #~ msgstr "为了安全起见，选择在单内核模式下运行容器。"
-
