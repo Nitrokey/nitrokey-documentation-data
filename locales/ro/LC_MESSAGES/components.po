@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-14 09:12+0000\n"
+"POT-Creation-Date: 2025-05-15 16:49+0000\n"
 "PO-Revision-Date: 2025-05-14 08:30+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ro\n"
@@ -284,8 +284,8 @@ msgstr "NetHSM poate fi utilizat în modul *Attended Boot* și *Unattended Boot*
 #: ../../source/components/nethsm/administration.rst:1251
 #: ../../source/components/nethsm/administration.rst:1282
 #: ../../source/components/nethsm/administration.rst:1308
-#: ../../source/components/nethsm/container/production-image.rst:48
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:64
 #: ../../source/components/nethsm/container/test-image.rst:30
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/metrics.rst:7
@@ -2708,12 +2708,14 @@ msgstr ""
 "Modul de procesare Unix rulează NetHSM ca un proces deasupra sistemului "
 "de operare."
 
-#: ../../source/components/nethsm/container/production-image.rst:33
+#: ../../source/components/nethsm/container/production-image.rst:32
+#, fuzzy
 msgid ""
 "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine "
 "and provides strong separation from the host operating system. This mode "
 "is only available on Linux and requires access to the ``/dev/tun`` and "
-"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability. For security "
+"reasons we recommend the unikernel mode."
 msgstr ""
 "Modul unikernel rulează NetHSM ca invitat într-o mașină virtuală bazată "
 "pe KVM și asigură o separare puternică de sistemul de operare gazdă. "
@@ -2721,11 +2723,7 @@ msgstr ""
 " dispozitive ``/dev/tun`` și ``/dev/kvm`` și la capacitatea "
 "``NET_ADMIN``."
 
-#: ../../source/components/nethsm/container/production-image.rst:38
-msgid "For security choose to run the container in the unikernel mode."
-msgstr "Pentru securitate, alegeți să rulați containerul în modul unikernel."
-
-#: ../../source/components/nethsm/container/production-image.rst:40
+#: ../../source/components/nethsm/container/production-image.rst:34
 msgid ""
 "The mode can be set with the environment variable ``MODE`` (see next "
 "chapter `Configuration <container.html#production-image-"
@@ -2735,7 +2733,7 @@ msgstr ""
 " capitolul următor `Configurare <container.html#production-image-"
 "configuration>`__)."
 
-#: ../../source/components/nethsm/container/production-image.rst:43
+#: ../../source/components/nethsm/container/production-image.rst:37
 #: ../../source/components/nethsm/container/test-image.rst:25
 #: ../../source/components/nethsm/pkcs11-setup.rst:25
 #: ../../source/components/nextbox/external-storage.rst:18
@@ -2744,70 +2742,70 @@ msgstr ""
 msgid "Configuration"
 msgstr "Configurație"
 
-#: ../../source/components/nethsm/container/production-image.rst:45
+#: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
 msgid "The container can be configured with the following environment variables."
 msgstr "Containerul poate fi executat după cum urmează."
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:42
 #: ../../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
 msgstr "Variabilă de mediu"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
 msgstr "Ipsec (numai Linux)"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
 msgstr "Activează jurnalizarea extinsă pentru NetHSM."
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 #, fuzzy
 msgid "``UNLOCKPW``"
 msgstr "Deblocați PIN-ul"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr ""
 "O frază de acces de deblocare setată deblochează automat containerul în "
 "timpul pornirii."
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 #, fuzzy
 msgid "``MODE``"
 msgstr "``time```"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr "Modul acceptă valorile `unix` sau `unikernel`, implicit `unix`."
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 #, fuzzy
 msgid "``ETCD_HOST``"
 msgstr "``PKCS1```"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 msgid "The URL/IP address of the host running the etcd service."
 msgstr "Adresa URL/IP a gazdei care rulează serviciul etcd."
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
 msgid "``ETCD_PORT``"
 msgstr "``USER_ID```"
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 msgid "The port running the etcd service, defaults to `2379`."
 msgstr "Portul pe care rulează serviciul etcd, valoarea implicită este `2379`."
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1```"
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
@@ -2816,27 +2814,27 @@ msgstr ""
 "Selectați sau generați o autoritate de certificare care ar trebui să "
 "emită certificatul utilizatorului pe Nitrokey."
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature```"
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "The path to the certificate for the client authentication."
 msgstr "Setați certificatul pentru interfața TLS NetHSM"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "``ETCD_CLIENT_KEY``"
 msgstr "``EdDSA_Signature```"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
 msgstr "Această operațiune nu necesită autentificare."
 
-#: ../../source/components/nethsm/container/production-image.rst:67
+#: ../../source/components/nethsm/container/production-image.rst:61
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
@@ -2845,27 +2843,27 @@ msgstr ""
 "cheile private, trebuie să fie setate cu funcția secrets din Docker sau "
 "Podman."
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:64
 msgid "Secret variable"
 msgstr "Variabilă secretă"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 #, fuzzy
 msgid "``ca_cert``"
 msgstr "``USER_ID```"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr ""
 "Certificatul CA care a semnat certificatul clientului și certificatul "
 "serverului."
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 #, fuzzy
 msgid "``etcd_client_cert``"
 msgstr "``EdDSA_Signature```"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
@@ -2873,12 +2871,12 @@ msgstr ""
 "Certificat de client pentru autentificarea procesului NetHSM cu magazinul"
 " de valori cheie."
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 #, fuzzy
 msgid "``etcd_client_key``"
 msgstr "``EdDSA_Signature```"
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
@@ -2886,29 +2884,29 @@ msgstr ""
 "Cheia clientului pentru autentificarea procesului NetHSM cu magazinul de "
 "chei-valoare."
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
 msgid "``etcd_server_cert``"
 msgstr "``USER_ID```"
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 msgid "Server certificate for the API of the key-value store."
 msgstr "Certificat de server pentru API al magazinului de valori cheie."
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
 msgid "``etcd_server_key``"
 msgstr "Cheia serverului"
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 msgid "Server key for the API of the key-value store."
 msgstr "Cheia serverului pentru API a magazinului de valori cheie."
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid "``device_key``"
 msgstr "``device_key``"
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid ""
 "Device key of the NetHSM process. To learn more about the device key "
 "refer to chapter `Terminology and Conventions "
@@ -2920,7 +2918,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ în proiectarea sistemului."
 
-#: ../../source/components/nethsm/container/production-image.rst:88
+#: ../../source/components/nethsm/container/production-image.rst:82
 #: ../../source/components/nethsm/container/test-image.rst:36
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:83
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
@@ -2937,7 +2935,7 @@ msgstr ""
 msgid "Usage"
 msgstr "Utilizare"
 
-#: ../../source/components/nethsm/container/production-image.rst:90
+#: ../../source/components/nethsm/container/production-image.rst:84
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation "
@@ -2950,12 +2948,12 @@ msgstr ""
 "modul de funcționare a containerului cu fișierele de compunere furnizate "
 "sau cu comanda _run_."
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:87
 #, fuzzy
 msgid "Unix Mode"
 msgstr "Metoda GUI"
 
-#: ../../source/components/nethsm/container/production-image.rst:95
+#: ../../source/components/nethsm/container/production-image.rst:89
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2967,8 +2965,8 @@ msgstr ""
 "/compose-unix.yaml>`__. Asigurați-vă că aveți la dispoziție fișierele "
 "necesare pentru secretele menționate în fișierul de compunere."
 
-#: ../../source/components/nethsm/container/production-image.rst:98
-#: ../../source/components/nethsm/container/production-image.rst:128
+#: ../../source/components/nethsm/container/production-image.rst:92
+#: ../../source/components/nethsm/container/production-image.rst:122
 msgid ""
 "To run the container without the compose file you need to provide an "
 "external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find "
@@ -2982,29 +2980,29 @@ msgstr ""
 "configurare, așa cum este descris în capitolul `Configuration "
 "<container.html#production-image-configuration>`__."
 
-#: ../../source/components/nethsm/container/production-image.rst:102
-#: ../../source/components/nethsm/container/production-image.rst:132
+#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:126
 #: ../../source/components/nethsm/container/test-image.rst:38
 msgid "The container can be executed as follows."
 msgstr "Containerul poate fi executat după cum urmează."
 
-#: ../../source/components/nethsm/container/production-image.rst:105
-#: ../../source/components/nethsm/container/production-image.rst:135
+#: ../../source/components/nethsm/container/production-image.rst:99
+#: ../../source/components/nethsm/container/production-image.rst:129
 #: ../../source/components/nethsm/container/test-image.rst:41
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../source/components/nethsm/container/production-image.rst:110
-#: ../../source/components/nethsm/container/production-image.rst:140
+#: ../../source/components/nethsm/container/production-image.rst:104
+#: ../../source/components/nethsm/container/production-image.rst:134
 #: ../../source/components/nethsm/container/test-image.rst:46
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr "Podman"
 
-#: ../../source/components/nethsm/container/production-image.rst:115
+#: ../../source/components/nethsm/container/production-image.rst:109
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -3013,8 +3011,8 @@ msgstr ""
 "va expune API-ul REST pe portul `8443` prin intermediul protocolului "
 "HTTPS."
 
-#: ../../source/components/nethsm/container/production-image.rst:118
-#: ../../source/components/nethsm/container/production-image.rst:149
+#: ../../source/components/nethsm/container/production-image.rst:112
+#: ../../source/components/nethsm/container/production-image.rst:143
 #: ../../source/components/nethsm/container/test-image.rst:54
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
@@ -3026,11 +3024,11 @@ msgstr ""
 "rugăm să consultați capitolul `NetHSM introducere <index.html>`__ pentru "
 "a afla mai multe."
 
-#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:117
 msgid "Unikernel Mode"
 msgstr "Modul Unikernel"
 
-#: ../../source/components/nethsm/container/production-image.rst:125
+#: ../../source/components/nethsm/container/production-image.rst:119
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -3042,7 +3040,7 @@ msgstr ""
 "/compose-unikernel.yaml>`__. Asigurați-vă că aveți la dispoziție "
 "fișierele necesare pentru secretele menționate în fișierul de compunere."
 
-#: ../../source/components/nethsm/container/production-image.rst:145
+#: ../../source/components/nethsm/container/production-image.rst:139
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -31531,4 +31529,7 @@ msgstr "Marcaj decupat Ieșire"
 
 #~ msgid "``client_key``"
 #~ msgstr "Cheia de client"
+
+#~ msgid "For security choose to run the container in the unikernel mode."
+#~ msgstr "Pentru securitate, alegeți să rulați containerul în modul unikernel."
 

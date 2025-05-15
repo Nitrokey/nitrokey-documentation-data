@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-14 09:12+0000\n"
+"POT-Creation-Date: 2025-05-15 16:49+0000\n"
 "PO-Revision-Date: 2025-05-14 08:30+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: el\n"
@@ -306,8 +306,8 @@ msgstr ""
 #: ../../source/components/nethsm/administration.rst:1251
 #: ../../source/components/nethsm/administration.rst:1282
 #: ../../source/components/nethsm/administration.rst:1308
-#: ../../source/components/nethsm/container/production-image.rst:48
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:64
 #: ../../source/components/nethsm/container/test-image.rst:30
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/metrics.rst:7
@@ -2747,12 +2747,14 @@ msgstr ""
 "Η λειτουργία διεργασίας Unix εκτελεί το NetHSM ως διεργασία στην κορυφή "
 "του λειτουργικού συστήματος."
 
-#: ../../source/components/nethsm/container/production-image.rst:33
+#: ../../source/components/nethsm/container/production-image.rst:32
+#, fuzzy
 msgid ""
 "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine "
 "and provides strong separation from the host operating system. This mode "
 "is only available on Linux and requires access to the ``/dev/tun`` and "
-"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability. For security "
+"reasons we recommend the unikernel mode."
 msgstr ""
 "Η λειτουργία unikernel εκτελεί το NetHSM ως επισκέπτη σε μια εικονική "
 "μηχανή βασισμένη σε KVM και παρέχει ισχυρό διαχωρισμό από το λειτουργικό "
@@ -2760,13 +2762,7 @@ msgstr ""
 "σε Linux και απαιτεί πρόσβαση στους κόμβους συσκευών ``/dev/tun`` και "
 "``/dev/kvm`` και στη δυνατότητα ``NET_ADMIN``."
 
-#: ../../source/components/nethsm/container/production-image.rst:38
-msgid "For security choose to run the container in the unikernel mode."
-msgstr ""
-"Για λόγους ασφαλείας επιλέξτε να εκτελέσετε το κοντέινερ σε λειτουργία "
-"unikernel."
-
-#: ../../source/components/nethsm/container/production-image.rst:40
+#: ../../source/components/nethsm/container/production-image.rst:34
 msgid ""
 "The mode can be set with the environment variable ``MODE`` (see next "
 "chapter `Configuration <container.html#production-image-"
@@ -2776,7 +2772,7 @@ msgstr ""
 "(βλ. επόμενο κεφάλαιο `Διαμόρφωση <container.html#production-image-"
 "configuration>`__)."
 
-#: ../../source/components/nethsm/container/production-image.rst:43
+#: ../../source/components/nethsm/container/production-image.rst:37
 #: ../../source/components/nethsm/container/test-image.rst:25
 #: ../../source/components/nethsm/pkcs11-setup.rst:25
 #: ../../source/components/nextbox/external-storage.rst:18
@@ -2785,70 +2781,70 @@ msgstr ""
 msgid "Configuration"
 msgstr "Διαμόρφωση"
 
-#: ../../source/components/nethsm/container/production-image.rst:45
+#: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
 msgid "The container can be configured with the following environment variables."
 msgstr "Το δοχείο μπορεί να εκτελεστεί ως εξής."
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:42
 #: ../../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
 msgstr "Μεταβλητή περιβάλλοντος"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
 msgstr "Ipsec (μόνο για Linux)"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
 msgstr "Ενεργοποιεί την εκτεταμένη καταγραφή για το NetHSM."
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 #, fuzzy
 msgid "``UNLOCKPW``"
 msgstr "Ξεμπλοκάρισμα PIN"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr ""
 "Μια καθορισμένη συνθηματική φράση ξεκλειδώματος ξεκλειδώνει αυτόματα το "
 "δοχείο κατά την εκκίνηση."
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 #, fuzzy
 msgid "``MODE``"
 msgstr "``time``"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr "Το mode δέχεται τις τιμές `unix` ή `unikernel`, με προεπιλογή `unix`."
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 #, fuzzy
 msgid "``ETCD_HOST``"
 msgstr "``PKCS1``"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 msgid "The URL/IP address of the host running the etcd service."
 msgstr "Η διεύθυνση URL/IP του κεντρικού υπολογιστή που εκτελεί την υπηρεσία etcd."
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
 msgid "``ETCD_PORT``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 msgid "The port running the etcd service, defaults to `2379`."
 msgstr "Η θύρα που εκτελεί την υπηρεσία etcd, προεπιλογή είναι η \"2379\"."
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1``"
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
@@ -2857,27 +2853,27 @@ msgstr ""
 "Επιλέξτε ή δημιουργήστε μια Αρχή Πιστοποιητικών η οποία θα πρέπει να "
 "εκδώσει το πιστοποιητικό του χρήστη στο Nitrokey."
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "The path to the certificate for the client authentication."
 msgstr "Ορίστε το πιστοποιητικό για τη διασύνδεση NetHSM TLS"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "``ETCD_CLIENT_KEY``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
 msgstr "Αυτή η λειτουργία δεν απαιτεί έλεγχο ταυτότητας."
 
-#: ../../source/components/nethsm/container/production-image.rst:67
+#: ../../source/components/nethsm/container/production-image.rst:61
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
@@ -2886,27 +2882,27 @@ msgstr ""
 "πιστοποιητικά και τα ιδιωτικά κλειδιά, πρέπει να οριστούν με τη "
 "λειτουργία secrets του Docker ή του Podman."
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:64
 msgid "Secret variable"
 msgstr "Μυστική μεταβλητή"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 #, fuzzy
 msgid "``ca_cert``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr ""
 "Πιστοποιητικό CA που υπέγραψε το πιστοποιητικό πελάτη και το "
 "πιστοποιητικό διακομιστή."
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 #, fuzzy
 msgid "``etcd_client_cert``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
@@ -2914,12 +2910,12 @@ msgstr ""
 "Πιστοποιητικό πελάτη για τον έλεγχο ταυτότητας της διεργασίας NetHSM με "
 "τον χώρο αποθήκευσης βασικών τιμών."
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 #, fuzzy
 msgid "``etcd_client_key``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
@@ -2927,29 +2923,29 @@ msgstr ""
 "Κλειδί πελάτη για τον έλεγχο ταυτότητας της διεργασίας NetHSM με τον χώρο"
 " αποθήκευσης κλειδιών-τιμών."
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
 msgid "``etcd_server_cert``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 msgid "Server certificate for the API of the key-value store."
 msgstr "Πιστοποιητικό διακομιστή για το API του χώρου αποθήκευσης βασικών τιμών."
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
 msgid "``etcd_server_key``"
 msgstr "Κλειδί διακομιστή"
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 msgid "Server key for the API of the key-value store."
 msgstr "Κλειδί διακομιστή για το API του καταστήματος κλειδιών-τιμών."
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid "``device_key``"
 msgstr "``device_key``"
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid ""
 "Device key of the NetHSM process. To learn more about the device key "
 "refer to chapter `Terminology and Conventions "
@@ -2961,7 +2957,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ στη σχεδίαση του συστήματος."
 
-#: ../../source/components/nethsm/container/production-image.rst:88
+#: ../../source/components/nethsm/container/production-image.rst:82
 #: ../../source/components/nethsm/container/test-image.rst:36
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:83
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
@@ -2978,7 +2974,7 @@ msgstr ""
 msgid "Usage"
 msgstr "Χρήση"
 
-#: ../../source/components/nethsm/container/production-image.rst:90
+#: ../../source/components/nethsm/container/production-image.rst:84
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation "
@@ -2991,12 +2987,12 @@ msgstr ""
 "τον τρόπο λειτουργίας του εμπορευματοκιβωτίου με τα παρεχόμενα αρχεία "
 "compose ή με την εντολή _run_."
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:87
 #, fuzzy
 msgid "Unix Mode"
 msgstr "Μέθοδος GUI"
 
-#: ../../source/components/nethsm/container/production-image.rst:95
+#: ../../source/components/nethsm/container/production-image.rst:89
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -3008,8 +3004,8 @@ msgstr ""
 "/compose-unix.yaml>`__. Βεβαιωθείτε ότι έχετε διαθέσιμα τα απαραίτητα "
 "αρχεία για τα μυστικά που αναφέρονται στο αρχείο σύνθεσης."
 
-#: ../../source/components/nethsm/container/production-image.rst:98
-#: ../../source/components/nethsm/container/production-image.rst:128
+#: ../../source/components/nethsm/container/production-image.rst:92
+#: ../../source/components/nethsm/container/production-image.rst:122
 msgid ""
 "To run the container without the compose file you need to provide an "
 "external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find "
@@ -3024,29 +3020,29 @@ msgstr ""
 " στο κεφάλαιο `Διαμόρφωση <container.html#production-image-"
 "configuration>`__."
 
-#: ../../source/components/nethsm/container/production-image.rst:102
-#: ../../source/components/nethsm/container/production-image.rst:132
+#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:126
 #: ../../source/components/nethsm/container/test-image.rst:38
 msgid "The container can be executed as follows."
 msgstr "Το δοχείο μπορεί να εκτελεστεί ως εξής."
 
-#: ../../source/components/nethsm/container/production-image.rst:105
-#: ../../source/components/nethsm/container/production-image.rst:135
+#: ../../source/components/nethsm/container/production-image.rst:99
+#: ../../source/components/nethsm/container/production-image.rst:129
 #: ../../source/components/nethsm/container/test-image.rst:41
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../source/components/nethsm/container/production-image.rst:110
-#: ../../source/components/nethsm/container/production-image.rst:140
+#: ../../source/components/nethsm/container/production-image.rst:104
+#: ../../source/components/nethsm/container/production-image.rst:134
 #: ../../source/components/nethsm/container/test-image.rst:46
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr "Podman"
 
-#: ../../source/components/nethsm/container/production-image.rst:115
+#: ../../source/components/nethsm/container/production-image.rst:109
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -3054,8 +3050,8 @@ msgstr ""
 "Αυτό θα εκτελέσει το NetHSM ως διεργασία Unix μέσα στο δοχείο και θα "
 "εκθέσει το REST API στη θύρα \"8443\" μέσω του πρωτοκόλλου HTTPS."
 
-#: ../../source/components/nethsm/container/production-image.rst:118
-#: ../../source/components/nethsm/container/production-image.rst:149
+#: ../../source/components/nethsm/container/production-image.rst:112
+#: ../../source/components/nethsm/container/production-image.rst:143
 #: ../../source/components/nethsm/container/test-image.rst:54
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
@@ -3067,11 +3063,11 @@ msgstr ""
 "δημιουργήσετε μια σύνδεση. Ανατρέξτε στο κεφάλαιο `Εισαγωγή στο NetHSM "
 "<index.html>`__ για να μάθετε περισσότερα."
 
-#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:117
 msgid "Unikernel Mode"
 msgstr "Λειτουργία Unikernel"
 
-#: ../../source/components/nethsm/container/production-image.rst:125
+#: ../../source/components/nethsm/container/production-image.rst:119
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -3083,7 +3079,7 @@ msgstr ""
 "/compose-unikernel.yaml>`__. Βεβαιωθείτε ότι έχετε διαθέσιμα τα "
 "απαραίτητα αρχεία για τα μυστικά που αναφέρονται στο αρχείο σύνθεσης."
 
-#: ../../source/components/nethsm/container/production-image.rst:145
+#: ../../source/components/nethsm/container/production-image.rst:139
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -32055,4 +32051,10 @@ msgstr "Mark cropped Output"
 
 #~ msgid "``client_key``"
 #~ msgstr "Κλειδί πελάτη"
+
+#~ msgid "For security choose to run the container in the unikernel mode."
+#~ msgstr ""
+#~ "Για λόγους ασφαλείας επιλέξτε να "
+#~ "εκτελέσετε το κοντέινερ σε λειτουργία "
+#~ "unikernel."
 

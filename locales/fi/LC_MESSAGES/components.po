@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-14 09:12+0000\n"
+"POT-Creation-Date: 2025-05-15 16:49+0000\n"
 "PO-Revision-Date: 2025-05-14 08:30+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: fi\n"
@@ -282,8 +282,8 @@ msgstr ""
 #: ../../source/components/nethsm/administration.rst:1251
 #: ../../source/components/nethsm/administration.rst:1282
 #: ../../source/components/nethsm/administration.rst:1308
-#: ../../source/components/nethsm/container/production-image.rst:48
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:64
 #: ../../source/components/nethsm/container/test-image.rst:30
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/metrics.rst:7
@@ -2652,12 +2652,14 @@ msgid ""
 "system."
 msgstr "Unix-prosessitilassa NetHSM toimii prosessina käyttöjärjestelmän päällä."
 
-#: ../../source/components/nethsm/container/production-image.rst:33
+#: ../../source/components/nethsm/container/production-image.rst:32
+#, fuzzy
 msgid ""
 "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine "
 "and provides strong separation from the host operating system. This mode "
 "is only available on Linux and requires access to the ``/dev/tun`` and "
-"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability. For security "
+"reasons we recommend the unikernel mode."
 msgstr ""
 "Unikernel-tilassa NetHSM toimii vieraana KVM-pohjaisessa "
 "virtuaalikoneessa, ja se on vahvasti erillään isäntäkäyttöjärjestelmästä."
@@ -2665,11 +2667,7 @@ msgstr ""
 "``/dev/tun`` ja ``/dev/kvm`` -laitesolmuun sekä ``NET_ADMIN`` "
 "-ominaisuuteen."
 
-#: ../../source/components/nethsm/container/production-image.rst:38
-msgid "For security choose to run the container in the unikernel mode."
-msgstr "Turvallisuuden vuoksi valitse, että kontti ajetaan unikernel-tilassa."
-
-#: ../../source/components/nethsm/container/production-image.rst:40
+#: ../../source/components/nethsm/container/production-image.rst:34
 msgid ""
 "The mode can be set with the environment variable ``MODE`` (see next "
 "chapter `Configuration <container.html#production-image-"
@@ -2678,7 +2676,7 @@ msgstr ""
 "Tila voidaan asettaa ympäristömuuttujalla ``MODE`` (katso seuraava luku "
 "`Konfigurointi <container.html#production-image-configuration>`__)."
 
-#: ../../source/components/nethsm/container/production-image.rst:43
+#: ../../source/components/nethsm/container/production-image.rst:37
 #: ../../source/components/nethsm/container/test-image.rst:25
 #: ../../source/components/nethsm/pkcs11-setup.rst:25
 #: ../../source/components/nextbox/external-storage.rst:18
@@ -2687,70 +2685,70 @@ msgstr ""
 msgid "Configuration"
 msgstr "Konfigurointi"
 
-#: ../../source/components/nethsm/container/production-image.rst:45
+#: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
 msgid "The container can be configured with the following environment variables."
 msgstr "Säiliö voidaan suorittaa seuraavasti."
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:42
 #: ../../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
 msgstr "Ympäristömuuttuja"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
 msgstr "Ipsec (vain Linux)"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
 msgstr "Ottaa käyttöön NetHSM:n laajennetun kirjauksen."
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 #, fuzzy
 msgid "``UNLOCKPW``"
 msgstr "PIN-koodin vapauttaminen"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr ""
 "Asetettu avaussalasana avaa kontin lukituksen automaattisesti "
 "käynnistyksen aikana."
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 #, fuzzy
 msgid "``MODE``"
 msgstr "``time```"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr "Mode hyväksyy arvot `unix` tai `unikernel`, oletusarvo on `unix`."
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 #, fuzzy
 msgid "``ETCD_HOST``"
 msgstr "``PKCS1```"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 msgid "The URL/IP address of the host running the etcd service."
 msgstr "etcd-palvelua käyttävän isäntäkoneen URL/IP-osoite."
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
 msgid "``ETCD_PORT``"
 msgstr "``USER_ID``USER_IDUSER_ID`"
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 msgid "The port running the etcd service, defaults to `2379`."
 msgstr "Portti, jossa etcd-palvelu toimii, oletusarvo on `2379`."
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1```"
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
@@ -2759,27 +2757,27 @@ msgstr ""
 "Valitse tai luo varmentaja, jonka pitäisi myöntää käyttäjän varmenne "
 "Nitrokey-avainta varten."
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature``EdDSA_SignatureEdDSA_Signature`"
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "The path to the certificate for the client authentication."
 msgstr "Aseta varmenne NetHSM TLS -liitännän varmenteen käyttöön."
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "``ETCD_CLIENT_KEY``"
 msgstr "``EdDSA_Signature``EdDSA_SignatureEdDSA_Signature`"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
 msgstr "Tämä toiminto ei vaadi todennusta."
 
-#: ../../source/components/nethsm/container/production-image.rst:67
+#: ../../source/components/nethsm/container/production-image.rst:61
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
@@ -2787,66 +2785,66 @@ msgstr ""
 "Säiliön ajonaikaiset salaisuudet, kuten varmenteet ja yksityiset avaimet,"
 " on asetettava Dockerin tai Podmanin salaisuusominaisuudella."
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:64
 msgid "Secret variable"
 msgstr "Salainen muuttuja"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 #, fuzzy
 msgid "``ca_cert``"
 msgstr "``USER_ID``USER_IDUSER_ID`"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr ""
 "CA-varmenne, joka on allekirjoittanut asiakasvarmenteen ja "
 "palvelinvarmenteen."
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 #, fuzzy
 msgid "``etcd_client_cert``"
 msgstr "``EdDSA_Signature``EdDSA_SignatureEdDSA_Signature`"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
 msgstr "Asiakasvarmenne, jolla NetHSM-prosessi todennetaan avainarvosäilön kanssa."
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 #, fuzzy
 msgid "``etcd_client_key``"
 msgstr "``EdDSA_Signature``EdDSA_SignatureEdDSA_Signature`"
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
 msgstr "Asiakasavain, jolla NetHSM-prosessi todennetaan avainarvosäilön kanssa."
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
 msgid "``etcd_server_cert``"
 msgstr "``USER_ID``USER_IDUSER_ID`"
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 msgid "Server certificate for the API of the key-value store."
 msgstr "Avainarvosäilön API:n palvelinvarmenne."
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
 msgid "``etcd_server_key``"
 msgstr "Palvelimen avain"
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 msgid "Server key for the API of the key-value store."
 msgstr "Avainarvosäilön API:n palvelinavain."
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid "``device_key``"
 msgstr "Avainarvosäilön API:n palvelinavain."
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid ""
 "Device key of the NetHSM process. To learn more about the device key "
 "refer to chapter `Terminology and Conventions "
@@ -2858,7 +2856,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ järjestelmäsuunnittelussa."
 
-#: ../../source/components/nethsm/container/production-image.rst:88
+#: ../../source/components/nethsm/container/production-image.rst:82
 #: ../../source/components/nethsm/container/test-image.rst:36
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:83
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
@@ -2875,7 +2873,7 @@ msgstr ""
 msgid "Usage"
 msgstr "Käyttö"
 
-#: ../../source/components/nethsm/container/production-image.rst:90
+#: ../../source/components/nethsm/container/production-image.rst:84
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation "
@@ -2887,12 +2885,12 @@ msgstr ""
 "Operation>`__. Seuraavissa luvuissa kuvataan, miten konttia ajetaan "
 "mukana toimitetuilla compose-tiedostoilla tai _run_-komennolla."
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:87
 #, fuzzy
 msgid "Unix Mode"
 msgstr "GUI-menetelmä"
 
-#: ../../source/components/nethsm/container/production-image.rst:95
+#: ../../source/components/nethsm/container/production-image.rst:89
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2904,8 +2902,8 @@ msgstr ""
 "/compose-unix.yaml>`__. Varmista, että sinulla on saatavilla tarvittavat "
 "tiedostot salaisuuksia varten, jotka mainitaan compose-tiedostossa."
 
-#: ../../source/components/nethsm/container/production-image.rst:98
-#: ../../source/components/nethsm/container/production-image.rst:128
+#: ../../source/components/nethsm/container/production-image.rst:92
+#: ../../source/components/nethsm/container/production-image.rst:122
 msgid ""
 "To run the container without the compose file you need to provide an "
 "external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find "
@@ -2919,29 +2917,29 @@ msgstr ""
 "konfiguraatioasetukset, kuten luvussa `Konfiguraatio <container.html"
 "#production-image-configuration>`__ on kuvattu."
 
-#: ../../source/components/nethsm/container/production-image.rst:102
-#: ../../source/components/nethsm/container/production-image.rst:132
+#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:126
 #: ../../source/components/nethsm/container/test-image.rst:38
 msgid "The container can be executed as follows."
 msgstr "Säiliö voidaan suorittaa seuraavasti."
 
-#: ../../source/components/nethsm/container/production-image.rst:105
-#: ../../source/components/nethsm/container/production-image.rst:135
+#: ../../source/components/nethsm/container/production-image.rst:99
+#: ../../source/components/nethsm/container/production-image.rst:129
 #: ../../source/components/nethsm/container/test-image.rst:41
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../source/components/nethsm/container/production-image.rst:110
-#: ../../source/components/nethsm/container/production-image.rst:140
+#: ../../source/components/nethsm/container/production-image.rst:104
+#: ../../source/components/nethsm/container/production-image.rst:134
 #: ../../source/components/nethsm/container/test-image.rst:46
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr "Podman"
 
-#: ../../source/components/nethsm/container/production-image.rst:115
+#: ../../source/components/nethsm/container/production-image.rst:109
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -2949,8 +2947,8 @@ msgstr ""
 "Tämä ajaa NetHSM:ää Unix-prosessina kontin sisällä ja paljastaa REST "
 "API:n portissa `8443` HTTPS-protokollan kautta."
 
-#: ../../source/components/nethsm/container/production-image.rst:118
-#: ../../source/components/nethsm/container/production-image.rst:149
+#: ../../source/components/nethsm/container/production-image.rst:112
+#: ../../source/components/nethsm/container/production-image.rst:143
 #: ../../source/components/nethsm/container/test-image.rst:54
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
@@ -2961,11 +2959,11 @@ msgstr ""
 "käytät oikeita yhteysasetuksia yhteyden muodostamiseksi. Lisätietoja on "
 "luvussa `NetHSM:n käyttöönotto <index.html>`__."
 
-#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:117
 msgid "Unikernel Mode"
 msgstr "Unikernel-tila"
 
-#: ../../source/components/nethsm/container/production-image.rst:125
+#: ../../source/components/nethsm/container/production-image.rst:119
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2978,7 +2976,7 @@ msgstr ""
 "tarvittavat tiedostot salaisuuksia varten, jotka mainitaan compose-"
 "tiedostossa."
 
-#: ../../source/components/nethsm/container/production-image.rst:145
+#: ../../source/components/nethsm/container/production-image.rst:139
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -30885,4 +30883,7 @@ msgstr "Merkitse rajattu tuotos"
 
 #~ msgid "``client_key``"
 #~ msgstr "Asiakkaan avain"
+
+#~ msgid "For security choose to run the container in the unikernel mode."
+#~ msgstr "Turvallisuuden vuoksi valitse, että kontti ajetaan unikernel-tilassa."
 

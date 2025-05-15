@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-14 09:12+0000\n"
+"POT-Creation-Date: 2025-05-15 16:49+0000\n"
 "PO-Revision-Date: 2025-05-14 08:30+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ja\n"
@@ -300,8 +300,8 @@ msgstr "NetHSMは、*Attended Boot*モードと*Unattended Boot*モードで使�
 #: ../../source/components/nethsm/administration.rst:1251
 #: ../../source/components/nethsm/administration.rst:1282
 #: ../../source/components/nethsm/administration.rst:1308
-#: ../../source/components/nethsm/container/production-image.rst:48
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:64
 #: ../../source/components/nethsm/container/test-image.rst:30
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/metrics.rst:7
@@ -2503,19 +2503,17 @@ msgid ""
 "system."
 msgstr "Unixプロセスモードは、NetHSMをオペレーティングシステム上のプロセスとして実行します。"
 
-#: ../../source/components/nethsm/container/production-image.rst:33
+#: ../../source/components/nethsm/container/production-image.rst:32
+#, fuzzy
 msgid ""
 "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine "
 "and provides strong separation from the host operating system. This mode "
 "is only available on Linux and requires access to the ``/dev/tun`` and "
-"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+"``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability. For security "
+"reasons we recommend the unikernel mode."
 msgstr "Unixプロセスモードは、NetHSMをオペレーティングシステム上のプロセスとして実行します。"
 
-#: ../../source/components/nethsm/container/production-image.rst:38
-msgid "For security choose to run the container in the unikernel mode."
-msgstr "セキュリティのために、コンテナをユニカーネルモードで実行することを選択する。"
-
-#: ../../source/components/nethsm/container/production-image.rst:40
+#: ../../source/components/nethsm/container/production-image.rst:34
 msgid ""
 "The mode can be set with the environment variable ``MODE`` (see next "
 "chapter `Configuration <container.html#production-image-"
@@ -2524,7 +2522,7 @@ msgstr ""
 "モードは環境変数``MODE`` で設定できる（次章`設定<container.html#production-image-"
 "configuration>`__ を参照）。"
 
-#: ../../source/components/nethsm/container/production-image.rst:43
+#: ../../source/components/nethsm/container/production-image.rst:37
 #: ../../source/components/nethsm/container/test-image.rst:25
 #: ../../source/components/nethsm/pkcs11-setup.rst:25
 #: ../../source/components/nextbox/external-storage.rst:18
@@ -2533,158 +2531,158 @@ msgstr ""
 msgid "Configuration"
 msgstr "構成"
 
-#: ../../source/components/nethsm/container/production-image.rst:45
+#: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
 msgid "The container can be configured with the following environment variables."
 msgstr "コンテナは、次のように実行できます。"
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:42
 #: ../../source/components/nethsm/container/test-image.rst:30
 msgid "Environment variable"
 msgstr "環境変数"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "``DEBUG_LOG``"
 msgstr "`DEBUG_LOG``"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
 msgstr "NetHSM の拡張ロギングを有効にします。"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 #, fuzzy
 msgid "``UNLOCKPW``"
 msgstr "暗証番号のブロック解除"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:46
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr "ロック解除パスフレーズを設定すると、コンテナ起動時に自動的にロックが解除される。"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 #, fuzzy
 msgid "``MODE``"
 msgstr "``time``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:48
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr "モードには `unix` または `unikernel` が指定でき、デフォルトは `unix` である。"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 #, fuzzy
 msgid "``ETCD_HOST``"
 msgstr "``PKCS1``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:50
 msgid "The URL/IP address of the host running the etcd service."
 msgstr "etcdサービスを実行しているホストのURL/IPアドレス。"
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
 msgid "``ETCD_PORT``"
 msgstr "``USER_ID``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:58
+#: ../../source/components/nethsm/container/production-image.rst:52
 msgid "The port running the etcd service, defaults to `2379`."
 msgstr "デフォルトは `2379` である。"
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:60
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
 "signed the client certificate."
 msgstr "Nitrokeyでユーザーの証明書を発行する認証局を選択または生成します。"
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "The path to the certificate for the client authentication."
 msgstr "NetHSM TLSインターフェイスの証明書を設定する"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "``ETCD_CLIENT_KEY``"
 msgstr "``EdDSA_Signature``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
 msgstr "この操作は認証を必要としない。"
 
-#: ../../source/components/nethsm/container/production-image.rst:67
+#: ../../source/components/nethsm/container/production-image.rst:61
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
 msgstr "証明書や秘密鍵などのコンテナ実行時の秘密は、DockerやPodmanのsecrets機能を使って設定する必要がある。"
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:64
 msgid "Secret variable"
 msgstr "秘密変数"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 #, fuzzy
 msgid "``ca_cert``"
 msgstr "``USER_ID``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:66
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr "クライアント証明書とサーバ証明書に署名したCA証明書。"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 #, fuzzy
 msgid "``etcd_client_cert``"
 msgstr "``EdDSA_Signature``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:68
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
 msgstr "NetHSM プロセスがキーバリューストアで認証を受けるためのクライアント証明書。"
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 #, fuzzy
 msgid "``etcd_client_key``"
 msgstr "``EdDSA_Signature``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:76
+#: ../../source/components/nethsm/container/production-image.rst:70
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
 msgstr "NetHSM プロセスがキーバリューストアで認証するためのクライアントキー。"
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
 msgid "``etcd_server_cert``"
 msgstr "``USER_ID``。"
 
-#: ../../source/components/nethsm/container/production-image.rst:78
+#: ../../source/components/nethsm/container/production-image.rst:72
 msgid "Server certificate for the API of the key-value store."
 msgstr "Key-Value ストアの API 用のサーバー証明書。"
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
 msgid "``etcd_server_key``"
 msgstr "サーバーキー"
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:74
 msgid "Server key for the API of the key-value store."
 msgstr "Key-ValueストアのAPIのサーバーキー。"
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid "``device_key``"
 msgstr "`device_key``"
 
-#: ../../source/components/nethsm/container/production-image.rst:82
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid ""
 "Device key of the NetHSM process. To learn more about the device key "
 "refer to chapter `Terminology and Conventions "
@@ -2695,7 +2693,7 @@ msgstr ""
 "プロセスのデバイス・キー。デバイス・キーの詳細については、システム設計の`用語と規則<https://github.com/Nitrokey/nethsm/blob/main/docs"
 "/system-design.md#terminology-and-conventions>`__ の章を参照してください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:88
+#: ../../source/components/nethsm/container/production-image.rst:82
 #: ../../source/components/nethsm/container/test-image.rst:36
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:83
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
@@ -2712,7 +2710,7 @@ msgstr ""
 msgid "Usage"
 msgstr "使用方法"
 
-#: ../../source/components/nethsm/container/production-image.rst:90
+#: ../../source/components/nethsm/container/production-image.rst:84
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation "
@@ -2723,12 +2721,12 @@ msgstr ""
 "<container.html#Modes of "
 "Operation>`本番用コンテナは、`__の2つの動作モードをサポートしている。以下の章では、提供されたcomposeファイルまたは_run_コマンドを使用してコンテナを実行する方法について説明する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:87
 #, fuzzy
 msgid "Unix Mode"
 msgstr "GUI方式"
 
-#: ../../source/components/nethsm/container/production-image.rst:95
+#: ../../source/components/nethsm/container/production-image.rst:89
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2740,8 +2738,8 @@ msgstr ""
 "/compose-unix.yaml>` "
 "__はこちらから入手できます。composeファイルに記載されているシークレットに必要なファイルが利用可能であることを確認してください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:98
-#: ../../source/components/nethsm/container/production-image.rst:128
+#: ../../source/components/nethsm/container/production-image.rst:92
+#: ../../source/components/nethsm/container/production-image.rst:122
 msgid ""
 "To run the container without the compose file you need to provide an "
 "external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find "
@@ -2754,36 +2752,36 @@ msgstr ""
 "用の推奨コンテナ・イメージがある。`設定<container.html#production-image-configuration>`__ "
 "の章で説明するように、設定オプションを渡すことを確認する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:102
-#: ../../source/components/nethsm/container/production-image.rst:132
+#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:126
 #: ../../source/components/nethsm/container/test-image.rst:38
 msgid "The container can be executed as follows."
 msgstr "コンテナは、次のように実行できます。"
 
-#: ../../source/components/nethsm/container/production-image.rst:105
-#: ../../source/components/nethsm/container/production-image.rst:135
+#: ../../source/components/nethsm/container/production-image.rst:99
+#: ../../source/components/nethsm/container/production-image.rst:129
 #: ../../source/components/nethsm/container/test-image.rst:41
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr "ドッカー"
 
-#: ../../source/components/nethsm/container/production-image.rst:110
-#: ../../source/components/nethsm/container/production-image.rst:140
+#: ../../source/components/nethsm/container/production-image.rst:104
+#: ../../source/components/nethsm/container/production-image.rst:134
 #: ../../source/components/nethsm/container/test-image.rst:46
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr "ポッドマン"
 
-#: ../../source/components/nethsm/container/production-image.rst:115
+#: ../../source/components/nethsm/container/production-image.rst:109
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
 msgstr "これはNetHSMをコンテナ内でUnixプロセスとして実行し、HTTPSプロトコル経由でポート`8443`にREST APIを公開する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:118
-#: ../../source/components/nethsm/container/production-image.rst:149
+#: ../../source/components/nethsm/container/production-image.rst:112
+#: ../../source/components/nethsm/container/production-image.rst:143
 #: ../../source/components/nethsm/container/test-image.rst:54
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
@@ -2791,11 +2789,11 @@ msgid ""
 "chapter `NetHSM introduction <index.html>`__ to learn more."
 msgstr "コンテナは自己署名のTLS証明書を使用しています。正しい接続設定を使用して、接続を確立するようにしてください。詳しくは、`NetHSM導入編<index.html>`__の章をご参照ください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:117
 msgid "Unikernel Mode"
 msgstr "ユニカーネルモード"
 
-#: ../../source/components/nethsm/container/production-image.rst:125
+#: ../../source/components/nethsm/container/production-image.rst:119
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2807,7 +2805,7 @@ msgstr ""
 "/compose-unikernel.yaml>` "
 "__はこちらから入手できます。composeファイルに記載されているシークレットに必要なファイルが利用可能であることを確認してください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:145
+#: ../../source/components/nethsm/container/production-image.rst:139
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -27188,4 +27186,7 @@ msgstr "マーク クロップド出力"
 
 #~ msgid "``client_key``"
 #~ msgstr "クライアント・キー"
+
+#~ msgid "For security choose to run the container in the unikernel mode."
+#~ msgstr "セキュリティのために、コンテナをユニカーネルモードで実行することを選択する。"
 
