@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-16 15:36+0000\n"
+"POT-Creation-Date: 2025-05-21 12:58+0000\n"
 "PO-Revision-Date: 2025-05-16 15:41+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
-"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -9726,8 +9726,7 @@ msgid ""
 "The Nitrokey HSM is essentially a more potent OpenPGP Card, thus some of "
 "the OpenPGP Card features are also applicable for the HSM - although "
 "might need some adjustments."
-msgstr "硝基 HSM 本质上是一个更强大的 OpenPGP 卡，因此 OpenPGP 卡的某些功能也适用于 "
-"HSM，不过可能需要进行一些调整。"
+msgstr "硝基 HSM 本质上是一个更强大的 OpenPGP 卡，因此 OpenPGP 卡的某些功能也适用于 HSM，不过可能需要进行一些调整。"
 
 #: ../../source/components/nitrokeys/features/hsm/index.rst:26
 msgid "`Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index.html>`_"
@@ -12699,8 +12698,6 @@ msgstr "下表说明了哪种算法可以在哪种设备上使用。"
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
 msgstr ""
-"某些 USB 驱动器与 NetHSM 不兼容。这会导致 NetHSM 无法将其识别为启动媒体。"
-"如果 NetHSM 无法从连接的 USB 驱动器启动，请尝试不同型号的 USB 驱动器。"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -15077,7 +15074,9 @@ msgid "Connect the Nitrokey 3 with your computer."
 msgstr "将Nitrokey 3与你的电脑相连。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:42
-msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
+#: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:188
+#, fuzzy
+msgid "On the terminal enter ``nitropy nk3 piv --experimental change-pin``."
 msgstr "在终端上输入``nitropy nk3 piv change-pin``。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:46
@@ -15107,7 +15106,9 @@ msgid ""
 msgstr "*PUK* 受重试计数器的限制。请参阅`重试计数器<access_control.html#retry-counter>`__ 章节了解更多信息。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:60
-msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
+#: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:205
+#, fuzzy
+msgid "On the terminal enter ``nitropy nk3 piv --experimental change-puk``."
 msgstr "在终端上输入``nitropy nk3 piv change-pin``。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:64
@@ -15128,16 +15129,18 @@ msgid ""
 msgstr "*PIN 码* 的重试次数为 3 次。如果尝试次数用完，*密码* 必须使用*PUK* 解锁。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:73
+#, fuzzy
 msgid ""
-"To unblock the *PIN*, use the command ``nitropy nk3 piv reset-retry-"
-"counter``. This command requires the *PUK*."
+"To unblock the *PIN*, use the command ``nitropy nk3 piv --experimental "
+"reset-retry-counter``. This command requires the *PUK*."
 msgstr "要解除对*PIN* 的封锁，请使用``nitropy nk3 piv reset-retry-counter`` 命令。该命令需要*PUK* 。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:76
+#, fuzzy
 msgid ""
 "The *PUK* has a retry counter of 3 attempts. If these attempts are used "
-"up, the PIV Card can not be used anymore and must be reset to factory "
-"defaults. Please refer to the chapter `Factory Reset "
+"up, the PIV smart card can not be used anymore and must be reset to "
+"factory defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
 "*PUK* 有一个 3 次重试计数器。如果这些尝试次数用完，PIV 卡就不能再使用，必须重置为出厂默认设置。请参阅`Factory "
@@ -15152,16 +15155,18 @@ msgid "The management key is used for management operations."
 msgstr "管理密钥用于管理操作。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:86
+#, fuzzy
 msgid ""
 "Before you can perform management operations you must authenticate with "
 "the management key. The authentication is done with ``nitropy nk3 piv "
-"admin-auth``."
+"--experimental admin-auth``."
 msgstr "在执行管理操作前，必须使用管理密钥进行身份验证。身份验证通过``nitropy nk3 piv admin-auth`` 完成。"
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:89
+#, fuzzy
 msgid ""
-"The management key can be changed with ``nitropy nk3 piv change-admin-"
-"key``."
+"The management key can be changed with ``nitropy nk3 piv --experimental "
+"change-admin-key``."
 msgstr "可通过``nitropy nk3 piv change-admin-key`` 更改管理密钥。"
 
 #: ../../source/components/nitrokeys/features/piv/certificate_management.rst:2
@@ -15193,15 +15198,17 @@ msgid "Certificates can be written to the Nitrokey per key slot."
 msgstr "每个密钥槽都可以向 Nitrokey 写入证书。"
 
 #: ../../source/components/nitrokeys/features/piv/factory_reset.rst:6
+#, fuzzy
 msgid ""
-"The PIV application can be reset to factory defaults. It can only be "
-"reset if the PIN and PUK are blocked."
+"The PIV smart card can be reset to factory defaults. It can only be reset"
+" if the PIN and PUK are blocked."
 msgstr "PIV 应用程序可以重置为出厂默认设置。只有在 PIN 和 PUK 被阻止的情况下才能重置。"
 
 #: ../../source/components/nitrokeys/features/piv/factory_reset.rst:10
+#, fuzzy
 msgid ""
-"Performing a factory reset of the PIV application will delete all private"
-" keys and certificates."
+"Performing a factory reset of the PIV smart card will delete all private "
+"keys and certificates."
 msgstr "对 PIV 应用程序进行出厂重置将删除所有私钥和证书。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:2
@@ -15211,9 +15218,9 @@ msgstr "使用活动目录登录客户端"
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:6
 #, fuzzy
 msgid ""
-"This document explains how to use the PIV application of a Nitrokey 3 for"
-" smartcard logon with Active Directory. It is available as of firmware "
-"version 1.8 and higher."
+"This document explains how to use the PIV smart card of a Nitrokey 3 for "
+"logon with Active Directory. It is available as of firmware version 1.8 "
+"and higher."
 msgstr "本文档介绍如何使用 Nitrokey 3 的 PIV 应用程序通过 Active Directory 进行智能卡登录。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:8
@@ -15233,9 +15240,10 @@ msgstr ""
 "的计算机具有管理访问权限。在客户机上，只需访问用于登录的相应用户账户。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:16
+#, fuzzy
 msgid ""
-"Windows server (supported versions are Windows Server 2016, 2019, 2022 in"
-" all editions)"
+"Windows server (supported versions are Windows Server 2016, 2019, 2022, "
+"2025 in Standard and Enterprise editions)"
 msgstr "Windows 服务器（支持的版本包括 Windows Server 2016、2019 和 2022 的所有版本）"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:17
@@ -15271,7 +15279,8 @@ msgid "Client must be a domain member of the Active Directory (AD) domain."
 msgstr "客户端必须是 Active Directory (AD) 域的域成员。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:23
-msgid "Nitrokey 3 with PIV application."
+#, fuzzy
+msgid "Nitrokey 3 with PIV smart card."
 msgstr "带有 PIV 应用程序的 Nitrokey 3。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:26
@@ -15368,9 +15377,10 @@ msgid "Set a algorithm name and minimum key size."
 msgstr "设置算法名称和最小密钥大小。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:60
+#, fuzzy
 msgid ""
 "Microsoft recommends to use the RSA algorithm with a key length of "
-"``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
+"``2048`` Bit. If you choose to use Elliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
 "Microsoft 建议使用密钥长度为``2048`` 位的 RSA 算法。如果选择使用 Eliptic Curve (EC) "
@@ -15420,11 +15430,12 @@ msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
 msgstr "使用 Active Directory 为智能卡登录提供 Nitrokey 3"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:80
+#, fuzzy
 msgid ""
-"The smartcard logon requires to provision a Nitrokey for an user in "
-"Active Directory. The provisiong contains the private key and Certificate"
-" Singing Request (CSR) generation. The certificate is then written to the"
-" Nitrokey."
+"The smartcard logon requires to provision a Nitrokey for a user in Active"
+" Directory. The provisioning contains the private key and Certificate "
+"Singing Request (CSR) generation. The certificate is then written to the "
+"Nitrokey."
 msgstr ""
 "智能卡登录需要在 Active Directory 中为用户配置 Nitrokey。该配置包含私钥和证书生成请求（CSR）。然后将证书写入 "
 "Nitrokey。"
@@ -15437,53 +15448,158 @@ msgid ""
 " a failed logon."
 msgstr "在执行以下步骤之前，请确保要用于智能卡登录的 Active Directory 用户账户已经存在。证书创建时间早于用户账户创建时间将导致登录失败。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:89
-msgid ""
-"If the PIV application on the Nitrokey was not used before, perform a "
-"initialization with ``nitropy nk3 piv init`` first."
-msgstr "如果之前没有使用过 Nitrokey 上的 PIV 应用程序，请先使用``nitropy nk3 piv init`` 进行初始化。"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:91
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:88
 msgid "Generate a private key and write the CSR to file with the command below."
 msgstr "使用下面的命令生成私钥并将 CSR 写入文件。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:97
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:94
+#, fuzzy
 msgid ""
 "The value of ``<algorithm>`` is the used algorithm with its key length, "
-"e.g. ``rsa2048``. The values of ``<subject-name>`` and ``<subject-"
-"alternative-name>`` corresponds typically to the ``commonName`` and "
+"e.g. ``rsa2048``. The value of ``<subject-name>`` corresponds to the "
+"value of the ``distinguishedName`` attribute of the Active Directory user"
+" account. In most cases it is only necessary to include the common name "
+"part of the distinguished name, e.g. ``CN=John Doe``. The value of "
+"``<subject-alternative-name>`` corresponds to the value of the "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
 "``<algorithm>`` 的值是使用的算法及其密钥长度，例如``rsa2048``。``<subject-name>`` 和"
 "``<subject-alternative-name>`` 的值通常与活动目录用户账户的``commonName`` "
 "和``userPrincipalName`` 属性相对应。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:100
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:99
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr "用下面的命令在域的证书颁发机构 (CA) 上签署 CSR。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:106
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:105
 msgid ""
 "The value of ``<template-name>`` is the name of the certificate template "
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
 msgstr "``<template-name>`` 的值是用于智能卡登录的证书模板名称。``<file>`` 的值是证书演唱请求文件。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:109
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:108
 msgid "Write the signed certificate to the Nitrokey with the command below."
 msgstr "用下面的命令将签名证书写入 Nitrokey。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:115
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:114
 msgid "The value of ``<file>`` is the certificate file."
 msgstr "``<file>`` 的值是证书文件。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:119
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:116
+msgid ""
+"Map the certificate with the Active Directory user account. Create the "
+"certificate mappings with the command below."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:123
+#, fuzzy
+msgid "Choose one of the offered certificate mappings."
+msgstr "选择证书、映射和用户。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:126
+msgid "Microsoft recommends the use of the ``X509IssuerSerialNumber`` mapping."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:128
+msgid ""
+"Write the choosen mapping to the ``altSecurityIdentities`` attribute of "
+"the Active Directory user object. You can use the *Active Directory Users"
+" and Computers* application or PowerShell for this operation."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:132
+msgid "Active Directory Users and Computers"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:133
+#, fuzzy
+msgid ""
+"From the Command Line, PowerShell, or Run, type ``dsa.msc`` and press "
+"Enter."
+msgstr "从命令行、PowerShell 或运行中，键入``certsrv.msc`` 并按 Enter。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:134
+#, fuzzy
+msgid "In the menu bar click **View → Advanced Features**."
+msgstr "在菜单栏中单击**操作 → 所有任务 → 导入** 。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:135
+msgid "Select the respective user object."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:136
+#, fuzzy
+msgid "In the menu bar click **Action → Properties**."
+msgstr "在菜单栏中单击**操作 → 所有任务 → 导入** 。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:137
+msgid "Open the tab **Attribute Editor**."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:138
+msgid "Select the attribute ``altSecurityIdentities``."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:139
+#, fuzzy
+msgid "Click on **Edit**."
+msgstr "点击 \"下一步\"。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:140
+#, fuzzy
+msgid "Insert the certificate mapping in the text field and click **Add**."
+msgstr "选择证书、映射和用户。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:141
+msgid "Apply the change with a click on **OK**."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:143
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:212
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
+msgid "PowerShell"
+msgstr "PowerShell"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:144
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:214
+msgid "Open PowerShell."
+msgstr "打开 PowerShell。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:145
+msgid ""
+"Add the value with ``Set-ADUser -Identity \"<sAMAccountName>\" -Add "
+"@{altSecurityIdentities=\"<certificate-mapping>\"}``, replacing "
+"``<sAMAccountName>`` with the value of the user logon name and "
+"``<certificate-mapping>`` with the choosen certficate mapping from above."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:148
+msgid ""
+"If the certificate mapping is not correctly set you will receive the "
+"error message ``Logon screen message: Your credentials could not be "
+"verified.`` when attempting to logon. Additionally, you will see the "
+"event message below in the Windows system event log."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:151
+#, fuzzy
+msgid "**Source**"
+msgstr "**特点**"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:157
+#, fuzzy
+msgid "**Message**"
+msgstr "**特点**"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:164
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
 msgstr "撤销智能卡登录，以便与 Active Directory (AD) 一起使用"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:121
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:166
 msgid ""
 "The issued user logon certificates are listed in the Active Directory "
 "Certificate Services (ADCS). From ADCS the certificates can be revoked, "
@@ -15493,63 +15609,63 @@ msgstr ""
 "已签发的用户登录证书列在 Active Directory 证书服务 (ADCS) 中。从 ADCS "
 "中可以撤销证书，并将其添加到配置的证书撤销列表（CRL）中。这在 Nitrokey 丢失或损坏时是必需的。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:126
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:171
 msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
 msgstr "强烈建议不要在未撤销证书的情况下留下未使用的用户证书。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:129
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:174
 msgid ""
 "It is possible to temporarily revoke a certificate with the reason "
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr "可以暂时吊销证书，理由是*Certificate Hold* 。这种撤销可以恢复，因此不是永久性的。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:133
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:178
 msgid "MMC (certsrv.msc)"
 msgstr "MMC (certsrv.msc)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:134
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:160
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:179
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:205
 msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr "从命令行、PowerShell 或运行中，键入``certsrv.msc`` 并按 Enter。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:135
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:180
 msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr "在导航窗格中展开证书颁发机构 (CA)，并导航至**Issued Certificates** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:136
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:181
 msgid "In the detail pane select the user certificate you want to revoke."
 msgstr "在详细窗格中选择要撤销的用户证书。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:137
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:182
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
 msgstr "在菜单栏中单击**操作 → 所有任务 → 注销证书** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:138
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:183
 msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
 msgstr "指定撤销原因、日期和时间，并通过**Yes** 进行确认。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:139
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:184
 msgid "In the navigation pane navigate to **Revoked Certificates**."
 msgstr "在导航窗格中导航至**已撤销证书** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:140
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:185
 msgid "In the menu bar click **Action → All Tasks → Publish**."
 msgstr "在菜单栏中单击**操作 → 所有任务 → 发布** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:141
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:186
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr "选择要发布的撤销列表，并通过**OK** 确认。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:144
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:189
 msgid ""
 "During each smartcard logon attempt Windows checks if the certificate "
 "presented by the smartcard is listed on a Certificate Revocation List "
@@ -15562,45 +15678,45 @@ msgstr ""
 " CRL 都包含一个使其过期的有效期。Windows 会缓存获取的 CRL，并在 CRL "
 "即将过期时更新它们。因此，证书吊销不会立即发生，而是取决于客户端所拥有的证书废止列表的过期时间。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:152
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:197
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr "将用户智能卡证书导入个人证书存储区"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:154
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:199
 msgid ""
 "The user certificate which is stored on the Nitrokey can be imported to "
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr "存储在 Nitrokey 上的用户证书可以导入到用户的个人证书存储空间。在某些情况下，这是必要的程序。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:158
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:203
 msgid "MMC (certmgr.msc)"
 msgstr "MMC (certmgr.msc)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:159
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:168
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:204
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:213
 msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
 msgstr "确保您已登录证书对应的用户账户。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:161
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:206
 msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
 msgstr "在导航窗格中展开**个人** 密钥存储，并导航至**证书** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:162
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:207
 msgid "In the menu bar click **Action → All Tasks → Import**."
 msgstr "在菜单栏中单击**操作 → 所有任务 → 导入** 。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:163
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:208
 msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
 msgstr "按照导入向导操作，并按要求提供用户证书文件。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:164
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:209
 msgid ""
 "After the import completed check the detail pane for the imported "
 "certificate. If the Nitrokey is connected, the properties of the "
@@ -15611,28 +15727,19 @@ msgstr ""
 "导入完成后，检查导入证书的详细信息窗格。如果 Nitrokey 已连接，证书属性应显示*You have a private key that "
 "corresponds to this certificate（你有一个与此证书对应的私钥）。* 表明 Nitrokey 上的私钥可以被识别。"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:167
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
-msgid "PowerShell"
-msgstr "PowerShell"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:169
-msgid "Open PowerShell."
-msgstr "打开 PowerShell。"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:170
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:215
 #, fuzzy
 msgid ""
-"Change to the personal certficate store of the user with ``Set-Location "
-"-Path cert:/bs/CurrentUser/bs/My``."
-msgstr "通过``Set-Location -Path cert:/bs/CurrentUser/bs/My`` 更改用户的个人证书存储。"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:171
-msgid ""
-"Import the certificate to the store with ``Import-Certificate -Filepath "
-"'<path>'``, replacing ``<path>`` with the certificate file path."
+"Import the certificate with ``Import-Certificate -CertStoreLocation "
+"Cert:/bs/CurrentUser/bs/My -FilePath <path>``, replacing ``<file>`` with the "
+"certificate file path."
 msgstr "使用``Import-Certificate -Filepath '<path>'`` 将证书导入存储区，用证书文件路径替换``<path>``。"
+
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:216
+msgid ""
+"After the import completed check for the certificate with ``Get-ChildItem"
+" Cert:/bs/CurrentUser/bs/My``."
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/guides/index.rst:2
 #: ../../source/components/nitrokeys/features/piv/index.rst:9
@@ -15647,8 +15754,8 @@ msgstr "PIV（个人身份验证）"
 #: ../../source/components/nitrokeys/features/piv/index.rst:6
 #, fuzzy
 msgid ""
-"The *Personal Identity Verfication* (PIV) is based on the NIST special "
-"publication `SP 800-73 "
+"The *Personal Identity Verfication* (PIV) smart card is based on the NIST"
+" special publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 " It is available as of firmware version 1.8 and higher."
 msgstr ""
@@ -15751,9 +15858,9 @@ msgstr "算法"
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:38
 #, fuzzy
 msgid ""
-"PIV uses asymmetric and symmetric algorithms. The asymmetric algorithms "
-"are used for the user private keys and the symmetric algorithms for the "
-"management key."
+"The PIV smart card uses asymmetric and symmetric algorithms. The "
+"asymmetric algorithms are used for the user private keys and the "
+"symmetric algorithms for the management key."
 msgstr "PIV 应用程序使用非对称和对称算法。非对称算法用于用户私钥，对称算法用于管理密钥。"
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:40
@@ -15805,9 +15912,9 @@ msgstr "PIV 应用程序可在 Nitrokey 上生成新的私人密钥。"
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:67
 #, fuzzy
 msgid ""
-"The command below will create a private key in key slot ``9a`` for the "
-"user with the subject name ``John Doe`` and subject alternative name "
-"``jd@nitrokey.local``."
+"The command below will create a private key in key slot ``9a`` with the "
+"RSA algorithm and a key length of 2048 bit, for the user with the subject"
+" name ``CN=John Doe`` and subject alternative name ``jd@nitrokey.local``."
 msgstr "下面的命令将在密钥槽``9a`` 中为用户创建私人密钥，用户名为``John Doe``，主题替代名称为``jd@nitrokey.local``。"
 
 #: ../../source/components/nitrokeys/features/totp/general.rst:2
@@ -18833,9 +18940,10 @@ msgid "GnuPG will now ask for the *Admin PIN*, and the *Reset Code*."
 msgstr "GnuPG现在会要求输入*管理密码* ，以及*重置代码* 。"
 
 #: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:171
+#, fuzzy
 msgid ""
-"The *PIN* and *PUK* for PIV (Personal Identity Verification) Card can be "
-"set with `pivy-tool <https://github.com/arekinath/pivy>`__."
+"The *PIN* and *PUK* for PIV (Personal Identity Verification) card can be "
+"set with `nitropy <https://github.com/nitrokey/pynitrokey>`__."
 msgstr ""
 "*PIN* 和*PUK* 用于 PIV（个人身份验证）卡，可使用`pivy-"
 "tool<https://github.com/arekinath/pivy>`___进行设置。"
@@ -18846,20 +18954,12 @@ msgid ""
 "used up, the *PIN* must be unlocked with the *PUK*."
 msgstr "*PIN* 有一个3次尝试的PIN重试计数器。如果这个尝试次数用完了，*PIN* 必须用*PUK* 来解锁。"
 
-#: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:188
-msgid "On the terminal enter ``pivy-tool change-pin``."
-msgstr "在终端输入``pivy-tool change-pin``。"
-
 #: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:201
 msgid ""
 "The *PUK* has a retry counter of 3 attempts. If this attempts are used "
 "up, the PIV Card can not be used anymore and must be reset to factory "
 "defaults."
 msgstr "*PUK* 有一个3次尝试的重试计数器。如果这个尝试次数用完了，PIV卡就不能再使用，必须重置为出厂默认值。"
-
-#: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:205
-msgid "On the terminal enter ``pivy-tool change-puk``."
-msgstr "在终端输入``pivy-tool change-pin``。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:4
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:7
@@ -26589,3 +26689,23 @@ msgstr "标记裁剪的输出"
 
 #~ msgid "Windows login"
 #~ msgstr "Windows 安装"
+
+#~ msgid ""
+#~ "If the PIV application on the "
+#~ "Nitrokey was not used before, perform"
+#~ " a initialization with ``nitropy nk3 "
+#~ "piv init`` first."
+#~ msgstr "如果之前没有使用过 Nitrokey 上的 PIV 应用程序，请先使用``nitropy nk3 piv init`` 进行初始化。"
+
+#~ msgid ""
+#~ "Change to the personal certficate store"
+#~ " of the user with ``Set-Location "
+#~ "-Path cert:/bs/CurrentUser/bs/My``."
+#~ msgstr "通过``Set-Location -Path cert:/bs/CurrentUser/bs/My`` 更改用户的个人证书存储。"
+
+#~ msgid "On the terminal enter ``pivy-tool change-pin``."
+#~ msgstr "在终端输入``pivy-tool change-pin``。"
+
+#~ msgid "On the terminal enter ``pivy-tool change-puk``."
+#~ msgstr "在终端输入``pivy-tool change-pin``。"
+
