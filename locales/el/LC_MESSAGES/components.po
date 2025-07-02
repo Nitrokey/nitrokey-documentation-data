@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-06-30 12:06+0000\n"
+"POT-Creation-Date: 2025-07-02 12:58+0000\n"
 "PO-Revision-Date: 2025-06-30 12:11+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Greek <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -6910,7 +6909,7 @@ msgstr "Android/iOS"
 
 #: ../../source/components/nextbox/clients/index.rst:8
 #: ../../source/components/nitrokeys/features/hidden-storage/index.rst:67
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:24
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:29
 #: ../../source/components/nitrokeys/passkey/management.rst:23
 #: ../../source/components/nitrokeys/passkey/troubleshooting.rst:15
 #: ../../source/components/nitrokeys/pro/getting-started.rst:24
@@ -7426,11 +7425,12 @@ msgid ""
 "browser session will not allow you to use HTTP again in this session, you"
 " can always open a new incognito window to avoid that."
 msgstr ""
-"Θα πρέπει να ανοίξετε ένα παράθυρο ινκόγκνιτο και να χρησιμοποιήσετε: `https"
-"://<your-local-ip>` `http://<your-local-ip>` Να θυμάστε ότι η χρήση του "
-"HTTPS μία φορά σε αυτή τη συνεδρία του προγράμματος περιήγησης δεν θα σας "
-"επιτρέψει να χρησιμοποιήσετε ξανά το HTTP σε αυτή τη συνεδρία, μπορείτε "
-"πάντα να ανοίξετε ένα νέο παράθυρο ινκόγκνιτο για να το αποφύγετε αυτό."
+"Θα πρέπει να ανοίξετε ένα παράθυρο ινκόγκνιτο και να χρησιμοποιήσετε: "
+"`https://<your-local-ip>` `http://<your-local-ip>` Να θυμάστε ότι η χρήση"
+" του HTTPS μία φορά σε αυτή τη συνεδρία του προγράμματος περιήγησης δεν "
+"θα σας επιτρέψει να χρησιμοποιήσετε ξανά το HTTP σε αυτή τη συνεδρία, "
+"μπορείτε πάντα να ανοίξετε ένα νέο παράθυρο ινκόγκνιτο για να το "
+"αποφύγετε αυτό."
 
 #: ../../source/components/nextbox/faq/hardware.rst:2
 msgid "Hardware FAQ"
@@ -11224,7 +11224,6 @@ msgid "Hidden volume partitioning"
 msgstr "Κατάτμηση κρυφού τόμου"
 
 #: ../../source/components/nitrokeys/features/hidden-storage/index.rst:63
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:18
 #: ../../source/components/nitrokeys/pro/getting-started.rst:20
 #: ../../source/components/nitrokeys/start/getting-started.rst:13
 #: ../../source/components/nitrokeys/storage/firmware-update.rst:46
@@ -15457,7 +15456,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 msgid "/bs/"
-msgstr "Μετα-κβαντική κρυπτογραφία (PQC)"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
 #: ../../source/components/shared-faqs/algos.rst.inc:7
@@ -21229,8 +21228,14 @@ msgstr ""
 "<https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__ πρόγραμμα "
 "οδήγησης (`source <https://github.com/CardContact/sc-hsm-embedded>`__)."
 
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:18
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:20
+#, fuzzy
+msgid "macOS"
+msgstr "macOS"
+
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:19
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:25
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:30
 msgid ""
 "Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. "
 "Alternatively, install `this <https://www.cardcontact.de/download/sc-hsm-"
@@ -21242,7 +21247,17 @@ msgstr ""
 "<https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__ οδηγό "
 "(`πηγή <https://github.com/CardContact/sc-hsm-embedded>`__)."
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:30
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:24
+msgid ""
+"On some macOS versions, OpenSC fails to find the CCID library of the "
+"operating system. In this case OpenSC tools will show ``Unresponsive "
+"Card`` errors. The problem can be fixed by either copying or symlinking "
+"the directory ``/usr/libexec/SmartCardServices`` to "
+"``/usr/local/libexec/SmartCardServices``. A reboot after this change is "
+"mandatory to make the new library to be recognized."
+msgstr ""
+
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:35
 msgid ""
 "Define SO-PIN and PIN of your own choices. See `these instructions "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -21256,14 +21271,14 @@ msgstr ""
 "κλειδιά <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-"
 "pair>`__."
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:35
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:40
 #: ../../source/components/nitrokeys/pro/getting-started.rst:41
 #: ../../source/components/nitrokeys/start/getting-started.rst:47
 #: ../../source/components/nitrokeys/storage/getting-started.rst:52
 msgid "Your Nitrokey is now ready to use."
 msgstr "Το Nitrokey σας είναι τώρα έτοιμο για χρήση."
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:37
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:42
 msgid ""
 "There is `nitrotool <https://github.com/johndoe31415/nitrotool>`__ as a "
 "more comfortable frontend to OpenSC. (hsmwiz)"
@@ -21271,7 +21286,7 @@ msgstr ""
 "Υπάρχει το `nitrotool <https://github.com/johndoe31415/nitrotool>`__ ως "
 "ένα πιο άνετο frontend για το OpenSC. (hsmwiz)"
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:38
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:43
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the `sc-hsm-embedded "
@@ -21281,7 +21296,7 @@ msgstr ""
 "παρέχεται μια ενότητα PKCS#11 μόνο για ανάγνωση από το έργο `sc-hsm-"
 "embedded <https://github.com/CardContact/sc-hsm-embedded>`__."
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:39
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:44
 msgid ""
 "`This PKCS#11 module <https://github.com/CardContact/sc-hsm-"
 "embedded/wiki/PKCS11>`__ is useful for deployments where key generation "
@@ -21294,7 +21309,7 @@ msgstr ""
 "υποστηρίζει επίσης τις κυριότερες κάρτες ηλεκτρονικής υπογραφής που "
 "διατίθενται στη γερμανική αγορά."
 
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:40
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:45
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP "
 "<https://www.openscdp.org/>`__, the open smart card development platform."
@@ -24007,11 +24022,6 @@ msgstr ""
 "Για να ελέγξετε αν το Nitrokey Passkey έχει αναγνωριστεί σωστά, ανοίξτε "
 "τη Διαχείριση συσκευών και ελέγξτε αν το Nitrokey Passkey εμφανίζεται ως "
 "συσκευή USB."
-
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:20
-#, fuzzy
-msgid "macOS"
-msgstr "macOS"
 
 #: ../../source/components/nitrokeys/passkey/troubleshooting.rst:22
 msgid ""
@@ -33094,7 +33104,7 @@ msgid "Mark cropped Output"
 msgstr "Mark cropped Output"
 
 #~ msgid "/bs/"
-#~ msgstr "Θύρα D-sub αρσενικό <x id=\"11\"></x>DE-9<x id=\"16\"></x>."
+#~ msgstr "Μετα-κβαντική κρυπτογραφία (PQC)"
 
 #~ msgid "secp256"
 #~ msgstr "secp256"
@@ -33576,3 +33586,4 @@ msgstr "Mark cropped Output"
 #~ " Μπορείτε επίσης να κατεβάσετε την "
 #~ "επιθυμητή έκδοση εδώ: "
 #~ "https://h-mdm.com/files/hmdm-<version>-master.apk"
+
