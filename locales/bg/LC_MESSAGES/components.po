@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-02 12:58+0000\n"
+"POT-Creation-Date: 2025-07-03 10:46+0000\n"
 "PO-Revision-Date: 2025-07-02 13:03+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Bulgarian <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <http://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5737,11 +5736,11 @@ msgstr "Конфигурацията е във формат yaml:"
 msgid "All platforms"
 msgstr "Всички платформи"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:131
+#: ../../source/components/nethsm/pkcs11-setup.rst:148
 msgid "Instances"
 msgstr "Инстанции"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:133
+#: ../../source/components/nethsm/pkcs11-setup.rst:150
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -5751,7 +5750,7 @@ msgstr ""
 "екземпляри трябва да бъдат конфигурирани в клъстер. Удостоверенията на "
 "потребителите и ключовете трябва да са едни и същи за всички инстанции."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:135
+#: ../../source/components/nethsm/pkcs11-setup.rst:152
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -5759,11 +5758,11 @@ msgstr ""
 "Модулът ще използва инстанциите по кръгов път, като при неуспех ще опита "
 "друга инстанция."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:139
+#: ../../source/components/nethsm/pkcs11-setup.rst:156
 msgid "Network reliability"
 msgstr "Надеждност на мрежата"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:141
+#: ../../source/components/nethsm/pkcs11-setup.rst:158
 msgid ""
 "To improve the reliability of the PKCS#11 module, it is possible to "
 "configure timeouts, retries, instance redundancy and TCP keepalives."
@@ -5772,11 +5771,11 @@ msgstr ""
 "конфигурират таймаути, повторения, резервиране на инстанциите и "
 "поддържане на TCP."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:144
+#: ../../source/components/nethsm/pkcs11-setup.rst:161
 msgid "Retries"
 msgstr "Повторни опити"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:146
+#: ../../source/components/nethsm/pkcs11-setup.rst:163
 msgid ""
 "If a NetHSM instance is unreachable, the PKCS#11 module is capable of "
 "retrying sending the request to other instances, or to the same instance "
@@ -5788,7 +5787,7 @@ msgstr ""
 "екземпляр (ако другите екземпляри също са недостъпни). Възможно е да се "
 "въведе забавяне между повторните опити."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:149
+#: ../../source/components/nethsm/pkcs11-setup.rst:166
 msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
@@ -5797,7 +5796,7 @@ msgstr ""
 "във фонова нишка, така че няма да бъдат изпробвани, освен ако всички "
 "екземпляри са недостижими."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:150
+#: ../../source/components/nethsm/pkcs11-setup.rst:167
 msgid ""
 "If no background thread can be spawned "
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried "
@@ -5815,11 +5814,11 @@ msgstr ""
 "проверки на състоянието за една заявка (това е най-лошият случай, който "
 "може да бъде достигнат само ако голям брой инстанции се провалят)."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:152
+#: ../../source/components/nethsm/pkcs11-setup.rst:169
 msgid "Therefore:"
 msgstr "Следователно:"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:154
+#: ../../source/components/nethsm/pkcs11-setup.rst:171
 msgid ""
 "The maximum number of requests sent for one API call is: "
 "``retries.count`` + 1 + 3"
@@ -5827,7 +5826,7 @@ msgstr ""
 "Максималният брой заявки, изпратени за едно API повикване, е: "
 "``retries.count`` + 1 + 3"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:155
+#: ../../source/components/nethsm/pkcs11-setup.rst:172
 msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
@@ -5836,7 +5835,7 @@ msgstr ""
 "таймаут за едно API повикване е: (``retries.count`` + 1) * "
 "``timeout_seconds`` + 3"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:156
+#: ../../source/components/nethsm/pkcs11-setup.rst:173
 msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
@@ -5844,11 +5843,11 @@ msgstr ""
 "Максималното времетраене за едно извикване на функция PKCS#11 ще варира, "
 "тъй като някои функции водят до множество извиквания на API в NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:159
+#: ../../source/components/nethsm/pkcs11-setup.rst:176
 msgid "TCP keepalive"
 msgstr "TCP keepalive"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:161
+#: ../../source/components/nethsm/pkcs11-setup.rst:178
 msgid ""
 "To improve performance, connections are kept open with the NetHSM "
 "instances to avoid the need for re-opening them. It is possible that in a"
@@ -5865,11 +5864,11 @@ msgstr ""
 "се открие по-рано, ако това се случи, е възможно да се конфигурира TCP "
 "keepalives за тях."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:166
+#: ../../source/components/nethsm/pkcs11-setup.rst:183
 msgid "Users"
 msgstr "Потребители"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:168
+#: ../../source/components/nethsm/pkcs11-setup.rst:185
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -5881,7 +5880,7 @@ msgstr ""
 " можете да конфигурирате модула само с потребител администратор, само с "
 "потребител оператор или и с двамата едновременно."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:170
+#: ../../source/components/nethsm/pkcs11-setup.rst:187
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -5890,7 +5889,7 @@ msgstr ""
 "подразбиране и ще използва потребителя администратор само когато "
 "действието го изисква."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:172
+#: ../../source/components/nethsm/pkcs11-setup.rst:189
 #, fuzzy
 msgid ""
 "The regular PKCS#11 user is mapped to the NetHSM operator and the PKCS#11"
@@ -5899,21 +5898,21 @@ msgstr ""
 "Обикновеният потребител PKCS11 е съпоставен с оператора на NetHSM, а "
 "PKCS11 SO е съпоставен с администратора на NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:175
+#: ../../source/components/nethsm/pkcs11-setup.rst:192
 #: ../../source/components/nitrokeys/nitrokey3/reset.rst:17
 #: ../../source/components/software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "Пароли"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:177
+#: ../../source/components/nethsm/pkcs11-setup.rst:194
 msgid "The password can be provided by multiple means:"
 msgstr "Паролата може да бъде предоставена по няколко начина:"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:179
+#: ../../source/components/nethsm/pkcs11-setup.rst:196
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "В обикновен текст в конфигурацията ``password: \"mypassword\"``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:180
+#: ../../source/components/nethsm/pkcs11-setup.rst:197
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -5921,7 +5920,7 @@ msgstr ""
 "В променлива на средата, прочетена от модула с префикс ``env:``: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:181
+#: ../../source/components/nethsm/pkcs11-setup.rst:198
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -5934,7 +5933,7 @@ msgstr ""
 "``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-"
 "pin Administrator``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:184
+#: ../../source/components/nethsm/pkcs11-setup.rst:201
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -5943,7 +5942,7 @@ msgstr ""
 "ще се изисква влизане в системата, за да се предостави паролата (3-ти "
 "метод)."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:186
+#: ../../source/components/nethsm/pkcs11-setup.rst:203
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -20798,12 +20797,14 @@ msgid ""
 "``/usr/local/libexec/SmartCardServices``. A reboot after this change is "
 "mandatory to make the new library to be recognized."
 msgstr ""
-"При някои версии на macOS OpenSC не успява да намери библиотеката CCID на "
-"операционната система. В този случай инструментите на OpenSC ще покажат ``"
-"Unresponsive Card`` грешки. Проблемът може да бъде отстранен чрез копиране "
-"или симлинкване на директорията ``/usr/libexec/SmartCardServices`` към ``/"
-"usr/local/libexec/SmartCardServices``. След тази промяна е задължително "
-"рестартиране на компютъра, за да бъде разпозната новата библиотека."
+"При някои версии на macOS OpenSC не успява да намери библиотеката CCID на"
+" операционната система. В този случай инструментите на OpenSC ще покажат "
+"``Unresponsive Card`` грешки. Проблемът може да бъде отстранен чрез "
+"копиране или симлинкване на директорията "
+"``/usr/libexec/SmartCardServices`` към "
+"``/usr/local/libexec/SmartCardServices``. След тази промяна е "
+"задължително рестартиране на компютъра, за да бъде разпозната новата "
+"библиотека."
 
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:35
 msgid ""
@@ -32425,7 +32426,7 @@ msgid "Mark cropped Output"
 msgstr "Маркирайте изрязаното Изход"
 
 #~ msgid "/bs/"
-#~ msgstr "Постквантова криптография (PQC)"
+#~ msgstr ""
 
 #~ msgid "secp256"
 #~ msgstr "secp256"
@@ -32896,3 +32897,4 @@ msgstr "Маркирайте изрязаното Изход"
 #~ "Можете също така да изтеглите желаната"
 #~ " версия от тук: "
 #~ "https://h-mdm.com/files/hmdm-<version>-master.apk"
+

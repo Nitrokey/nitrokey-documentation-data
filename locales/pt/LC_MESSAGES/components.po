@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-02 12:58+0000\n"
+"POT-Creation-Date: 2025-07-03 10:46+0000\n"
 "PO-Revision-Date: 2025-07-02 13:03+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Portuguese <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pt/>\n"
 "Language: pt\n"
+"Language-Team: Portuguese <http://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/pt/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5829,11 +5828,11 @@ msgstr "A configuração é formatada em yaml:"
 msgid "All platforms"
 msgstr "Todas as Plataformas"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:131
+#: ../../source/components/nethsm/pkcs11-setup.rst:148
 msgid "Instances"
 msgstr "Instâncias"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:133
+#: ../../source/components/nethsm/pkcs11-setup.rst:150
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -5843,7 +5842,7 @@ msgstr ""
 "instâncias devem ser configuradas num cluster. As credenciais dos "
 "utilizadores e as chaves devem ser as mesmas em todas as instâncias."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:135
+#: ../../source/components/nethsm/pkcs11-setup.rst:152
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -5851,14 +5850,14 @@ msgstr ""
 "O módulo utilizará as instâncias de forma round-robin, tentando outra "
 "instância se uma falhar."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:139
+#: ../../source/components/nethsm/pkcs11-setup.rst:156
 msgid "Network reliability"
 msgstr ""
 "Verificar com o comando `lsusb` se o Nitrokey é reconhecido. A saída deve"
 " listar o Nitrokey, por exemplo, `Bus 001 Device 002: ID 20a0:42b2 Clay "
 "Logic Nitrokey 3`."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:141
+#: ../../source/components/nethsm/pkcs11-setup.rst:158
 msgid ""
 "To improve the reliability of the PKCS#11 module, it is possible to "
 "configure timeouts, retries, instance redundancy and TCP keepalives."
@@ -5867,12 +5866,12 @@ msgstr ""
 "tempos limite, novas tentativas, redundância de instâncias e TCP "
 "keepalives."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:144
+#: ../../source/components/nethsm/pkcs11-setup.rst:161
 #, fuzzy
 msgid "Retries"
 msgstr "Métricas"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:146
+#: ../../source/components/nethsm/pkcs11-setup.rst:163
 msgid ""
 "If a NetHSM instance is unreachable, the PKCS#11 module is capable of "
 "retrying sending the request to other instances, or to the same instance "
@@ -5884,7 +5883,7 @@ msgstr ""
 "mesma instância (se outras instâncias também estiverem inacessíveis). É "
 "possível introduzir um atraso entre as novas tentativas."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:149
+#: ../../source/components/nethsm/pkcs11-setup.rst:166
 msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
@@ -5892,7 +5891,7 @@ msgstr ""
 "Pode utilizar o NetHSM para autenticação SSH. É necessário passar o "
 "caminho do módulo PKCS#11 na linha de comando ou na configuração SSH."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:150
+#: ../../source/components/nethsm/pkcs11-setup.rst:167
 msgid ""
 "If no background thread can be spawned "
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried "
@@ -5910,11 +5909,11 @@ msgstr ""
 "podem ser tentadas por pedido (esta é a pior situação que só pode ser "
 "alcançada se um grande número de instâncias falhar)."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:152
+#: ../../source/components/nethsm/pkcs11-setup.rst:169
 msgid "Therefore:"
 msgstr "Por conseguinte:"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:154
+#: ../../source/components/nethsm/pkcs11-setup.rst:171
 msgid ""
 "The maximum number of requests sent for one API call is: "
 "``retries.count`` + 1 + 3"
@@ -5922,7 +5921,7 @@ msgstr ""
 "O número máximo de pedidos enviados para uma chamada à API é: "
 "``retries.count`` + 1 + 3"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:155
+#: ../../source/components/nethsm/pkcs11-setup.rst:172
 msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
@@ -5930,7 +5929,7 @@ msgstr ""
 "A duração máxima (pior caso) antes de atingir o tempo limite para uma "
 "chamada à API é: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:156
+#: ../../source/components/nethsm/pkcs11-setup.rst:173
 msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
@@ -5938,11 +5937,11 @@ msgstr ""
 "O tempo limite máximo para uma chamada de função PKCS#11 varia porque "
 "algumas funções conduzem a várias chamadas de API no NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:159
+#: ../../source/components/nethsm/pkcs11-setup.rst:176
 msgid "TCP keepalive"
 msgstr "TCP keepalive"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:161
+#: ../../source/components/nethsm/pkcs11-setup.rst:178
 msgid ""
 "To improve performance, connections are kept open with the NetHSM "
 "instances to avoid the need for re-opening them. It is possible that in a"
@@ -5958,12 +5957,12 @@ msgstr ""
 " que os timeouts lentos aconteçam e para detetar mais cedo se isso "
 "acontecer, é possível configurar TCP keepalives para eles."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:166
+#: ../../source/components/nethsm/pkcs11-setup.rst:183
 #, fuzzy
 msgid "Users"
 msgstr "Qubes"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:168
+#: ../../source/components/nethsm/pkcs11-setup.rst:185
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -5975,7 +5974,7 @@ msgstr ""
 "permite-lhe configurar o módulo apenas com um utilizador administrador, "
 "apenas com um utilizador operador ou com ambos ao mesmo tempo."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:170
+#: ../../source/components/nethsm/pkcs11-setup.rst:187
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -5984,7 +5983,7 @@ msgstr ""
 "operador por defeito e só utilizará o utilizador administrador quando a "
 "ação o necessitar."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:172
+#: ../../source/components/nethsm/pkcs11-setup.rst:189
 msgid ""
 "The regular PKCS#11 user is mapped to the NetHSM operator and the PKCS#11"
 " SO is mapped to the NetHSM administrator."
@@ -5992,22 +5991,22 @@ msgstr ""
 "O utilizador regular PKCS#11 é mapeado para o operador do NetHSM e o SO "
 "PKCS#11 é mapeado para o administrador do NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:175
+#: ../../source/components/nethsm/pkcs11-setup.rst:192
 #: ../../source/components/nitrokeys/nitrokey3/reset.rst:17
 #: ../../source/components/software/nk-app2/passwords.rst:2
 #, fuzzy
 msgid "Passwords"
 msgstr "Palavra-passe para a acção DKEK"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:177
+#: ../../source/components/nethsm/pkcs11-setup.rst:194
 msgid "The password can be provided by multiple means:"
 msgstr "A palavra-passe pode ser fornecida por vários meios:"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:179
+#: ../../source/components/nethsm/pkcs11-setup.rst:196
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "Em texto simples na configuração ``password: \"mypassword\"``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:180
+#: ../../source/components/nethsm/pkcs11-setup.rst:197
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -6015,7 +6014,7 @@ msgstr ""
 "Numa variável de ambiente lida pelo módulo com o prefixo ``env:``: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:181
+#: ../../source/components/nethsm/pkcs11-setup.rst:198
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -6028,7 +6027,7 @@ msgstr ""
 "disso: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so"
 " --so-pin Administrator``"
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:184
+#: ../../source/components/nethsm/pkcs11-setup.rst:201
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -6037,7 +6036,7 @@ msgstr ""
 "configuração, será necessário um início de sessão para fornecer a "
 "palavra-passe (3.º método)."
 
-#: ../../source/components/nethsm/pkcs11-setup.rst:186
+#: ../../source/components/nethsm/pkcs11-setup.rst:203
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -20968,12 +20967,13 @@ msgid ""
 "``/usr/local/libexec/SmartCardServices``. A reboot after this change is "
 "mandatory to make the new library to be recognized."
 msgstr ""
-"Em algumas versões do macOS, o OpenSC não consegue encontrar a biblioteca "
-"CCID do sistema operativo. Neste caso, as ferramentas do OpenSC mostrarão "
-"erros ``Unresponsive Card``. O problema pode ser resolvido copiando ou "
-"fazendo uma ligação simbólica do diretório ``/usr/libexec/SmartCardServices``"
-" para ``/usr/local/libexec/SmartCardServices``. Uma reinicialização após "
-"esta mudança é obrigatória para que a nova biblioteca seja reconhecida."
+"Em algumas versões do macOS, o OpenSC não consegue encontrar a biblioteca"
+" CCID do sistema operativo. Neste caso, as ferramentas do OpenSC "
+"mostrarão erros ``Unresponsive Card``. O problema pode ser resolvido "
+"copiando ou fazendo uma ligação simbólica do diretório "
+"``/usr/libexec/SmartCardServices`` para "
+"``/usr/local/libexec/SmartCardServices``. Uma reinicialização após esta "
+"mudança é obrigatória para que a nova biblioteca seja reconhecida."
 
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:35
 msgid ""
@@ -32617,7 +32617,7 @@ msgid "Mark cropped Output"
 msgstr "Marcar a saída cortada"
 
 #~ msgid "/bs/"
-#~ msgstr "Criptografia pós-quântica (PQC)"
+#~ msgstr ""
 
 #~ msgid "secp256"
 #~ msgstr "secp256"
@@ -33094,3 +33094,4 @@ msgstr "Marcar a saída cortada"
 #~ "Também pode descarregar a versão "
 #~ "desejada aqui: "
 #~ "https://h-mdm.com/files/hmdm-<version>-master.apk"
+
