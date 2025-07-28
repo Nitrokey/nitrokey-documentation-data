@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-21 14:33+0000\n"
+"POT-Creation-Date: 2025-07-28 09:12+0000\n"
 "PO-Revision-Date: 2025-07-02 13:03+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: es\n"
@@ -2533,20 +2533,16 @@ msgid "Add the following lines to your ``httpd.conf`` :"
 msgstr "Añada las siguientes líneas a su ``httpd.conf`` :"
 
 #: ../../source/components/nethsm/apache.rst:37
-msgid "The ``SSLCertificateFile`` must point to a certificate file on the disk."
-msgstr ""
-"El ``SSLCertificateFile`` debe apuntar a un archivo de certificado en el "
-"disco."
-
-#: ../../source/components/nethsm/apache.rst:39
+#, fuzzy
 msgid ""
+"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
 "The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
 "editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
 msgstr ""
 "El ``SSLCertificateKeyFile`` debe ser un PKCS#11 `URI <https://www.rfc-"
 "editor.org/rfc/rfc7512>`__ que apunte a la clave privada en el NetHSM."
 
-#: ../../source/components/nethsm/apache.rst:42
+#: ../../source/components/nethsm/apache.rst:41
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -2557,7 +2553,7 @@ msgstr ""
 " no se iniciará."
 
 #: ../../source/components/nethsm/apache.rst:45
-#: ../../source/components/nethsm/nginx.rst:70
+#: ../../source/components/nethsm/nginx.rst:72
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Configuración"
 
@@ -2572,7 +2568,7 @@ msgstr ""
 "proporcionarla en la configuración de httpd:"
 
 #: ../../source/components/nethsm/apache.rst:65
-#: ../../source/components/nethsm/nginx.rst:90
+#: ../../source/components/nethsm/nginx.rst:92
 #: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
 msgid "Example"
 msgstr "Ejemplo"
@@ -2590,15 +2586,15 @@ msgstr ""
 "repositorio `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-pkcs11>`__"
 " y ejecuta los siguientes comandos:"
 
-#: ../../source/components/nethsm/apache.rst:71
-#: ../../source/components/nethsm/nginx.rst:96
+#: ../../source/components/nethsm/apache.rst:70
+#: ../../source/components/nethsm/nginx.rst:97
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Al ejecutar el script de generación se borra la clave ``webserver`` y se "
 "sustituye."
 
-#: ../../source/components/nethsm/apache.rst:73
-#: ../../source/components/nethsm/nginx.rst:98
+#: ../../source/components/nethsm/apache.rst:72
+#: ../../source/components/nethsm/nginx.rst:99
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started.html>`__ for more information. Besides an "
@@ -2608,8 +2604,8 @@ msgstr ""
 "de inicio <getting-started.html>`__ para obtener más información. Además "
 "de un administrador, vas a necesitar una cuenta de operador."
 
-#: ../../source/components/nethsm/apache.rst:74
-#: ../../source/components/nethsm/nginx.rst:99
+#: ../../source/components/nethsm/apache.rst:73
+#: ../../source/components/nethsm/nginx.rst:100
 msgid ""
 "Download and install the latest version of the nethsm-pkcs11 driver "
 "`available from here <https://github.com/Nitrokey/nethsm-"
@@ -2619,8 +2615,8 @@ msgstr ""
 "`disponible desde aquí <https://github.com/Nitrokey/nethsm-"
 "pkcs11/releases>`__."
 
-#: ../../source/components/nethsm/apache.rst:75
-#: ../../source/components/nethsm/nginx.rst:100
+#: ../../source/components/nethsm/apache.rst:74
+#: ../../source/components/nethsm/nginx.rst:101
 msgid ""
 "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
 "<openssl.html>`__. You do not need to create a configuration file."
@@ -2629,7 +2625,7 @@ msgstr ""
 "OpenSSL <openssl.html>`__. No es necesario crear un archivo de "
 "configuración."
 
-#: ../../source/components/nethsm/apache.rst:76
+#: ../../source/components/nethsm/apache.rst:75
 msgid ""
 "Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
 "``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
@@ -2647,8 +2643,8 @@ msgstr ""
 "PKCS11 de OpenSSL en ``OPENSSL_PKCS11_ENGINE_PATH`` y la ruta absoluta de"
 " la biblioteca PKCS11 de NetHSM en ``NETHSM_PKCS11_LIBRARY_PATH``."
 
-#: ../../source/components/nethsm/apache.rst:77
-#: ../../source/components/nethsm/nginx.rst:102
+#: ../../source/components/nethsm/apache.rst:76
+#: ../../source/components/nethsm/nginx.rst:103
 msgid ""
 "Create a NetHSM PKCS11 configuration file in one of the `known locations "
 "<pkcs11-setup.html#configuration>`__, e.g., "
@@ -2662,7 +2658,7 @@ msgstr ""
 "cuenta de operador y utilizar la misma instancia de NetHSM especificada "
 "anteriormente en el script generate."
 
-#: ../../source/components/nethsm/apache.rst:78
+#: ../../source/components/nethsm/apache.rst:77
 msgid ""
 "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
@@ -2670,24 +2666,24 @@ msgstr ""
 "Actualice la configuración PKCS11 en ``container/apache/p11nethsm.conf`` "
 "con su URL NetHSMs y credenciales de operador válidas."
 
-#: ../../source/components/nethsm/apache.rst:79
-#: ../../source/components/nethsm/nginx.rst:104
+#: ../../source/components/nethsm/apache.rst:78
+#: ../../source/components/nethsm/nginx.rst:105
 msgid "Generate the certificate and key."
 msgstr "Genere el certificado y la clave."
 
-#: ../../source/components/nethsm/apache.rst:85
-#: ../../source/components/nethsm/ejbca.rst:32
-#: ../../source/components/nethsm/nginx.rst:110
+#: ../../source/components/nethsm/apache.rst:84
+#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "Construye el contenedor."
 
-#: ../../source/components/nethsm/apache.rst:91
-#: ../../source/components/nethsm/ejbca.rst:38
-#: ../../source/components/nethsm/nginx.rst:116
+#: ../../source/components/nethsm/apache.rst:90
+#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "Ejecuta el contenedor."
 
-#: ../../source/components/nethsm/apache.rst:97
+#: ../../source/components/nethsm/apache.rst:96
 msgid ""
 "The Apache test page will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
@@ -2697,6 +2693,41 @@ msgstr ""
 "`https://localhost:9443/ <https://localhost:9443/>`__. Tenga en cuenta "
 "que su navegador, con suerte, le advertirá de que el certificado del "
 "sitio web es autofirmado."
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:2
+#, fuzzy
+msgid "Image Feature Restrictions"
+msgstr "Instrucciones"
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:4
+#, fuzzy
+msgid ""
+"Compared to the NetHSM hardware the following functions are not "
+"implemented at the software container's REST API:"
+msgstr ""
+"En comparación con el hardware NetHSM, las siguientes funciones no están "
+"implementadas en la API REST del contenedor de software:"
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:6
+#, fuzzy
+msgid "Network configuration"
+msgstr "configuración de red"
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:7
+#: ../../source/components/nitrokeys/storage/factory-reset.rst:2
+#, fuzzy
+msgid "Factory reset"
+msgstr "Restablecimiento de fábrica"
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:8
+#, fuzzy
+msgid "Reboot"
+msgstr "reiniciar"
+
+#: ../../source/components/nethsm/container/image-feature-restrictions.rst:9
+#, fuzzy
+msgid "Software update"
+msgstr "actualización del software"
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -2733,37 +2764,19 @@ msgstr ""
 "puede ejecutarse localmente con un ejecutor compatible como Docker y "
 "Podman."
 
-#: ../../source/components/nethsm/container/container-hardware-restriction.rst.inc:1
+#: ../../source/components/nethsm/container/production-image.rst:9
+#: ../../source/components/nethsm/container/test-image.rst:9
 #, fuzzy
 msgid ""
-"Compared to the NetHSM hardware the following functions are not "
-"implemented at the software container's REST API:"
+"The image is subject to some feature restrictions in comparison to the "
+"NetHSM hardware. Please refer to chapter `Image Feature Restrictions "
+"<image-feature-restrictions.html>`__ to learn more."
 msgstr ""
-"En comparación con el hardware NetHSM, las siguientes funciones no están "
-"implementadas en la API REST del contenedor de software:"
+"El PIN ** está sujeto a la restricción de un contador de reintentos. "
+"Consulte el capítulo `Contador de reintentos <access_control.html#retry-"
+"counter>`__ para obtener más información."
 
-#: ../../source/components/nethsm/container/container-hardware-restriction.rst.inc:3
-#, fuzzy
-msgid "Network configuration"
-msgstr "configuración de red"
-
-#: ../../source/components/nethsm/container/container-hardware-restriction.rst.inc:4
-#: ../../source/components/nitrokeys/storage/factory-reset.rst:2
-#, fuzzy
-msgid "Factory reset"
-msgstr "Restablecimiento de fábrica"
-
-#: ../../source/components/nethsm/container/container-hardware-restriction.rst.inc:5
-#, fuzzy
-msgid "Reboot"
-msgstr "reiniciar"
-
-#: ../../source/components/nethsm/container/container-hardware-restriction.rst.inc:6
-#, fuzzy
-msgid "Software update"
-msgstr "actualización del software"
-
-#: ../../source/components/nethsm/container/production-image.rst:11
+#: ../../source/components/nethsm/container/production-image.rst:12
 msgid ""
 "The NetHSM production container is a product for paying customers only "
 "and can be purchased `here <https://www.nitrokey.com/contact>`__. The "
@@ -3189,7 +3202,7 @@ msgstr ""
 "no está cifrada. La imagen se distribuye como imagen OCI y puede "
 "ejecutarse localmente con un ejecutor compatible como Docker y Podman."
 
-#: ../../source/components/nethsm/container/test-image.rst:11
+#: ../../source/components/nethsm/container/test-image.rst:12
 msgid ""
 "The image can be obtained from `Docker Hub "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_."
@@ -3273,7 +3286,7 @@ msgstr ""
 "NetHSM añadiendo una entrada en el archivo "
 "``/etc/ejbca/conf/web.properties``:"
 
-#: ../../source/components/nethsm/ejbca.rst:16
+#: ../../source/components/nethsm/ejbca.rst:17
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3281,7 +3294,7 @@ msgstr ""
 "El ``418`` en el nombre es un índice que debe ser único para cada módulo "
 "PKCS#11 en el archivo de configuración."
 
-#: ../../source/components/nethsm/ejbca.rst:18
+#: ../../source/components/nethsm/ejbca.rst:19
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3290,7 +3303,7 @@ msgstr ""
 "Para poder generar claves desde la interfaz, debe establecer la opción "
 "``enable_set_attribute_value`` en true en el archivo ``p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:20
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "Because of some integration problems with the Sun PKCS11 provider, keys "
 "generated from EJBCA will have a random name instead of the name given in"
@@ -3300,7 +3313,7 @@ msgstr ""
 "las claves generadas desde EJBCA tendrán un nombre aleatorio en lugar del"
 " nombre dado en la interfaz."
 
-#: ../../source/components/nethsm/ejbca.rst:22
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3314,11 +3327,11 @@ msgstr ""
 "El tipo de token criptográfico es ``PKCS#11 Crypto Token`` y el nombre "
 "del token criptográfico es ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:26
+#: ../../source/components/nethsm/ejbca.rst:29
 msgid "Executing The Example"
 msgstr "Ejecución del ejemplo"
 
-#: ../../source/components/nethsm/ejbca.rst:28
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3328,7 +3341,7 @@ msgstr ""
 "el repositorio `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ y ejecutar los siguientes comandos:"
 
-#: ../../source/components/nethsm/ejbca.rst:30
+#: ../../source/components/nethsm/ejbca.rst:33
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3337,7 +3350,7 @@ msgstr ""
 "Configure un NetHSM, ya sea uno real o un contenedor. Consulte `la guía "
 "de inicio <getting-started>`__ para obtener más información."
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:34
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3345,7 +3358,7 @@ msgstr ""
 "Cambie la configuración de libnethsm_pkcs11 para que coincida con su "
 "NetHSM en ``container/ejbca/p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:44
+#: ../../source/components/nethsm/ejbca.rst:47
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -3504,8 +3517,8 @@ msgstr "Criptografía poscuántica (PQC)"
 #: ../../source/components/nitrokeys/start/index.rst:8
 #: ../../source/components/nitrokeys/storage/getting-started.rst:2
 #: ../../source/components/nitrokeys/storage/index.rst:8
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:17
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:38
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:26
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:49
 #: ../../source/components/nitrophone/index.rst:7
 #: ../../source/components/nitrowall/index.rst:5
 #: ../../source/components/nitrowall/nw750/index.rst:5
@@ -4359,15 +4372,7 @@ msgstr ""
 "clave privada con la etiqueta/ID ``webserver`` y el tipo de clave "
 "``private``."
 
-#: ../../source/components/nethsm/nginx.rst:64
-msgid ""
-"``ssl_certificate_key "
-"\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
-msgstr ""
-"``ssl_certificate_key "
-"\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
-
-#: ../../source/components/nethsm/nginx.rst:67
+#: ../../source/components/nethsm/nginx.rst:69
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -4377,7 +4382,7 @@ msgstr ""
 " certificado en el disco y la clave en el NetHSM no coinciden nginx no se"
 " iniciará."
 
-#: ../../source/components/nethsm/nginx.rst:82
+#: ../../source/components/nethsm/nginx.rst:84
 msgid ""
 "To secure the password you can provide it via an `environment variable "
 "<pkcs11-setup.html#passwords>`__) or provide it in the nginx "
@@ -4387,7 +4392,7 @@ msgstr ""
 "`variable de entorno <pkcs11-setup.html#passwords>`__) o proporcionarla "
 "en la configuración de nginx:"
 
-#: ../../source/components/nethsm/nginx.rst:92
+#: ../../source/components/nethsm/nginx.rst:94
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -4400,7 +4405,7 @@ msgstr ""
 "repositorio `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-pkcs11>`__"
 " y ejecuta los siguientes comandos:"
 
-#: ../../source/components/nethsm/nginx.rst:101
+#: ../../source/components/nethsm/nginx.rst:102
 msgid ""
 "Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
 "``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
@@ -4418,7 +4423,7 @@ msgstr ""
 "OpenSSL en ``OPENSSL_PKCS11_ENGINE_PATH`` y la ruta absoluta de la "
 "biblioteca PKCS11 de NetHSM en ``NETHSM_PKCS11_LIBRARY_PATH``."
 
-#: ../../source/components/nethsm/nginx.rst:103
+#: ../../source/components/nethsm/nginx.rst:104
 msgid ""
 "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
@@ -4426,11 +4431,12 @@ msgstr ""
 "Actualice la configuración PKCS11 en ``container/nginx/p11nethsm.conf`` "
 "con su URL NetHSMs y credenciales de operador válidas."
 
-#: ../../source/components/nethsm/nginx.rst:122
+#: ../../source/components/nethsm/nginx.rst:123
+#, fuzzy
 msgid ""
 "The NGINX test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
-"warn you that the websites certificate is self-signed."
+"<https://localhost:9443/>`__. Note that your browser, will warn you that "
+"the websites certificate is self-signed."
 msgstr ""
 "La página de prueba de NGINX estará disponible en "
 "`https://localhost:9443/ <https://localhost:9443/>`__. Tenga en cuenta "
@@ -4549,7 +4555,7 @@ msgstr ""
 "compilar `libp11 <https://github.com/OpenSC/libp11>`__ desde el código "
 "fuente. El binario del motor estará en ``src/.libs/pkcs11.so``."
 
-#: ../../source/components/nethsm/openssl.rst:15
+#: ../../source/components/nethsm/openssl.rst:17
 msgid ""
 "The OpenSSL engine interface is the old way to implement custom backends "
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
@@ -4559,8 +4565,8 @@ msgstr ""
 " personalizados para OpenSSL y está obsoleta en OpenSSL 3. Esta sigue "
 "siendo la forma más estable de utilizar NetHSM con OpenSSL."
 
-#: ../../source/components/nethsm/openssl.rst:17
-#: ../../source/components/nethsm/openssl.rst:98
+#: ../../source/components/nethsm/openssl.rst:19
+#: ../../source/components/nethsm/openssl.rst:101
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -4568,24 +4574,24 @@ msgstr ""
 "Tendrá que configurar el módulo PKCS#11, siguiendo `estas instrucciones "
 "<pkcs11-setup.html>`__."
 
-#: ../../source/components/nethsm/openssl.rst:19
+#: ../../source/components/nethsm/openssl.rst:21
 msgid "Install the engine:"
 msgstr "Instala el motor:"
 
-#: ../../source/components/nethsm/openssl.rst:22
+#: ../../source/components/nethsm/openssl.rst:24
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../../source/components/nethsm/openssl.rst:28
+#: ../../source/components/nethsm/openssl.rst:30
 #: ../../source/components/software/nitropy/all-platforms/installation.rst:34
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../../source/components/nethsm/openssl.rst:34
+#: ../../source/components/nethsm/openssl.rst:36
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../../source/components/nethsm/openssl.rst:40
+#: ../../source/components/nethsm/openssl.rst:42
 msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -4593,8 +4599,8 @@ msgstr ""
 "A continuación, debe configurar OpenSSL para utilizar el motor. Esto se "
 "hace añadiendo las siguientes líneas a su ``openssl.cnf`` archivo:"
 
-#: ../../source/components/nethsm/openssl.rst:59
-#: ../../source/components/nethsm/openssl.rst:124
+#: ../../source/components/nethsm/openssl.rst:61
+#: ../../source/components/nethsm/openssl.rst:127
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -4602,7 +4608,7 @@ msgstr ""
 "Puede especificar a OpenSSL la ruta del archivo de configuración de "
 "OpenSSL utilizando la variable de entorno ``OPENSSL_CONF``."
 
-#: ../../source/components/nethsm/openssl.rst:62
+#: ../../source/components/nethsm/openssl.rst:64
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -4613,7 +4619,7 @@ msgstr ""
 "OpenSSL. Por lo tanto, es posible que desee crear un archivo de "
 "configuración independiente para el motor."
 
-#: ../../source/components/nethsm/openssl.rst:64
+#: ../../source/components/nethsm/openssl.rst:67
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -4621,7 +4627,7 @@ msgstr ""
 "Sustituya ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` por la"
 " ruta al módulo PKCS#11 que instaló anteriormente."
 
-#: ../../source/components/nethsm/openssl.rst:66
+#: ../../source/components/nethsm/openssl.rst:69
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -4637,7 +4643,7 @@ msgstr ""
 "-linux-gnu/engines-3/libpkcs11.so``; para Fedora es "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../../source/components/nethsm/openssl.rst:68
+#: ../../source/components/nethsm/openssl.rst:71
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -4645,11 +4651,11 @@ msgstr ""
 "Ahora puede utilizar claves en el NetHSM utilizando `PKCS#11 URIs "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, ejemplo:"
 
-#: ../../source/components/nethsm/openssl.rst:74
+#: ../../source/components/nethsm/openssl.rst:77
 msgid "This will use the key ``webserver``."
 msgstr "Se utilizará la clave ``webserver``."
 
-#: ../../source/components/nethsm/openssl.rst:77
+#: ../../source/components/nethsm/openssl.rst:80
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -4657,19 +4663,19 @@ msgstr ""
 "Puede utilizar el comando ``p11tool`` de `GnuTLS <https://gnutls.org/>` "
 "para obtener el URI completo de las claves:"
 
-#: ../../source/components/nethsm/openssl.rst:84
+#: ../../source/components/nethsm/openssl.rst:87
 msgid "Example Command"
 msgstr "Ejemplo de orden"
 
-#: ../../source/components/nethsm/openssl.rst:86
+#: ../../source/components/nethsm/openssl.rst:89
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Recuperar la clave pública de un par de claves asimétricas en el NetHSM :"
 
-#: ../../source/components/nethsm/openssl.rst:94
+#: ../../source/components/nethsm/openssl.rst:97
 msgid "Provider"
 msgstr "Proveedor"
 
-#: ../../source/components/nethsm/openssl.rst:96
+#: ../../source/components/nethsm/openssl.rst:99
 msgid ""
 "The OpenSSL provider interface is the new way to implement custom "
 "backends for OpenSSL. The `pkcs11-provider backend "
@@ -4681,7 +4687,7 @@ msgstr ""
 "<https://github.com/latchset/pkcs11-provider>`__ se encuentra aún en una "
 "fase temprana de desarrollo."
 
-#: ../../source/components/nethsm/openssl.rst:100
+#: ../../source/components/nethsm/openssl.rst:103
 msgid ""
 "Install the provider. For Fedora a package named ``pkcs11-provider`` "
 "exists. For other Linux distributions you will need to `build it from "
@@ -4693,7 +4699,7 @@ msgstr ""
 "`construirlo desde el código fuente "
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 
-#: ../../source/components/nethsm/openssl.rst:102
+#: ../../source/components/nethsm/openssl.rst:105
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -4702,7 +4708,7 @@ msgstr ""
 "Esto se hace añadiendo las siguientes líneas a su ``openssl.cnf`` "
 "archivo:"
 
-#: ../../source/components/nethsm/openssl.rst:119
+#: ../../source/components/nethsm/openssl.rst:122
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
@@ -4710,7 +4716,7 @@ msgstr ""
 "Establezca ``module`` en la ruta del proveedor que instaló y ``pkcs11"
 "-module-path`` en la ruta del módulo PKCS#11 que instaló."
 
-#: ../../source/components/nethsm/openssl.rst:121
+#: ../../source/components/nethsm/openssl.rst:124
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
@@ -4718,7 +4724,7 @@ msgstr ""
 "Si desea establecer NetHSM como proveedor predeterminado, puede añadir "
 "``default = pkcs11`` a la sección ``provider_sect``."
 
-#: ../../source/components/nethsm/openssl.rst:128
+#: ../../source/components/nethsm/openssl.rst:131
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -4729,7 +4735,7 @@ msgstr ""
 "OpenSSL. Por lo tanto, es posible que desee crear un archivo de "
 "configuración independiente para el proveedor."
 
-#: ../../source/components/nethsm/openssl.rst:130
+#: ../../source/components/nethsm/openssl.rst:133
 msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -4737,7 +4743,7 @@ msgstr ""
 "A continuación, puede utilizar claves en el NetHSM utilizando `PKCS#11 "
 "URIs <https://www.rfc-editor.org/rfc/rfc7512>`__, ejemplo:"
 
-#: ../../source/components/nethsm/openssl.rst:136
+#: ../../source/components/nethsm/openssl.rst:139
 msgid ""
 "If you set NetHSM as the default provider, you can omit the ``-provider "
 "pkcs11`` argument."
@@ -4745,7 +4751,7 @@ msgstr ""
 "Si establece NetHSM como proveedor predeterminado, puede omitir el "
 "argumento ``-provider pkcs11``."
 
-#: ../../source/components/nethsm/openssl.rst:139
+#: ../../source/components/nethsm/openssl.rst:142
 msgid ""
 "Currently when manually setting a key type in the URI the provider will "
 "not be able to find the key. You can omit the ``;type=private`` or "
@@ -6396,9 +6402,10 @@ msgstr ""
 "Esto borrará irrecuperablemente los datos del disco."
 
 #: ../../source/components/nethsm/system_recovery.rst:59
+#, fuzzy
 msgid ""
-"Download the installer image ending  with *...installer.img.zip* from the"
-" provided private download page."
+"Download the installer image ending with ``installer.img.zip`` from the "
+"provided private download page."
 msgstr ""
 "Descargue la imagen del instalador que termina en *...installer.img.zip* "
 "desde la página privada de descargas proporcionada."
@@ -6863,7 +6870,7 @@ msgstr "Android/iOS"
 #: ../../source/components/nitrokeys/features/hidden-storage/index.rst:67
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:29
 #: ../../source/components/nitrokeys/passkey/management.rst:23
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:15
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:14
 #: ../../source/components/nitrokeys/pro/getting-started.rst:24
 #: ../../source/components/nitrokeys/start/getting-started.rst:16
 #: ../../source/components/nitrokeys/storage/firmware-update.rst:75
@@ -6881,7 +6888,7 @@ msgstr "Mac OS X"
 #: ../../source/components/nextbox/clients/index.rst:8
 #: ../../source/components/nitrokeys/features/hidden-storage/index.rst:56
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:9
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:30
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:29
 #: ../../source/components/nitrokeys/pro/getting-started.rst:10
 #: ../../source/components/nitrokeys/start/getting-started.rst:7
 #: ../../source/components/nitrokeys/storage/firmware-update.rst:18
@@ -7899,13 +7906,13 @@ msgstr ""
 #: ../../source/components/nitrokeys/passkey/management.rst:15
 #: ../../source/components/nitrokeys/storage/firmware-update-manually.rst:31
 #: ../../source/components/nitrokeys/storage/getting-started.rst:40
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:26
 #: ../../source/components/nitropad-nitropc/heads/default-boot.rst:10
 #: ../../source/components/nitropad-nitropc/heads/factory-reset.rst:28
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:64
 #: ../../source/components/nitropad-nitropc/heads/system-update.rst:17
 #: ../../source/components/nitropad-nitropc/qubes/network-settings.rst:9
 #: ../../source/components/nitropad-nitropc/qubes/nitrokey-app.rst:11
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:16
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:29
 #: ../../source/components/nitropad-nitropc/ubuntu/change-disk-encryption-passphrase.rst:9
 msgid "img1"
@@ -7925,7 +7932,7 @@ msgstr ""
 
 #: ../../source/components/nextbox/gettingstarted.rst:40
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:29
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:25
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:23
 #: ../../source/components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:69
 #: ../../source/components/nitrokeys/features/openpgp-card/eid.rst:26
 #: ../../source/components/nitrokeys/features/openpgp-card/gpa.rst:17
@@ -7944,13 +7951,13 @@ msgstr ""
 #: ../../source/components/nitrokeys/features/u2f/desktop-login.rst:38
 #: ../../source/components/nitrokeys/passkey/management.rst:27
 #: ../../source/components/nitrokeys/storage/firmware-update-manually.rst:36
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:41
 #: ../../source/components/nitropad-nitropc/heads/default-boot.rst:18
 #: ../../source/components/nitropad-nitropc/heads/factory-reset.rst:34
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:72
 #: ../../source/components/nitropad-nitropc/heads/system-update.rst:25
 #: ../../source/components/nitropad-nitropc/qubes/network-settings.rst:26
 #: ../../source/components/nitropad-nitropc/qubes/nitrokey-app.rst:16
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:31
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:34
 #: ../../source/components/nitropad-nitropc/ubuntu/change-disk-encryption-passphrase.rst:17
 msgid "img2"
@@ -9795,6 +9802,12 @@ msgstr ""
 "determinado. Una vez que se le pida su contraseña sudo, por favor, "
 "proporciónela para permitir el acceso r/w al disco duro:"
 
+#: ../../source/components/nextbox/technical/replace-drive.rst:59
+msgid ""
+"Replace ``<device-name>`` with the respective device name, for example "
+"``/dev/sdb``."
+msgstr ""
+
 #: ../../source/components/nextbox/technical/replace-drive.rst:62
 msgid "Watch the script's output for any errors, there should be none"
 msgstr ""
@@ -10001,19 +10014,19 @@ msgstr ""
 "<https://www.nitrokey.com/download>`__."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:8
-#: ../../source/components/nitrokeys/storage/faq.rst:98
+#: ../../source/components/nitrokeys/storage/faq.rst:174
 msgid "Start the Nitrokey App."
 msgstr "Inicie la aplicación Nitrokey."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:9
-#: ../../source/components/nitrokeys/storage/faq.rst:99
+#: ../../source/components/nitrokeys/storage/faq.rst:175
 msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
 msgstr ""
 "Pulse su icono de la bandeja y seleccione \"desbloquear el volumen "
 "cifrado\" en el menú."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:10
-#: ../../source/components/nitrokeys/storage/faq.rst:100
+#: ../../source/components/nitrokeys/storage/faq.rst:176
 msgid "Enter your User PIN in the appearing popup window."
 msgstr "Introduzca su PIN de usuario en la ventana emergente que aparece."
 
@@ -10034,7 +10047,7 @@ msgstr ""
 "partición desde varios sistemas operativos."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:12
-#: ../../source/components/nitrokeys/storage/faq.rst:102
+#: ../../source/components/nitrokeys/storage/faq.rst:178
 msgid ""
 "Now you can use the encrypted volume as you would use any other ordinary "
 "USB drive. But all data stored on it will be encrypted in the Nitrokey "
@@ -10045,14 +10058,14 @@ msgstr ""
 "encriptados en el hardware Nitrokey automáticamente."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:13
-#: ../../source/components/nitrokeys/storage/faq.rst:103
+#: ../../source/components/nitrokeys/storage/faq.rst:179
 msgid "To remove or lock the encrypted volume you should unmount/eject it first."
 msgstr ""
 "Para eliminar o bloquear el volumen encriptado debes "
 "desmontarlo/expulsarlo primero."
 
 #: ../../source/components/nitrokeys/features/encrypted-storage/index.rst:14
-#: ../../source/components/nitrokeys/storage/faq.rst:104
+#: ../../source/components/nitrokeys/storage/faq.rst:180
 msgid ""
 "Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
 "volume\" from the Nitrokey App menu."
@@ -10284,7 +10297,7 @@ msgid "Select “Security”."
 msgstr "Seleccione \"Seguridad\"."
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:48
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:38
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:34
 #: ../../source/components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:76
 #: ../../source/components/nitrokeys/features/openpgp-card/eid.rst:36
 #: ../../source/components/nitrokeys/features/openpgp-card/gpa.rst:22
@@ -10307,11 +10320,11 @@ msgstr "Seleccione \"Seguridad\"."
 #: ../../source/components/nitropad-nitropc/heads/factory-reset.rst:39
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:79
 #: ../../source/components/nitropad-nitropc/heads/system-update.rst:34
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:29
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:38
 #: ../../source/components/nitropad-nitropc/qubes/network-settings.rst:31
 #: ../../source/components/nitropad-nitropc/qubes/nitrokey-app.rst:21
 #: ../../source/components/nitropad-nitropc/ubuntu/change-disk-encryption-passphrase.rst:25
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:50
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:61
 msgid "img3"
 msgstr "img3"
 
@@ -10320,7 +10333,7 @@ msgid "Select “More security options”"
 msgstr "Seleccione \"Más opciones de seguridad\""
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:55
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:47
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:43
 #: ../../source/components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:83
 #: ../../source/components/nitrokeys/features/openpgp-card/eid.rst:43
 #: ../../source/components/nitrokeys/features/openpgp-card/gpa.rst:27
@@ -10337,12 +10350,13 @@ msgstr "Seleccione \"Más opciones de seguridad\""
 #: ../../source/components/nitrokeys/features/totp/nextcloud.rst:33
 #: ../../source/components/nitrokeys/features/u2f/desktop-login.rst:50
 #: ../../source/components/nitrokeys/storage/firmware-update-manually.rst:50
-#: ../../source/components/nitropad-nitropc/content/shared-index-content2.rst:9
 #: ../../source/components/nitropad-nitropc/heads/default-boot.rst:51
 #: ../../source/components/nitropad-nitropc/heads/factory-reset.rst:48
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:86
 #: ../../source/components/nitropad-nitropc/heads/system-update.rst:70
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:66
 #: ../../source/components/nitropad-nitropc/ubuntu/change-disk-encryption-passphrase.rst:33
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:83
 msgid "img4"
 msgstr "img4"
 
@@ -10944,7 +10958,7 @@ msgstr ""
 "hardware."
 
 #: ../../source/components/nitrokeys/features/hidden-storage/index.rst:10
-#: ../../source/components/nitrokeys/storage/faq.rst:117
+#: ../../source/components/nitrokeys/storage/faq.rst:193
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -11837,7 +11851,7 @@ msgid "Hidden Storage"
 msgstr "Volúmenes ocultos"
 
 #: ../../source/components/nitrokeys/features/index.rst:45
-#: ../../source/components/shared-faqs/algos.rst.inc:7
+#: ../../source/components/nitrokeys/hsm/faq.rst:75
 msgid "HSM"
 msgstr "HSM"
 
@@ -12886,6 +12900,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:2
 #: ../../source/components/nitrokeys/start/setting-kdf-do.rst:26
+#: ../../source/components/nitropad-nitropc/change-pins.rst:2
 #: ../../source/components/nitropad-nitropc/index.rst:17
 msgid "Change User and Admin PIN"
 msgstr "Cambiar el PIN de usuario y de administrador"
@@ -12909,28 +12924,29 @@ msgstr ""
 "cifrado (sólo NK Storage), etc."
 
 #: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:13
+#, fuzzy
 msgid ""
 "You can change the user PIN with the Nitrokey App if using a Nitrokey Pro"
 " or Nitrokey Storage. In the `Nitrokey "
-"<https://www.nitrokey.com/download>`__ App open ‘Menu -> Configure -> "
-"Change User PIN’ to open the dialog to change the PIN."
+"<https://www.nitrokey.com/download>`__ App open ``Menu -> Configure -> "
+"Change User PIN`` to open the dialog to change the PIN."
 msgstr ""
 "Puede cambiar el PIN de usuario con la App Nitrokey si utiliza una "
 "Nitrokey Pro o Nitrokey Storage. En la `App Nitrokey "
 "<https://www.nitrokey.com/download>`_ abra 'Menú -> Configurar -> Cambiar"
 " PIN de usuario' para abrir el diálogo para cambiar el PIN."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:21
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:19
 msgid "You can change the User PIN in the dialog window now."
 msgstr "Ahora puede cambiar el PIN de usuario en la ventana de diálogo."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:23
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:21
 #, fuzzy
 msgid ""
 "The user PIN can have up to 20 digits and other characters (e.g. "
 "alphabetic and special characters). But as the user PIN is blocked as "
 "soon three wrong PIN attempts were done, it is sufficiently secure to "
-"only have a 6 digits PIN. The default PIN is 123456."
+"only have a 6 digits PIN. The default PIN is ``123456``."
 msgstr ""
 "El PIN de usuario puede tener hasta 20 dígitos y otros caracteres (por "
 "ejemplo, caracteres alfabéticos y especiales). Pero como el PIN de "
@@ -12938,12 +12954,12 @@ msgstr ""
 "suficientemente seguro tener sólo un PIN de 6 dígitos. El PIN por defecto"
 " es 123456."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:31
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:27
 #: ../../source/components/nitrokeys/nitrokey3/set-pins.rst:118
 msgid "Admin PIN"
 msgstr "PIN de administración"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:33
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:29
 #, fuzzy
 msgid ""
 "The admin PIN is at least 8-digits long and is used to change "
@@ -12958,23 +12974,24 @@ msgstr ""
 "demasiada frecuencia (por ejemplo, si quiere añadir otra contraseña a la "
 "caja fuerte de la Nitrokey Pro o la Nitrokey Storage)."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:35
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:31
+#, fuzzy
 msgid ""
 "You can change the admin PIN with the Nitrokey App if using a Nitrokey "
 "Pro or Nitrokey Storage. In the `Nitrokey App "
-"<https://www.nitrokey.com/download>`__ open ‘Menu -> Configure -> Change "
-"Admin PIN’ to open the dialog to change the PIN."
+"<https://www.nitrokey.com/download>`__ open ``Menu -> Configure -> Change"
+" Admin PIN`` to open the dialog to change the PIN."
 msgstr ""
 "Puede cambiar el PIN de administrador con la App Nitrokey si utiliza una "
 "Nitrokey Pro o Nitrokey Storage. En la `App Nitrokey "
 "<https://www.nitrokey.com/download>`_ abre 'Menú -> Configurar -> Cambiar"
 " PIN de administrador' para abrir el diálogo para cambiar el PIN."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:43
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:39
 msgid "You can change the admin PIN in the dialog window now."
 msgstr "Ahora puede cambiar el PIN de administrador en la ventana de diálogo."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:45
+#: ../../source/components/nitrokeys/features/openpgp-card/change-pins.rst:41
 #, fuzzy
 msgid ""
 "The admin PIN can have up to 20 digits and other characters (e.g. "
@@ -13148,7 +13165,7 @@ msgstr ""
 #: ../../source/components/nitrokeys/nitrokey3/nitropy.rst:71
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:2
 #: ../../source/components/nitrokeys/passkey/index.rst:25
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:3
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:2
 #: ../../source/components/nitrokeys/pro/firmware-update.rst:63
 #: ../../source/components/nitrokeys/start/getting-started.rst:66
 #: ../../source/components/nitropad-nitropc/index.rst:17
@@ -14610,7 +14627,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:11
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:13
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:19
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:18
 #: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:17
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:63
 msgid "Key Generation"
@@ -14804,13 +14821,13 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:337
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:53
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:206
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:208
 msgid "Exporting Public Key and Keyserver Usage"
 msgstr "Exportación de la clave pública y uso del servidor de claves"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:339
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-gpa.rst:55
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:208
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:210
 msgid ""
 "Although you can start to use your Nitrokey right away after generating "
 "the keys on your system, you need to import your public key on every "
@@ -14826,7 +14843,7 @@ msgstr ""
 "en una página web/servidor de claves."
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:342
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:211
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:213
 msgid "Generating a Public Key File"
 msgstr "Generación de un archivo de clave pública"
 
@@ -14857,7 +14874,7 @@ msgstr ""
 "sepa dónde buscar esta clave. Eso es todo."
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-backup.rst:350
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:218
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:220
 msgid "Uploading the Public Key"
 msgstr "Carga de la clave pública"
 
@@ -15091,7 +15108,7 @@ msgstr ""
 " puede encontrarse `aquí <https://gpgtools.org/>`__. Los usuarios de "
 "sistemas Linux pueden instalar GnuPG con la ayuda del gestor de paquetes."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:12
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:11
 #, fuzzy
 msgid ""
 "These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
@@ -15104,7 +15121,7 @@ msgstr ""
 " este caso, por favor, elija un método diferente como se indica `aquí "
 "<openpgp.html>`_ o instale una versión más reciente si es posible."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:21
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:20
 msgid ""
 "The following descriptions explain the basic key generation on-device via"
 " GnuPG’s command line interface. The default behaviour is to generate RSA"
@@ -15117,11 +15134,11 @@ msgstr ""
 " cambiar el algoritmo y la longitud de la clave, echa un vistazo primero "
 "a la siguiente sección."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:23
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:22
 msgid "Open a command line and type ``gpg2 --card-edit``."
 msgstr "Abra una línea de comandos y escriba ``gpg2 --card-edit``."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:25
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:24
 #: ../../source/components/nitrokeys/features/openpgp-card/smime/index.rst:31
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
@@ -15134,7 +15151,7 @@ msgstr ""
 " abrir un terminal en macOS o GNU/Linux, utiliza la búsqueda de "
 "aplicaciones (por ejemplo, Spotlight en macOS)."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:53
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:52
 msgid ""
 "Now you are in the interactive interface of GnuPG. Activate the admin "
 "commands with ``admin`` and use ``generate`` afterwards to start the "
@@ -15144,7 +15161,7 @@ msgstr ""
 "administración con ``admin`` y utiliza ``generate`` después para iniciar "
 "la generación de claves."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:95
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:94
 msgid ""
 "**Please do not create the suggested off-card backup.** This “backup” "
 "does only save the encryption key, but not the signature and "
@@ -15167,7 +15184,7 @@ msgstr ""
 "las claves se almacenan de forma segura. Por lo tanto, recomendamos "
 "omitir esta media copia de seguridad."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:98
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:97
 msgid ""
 "Now you have a complete key set on your device which can be used for the "
 "`various applications "
@@ -15179,11 +15196,11 @@ msgstr ""
 "<https://www.nitrokey.com/documentation/applications>`__ listadas en "
 "nuestro sitio. Escribe ``quit`` y pulsa enter para salir."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:101
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:100
 msgid "Change Key Attributes"
 msgstr "Cambiar los atributos clave"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:103
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:102
 msgid ""
 "This section is about changing the key attributes. If you want to use the"
 " default values, you can proceed with the next section."
@@ -15192,11 +15209,11 @@ msgstr ""
 " utilizar los valores por defecto, puede continuar con la siguiente "
 "sección."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:105
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:104
 msgid "Open a command line and type ``gpg2 --card-edit --expert``."
 msgstr "Abra una línea de comandos y escriba ``gpg2 --card-edit --expert``."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:131
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:130
 msgid ""
 "Now you are in the interactive interface of GnuPG. As you can see in the "
 "“Key attributes” field above, the default value rsa2048 is set. To change"
@@ -15209,7 +15226,7 @@ msgstr ""
 "``admin`` y utiliza ``key-attr`` después para cambiar los atributos de "
 "las claves."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:162
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:161
 msgid ""
 "You can choose the attribute for each key (that is, signature, encryption"
 " and authentication key). Most people will use the same attributes for "
@@ -15221,7 +15238,7 @@ msgstr ""
 "atributos para cada clave. Escribe ``list`` para ver los resultados (mira"
 " el campo \"Key attributes\", que ahora dice rsa4096)."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:188
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:187
 msgid ""
 "Type ``quit`` and hit enter to exit or proceed directly with the previous"
 " section to actually generate the keys with the key attributes you just "
@@ -15231,7 +15248,7 @@ msgstr ""
 "sección anterior para generar realmente las claves con los atributos de "
 "clave que acaba de establecer."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:190
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:189
 msgid ""
 "The following table illustrates which algorithm can be used on which "
 "device."
@@ -15239,37 +15256,36 @@ msgstr ""
 "La siguiente tabla ilustra qué algoritmo puede utilizarse en cada "
 "dispositivo."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
-msgid "/bs/"
-msgstr ""
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:191
+#, fuzzy
+msgid "Supported algorithms per device"
+msgstr "Algoritmos de clave simétrica admitidos:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
-#: ../../source/components/shared-faqs/algos.rst.inc:7
-msgid "Start"
-msgstr "Inicie"
-
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
-#: ../../source/components/shared-faqs/algos.rst.inc:7
-msgid "Pro + Storage"
-msgstr "Pro + Almacenamiento"
-
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:193
-#: ../../source/components/shared-faqs/algos.rst.inc:7
-msgid "Pro 2 + Storage 2"
-msgstr "Pro 2 + Almacenamiento 2"
-
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
 msgid "rsa1024"
 msgstr "rsa1024"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:196
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:198
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:199
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:200
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:201
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:202
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:203
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:204
+#: ../../source/components/nitrokeys/hsm/faq.rst:77
+#: ../../source/components/nitrokeys/hsm/faq.rst:79
+#: ../../source/components/nitrokeys/hsm/faq.rst:81
+#: ../../source/components/nitrokeys/hsm/faq.rst:83
+#: ../../source/components/nitrokeys/hsm/faq.rst:87
+#: ../../source/components/nitrokeys/hsm/faq.rst:89
+#: ../../source/components/nitrokeys/hsm/faq.rst:91
+#: ../../source/components/nitrokeys/hsm/faq.rst:93
+#: ../../source/components/nitrokeys/hsm/faq.rst:95
+#: ../../source/components/nitrokeys/hsm/faq.rst:97
+#: ../../source/components/nitrokeys/hsm/faq.rst:99
+#: ../../source/components/nitrokeys/hsm/faq.rst:101
+#: ../../source/components/nitrokeys/hsm/faq.rst:103
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:66
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:68
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:70
@@ -15295,53 +15311,63 @@ msgstr "rsa1024"
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:61
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:63
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:65
-#: ../../source/components/shared-faqs/algos.rst.inc:9
-#: ../../source/components/shared-faqs/algos.rst.inc:11
-#: ../../source/components/shared-faqs/algos.rst.inc:13
-#: ../../source/components/shared-faqs/algos.rst.inc:15
-#: ../../source/components/shared-faqs/algos.rst.inc:17
-#: ../../source/components/shared-faqs/algos.rst.inc:19
-#: ../../source/components/shared-faqs/algos.rst.inc:21
-#: ../../source/components/shared-faqs/algos.rst.inc:23
-#: ../../source/components/shared-faqs/algos.rst.inc:25
-#: ../../source/components/shared-faqs/algos.rst.inc:27
-#: ../../source/components/shared-faqs/algos.rst.inc:29
-#: ../../source/components/shared-faqs/algos.rst.inc:31
-#: ../../source/components/shared-faqs/algos.rst.inc:33
-#: ../../source/components/shared-faqs/algos.rst.inc:35
+#: ../../source/components/nitrokeys/pro/faq.rst:93
+#: ../../source/components/nitrokeys/pro/faq.rst:95
+#: ../../source/components/nitrokeys/pro/faq.rst:97
+#: ../../source/components/nitrokeys/pro/faq.rst:99
+#: ../../source/components/nitrokeys/pro/faq.rst:105
+#: ../../source/components/nitrokeys/pro/faq.rst:107
+#: ../../source/components/nitrokeys/pro/faq.rst:111
+#: ../../source/components/nitrokeys/pro/faq.rst:113
+#: ../../source/components/nitrokeys/start/faq.rst:79
+#: ../../source/components/nitrokeys/start/faq.rst:81
+#: ../../source/components/nitrokeys/start/faq.rst:87
+#: ../../source/components/nitrokeys/start/faq.rst:91
+#: ../../source/components/nitrokeys/start/faq.rst:103
+#: ../../source/components/nitrokeys/storage/faq.rst:110
+#: ../../source/components/nitrokeys/storage/faq.rst:112
+#: ../../source/components/nitrokeys/storage/faq.rst:114
+#: ../../source/components/nitrokeys/storage/faq.rst:116
+#: ../../source/components/nitrokeys/storage/faq.rst:122
+#: ../../source/components/nitrokeys/storage/faq.rst:124
+#: ../../source/components/nitrokeys/storage/faq.rst:128
+#: ../../source/components/nitrokeys/storage/faq.rst:130
 msgid "✓"
 msgstr "✓"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:196
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:198
 msgid "rsa2048"
 msgstr "rsa2048"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:199
 msgid "rsa3072"
 msgstr "rsa3072"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:198
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:200
 msgid "rsa4096"
 msgstr "rsa4096"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:199
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:201
 msgid "curve25519 (ECC)"
 msgstr "curve25519 (ECC)"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:200
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:202
 msgid "NIST (ECC)"
 msgstr "NIST (ECC)"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:201
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:203
 msgid "Brainpool (ECC)"
 msgstr "Brainpool (ECC)"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:202
-#: ../../source/components/shared-faqs/algos.rst.inc:33
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:204
+#: ../../source/components/nitrokeys/hsm/faq.rst:101
+#: ../../source/components/nitrokeys/pro/faq.rst:117
+#: ../../source/components/nitrokeys/start/faq.rst:103
+#: ../../source/components/nitrokeys/storage/faq.rst:134
 msgid "secp256k1"
 msgstr "secp256k1"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:213
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:215
 msgid ""
 "To get a simple file of your public key, you can just use ``gpg2 --armor "
 "--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
@@ -15353,7 +15379,7 @@ msgstr ""
 "\"keyID\" (mira ``gpg -K`` para obtenerla) o simplemente utiliza tu "
 "dirección de correo electrónico como identificador."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:215
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:217
 msgid ""
 "You can carry this file with you or send it to anyone who you like. This "
 "file is not secret at all. If you want to use the Nitrokey on another "
@@ -15367,7 +15393,7 @@ msgstr ""
 "pubkey.asc`` y luego escribe ``gpg2 --card-status`` para que el sistema "
 "sepa dónde buscar esta clave. Eso es todo."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:220
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:222
 msgid ""
 "If you do not want to carry a public keyfile with you, you can upload it "
 "to keyserver. You can do this by typing ``gpg --keyserver "
@@ -15381,7 +15407,7 @@ msgstr ""
 "puedes simplemente importarlo usando ``gpg --keyserver "
 "search.keyserver.net --recv-key keyID``."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:222
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:224
 msgid ""
 "Another possibility is to change the URL setting on your card. Start gpg "
 "–card-edit again and first set the URL where the key is situated (e.g. on"
@@ -18306,15 +18332,15 @@ msgstr ""
 "Servidor Windows (las versiones compatibles son Windows Server 2016, "
 "2019, 2022 en todas las ediciones)."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:17
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:18
 msgid "ADDS role installed and configured."
 msgstr "Rol ADDS instalado y configurado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:18
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:19
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
 msgstr "Rol ADCS instalado y *Enterprise-CA* con certificado raíz configurado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:19
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:21
 msgid ""
 "Each Domain Controller (DC) must have a *Domain Controller*, *Domain "
 "Controller Authentication*, and *Kerberos Authentication* certificate "
@@ -18324,7 +18350,7 @@ msgstr ""
 "Controller*, *Domain Controller Authentication*, y *Kerberos "
 "Authentication* emitido."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:20
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:22
 msgid ""
 "If you have clients leaving the company network, make sure the published "
 "full and delta certificate revocation lists (CRL) are retrievable from "
@@ -18334,7 +18360,7 @@ msgstr ""
 " listas de revocación de certificados (CRL) completas y delta publicadas "
 "se pueden recuperar desde redes externas."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:21
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
 "Windows client (supported versions are Windows 10, 11 in editions "
 "*Professional* and *Enterprise*)"
@@ -18342,22 +18368,22 @@ msgstr ""
 "Cliente Windows (las versiones compatibles son Windows 10, 11 en las "
 "ediciones *Professional* y *Enterprise*)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:22
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:26
 msgid "Client must be a domain member of the Active Directory (AD) domain."
 msgstr "El cliente debe ser miembro del dominio Active Directory (AD)."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:23
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:28
 #, fuzzy
 msgid "Nitrokey 3 with PIV smart card."
 msgstr "Nitrokey 3 con aplicación PIV."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:26
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:31
 msgid "Configure smartcard logon for use with Active Directory (AD)"
 msgstr ""
 "Configurar el inicio de sesión con tarjeta inteligente para su uso con "
 "Active Directory (AD)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:28
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:33
 msgid ""
 "The smartcard logon requires a certificate template in the certificate "
 "authority (CA) of the the domain. This template defines the values and "
@@ -18370,7 +18396,7 @@ msgstr ""
 "usuario. Se utiliza para firmar la solicitud de certificado (CSR) durante"
 " el aprovisionamiento de la Nitrokey."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:32
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:37
 msgid ""
 "Signing a certificate request for smartcard logon requires to create a "
 "certificate template in the certificate authority."
@@ -18379,12 +18405,12 @@ msgstr ""
 "tarjeta inteligente requiere la creación de una plantilla de certificado "
 "en la autoridad de certificación."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:35
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:70
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:40
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:75
 msgid "MMC"
 msgstr "MMC"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:36
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:41
 msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
@@ -18392,40 +18418,34 @@ msgstr ""
 "Desde la línea de comandos, PowerShell o Ejecutar, escriba "
 "``certtmpl.msc`` y pulse Intro."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:37
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:42
 msgid "In the detail pane select the template **Smartcard Logon**."
 msgstr "En el panel de detalles seleccione la plantilla **Smartcard Logon**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:38
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:43
 msgid "In the menu bar click **Actions → All Tasks → Duplicate Template**."
 msgstr ""
 "En la barra de menús, haga clic en **Actions → All Tasks → Duplicate "
 "Template**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:39
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:44
 msgid "Set the settings below on the template, according to the mentioned tab."
 msgstr ""
 "Establezca los ajustes siguientes en la plantilla, de acuerdo con la "
 "ficha mencionada."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:41
-msgid "**Compatibility**"
-msgstr "**Compatibilidad**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:42
-msgid "Disable **Show resulting changes**"
-msgstr "Desactivar **Mostrar los cambios resultantes**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:43
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:46
+#, fuzzy
 msgid ""
-"Set **Certificate Authority** and **Certificate recipient** to the oldest"
-" clients in the domain which are supposed to use smartcard logon."
+"**Compatibility** * Disable **Show resulting changes** * Set "
+"**Certificate Authority** and **Certificate recipient** to the oldest "
+"clients in the domain which are supposed to use smartcard logon."
 msgstr ""
 "Establezca **Autoridad de certificación** y **Destinatario del "
 "certificado** para los clientes más antiguos del dominio que deben "
 "utilizar el inicio de sesión con tarjeta inteligente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:46
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:51
 msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
@@ -18433,43 +18453,30 @@ msgstr ""
 "Si desea utilizar claves de Curva Elíptica (EC) sus clientes no deben ser"
 " más antiguos que Windows Server 2008 y Windows Vista."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:48
-msgid "**General**"
-msgstr "**General**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:49
-msgid "Set a **Template display name**."
-msgstr "Establezca un nombre de visualización de la plantilla **** ."
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:50
-msgid "Set the **Validity period** and **Renewal period**."
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:53
+#, fuzzy
+msgid ""
+"**General** * Set a **Template display name**. * Set the **Validity "
+"period** and **Renewal period**."
 msgstr "Establezca el **Periodo de validez** y **Periodo de renovación**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:52
-msgid "**Request handling**"
-msgstr "**Gestión de solicitudes**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:53
-msgid "Set a purpose of **Signature and smartcard logon**."
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:57
+#, fuzzy
+msgid "**Request handling** * Set a purpose of **Signature and smartcard logon**."
 msgstr ""
 "Establecer un propósito de **Firma y tarjeta inteligente de inicio de "
 "sesión**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:55
-msgid "**Cryptography**"
-msgstr "**Criptografía**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:56
-msgid "Set a provider category of **Key Storage Provider**."
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:60
+#, fuzzy
+msgid ""
+"**Cryptography** * Set a provider category of **Key Storage Provider**. *"
+" Set a algorithm name and minimum key size."
 msgstr ""
 "Establezca una categoría de proveedor de **Proveedor de almacenamiento de"
 " claves**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:57
-msgid "Set a algorithm name and minimum key size."
-msgstr "Establece el nombre del algoritmo y el tamaño mínimo de la clave."
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:60
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:65
 #, fuzzy
 msgid ""
 "Microsoft recommends to use the RSA algorithm with a key length of "
@@ -18480,19 +18487,16 @@ msgstr ""
 "de ``2048`` Bit. Si decide utilizar claves de curva elíptica (EC), deberá"
 " realizar cambios adicionales en los ordenadores cliente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:63
-msgid "**Subject Name**"
-msgstr "**Nombre de la asignatura**"
-
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:64
-msgid "Set **Supply in the request**."
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:68
+#, fuzzy
+msgid "**Subject Name** * Set **Supply in the request**."
 msgstr "Establezca **Suministro en la solicitud**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:65
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:70
 msgid "Confirm the template creation with **OK**."
 msgstr "Confirme la creación de la plantilla con **OK**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:67
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:72
 msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
@@ -18500,7 +18504,7 @@ msgstr ""
 "Tras la creación de una plantilla de certificado, ésta debe ser emitida "
 "para ser utilizada por los clientes."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:71
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:76
 #, fuzzy
 msgid ""
 "From the Command Line, PowerShell, or Run, type ``certmgr.msc`` and press"
@@ -18509,7 +18513,7 @@ msgstr ""
 "Desde la línea de comandos, PowerShell o Ejecutar, escriba "
 "``certsrv.msc`` y pulse Intro."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:72
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:77
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
@@ -18517,25 +18521,25 @@ msgstr ""
 "En el panel de navegación, expanda la autoridad de certificación (CA) y "
 "vaya a **Plantillas de certificados**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:73
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:78
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Nuevo → Plantilla de "
 "certificado para emitir**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:74
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:79
 msgid "Select the certificate template you want to issue and confirm with **OK**."
 msgstr ""
 "Seleccione la plantilla de certificado que desea emitir y confirme con "
 "**OK**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:78
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:83
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
 msgstr ""
 "Aprovisionar Nitrokey 3 para el inicio de sesión con tarjeta inteligente "
 "con Active Directory"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:80
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:85
 #, fuzzy
 msgid ""
 "The smartcard logon requires to provision a Nitrokey for a user in Active"
@@ -18548,7 +18552,7 @@ msgstr ""
 "contiene la clave privada y la generación de la solicitud de certificado "
 "(CSR). A continuación, el certificado se escribe en la Nitrokey."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:85
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:90
 msgid ""
 "Before following the steps below make sure the Active Directory user "
 "account you want to use for smartcard logon exists. A creation time of "
@@ -18561,13 +18565,13 @@ msgstr ""
 "certificado es anterior a la hora de creación de la cuenta de usuario, el"
 " inicio de sesión fallará."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:88
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:93
 msgid "Generate a private key and write the CSR to file with the command below."
 msgstr ""
 "Genere una clave privada y escriba la CSR en un archivo con el siguiente "
 "comando."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:94
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:99
 #, fuzzy
 msgid ""
 "The value of ``<algorithm>`` is the used algorithm with its key length, "
@@ -18584,7 +18588,7 @@ msgstr ""
 "``commonName`` y ``userPrincipalName`` de la cuenta de usuario de Active "
 "Directory."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:99
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
@@ -18592,7 +18596,7 @@ msgstr ""
 "Firme la CSR con la autoridad de certificación (CA) del dominio con el "
 "siguiente comando."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:105
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
 "The value of ``<template-name>`` is the name of the certificate template "
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
@@ -18602,15 +18606,15 @@ msgstr ""
 "certificado para el inicio de sesión con tarjeta inteligente. El valor de"
 " ``<file>`` es el archivo de solicitud de canto del certificado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:108
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
 msgstr "Escribe el certificado firmado en el Nitrokey con el siguiente comando."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:114
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:119
 msgid "The value of ``<file>`` is the certificate file."
 msgstr "El valor de ``<file>`` es el archivo del certificado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:116
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:121
 msgid ""
 "Map the certificate with the Active Directory user account. Create the "
 "certificate mappings with the command below."
@@ -18618,16 +18622,16 @@ msgstr ""
 "Asigne el certificado a la cuenta de usuario de Active Directory. Cree "
 "las asignaciones de certificados con el siguiente comando."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:123
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:128
 #, fuzzy
 msgid "Choose one of the offered certificate mappings."
 msgstr "Seleccione el certificado, la asignación y el usuario."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:126
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:131
 msgid "Microsoft recommends the use of the ``X509IssuerSerialNumber`` mapping."
 msgstr "Microsoft recomienda el uso de la asignación ``X509IssuerSerialNumber``."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:128
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:133
 msgid ""
 "Write the choosen mapping to the ``altSecurityIdentities`` attribute of "
 "the Active Directory user object. You can use the *Active Directory Users"
@@ -18637,11 +18641,11 @@ msgstr ""
 "del objeto de usuario de Active Directory. Puede utilizar la aplicación "
 "*Active Directory Users and Computers* o PowerShell para esta operación."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:132
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:137
 msgid "Active Directory Users and Computers"
 msgstr "Usuarios y equipos de Active Directory"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:133
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:138
 #, fuzzy
 msgid ""
 "From the Command Line, PowerShell, or Run, type ``dsa.msc`` and press "
@@ -18650,59 +18654,59 @@ msgstr ""
 "Desde la línea de comandos, PowerShell o Ejecutar, escriba "
 "``certsrv.msc`` y pulse Intro."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:134
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:139
 #, fuzzy
 msgid "In the menu bar click **View → Advanced Features**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Todas las tareas → "
 "Importar**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:135
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:140
 msgid "Select the respective user object."
 msgstr "Seleccione el objeto de usuario correspondiente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:136
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:141
 #, fuzzy
 msgid "In the menu bar click **Action → Properties**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Todas las tareas → "
 "Importar**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:137
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:142
 msgid "Open the tab **Attribute Editor**."
 msgstr "Abra la pestaña **Editor de atributos**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:138
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:143
 msgid "Select the attribute ``altSecurityIdentities``."
 msgstr "Seleccione el atributo ``altSecurityIdentities``."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:139
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:144
 #, fuzzy
 msgid "Click on **Edit**."
 msgstr "Haga clic en \"Siguiente\"."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:140
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:145
 #, fuzzy
 msgid "Insert the certificate mapping in the text field and click **Add**."
 msgstr "Seleccione el certificado, la asignación y el usuario."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:141
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:146
 msgid "Apply the change with a click on **OK**."
 msgstr "Aplique el cambio haciendo clic en **OK**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:143
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:212
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:148
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:217
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
 msgid "PowerShell"
 msgstr "PowerShell"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:144
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:214
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:149
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:219
 msgid "Open PowerShell."
 msgstr "Abre PowerShell."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:145
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:150
 msgid ""
 "Add the value with ``Set-ADUser -Identity \"<sAMAccountName>\" -Add "
 "@{altSecurityIdentities=\"<certificate-mapping>\"}``, replacing "
@@ -18715,7 +18719,7 @@ msgstr ""
 "usuario y ``<certificate-mapping>`` por la asignación de certificados "
 "elegida anteriormente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:148
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:153
 msgid ""
 "If the certificate mapping is not correctly set you will receive the "
 "error message ``Logon screen message: Your credentials could not be "
@@ -18728,23 +18732,23 @@ msgstr ""
 "siguiente mensaje de evento en el registro de eventos del sistema "
 "Windows."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:151
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:156
 #, fuzzy
 msgid "**Source**"
 msgstr "**Característica**"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:157
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:162
 #, fuzzy
 msgid "**Message**"
 msgstr "**Característica**"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:164
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:169
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
 msgstr ""
 "Revocar el inicio de sesión con tarjeta inteligente para su uso con "
 "Active Directory (AD)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:166
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:171
 msgid ""
 "The issued user logon certificates are listed in the Active Directory "
 "Certificate Services (ADCS). From ADCS the certificates can be revoked, "
@@ -18757,7 +18761,7 @@ msgstr ""
 "Certificados (CRL) configurada. Esto es necesario en caso de pérdida o "
 "rotura de Nitrokey."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:171
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:176
 msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
@@ -18765,7 +18769,7 @@ msgstr ""
 "Se recomienda encarecidamente no dejar nunca certificados de usuario sin "
 "utilizar sin revocarlos."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:174
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:179
 msgid ""
 "It is possible to temporarily revoke a certificate with the reason "
 "*Certificate Hold*. This revocation can be reverted and is hence not "
@@ -18775,12 +18779,12 @@ msgstr ""
 "*Certificate Hold*. Esta revocación puede revertirse, por lo que no es "
 "permanente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:178
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:183
 msgid "MMC (certsrv.msc)"
 msgstr "MMC (certsrv.msc)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:179
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:205
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:184
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:210
 msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
@@ -18788,7 +18792,7 @@ msgstr ""
 "Desde la línea de comandos, PowerShell o Ejecutar, escriba "
 "``certsrv.msc`` y pulse Intro."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:180
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:185
 msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
@@ -18796,19 +18800,19 @@ msgstr ""
 "En el panel de navegación, expanda la autoridad de certificación (CA) y "
 "vaya a **Certificados emitidos**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:181
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:186
 msgid "In the detail pane select the user certificate you want to revoke."
 msgstr ""
 "En el panel de detalles, seleccione el certificado de usuario que desea "
 "revocar."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:182
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:187
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Todas las tareas → Revocar "
 "certificado**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:183
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:188
 msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
@@ -18816,23 +18820,23 @@ msgstr ""
 "Especifique el motivo de la revocación, la fecha y la hora, y confirme "
 "con **Sí**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:184
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:189
 msgid "In the navigation pane navigate to **Revoked Certificates**."
 msgstr "En el panel de navegación, vaya a **Certificados revocados**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:185
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:190
 msgid "In the menu bar click **Action → All Tasks → Publish**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Todas las tareas → "
 "Publicar**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:186
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:191
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
 "Seleccione la lista de revocación que desea publicar y confirme con "
 "**OK**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:189
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:194
 msgid ""
 "During each smartcard logon attempt Windows checks if the certificate "
 "presented by the smartcard is listed on a Certificate Revocation List "
@@ -18850,13 +18854,13 @@ msgstr ""
 "tanto, una revocación no es inmediata y depende de la caducidad de la CRL"
 " que tenga el cliente."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:197
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:202
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr ""
 "Importar un certificado de tarjeta inteligente de usuario al almacén de "
 "certificados personales"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:199
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:204
 msgid ""
 "The user certificate which is stored on the Nitrokey can be imported to "
 "the user's personal certificate store. In certain situations this is a "
@@ -18866,12 +18870,12 @@ msgstr ""
 "almacén de certificados personal del usuario. En determinadas "
 "situaciones, se trata de un procedimiento obligatorio."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:203
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:208
 msgid "MMC (certmgr.msc)"
 msgstr "MMC (certmgr.msc)"
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:204
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:213
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:209
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:218
 msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
@@ -18879,7 +18883,7 @@ msgstr ""
 "Asegúrese de que ha iniciado sesión en la cuenta de usuario a la que "
 "corresponde el certificado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:206
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:211
 msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
@@ -18887,13 +18891,13 @@ msgstr ""
 "En el panel de navegación, expanda el almacén de claves **Personal** y "
 "vaya a **Certificados**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:207
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:212
 msgid "In the menu bar click **Action → All Tasks → Import**."
 msgstr ""
 "En la barra de menús, haga clic en **Acción → Todas las tareas → "
 "Importar**."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:208
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:213
 msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
@@ -18901,7 +18905,7 @@ msgstr ""
 "Siga el asistente de importación y proporcione el archivo del certificado"
 " de usuario cuando se le solicite."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:209
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:214
 msgid ""
 "After the import completed check the detail pane for the imported "
 "certificate. If the Nitrokey is connected, the properties of the "
@@ -18915,7 +18919,7 @@ msgstr ""
 "corresponds to this certificate.* indicando que la privada en la Nitrokey"
 " podría ser identificada."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:215
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:220
 #, fuzzy
 msgid ""
 "Import the certificate with ``Import-Certificate -CertStoreLocation "
@@ -18926,7 +18930,7 @@ msgstr ""
 "'<path>'``, sustituyendo ``<path>`` por la ruta del archivo del "
 "certificado."
 
-#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:216
+#: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:221
 #, fuzzy
 msgid ""
 "After the import completed check for the certificate with ``Get-ChildItem"
@@ -19081,7 +19085,10 @@ msgid "Supported asymmetric key algorithms:"
 msgstr "Algoritmos de clave asimétrica admitidos:"
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:42
-#: ../../source/components/shared-faqs/algos.rst.inc:11
+#: ../../source/components/nitrokeys/hsm/faq.rst:79
+#: ../../source/components/nitrokeys/pro/faq.rst:95
+#: ../../source/components/nitrokeys/start/faq.rst:81
+#: ../../source/components/nitrokeys/storage/faq.rst:112
 msgid "RSA 2048"
 msgstr "RSA 2048"
 
@@ -20233,11 +20240,11 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/faq.rst:31
 msgid ""
-"After `disabling Enforce Attestation`_ Nitrokey FIDO2 is supported by "
-"Azure Entra ID out of the box."
+"After `disabling Enforce Attestation <https://learn.microsoft.com/en-"
+"us/azure/active-directory/authentication/howto-authentication-"
+"passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey"
+" FIDO2 is supported by Azure Entra ID out of the box."
 msgstr ""
-"Después de `deshabilitar Enforce Attestation`_ Nitrokey FIDO2 es "
-"soportado por Azure Entra ID fuera de la caja."
 
 #: ../../source/components/nitrokeys/fido2/firmware-update.rst:2
 #: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:2
@@ -20383,7 +20390,7 @@ msgstr ""
 "dispositivo seleccionado (el llamado comando WINK)."
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:182
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:34
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid "If the Nitrokey is not detected, proceed the following:"
 msgstr "Si no se detecta la Nitrokey, proceda de la siguiente manera:"
 
@@ -20406,7 +20413,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:190
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:15
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:42
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:41
 msgid ""
 "Restart udev via ``sudo service udev restart`` or ``udevadm control "
 "--reload-rules && udevadm trigger`` if you are using Fedora."
@@ -20574,16 +20581,27 @@ msgstr ""
 msgid "Nitrokey HSM FAQ"
 msgstr "Preguntas frecuentes sobre Nitrokey HSM"
 
-#: ../../source/components/shared-faqs/nitrokeys.rst.inc:3
+#: ../../source/components/nitrokeys/hsm/faq.rst:6
+#: ../../source/components/nitrokeys/pro/faq.rst:6
+#: ../../source/components/nitrokeys/start/faq.rst:6
+#: ../../source/components/nitrokeys/storage/faq.rst:9
 msgid "Windows, Linux and macOS."
 msgstr "Windows, Linux y macOS."
 
-#: ../../source/components/shared-faqs/nitrokeys.rst.inc:7
-msgid "See the `overview`_ of supported use cases."
+#: ../../source/components/nitrokeys/hsm/faq.rst:10
+#: ../../source/components/nitrokeys/pro/faq.rst:10
+#: ../../source/components/nitrokeys/start/faq.rst:10
+#: ../../source/components/nitrokeys/storage/faq.rst:13
+#, fuzzy
+msgid ""
+"See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of "
+"supported use cases."
 msgstr "Consulte la `overview`_ de casos de uso compatibles."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:10
-#: ../../source/components/shared-faqs/pins.rst.inc:4
+#: ../../source/components/nitrokeys/hsm/faq.rst:14
+#: ../../source/components/nitrokeys/pro/faq.rst:22
+#: ../../source/components/nitrokeys/start/faq.rst:22
+#: ../../source/components/nitrokeys/storage/faq.rst:36
 msgid ""
 "Nitrokey uses PINs instead of passwords. The main difference is that the "
 "hardware limits the amount of tries to three while a limit doesn't exist "
@@ -20595,7 +20613,7 @@ msgstr ""
 "existe un límite para las contraseñas. Por ello, un PIN corto sigue "
 "siendo seguro y no es necesario elegir un PIN largo y complejo."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:15
+#: ../../source/components/nitrokeys/hsm/faq.rst:19
 msgid ""
 "Nitrokey PINs can be up to 16 digits long and can consist of numbers, "
 "characters and special characters. Note: When using GnuPG or OpenSC, 32 "
@@ -20606,7 +20624,7 @@ msgstr ""
 "GnuPG u OpenSC, se pueden utilizar PINs de 32 caracteres, pero no son "
 "compatibles con Nitrokey App."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:22
+#: ../../source/components/nitrokeys/hsm/faq.rst:26
 msgid ""
 "The PIN is at least 6-digits long and is used to get access to the "
 "content of the Nitrokey. This is the PIN you will use a lot in every day "
@@ -20615,7 +20633,7 @@ msgstr ""
 "El PIN tiene al menos 6 dígitos y se utiliza para acceder al contenido de"
 " la Nitrokey. Este es el PIN que usará mucho en el uso diario."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:26
+#: ../../source/components/nitrokeys/hsm/faq.rst:30
 msgid ""
 "The PIN can have up to 16 digits and other characters (e.g. alphabetic "
 "and special characters). But as the PIN is blocked as soon three wrong "
@@ -20627,7 +20645,7 @@ msgstr ""
 "cuanto se hacen tres intentos de PIN erróneos, es suficientemente seguro "
 "tener sólo un PIN de 6 dígitos."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:33
+#: ../../source/components/nitrokeys/hsm/faq.rst:37
 #, fuzzy
 msgid ""
 "The SO PIN is used in the Nitrokey HSM only and is something like a "
@@ -20639,51 +20657,51 @@ msgstr ""
 "\"maestro\" PIN con propiedades especiales. Por favor, lea atentamente "
 "estas instrucciones para entender el SO PIN del Nitrokey HSM."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:37
+#: ../../source/components/nitrokeys/hsm/faq.rst:41
 msgid "The SO PIN has to be exactly 16 digits long."
 msgstr "El PIN SO debe tener exactamente 16 dígitos."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:41
+#: ../../source/components/nitrokeys/hsm/faq.rst:45
 msgid "76 KB EEPROM total, that can be used for"
 msgstr "76 KB de EEPROM en total, que pueden utilizarse para"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:43
+#: ../../source/components/nitrokeys/hsm/faq.rst:47
 msgid "max. 150 x ECC-521 keys or"
 msgstr "máx. 150 teclas ECC-521 o"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:44
+#: ../../source/components/nitrokeys/hsm/faq.rst:48
 msgid "max. 300 x ECC/AES-256 keys or"
 msgstr "máx. 300 claves ECC/AES-256 o"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:45
+#: ../../source/components/nitrokeys/hsm/faq.rst:49
 msgid "max. 19 x RSA-4096 keys or"
 msgstr "máx. 19 llaves RSA-4096 o"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:46
+#: ../../source/components/nitrokeys/hsm/faq.rst:50
 msgid "max. 38 x RSA-2048 keys"
 msgstr "máx. 38 llaves RSA-2048"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:50
+#: ../../source/components/nitrokeys/hsm/faq.rst:54
 msgid "Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs."
 msgstr "Nitrokey HSM puede almacenar 20 pares de claves RSA-2048 y 31 ECC-256."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:54
+#: ../../source/components/nitrokeys/hsm/faq.rst:58
 msgid "Key generation on-card: RSA 2048: 2 per minute"
 msgstr "Generación de claves en la tarjeta: RSA 2048: 2 por minuto"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:55
+#: ../../source/components/nitrokeys/hsm/faq.rst:59
 msgid "Key generation on-card: ECC 256: 10 per minute."
 msgstr "Generación de claves en la tarjeta: ECC 256: 10 por minuto."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:56
+#: ../../source/components/nitrokeys/hsm/faq.rst:60
 msgid "Signature creation with off-card hash: RSA 2048; 100 per minute"
 msgstr "Creación de firmas con hash fuera de la tarjeta: RSA 2048; 100 por minuto"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:57
+#: ../../source/components/nitrokeys/hsm/faq.rst:61
 msgid "Signature creation with off-card hash: ECDSA 256: 360 per minute"
 msgstr "Creación de firmas con hash fuera de la tarjeta: ECDSA 256: 360 por minuto"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:58
+#: ../../source/components/nitrokeys/hsm/faq.rst:62
 msgid ""
 "Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per "
 "minute"
@@ -20691,7 +20709,7 @@ msgstr ""
 "Creación de firmas con SHA-256 en la tarjeta y datos de 1 kb: RSA 2048; "
 "68 por minuto"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:59
+#: ../../source/components/nitrokeys/hsm/faq.rst:63
 msgid ""
 "Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per"
 " minute"
@@ -20699,7 +20717,7 @@ msgstr ""
 "Creación de firmas con SHA-256 en la tarjeta y 1 kb de datos: ECDSA 256: "
 "125 por minuto"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:63
+#: ../../source/components/nitrokeys/hsm/faq.rst:67
 msgid ""
 "Use ``opensc-tool --list-algorithms`` and compare with the table below. "
 "Please also see `this thread`_ for the factsheets and more details."
@@ -20707,71 +20725,110 @@ msgstr ""
 "Utiliza ``opensc-tool --list-algorithms`` y compáralo con la siguiente "
 "tabla. Consulta también `este hilo`_ para ver las fichas y más detalles."
 
+#: ../../source/components/nitrokeys/hsm/faq.rst:72
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:61
-#: ../../source/components/shared-faqs/algos.rst.inc:4
+#: ../../source/components/nitrokeys/pro/faq.rst:88
+#: ../../source/components/nitrokeys/start/faq.rst:74
+#: ../../source/components/nitrokeys/storage/faq.rst:105
 msgid "See the following table:"
 msgstr "Consulte la siguiente tabla:"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:7
+#: ../../source/components/nitrokeys/hsm/faq.rst:75
 msgid "HSM 2"
 msgstr "HSM 2"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:9
+#: ../../source/components/nitrokeys/hsm/faq.rst:77
+#: ../../source/components/nitrokeys/pro/faq.rst:93
+#: ../../source/components/nitrokeys/start/faq.rst:79
+#: ../../source/components/nitrokeys/storage/faq.rst:110
 #, fuzzy
 msgid "RSA 1024"
 msgstr "rsa1024"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:13
+#: ../../source/components/nitrokeys/hsm/faq.rst:81
+#: ../../source/components/nitrokeys/pro/faq.rst:97
+#: ../../source/components/nitrokeys/start/faq.rst:83
+#: ../../source/components/nitrokeys/storage/faq.rst:114
 #, fuzzy
 msgid "RSA 3072"
 msgstr "rsa3072"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:15
+#: ../../source/components/nitrokeys/hsm/faq.rst:83
+#: ../../source/components/nitrokeys/pro/faq.rst:99
+#: ../../source/components/nitrokeys/start/faq.rst:85
+#: ../../source/components/nitrokeys/storage/faq.rst:116
 #, fuzzy
 msgid "RSA 4096"
 msgstr "rsa4096"
 
+#: ../../source/components/nitrokeys/hsm/faq.rst:85
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:72
-#: ../../source/components/shared-faqs/algos.rst.inc:17
+#: ../../source/components/nitrokeys/pro/faq.rst:101
+#: ../../source/components/nitrokeys/start/faq.rst:87
+#: ../../source/components/nitrokeys/storage/faq.rst:118
 #, fuzzy
 msgid "Curve25519"
 msgstr "curva25519"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:19
+#: ../../source/components/nitrokeys/hsm/faq.rst:87
+#: ../../source/components/nitrokeys/pro/faq.rst:103
+#: ../../source/components/nitrokeys/start/faq.rst:89
+#: ../../source/components/nitrokeys/storage/faq.rst:120
 msgid "NIST-P 192"
 msgstr "NIST-P 192"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:21
+#: ../../source/components/nitrokeys/hsm/faq.rst:89
+#: ../../source/components/nitrokeys/pro/faq.rst:105
+#: ../../source/components/nitrokeys/start/faq.rst:91
+#: ../../source/components/nitrokeys/storage/faq.rst:122
 msgid "NIST-P 256"
 msgstr "NIST-P 256"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:23
+#: ../../source/components/nitrokeys/hsm/faq.rst:91
+#: ../../source/components/nitrokeys/pro/faq.rst:107
+#: ../../source/components/nitrokeys/start/faq.rst:93
+#: ../../source/components/nitrokeys/storage/faq.rst:124
 msgid "NIST-P 384-521"
 msgstr "NIST-P 384-521"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:25
+#: ../../source/components/nitrokeys/hsm/faq.rst:93
+#: ../../source/components/nitrokeys/pro/faq.rst:109
+#: ../../source/components/nitrokeys/start/faq.rst:95
+#: ../../source/components/nitrokeys/storage/faq.rst:126
 msgid "Brainpool 192"
 msgstr "Brainpool 192"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:27
+#: ../../source/components/nitrokeys/hsm/faq.rst:95
+#: ../../source/components/nitrokeys/pro/faq.rst:111
+#: ../../source/components/nitrokeys/start/faq.rst:97
+#: ../../source/components/nitrokeys/storage/faq.rst:128
 msgid "Brainpool 256-320"
 msgstr "Brainpool 256-320"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:29
+#: ../../source/components/nitrokeys/hsm/faq.rst:97
+#: ../../source/components/nitrokeys/pro/faq.rst:113
+#: ../../source/components/nitrokeys/start/faq.rst:99
+#: ../../source/components/nitrokeys/storage/faq.rst:130
 msgid "Brainpool 384-521"
 msgstr "Brainpool 384-521"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:31
+#: ../../source/components/nitrokeys/hsm/faq.rst:99
+#: ../../source/components/nitrokeys/pro/faq.rst:115
+#: ../../source/components/nitrokeys/start/faq.rst:101
+#: ../../source/components/nitrokeys/storage/faq.rst:132
 #, fuzzy
 msgid "secp192k1"
 msgstr "secp192"
 
-#: ../../source/components/shared-faqs/algos.rst.inc:35
+#: ../../source/components/nitrokeys/hsm/faq.rst:103
+#: ../../source/components/nitrokeys/pro/faq.rst:119
+#: ../../source/components/nitrokeys/start/faq.rst:105
+#: ../../source/components/nitrokeys/storage/faq.rst:136
 #, fuzzy
 msgid "secp521k1"
 msgstr "secp521"
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:70
+#: ../../source/components/nitrokeys/hsm/faq.rst:108
 msgid ""
 "Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
 "as a PKCS#11 driver."
@@ -20779,7 +20836,7 @@ msgstr ""
 "Nitrokey HSM puede utilizarse con `Botan`_ y `TokenTools`_ utilizando "
 "OpenSC como controlador PKCS#11."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:72
+#: ../../source/components/nitrokeys/hsm/faq.rst:110
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
@@ -20787,7 +20844,7 @@ msgstr ""
 "OpenSSL no puede'usar el RNG de Nitrokey HSM's directamente porque "
 "engine-pkcs11 no'contiene un mapeo para OpenSSL a C_GenerateRandom."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:76
+#: ../../source/components/nitrokeys/hsm/faq.rst:114
 msgid ""
 "Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which "
 "has a quality of DRNG.2 (according to `AIS 31`_ of the German Federal "
@@ -20797,7 +20854,7 @@ msgstr ""
 "JCOP 2.4.1r3 que tiene una calidad de DRNG.2 (según `AIS 31`_ de la "
 "Oficina Federal Alemana de Seguridad de la Información, BSI)."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:81
+#: ../../source/components/nitrokeys/hsm/faq.rst:119
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -20805,7 +20862,7 @@ msgstr ""
 "OpenSC: Existen instrucciones completas para el framework OpenSC. Existe "
 "nitrotool como un frontend más cómodo para OpenSC."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:84
+#: ../../source/components/nitrokeys/hsm/faq.rst:122
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -20820,7 +20877,7 @@ msgstr ""
 "El módulo PKCS#11 también es compatible con las principales tarjetas de "
 "firma electrónica disponibles en el mercado alemán."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:90
+#: ../../source/components/nitrokeys/hsm/faq.rst:128
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -20831,35 +20888,40 @@ msgstr ""
 "scripts de soporte público para obtener más detalles. Para importar las "
 "claves existentes puede utilizar su SCSH o NitroKeyWrapper."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:98
-#, python-format
+#: ../../source/components/nitrokeys/hsm/faq.rst:136
 msgid ""
 "The security controller (NXP JCOP 3 P60) is Common Criteria EAL 5+ "
-"certified up to the OS level (`Certificate "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"certificate%2021-98209.pdf>`__, `Certification Report "
-"<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
-"%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__, "
-"`Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-98209_5-STLite.pdf>`__, `Java Card System Protection Profile Open "
-"Configuration, Version 3.0 "
-"<https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-"
-"profil_PP-2010-03en.pdf>`__)."
+"certified up to the OS level."
 msgstr ""
-"El controlador de seguridad (NXP JCOP 3 P60) cuenta con la certificación "
-"Common Criteria EAL 5+ hasta el nivel de sistema operativo (`Certificado "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"certificate%2021-98209.pdf>`__, `Informe de certificación "
-"<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
-"%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>%20NSCIB-"
-"CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__, `Objetivo de "
-"seguridad <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-98209_5-STLite.pdf>`__, `Configuración abierta del perfil de "
-"protección del sistema de tarjetas Java, versión 3.0 "
-"<https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-"
-"profil_PP-2010-03en.pdf>`__)."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:103
+#: ../../source/components/nitrokeys/hsm/faq.rst:138
+msgid ""
+"`Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"certificate%2021-98209.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/hsm/faq.rst:139
+#, python-format
+msgid ""
+"`Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
+"%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/hsm/faq.rst:140
+msgid ""
+"`Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-98209_5-STLite.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/hsm/faq.rst:141
+msgid ""
+"`Java Card System Protection Profile Open Configuration, Version 3.0 "
+"<https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-"
+"profil_PP-2010-03en.pdf>`__)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/hsm/faq.rst:145
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -20870,7 +20932,7 @@ msgstr ""
 "Shell para la importación. Si su clave se almacena en un almacén de "
 "claves Java, puede utilizar `NitroKeyWrapper`_ en su lugar."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:107
+#: ../../source/components/nitrokeys/hsm/faq.rst:151
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -20878,7 +20940,7 @@ msgstr ""
 "Una aproximación a las claves seguras para Hashicorp Vault/Bank-Vault en "
 "un HSM Nitrokey se puede encontrar en `banzaicloud.com`_."
 
-#: ../../source/components/nitrokeys/hsm/faq.rst:111
+#: ../../source/components/nitrokeys/hsm/faq.rst:155
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -20906,7 +20968,7 @@ msgstr ""
 " (`source <https://github.com/CardContact/sc-hsm-embedded>`_)."
 
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:18
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:20
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:19
 #, fuzzy
 msgid "macOS"
 msgstr "macOS"
@@ -21156,10 +21218,13 @@ msgid ""
 msgstr "Consulte la `overview`_ de casos de uso compatibles."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:14
+#, fuzzy
 msgid ""
-"On `WebAuthn.io`_ you can check various high-level functionalities, while"
-" `webautn.bin.coffee`_ provides good developer level details (technical) "
-"details. You can also `test`_ your Nitrokey."
+"On `WebAuthn.io <https://webauthn.io>`__ you can check various high-level"
+" functionalities, while `webautn.bin.coffee "
+"<https://webauthn.bin.coffee>`__ provides good developer level details "
+"(technical) details. You can also `test <../../software/nitropy/all-"
+"platforms/test.html>`__ your Nitrokey."
 msgstr ""
 "En `WebAuthn.io`_ puedes comprobar varias funcionalidades de alto nivel, "
 "mientras que `webautn.bin.coffee`_ proporciona buenos detalles (técnicos)"
@@ -21335,36 +21400,42 @@ msgstr ""
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:97
 msgid ""
 "The secure element (SE050M) is Common Criteria EAL 6+ security certified "
-"up to the OS level (`Certificate "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-23-0075446_2-Cert.pdf>`__, `Certification Report "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-0075446-CR2-1.pdf>`__, `Security Target "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-0075446_2-STLite.pdf>`__, `Java Card Protection Profile - Open "
-"Configuration "
-"<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__)."
+"up to the OS level."
 msgstr ""
-"El elemento seguro (SE050M) cuenta con la certificación de seguridad "
-"Common Criteria EAL 6+ hasta el nivel OS (`Certificado "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-23-0075446_2-Cert.pdf>`__, `Informe de certificación "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-0075446-CR2-1.pdf>`__, `Objetivo de seguridad "
-"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
-"CC-0075446_2-STLite.pdf>`__, `Perfil de protección de la tarjeta Java - "
-"Configuración abierta "
-"<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__)."
+
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:100
+msgid ""
+"`Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-23-0075446_2-Cert.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:101
+msgid ""
+"`Certification Report <https://commoncriteriaportal.org/files/epfiles"
+"/NSCIB-CC-0075446-CR2-1.pdf>`__"
+msgstr ""
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:102
 msgid ""
-"After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure "
-"Entra ID out of the box."
+"`Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-0075446_2-STLite.pdf>`__"
 msgstr ""
-"Después de deshabilitar `Enforce Attestation`_ Nitrokey 3 es compatible "
-"con Azure Entra ID."
 
-#: ../../source/components/nitrokeys/nitrokey3/faq.rst:106
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:103
+msgid ""
+"`Java Card Protection Profile - Open Configuration "
+"<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:107
+msgid ""
+"After `disabling Enforce Attestation <https://learn.microsoft.com/en-"
+"us/azure/active-directory/authentication/howto-authentication-"
+"passwordless-security-key#fido-security-key-optional-settings>`__ "
+"Nitrokey 3 is supported by Azure Entra ID out of the box."
+msgstr ""
+
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:111
 msgid ""
 "Starting with version 1.7.0 the Secure Element should be automatically "
 "activated, if the OpenPGP Card was not used before. To check its "
@@ -21382,7 +21453,7 @@ msgstr ""
 "desactivarla pasando ``false``. **Cambiar el backend de uno a otro "
 "siempre borrará todos tus datos dentro de la tarjeta OpenPGP.**"
 
-#: ../../source/components/nitrokeys/nitrokey3/faq.rst:112
+#: ../../source/components/nitrokeys/nitrokey3/faq.rst:118
 msgid ""
 "If you are updating from a test version firmware, we recommend factory "
 "resetting the device before using the Nitrokey 3 with the SE050 in "
@@ -23266,20 +23337,12 @@ msgstr ""
 msgid "Nitrokey Passkey FAQ"
 msgstr "Nitrokey Passkey"
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:4
-msgid "**Q:** Which Operating Systems are supported?"
-msgstr "**P:** ¿Qué sistemas operativos son compatibles?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:5
+#: ../../source/components/nitrokeys/passkey/faq.rst:6
 #, fuzzy
 msgid "Windows, Linux, macOS and BSD. Also FIDO2 is supported on Android and iOS."
 msgstr "Windows, Linux y macOS. También hay soporte para Android e iOS."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:7
-msgid "**Q:** What can I use the Nitrokey Passkey for?"
-msgstr "**P:** ¿Para qué puedo utilizar la Nitrokey Passkey?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:8
+#: ../../source/components/nitrokeys/passkey/faq.rst:10
 #, fuzzy
 msgid ""
 "Second or first factor authentication for services which support "
@@ -23287,27 +23350,20 @@ msgid ""
 "<https://www.nitrokey.com/products/nitrokeys>`_  of supported use cases."
 msgstr "Consulte la `overview`_ de casos de uso compatibles."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:11
-msgid "**Q:** How can I check if my Nitrokey Passkey is working?"
-msgstr "**P:** ¿Cómo puedo comprobar si mi Passkey de Nitrokey funciona?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:12
+#: ../../source/components/nitrokeys/passkey/faq.rst:15
 #, fuzzy
 msgid ""
-"On `WebAuthn.io`_ you can check various high-level functionalities, while"
-" `webautn.bin.coffee`_ provides good developer level details (technical) "
-"details. You can also test your Nitrokey with `nitropy`_."
+"On `WebAuthn.io <https://webauthn.io/>`_ you can check various high-level"
+" functionalities, while `webautn.bin.coffee "
+"<https://webauthn.bin.coffee/>`_ provides good developer level details "
+"(technical) details. You can also test your Nitrokey with `nitropy "
+"<../../software/nitropy/index.html>`_."
 msgstr ""
 "En `WebAuthn.io`_ puedes comprobar varias funcionalidades de alto nivel, "
 "mientras que `webautn.bin.coffee`_ proporciona buenos detalles (técnicos)"
 " a nivel de desarrollador. También puede `probar`_ su Nitrokey."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:17
-#, fuzzy
-msgid "**Q:** What happens if I lose my Nitrokey Passkey device?"
-msgstr "Listado de dispositivos Nitrokey 3"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:18
+#: ../../source/components/nitrokeys/passkey/faq.rst:22
 #, fuzzy
 msgid ""
 "When securing accounts using FIDO2 (two-factor authentication and "
@@ -23324,11 +23380,7 @@ msgstr ""
 "Nitrokey FIDO2. Si pierdes un Nitrokey FIDO2, puedes seguir iniciando "
 "sesión con el segundo Nitrokey FIDO2 (o con otro segundo factor)."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:25
-msgid "**Q:** How large is the storage capacity?"
-msgstr "**P:** ¿Cuál es la capacidad de almacenamiento?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:26
+#: ../../source/components/nitrokeys/passkey/faq.rst:31
 #, fuzzy
 msgid ""
 "The Nitrokey Passkey doesn't contain storage capability for ordinary data"
@@ -23338,34 +23390,19 @@ msgstr ""
 "El Nitrokey Pro no contiene capacidad de almacenamiento para datos "
 "ordinarios (sólo puede almacenar claves criptográficas y certificados)."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:29
-msgid "**Q:** How to use Nitrokey Passkey with Azure Entra ID (Active Directory)?"
-msgstr ""
-"**P:** ¿Cómo utilizar Nitrokey Passkey con Azure Entra ID (Active "
-"Directory)?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:30
-#, fuzzy
+#: ../../source/components/nitrokeys/passkey/faq.rst:36
 msgid ""
-"After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by "
-"Azure Entra ID out of the box."
+"After `disabling Enforce Attestation <https://learn.microsoft.com/en-"
+"us/azure/active-directory/authentication/howto-authentication-"
+"passwordless-security-key#fido-security-key-optional-settings>`_ Nitrokey"
+" Passkey is supported by Azure Entra ID out of the box."
 msgstr ""
-"Después de deshabilitar `Enforce Attestation`_ Nitrokey 3 es compatible "
-"con Azure Entra ID."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:32
-msgid "**Q:** Why does the Nitrokey Passkey not show up in GnuPG?"
-msgstr "**P:** ¿Por qué no aparece el Passkey de Nitrokey en GnuPG?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:33
+#: ../../source/components/nitrokeys/passkey/faq.rst:40
 msgid "The Nitrokey Passkey has no support for OpenPGP."
 msgstr "Nitrokey Passkey no es compatible con OpenPGP."
 
-#: ../../source/components/nitrokeys/passkey/faq.rst:35
-msgid "**Q:** Why does the Nitrokey Passkey not show up in Nitrokey App?"
-msgstr "**P:** ¿Por qué no aparece la Passkey de Nitrokey en Nitrokey App?"
-
-#: ../../source/components/nitrokeys/passkey/faq.rst:36
+#: ../../source/components/nitrokeys/passkey/faq.rst:44
 msgid "The Nitrokey Passkey is not supported by the Nitrokey App 1 and 2."
 msgstr "Nitrokey Passkey no es compatible con Nitrokey App 1 y 2."
 
@@ -23642,35 +23679,38 @@ msgstr ""
 "El PIN para FIDO2 puede configurarse con la utilidad `Nitropy "
 "<../../software/nitropy/index.html>`__."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:6
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:5
 #, fuzzy
 msgid "General"
 msgstr "**General**"
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:8
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:7
 #, fuzzy
 msgid ""
-"On `WebAuthn.io`_ you can check various high-level functionalities, while"
-" `webautn.bin.coffee`_ provides good developer level details (technical) "
-"details."
+"On `WebAuthn.io <https://webauthn.io/>`_ you can check various high-level"
+" functionalities, while `webautn.bin.coffee "
+"<https://webauthn.bin.coffee/>`_ provides good developer level details "
+"(technical) details."
 msgstr ""
 "En `WebAuthn.io`_ puedes comprobar varias funcionalidades de alto nivel, "
 "mientras que `webautn.bin.coffee`_ proporciona buenos detalles (técnicos)"
 " a nivel de desarrollador. También puede `probar`_ su Nitrokey."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:10
-msgid "Check if the LED is working as `expected`_."
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:9
+#, fuzzy
+msgid "Check if the LED is working as `expected <./led.html>`_."
 msgstr "Compruebe si el LED funciona como `esperaba`_."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:12
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:11
+#, fuzzy
 msgid ""
-"You can test the Nitrokey Passkey using `nitropy`_ with  ``nitropy nkpk "
-"test``."
+"You can test the Nitrokey Passkey using `nitropy "
+"<../../software/nitropy/index.html>`_ with  ``nitropy nkpk test``."
 msgstr ""
 "Puedes probar el Passkey de Nitrokey usando `nitropy`_ con ``nitropy nkpk"
 " test``."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:17
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:16
 msgid ""
 "To check whether the Nitrokey Passkey is correctly recognized, open the "
 "Device Manager and check for the Nitrokey Passkey appearing as a USB "
@@ -23680,7 +23720,7 @@ msgstr ""
 "Administrador de dispositivos y compruebe si Nitrokey Passkey aparece "
 "como dispositivo USB."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:22
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:21
 msgid ""
 "To check whether the Nitrokey Passkey is correctly recognized, open the "
 "System Report and check for the Nitrokey Passkey appearing as a USB "
@@ -23693,15 +23733,16 @@ msgstr ""
 "siguiente comando para comprobar si su sistema reconoce el Nitrokey "
 "Passkey."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:32
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:31
+#, fuzzy
 msgid ""
 "To check whether the Nitrokey Passkey is correctly recognized, check if "
-"it is shown with `lsusb`."
+"it is shown with ``lsusb``."
 msgstr ""
 "Para comprobar si la Passkey de Nitrokey se reconoce correctamente, "
 "compruebe si se muestra con `lsusb`."
 
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:36
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:35
 #, fuzzy
 msgid ""
 "Copy this file `41-nitrokey.rules "
@@ -23820,21 +23861,21 @@ msgstr "Borra la clave de cifrado sin sobrescribir los datos cifrados."
 msgid "Nitrokey Pro 2 FAQ"
 msgstr "Nitrokey Pro 2 FAQ"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:9
-#: ../../source/components/nitrokeys/start/faq.rst:8
-#: ../../source/components/nitrokeys/storage/faq.rst:11
-msgid "**User PIN:** \"123456\""
+#: ../../source/components/nitrokeys/pro/faq.rst:14
+#: ../../source/components/nitrokeys/start/faq.rst:14
+#, fuzzy
+msgid "User PIN: ``123456``"
 msgstr "**PIN de usuario:** \"123456\""
 
-#: ../../source/components/nitrokeys/pro/faq.rst:10
-#: ../../source/components/nitrokeys/start/faq.rst:9
-#: ../../source/components/nitrokeys/storage/faq.rst:12
-msgid "**Administrator PIN:** \"12345678\""
+#: ../../source/components/nitrokeys/pro/faq.rst:15
+#: ../../source/components/nitrokeys/start/faq.rst:15
+#, fuzzy
+msgid "Administrator PIN: ``12345678``"
 msgstr "**PIN de administrador:** \"12345678\""
 
-#: ../../source/components/nitrokeys/pro/faq.rst:12
-#: ../../source/components/nitrokeys/start/faq.rst:11
-#: ../../source/components/nitrokeys/storage/faq.rst:15
+#: ../../source/components/nitrokeys/pro/faq.rst:17
+#: ../../source/components/nitrokeys/start/faq.rst:17
+#: ../../source/components/nitrokeys/storage/faq.rst:21
 msgid ""
 "We strongly recommend to change these PINs/password to user-chosen values"
 " before using the Nitrokey."
@@ -23842,7 +23883,9 @@ msgstr ""
 "Recomendamos encarecidamente cambiar estos PINs/contraseñas por valores "
 "elegidos por el usuario antes de utilizar Nitrokey."
 
-#: ../../source/components/shared-faqs/pins.rst.inc:9
+#: ../../source/components/nitrokeys/pro/faq.rst:27
+#: ../../source/components/nitrokeys/start/faq.rst:27
+#: ../../source/components/nitrokeys/storage/faq.rst:41
 msgid ""
 "Nitrokey Storage's PINs can be up to 20 digits long and can consist of "
 "numbers, characters and special characters. Note: When using GnuPG or "
@@ -23854,7 +23897,9 @@ msgstr ""
 "se utiliza GnuPG u OpenSC, se pueden utilizar PINs de 32 caracteres, pero"
 " no son compatibles con Nitrokey App."
 
-#: ../../source/components/shared-faqs/pins.rst.inc:16
+#: ../../source/components/nitrokeys/pro/faq.rst:34
+#: ../../source/components/nitrokeys/start/faq.rst:34
+#: ../../source/components/nitrokeys/storage/faq.rst:48
 msgid ""
 "The user PIN is at least 6-digits long and is used to get access to the "
 "contect of the Nitrokey. This is the PIN you will use a lot in every day "
@@ -23866,12 +23911,15 @@ msgstr ""
 "por ejemplo, para descifrar mensajes, para desbloquear tu almacenamiento "
 "cifrado (sólo NK Storage), etc."
 
-#: ../../source/components/shared-faqs/pins.rst.inc:21
+#: ../../source/components/nitrokeys/pro/faq.rst:39
+#: ../../source/components/nitrokeys/start/faq.rst:39
+#: ../../source/components/nitrokeys/storage/faq.rst:53
+#, fuzzy
 msgid ""
 "The user PIN can have up to 20 digits and other characters (e.g. "
 "alphabetic and special characters). But as the user PIN is blocked as "
 "soon three wrong PIN attempts were done, it is sufficiently secure to "
-"only have a 6 digits PIN. The default PIN is 123456."
+"only have a 6 digits PIN. The default PIN is ``123456``."
 msgstr ""
 "El PIN de usuario puede tener hasta 20 dígitos y otros caracteres (por "
 "ejemplo, caracteres alfabéticos y especiales). Pero como el PIN de "
@@ -23879,7 +23927,9 @@ msgstr ""
 "suficientemente seguro tener sólo un PIN de 6 dígitos. El PIN por defecto"
 " es 123456."
 
-#: ../../source/components/shared-faqs/pins.rst.inc:28
+#: ../../source/components/nitrokeys/pro/faq.rst:46
+#: ../../source/components/nitrokeys/start/faq.rst:46
+#: ../../source/components/nitrokeys/storage/faq.rst:60
 msgid ""
 "The admin PIN is at least 8-digits long and is used to change "
 "contents/settings of the Nitrokey. That is to say after initializing the "
@@ -23893,12 +23943,15 @@ msgstr ""
 "demasiada frecuencia (por ejemplo, si quiere añadir otra contraseña a la "
 "caja fuerte de la Nitrokey Pro o la Nitrokey Storage)."
 
-#: ../../source/components/shared-faqs/pins.rst.inc:34
+#: ../../source/components/nitrokeys/pro/faq.rst:52
+#: ../../source/components/nitrokeys/start/faq.rst:52
+#: ../../source/components/nitrokeys/storage/faq.rst:66
+#, fuzzy
 msgid ""
 "The admin PIN can have up to 20 digits and other characters (e.g. "
 "alphabetic and special characters). But as the admin PIN is blocked as "
 "soon three wrong PIN attempts were done, it is sufficiently secure to "
-"only have 8 digits PIN. The default PIN is 12345678."
+"only have 8 digits PIN. The default PIN is ``12345678``."
 msgstr ""
 "El PIN de administrador puede tener hasta 20 dígitos y otros caracteres "
 "(por ejemplo, caracteres alfabéticos y especiales). Pero como el PIN de "
@@ -23906,8 +23959,8 @@ msgstr ""
 "erróneos, es suficientemente seguro tener sólo 8 dígitos de PIN. El PIN "
 "por defecto es 12345678."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:19
-#: ../../source/components/nitrokeys/storage/faq.rst:36
+#: ../../source/components/nitrokeys/pro/faq.rst:59
+#: ../../source/components/nitrokeys/storage/faq.rst:73
 msgid ""
 "GnuPG and nitrokey-app sometimes tend to hand each other. This is a known"
 " problem and it can be fixed by re-inserting the Nitrokey into the USB "
@@ -23917,8 +23970,8 @@ msgstr ""
 " conocido y se puede arreglar volviendo a insertar el Nitrokey en la "
 "ranura USB."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:25
-#: ../../source/components/nitrokeys/start/faq.rst:18
+#: ../../source/components/nitrokeys/pro/faq.rst:64
+#: ../../source/components/nitrokeys/start/faq.rst:59
 msgid ""
 "GnuPG is required for many use cases. It is a command line tool but "
 "usually you don't need to invoke it directly but use another application "
@@ -23928,8 +23981,8 @@ msgstr ""
 "de comandos, pero normalmente no es necesario invocarla directamente, "
 "sino utilizar otra aplicación con interfaz de usuario."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:29
-#: ../../source/components/nitrokeys/start/faq.rst:22
+#: ../../source/components/nitrokeys/pro/faq.rst:68
+#: ../../source/components/nitrokeys/start/faq.rst:63
 msgid ""
 "Don't use GnuPG in parallel with OpenSC or another PKCS#11 driver because"
 " both may interfere and unexpected issues may result."
@@ -23937,8 +23990,8 @@ msgstr ""
 "No utilice GnuPG en paralelo con OpenSC u otro controlador PKCS#11 porque"
 " ambos pueden interferir y pueden surgir problemas inesperados."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:31
-#: ../../source/components/nitrokeys/start/faq.rst:24
+#: ../../source/components/nitrokeys/pro/faq.rst:70
+#: ../../source/components/nitrokeys/start/faq.rst:65
 msgid ""
 "Install GPG4Win which contains Gnu Privacy Assistant (GPA) and GnuPG "
 "(GPG). Start Gnu Privacy Assistant (GPA) or another application such as "
@@ -23955,66 +24008,85 @@ msgstr ""
 "Pro por lo que estas instrucciones funcionan también con Nitrokey. En "
 "general se recomienda la documentación oficial."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:40
-#: ../../source/components/nitrokeys/storage/faq.rst:60
+#: ../../source/components/nitrokeys/pro/faq.rst:79
+#: ../../source/components/nitrokeys/storage/faq.rst:96
 msgid "Encryption of 50kiB of data:"
 msgstr "Cifrado de 50kiB de datos:"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:42
-#: ../../source/components/nitrokeys/storage/faq.rst:62
+#: ../../source/components/nitrokeys/pro/faq.rst:81
+#: ../../source/components/nitrokeys/storage/faq.rst:98
 msgid "256 bit AES, 2048 bytes per command -> 880 bytes per second"
 msgstr "256 bits AES, 2048 bytes por comando -> 880 bytes por segundo"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:43
-#: ../../source/components/nitrokeys/storage/faq.rst:63
+#: ../../source/components/nitrokeys/pro/faq.rst:82
+#: ../../source/components/nitrokeys/storage/faq.rst:99
 msgid "128 bit AES, 2048 bytes per command -> 893 bytes per second"
 msgstr "AES de 128 bits, 2048 bytes por comando -> 893 bytes por segundo"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:44
-#: ../../source/components/nitrokeys/storage/faq.rst:64
+#: ../../source/components/nitrokeys/pro/faq.rst:83
+#: ../../source/components/nitrokeys/storage/faq.rst:100
 msgid "256 bit AES, 240 bytes per command -> 910 bytes per second"
 msgstr "256 bits AES, 240 bytes por comando -> 910 bytes por segundo"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:45
-#: ../../source/components/nitrokeys/storage/faq.rst:65
+#: ../../source/components/nitrokeys/pro/faq.rst:84
+#: ../../source/components/nitrokeys/storage/faq.rst:101
 msgid "128 bit AES, 240 bytes per command -> 930 bytes per second"
 msgstr "AES de 128 bits, 240 bytes por comando -> 930 bytes por segundo"
 
-#: ../../source/components/nitrokeys/pro/faq.rst:53
+#: ../../source/components/nitrokeys/pro/faq.rst:91
+#, fuzzy
+msgid "Pro"
+msgstr "proxy"
+
+#: ../../source/components/nitrokeys/pro/faq.rst:91
+#, fuzzy
+msgid "Pro 2"
+msgstr "proxy"
+
+#: ../../source/components/nitrokeys/pro/faq.rst:125
 msgid "Nitrokey Pro contains a tamper resistant smart card."
 msgstr ""
 "Nitrokey Pro contiene una tarjeta inteligente resistente a la "
 "manipulación."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:57
+#: ../../source/components/nitrokeys/pro/faq.rst:129
+#: ../../source/components/nitrokeys/storage/faq.rst:145
 msgid ""
 "The security controller (NXP Smart Card Controller P5CD081V1A and its "
 "major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and "
 "P5CD016V1A each with IC dedicated Software) is Common Criteria EAL 5+ "
-"certified up to the OS level (`Certification Report "
-"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
-"`Security Target "
-"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
-"`Maintenance Report "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
-"`Maintenance ST "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__)."
+"certified up to the OS level."
 msgstr ""
-"El controlador de seguridad (NXP Smart Card Controller P5CD081V1A y sus "
-"principales configuraciones P5CC081V1A, P5CN081V1A, P5CD041V1A, "
-"P5CD021V1A y P5CD016V1A, cada una con software IC dedicado) cuenta con la"
-" certificación Common Criteria EAL 5+ hasta el nivel de sistema operativo"
-" (`Informe de certificación "
-"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
-"`Objetivo de seguridad "
-"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
-"`Informe de mantenimiento "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
-"`ST de mantenimiento "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__)."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:64
-#: ../../source/components/nitrokeys/storage/faq.rst:83
+#: ../../source/components/nitrokeys/pro/faq.rst:133
+#: ../../source/components/nitrokeys/storage/faq.rst:150
+msgid ""
+"`Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/pro/faq.rst:134
+#: ../../source/components/nitrokeys/storage/faq.rst:151
+msgid ""
+"`Security Target "
+"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/pro/faq.rst:135
+#: ../../source/components/nitrokeys/storage/faq.rst:152
+msgid ""
+"`Maintenance Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/pro/faq.rst:136
+msgid ""
+"`Maintenance ST "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__"
+msgstr ""
+
+#: ../../source/components/nitrokeys/pro/faq.rst:140
+#: ../../source/components/nitrokeys/storage/faq.rst:159
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
 "should work. `This script`_ may be useful. The user comio `created a "
@@ -24026,8 +24098,8 @@ msgstr ""
 "comio `creó un archivo systemd`_ para utilizar scdrand y por tanto el "
 "TRNG de forma más general. También creó un `ebuild para Gentoo`_."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:69
-#: ../../source/components/nitrokeys/storage/faq.rst:88
+#: ../../source/components/nitrokeys/pro/faq.rst:145
+#: ../../source/components/nitrokeys/storage/faq.rst:164
 msgid ""
 "Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
 "(TRNG) for generating keys on the device. The entropy generated by the "
@@ -24039,12 +24111,12 @@ msgstr ""
 "entropía generada por el TRNG se utiliza para toda la longitud de la "
 "clave. Por lo tanto, el TRNG cumple con `BSI TR-03116`_."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:73
-#: ../../source/components/nitrokeys/storage/faq.rst:92
+#: ../../source/components/nitrokeys/pro/faq.rst:149
+#: ../../source/components/nitrokeys/storage/faq.rst:168
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "El TRNG proporciona unos 40 kbit/s."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:77
+#: ../../source/components/nitrokeys/pro/faq.rst:153
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -24052,7 +24124,7 @@ msgstr ""
 "El Nitrokey Pro no contiene capacidad de almacenamiento para datos "
 "ordinarios (sólo puede almacenar claves criptográficas y certificados)."
 
-#: ../../source/components/nitrokeys/pro/faq.rst:82
+#: ../../source/components/nitrokeys/pro/faq.rst:158
 #, fuzzy
 msgid ""
 "The Nitrokey Pro can store three RSA key pairs. All keys use the same "
@@ -24544,11 +24616,15 @@ msgstr ""
 msgid "Nitrokey Start FAQ"
 msgstr "Nitrokey Start FAQ"
 
-#: ../../source/components/nitrokeys/start/faq.rst:36
+#: ../../source/components/nitrokeys/start/faq.rst:77
+msgid "Start"
+msgstr "Inicie"
+
+#: ../../source/components/nitrokeys/start/faq.rst:110
 msgid "Nitrokey Start is implemented in the microprocessor."
 msgstr "Nitrokey Start está implementado en el microprocesador."
 
-#: ../../source/components/nitrokeys/start/faq.rst:40
+#: ../../source/components/nitrokeys/start/faq.rst:114
 msgid ""
 "The Nitrokey Start doesn't contain storage capability for ordinary data "
 "(it can only store cryptographic keys and certificates)."
@@ -24556,7 +24632,7 @@ msgstr ""
 "El Nitrokey Start no contiene capacidad de almacenamiento de datos "
 "ordinarios (sólo puede almacenar claves criptográficas y certificados)."
 
-#: ../../source/components/nitrokeys/start/faq.rst:45
+#: ../../source/components/nitrokeys/start/faq.rst:119
 #, fuzzy
 msgid ""
 "The Nitrokey Start can store nine RSA key pairs for three identities. For"
@@ -25017,11 +25093,19 @@ msgstr ""
 " un almacenamiento no volátil (encriptado), el :doc:`Nitrokey Pro 2 FAQ "
 "<../pro/faq>` también se aplica en parte."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:13
+#: ../../source/components/nitrokeys/storage/faq.rst:17
+msgid "**User PIN:** \"123456\""
+msgstr "**PIN de usuario:** \"123456\""
+
+#: ../../source/components/nitrokeys/storage/faq.rst:18
+msgid "**Administrator PIN:** \"12345678\""
+msgstr "**PIN de administrador:** \"12345678\""
+
+#: ../../source/components/nitrokeys/storage/faq.rst:19
 msgid "**Firmware Password**: \"12345678\""
 msgstr "**Contraseña del firmware**: \"12345678\""
 
-#: ../../source/components/nitrokeys/storage/faq.rst:21
+#: ../../source/components/nitrokeys/storage/faq.rst:26
 msgid ""
 "Nitrokey Storage can store and encrypt 8, 32, or 64 GB of data (depending"
 " on particular model)."
@@ -25029,7 +25113,7 @@ msgstr ""
 "Nitrokey Storage puede almacenar y cifrar 8, 32 o 64 GB de datos "
 "(dependiendo del modelo concreto)."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:27
+#: ../../source/components/nitrokeys/storage/faq.rst:31
 msgid ""
 "On a new Nitrokey Storage device, before you can access the encrypted "
 "volume make sure you first \"Destroy encrypted data\" inside the Nitrokey"
@@ -25039,7 +25123,7 @@ msgstr ""
 "volumen encriptado asegúrese de que primero \"Destruye los datos "
 "encriptados\" dentro de la aplicación Nitrokey."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:42
+#: ../../source/components/nitrokeys/storage/faq.rst:78
 msgid ""
 "The firmware password should meet general password recommandations (e.g. "
 "use alphabetic characters, digits and special characters or use a "
@@ -25054,7 +25138,7 @@ msgstr ""
 "Nitrokey Storage. Vea más instrucciones para el proceso de actualización "
 "aquí."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:48
+#: ../../source/components/nitrokeys/storage/faq.rst:84
 msgid ""
 "The firmware password is never blocked. An attacker could try to guess "
 "the password and would have unlimited attempts. Therefore you must choose"
@@ -25064,7 +25148,7 @@ msgstr ""
 "adivinar la contraseña y tendría intentos ilimitados. Por lo tanto, debe "
 "elegir una contraseña fuerte. La contraseña por defecto es 12345678."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:54
+#: ../../source/components/nitrokeys/storage/faq.rst:90
 msgid ""
 "The Nitrokey Storage can store three RSA key pairs. All keys use the same"
 " identity but are used for different purposes: authentication, encryption"
@@ -25074,48 +25158,37 @@ msgstr ""
 "claves utilizan la misma identidad, pero se emplean para fines "
 "diferentes: autenticación, cifrado y firma."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:71
+#: ../../source/components/nitrokeys/storage/faq.rst:108
+#, fuzzy
+msgid "Storage"
+msgstr "Restaurar"
+
+#: ../../source/components/nitrokeys/storage/faq.rst:108
+#, fuzzy
+msgid "Storage 2"
+msgstr "Soporte de almacenamiento"
+
+#: ../../source/components/nitrokeys/storage/faq.rst:141
 msgid "Nitrokey Storage contains a tamper resistant smart card."
 msgstr ""
 "Nitrokey Storage contiene una tarjeta inteligente resistente a la "
 "manipulación."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:75
+#: ../../source/components/nitrokeys/storage/faq.rst:153
 msgid ""
-"The security controller (NXP Smart Card Controller P5CD081V1A and its "
-"major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and "
-"P5CD016V1A each with IC dedicated Software) is Common Criteria EAL 5+ "
-"certified up to the OS level (`Certification Report "
-"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
-"`Security Target "
-"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
-"`Maintenance Report "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
 "`Maintenance ST "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`). "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/storage/faq.rst:155
+msgid ""
 "Additionally `Cure53 <https://cure53.de>`__ has performed an `independent"
 " security audit <https://www.nitrokey.com/news/2015/nitrokey-storage-got-"
 "great-results-3rd-party-security-audit>`__ of the hardware, firmware, and"
 " Nitrokey App."
 msgstr ""
-"El controlador de seguridad (NXP Smart Card Controller P5CD081V1A y sus "
-"principales configuraciones P5CC081V1A, P5CN081V1A, P5CD041V1A, "
-"P5CD021V1A y P5CD016V1A, cada una con software IC dedicado) cuenta con la"
-" certificación Common Criteria EAL 5+ hasta el nivel de sistema operativo"
-" (`Informe de certificación "
-"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
-"`Objetivo de seguridad "
-"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
-"`Informe de mantenimiento "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
-"`ST de mantenimiento "
-"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`). "
-"`Además, `Cure53 <https://cure53.de>`__ ha realizado una auditoría de "
-"seguridad independiente <https://www.nitrokey.com/news/2015/nitrokey-"
-"storage-got-great-results-3rd-party-security-audit>`__ del hardware, el "
-"firmware y la aplicación Nitrokey."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:96
+#: ../../source/components/nitrokeys/storage/faq.rst:172
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -25124,7 +25197,7 @@ msgstr ""
 "inicializar el Nitrokey Storage y descargar la última aplicación "
 "Nitrokey."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:101
+#: ../../source/components/nitrokeys/storage/faq.rst:177
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -25140,7 +25213,7 @@ msgstr ""
 "quieras. Recomendamos FAT(32) si quieres acceder a la partición desde "
 "varios sistemas operativos."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:106
+#: ../../source/components/nitrokeys/storage/faq.rst:182
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -25149,7 +25222,7 @@ msgstr ""
 "eche un vistazo a las instrucciones correspondientes a los volúmenes "
 "ocultos."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:110
+#: ../../source/components/nitrokeys/storage/faq.rst:186
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -25166,7 +25239,7 @@ msgstr ""
 "VeraCrypt's/TrueCrypt's pero con Nitrokey Storage toda la funcionalidad "
 "de los volúmenes ocultos se implementa en el hardware."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:121
+#: ../../source/components/nitrokeys/storage/faq.rst:197
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -25186,7 +25259,7 @@ msgstr ""
 " favor no escribas nada en el almacenamiento encriptado después de crear "
 "un volumen oculto (aunque tienes que desbloquearlo primero)."
 
-#: ../../source/components/nitrokeys/storage/faq.rst:129
+#: ../../source/components/nitrokeys/storage/faq.rst:205
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
@@ -25616,139 +25689,11 @@ msgstr "`Almacenamiento oculto <../features/hidden-storage/index.html>`_"
 msgid "Check out the features:"
 msgstr "Echa un vistazo a las características:"
 
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:5
-msgid "Verification of Sealed Hardware"
-msgstr "Verificación del hardware sellado"
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:7
-#, fuzzy
+#: ../../source/components/nitropad-nitropc/change-pins.rst:4
 msgid ""
-"If you have ordered the unit with the option “sealed screws and sealed "
-"bag”, please `verify the sealing <../sealed-hardware.html>`_ before "
-"unpacking. If you do not know what this means, skip this section."
+"For changing the user and admin PIN, please refer to `Change PINs "
+"<../nitrokeys/features/openpgp-card/change-pins.html>`__."
 msgstr ""
-"Si ha pedido la unidad con la opción \"tornillos sellados y bolsa "
-"sellada\", por favor `verifique el sellado <sealed-hardware.html>`_ antes"
-" de desembalar. Si no sabe lo que significa, sáltese esta sección."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:12
-msgid "Secure Starting Procedure"
-msgstr "Procedimiento de arranque seguro"
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:14
-#, fuzzy
-msgid ""
-"With the NitroPad and NitroPC, malicious changes to the BIOS, operating "
-"system, and software can be easily detected. For example, if you left "
-"your NitroPad in a hotel room, you can use your Nitrokey to check if it "
-"has been tampered with while you were away. If an attacker modifies the "
-"NitroPad’s firmware or operating system, the Nitrokey will detect this "
-"(instructions below)."
-msgstr ""
-"Con el NitroPad, se pueden detectar fácilmente los cambios maliciosos en "
-"la BIOS, el sistema operativo y el software. Por ejemplo, si ha dejado su"
-" NitroPad en una habitación de hotel, puede utilizar su Nitrokey para "
-"comprobar si ha sido manipulado mientras estaba fuera. Si un atacante "
-"modifica el firmware o el sistema operativo del NitroPad, el Nitrokey lo "
-"detectará (instrucciones más abajo)."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:21
-#, fuzzy
-msgid ""
-"Each time you start the NitroPad or the NitroPC, you should - if possible"
-" - connect your Nitrokey. If the Nitrokey is plugged in and the system "
-"has not been modified, the following screen will appear when it is turned"
-" on."
-msgstr ""
-"Cada vez que inicie el NitroPad, deberá -si es posible- conectar su "
-"Nitrokey. Si la Nitrokey está conectada y el sistema no ha sido "
-"modificado, al encender el NitroPad aparecerá la siguiente pantalla."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:29
-#, fuzzy
-msgid ""
-"The box marked in red contains the information that the BIOS has not been"
-" changed and that the shared secret of the NitroPad or the NitroPC and "
-"the Nitrokey match. But this information is not sufficient, because an "
-"attacker could have faked it. If at the same time the Nitrokey also "
-"flashes green, everything is fine. An attacker would have to have had "
-"access to the NitroPad or NitroPC and Nitrokey to achieve this result. It"
-" is therefore important that you do not leave both devices unattended."
-msgstr ""
-"La casilla marcada en rojo contiene la información de que la BIOS no ha "
-"sido modificada y que el secreto compartido del NitroPad y la Nitrokey "
-"coinciden. Pero esta información no es suficiente, porque un atacante "
-"podría haberla falsificado. Si al mismo tiempo la Nitrokey también "
-"parpadea en verde, todo está bien. Un atacante tendría que haber tenido "
-"acceso al NitroPad y a la Nitrokey para conseguir este resultado. Por lo "
-"tanto, es importante que no deje ambos dispositivos sin vigilancia."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:37
-#, fuzzy
-msgid ""
-"If the information on the NitroPad or NitroPC does not match the "
-"information on the Nitrokey, the background would turn red and the "
-"message “Invalid Code” would appear. This could indicate that "
-"manipulation has taken place."
-msgstr ""
-"Si la información del NitroPad no coincide con la del Nitrokey, el fondo "
-"se volverá rojo y aparecerá el mensaje \"Código no válido\". Esto podría "
-"indicar que se ha producido una manipulación."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:44
-msgid ""
-"How the boot process may look like if the system has been changed (for "
-"example after an update) and what error messages may otherwise occur is "
-"described further below."
-msgstr ""
-"Más adelante se describe cómo puede ser el proceso de arranque si el "
-"sistema ha sido modificado (por ejemplo, después de una actualización) y "
-"qué mensajes de error pueden aparecer en caso contrario."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content1.rst:50
-#, fuzzy
-msgid ""
-"The NitroPad and NitroPC can also be started without the Nitrokey. If you"
-" don’t have the Nitrokey with you, but are sure that the hardware has not"
-" been manipulated, you can boot your system without checking."
-msgstr ""
-"El NitroPad también puede iniciarse sin la Nitrokey. Si no tiene la "
-"Nitrokey consigo, pero está seguro de que el hardware no ha sido "
-"manipulado, puede arrancar su sistema sin comprobarlo."
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content2.rst:2
-msgid "Behavior After a System Update"
-msgstr "Comportamiento tras una actualización del sistema"
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content2.rst:4
-#, fuzzy
-msgid ""
-"The NitroPad and NitroPC firmware checks certain system files for "
-"changes. If your operating system has updated important components, you "
-"will be warned the next time you boot the NitroPad or NitroPC. This could"
-" look like this, for example:"
-msgstr ""
-"El firmware de NitroPad comprueba ciertos archivos del sistema en busca "
-"de cambios. Si su sistema operativo ha actualizado componentes "
-"importantes, se le avisará la próxima vez que arranque el NitroPad. Esto "
-"podría ser así, por ejemplo:"
-
-#: ../../source/components/nitropad-nitropc/content/shared-index-content2.rst:12
-#, fuzzy
-msgid ""
-"That’s why it’s important to restart your NitroPad or your NitroPC under "
-"controlled conditions after a system update. Only when the new status has"
-" been confirmed can you leave the device unattended again. Otherwise, you"
-" will not be able to distinguish a possible attack from a system update. "
-"Detailed instructions for a system update can be `found here <../heads"
-"/system-update.html>`_."
-msgstr ""
-"Por eso es importante reiniciar su NitroPad bajo condiciones controladas "
-"después de una actualización del sistema. Sólo cuando se haya confirmado "
-"el nuevo estado, podrá volver a dejar el dispositivo sin vigilancia. De "
-"lo contrario, no podrá distinguir un posible ataque de una actualización "
-"del sistema. Las instrucciones detalladas para una actualización del "
-"sistema se pueden `encontrar aquí <system-update.html>`_."
 
 #: ../../source/components/nitropad-nitropc/faq.rst:2
 #, fuzzy
@@ -25790,7 +25735,7 @@ msgstr ""
 "existe ahora una herramienta GUI para eso:"
 
 #: ../../source/components/nitropad-nitropc/faq.rst:20
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:41
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:50
 msgid "Change Password Qubes Image"
 msgstr "Cambiar contraseña Qubes Imagen"
 
@@ -26788,6 +26733,13 @@ msgstr "Qubes"
 msgid "Operating System Reinstallation"
 msgstr "Reinstalación del sistema operativo"
 
+#: ../../source/components/nitropad-nitropc/index.rst:17
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:21
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:2
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:22
+msgid "Secure Starting Procedure"
+msgstr "Procedimiento de arranque seguro"
+
 #: ../../source/components/nitropad-nitropc/index.rst:2
 #, fuzzy
 msgid "NitroPad, NitroPC"
@@ -27245,8 +27197,32 @@ msgstr ""
 "Si desea utilizar un ratón o teclado dedicado para Linux Qube, entonces "
 "necesita utilizar sys-usb y conectar el dispositivo deseado a él."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:19
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:40
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:14
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:14
+msgid "Verification of Sealed Hardware"
+msgstr "Verificación del hardware sellado"
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:16
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:16
+#, fuzzy
+msgid ""
+"If you have ordered the unit with the option “sealed screws and sealed "
+"bag”, please `verify the sealing <../sealed-hardware.html>`_ before "
+"unpacking. If you do not know what this means, skip this section."
+msgstr ""
+"Si ha pedido la unidad con la opción \"tornillos sellados y bolsa "
+"sellada\", por favor `verifique el sellado <sealed-hardware.html>`_ antes"
+" de desembalar. Si no sabe lo que significa, sáltese esta sección."
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:23
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:24
+msgid ""
+"Before the first start you should get familiar with the `Secure Starting "
+"Procedure <../secure-starting-procedure.html>`__."
+msgstr ""
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:28
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:51
 msgid ""
 "After purchase, the passwords are set to a default value and must be "
 "changed by you:"
@@ -27254,8 +27230,8 @@ msgstr ""
 "Después de la compra, las contraseñas se establecen en un valor por "
 "defecto y deben ser cambiadas por usted:"
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:22
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:43
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:31
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:54
 msgid ""
 "Press Enter (“Default Boot”) after booting the system, provided the "
 "NitroPad has not shown any errors and the Nitrokey is lit green (see "
@@ -27265,7 +27241,7 @@ msgstr ""
 "cuando el NitroPad no haya mostrado ningún error y la Nitrokey esté "
 "iluminada en verde (ver arriba)."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:26
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:35
 #, fuzzy
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
@@ -27275,8 +27251,8 @@ msgstr ""
 "contraseña para descifrar el disco duro. Introduzca la frase de "
 "contraseña por defecto \"PleaseChangeMe\"."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:32
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:53
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:41
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:64
 msgid ""
 "The system will then guide you through the process of creating a user "
 "account. After that you should have successfully booted the system and "
@@ -27286,7 +27262,7 @@ msgstr ""
 "cuenta de usuario. Después de esto debería haber arrancado con éxito el "
 "sistema y ya podría utilizarlo con normalidad."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:36
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:45
 #, fuzzy
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey "
@@ -27295,7 +27271,7 @@ msgstr ""
 "Abre la App Nitrokey preinstalada y cambia los PINs de tu Nitrokey como `"
 " se describe aquí <change-pins.html>`_."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:39
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:48
 msgid ""
 "Change the passphrase for the hard disk encryption by searching in the "
 "Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
@@ -27305,7 +27281,7 @@ msgstr ""
 "menú Qubes \"Cambiar contraseña del disco\". Esta contraseña es diferente"
 " de la contraseña de tu cuenta de usuario."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:44
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:53
 msgid ""
 "NitroPads are shipped with the latest installation image by Qubes OS "
 "which needs to updated after installation because it does not contain all"
@@ -27319,7 +27295,7 @@ msgstr ""
 "Gestor de Actualizaciones como se describe en `Qubes Documentation "
 "<https://www.qubes-os.org/doc/how-to-update/>`__."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:48
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:56
 msgid ""
 "Specifically for NitroPad V54 the Qubes 4.2.3 installation image contains"
 " a bug that limits to use the highest screen resoultion only. This is "
@@ -27329,12 +27305,49 @@ msgstr ""
 " contiene un error que limita el uso de la resolución de pantalla más "
 "alta. Esto se soluciona después de actualizar dom0 y reiniciar."
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:55
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:59
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:76
+msgid "Behavior After a System Update"
+msgstr "Comportamiento tras una actualización del sistema"
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:61
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:78
+#, fuzzy
+msgid ""
+"The NitroPad and NitroPC firmware checks certain system files for "
+"changes. If your operating system has updated important components, you "
+"will be warned the next time you boot the NitroPad or NitroPC. This could"
+" look like this, for example:"
+msgstr ""
+"El firmware de NitroPad comprueba ciertos archivos del sistema en busca "
+"de cambios. Si su sistema operativo ha actualizado componentes "
+"importantes, se le avisará la próxima vez que arranque el NitroPad. Esto "
+"podría ser así, por ejemplo:"
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:69
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:86
+#, fuzzy
+msgid ""
+"That’s why it’s important to restart your NitroPad or your NitroPC under "
+"controlled conditions after a system update. Only when the new status has"
+" been confirmed can you leave the device unattended again. Otherwise, you"
+" will not be able to distinguish a possible attack from a system update. "
+"Detailed instructions for a system update can be `found here <../heads"
+"/system-update.html>`_."
+msgstr ""
+"Por eso es importante reiniciar su NitroPad bajo condiciones controladas "
+"después de una actualización del sistema. Sólo cuando se haya confirmado "
+"el nuevo estado, podrá volver a dejar el dispositivo sin vigilancia. De "
+"lo contrario, no podrá distinguir un posible ataque de una actualización "
+"del sistema. Las instrucciones detalladas para una actualización del "
+"sistema se pueden `encontrar aquí <system-update.html>`_."
+
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:76
 #, fuzzy
 msgid "Failed to Start Load Kernel Modules"
 msgstr "Fallo en el inicio de la carga de los módulos del kernel"
 
-#: ../../source/components/nitropad-nitropc/qubes/index.rst:57
+#: ../../source/components/nitropad-nitropc/qubes/index.rst:78
 msgid ""
 "During boot of the system the error \"Failed to start Load Kernel "
 "Modules\" is displayed. `This is a known issue "
@@ -27654,6 +27667,87 @@ msgstr ""
 "puede excluir una apertura no autorizada de su NitroPad. En este caso, "
 "póngase en contacto con nosotros para organizar una acción adicional."
 
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:4
+#, fuzzy
+msgid ""
+"With the NitroPad and NitroPC, malicious changes to the BIOS, operating "
+"system, and software can be easily detected. For example, if you left "
+"your NitroPad in a hotel room, you can use your Nitrokey to check if it "
+"has been tampered with while you were away. If an attacker modifies the "
+"NitroPad’s firmware or operating system, the Nitrokey will detect this "
+"(instructions below)."
+msgstr ""
+"Con el NitroPad, se pueden detectar fácilmente los cambios maliciosos en "
+"la BIOS, el sistema operativo y el software. Por ejemplo, si ha dejado su"
+" NitroPad en una habitación de hotel, puede utilizar su Nitrokey para "
+"comprobar si ha sido manipulado mientras estaba fuera. Si un atacante "
+"modifica el firmware o el sistema operativo del NitroPad, el Nitrokey lo "
+"detectará (instrucciones más abajo)."
+
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:11
+#, fuzzy
+msgid ""
+"Each time you start the NitroPad or the NitroPC, you should - if possible"
+" - connect your Nitrokey. If the Nitrokey is plugged in and the system "
+"has not been modified, the following screen will appear when it is turned"
+" on."
+msgstr ""
+"Cada vez que inicie el NitroPad, deberá -si es posible- conectar su "
+"Nitrokey. Si la Nitrokey está conectada y el sistema no ha sido "
+"modificado, al encender el NitroPad aparecerá la siguiente pantalla."
+
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:19
+#, fuzzy
+msgid ""
+"The box marked in red contains the information that the BIOS has not been"
+" changed and that the shared secret of the NitroPad or the NitroPC and "
+"the Nitrokey match. But this information is not sufficient, because an "
+"attacker could have faked it. If at the same time the Nitrokey also "
+"flashes green, everything is fine. An attacker would have to have had "
+"access to the NitroPad or NitroPC and Nitrokey to achieve this result. It"
+" is therefore important that you do not leave both devices unattended."
+msgstr ""
+"La casilla marcada en rojo contiene la información de que la BIOS no ha "
+"sido modificada y que el secreto compartido del NitroPad y la Nitrokey "
+"coinciden. Pero esta información no es suficiente, porque un atacante "
+"podría haberla falsificado. Si al mismo tiempo la Nitrokey también "
+"parpadea en verde, todo está bien. Un atacante tendría que haber tenido "
+"acceso al NitroPad y a la Nitrokey para conseguir este resultado. Por lo "
+"tanto, es importante que no deje ambos dispositivos sin vigilancia."
+
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:27
+#, fuzzy
+msgid ""
+"If the information on the NitroPad or NitroPC does not match the "
+"information on the Nitrokey, the background would turn red and the "
+"message “Invalid Code” would appear. This could indicate that "
+"manipulation has taken place."
+msgstr ""
+"Si la información del NitroPad no coincide con la del Nitrokey, el fondo "
+"se volverá rojo y aparecerá el mensaje \"Código no válido\". Esto podría "
+"indicar que se ha producido una manipulación."
+
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:34
+msgid ""
+"How the boot process may look like if the system has been changed (for "
+"example after an update) and what error messages may otherwise occur is "
+"described further below."
+msgstr ""
+"Más adelante se describe cómo puede ser el proceso de arranque si el "
+"sistema ha sido modificado (por ejemplo, después de una actualización) y "
+"qué mensajes de error pueden aparecer en caso contrario."
+
+#: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:39
+#, fuzzy
+msgid ""
+"The NitroPad and NitroPC can also be started without the Nitrokey. If you"
+" don’t have the Nitrokey with you, but are sure that the hardware has not"
+" been manipulated, you can boot your system without checking."
+msgstr ""
+"El NitroPad también puede iniciarse sin la Nitrokey. Si no tiene la "
+"Nitrokey consigo, pero está seguro de que el hardware no ha sido "
+"manipulado, puede arrancar su sistema sin comprobarlo."
+
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:12
 msgid "Starting in recovery shell"
 msgstr "Empezando en la cáscara de la recuperación"
@@ -27818,11 +27912,11 @@ msgstr ""
 msgid "Enter the your account password."
 msgstr "Introduzca la contraseña de su cuenta."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:16
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:27
 msgid "Workaround Ubuntu 24.04."
 msgstr "Solución Ubuntu 24.04."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:18
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:29
 msgid ""
 "There is an (`issue "
 "<https://github.com/linuxboot/heads/issues/1641>`__)that prevents Ubuntu "
@@ -27835,13 +27929,13 @@ msgstr ""
 "con heads. Es allí y usted puede escribir su contraseña a ciegas, después"
 " de que Ubuntu se inicia normal. Siga estos pasos:"
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:21
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:32
 msgid "Heads starts. If nothing needs to be done, Ubuntu will start automatically"
 msgstr ""
 "Arranca de cabeza. Si no hay nada que hacer, Ubuntu se iniciará "
 "automáticamente"
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:23
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:34
 msgid ""
 "After a while, you will see a black screen with white writing on the last"
 " lines:"
@@ -27849,11 +27943,11 @@ msgstr ""
 "Al cabo de un rato, verás una pantalla negra con letras blancas en las "
 "últimas líneas:"
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:31
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:42
 msgid "These lines indicate that Ubuntu is starting."
 msgstr "Estas líneas indican que Ubuntu está arrancando."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:33
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:44
 msgid ""
 "Wait **5 seconds** and then enter your **password** (\"12345678\" if you "
 "are starting it for the first time) followed by **Enter**."
@@ -27862,7 +27956,7 @@ msgstr ""
 "(\"12345678\" si es la primera vez que lo inicia) seguida de "
 "**Introduzca**."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:35
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:46
 msgid ""
 "Now you will see the normal Ubuntu screen. When you start for the first "
 "time, you must complete the initial configuration."
@@ -27870,7 +27964,7 @@ msgstr ""
 "Ahora verás la pantalla normal de Ubuntu. Cuando se inicia por primera "
 "vez, debe completar la configuración inicial."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:47
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:58
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
 "hard disk. The passphrase is initially \"12345678\". This was changed on "
@@ -27882,7 +27976,7 @@ msgstr ""
 " fue cambiado en la versión 10.04.2024, así que si \"12345678\" no "
 "funciona, pruebe la antigua por defecto: \"PleaseChangeMe\"."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:57
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:68
 #, fuzzy
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -27893,7 +27987,7 @@ msgstr ""
 " Para saber más sobre cómo cambiar los PIN, consulte el capítulo `Cambio "
 "de PIN de usuario y de administrador <change-pins.html>`_."
 
-#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:60
+#: ../../source/components/nitropad-nitropc/ubuntu/index.rst:71
 msgid ""
 "Change the passphrase for disk encryption. To learn more about how to "
 "change the passphrase for disk encryption, please refer to chapter "
@@ -29364,7 +29458,7 @@ msgstr ""
 "Hacia el final del archivo se encuentran las siguientes claves de "
 "configuración."
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:102
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:105
 msgid ""
 "After changing the configuration, make again a backup of your "
 "configuration file with ``cp "
@@ -29376,28 +29470,28 @@ msgstr ""
 "/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml "
 "/var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml~``."
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:105
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:108
 #, fuzzy
 msgid "Manage Web Panel"
 msgstr "Clave de gestión (MGM)"
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:108
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:111
 #, fuzzy
 msgid "Create a New User Account"
 msgstr "Crear una cuenta de administrador"
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:110
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:113
 msgid "Login to the web panel as an administrator."
 msgstr "Inicie sesión en el panel web como administrador."
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:111
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:114
 #, fuzzy
 msgid "Open the *Master Panel* from the menu in the top right corner."
 msgstr ""
 "Abra el menú con los tres puntos en la parte superior derecha de la barra"
 " de menús."
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:112
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:115
 msgid ""
 "Change to the *Organizations* menu and click the *Add* button to add a "
 "new user. Fill in the respective form fields and confirm the creation "
@@ -29407,7 +29501,7 @@ msgstr ""
 "añadir un nuevo usuario. Rellene los campos del formulario "
 "correspondiente y confirme la creación con el botón *Guardar*."
 
-#: ../../source/components/nitrophone/hmdm/server-installation.rst:115
+#: ../../source/components/nitrophone/hmdm/server-installation.rst:118
 msgid ""
 "Please note that the new user won't be automatically notified about the "
 "account. They can use the *Lost password?* feature on the login screen to"
@@ -33091,4 +33185,253 @@ msgstr "Marcar la salida recortada"
 #~ "Opcionalmente, un usuario puede ser "
 #~ "asignado a un `*Namespace* "
 #~ "<administration#namespaces>`__."
+
+#~ msgid ""
+#~ "The ``SSLCertificateFile`` must point to "
+#~ "a certificate file on the disk."
+#~ msgstr ""
+#~ "El ``SSLCertificateFile`` debe apuntar a "
+#~ "un archivo de certificado en el "
+#~ "disco."
+
+#~ msgid ""
+#~ "``ssl_certificate_key "
+#~ "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
+#~ msgstr ""
+#~ "``ssl_certificate_key "
+#~ "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
+
+#~ msgid ""
+#~ "Download the installer image ending  "
+#~ "with *...installer.img.zip* from the provided"
+#~ " private download page."
+#~ msgstr ""
+#~ "Descargue la imagen del instalador que"
+#~ " termina en *...installer.img.zip* desde la"
+#~ " página privada de descargas proporcionada."
+
+#~ msgid "Pro + Storage"
+#~ msgstr "Pro + Almacenamiento"
+
+#~ msgid "Pro 2 + Storage 2"
+#~ msgstr "Pro 2 + Almacenamiento 2"
+
+#~ msgid "**Compatibility**"
+#~ msgstr "**Compatibilidad**"
+
+#~ msgid "Disable **Show resulting changes**"
+#~ msgstr "Desactivar **Mostrar los cambios resultantes**"
+
+#~ msgid "**General**"
+#~ msgstr "**General**"
+
+#~ msgid "Set a **Template display name**."
+#~ msgstr "Establezca un nombre de visualización de la plantilla **** ."
+
+#~ msgid "**Request handling**"
+#~ msgstr "**Gestión de solicitudes**"
+
+#~ msgid "**Cryptography**"
+#~ msgstr "**Criptografía**"
+
+#~ msgid "Set a algorithm name and minimum key size."
+#~ msgstr "Establece el nombre del algoritmo y el tamaño mínimo de la clave."
+
+#~ msgid "**Subject Name**"
+#~ msgstr "**Nombre de la asignatura**"
+
+#~ msgid ""
+#~ "After `disabling Enforce Attestation`_ "
+#~ "Nitrokey FIDO2 is supported by Azure "
+#~ "Entra ID out of the box."
+#~ msgstr ""
+#~ "Después de `deshabilitar Enforce Attestation`_"
+#~ " Nitrokey FIDO2 es soportado por "
+#~ "Azure Entra ID fuera de la caja."
+
+#~ msgid "See the `overview`_ of supported use cases."
+#~ msgstr "Consulte la `overview`_ de casos de uso compatibles."
+
+#~ msgid ""
+#~ "The security controller (NXP JCOP 3 "
+#~ "P60) is Common Criteria EAL 5+ "
+#~ "certified up to the OS level "
+#~ "(`Certificate <https://commoncriteriaportal.org/files/epfiles"
+#~ "/NSCIB-certificate%2021-98209.pdf>`__, `Certification "
+#~ "Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
+#~ "%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__,"
+#~ " `Security Target "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-98209_5-STLite.pdf>`__, `Java Card System "
+#~ "Protection Profile Open Configuration, Version"
+#~ " 3.0 <https://commoncriteriaportal.org/files/ppfiles"
+#~ "/ANSSI-CC-profil_PP-2010-03en.pdf>`__)."
+#~ msgstr ""
+#~ "El controlador de seguridad (NXP JCOP"
+#~ " 3 P60) cuenta con la certificación"
+#~ " Common Criteria EAL 5+ hasta el "
+#~ "nivel de sistema operativo (`Certificado "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "certificate%2021-98209.pdf>`__, `Informe de "
+#~ "certificación "
+#~ "<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
+#~ "%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf"
+#~ ">%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__,"
+#~ " `Objetivo de seguridad "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-98209_5-STLite.pdf>`__, `Configuración abierta "
+#~ "del perfil de protección del sistema "
+#~ "de tarjetas Java, versión 3.0 "
+#~ "<https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-"
+#~ "profil_PP-2010-03en.pdf>`__)."
+
+#~ msgid ""
+#~ "The secure element (SE050M) is Common"
+#~ " Criteria EAL 6+ security certified "
+#~ "up to the OS level (`Certificate "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-23-0075446_2-Cert.pdf>`__, `Certification Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-0075446-CR2-1.pdf>`__, `Security Target "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-0075446_2-STLite.pdf>`__, `Java Card Protection"
+#~ " Profile - Open Configuration "
+#~ "<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__)."
+#~ msgstr ""
+#~ "El elemento seguro (SE050M) cuenta con"
+#~ " la certificación de seguridad Common "
+#~ "Criteria EAL 6+ hasta el nivel OS"
+#~ " (`Certificado "
+#~ "<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+#~ "CC-23-0075446_2-Cert.pdf>`__, `Informe de "
+#~ "certificación <https://commoncriteriaportal.org/files/epfiles"
+#~ "/NSCIB-CC-0075446-CR2-1.pdf>`__, `Objetivo de "
+#~ "seguridad <https://commoncriteriaportal.org/files/epfiles"
+#~ "/NSCIB-CC-0075446_2-STLite.pdf>`__, `Perfil de "
+#~ "protección de la tarjeta Java - "
+#~ "Configuración abierta "
+#~ "<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__)."
+
+#~ msgid ""
+#~ "After `disabling Enforce Attestation`_ "
+#~ "Nitrokey 3 is supported by Azure "
+#~ "Entra ID out of the box."
+#~ msgstr ""
+#~ "Después de deshabilitar `Enforce Attestation`_"
+#~ " Nitrokey 3 es compatible con Azure"
+#~ " Entra ID."
+
+#~ msgid "**Q:** Which Operating Systems are supported?"
+#~ msgstr "**P:** ¿Qué sistemas operativos son compatibles?"
+
+#~ msgid "**Q:** What can I use the Nitrokey Passkey for?"
+#~ msgstr "**P:** ¿Para qué puedo utilizar la Nitrokey Passkey?"
+
+#~ msgid "**Q:** How can I check if my Nitrokey Passkey is working?"
+#~ msgstr "**P:** ¿Cómo puedo comprobar si mi Passkey de Nitrokey funciona?"
+
+#~ msgid "**Q:** What happens if I lose my Nitrokey Passkey device?"
+#~ msgstr "Listado de dispositivos Nitrokey 3"
+
+#~ msgid "**Q:** How large is the storage capacity?"
+#~ msgstr "**P:** ¿Cuál es la capacidad de almacenamiento?"
+
+#~ msgid ""
+#~ "**Q:** How to use Nitrokey Passkey "
+#~ "with Azure Entra ID (Active Directory)?"
+#~ msgstr ""
+#~ "**P:** ¿Cómo utilizar Nitrokey Passkey "
+#~ "con Azure Entra ID (Active Directory)?"
+
+#~ msgid ""
+#~ "After `disabling Enforce Attestation`_ "
+#~ "Nitrokey Passkey is supported by Azure"
+#~ " Entra ID out of the box."
+#~ msgstr ""
+#~ "Después de deshabilitar `Enforce Attestation`_"
+#~ " Nitrokey 3 es compatible con Azure"
+#~ " Entra ID."
+
+#~ msgid "**Q:** Why does the Nitrokey Passkey not show up in GnuPG?"
+#~ msgstr "**P:** ¿Por qué no aparece el Passkey de Nitrokey en GnuPG?"
+
+#~ msgid "**Q:** Why does the Nitrokey Passkey not show up in Nitrokey App?"
+#~ msgstr "**P:** ¿Por qué no aparece la Passkey de Nitrokey en Nitrokey App?"
+
+#~ msgid ""
+#~ "The security controller (NXP Smart Card"
+#~ " Controller P5CD081V1A and its major "
+#~ "configurations P5CC081V1A, P5CN081V1A, P5CD041V1A,"
+#~ " P5CD021V1A and P5CD016V1A each with "
+#~ "IC dedicated Software) is Common "
+#~ "Criteria EAL 5+ certified up to "
+#~ "the OS level (`Certification Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+#~ "`Security Target "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+#~ "`Maintenance Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__,"
+#~ " `Maintenance ST "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__)."
+#~ msgstr ""
+#~ "El controlador de seguridad (NXP Smart"
+#~ " Card Controller P5CD081V1A y sus "
+#~ "principales configuraciones P5CC081V1A, P5CN081V1A,"
+#~ " P5CD041V1A, P5CD021V1A y P5CD016V1A, cada"
+#~ " una con software IC dedicado) cuenta"
+#~ " con la certificación Common Criteria "
+#~ "EAL 5+ hasta el nivel de sistema"
+#~ " operativo (`Informe de certificación "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+#~ "`Objetivo de seguridad "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+#~ "`Informe de mantenimiento "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__,"
+#~ " `ST de mantenimiento "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__)."
+
+#~ msgid ""
+#~ "The security controller (NXP Smart Card"
+#~ " Controller P5CD081V1A and its major "
+#~ "configurations P5CC081V1A, P5CN081V1A, P5CD041V1A,"
+#~ " P5CD021V1A and P5CD016V1A each with "
+#~ "IC dedicated Software) is Common "
+#~ "Criteria EAL 5+ certified up to "
+#~ "the OS level (`Certification Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+#~ "`Security Target "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+#~ "`Maintenance Report "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__,"
+#~ " `Maintenance ST "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`)."
+#~ " Additionally `Cure53 <https://cure53.de>`__ has"
+#~ " performed an `independent security audit"
+#~ " <https://www.nitrokey.com/news/2015/nitrokey-storage-"
+#~ "got-great-results-3rd-party-security-"
+#~ "audit>`__ of the hardware, firmware, and"
+#~ " Nitrokey App."
+#~ msgstr ""
+#~ "El controlador de seguridad (NXP Smart"
+#~ " Card Controller P5CD081V1A y sus "
+#~ "principales configuraciones P5CC081V1A, P5CN081V1A,"
+#~ " P5CD041V1A, P5CD021V1A y P5CD016V1A, cada"
+#~ " una con software IC dedicado) cuenta"
+#~ " con la certificación Common Criteria "
+#~ "EAL 5+ hasta el nivel de sistema"
+#~ " operativo (`Informe de certificación "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+#~ "`Objetivo de seguridad "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+#~ "`Informe de mantenimiento "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__,"
+#~ " `ST de mantenimiento "
+#~ "<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`)."
+#~ " `Además, `Cure53 <https://cure53.de>`__ ha "
+#~ "realizado una auditoría de seguridad "
+#~ "independiente <https://www.nitrokey.com/news/2015/nitrokey-"
+#~ "storage-got-great-results-3rd-party-"
+#~ "security-audit>`__ del hardware, el "
+#~ "firmware y la aplicación Nitrokey."
 
