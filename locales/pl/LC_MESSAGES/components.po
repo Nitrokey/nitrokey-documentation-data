@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-01 14:36+0000\n"
-"PO-Revision-Date: 2025-07-28 13:51+0000\n"
+"PO-Revision-Date: 2025-08-01 14:42+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Polish <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
-"Language-Team: Polish <http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/pl/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5999,7 +6000,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
 msgid "Key IDs and Labels"
-msgstr ""
+msgstr "Identyfikatory i etykiety kluczy"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
@@ -6009,6 +6010,11 @@ msgid ""
 "hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
 "ID."
 msgstr ""
+"NetHSM używa ciągów alfanumerycznych jako identyfikatorów kluczy. Moduł PKCS#"
+"11 NetHSM pokazuje identyfikator klucza na NetHSM jako etykietę PKCS#11 "
+"klucza i jego szesnastkową reprezentację jako PKCS#11 ID. Narzędzie "
+"*pkcs11-tool* używa szesnastkowego identyfikatora klucza do identyfikacji "
+"kluczy, dzięki czemu może używać wygenerowanego identyfikatora PKCS#11."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:63
 msgid ""
@@ -6017,10 +6023,16 @@ msgid ""
 "passed through PKCS#11 labels will result in a ``PKCS11 function "
 "C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
 msgstr ""
+"Identyfikatory kluczy w NetHSM są ciągami alfanumerycznymi, dlatego "
+"dozwolone są tylko znaki ``A-Z``, ``a-z`` i ``0-9``. Nieprawidłowe znaki "
+"przekazane przez etykiety PKCS#11 spowodują błąd ``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)``."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:66
 msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
 msgstr ""
+"Szesnastkową wersję identyfikatora klucza NetHSM można uzyskać za pomocą "
+"``xxd``:"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
@@ -33620,4 +33632,3 @@ msgstr "Zaznacz przycięte Wyjście"
 #~ " łańcucha do utworzenia identyfikatora "
 #~ "PKCS#11. Szesnastkową wersję klucza NetHSM "
 #~ "można uzyskać za pomocą ``xxd``:"
-

@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-08-01 14:36+0000\n"
-"PO-Revision-Date: 2025-07-28 13:51+0000\n"
+"PO-Revision-Date: 2025-08-01 14:42+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <http://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5347,7 +5347,7 @@ msgstr "如果配置支持多个插槽，可能需要在 pkcs11-tool 命令中�
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
 msgid "Key IDs and Labels"
-msgstr ""
+msgstr "钥匙 ID 和标签"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
@@ -5357,6 +5357,10 @@ msgid ""
 "hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
 "ID."
 msgstr ""
+"NetHSM 使用字母数字字符串作为密钥 ID。NetHSM PKCS#11 模块将密钥 ID 显示在 "
+"NetHSM 上，作为密钥的 PKCS#11 标签和作为 PKCS#11 ID "
+"的十六进制表示。*pkcs11-tool* 使用十六进制密钥 ID 来识别密钥，"
+"因此可以使用生成的 PKCS#11 ID。"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:63
 msgid ""
@@ -5365,10 +5369,13 @@ msgid ""
 "passed through PKCS#11 labels will result in a ``PKCS11 function "
 "C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
 msgstr ""
+"NetHSM 上的密钥 ID 是字母数字字符串，因此只允许使用``A-Z``、``a-z`` 和``0-9``"
+" 字符。通过 PKCS#11 标签传递的无效字符将导致``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` 错误。"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:66
 msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
-msgstr ""
+msgstr "您可以通过``xxd`` 获取 NetHSM 密钥 ID 的十六进制版本："
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
@@ -28596,4 +28603,3 @@ msgstr "标记裁剪的输出"
 #~ "使用字母数字字符串作为密钥 ID。NetHSM 的 PKCS#11 "
 #~ "模块使用字符串的原始字节值来形成 PKCS#11 ID。你可以通过``xxd`` 获取 "
 #~ "NetHSM 密钥的十六进制版本："
-
