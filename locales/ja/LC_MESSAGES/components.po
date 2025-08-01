@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-01 13:23+0000\n"
+"POT-Creation-Date: 2025-08-01 14:36+0000\n"
 "PO-Revision-Date: 2025-07-28 13:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ja\n"
@@ -4647,7 +4647,7 @@ msgstr ""
 " に記載されている。"
 
 #: ../../source/components/nethsm/operation.rst:286
-#: ../../source/components/nethsm/pkcs11-tool.rst:102
+#: ../../source/components/nethsm/pkcs11-tool.rst:109
 msgid "List Keys"
 msgstr "リストキー"
 
@@ -4922,7 +4922,7 @@ msgstr ""
 "にあるキーに対してのみ実行できる。"
 
 #: ../../source/components/nethsm/operation.rst:670
-#: ../../source/components/nethsm/pkcs11-tool.rst:157
+#: ../../source/components/nethsm/pkcs11-tool.rst:164
 msgid "Encrypt"
 msgstr "エンクリプト"
 
@@ -5008,7 +5008,7 @@ msgstr ""
 "の公開鍵を使って暗号化し、base64エンコードしたものを書き込んでいます。"
 
 #: ../../source/components/nethsm/operation.rst:732
-#: ../../source/components/nethsm/pkcs11-tool.rst:169
+#: ../../source/components/nethsm/pkcs11-tool.rst:176
 msgid "Decrypt"
 msgstr "デクリプト"
 
@@ -5094,7 +5094,7 @@ msgstr ""
 " に記載されている。"
 
 #: ../../source/components/nethsm/operation.rst:785
-#: ../../source/components/nethsm/pkcs11-tool.rst:196
+#: ../../source/components/nethsm/pkcs11-tool.rst:203
 msgid "Sign"
 msgstr "サイン"
 
@@ -5539,33 +5539,43 @@ msgstr ""
 "オプションを追加する必要があるかもしれません。"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
-msgid "Key IDs"
-msgstr "キーID"
+msgid "Key IDs and Labels"
+msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
-"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
-"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
-"byte values of the string to form the PKCS#11 ID. You can get the "
-"hexadecimal version of a NetHSM key with ``xxd``:"
+"NetHSM uses alphanumerical strings as key IDs. The NetHSM PKCS#11 module "
+"shows the key ID on the NetHSM as the PKCS#11 label of the key and a "
+"hexadecimal representation of it as PKCS#11 ID. The *pkcs11-tool* uses a "
+"hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
+"ID."
 msgstr ""
-"pkcs11-toolは16進数のキーIDを使ってキーを識別する。NetHSM は英数字の文字列を鍵 ID として使用する。NetHSM の "
-"PKCS#11 モジュールは、文字列の生のバイト値を PKCS#11 ID として使用する。NetHSM キーの16進数バージョンは``xxd``"
-" で取得できる："
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:69
+#: ../../source/components/nethsm/pkcs11-tool.rst:63
+msgid ""
+"The key IDs on the NetHSM are alphanumerical strings, thus only the "
+"characters ``A-Z``, ``a-z``, and ``0-9`` are allowed. Invalid characters "
+"passed through PKCS#11 labels will result in a ``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:66
+msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
 msgstr "この16進数値を``--id`` オプションで pkcs11-tool に渡すことができる。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:72
+#: ../../source/components/nethsm/pkcs11-tool.rst:79
 msgid "Generate a Key"
 msgstr "鍵の生成"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:74
+#: ../../source/components/nethsm/pkcs11-tool.rst:81
 msgid "Generate a key-pair and store it on the NetHSM."
 msgstr "キーペアを生成し、NetHSMに保存します。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:77
+#: ../../source/components/nethsm/pkcs11-tool.rst:84
 msgid ""
 "The slot you want to use needs to have an andministrator user in the "
 "configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
@@ -5574,78 +5584,78 @@ msgstr ""
 "使用したいスロットは、設定ファイルにandministratorユーザーを持つ必要があります。そうでない場合は "
 "`CKR_USER_NOT_LOGGED_IN` エラーが発生します。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:80
-#: ../../source/components/nethsm/pkcs11-tool.rst:179
+#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:186
 msgid "RSA"
 msgstr "アールエスエー"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:94
 msgid "ECDSA"
 msgstr "ECDSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:95
+#: ../../source/components/nethsm/pkcs11-tool.rst:102
 msgid "AES/Generic"
 msgstr "AES/ジェネリック"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:104
+#: ../../source/components/nethsm/pkcs11-tool.rst:111
 msgid "List the keys stored on the NetHSM."
 msgstr "NetHSMに保存されているキーをリストアップします。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:125
+#: ../../source/components/nethsm/pkcs11-tool.rst:132
 msgid "Read Keys"
 msgstr "リードキー"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:127
+#: ../../source/components/nethsm/pkcs11-tool.rst:134
 msgid ""
 "Read the public key of a key-pair stored on the NetHSM. It is not "
 "possible to read private keys from the NetHSM."
 msgstr "NetHSMに保存されている鍵ペアの公開鍵を読み取ります。NetHSMから秘密鍵を読み取ることはできません。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:134
+#: ../../source/components/nethsm/pkcs11-tool.rst:141
 msgid ""
 "The certificate of the key-pair can be read with the same command by "
 "changing the ``--type`` option to ``cert``."
 msgstr "``--type`` オプションを``cert`` に変更すれば、同じコマンドで鍵ペアの証明書を読み込むことができる。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:138
+#: ../../source/components/nethsm/pkcs11-tool.rst:145
 msgid "The output is in DER format."
 msgstr "出力はDER形式である。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:141
+#: ../../source/components/nethsm/pkcs11-tool.rst:148
 msgid "Write Keys"
 msgstr "書き込みキー"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:143
+#: ../../source/components/nethsm/pkcs11-tool.rst:150
 msgid ""
 "Write a private key on the NetHSM. The public key is automatically "
 "derived from the private key."
 msgstr "NetHSMに秘密鍵を書き込む。公開鍵は秘密鍵から自動的に派生する。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:149
+#: ../../source/components/nethsm/pkcs11-tool.rst:156
 msgid ""
 "The certificate of the key-pair can be written with the same command by "
 "changing the ``--type`` option to ``cert``."
 msgstr "``--type`` オプションを``cert`` に変更すれば、同じコマンドで鍵ペアの証明書を書き込むことができる。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:159
+#: ../../source/components/nethsm/pkcs11-tool.rst:166
 msgid "Encryption of data is only supported for AES keys."
 msgstr "データの暗号化はAESキーでのみサポートされています。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:166
+#: ../../source/components/nethsm/pkcs11-tool.rst:173
 msgid "You have to manually pad the input data to the block size of the AES key."
 msgstr "入力データをAESキーのブロック・サイズに合わせて手動でパッドする必要がある。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:172
+#: ../../source/components/nethsm/pkcs11-tool.rst:179
 msgid "AES"
 msgstr "AES"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:181
+#: ../../source/components/nethsm/pkcs11-tool.rst:188
 msgid ""
 "You can encrypt data with the public key and decrypt it with the private "
 "key."
 msgstr "公開鍵でデータを暗号化し、秘密鍵で復号することができる。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:202
+#: ../../source/components/nethsm/pkcs11-tool.rst:209
 msgid "To verify the signature with OpenSSL:"
 msgstr "OpenSSLで署名を検証する："
 
@@ -29444,4 +29454,22 @@ msgstr "マーク クロップド出力"
 
 #~ msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
 #~ msgstr "`Nitrokey App 2</software/nk-app2/>`__ を開いてください。"
+
+#~ msgid "Key IDs"
+#~ msgstr "キーID"
+
+#~ msgid ""
+#~ "pkcs11-tool uses an hexadecimal key ID"
+#~ " to identify keys. NetHSM uses "
+#~ "alphanumerical strings as key ID. "
+#~ "NetHSM's PKCS#11 module uses the raw "
+#~ "byte values of the string to form"
+#~ " the PKCS#11 ID. You can get "
+#~ "the hexadecimal version of a NetHSM "
+#~ "key with ``xxd``:"
+#~ msgstr ""
+#~ "pkcs11-toolは16進数のキーIDを使ってキーを識別する。NetHSM は英数字の文字列を鍵 ID "
+#~ "として使用する。NetHSM の PKCS#11 モジュールは、文字列の生のバイト値を "
+#~ "PKCS#11 ID として使用する。NetHSM キーの16進数バージョンは``xxd`` "
+#~ "で取得できる："
 

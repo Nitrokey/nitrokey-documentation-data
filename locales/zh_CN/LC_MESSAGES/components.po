@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-01 13:23+0000\n"
+"POT-Creation-Date: 2025-08-01 14:36+0000\n"
 "PO-Revision-Date: 2025-07-28 13:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: zh_CN\n"
@@ -4491,7 +4491,7 @@ msgstr ""
 "文档<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID_>`__。"
 
 #: ../../source/components/nethsm/operation.rst:286
-#: ../../source/components/nethsm/pkcs11-tool.rst:102
+#: ../../source/components/nethsm/pkcs11-tool.rst:109
 msgid "List Keys"
 msgstr "列表键"
 
@@ -4749,7 +4749,7 @@ msgid ""
 msgstr "本章所述的所有操作只能对当前用户的`命名空间<administration.html#namespaces>`__中的键执行。"
 
 #: ../../source/components/nethsm/operation.rst:670
-#: ../../source/components/nethsm/pkcs11-tool.rst:157
+#: ../../source/components/nethsm/pkcs11-tool.rst:164
 msgid "Encrypt"
 msgstr "加密"
 
@@ -4827,7 +4827,7 @@ msgid ""
 msgstr "这将加密和base64编码的信息``NetHSM rulez!`` 写入文件``data.crypt``，使用``public.pem`` 的公钥。"
 
 #: ../../source/components/nethsm/operation.rst:732
-#: ../../source/components/nethsm/pkcs11-tool.rst:169
+#: ../../source/components/nethsm/pkcs11-tool.rst:176
 msgid "Decrypt"
 msgstr "解密"
 
@@ -4912,7 +4912,7 @@ msgstr ""
 "文档<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__decrypt>`__。"
 
 #: ../../source/components/nethsm/operation.rst:785
-#: ../../source/components/nethsm/pkcs11-tool.rst:196
+#: ../../source/components/nethsm/pkcs11-tool.rst:203
 msgid "Sign"
 msgstr "签名"
 
@@ -5346,110 +5346,121 @@ msgid ""
 msgstr "如果配置支持多个插槽，可能需要在 pkcs11-tool 命令中添加``--slot <arg>`` 选项，以使用正确的插槽。"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
-msgid "Key IDs"
-msgstr "关键 ID"
+msgid "Key IDs and Labels"
+msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
-"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
-"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
-"byte values of the string to form the PKCS#11 ID. You can get the "
-"hexadecimal version of a NetHSM key with ``xxd``:"
+"NetHSM uses alphanumerical strings as key IDs. The NetHSM PKCS#11 module "
+"shows the key ID on the NetHSM as the PKCS#11 label of the key and a "
+"hexadecimal representation of it as PKCS#11 ID. The *pkcs11-tool* uses a "
+"hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
+"ID."
 msgstr ""
-"pkcs11-tool 使用十六进制密钥 ID 来识别密钥。NetHSM 使用字母数字字符串作为密钥 ID。NetHSM 的 PKCS#11 "
-"模块使用字符串的原始字节值来形成 PKCS#11 ID。你可以通过``xxd`` 获取 NetHSM 密钥的十六进制版本："
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:69
+#: ../../source/components/nethsm/pkcs11-tool.rst:63
+msgid ""
+"The key IDs on the NetHSM are alphanumerical strings, thus only the "
+"characters ``A-Z``, ``a-z``, and ``0-9`` are allowed. Invalid characters "
+"passed through PKCS#11 labels will result in a ``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:66
+msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
 msgstr "然后，您可以使用``--id`` 选项将此十六进制值传递给 pkcs11-tool。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:72
+#: ../../source/components/nethsm/pkcs11-tool.rst:79
 msgid "Generate a Key"
 msgstr "生成密钥"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:74
+#: ../../source/components/nethsm/pkcs11-tool.rst:81
 msgid "Generate a key-pair and store it on the NetHSM."
 msgstr "产生一个密钥对并将其存储在NetHSM上。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:77
+#: ../../source/components/nethsm/pkcs11-tool.rst:84
 msgid ""
 "The slot you want to use needs to have an andministrator user in the "
 "configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
 "error."
 msgstr "您要使用的插槽必须在配置文件中有一个 andministrator 用户。否则会出现 `CKR_USER_NOT_LOGGED_IN` 错误。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:80
-#: ../../source/components/nethsm/pkcs11-tool.rst:179
+#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:186
 msgid "RSA"
 msgstr "RSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:94
 msgid "ECDSA"
 msgstr "ECDSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:95
+#: ../../source/components/nethsm/pkcs11-tool.rst:102
 msgid "AES/Generic"
 msgstr "AES/通用"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:104
+#: ../../source/components/nethsm/pkcs11-tool.rst:111
 msgid "List the keys stored on the NetHSM."
 msgstr "列出存储在 NetHSM 中的密钥。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:125
+#: ../../source/components/nethsm/pkcs11-tool.rst:132
 msgid "Read Keys"
 msgstr "阅读键"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:127
+#: ../../source/components/nethsm/pkcs11-tool.rst:134
 msgid ""
 "Read the public key of a key-pair stored on the NetHSM. It is not "
 "possible to read private keys from the NetHSM."
 msgstr "读取存储在 NetHSM 上的密钥对的公钥。无法从 NetHSM 中读取私钥。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:134
+#: ../../source/components/nethsm/pkcs11-tool.rst:141
 msgid ""
 "The certificate of the key-pair can be read with the same command by "
 "changing the ``--type`` option to ``cert``."
 msgstr "通过将``--type`` 选项改为``cert``，可以用同一命令读取密钥对的证书。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:138
+#: ../../source/components/nethsm/pkcs11-tool.rst:145
 msgid "The output is in DER format."
 msgstr "输出为 DER 格式。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:141
+#: ../../source/components/nethsm/pkcs11-tool.rst:148
 msgid "Write Keys"
 msgstr "写键"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:143
+#: ../../source/components/nethsm/pkcs11-tool.rst:150
 msgid ""
 "Write a private key on the NetHSM. The public key is automatically "
 "derived from the private key."
 msgstr "在 NetHSM 上写入私钥。公钥由私钥自动生成。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:149
+#: ../../source/components/nethsm/pkcs11-tool.rst:156
 msgid ""
 "The certificate of the key-pair can be written with the same command by "
 "changing the ``--type`` option to ``cert``."
 msgstr "通过将``--type`` 选项改为``cert``，可以用同一命令写入密钥对的证书。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:159
+#: ../../source/components/nethsm/pkcs11-tool.rst:166
 msgid "Encryption of data is only supported for AES keys."
 msgstr "数据加密仅支持 AES 密钥。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:166
+#: ../../source/components/nethsm/pkcs11-tool.rst:173
 msgid "You have to manually pad the input data to the block size of the AES key."
 msgstr "您必须根据 AES 密钥的块大小手动填充输入数据。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:172
+#: ../../source/components/nethsm/pkcs11-tool.rst:179
 msgid "AES"
 msgstr "AES"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:181
+#: ../../source/components/nethsm/pkcs11-tool.rst:188
 msgid ""
 "You can encrypt data with the public key and decrypt it with the private "
 "key."
 msgstr "您可以用公钥加密数据，用私钥解密数据。"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:202
+#: ../../source/components/nethsm/pkcs11-tool.rst:209
 msgid "To verify the signature with OpenSSL:"
 msgstr "使用 OpenSSL 验证签名："
 
@@ -28567,4 +28578,22 @@ msgstr "标记裁剪的输出"
 
 #~ msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
 #~ msgstr "打开`Nitrokey App 2</software/nk-app2/>`__。"
+
+#~ msgid "Key IDs"
+#~ msgstr "关键 ID"
+
+#~ msgid ""
+#~ "pkcs11-tool uses an hexadecimal key ID"
+#~ " to identify keys. NetHSM uses "
+#~ "alphanumerical strings as key ID. "
+#~ "NetHSM's PKCS#11 module uses the raw "
+#~ "byte values of the string to form"
+#~ " the PKCS#11 ID. You can get "
+#~ "the hexadecimal version of a NetHSM "
+#~ "key with ``xxd``:"
+#~ msgstr ""
+#~ "pkcs11-tool 使用十六进制密钥 ID 来识别密钥。NetHSM "
+#~ "使用字母数字字符串作为密钥 ID。NetHSM 的 PKCS#11 "
+#~ "模块使用字符串的原始字节值来形成 PKCS#11 ID。你可以通过``xxd`` 获取 "
+#~ "NetHSM 密钥的十六进制版本："
 

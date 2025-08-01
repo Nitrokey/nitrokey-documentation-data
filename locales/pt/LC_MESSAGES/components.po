@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-01 13:23+0000\n"
+"POT-Creation-Date: 2025-08-01 14:36+0000\n"
 "PO-Revision-Date: 2025-07-28 13:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: pt\n"
@@ -5111,7 +5111,7 @@ msgstr ""
 "KeyID>`__."
 
 #: ../../source/components/nethsm/operation.rst:286
-#: ../../source/components/nethsm/pkcs11-tool.rst:102
+#: ../../source/components/nethsm/pkcs11-tool.rst:109
 msgid "List Keys"
 msgstr "Chaves de Lista"
 
@@ -5417,7 +5417,7 @@ msgstr ""
 "utilizador atual."
 
 #: ../../source/components/nethsm/operation.rst:670
-#: ../../source/components/nethsm/pkcs11-tool.rst:157
+#: ../../source/components/nethsm/pkcs11-tool.rst:164
 msgid "Encrypt"
 msgstr "Encrypt"
 
@@ -5519,7 +5519,7 @@ msgstr ""
 "rulez!`` no ficheiro ```x id=\"87\"></x>```."
 
 #: ../../source/components/nethsm/operation.rst:732
-#: ../../source/components/nethsm/pkcs11-tool.rst:169
+#: ../../source/components/nethsm/pkcs11-tool.rst:176
 msgid "Decrypt"
 msgstr "Decifrar"
 
@@ -5608,7 +5608,7 @@ msgstr ""
 "KeyID-decrypt>>x id=\"180\"></x>__."
 
 #: ../../source/components/nethsm/operation.rst:785
-#: ../../source/components/nethsm/pkcs11-tool.rst:196
+#: ../../source/components/nethsm/pkcs11-tool.rst:203
 msgid "Sign"
 msgstr "Assine"
 
@@ -6130,38 +6130,46 @@ msgstr ""
 " a ranhura correta."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
-msgid "Key IDs"
-msgstr "IDs de chave"
+msgid "Key IDs and Labels"
+msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
-"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
-"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
-"byte values of the string to form the PKCS#11 ID. You can get the "
-"hexadecimal version of a NetHSM key with ``xxd``:"
+"NetHSM uses alphanumerical strings as key IDs. The NetHSM PKCS#11 module "
+"shows the key ID on the NetHSM as the PKCS#11 label of the key and a "
+"hexadecimal representation of it as PKCS#11 ID. The *pkcs11-tool* uses a "
+"hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
+"ID."
 msgstr ""
-"O pkcs11-tool utiliza um ID de chave hexadecimal para identificar as "
-"chaves. O NetHSM utiliza cadeias de caracteres alfanuméricas como ID de "
-"chave. O módulo PKCS#11 do NetHSM utiliza os valores de byte brutos da "
-"cadeia para formar o ID PKCS#11. Pode obter a versão hexadecimal de uma "
-"chave NetHSM com ``xxd``:"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:69
+#: ../../source/components/nethsm/pkcs11-tool.rst:63
+msgid ""
+"The key IDs on the NetHSM are alphanumerical strings, thus only the "
+"characters ``A-Z``, ``a-z``, and ``0-9`` are allowed. Invalid characters "
+"passed through PKCS#11 labels will result in a ``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:66
+msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
 msgstr ""
 "Pode então passar este valor hexadecimal para o pkcs11-tool com a opção "
 "``--id``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:72
+#: ../../source/components/nethsm/pkcs11-tool.rst:79
 #, fuzzy
 msgid "Generate a Key"
 msgstr "Gerar chave AES"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:74
+#: ../../source/components/nethsm/pkcs11-tool.rst:81
 msgid "Generate a key-pair and store it on the NetHSM."
 msgstr "Gerar um par de chaves e armazená-lo no NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:77
+#: ../../source/components/nethsm/pkcs11-tool.rst:84
 msgid ""
 "The slot you want to use needs to have an andministrator user in the "
 "configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
@@ -6171,31 +6179,31 @@ msgstr ""
 "no ficheiro de configuração. Caso contrário, receberá um erro "
 "`CKR_USER_NOT_LOGGED_IN`."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:80
-#: ../../source/components/nethsm/pkcs11-tool.rst:179
+#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:186
 #, fuzzy
 msgid "RSA"
 msgstr "rsa4096"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:94
 msgid "ECDSA"
 msgstr "ECDSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:95
+#: ../../source/components/nethsm/pkcs11-tool.rst:102
 #, fuzzy
 msgid "AES/Generic"
 msgstr "Genéricos"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:104
+#: ../../source/components/nethsm/pkcs11-tool.rst:111
 #, fuzzy
 msgid "List the keys stored on the NetHSM."
 msgstr "Faça uma lista dos utilizadores no NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:125
+#: ../../source/components/nethsm/pkcs11-tool.rst:132
 msgid "Read Keys"
 msgstr "Ler Chaves"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:127
+#: ../../source/components/nethsm/pkcs11-tool.rst:134
 msgid ""
 "Read the public key of a key-pair stored on the NetHSM. It is not "
 "possible to read private keys from the NetHSM."
@@ -6203,7 +6211,7 @@ msgstr ""
 "Ler a chave pública de um par de chaves armazenado no NetHSM. Não é "
 "possível ler chaves privadas do NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:134
+#: ../../source/components/nethsm/pkcs11-tool.rst:141
 msgid ""
 "The certificate of the key-pair can be read with the same command by "
 "changing the ``--type`` option to ``cert``."
@@ -6211,16 +6219,16 @@ msgstr ""
 "O certificado do par de chaves pode ser lido com o mesmo comando, "
 "alterando a opção ``--type`` para ``cert``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:138
+#: ../../source/components/nethsm/pkcs11-tool.rst:145
 msgid "The output is in DER format."
 msgstr "A saída está no formato DER."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:141
+#: ../../source/components/nethsm/pkcs11-tool.rst:148
 #, fuzzy
 msgid "Write Keys"
 msgstr "Chaves de Lista"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:143
+#: ../../source/components/nethsm/pkcs11-tool.rst:150
 msgid ""
 "Write a private key on the NetHSM. The public key is automatically "
 "derived from the private key."
@@ -6228,7 +6236,7 @@ msgstr ""
 "Escrever uma chave privada no NetHSM. A chave pública é automaticamente "
 "derivada da chave privada."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:149
+#: ../../source/components/nethsm/pkcs11-tool.rst:156
 msgid ""
 "The certificate of the key-pair can be written with the same command by "
 "changing the ``--type`` option to ``cert``."
@@ -6236,22 +6244,22 @@ msgstr ""
 "O certificado do par de chaves pode ser escrito com o mesmo comando, "
 "alterando a opção ``--type`` para ``cert``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:159
+#: ../../source/components/nethsm/pkcs11-tool.rst:166
 msgid "Encryption of data is only supported for AES keys."
 msgstr "A encriptação de dados só é suportada para chaves AES."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:166
+#: ../../source/components/nethsm/pkcs11-tool.rst:173
 msgid "You have to manually pad the input data to the block size of the AES key."
 msgstr ""
 "É necessário preencher manualmente os dados de entrada com o tamanho do "
 "bloco da chave AES."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:172
+#: ../../source/components/nethsm/pkcs11-tool.rst:179
 #, fuzzy
 msgid "AES"
 msgstr "sim"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:181
+#: ../../source/components/nethsm/pkcs11-tool.rst:188
 msgid ""
 "You can encrypt data with the public key and decrypt it with the private "
 "key."
@@ -6259,7 +6267,7 @@ msgstr ""
 "É possível encriptar dados com a chave pública e desencriptá-los com a "
 "chave privada."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:202
+#: ../../source/components/nethsm/pkcs11-tool.rst:209
 msgid "To verify the signature with OpenSSL:"
 msgstr "Para verificar a assinatura com o OpenSSL:"
 
@@ -34128,4 +34136,27 @@ msgstr "Marcar a saída cortada"
 
 #~ msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
 #~ msgstr "Abrir a aplicação `Nitrokey App 2 </software/nk-app2/>`__."
+
+#~ msgid "Key IDs"
+#~ msgstr "IDs de chave"
+
+#~ msgid ""
+#~ "pkcs11-tool uses an hexadecimal key ID"
+#~ " to identify keys. NetHSM uses "
+#~ "alphanumerical strings as key ID. "
+#~ "NetHSM's PKCS#11 module uses the raw "
+#~ "byte values of the string to form"
+#~ " the PKCS#11 ID. You can get "
+#~ "the hexadecimal version of a NetHSM "
+#~ "key with ``xxd``:"
+#~ msgstr ""
+#~ "O pkcs11-tool utiliza um ID de "
+#~ "chave hexadecimal para identificar as "
+#~ "chaves. O NetHSM utiliza cadeias de "
+#~ "caracteres alfanuméricas como ID de "
+#~ "chave. O módulo PKCS#11 do NetHSM "
+#~ "utiliza os valores de byte brutos "
+#~ "da cadeia para formar o ID "
+#~ "PKCS#11. Pode obter a versão hexadecimal"
+#~ " de uma chave NetHSM com ``xxd``:"
 

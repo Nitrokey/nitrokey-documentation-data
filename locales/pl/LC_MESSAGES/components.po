@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-01 13:23+0000\n"
+"POT-Creation-Date: 2025-08-01 14:36+0000\n"
 "PO-Revision-Date: 2025-07-28 13:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: pl\n"
@@ -5022,7 +5022,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID_>`__."
 
 #: ../../source/components/nethsm/operation.rst:286
-#: ../../source/components/nethsm/pkcs11-tool.rst:102
+#: ../../source/components/nethsm/pkcs11-tool.rst:109
 msgid "List Keys"
 msgstr "Lista kluczy"
 
@@ -5312,7 +5312,7 @@ msgstr ""
 "<administration.html#namespaces>` __ bieżącego użytkownika."
 
 #: ../../source/components/nethsm/operation.rst:670
-#: ../../source/components/nethsm/pkcs11-tool.rst:157
+#: ../../source/components/nethsm/pkcs11-tool.rst:164
 msgid "Encrypt"
 msgstr "Szyfruj"
 
@@ -5406,7 +5406,7 @@ msgstr ""
 "``public.pem``."
 
 #: ../../source/components/nethsm/operation.rst:732
-#: ../../source/components/nethsm/pkcs11-tool.rst:169
+#: ../../source/components/nethsm/pkcs11-tool.rst:176
 msgid "Decrypt"
 msgstr "Odszyfrować"
 
@@ -5493,7 +5493,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__decrypt>`__."
 
 #: ../../source/components/nethsm/operation.rst:785
-#: ../../source/components/nethsm/pkcs11-tool.rst:196
+#: ../../source/components/nethsm/pkcs11-tool.rst:203
 msgid "Sign"
 msgstr "Podpisać"
 
@@ -5998,37 +5998,45 @@ msgstr ""
 "właściwego."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
-msgid "Key IDs"
-msgstr "Identyfikatory kluczy"
+msgid "Key IDs and Labels"
+msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
-"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
-"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
-"byte values of the string to form the PKCS#11 ID. You can get the "
-"hexadecimal version of a NetHSM key with ``xxd``:"
+"NetHSM uses alphanumerical strings as key IDs. The NetHSM PKCS#11 module "
+"shows the key ID on the NetHSM as the PKCS#11 label of the key and a "
+"hexadecimal representation of it as PKCS#11 ID. The *pkcs11-tool* uses a "
+"hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
+"ID."
 msgstr ""
-"pkcs11-tool używa szesnastkowego identyfikatora klucza do identyfikacji "
-"kluczy. NetHSM używa ciągów alfanumerycznych jako identyfikatorów kluczy."
-" Moduł PKCS#11 NetHSM wykorzystuje nieprzetworzone wartości bajtowe "
-"łańcucha do utworzenia identyfikatora PKCS#11. Szesnastkową wersję klucza"
-" NetHSM można uzyskać za pomocą ``xxd``:"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:69
+#: ../../source/components/nethsm/pkcs11-tool.rst:63
+msgid ""
+"The key IDs on the NetHSM are alphanumerical strings, thus only the "
+"characters ``A-Z``, ``a-z``, and ``0-9`` are allowed. Invalid characters "
+"passed through PKCS#11 labels will result in a ``PKCS11 function "
+"C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:66
+msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
+msgstr ""
+
+#: ../../source/components/nethsm/pkcs11-tool.rst:76
 msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
 msgstr ""
 "Następnie można przekazać tę wartość szesnastkową do pkcs11-tool z opcją "
 "``--id``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:72
+#: ../../source/components/nethsm/pkcs11-tool.rst:79
 msgid "Generate a Key"
 msgstr "Generowanie klucza"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:74
+#: ../../source/components/nethsm/pkcs11-tool.rst:81
 msgid "Generate a key-pair and store it on the NetHSM."
 msgstr "Wygeneruj parę kluczy i zapisz ją w pamięci NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:77
+#: ../../source/components/nethsm/pkcs11-tool.rst:84
 msgid ""
 "The slot you want to use needs to have an andministrator user in the "
 "configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
@@ -6038,28 +6046,28 @@ msgstr ""
 "konfiguracyjnym. W przeciwnym razie pojawi się błąd "
 "`CKR_USER_NOT_LOGGED_IN`."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:80
-#: ../../source/components/nethsm/pkcs11-tool.rst:179
+#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:186
 msgid "RSA"
 msgstr "RSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:87
+#: ../../source/components/nethsm/pkcs11-tool.rst:94
 msgid "ECDSA"
 msgstr "ECDSA"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:95
+#: ../../source/components/nethsm/pkcs11-tool.rst:102
 msgid "AES/Generic"
 msgstr "AES/Generic"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:104
+#: ../../source/components/nethsm/pkcs11-tool.rst:111
 msgid "List the keys stored on the NetHSM."
 msgstr "Lista kluczy przechowywanych w NetHSM."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:125
+#: ../../source/components/nethsm/pkcs11-tool.rst:132
 msgid "Read Keys"
 msgstr "Czytaj Klucze"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:127
+#: ../../source/components/nethsm/pkcs11-tool.rst:134
 msgid ""
 "Read the public key of a key-pair stored on the NetHSM. It is not "
 "possible to read private keys from the NetHSM."
@@ -6067,7 +6075,7 @@ msgstr ""
 "Odczyt klucza publicznego pary kluczy przechowywanej w NetHSM. Odczyt "
 "kluczy prywatnych z NetHSM nie jest możliwy."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:134
+#: ../../source/components/nethsm/pkcs11-tool.rst:141
 msgid ""
 "The certificate of the key-pair can be read with the same command by "
 "changing the ``--type`` option to ``cert``."
@@ -6075,15 +6083,15 @@ msgstr ""
 "Certyfikat pary kluczy można odczytać za pomocą tego samego polecenia, "
 "zmieniając opcję ``--type`` na ``cert``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:138
+#: ../../source/components/nethsm/pkcs11-tool.rst:145
 msgid "The output is in DER format."
 msgstr "Dane wyjściowe są w formacie DER."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:141
+#: ../../source/components/nethsm/pkcs11-tool.rst:148
 msgid "Write Keys"
 msgstr "Napisz klucze"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:143
+#: ../../source/components/nethsm/pkcs11-tool.rst:150
 msgid ""
 "Write a private key on the NetHSM. The public key is automatically "
 "derived from the private key."
@@ -6091,7 +6099,7 @@ msgstr ""
 "Zapisz klucz prywatny w NetHSM. Klucz publiczny jest automatycznie "
 "wyprowadzany z klucza prywatnego."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:149
+#: ../../source/components/nethsm/pkcs11-tool.rst:156
 msgid ""
 "The certificate of the key-pair can be written with the same command by "
 "changing the ``--type`` option to ``cert``."
@@ -6099,19 +6107,19 @@ msgstr ""
 "Certyfikat pary kluczy można zapisać za pomocą tego samego polecenia, "
 "zmieniając opcję ``--type`` na ``cert``."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:159
+#: ../../source/components/nethsm/pkcs11-tool.rst:166
 msgid "Encryption of data is only supported for AES keys."
 msgstr "Szyfrowanie danych jest obsługiwane tylko dla kluczy AES."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:166
+#: ../../source/components/nethsm/pkcs11-tool.rst:173
 msgid "You have to manually pad the input data to the block size of the AES key."
 msgstr "Dane wejściowe należy ręcznie uzupełnić do rozmiaru bloku klucza AES."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:172
+#: ../../source/components/nethsm/pkcs11-tool.rst:179
 msgid "AES"
 msgstr "AES"
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:181
+#: ../../source/components/nethsm/pkcs11-tool.rst:188
 msgid ""
 "You can encrypt data with the public key and decrypt it with the private "
 "key."
@@ -6119,7 +6127,7 @@ msgstr ""
 "Dane można szyfrować za pomocą klucza publicznego i odszyfrowywać za "
 "pomocą klucza prywatnego."
 
-#: ../../source/components/nethsm/pkcs11-tool.rst:202
+#: ../../source/components/nethsm/pkcs11-tool.rst:209
 msgid "To verify the signature with OpenSSL:"
 msgstr "Aby zweryfikować podpis za pomocą OpenSSL:"
 
@@ -33590,4 +33598,26 @@ msgstr "Zaznacz przycięte Wyjście"
 
 #~ msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
 #~ msgstr "Otwórz aplikację `Nitrokey App 2 </software/nk-app2/>`__."
+
+#~ msgid "Key IDs"
+#~ msgstr "Identyfikatory kluczy"
+
+#~ msgid ""
+#~ "pkcs11-tool uses an hexadecimal key ID"
+#~ " to identify keys. NetHSM uses "
+#~ "alphanumerical strings as key ID. "
+#~ "NetHSM's PKCS#11 module uses the raw "
+#~ "byte values of the string to form"
+#~ " the PKCS#11 ID. You can get "
+#~ "the hexadecimal version of a NetHSM "
+#~ "key with ``xxd``:"
+#~ msgstr ""
+#~ "pkcs11-tool używa szesnastkowego identyfikatora "
+#~ "klucza do identyfikacji kluczy. NetHSM "
+#~ "używa ciągów alfanumerycznych jako "
+#~ "identyfikatorów kluczy. Moduł PKCS#11 NetHSM"
+#~ " wykorzystuje nieprzetworzone wartości bajtowe"
+#~ " łańcucha do utworzenia identyfikatora "
+#~ "PKCS#11. Szesnastkową wersję klucza NetHSM "
+#~ "można uzyskać za pomocą ``xxd``:"
 
