@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-13 13:54+0000\n"
+"POT-Creation-Date: 2025-08-25 11:14+0000\n"
 "PO-Revision-Date: 2025-08-13 13:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Romanian <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2646,13 +2645,13 @@ msgid "Generate the certificate and key."
 msgstr "Generați certificatul și cheia."
 
 #: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/ejbca.rst:37
 #: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "Construiți containerul."
 
 #: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/ejbca.rst:43
 #: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "Rulați containerul."
@@ -3223,7 +3222,19 @@ msgstr ""
 msgid "EJBCA"
 msgstr "EJBCA"
 
-#: ../../source/components/nethsm/ejbca.rst:4
+#: ../../source/components/nethsm/ejbca.rst:5
+#, fuzzy
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface. Therefor this documentation is only a Proof-of-Concept "
+"and we don't currently support EJBCA."
+msgstr ""
+"Din cauza unor probleme de integrare cu furnizorul Sun PKCS11, cheile "
+"generate de EJBCA vor avea un nume aleatoriu în loc de numele dat în "
+"interfață."
+
+#: ../../source/components/nethsm/ejbca.rst:9
 msgid ""
 "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
 "software available as open source."
@@ -3231,7 +3242,7 @@ msgstr ""
 "`EJBCA <https://www.ejbca.org/>`__ este un software de autoritate de "
 "certificare PKI disponibil ca sursă deschisă."
 
-#: ../../source/components/nethsm/ejbca.rst:6
+#: ../../source/components/nethsm/ejbca.rst:11
 msgid ""
 "To be able to use NetHSM with EJBCA you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
@@ -3239,7 +3250,7 @@ msgstr ""
 "Pentru a putea utiliza NetHSM cu EJBCA, trebuie să configurați ` "
 "<pkcs11-setup.html>`__ modulul NetHSM PKCS#11 mai întâi."
 
-#: ../../source/components/nethsm/ejbca.rst:8
+#: ../../source/components/nethsm/ejbca.rst:13
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3247,7 +3258,7 @@ msgstr ""
 "Apoi, configurați EJBCA pentru a utiliza modulul NetHSM PKCS#11 adăugând "
 "o intrare în fișierul ``/etc/ejbca/conf/web.properties``:"
 
-#: ../../source/components/nethsm/ejbca.rst:17
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3255,7 +3266,7 @@ msgstr ""
 "``418`` din nume este un index care trebuie să fie unic pentru fiecare "
 "modul PKCS#11 din fișierul de configurare."
 
-#: ../../source/components/nethsm/ejbca.rst:19
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3264,17 +3275,7 @@ msgstr ""
 "Pentru a putea genera chei din interfață, trebuie să setați opțiunea "
 "``enable_set_attribute_value`` la true în fișierul ``p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:22
-msgid ""
-"Because of some integration problems with the Sun PKCS11 provider, keys "
-"generated from EJBCA will have a random name instead of the name given in"
-" the interface."
-msgstr ""
-"Din cauza unor probleme de integrare cu furnizorul Sun PKCS11, cheile "
-"generate de EJBCA vor avea un nume aleatoriu în loc de numele dat în "
-"interfață."
-
-#: ../../source/components/nethsm/ejbca.rst:24
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3288,11 +3289,11 @@ msgstr ""
 "Tipul Crypto Token este ``PKCS#11 Crypto Token``, iar numele Crypto Token"
 " este ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:29
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid "Executing The Example"
 msgstr "Executarea exemplului"
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3302,7 +3303,7 @@ msgstr ""
 "clona depozitul `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ și să rulați următoarele comenzi:"
 
-#: ../../source/components/nethsm/ejbca.rst:33
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3311,7 +3312,7 @@ msgstr ""
 "Configurați un NetHSM, fie unul real, fie un container. Pentru mai multe "
 "informații, consultați ghidul `get-started <getting-started>`__."
 
-#: ../../source/components/nethsm/ejbca.rst:34
+#: ../../source/components/nethsm/ejbca.rst:36
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3319,7 +3320,7 @@ msgstr ""
 "Schimbați configurația libnethsm_pkcs11 pentru a se potrivi cu NetHSM-ul "
 "dvs. în ``container/ejbca/p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:47
+#: ../../source/components/nethsm/ejbca.rst:49
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -21795,8 +21796,8 @@ msgid ""
 "For the NitroPhones you can find the information `here "
 "<https://support.google.com/pixelphone/answer/7157629>`_."
 msgstr ""
-"Pentru NitroPhone puteți găsi informațiile `aici <https://support.google.com/"
-"pixelphone/answer/7157629>`_."
+"Pentru NitroPhone puteți găsi informațiile `aici "
+"<https://support.google.com/pixelphone/answer/7157629>`_."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:28
 msgid ""
@@ -34189,3 +34190,4 @@ msgstr "Marcaj decupat Ieșire"
 #~ " gestionare, cum ar fi deblocarea "
 #~ "PIN-ului. Valoarea implicită din fabrică"
 #~ " pentru *PUK* este ``123456``."
+

@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-13 13:54+0000\n"
+"POT-Creation-Date: 2025-08-25 11:14+0000\n"
 "PO-Revision-Date: 2025-08-13 13:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Latvian <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/lv/>\n"
 "Language: lv\n"
+"Language-Team: Latvian <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/lv/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
+" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
-"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2598,13 +2597,13 @@ msgid "Generate the certificate and key."
 msgstr "Sertifikāta un atslēgas ģenerēšana."
 
 #: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/ejbca.rst:37
 #: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "Izveidojiet konteineru."
 
 #: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/ejbca.rst:43
 #: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "Palaist konteineru."
@@ -3163,7 +3162,19 @@ msgstr ""
 msgid "EJBCA"
 msgstr "EJBCA"
 
-#: ../../source/components/nethsm/ejbca.rst:4
+#: ../../source/components/nethsm/ejbca.rst:5
+#, fuzzy
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface. Therefor this documentation is only a Proof-of-Concept "
+"and we don't currently support EJBCA."
+msgstr ""
+"Sakarā ar dažām integrācijas problēmām ar Sun PKCS11 nodrošinātāju, no "
+"EJBCA ģenerētajām atslēgām būs nejaušs vārds, nevis saskarnē norādītais "
+"vārds."
+
+#: ../../source/components/nethsm/ejbca.rst:9
 msgid ""
 "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
 "software available as open source."
@@ -3171,7 +3182,7 @@ msgstr ""
 "`EJBCA <https://www.ejbca.org/>`__ ir PKI sertifikātu iestādes "
 "programmatūra, kas pieejama kā atvērtā koda programmatūra."
 
-#: ../../source/components/nethsm/ejbca.rst:6
+#: ../../source/components/nethsm/ejbca.rst:11
 msgid ""
 "To be able to use NetHSM with EJBCA you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
@@ -3179,7 +3190,7 @@ msgstr ""
 "Lai varētu izmantot NetHSM ar EJBCA, vispirms ir nepieciešams `iestatīt "
 "<pkcs11-setup.html>`__ NetHSM PKCS#11 moduli."
 
-#: ../../source/components/nethsm/ejbca.rst:8
+#: ../../source/components/nethsm/ejbca.rst:13
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3187,7 +3198,7 @@ msgstr ""
 "Pēc tam konfigurējiet EJBCA, lai izmantotu NetHSM PKCS#11 moduli, "
 "pievienojot ierakstu ``/etc/ejbca/conf/web.properties`` failā:"
 
-#: ../../source/components/nethsm/ejbca.rst:17
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3195,7 +3206,7 @@ msgstr ""
 "``418`` nosaukumā ir indekss, kam jābūt unikālam katram PKCS#11 modulim "
 "konfigurācijas failā."
 
-#: ../../source/components/nethsm/ejbca.rst:19
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3204,17 +3215,7 @@ msgstr ""
 "Lai varētu ģenerēt atslēgas no interfeisa, `` `p11nethsm.conf`` failā "
 "iestatiet opciju ``enable_set_attribute_value`` uz true."
 
-#: ../../source/components/nethsm/ejbca.rst:22
-msgid ""
-"Because of some integration problems with the Sun PKCS11 provider, keys "
-"generated from EJBCA will have a random name instead of the name given in"
-" the interface."
-msgstr ""
-"Sakarā ar dažām integrācijas problēmām ar Sun PKCS11 nodrošinātāju, no "
-"EJBCA ģenerētajām atslēgām būs nejaušs vārds, nevis saskarnē norādītais "
-"vārds."
-
-#: ../../source/components/nethsm/ejbca.rst:24
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3228,11 +3229,11 @@ msgstr ""
 "Kriptožetona tips ir ``PKCS#11 Crypto Token`` un kriptožetona nosaukums "
 "ir ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:29
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid "Executing The Example"
 msgstr "Piemēra izpilde"
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3242,7 +3243,7 @@ msgstr ""
 "klonētu `nethsm-pkcs11 repozitoriju <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ un palaist šādas komandas:"
 
-#: ../../source/components/nethsm/ejbca.rst:33
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3251,7 +3252,7 @@ msgstr ""
 "Konfigurējiet NetHSM - reālu vai konteineru. Lai iegūtu vairāk "
 "informācijas, skatiet `sākumposma rokasgrāmatu <getting-started>`__."
 
-#: ../../source/components/nethsm/ejbca.rst:34
+#: ../../source/components/nethsm/ejbca.rst:36
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3259,7 +3260,7 @@ msgstr ""
 "Mainiet libnethsm_pkcs11 konfigurāciju, lai tā atbilstu jūsu NetHSM "
 "vietnē ``container/ejbca/p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:47
+#: ../../source/components/nethsm/ejbca.rst:49
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -21380,8 +21381,8 @@ msgid ""
 "For the NitroPhones you can find the information `here "
 "<https://support.google.com/pixelphone/answer/7157629>`_."
 msgstr ""
-"Informāciju par NitroPhones tālruņiem varat atrast šeit ` <https://support."
-"google.com/pixelphone/answer/7157629>`_ ."
+"Informāciju par NitroPhones tālruņiem varat atrast šeit ` "
+"<https://support.google.com/pixelphone/answer/7157629>`_ ."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:28
 msgid ""
@@ -33512,3 +33513,4 @@ msgstr "Atzīmējiet apgrieztus izejas datus"
 #~ "*PUK* tiek izmantots pārvaldības operācijām,"
 #~ " piemēram, PIN atbloķēšanai. Rūpnīcas "
 #~ "noklusējuma iestatījums *PUK* ir ``123456``."
+

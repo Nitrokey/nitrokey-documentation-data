@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-13 13:54+0000\n"
+"POT-Creation-Date: 2025-08-25 11:14+0000\n"
 "PO-Revision-Date: 2025-08-13 13:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Polish <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2628,13 +2627,13 @@ msgid "Generate the certificate and key."
 msgstr "Wygeneruj certyfikat i klucz."
 
 #: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/ejbca.rst:37
 #: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "Zbuduj pojemnik."
 
 #: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/ejbca.rst:43
 #: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "Uruchom kontener."
@@ -3181,7 +3180,19 @@ msgstr ""
 msgid "EJBCA"
 msgstr "EJBCA"
 
-#: ../../source/components/nethsm/ejbca.rst:4
+#: ../../source/components/nethsm/ejbca.rst:5
+#, fuzzy
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface. Therefor this documentation is only a Proof-of-Concept "
+"and we don't currently support EJBCA."
+msgstr ""
+"Ze względu na pewne problemy z integracją z dostawcą Sun PKCS11, klucze "
+"generowane z EJBCA będą miały losową nazwę zamiast nazwy podanej w "
+"interfejsie."
+
+#: ../../source/components/nethsm/ejbca.rst:9
 msgid ""
 "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
 "software available as open source."
@@ -3189,7 +3200,7 @@ msgstr ""
 "`EJBCA <https://www.ejbca.org/>`__ to oprogramowanie urzędu certyfikacji "
 "PKI dostępne jako oprogramowanie typu open source."
 
-#: ../../source/components/nethsm/ejbca.rst:6
+#: ../../source/components/nethsm/ejbca.rst:11
 msgid ""
 "To be able to use NetHSM with EJBCA you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
@@ -3197,7 +3208,7 @@ msgstr ""
 "Aby móc korzystać z NetHSM z EJBCA, należy najpierw skonfigurować ` "
 "<pkcs11-setup.html>`__ moduł NetHSM PKCS#11."
 
-#: ../../source/components/nethsm/ejbca.rst:8
+#: ../../source/components/nethsm/ejbca.rst:13
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3205,7 +3216,7 @@ msgstr ""
 "Następnie skonfiguruj EJBCA do korzystania z modułu NetHSM PKCS#11, "
 "dodając wpis w pliku ``/etc/ejbca/conf/web.properties``:"
 
-#: ../../source/components/nethsm/ejbca.rst:17
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3213,7 +3224,7 @@ msgstr ""
 "``418`` w nazwie jest indeksem, który musi być unikalny dla każdego "
 "modułu PKCS#11 w pliku konfiguracyjnym."
 
-#: ../../source/components/nethsm/ejbca.rst:19
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3222,17 +3233,7 @@ msgstr ""
 "Aby móc generować klucze z interfejsu, należy ustawić opcję "
 "``enable_set_attribute_value`` na true w pliku ``p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:22
-msgid ""
-"Because of some integration problems with the Sun PKCS11 provider, keys "
-"generated from EJBCA will have a random name instead of the name given in"
-" the interface."
-msgstr ""
-"Ze względu na pewne problemy z integracją z dostawcą Sun PKCS11, klucze "
-"generowane z EJBCA będą miały losową nazwę zamiast nazwy podanej w "
-"interfejsie."
-
-#: ../../source/components/nethsm/ejbca.rst:24
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3246,11 +3247,11 @@ msgstr ""
 "Typ tokena kryptograficznego to ``PKCS#11 Crypto Token``, a nazwa tokena "
 "kryptograficznego to ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:29
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid "Executing The Example"
 msgstr "Wykonywanie przykładu"
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3260,7 +3261,7 @@ msgstr ""
 " sklonować repozytorium `nethsm-pkcs11 <https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ i uruchomić następujące polecenia:"
 
-#: ../../source/components/nethsm/ejbca.rst:33
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3269,7 +3270,7 @@ msgstr ""
 "Skonfiguruj NetHSM, rzeczywisty lub w kontenerze. Więcej informacji można"
 " znaleźć w przewodniku dla początkujących ` <getting-started>`__."
 
-#: ../../source/components/nethsm/ejbca.rst:34
+#: ../../source/components/nethsm/ejbca.rst:36
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3277,7 +3278,7 @@ msgstr ""
 "Zmień konfigurację libnethsm_pkcs11, aby pasowała do twojego NetHSM w "
 "``container/ejbca/p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:47
+#: ../../source/components/nethsm/ejbca.rst:49
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -21450,8 +21451,8 @@ msgid ""
 "For the NitroPhones you can find the information `here "
 "<https://support.google.com/pixelphone/answer/7157629>`_."
 msgstr ""
-"W przypadku NitroPhone'ów można znaleźć informacje `tutaj <https://support."
-"google.com/pixelphone/answer/7157629>`_."
+"W przypadku NitroPhone'ów można znaleźć informacje `tutaj "
+"<https://support.google.com/pixelphone/answer/7157629>`_."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:28
 msgid ""
@@ -33695,3 +33696,4 @@ msgstr "Zaznacz przycięte Wyjście"
 #~ "zarządzania, takich jak odblokowanie kodu "
 #~ "PIN. Domyślnym ustawieniem fabrycznym dla "
 #~ "*PUK* jest ``123456``."
+

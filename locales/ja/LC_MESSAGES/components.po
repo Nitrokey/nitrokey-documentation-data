@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-13 13:54+0000\n"
+"POT-Creation-Date: 2025-08-25 11:14+0000\n"
 "PO-Revision-Date: 2025-08-13 13:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Japanese <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2462,13 +2461,13 @@ msgid "Generate the certificate and key."
 msgstr "証明書と鍵を生成する。"
 
 #: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/ejbca.rst:37
 #: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "コンテナを作る。"
 
 #: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/ejbca.rst:43
 #: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "コンテナを実行する。"
@@ -2964,13 +2963,24 @@ msgstr "コンテナは自己署名のTLS証明書を使用しています。正
 msgid "EJBCA"
 msgstr "EJBCA"
 
-#: ../../source/components/nethsm/ejbca.rst:4
+#: ../../source/components/nethsm/ejbca.rst:5
+#, fuzzy
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface. Therefor this documentation is only a Proof-of-Concept "
+"and we don't currently support EJBCA."
+msgstr ""
+"Sun "
+"PKCS11プロバイダーとの統合に問題があるため、EJBCAから生成される鍵は、インターフェイスで指定された名前ではなく、ランダムな名前になる。"
+
+#: ../../source/components/nethsm/ejbca.rst:9
 msgid ""
 "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
 "software available as open source."
 msgstr "`EJBCA<https://www.ejbca.org/>`__は、オープンソースで利用可能なPKI認証局ソフトウェアです。"
 
-#: ../../source/components/nethsm/ejbca.rst:6
+#: ../../source/components/nethsm/ejbca.rst:11
 msgid ""
 "To be able to use NetHSM with EJBCA you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
@@ -2978,7 +2988,7 @@ msgstr ""
 "<pkcs11-setup.html>`NetHSM を EJBCA で使用するには、`__ NetHSM PKCS#11 "
 "モジュールをセットアップする必要があります。"
 
-#: ../../source/components/nethsm/ejbca.rst:8
+#: ../../source/components/nethsm/ejbca.rst:13
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -2986,13 +2996,13 @@ msgstr ""
 "次に、``/etc/ejbca/conf/web.properties`` ファイルにエントリーを追加して、NetHSM PKCS#11 "
 "モジュールを使用するように EJBCA を設定する："
 
-#: ../../source/components/nethsm/ejbca.rst:17
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
 msgstr "名前の``418`` は、コンフィギュレーション・ファイル内の各PKCS#11モジュールで一意でなければならないインデックスである。"
 
-#: ../../source/components/nethsm/ejbca.rst:19
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3001,16 +3011,7 @@ msgstr ""
 "インターフェースから鍵を生成できるようにするには、``p11nethsm.conf`` "
 "ファイルで``enable_set_attribute_value`` オプションをtrueに設定する必要がある。"
 
-#: ../../source/components/nethsm/ejbca.rst:22
-msgid ""
-"Because of some integration problems with the Sun PKCS11 provider, keys "
-"generated from EJBCA will have a random name instead of the name given in"
-" the interface."
-msgstr ""
-"Sun "
-"PKCS11プロバイダーとの統合に問題があるため、EJBCAから生成される鍵は、インターフェイスで指定された名前ではなく、ランダムな名前になる。"
-
-#: ../../source/components/nethsm/ejbca.rst:24
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3023,11 +3024,11 @@ msgstr ""
 " Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto Token`` で、Crypto Token "
 "名は``NetHSM`` である。"
 
-#: ../../source/components/nethsm/ejbca.rst:29
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid "Executing The Example"
 msgstr "例の実行"
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3036,7 +3037,7 @@ msgstr ""
 "与えられた例で実験したい場合は、gitを使って`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__をクローンし、以下のコマンドを実行することができます："
 
-#: ../../source/components/nethsm/ejbca.rst:33
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3045,7 +3046,7 @@ msgstr ""
 "NetHSMを設定する。本物のNetHSMでもコンテナでもよい。詳しくは`getting-started guide<getting-"
 "started>`__ を参照。"
 
-#: ../../source/components/nethsm/ejbca.rst:34
+#: ../../source/components/nethsm/ejbca.rst:36
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3053,7 +3054,7 @@ msgstr ""
 "``container/ejbca/p11nethsm.conf`` にある libnethsm_pkcs11 の設定をお使いの NetHSM "
 "に合わせて変更してください。"
 
-#: ../../source/components/nethsm/ejbca.rst:47
+#: ../../source/components/nethsm/ejbca.rst:49
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -18906,8 +18907,8 @@ msgid ""
 "For the NitroPhones you can find the information `here "
 "<https://support.google.com/pixelphone/answer/7157629>`_."
 msgstr ""
-"NitroPhoneについては、`こちら<https://support.google.com/pixelphone/answer/"
-"7157629>`_ 。"
+"NitroPhoneについては、`こちら<https://support.google.com/pixelphone/answer/7157629>`_"
+" 。"
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:28
 msgid ""
@@ -29535,3 +29536,4 @@ msgstr "マーク クロップド出力"
 #~ " The factory default for the *PUK*"
 #~ " is ``123456``."
 #~ msgstr "*PUK* は、PINブロックの解除などの管理操作に使用される。*PUK* の工場出荷時のデフォルトは``123456`` です。"
+

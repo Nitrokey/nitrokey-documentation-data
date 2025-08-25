@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-13 13:54+0000\n"
+"POT-Creation-Date: 2025-08-25 11:14+0000\n"
 "PO-Revision-Date: 2025-08-13 13:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Greek <http://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <http://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2689,13 +2688,13 @@ msgid "Generate the certificate and key."
 msgstr "Δημιουργήστε το πιστοποιητικό και το κλειδί."
 
 #: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/ejbca.rst:35
+#: ../../source/components/nethsm/ejbca.rst:37
 #: ../../source/components/nethsm/nginx.rst:111
 msgid "Build the container."
 msgstr "Κατασκευάστε το δοχείο."
 
 #: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/ejbca.rst:41
+#: ../../source/components/nethsm/ejbca.rst:43
 #: ../../source/components/nethsm/nginx.rst:117
 msgid "Run the container."
 msgstr "Εκτελέστε το εμπορευματοκιβώτιο."
@@ -3263,7 +3262,19 @@ msgstr ""
 msgid "EJBCA"
 msgstr "EJBCA"
 
-#: ../../source/components/nethsm/ejbca.rst:4
+#: ../../source/components/nethsm/ejbca.rst:5
+#, fuzzy
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface. Therefor this documentation is only a Proof-of-Concept "
+"and we don't currently support EJBCA."
+msgstr ""
+"Λόγω ορισμένων προβλημάτων ενσωμάτωσης με τον πάροχο Sun PKCS11, τα "
+"κλειδιά που παράγονται από το EJBCA θα έχουν ένα τυχαίο όνομα αντί για το"
+" όνομα που δίνεται στη διασύνδεση."
+
+#: ../../source/components/nethsm/ejbca.rst:9
 msgid ""
 "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
 "software available as open source."
@@ -3271,7 +3282,7 @@ msgstr ""
 "`Το EJBCA <https://www.ejbca.org/>`__ είναι ένα λογισμικό Αρχής "
 "Πιστοποιητικών PKI που διατίθεται ως ανοικτός κώδικας."
 
-#: ../../source/components/nethsm/ejbca.rst:6
+#: ../../source/components/nethsm/ejbca.rst:11
 msgid ""
 "To be able to use NetHSM with EJBCA you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
@@ -3279,7 +3290,7 @@ msgstr ""
 "Για να μπορέσετε να χρησιμοποιήσετε το NetHSM με το EJBCA πρέπει πρώτα να"
 " ρυθμίσετε το ` <pkcs11-setup.html>`__ την ενότητα NetHSM PKCS#11."
 
-#: ../../source/components/nethsm/ejbca.rst:8
+#: ../../source/components/nethsm/ejbca.rst:13
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3288,7 +3299,7 @@ msgstr ""
 "PKCS#11 προσθέτοντας μια καταχώρηση στο αρχείο "
 "``/etc/ejbca/conf/web.properties``:"
 
-#: ../../source/components/nethsm/ejbca.rst:17
+#: ../../source/components/nethsm/ejbca.rst:22
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3296,7 +3307,7 @@ msgstr ""
 "Το ``418`` στο όνομα είναι ένας δείκτης που πρέπει να είναι μοναδικός για"
 " κάθε ενότητα PKCS#11 στο αρχείο ρυθμίσεων."
 
-#: ../../source/components/nethsm/ejbca.rst:19
+#: ../../source/components/nethsm/ejbca.rst:24
 msgid ""
 "To be able to generate keys from the interface you need to set the "
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
@@ -3306,17 +3317,7 @@ msgstr ""
 "ορίσετε την επιλογή ``enable_set_attribute_value`` σε true στο αρχείο "
 "``p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:22
-msgid ""
-"Because of some integration problems with the Sun PKCS11 provider, keys "
-"generated from EJBCA will have a random name instead of the name given in"
-" the interface."
-msgstr ""
-"Λόγω ορισμένων προβλημάτων ενσωμάτωσης με τον πάροχο Sun PKCS11, τα "
-"κλειδιά που παράγονται από το EJBCA θα έχουν ένα τυχαίο όνομα αντί για το"
-" όνομα που δίνεται στη διασύνδεση."
-
-#: ../../source/components/nethsm/ejbca.rst:24
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3330,11 +3331,11 @@ msgstr ""
 " τύπος του Crypto Token είναι ``PKCS#11 Crypto Token`` και το όνομα του "
 "Crypto Token είναι ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:29
+#: ../../source/components/nethsm/ejbca.rst:31
 msgid "Executing The Example"
 msgstr "Εκτέλεση του παραδείγματος"
 
-#: ../../source/components/nethsm/ejbca.rst:31
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -3345,7 +3346,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ και να εκτελέσετε τις "
 "ακόλουθες εντολές:"
 
-#: ../../source/components/nethsm/ejbca.rst:33
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. Refer to chapter "
@@ -3355,7 +3356,7 @@ msgstr ""
 "στον οδηγό `getting-started guide <getting-started>`__ για περισσότερες "
 "πληροφορίες."
 
-#: ../../source/components/nethsm/ejbca.rst:34
+#: ../../source/components/nethsm/ejbca.rst:36
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -3363,7 +3364,7 @@ msgstr ""
 "Αλλάξτε τις ρυθμίσεις του libnethsm_pkcs11 ώστε να ταιριάζουν με το δικό "
 "σας NetHSM στο ``container/ejbca/p11nethsm.conf``."
 
-#: ../../source/components/nethsm/ejbca.rst:47
+#: ../../source/components/nethsm/ejbca.rst:49
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -22172,8 +22173,8 @@ msgid ""
 "For the NitroPhones you can find the information `here "
 "<https://support.google.com/pixelphone/answer/7157629>`_."
 msgstr ""
-"Για τα NitroPhones μπορείτε να βρείτε τις πληροφορίες `εδώ <https://support."
-"google.com/pixelphone/answer/7157629>`_."
+"Για τα NitroPhones μπορείτε να βρείτε τις πληροφορίες `εδώ "
+"<https://support.google.com/pixelphone/answer/7157629>`_."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:28
 msgid ""
@@ -34764,3 +34765,4 @@ msgstr "Mark cropped Output"
 #~ " φραγής του PIN. Η εργοστασιακή "
 #~ "προεπιλογή για το *PUK* είναι "
 #~ "``123456``."
+
