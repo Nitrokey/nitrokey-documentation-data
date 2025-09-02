@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-02 06:18+0000\n"
+"POT-Creation-Date: 2025-09-02 16:59+0000\n"
 "PO-Revision-Date: 2025-09-01 09:49+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ja\n"
@@ -2783,6 +2783,21 @@ msgstr ""
 
 #: ../../source/components/nethsm/container/production-image.rst:79
 #: ../../source/components/nethsm/container/test-image.rst:33
+#, fuzzy
+msgid "Data Storage"
+msgstr "リストア"
+
+#: ../../source/components/nethsm/container/production-image.rst:81
+#: ../../source/components/nethsm/container/test-image.rst:35
+msgid ""
+"The system configuration, keys and certificates are stored in an etcd "
+"database. The etcd service stores the database in the ``/data`` path of "
+"the container. Container executors allow to volume or bind mount this "
+"path."
+msgstr ""
+
+#: ../../source/components/nethsm/container/production-image.rst:86
+#: ../../source/components/nethsm/container/test-image.rst:40
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:82
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/luks.rst:137
@@ -2798,7 +2813,7 @@ msgstr ""
 msgid "Usage"
 msgstr "使用方法"
 
-#: ../../source/components/nethsm/container/production-image.rst:81
+#: ../../source/components/nethsm/container/production-image.rst:88
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation <production-"
@@ -2809,12 +2824,12 @@ msgstr ""
 "<container.html#Modes of "
 "Operation>`本番用コンテナは、`__の2つの動作モードをサポートしている。以下の章では、提供されたcomposeファイルまたは_run_コマンドを使用してコンテナを実行する方法について説明する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:84
+#: ../../source/components/nethsm/container/production-image.rst:91
 #, fuzzy
 msgid "Unix Mode"
 msgstr "GUI方式"
 
-#: ../../source/components/nethsm/container/production-image.rst:86
+#: ../../source/components/nethsm/container/production-image.rst:93
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2826,8 +2841,8 @@ msgstr ""
 "/compose-unix.yaml>` "
 "__はこちらから入手できます。composeファイルに記載されているシークレットに必要なファイルが利用可能であることを確認してください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:89
-#: ../../source/components/nethsm/container/production-image.rst:119
+#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:126
 #, fuzzy
 msgid ""
 "To run the container without the compose file you need to provide an "
@@ -2841,47 +2856,47 @@ msgstr ""
 "用の推奨コンテナ・イメージがある。`設定<container.html#production-image-configuration>`__ "
 "の章で説明するように、設定オプションを渡すことを確認する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:93
-#: ../../source/components/nethsm/container/production-image.rst:123
-#: ../../source/components/nethsm/container/test-image.rst:35
+#: ../../source/components/nethsm/container/production-image.rst:100
+#: ../../source/components/nethsm/container/production-image.rst:130
+#: ../../source/components/nethsm/container/test-image.rst:42
 msgid "The container can be executed as follows."
 msgstr "コンテナは、次のように実行できます。"
 
-#: ../../source/components/nethsm/container/production-image.rst:96
-#: ../../source/components/nethsm/container/production-image.rst:126
-#: ../../source/components/nethsm/container/test-image.rst:38
+#: ../../source/components/nethsm/container/production-image.rst:103
+#: ../../source/components/nethsm/container/production-image.rst:133
+#: ../../source/components/nethsm/container/test-image.rst:45
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr "ドッカー"
 
-#: ../../source/components/nethsm/container/production-image.rst:101
-#: ../../source/components/nethsm/container/production-image.rst:131
-#: ../../source/components/nethsm/container/test-image.rst:43
+#: ../../source/components/nethsm/container/production-image.rst:108
+#: ../../source/components/nethsm/container/production-image.rst:138
+#: ../../source/components/nethsm/container/test-image.rst:50
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr "ポッドマン"
 
-#: ../../source/components/nethsm/container/production-image.rst:106
+#: ../../source/components/nethsm/container/production-image.rst:113
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
 msgstr "これはNetHSMをコンテナ内でUnixプロセスとして実行し、HTTPSプロトコル経由でポート`8443`にREST APIを公開する。"
 
-#: ../../source/components/nethsm/container/production-image.rst:109
-#: ../../source/components/nethsm/container/production-image.rst:140
+#: ../../source/components/nethsm/container/production-image.rst:116
+#: ../../source/components/nethsm/container/production-image.rst:147
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
 "chapter `NetHSM introduction <index.html>`__ to learn more."
 msgstr "コンテナは自己署名のTLS証明書を使用しています。正しい接続設定を使用して、接続を確立するようにしてください。詳しくは、`NetHSM導入編<index.html>`__の章をご参照ください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:114
+#: ../../source/components/nethsm/container/production-image.rst:121
 msgid "Unikernel Mode"
 msgstr "ユニカーネルモード"
 
-#: ../../source/components/nethsm/container/production-image.rst:116
+#: ../../source/components/nethsm/container/production-image.rst:123
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -2893,7 +2908,7 @@ msgstr ""
 "/compose-unikernel.yaml>` "
 "__はこちらから入手できます。composeファイルに記載されているシークレットに必要なファイルが利用可能であることを確認してください。"
 
-#: ../../source/components/nethsm/container/production-image.rst:136
+#: ../../source/components/nethsm/container/production-image.rst:143
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -2943,14 +2958,14 @@ msgstr ""
 msgid "The image can be configured with the following environment variables."
 msgstr "イメージは以下の環境変数で設定できる。"
 
-#: ../../source/components/nethsm/container/test-image.rst:48
+#: ../../source/components/nethsm/container/test-image.rst:55
 #, fuzzy
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API via the HTTPS protocol on port `8443`."
 msgstr "これはNetHSMをコンテナ内でUnixプロセスとして実行し、HTTPSプロトコル経由でポート`8443`にREST APIを公開する。"
 
-#: ../../source/components/nethsm/container/test-image.rst:51
+#: ../../source/components/nethsm/container/test-image.rst:58
 #, fuzzy
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
