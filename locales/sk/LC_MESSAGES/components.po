@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-05 10:27+0000\n"
-"PO-Revision-Date: 2025-07-28 13:51+0000\n"
+"PO-Revision-Date: 2025-09-05 10:36+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovak <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <http://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2954,6 +2955,9 @@ msgid ""
 "the container. Container executors allow to volume or bind mount this "
 "path."
 msgstr ""
+"Konfigurácia systému, kľúče a certifikáty sú uložené v databáze etcd. Služba "
+"etcd ukladá databázu v ceste ``/data`` kontajnera. Vykonávače kontajnerov "
+"umožňujú pripojenie zväzku alebo väzbu na túto cestu."
 
 #: ../../source/components/nethsm/container/production-image.rst:86
 #: ../../source/components/nethsm/container/test-image.rst:40
@@ -5942,7 +5946,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:56
 msgid "Key IDs and Labels"
-msgstr ""
+msgstr "Identifikátory a štítky kľúčov"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:58
 msgid ""
@@ -5952,6 +5956,11 @@ msgid ""
 "hexadecimal key ID to identify keys, thus can use the generated PKCS#11 "
 "ID."
 msgstr ""
+"NetHSM používa alfanumerické reťazce ako identifikátory kľúčov. Modul NetHSM "
+"PKCS#11 zobrazuje ID kľúča v NetHSM ako označenie PKCS#11 kľúča a jeho "
+"hexadecimálnu reprezentáciu ako PKCS#11 ID. Nástroj *pkcs11-tool* používa na "
+"identifikáciu kľúčov hexadecimálne ID kľúča, preto môže používať "
+"vygenerované ID PKCS#11."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:63
 msgid ""
@@ -5960,6 +5969,10 @@ msgid ""
 "passed through PKCS#11 labels will result in a ``PKCS11 function "
 "C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error."
 msgstr ""
+"ID kľúčov v NetHSM sú alfanumerické reťazce, preto sú povolené len znaky "
+"``A-Z``, ``a-z`` a ``0-9``. Neplatné znaky odovzdané prostredníctvom značiek "
+"PKCS#11 budú mať za následok chybu ``PKCS11 function C_GenerateKeyPair "
+"failed: rv = CKR_FUNCTION_FAILED (0x6)``."
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:66
 msgid "You can get the hexadecimal version of a NetHSM key ID with ``xxd``:"
@@ -17733,7 +17746,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:34
 msgid "The *PIN* must be from 6 to 8 decimal digits (0-9)."
-msgstr ""
+msgstr "PIN ** musí mať 6 až 8 desatinných číslic (0-9)."
 
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:37
 msgid ""
@@ -21132,6 +21145,12 @@ msgid ""
 "``/usr/local/libexec/SmartCardServices``. A reboot after this change is "
 "mandatory to make the new library to be recognized."
 msgstr ""
+"V niektorých verziách macOS OpenSC nedokáže nájsť knižnicu CCID operačného "
+"systému. V takom prípade nástroje OpenSC zobrazia ``Unresponsive Card`` "
+"chyby. Problém možno odstrániť buď skopírovaním, alebo symlinkom adresára ``/"
+"usr/libexec/SmartCardServices`` do adresára ``/usr/local/libexec/"
+"SmartCardServices``. Po tejto zmene je povinný reštart, aby bola nová "
+"knižnica rozpoznaná."
 
 #: ../../source/components/nitrokeys/hsm/getting-started.rst:35
 msgid ""
@@ -29158,7 +29177,7 @@ msgstr ""
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:15
 msgid "Go in your HMDM web panel."
-msgstr ""
+msgstr "Prejdite na webový panel HMDM."
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:17
 #, fuzzy
@@ -29188,6 +29207,9 @@ msgid ""
 "available configurations if you wish then you need to check the desired "
 "box and change the option to \"Install\"."
 msgstr ""
+"V novom okne sa zobrazí otázka, či chcete pridať tento zásuvný modul do "
+"dostupných konfigurácií, ak si to želáte, musíte zaškrtnúť požadované "
+"políčko a zmeniť možnosť na \"Inštalovať\"."
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:27
 msgid "The plugin is now added."
@@ -29198,6 +29220,8 @@ msgid ""
 "You can manage some installed plugins in the \"Settings\" tab of your web"
 " panel in the \"Plugins\" section."
 msgstr ""
+"Niektoré nainštalované zásuvné moduly môžete spravovať na karte \"Nastavenia"
+"\" na webovom paneli v časti \"Zásuvné moduly\"."
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:32
 #, fuzzy
@@ -29210,7 +29234,7 @@ msgstr "Ak chcete aktualizovať existujúci zásuvný modul, musíte byť správ
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:37
 msgid "Download the new APK version of your desied plugin."
-msgstr ""
+msgstr "Stiahnite si novú verziu APK požadovaného doplnku."
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:39
 #, fuzzy
@@ -31571,6 +31595,11 @@ msgid ""
 "Available languages: English, German, French, Italian, Polish, and "
 "Arabic. Language change requires application restart."
 msgstr ""
+"Nitrokey App 2 je grafická aplikácia určená na správu zariadení Nitrokey 3. "
+"Poskytuje používateľsky prívetivé rozhranie na konfiguráciu overovania "
+"FIDO2, hesiel, aktualizácií firmvéru a správy PIN. Dostupné jazyky: Dostupné "
+"jazyky: angličtina, nemčina, francúzština, taliančina, poľština a arabčina. "
+"Zmena jazyka si vyžaduje reštart aplikácie."
 
 #: ../../source/components/software/nk-app2/index.rst:9
 #, fuzzy
@@ -31599,7 +31628,7 @@ msgstr "`Bezpečné heslo <../features/password-safe/index.html>`_"
 
 #: ../../source/components/software/nk-app2/index.rst:21
 msgid "`PIN Managment <./pin.html>`__"
-msgstr ""
+msgstr "`Správa PIN <./pin.html>`__"
 
 #: ../../source/components/software/nk-app2/index.rst:22
 #, fuzzy
@@ -31616,6 +31645,8 @@ msgid ""
 "The overview allows quick access to check the current app version, saving"
 " log files, and getting support."
 msgstr ""
+"Prehľad umožňuje rýchly prístup na kontrolu aktuálnej verzie aplikácie, "
+"ukladanie súborov denníka a získanie podpory."
 
 #: ../../source/components/software/nk-app2/index.rst:43
 #, fuzzy
@@ -31632,6 +31663,13 @@ msgid ""
 "you will be able to download the binary if you want to do perfom a manual"
 " install"
 msgstr ""
+"Ak sa chcete uistiť, že používate najnovšiu verziu aplikácie, kliknite na "
+"položku \"Skontrolovať aktualizáciu aplikácie\". Ak nie sú k dispozícii "
+"žiadne aktualizácie, zobrazí sa tlačidlo \"Aplikácia je aktuálna\". Ak je k "
+"dispozícii aktualizácia, zmení sa text tlačidla na \"Aktualizácia je k "
+"dispozícii.\" A ďalším kliknutím sa otvorí stránka GitHub s vydaním, kde je "
+"najnovšia verzia na vrchu. Odtiaľto si budete môcť stiahnuť binárnu verziu, "
+"ak chcete vykonať ručnú inštaláciu"
 
 #: ../../source/components/software/nk-app2/index.rst:51
 #, fuzzy
@@ -31644,6 +31682,9 @@ msgid ""
 "recent activity, including actions, errors, and system messages. This log"
 " file can help diagnose and resolve issues with the application."
 msgstr ""
+"Možnosť \"Uložiť súbor denníka\" umožňuje exportovať záznam o nedávnej "
+"činnosti aplikácie vrátane akcií, chýb a systémových správ. Tento súbor "
+"denníka môže pomôcť pri diagnostike a riešení problémov s aplikáciou."
 
 #: ../../source/components/software/nk-app2/installation-linux.rst:2
 msgid "Linux Install"
@@ -31729,6 +31770,8 @@ msgid ""
 "To install Nitrokey App 2 from source, you need Python 3.10 or later and "
 "`pipx <https://pipx.pypa.io/stable/installation/>`__."
 msgstr ""
+"Na inštaláciu Nitrokey App 2 zo zdrojových kódov potrebujete Python 3.10 "
+"alebo novší a `pipx <https://pipx.pypa.io/stable/installation/>`__."
 
 #: ../../source/components/software/nk-app2/installation-linux.rst:34
 #, fuzzy
@@ -32282,7 +32325,7 @@ msgstr "Môžete uložiť až 50 hesiel."
 
 #: ../../source/components/software/nk-app2/passwords.rst:22
 msgid "Adding Credentials"
-msgstr ""
+msgstr "Pridanie poverení"
 
 #: ../../source/components/software/nk-app2/passwords.rst:24
 #, fuzzy
@@ -32301,7 +32344,7 @@ msgstr "Zadajte heslo svojho používateľského konta."
 
 #: ../../source/components/software/nk-app2/passwords.rst:27
 msgid "You can enter the web address to the field Comment."
-msgstr ""
+msgstr "Webovú adresu môžete zadať do poľa Komentár."
 
 #: ../../source/components/software/nk-app2/passwords.rst:28
 msgid ""
@@ -32310,6 +32353,10 @@ msgid ""
 "algorithm (see below) and copy the OTP secret or QR code that is given by"
 " the website (you want to login to) into the field next to it."
 msgstr ""
+"Ak chcete uložiť obyčajné heslo, v poli algoritmu uveďte \"Žiadne\". Ak "
+"chcete uložiť OTP alebo HMAC, vyberte príslušný algoritmus (pozri nižšie) a "
+"do vedľajšieho poľa skopírujte OTP tajomstvo alebo QR kód, ktorý vám "
+"poskytla webová stránka (na ktorú sa chcete prihlásiť)."
 
 #: ../../source/components/software/nk-app2/passwords.rst:34
 msgid ""
@@ -32319,10 +32366,16 @@ msgid ""
 "clicking on \"Show Protected Passwords\". Unprotected credentials (shown "
 "as an open lock) can be accessed without entering a device PIN."
 msgstr ""
+"Môžete si vybrať, či chcete pridať viac zabezpečenia začiarknutím políčok "
+"\"Vyžadovať PIN\" alebo \"Vyžadovať dotyk\". K povereniam s \"Vyžadovať PIN\""
+" (zobrazené ako zatvorený zámok) je možné pristupovať len zadaním PIN kódu "
+"zariadenia po kliknutí na \"Zobraziť chránené heslá\". K nechráneným "
+"povereniam (zobrazeným ako otvorený zámok) je možné pristupovať bez zadania "
+"kódu PIN zariadenia."
 
 #: ../../source/components/software/nk-app2/passwords.rst:36
 msgid "Once all desired fields are filled click on \"Save\"."
-msgstr ""
+msgstr "Po vyplnení všetkých požadovaných polí kliknite na \"Uložiť\"."
 
 #: ../../source/components/software/nk-app2/passwords.rst:40
 msgid ""
@@ -32330,6 +32383,9 @@ msgid ""
 "Otherwise it will show an error. The device PIN can be set or changed in "
 "the `settings <./pin.html#passwords>`__)."
 msgstr ""
+"Pred použitím funkcie \"Vyžadovať PIN\" musíte najprv nastaviť kód PIN "
+"zariadenia. V opačnom prípade sa zobrazí chyba. Kód PIN zariadenia môžete "
+"nastaviť alebo zmeniť v nastaveniach ` <./pin.html#passwords>` __)."
 
 #: ../../source/components/software/nk-app2/passwords.rst:45
 msgid ""
@@ -32337,6 +32393,10 @@ msgid ""
 "not be able to access or create new credentials and you will need to "
 "perform a factory reset in order to use this feature again."
 msgstr ""
+"Na zadanie kódu PIN zariadenia máte povolených len 8 pokusov, inak nebudete "
+"môcť získať prístup ani vytvoriť nové prihlasovacie údaje a budete musieť "
+"vykonať obnovenie výrobných nastavení, aby ste mohli túto funkciu opäť "
+"používať."
 
 #: ../../source/components/software/nk-app2/passwords.rst:48
 msgid "Login"
@@ -32347,10 +32407,13 @@ msgid ""
 "Once your credential is stored you can login to your account with these "
 "steps:"
 msgstr ""
+"Po uložení poverenia sa môžete prihlásiť do svojho konta pomocou týchto "
+"krokov:"
 
 #: ../../source/components/software/nk-app2/passwords.rst:52
 msgid "Select on the left side your Nitrokey on which your credential is stored."
 msgstr ""
+"Na ľavej strane vyberte svoj Nitrokey, na ktorom je uložené vaše poverenie."
 
 #: ../../source/components/software/nk-app2/passwords.rst:53
 #, fuzzy
@@ -32362,6 +32425,8 @@ msgid ""
 "Click on your desired credential, if your credential is protected click "
 "on \"Show Protected Passwords\" first."
 msgstr ""
+"Kliknite na požadované poverenie, ak je vaše poverenie chránené, kliknite "
+"najprv na \"Zobraziť chránené heslá\"."
 
 #: ../../source/components/software/nk-app2/passwords.rst:55
 msgid ""
@@ -32370,6 +32435,10 @@ msgid ""
 "the OTP and enter the OTP code into the appropriate field in the login "
 "prompt. (For HOTP, press the button again to generate a new code.)"
 msgstr ""
+"Ak ide o bežné heslo, skopírujte používateľské meno a heslo do výzvy na "
+"prihlásenie. Ak ide o poverenie OTP, kliknutím na ikonu \"OTP\" vygenerujte "
+"OTP a zadajte kód OTP do príslušného poľa vo výzve na prihlásenie. (V "
+"prípade HOTP opätovným stlačením tlačidla vygenerujete nový kód.)"
 
 #: ../../source/components/software/nk-app2/passwords.rst:60
 #, fuzzy
@@ -32383,6 +32452,10 @@ msgid ""
 "information such as online accounts. With the Nitrokey App 2 and your "
 "Nitrokey you can use two different MFA:"
 msgstr ""
+"Jednorazové heslá (OTP) sa používajú ako viacfaktorová autentifikácia (MFA), "
+"ktorá má hackerom výrazne sťažiť prístup k chráneným informáciám, ako sú "
+"napríklad online účty. Pomocou aplikácie Nitrokey 2 a vášho Nitrokey môžete "
+"používať dve rôzne MFA:"
 
 #: ../../source/components/software/nk-app2/passwords.rst:65
 msgid ""
@@ -32390,6 +32463,9 @@ msgid ""
 "that changes at regular time intervals (e.g. 60 seconds). This is the "
 "standard typically used by websites."
 msgstr ""
+"TOTP alebo časové jednorazové heslo je dvojfaktorový overovací kód, ktorý sa "
+"mení v pravidelných časových intervaloch (napr. 60 sekúnd). Ide o štandard, "
+"ktorý zvyčajne používajú webové stránky."
 
 #: ../../source/components/software/nk-app2/passwords.rst:66
 msgid ""
@@ -32397,10 +32473,13 @@ msgid ""
 "that changes each time it's requested and validated. It is rarely used "
 "today."
 msgstr ""
+"HOTP alebo jednorazové heslo založené na HMAC je dvojfaktorový overovací "
+"kód, ktorý sa mení pri každom vyžiadaní a overení. V súčasnosti sa používa "
+"len zriedkavo."
 
 #: ../../source/components/software/nk-app2/passwords.rst:67
 msgid "HMAC is primarily used with KeePassXC."
-msgstr ""
+msgstr "HMAC sa používa predovšetkým s KeePassXC."
 
 #: ../../source/components/software/nk-app2/passwords.rst:71
 #, fuzzy
@@ -32416,6 +32495,8 @@ msgid ""
 "You can test TOTP with `this "
 "<https://authenticationtest.com/totpChallenge/>`__ website."
 msgstr ""
+"TOTP môžete otestovať na webovej stránke `na adrese "
+"<https://authenticationtest.com/totpChallenge/>`__."
 
 #: ../../source/components/software/nk-app2/pin.rst:2
 #, fuzzy
@@ -32427,6 +32508,8 @@ msgid ""
 "To enhance security, PINs can be created to restrict access to FIDO2 "
 "credentials and stored passwords."
 msgstr ""
+"Na zvýšenie bezpečnosti je možné vytvoriť kódy PIN na obmedzenie prístupu k "
+"povereniam FIDO2 a uloženým heslám."
 
 #: ../../source/components/software/nk-app2/pin.rst:8
 #, fuzzy
@@ -32504,12 +32587,18 @@ msgid ""
 "reasons are displayed. The ``PIN_INVALID`` error message, when changing "
 "the PIN, indicates that the current PIN is incorrect."
 msgstr ""
+"Vyberte tlačidlo ``SAVE``. Ak je tlačidlo ``SAVE`` sivé, záznamy nie sú "
+"správne. Keď na tlačidlo ``SAVE`` nabehnete myšou, zobrazia sa dôvody. "
+"Chybové hlásenie ``PIN_INVALID`` pri zmene PIN kódu znamená, že aktuálny PIN "
+"kód je nesprávny."
 
 #: ../../source/components/software/nk-app2/pin.rst:32
 msgid ""
 "A factory reset witll reset the entire ``Passwords`` or ``FIDO2`` feature"
 " including all stored credentials. To do so proceed as follows:"
 msgstr ""
+"Obnovenie výrobných nastavení obnoví celú funkciu ``Passwords`` alebo "
+"``FIDO2`` vrátane všetkých uložených poverení. Postupujte nasledovne:"
 
 #: ../../source/components/software/nk-app2/pin.rst:39
 #, fuzzy
@@ -32518,7 +32607,7 @@ msgstr "Vyberte možnosť \"OEM-Factory Reset\"."
 
 #: ../../source/components/software/nk-app2/pin.rst:40
 msgid "Press the button Reset."
-msgstr ""
+msgstr "Stlačte tlačidlo Obnoviť."
 
 #: ../../source/components/software/nk-app2/pin.rst:41
 #, fuzzy
@@ -32530,12 +32619,16 @@ msgid ""
 "Factory reset for FIDO2 can only be done within 10 seconds of plugging in"
 " your device."
 msgstr ""
+"Obnovenie továrenských nastavení pre FIDO2 je možné vykonať len do 10 sekúnd "
+"od pripojenia zariadenia."
 
 #: ../../source/components/software/nk-app2/update.rst:5
 msgid ""
 "When updating your device, remove all other Nitrokey 3 devices except the"
 " one being updated."
 msgstr ""
+"Pri aktualizácii zariadenia odstráňte všetky ostatné zariadenia Nitrokey 3 "
+"okrem aktualizovaného zariadenia."
 
 #: ../../source/components/software/nk-app2/update.rst:8
 #, fuzzy
@@ -32548,6 +32641,10 @@ msgid ""
 " Click “Check for Update”  button to start the automatic update process. "
 "The firmware files will be downloaded and used to update your Nitrokey."
 msgstr ""
+"Otvorte kartu \"prehľad\", aby ste mohli automaticky a ručne aktualizovať "
+"svoje zariadenie. Kliknutím na tlačidlo \"Skontrolovať aktualizáciu\" "
+"spustite proces automatickej aktualizácie. Súbory firmvéru sa stiahnu a "
+"použijú na aktualizáciu vášho Nitrokey."
 
 #: ../../source/components/software/nk-app2/update.rst:15
 #, fuzzy
@@ -32559,6 +32656,8 @@ msgid ""
 "If you have the firmware file already on your computer, click “More "
 "Options” to manually update the device with your local firmware."
 msgstr ""
+"Ak už máte súbor firmvéru v počítači, kliknite na \"Viac možností\" a "
+"manuálne aktualizujte zariadenie pomocou lokálneho firmvéru."
 
 #: ../../source/components/syntax.rst:4
 msgid "Nitrokey Documentation - Syntax"
@@ -33843,4 +33942,3 @@ msgstr "Označiť orezaný výstup"
 #~ "V závislosti od stavu OTP PIN sa"
 #~ " teraz zobrazí vstupná maska na "
 #~ "nastavenie alebo zmenu PIN."
-
