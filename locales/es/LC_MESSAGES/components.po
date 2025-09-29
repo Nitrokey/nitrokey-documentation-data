@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-17 12:35+0000\n"
+"POT-Creation-Date: 2025-09-29 18:06+0000\n"
 "PO-Revision-Date: 2025-09-15 16:18+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: es\n"
@@ -9724,6 +9724,7 @@ msgstr ""
 #: ../../source/components/nitrokeys/features/openpgp-card/smime/smime-outlook.rst:9
 #: ../../source/components/nitrokeys/features/openpgp-card/smime/smime-thunderbird.rst:9
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:11
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:9
 #: ../../source/components/software/nk-app2/keepassxc.rst:7
 msgid "Prerequisites"
 msgstr "Requisitos previos"
@@ -18995,6 +18996,139 @@ msgstr ""
 #: ../../source/components/software/nitrokey-sdk-py/guides/index.rst:2
 msgid "Guides"
 msgstr "Guías"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:2
+msgid "MacOS Login with local user"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:6
+#, fuzzy
+msgid ""
+"This document explains how to use the PIV smart card of a Nitrokey 3 for "
+"local user logon on MacOS. It is available as of firmware version 1.8 and"
+" higher."
+msgstr ""
+"Este documento explica cómo utilizar la aplicación PIV de un Nitrokey 3 "
+"para el inicio de sesión mediante tarjeta inteligente con Active "
+"Directory."
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:11
+#, fuzzy
+msgid "The following setup was used at the time of writing this guide:"
+msgstr "Y añadir las siguientes líneas en la parte superior del archivo:"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:13
+msgid "MacOS 15.6 (Sequoia)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:14
+#, fuzzy
+msgid "nitropy 0.10.0"
+msgstr "nitropía"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:15
+#, fuzzy
+msgid "Nitrokey 3 with PIV smart card, firmware version 1.8.1"
+msgstr "Nitrokey 3 con aplicación PIV."
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:18
+#, fuzzy
+msgid "Configure smartcard logon for local use"
+msgstr ""
+"Configurar el inicio de sesión con tarjeta inteligente para su uso con "
+"Active Directory (AD)"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:20
+msgid ""
+"It is assumed that the PIV applet on the Nitrokey is factory-reset. "
+"However, overwriting keys and certs should also work."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:22
+msgid ""
+"It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and "
+"management key are not changed in the first place, because then default "
+"values apply. So we assume that you did not change them yet. In case you "
+"already did you must provide them where necessary."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:24
+#, fuzzy
+msgid "Generate a key and a certificate in PIV slot 9a:"
+msgstr "Crear un archivo de cadena de certificados:"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:28
+msgid ""
+"nitropy nk3 piv --experimental generate-key --key 9a --algo nistp256 "
+"--subject-name \"CN=Foo Bar\" --subject-alt-name-upn \"foo@bar.com\""
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:30
+#, fuzzy
+msgid "Generate a key and a certificate in PIV slot 9d:"
+msgstr "Crear un archivo de cadena de certificados:"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:34
+msgid ""
+"nitropy nk3 piv --experimental generate-key --key 9d --algo nistp256 "
+"--subject-name \"CN=Foo Bar\" --subject-alt-name-upn \"foo@bar.com\""
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:36
+msgid "Verify that the Nitrokey now has certificates in slots 9a and 9d:"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:40
+msgid "nitropy nk3 piv --experimental list-certificates"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:42
+msgid ""
+"Verify that the Nitrokey is recognized by the system and that identities "
+"are found:"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:46
+#, fuzzy
+msgid "sc_auth identities"
+msgstr "Identidades múltiples"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:48
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:64
+#, fuzzy
+msgid "This should print something like this:"
+msgstr "Deberías ver algo como esto:"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:56
+msgid ""
+"Now unplug the Nitrokey and plug it in again. The operating system should"
+" recognize the Nitrokey as a PIV smartcard and suggest to pair with the "
+"user that is currently logged in."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:57
+msgid ""
+"Confirm, you may need to enter the PIV PIN for some initial signing and "
+"you may also need to enter you password to allow the PIV certificate to "
+"be imported into MacOS keychain."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:58
+msgid ""
+"Verify that the PIV identity is successfully paired with the local MacOS "
+"user:"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:62
+#, fuzzy
+msgid "sc_auth list"
+msgstr "una lista"
+
+#: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:70
+msgid ""
+"Done. You should now be able to log into your Mac with your Nitrokey by "
+"using the PIV PIN."
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:2
 msgid "TLS Client Authentication with Internet Information Services (IIS)"
