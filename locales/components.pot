@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-27 15:09+0000\n"
+"POT-Creation-Date: 2025-10-28 12:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1984,16 +1984,20 @@ msgid "Device key of the NetHSM process. To learn more about the device key refe
 msgstr ""
 
 #: ../../source/components/nethsm/container/production-image.rst:79
+msgid "The TLS certificates used for the *etcd* service, web API and the client authentication certificate, must both contain a valid Subject Alternative Name (SAN). Otherwise the *etcd* service will reject them as invalid."
+msgstr ""
+
+#: ../../source/components/nethsm/container/production-image.rst:83
 #: ../../source/components/nethsm/container/test-image.rst:33
 msgid "Data Storage"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:81
+#: ../../source/components/nethsm/container/production-image.rst:85
 #: ../../source/components/nethsm/container/test-image.rst:35
 msgid "The system configuration, keys and certificates are stored in an etcd database. The etcd service stores the database in the ``/data`` path of the container. Container executors allow to volume or bind mount this path."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:86
+#: ../../source/components/nethsm/container/production-image.rst:90
 #: ../../source/components/nethsm/container/test-image.rst:40
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:82
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:122
@@ -2009,63 +2013,63 @@ msgstr ""
 msgid "Usage"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:88
+#: ../../source/components/nethsm/container/production-image.rst:92
 msgid "The production container supports two `modes of operation <production-image.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the *run* command."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:91
+#: ../../source/components/nethsm/container/production-image.rst:95
 msgid "Unix Mode"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:97
 msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unix.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
-msgstr ""
-
-#: ../../source/components/nethsm/container/production-image.rst:96
-#: ../../source/components/nethsm/container/production-image.rst:126
-msgid "To run the container without the compose file you need to provide an external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd. Make sure to pass the configuration options, as described in chapter `Configuration <production-image.html#Configuration>`__."
 msgstr ""
 
 #: ../../source/components/nethsm/container/production-image.rst:100
 #: ../../source/components/nethsm/container/production-image.rst:130
+msgid "To run the container without the compose file you need to provide an external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd. Make sure to pass the configuration options, as described in chapter `Configuration <production-image.html#Configuration>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/container/production-image.rst:104
+#: ../../source/components/nethsm/container/production-image.rst:134
 #: ../../source/components/nethsm/container/test-image.rst:42
 msgid "The container can be executed as follows."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:103
-#: ../../source/components/nethsm/container/production-image.rst:133
+#: ../../source/components/nethsm/container/production-image.rst:107
+#: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:45
 #: ../../source/components/nethsm/integration.rst:43
 #: ../../source/components/nethsm/integration.rst:56
 msgid "Docker"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:108
-#: ../../source/components/nethsm/container/production-image.rst:138
+#: ../../source/components/nethsm/container/production-image.rst:112
+#: ../../source/components/nethsm/container/production-image.rst:142
 #: ../../source/components/nethsm/container/test-image.rst:50
 #: ../../source/components/nethsm/integration.rst:48
 #: ../../source/components/nethsm/integration.rst:61
 msgid "Podman"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:113
+#: ../../source/components/nethsm/container/production-image.rst:117
 msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:116
-#: ../../source/components/nethsm/container/production-image.rst:147
+#: ../../source/components/nethsm/container/production-image.rst:120
+#: ../../source/components/nethsm/container/production-image.rst:151
 msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:121
+#: ../../source/components/nethsm/container/production-image.rst:125
 msgid "Unikernel Mode"
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:127
 msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unikernel.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
 msgstr ""
 
-#: ../../source/components/nethsm/container/production-image.rst:143
+#: ../../source/components/nethsm/container/production-image.rst:147
 msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
 msgstr ""
 
