@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 13:02+0000\n"
-"PO-Revision-Date: 2025-10-16 13:15+0000\n"
+"PO-Revision-Date: 2025-11-18 13:08+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2952,6 +2953,9 @@ msgid ""
 "authentication certificate, must both contain a valid Subject Alternative"
 " Name (SAN). Otherwise the *etcd* service will reject them as invalid."
 msgstr ""
+"Certifikáty TLS používané pre službu *etcd*, webové rozhranie API a "
+"certifikát overovania klienta musia obsahovať platné alternatívne meno "
+"subjektu (SAN). V opačnom prípade ich služba *etcd* odmietne ako neplatné."
 
 #: ../../source/components/nethsm/container/production-image.rst:83
 #: ../../source/components/nethsm/container/test-image.rst:33
@@ -10353,6 +10357,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) je sieťový protokol používaný na bezpečný prístup a "
+"správu vzdialených systémov, ako sú servery alebo úložiská kódu (napr. "
+"GitLab, GitHub). Na overovanie používa kryptografické páry kľúčov, čo "
+"umožňuje prihlasovanie bez hesla so silným zabezpečením. Pomocou kľúča "
+"Nitrokey sa súkromný kľúč SSH generuje a ukladá priamo v zariadení, takže "
+"nikdy neopustí hardvér. Každé prihlásenie si vyžaduje dotyk Nitrokey, čím sa "
+"pridáva jednoduché fyzické potvrdenie, ktoré chráni pred neoprávneným "
+"prístupom."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10373,14 +10385,20 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Otvorte terminál a vytvorte kľúč SSH. Nahraďte ``\"your_comment\"`` štítkom "
+"na jeho identifikáciu (napr. \"Nitrokey GitLab\"). V predvolenom nastavení "
+"je kľúč nerezidentný, čo znamená, že lokálny handle kľúča je uložený v ``~/."
+"ssh/``, zatiaľ čo súkromný kľúč zostáva bezpečne na Nitrokey. Ak chcete, aby "
+"bol kľúč prenosný medzi systémami, použite možnosť ``-O resident``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "alebo vytvoriť rezidentný kľúč"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Rezidentné kľúče možno neskôr zobraziť a importovať do iného systému pomocou:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10392,6 +10410,13 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Počas generovania kľúča môžete byť požiadaní aj o nastavenie prístupovej "
+"frázy **** . Táto prístupová fráza zašifruje lokálnu kľúčovú rukoväť uloženú "
+"v ``~/.ssh/`` (nie súkromný kľúč na Nitrokey, ktorý vždy zostáva bezpečne "
+"vnútri zariadenia). Táto prístupová fráza sa líši od kódu PIN zariadenia "
+"FIDO2. PIN chráni samotný fyzický kľúč, zatiaľ čo prístupová fráza chráni "
+"váš lokálny súbor s verejným kľúčom SSH. Passphrase odporúčame používať len "
+"na ochranu nerezidentských kľúčov."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10399,26 +10424,33 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Keď budete požiadaní o cestu k súboru, prijmite predvolenú možnosť (``~/.ssh/"
+"id_ed25519_sk``) alebo vyberte vlastný názov, napríklad "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Ak tlačidlo Nitrokey bliká, potvrďte operáciu jeho dotykom."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Nakoniec sa vytvoria tieto súbory. Názvy súborov sa môžu líšiť, ak ste pri "
+"generovaní kľúča zadali vlastný názov."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → prístup k súkromnému kľúču (bezpečne uložený na "
+"Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → súbor s verejným kľúčom"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10430,6 +10462,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Po vygenerovaní páru kľúčov SSH je potrebné pridať verejný kľúč k službe "
+"alebo serveru, ku ktorému chcete získať prístup."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10438,7 +10472,7 @@ msgstr "Export verejného kľúča"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Príklad výstupu (nepoužívajte tento kľúč)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10450,6 +10484,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Skopírujte výstup a pridajte ho do nastavení kľúča SSH svojho konta. "
+"Podrobný postup nájdete v časti `GitLab <https://docs.gitlab.com/user/ssh/"
+"#add-an-ssh-key-to-your-gitlab-account>` alebo `GitHub <https://docs.github."
+"com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-"
+"your-github-account>`. Ak chcete povoliť vzdialený prístup k serveru SSH, "
+"pridajte svoj verejný kľúč do súboru ``~/.ssh/authorized_keys`` svojho "
+"používateľského účtu na serveri SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -21748,6 +21789,8 @@ msgid ""
 "The Nitrokey 3 is compliant with the `OpenPGP smart card application "
 "<https://gnupg.org/ftp/specs/>`__ version 3.4.1."
 msgstr ""
+"Nitrokey 3 je kompatibilný s aplikáciou `OpenPGP pre inteligentné karty "
+"<https://gnupg.org/ftp/specs/>`__ verzia 3.4.1."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:62
 msgid ""
@@ -29565,6 +29608,9 @@ msgid ""
 "available configurations or not if you wish then you need to check the "
 "desired box and change the option to \"Install\"."
 msgstr ""
+"V poslednom kroku sa vás opýta, či chcete pridať tento zásuvný modul do "
+"dostupných konfigurácií alebo nie, ak si to želáte, musíte zaškrtnúť "
+"požadované políčko a zmeniť možnosť na \"Inštalovať\"."
 
 #: ../../source/components/nitrophone/hmdm/plugins.rst:47
 msgid ""
@@ -30074,12 +30120,16 @@ msgid ""
 "Information on how to create backups can be found `here "
 "<https://docs.opnsense.org/manual/backups.html>`__."
 msgstr ""
+"Informácie o vytváraní záloh nájdete na `tu <https://docs.opnsense.org/"
+"manual/backups.html>`__."
 
 #: ../../source/components/nitrowall/faq-opnsense.rst:30
 msgid ""
 "If your system time is wrong try to follow `this documentation "
 "<https://docs.opnsense.org/manual/ntpd.html>`__."
 msgstr ""
+"Ak je váš systémový čas nesprávny, skúste postupovať podľa `tejto "
+"dokumentácie <https://docs.opnsense.org/manual/ntpd.html>`__."
 
 #: ../../source/components/nitrowall/firmware-update-nw678.rst:2
 #, fuzzy
@@ -30512,7 +30562,7 @@ msgstr ""
 
 #: ../../source/components/nitrowall/sealed-hardware.rst:11
 msgid "NWV1210, NWV1410, NWVP4670"
-msgstr ""
+msgstr "NWV1210, NWV1410, NWVP4670"
 
 #: ../../source/components/nitrowall/sealed-hardware.rst:12
 #, fuzzy
@@ -30526,7 +30576,7 @@ msgstr "pečať číslo jedna"
 
 #: ../../source/components/nitrowall/sealed-hardware.rst:18
 msgid "sealing bottom"
-msgstr ""
+msgstr "tesniace dno"
 
 #: ../../source/components/nitrowall/sealed-hardware.rst:21
 #, fuzzy
@@ -34413,4 +34463,3 @@ msgstr "Označiť orezaný výstup"
 
 #~ msgid "NTP restart"
 #~ msgstr "Reštart NTP"
-
