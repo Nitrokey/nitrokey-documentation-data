@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10329,6 +10330,13 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) je síťový protokol používaný k bezpečnému přístupu a "
+"správě vzdálených systémů, jako jsou servery nebo úložiště kódu (např. "
+"GitLab, GitHub). K ověřování používá páry kryptografických klíčů, což "
+"umožňuje přihlašování bez hesla se silným zabezpečením. S klíčem Nitrokey je "
+"soukromý klíč SSH generován a uložen přímo v zařízení, takže nikdy neopustí "
+"hardware. Každé přihlášení vyžaduje dotyk Nitrokey, což přidává jednoduché "
+"fyzické potvrzení, které chrání před neoprávněným přístupem."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10349,14 +10357,21 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Otevřete terminál a vytvořte klíč SSH. Nahraďte ``\"your_comment\"`` "
+"štítkem, který ho identifikuje (např. \"Nitrokey GitLab\"). Ve výchozím "
+"nastavení je klíč nerezidentní, což znamená, že místní klíčový handle je "
+"uložen v ``~/.ssh/``, zatímco soukromý klíč zůstává bezpečně na Nitrokey. "
+"Pokud chcete, aby byl klíč přenosný mezi systémy, použijte volbu ``-O "
+"resident``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "nebo vytvořit rezidentní klíč"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Rezidentní klíče lze později vypsat a importovat do jiného systému pomocí:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10368,6 +10383,13 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Během generování klíče můžete být také vyzváni k nastavení přístupové fráze "
+"**** . Tato heslová fráze zašifruje lokální klíčový handle uložený v ``~/."
+"ssh/`` (nikoli soukromý klíč na Nitrokey, který vždy zůstává bezpečně uvnitř "
+"zařízení). Tato přístupová fráze se liší od kódu PIN zařízení FIDO2. Kód PIN "
+"chrání samotný fyzický klíč, zatímco heslová fráze chrání místní soubor s "
+"veřejným klíčem SSH. Passphrase doporučujeme používat pouze k ochraně "
+"nerezidentních klíčů."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10375,26 +10397,33 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Při dotazu na cestu k souboru můžete přijmout výchozí možnost (``~/.ssh/"
+"id_ed25519_sk``) nebo zvolit vlastní název, například "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Pokud tlačítko Nitrokey bliká, potvrďte operaci dotykem."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Nakonec se vytvoří následující soubory. Pokud jste při generování klíče "
+"zadali vlastní název, mohou se názvy souborů lišit."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → přístup k soukromému klíči (bezpečně uložený na "
+"Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → soubor s veřejným klíčem"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10406,6 +10435,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Po vygenerování páru klíčů SSH je třeba přidat veřejný klíč ke službě nebo "
+"serveru, ke kterému chcete přistupovat."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10414,7 +10445,7 @@ msgstr "Export veřejného klíče"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Příklad výstupu (tento klíč nepoužívejte)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10426,6 +10457,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Zkopírujte výstup a přidejte jej do nastavení klíče SSH svého účtu. Podrobný "
+"postup naleznete v části `GitLab <https://docs.gitlab.com/user/ssh/#add-an-"
+"ssh-key-to-your-gitlab-account>` nebo `GitHub <https://docs.github.com/en/"
+"authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
+"github-account>`. Chcete-li povolit vzdálený přístup k serveru SSH, přidejte "
+"svůj veřejný klíč do souboru ``~/.ssh/authorized_keys`` svého uživatelského "
+"účtu na serveru SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -34267,4 +34305,3 @@ msgstr "Označit oříznutý výstup"
 
 #~ msgid "NTP restart"
 #~ msgstr "Restart NTP"
-

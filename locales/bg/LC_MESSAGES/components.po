@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/bg/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10525,6 +10526,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) е мрежов протокол, който се използва за сигурен достъп и "
+"управление на отдалечени системи, като например сървъри или хранилища за код "
+"(например GitLab, GitHub). Той използва криптографски двойки ключове за "
+"удостоверяване, което позволява влизане без парола със силна сигурност. С "
+"Nitrokey частният SSH ключ се генерира и съхранява директно на устройството, "
+"така че никога не напуска хардуера. Всяко влизане в системата изисква да "
+"докоснете Nitrokey, като се добавя просто физическо потвърждение, което "
+"предпазва от неоторизиран достъп."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10545,14 +10554,22 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Отворете терминал и създайте своя SSH ключ. Заменете ``\"your_comment\"`` с "
+"етикет, който да го идентифицира (напр. \"Nitrokey GitLab\"). По "
+"подразбиране ключът е нерезидентен ключ, което означава, че в ``~/.ssh/`` се "
+"съхранява локална дръжка на ключа, докато частният ключ остава на сигурно "
+"място в Nitrokey. Използвайте опцията ``-O resident``, ако искате ключът да "
+"бъде преносим в различни системи."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "или да създадете ключ на резидент"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Резидентните ключове могат по-късно да бъдат изброени и импортирани в друга "
+"система с:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10564,6 +10581,13 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"По време на генерирането на ключове може да бъдете помолени да зададете "
+"парола **** . Тази парола криптира локалния ключ, съхраняван в ``~/.ssh/`` ("
+"а не частния ключ на Nitrokey, който винаги остава на сигурно място в "
+"устройството). Фразата е различна от ПИН кода на устройството по FIDO2. ПИН "
+"кодът защитава самия физически ключ, докато паролата защитава вашия локален "
+"SSH файл с публичен ключ. Препоръчваме да използвате парола само за защита "
+"на нерезидентни ключове."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10571,26 +10595,34 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Когато бъдете попитани за пътя до файла, приемете опцията по подразбиране "
+"(``~/.ssh/id_ed25519_sk``) или изберете потребителско име, например "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Ако клавишът Nitrokey мига, потвърдете операцията, като го докоснете."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"В крайна сметка ще бъдат създадени следните файлове. Имената на файловете "
+"може да се различават, ако сте посочили потребителско име при генерирането "
+"на ключа."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → дръжка на частния ключ (съхранява се на сигурно "
+"място в Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → файл с публичен ключ"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10602,6 +10634,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"След като двойката SSH ключове е генерирана, публичният ключ трябва да бъде "
+"добавен към услугата или сървъра, до който искате да получите достъп."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10610,7 +10644,7 @@ msgstr "Експортиране на публичния ключ"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Примерен изход (не използвайте този ключ)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10622,6 +10656,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Копирайте резултата и го добавете към настройките на SSH ключа на вашия "
+"акаунт. За подробни стъпки вижте `GitLab <https://docs.gitlab.com/user/ssh/"
+"#add-an-ssh-key-to-your-gitlab-account>` или `GitHub <https://docs.github."
+"com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-"
+"your-github-account>`. За да разрешите отдалечен достъп до SSH сървъра, "
+"добавете публичния си ключ към файла ``~/.ssh/authorized_keys`` на "
+"потребителския си акаунт в SSH сървъра."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -34974,4 +35015,3 @@ msgstr "Маркирайте изрязаното Изход"
 
 #~ msgid "NTP restart"
 #~ msgstr "Рестартиране на NTP"
-

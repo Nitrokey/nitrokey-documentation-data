@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/lv/>\n"
 "Language: lv\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/lv/>\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
-" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10352,6 +10353,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) ir tīkla protokols, ko izmanto, lai droši piekļūtu "
+"attālinātām sistēmām, piemēram, serveriem vai kodu krātuvēm (piemēram, "
+"GitLab, GitHub), un pārvaldītu tās. Autentifikācijai tas izmanto "
+"kriptogrāfisko atslēgu pārus, kas ļauj bez paroles pieteikties ar spēcīgu "
+"drošību. Izmantojot Nitrokey, privātā SSH atslēga tiek ģenerēta un uzglabāta "
+"tieši ierīcē, tāpēc tā nekad netiek iznesta no ierīces. Katram pieteikšanās "
+"gadījumam nepieciešams pieskarties Nitrokey, pievienojot vienkāršu fizisku "
+"apstiprinājumu, kas aizsargā pret nesankcionētu piekļuvi."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10372,14 +10381,21 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Atveriet termināli un izveidojiet SSH atslēgu. Aizstājiet ``\"your_comment\""
+"`` ar marķējumu, lai to identificētu (piemēram, \"Nitrokey GitLab\"). Pēc "
+"noklusējuma atslēga ir nerezidējošā atslēga, kas nozīmē, ka vietējais "
+"atslēgas rokturis tiek saglabāts ``~/.ssh/``, bet privātā atslēga paliek "
+"drošā Nitrokey. Izmantojiet ``-O resident`` opciju, ja vēlaties, lai atslēga "
+"būtu pārnesama starp sistēmām."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "vai lai izveidotu rezidenta atslēgu"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Rezidentu atslēgas vēlāk var uzskaitīt un importēt citā sistēmā, izmantojot:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10391,6 +10407,12 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Atslēgas ģenerēšanas laikā jums var tikt lūgts iestatīt arī **piekļuves "
+"frāzi**. Ar šo paroli šifrē vietējās atslēgas rokturi, kas glabājas ``~/.ssh/"
+"`` (nevis Nitrokey privāto atslēgu, kas vienmēr droši paliek ierīcē). Šī "
+"frāze atšķiras no FIDO2 ierīces PIN koda. PIN kods aizsargā pašu fizisko "
+"atslēgu, bet parola aizsargā jūsu vietējo SSH publiskās atslēgas failu. Mēs "
+"iesakām izmantot piekļuves frāzi tikai nerezidentu atslēgu aizsardzībai."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10398,26 +10420,33 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Kad tiek prasīts norādīt faila ceļu, pieņemiet noklusējuma opciju (``~/.ssh/"
+"id_ed25519_sk``) vai izvēlieties pielāgotu nosaukumu, piemēram, "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Ja Nitrokey mirgo, apstipriniet darbību, pieskaroties tam."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Galu galā tiks izveidoti šādi faili. Failu nosaukumi var atšķirties, ja, "
+"ģenerējot atslēgu, esat norādījis pielāgotu nosaukumu."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → privātā atslēgas rokturis (droši glabājas "
+"Nitrokey)."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → publiskās atslēgas fails"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10429,6 +10458,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Kad SSH atslēgu pāris ir izveidots, publiskā atslēga jāpievieno pakalpojumam "
+"vai serverim, kuram vēlaties piekļūt."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10437,7 +10468,7 @@ msgstr "Eksportēt publisko atslēgu"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Izvades piemērs (neizmantojiet šo atslēgu)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10449,6 +10480,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Kopējiet rezultātu un pievienojiet to sava konta SSH atslēgas iestatījumiem. "
+"Sīkāku informāciju skatiet `GitLab <https://docs.gitlab.com/user/ssh/#add-an-"
+"ssh-key-to-your-gitlab-account>` vai `GitHub <https://docs.github.com/en/"
+"authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
+"github-account>`. Lai iespējotu SSH attālināto piekļuvi serverim, "
+"pievienojiet savu publisko atslēgu sava lietotāja konta failā ``~/.ssh/"
+"authorized_keys`` savā SSH servera lietotāja kontā."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -34410,4 +34448,3 @@ msgstr "Atzīmējiet apgrieztus izejas datus"
 
 #~ msgid "NTP restart"
 #~ msgstr "NTP restartēšana"
-

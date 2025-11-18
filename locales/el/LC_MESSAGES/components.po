@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/el/>\n"
 "Language: el\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/el/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10754,6 +10755,15 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"Το SSH (Secure Shell) είναι ένα πρωτόκολλο δικτύου που χρησιμοποιείται για "
+"την ασφαλή πρόσβαση και διαχείριση απομακρυσμένων συστημάτων, όπως "
+"διακομιστές ή αποθετήρια κώδικα (π.χ. GitLab, GitHub). Χρησιμοποιεί "
+"κρυπτογραφικά ζεύγη κλειδιών για τον έλεγχο ταυτότητας, επιτρέποντας "
+"συνδέσεις χωρίς κωδικό πρόσβασης με ισχυρή ασφάλεια. Με ένα Nitrokey, το "
+"ιδιωτικό κλειδί SSH δημιουργείται και αποθηκεύεται απευθείας στη συσκευή, "
+"οπότε δεν φεύγει ποτέ από το υλικό. Κάθε σύνδεση απαιτεί να αγγίξετε το "
+"Nitrokey, προσθέτοντας μια απλή φυσική επιβεβαίωση που προστατεύει από μη "
+"εξουσιοδοτημένη πρόσβαση."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10774,14 +10784,23 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Ανοίξτε ένα τερματικό και δημιουργήστε το κλειδί SSH. Αντικαταστήστε το ``"
+"\"your_comment\"`` με μια ετικέτα για την αναγνώρισή του (π.χ. \"Nitrokey "
+"GitLab\"). Από προεπιλογή, το κλειδί είναι ένα μη μόνιμο κλειδί, που "
+"σημαίνει ότι μια τοπική λαβή κλειδιού αποθηκεύεται στο ``~/.ssh/`` ενώ το "
+"ιδιωτικό κλειδί παραμένει με ασφάλεια στο Nitrokey. Χρησιμοποιήστε την "
+"επιλογή ``-O resident`` αν θέλετε το κλειδί να είναι φορητό σε όλα τα "
+"συστήματα."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "ή για να δημιουργήσετε ένα κλειδί κατοίκου"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Τα μόνιμα κλειδιά μπορούν αργότερα να καταχωρηθούν και να εισαχθούν σε άλλο "
+"σύστημα με:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10793,6 +10812,14 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Κατά τη διάρκεια της δημιουργίας κλειδιού, μπορεί επίσης να σας ζητηθεί να "
+"ορίσετε μια συνθηματική φράση **** . Αυτή η συνθηματική φράση κρυπτογραφεί "
+"το τοπικό κλειδί που είναι αποθηκευμένο στο ``~/.ssh/`` (όχι το ιδιωτικό "
+"κλειδί στο Nitrokey, το οποίο παραμένει πάντα με ασφάλεια μέσα στη συσκευή). "
+"Η συνθηματική φράση είναι διαφορετική από το PIN της συσκευής FIDO2. Το PIN "
+"προστατεύει το ίδιο το φυσικό κλειδί, ενώ η συνθηματική φράση προστατεύει το "
+"τοπικό αρχείο δημόσιου κλειδιού SSH. Συνιστούμε να χρησιμοποιείτε μια "
+"συνθηματική φράση μόνο για την προστασία μη μόνιμων κλειδιών."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10800,26 +10827,34 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Όταν σας ζητείται η διαδρομή του αρχείου, αποδεχτείτε την προεπιλεγμένη "
+"επιλογή (``~/.ssh/id_ed25519_sk``) ή επιλέξτε ένα προσαρμοσμένο όνομα όπως "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Εάν το Nitrokey αναβοσβήνει, επιβεβαιώστε τη λειτουργία αγγίζοντάς το."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Τελικά θα δημιουργηθούν τα ακόλουθα αρχεία. Τα ονόματα των αρχείων ενδέχεται "
+"να διαφέρουν, εάν έχετε καθορίσει ένα προσαρμοσμένο όνομα κατά τη δημιουργία "
+"του κλειδιού."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → λαβή για το ιδιωτικό κλειδί (αποθηκεύεται με "
+"ασφάλεια στο Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → αρχείο δημόσιου κλειδιού"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10831,6 +10866,9 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Μόλις δημιουργηθεί το ζεύγος κλειδιών SSH, το δημόσιο κλειδί πρέπει να "
+"προστεθεί στην υπηρεσία ή το διακομιστή στον οποίο θέλετε να αποκτήσετε "
+"πρόσβαση."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10839,7 +10877,7 @@ msgstr "Εξαγωγή του δημόσιου κλειδιού"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Παράδειγμα εξόδου (μην χρησιμοποιείτε αυτό το πλήκτρο)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10851,6 +10889,14 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Αντιγράψτε το αποτέλεσμα και προσθέστε το στις ρυθμίσεις κλειδιού SSH του "
+"λογαριασμού σας. Ανατρέξτε στο `GitLab <https://docs.gitlab.com/user/ssh/"
+"#add-an-ssh-key-to-your-gitlab-account>` ή στο `GitHub <https://docs.github."
+"com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-"
+"your-github-account>` για λεπτομερή βήματα. Για να ενεργοποιήσετε την "
+"απομακρυσμένη πρόσβαση στον διακομιστή SSH, προσθέστε το δημόσιο κλειδί σας "
+"στο αρχείο ``~/.ssh/authorized_keys`` του λογαριασμού χρήστη σας στον "
+"διακομιστή SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -35715,4 +35761,3 @@ msgstr "Mark cropped Output"
 
 #~ msgid "NTP restart"
 #~ msgstr "Επανεκκίνηση NTP"
-

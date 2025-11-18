@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/da/>\n"
 "Language: da\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/da/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10371,6 +10372,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) er en netværksprotokol, der bruges til at få sikker "
+"adgang til og administrere fjernsystemer som servere eller kodelagre (f.eks. "
+"GitLab, GitHub). Den bruger kryptografiske nøglepar til autentificering, "
+"hvilket giver mulighed for passwordløse logins med stærk sikkerhed. Med en "
+"Nitrokey genereres og gemmes den private SSH-nøgle direkte på enheden, så "
+"den forlader aldrig hardwaren. Hvert login kræver, at du rører ved Nitrokey, "
+"hvilket giver en enkel fysisk bekræftelse, der beskytter mod uautoriseret "
+"adgang."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10391,14 +10400,21 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Åbn en terminal, og opret din SSH-nøgle. Erstat ``\"your_comment\"`` med en "
+"etiket for at identificere den (f.eks. \"Nitrokey GitLab\"). Som standard er "
+"nøglen en ikke-resident nøgle, hvilket betyder, at et lokalt nøglehåndtag "
+"gemmes i ``~/.ssh/``, mens den private nøgle forbliver sikkert på Nitrokey. "
+"Brug ``-O resident``, hvis du vil have, at nøglen skal være bærbar på tværs "
+"af systemer."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "eller for at oprette en resident nøgle"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Residente nøgler kan senere listes og importeres på et andet system med:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10410,6 +10426,13 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Under nøglegenerering kan du også blive bedt om at angive en **-passphrase**"
+". Denne passphrase krypterer det lokale nøglehåndtag, der er gemt i ``~/.ssh/"
+"`` (ikke den private nøgle på Nitrokey, som altid forbliver sikkert inde i "
+"enheden). Passphrasen er forskellig fra FIDO2-enhedens PIN-kode. PIN-koden "
+"beskytter selve den fysiske nøgle, mens passphrasen beskytter din lokale "
+"offentlige SSH-nøglefil. Vi anbefaler kun at bruge en passphrase til at "
+"beskytte ikke-hjemmehørende nøgler."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10417,26 +10440,33 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Når du bliver bedt om at angive en filsti, kan du acceptere "
+"standardindstillingen (``~/.ssh/id_ed25519_sk``) eller vælge et "
+"brugerdefineret navn som ``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Hvis Nitrokey blinker, skal du bekræfte handlingen ved at røre ved den."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Til sidst vil følgende filer blive oprettet. Filnavnene kan variere, hvis du "
+"har angivet et brugerdefineret navn, da du genererede nøglen."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → håndtag til den private nøgle (gemt sikkert på "
+"Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → offentlig nøglefil"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10448,6 +10478,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Når dit SSH-nøglepar er genereret, skal den offentlige nøgle føjes til den "
+"tjeneste eller server, du vil have adgang til."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10456,7 +10488,7 @@ msgstr "Eksporter den offentlige nøgle"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Eksempel på output (brug ikke denne tast)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10468,6 +10500,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Kopier outputtet, og tilføj det til din kontos SSH-nøgleindstillinger. Se `"
+"GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-"
+"account>` eller `GitHub <https://docs.github.com/en/authentication/"
+"connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>` "
+"for detaljerede trin. For at aktivere SSH-fjernserveradgang skal du tilføje "
+"din offentlige nøgle til filen ``~/.ssh/authorized_keys`` for din "
+"brugerkonto på SSH-serveren."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -34458,4 +34497,3 @@ msgstr "Mærke beskåret Output"
 
 #~ msgid "NTP restart"
 #~ msgstr "NTP-genstart"
-

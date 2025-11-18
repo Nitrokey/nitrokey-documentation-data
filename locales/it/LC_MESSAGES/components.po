@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Italian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/it/>\n"
 "Language: it\n"
-"Language-Team: Italian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/it/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10577,6 +10578,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"SSH (Secure Shell) è un protocollo di rete utilizzato per accedere e gestire "
+"in modo sicuro sistemi remoti come server o repository di codice (ad esempio "
+"GitLab, GitHub). Utilizza coppie di chiavi crittografiche per "
+"l'autenticazione, consentendo accessi senza password con una forte "
+"sicurezza. Con Nitrokey, la chiave privata SSH viene generata e memorizzata "
+"direttamente sul dispositivo, quindi non lascia mai l'hardware. Per ogni "
+"accesso è necessario toccare Nitrokey, aggiungendo una semplice conferma "
+"fisica che protegge dagli accessi non autorizzati."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10597,14 +10606,23 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Aprire un terminale e creare la chiave SSH. Sostituire ``\"your_comment\"`` "
+"con un'etichetta per identificarla (ad esempio, \"Nitrokey GitLab\"). Per "
+"impostazione predefinita, la chiave è una chiave non residente, il che "
+"significa che l'handle della chiave locale è memorizzato in ``~/.ssh/`` "
+"mentre la chiave privata rimane al sicuro su Nitrokey. Utilizzare l'opzione "
+"``-O resident`` se si desidera che la chiave sia trasferibile da un sistema "
+"all'altro."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "o per creare una chiave residente"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"Le chiavi residenti possono essere successivamente elencate e importate su "
+"un altro sistema con:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10616,6 +10634,13 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"Durante la generazione della chiave, potrebbe essere richiesto di impostare "
+"una **passphrase**. Questa passphrase cripta la chiave locale memorizzata in "
+"``~/.ssh/`` (non la chiave privata di Nitrokey, che rimane sempre al sicuro "
+"all'interno del dispositivo). La passphrase è diversa dal PIN del "
+"dispositivo FIDO2. Il PIN protegge la chiave fisica stessa, mentre la "
+"passphrase protegge il file della chiave pubblica SSH locale. Si consiglia "
+"di utilizzare una passphrase solo per proteggere le chiavi non residenti."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10623,26 +10648,34 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Quando viene richiesto il percorso del file, accettare l'opzione predefinita "
+"(``~/.ssh/id_ed25519_sk``) o scegliere un nome personalizzato come "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Se il Nitrokey lampeggia, confermare l'operazione toccandolo."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Alla fine verranno creati i seguenti file. I nomi dei file possono essere "
+"diversi se si è specificato un nome personalizzato durante la generazione "
+"della chiave."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → handle della chiave privata (memorizzata in modo "
+"sicuro su Nitrokey)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → file della chiave pubblica"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10654,6 +10687,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Una volta generata la coppia di chiavi SSH, la chiave pubblica deve essere "
+"aggiunta al servizio o al server a cui si vuole accedere."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10662,7 +10697,7 @@ msgstr "Esportare la chiave pubblica"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Esempio di uscita (non utilizzare questo tasto)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10674,6 +10709,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Copiare il risultato e aggiungerlo alle impostazioni della chiave SSH del "
+"proprio account. Vedere `GitLab <https://docs.gitlab.com/user/ssh/#add-an-"
+"ssh-key-to-your-gitlab-account>` o `GitHub <https://docs.github.com/en/"
+"authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
+"github-account>` per i passi dettagliati. Per abilitare l'accesso remoto al "
+"server SSH, aggiungere la propria chiave pubblica al file ``~/.ssh/"
+"authorized_keys`` del proprio account utente sul server SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -35003,4 +35045,3 @@ msgstr "Contrassegnare l'uscita ritagliata"
 
 #~ msgid "NTP restart"
 #~ msgstr "Riavvio NTP"
-

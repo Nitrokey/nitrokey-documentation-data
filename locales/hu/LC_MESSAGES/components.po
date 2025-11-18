@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-18 12:46+0000\n"
-"PO-Revision-Date: 2025-10-28 12:13+0000\n"
+"PO-Revision-Date: 2025-11-18 12:53+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/hu/>\n"
 "Language: hu\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/hu/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10535,6 +10536,14 @@ msgid ""
 "adding a simple physical confirmation that protects against unauthorized "
 "access."
 msgstr ""
+"Az SSH (Secure Shell) egy hálózati protokoll, amelyet távoli rendszerek, "
+"például szerverek vagy kódtárak (pl. GitLab, GitHub) biztonságos elérésére "
+"és kezelésére használnak. A hitelesítéshez kriptográfiai kulcspárokat "
+"használ, lehetővé téve a jelszó nélküli bejelentkezést erős biztonsággal. A "
+"Nitrokey segítségével a privát SSH-kulcsot közvetlenül az eszközön "
+"generálják és tárolják, így az soha nem hagyja el a hardvert. Minden "
+"bejelentkezéshez meg kell érintenie a Nitrokey-t, ami egy egyszerű fizikai "
+"megerősítést ad, amely védelmet nyújt az illetéktelen hozzáférés ellen."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
 #, fuzzy
@@ -10555,14 +10564,21 @@ msgid ""
 "the ``-O resident`` option if you want the key to be portable across "
 "systems."
 msgstr ""
+"Nyisson egy terminált, és hozza létre az SSH-kulcsot. A ``\"your_comment\"`` "
+"helyett írjon be egy azonosító címkét (pl. \"Nitrokey GitLab\"). "
+"Alapértelmezés szerint a kulcs nem rezidens kulcs, ami azt jelenti, hogy a "
+"helyi kulcskezelőt a ``~/.ssh/`` tárolja, míg a privát kulcs biztonságosan a "
+"Nitrokey-n marad. Használja a ``-O resident`` opciót, ha azt szeretné, hogy "
+"a kulcs hordozható legyen a különböző rendszerek között."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
 msgid "or to create a resident key"
-msgstr ""
+msgstr "vagy rezidens kulcs létrehozásához"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 msgid "Resident keys can later be listed and imported on another system with:"
 msgstr ""
+"A rezidens kulcsok később listázhatók és importálhatók egy másik rendszerbe:"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
 msgid ""
@@ -10574,6 +10590,12 @@ msgid ""
 "local SSH public key file. We recommend to use a passphrase to protect "
 "non-resident keys only."
 msgstr ""
+"A kulcsgenerálás során megkérhetjük, hogy állítson be egy **jelszót**. Ez a "
+"jelszótag titkosítja a ``~/.ssh/`` tárolt helyi kulcskezelőt (nem a Nitrokey "
+"magánkulcsát, amely mindig biztonságosan az eszközben marad). A jelszó "
+"különbözik a FIDO2 eszköz PIN-kódjától. A PIN magát a fizikai kulcsot védi, "
+"míg a jelszó a helyi SSH nyilvános kulcsfájlt védi. Javasoljuk, hogy a "
+"jelszótagot csak a nem rezidens kulcsok védelmére használja."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
 msgid ""
@@ -10581,26 +10603,33 @@ msgid ""
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
 "``id_ed25519_sk_gitlab``."
 msgstr ""
+"Amikor a fájl elérési útvonalát kéri, fogadja el az alapértelmezett opciót "
+"(``~/.ssh/id_ed25519_sk``), vagy válasszon egy egyéni nevet, például "
+"``id_ed25519_sk_gitlab``."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
-msgstr ""
+msgstr "Ha a Nitrokey villog, erősítse meg a műveletet a gomb megérintésével."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
 msgstr ""
+"Végül a következő fájlok jönnek létre. A fájlnevek eltérhetnek, ha a kulcs "
+"generálásakor egyéni nevet adott meg."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
 msgstr ""
+"``~/.ssh/id_ed25519_sk`` → a titkos kulcs fogantyúja (a Nitrokey-n "
+"biztonságosan tárolva)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
-msgstr ""
+msgstr "``~/.ssh/id_ed25519_sk.pub`` → nyilvános kulcsfájl"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
 #, fuzzy
@@ -10612,6 +10641,8 @@ msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
 msgstr ""
+"Miután az SSH-kulcspár elkészült, a nyilvános kulcsot hozzá kell adni a "
+"hozzáférni kívánt szolgáltatáshoz vagy kiszolgálóhoz."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
 #, fuzzy
@@ -10620,7 +10651,7 @@ msgstr "A nyilvános kulcs exportálása"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
 msgid "Example output (do not use this key)::"
-msgstr ""
+msgstr "Kimeneti példa (ne használja ezt a billentyűt)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
 msgid ""
@@ -10632,6 +10663,13 @@ msgid ""
 "your public key to the file ``~/.ssh/authorized_keys`` of your user "
 "account on the SSH server."
 msgstr ""
+"Másolja ki a kimenetet, és adja hozzá a fiókja SSH-kulcsának beállításaihoz. "
+"A részletes lépéseket lásd a `GitLab <https://docs.gitlab.com/user/ssh/#add-"
+"an-ssh-key-to-your-gitlab-account>` vagy a `GitHub <https://docs.github.com/"
+"en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
+"github-account>` oldalon. Az SSH távoli szerver elérésének engedélyezéséhez "
+"adja hozzá a nyilvános kulcsát az SSH-kiszolgálón lévő felhasználói "
+"fiókjának ``~/.ssh/authorized_keys`` fájljához."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -34999,4 +35037,3 @@ msgstr "Mark vágott kimenet"
 
 #~ msgid "NTP restart"
 #~ msgstr "NTP újraindítás"
-
