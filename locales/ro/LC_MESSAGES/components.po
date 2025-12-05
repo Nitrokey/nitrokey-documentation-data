@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-23 17:30+0000\n"
+"POT-Creation-Date: 2025-12-05 12:49+0000\n"
 "PO-Revision-Date: 2025-11-18 13:08+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ro\n"
@@ -297,6 +297,7 @@ msgstr "NetHSM poate fi utilizat în modul *Attended Boot* și *Unattended Boot*
 #: ../../source/components/nethsm/operation.rst:76
 #: ../../source/components/nethsm/operation.rst:90
 #: ../../source/components/nethsm/operation.rst:130
+#: ../../source/components/nethsm/operation.rst:138
 #: ../../source/components/nethsm/operation.rst:175
 #: ../../source/components/nethsm/operation.rst:197
 #: ../../source/components/nethsm/operation.rst:238
@@ -639,6 +640,7 @@ msgstr "**Opțiuni opționale**"
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/operation.rst:76
 #: ../../source/components/nethsm/operation.rst:90
+#: ../../source/components/nethsm/operation.rst:138
 #: ../../source/components/nethsm/operation.rst:175
 #: ../../source/components/nethsm/operation.rst:197
 #: ../../source/components/nethsm/operation.rst:305
@@ -4897,6 +4899,7 @@ msgstr ""
 "<#key-types-and-mechanisms>`__"
 
 #: ../../source/components/nethsm/operation.rst:81
+#: ../../source/components/nethsm/operation.rst:140
 #: ../../source/components/nethsm/operation.rst:180
 msgid "``-m``, ``--mechanism`` ``MECHANISM``"
 msgstr "``-m``, ``--mechanism`` ``MECHANISM``"
@@ -4911,6 +4914,7 @@ msgstr ""
 "``MECHANISM``` pot fi găsite în tabelul de mai sus."
 
 #: ../../source/components/nethsm/operation.rst:92
+#: ../../source/components/nethsm/operation.rst:143
 #: ../../source/components/nethsm/operation.rst:199
 #: ../../source/components/nethsm/operation.rst:533
 #: ../../source/components/nethsm/operation.rst:580
@@ -4961,6 +4965,30 @@ msgstr "Importați o cheie privată dintr-un fișier PEM în NetHSM după cum ur
 msgid "Private key file in PEM format"
 msgstr "Eliminați fișierul cheie în text clar:"
 
+#: ../../source/components/nethsm/operation.rst:140
+#: ../../source/components/nethsm/operation.rst:180
+msgid ""
+"One or multiple mechanisms for the key, see `Key Types and Mechanisms "
+"<#key-types-and-mechanisms>`__"
+msgstr ""
+"Unul sau mai multe mecanisme pentru cheie, a se vedea `Tipuri de chei și "
+"mecanisme <#key-types-and-mechanisms>`__"
+
+#: ../../source/components/nethsm/operation.rst:143
+#: ../../source/components/nethsm/operation.rst:199
+msgid "The ID of the new key"
+msgstr "ID-ul noii chei"
+
+#: ../../source/components/nethsm/operation.rst:145
+#: ../../source/components/nethsm/operation.rst:201
+msgid "``--tags`` ``TEXT``"
+msgstr "``--tags`` ``TEXT``"
+
+#: ../../source/components/nethsm/operation.rst:145
+#: ../../source/components/nethsm/operation.rst:201
+msgid "The Tag for the new key"
+msgstr "Eticheta pentru noua cheie"
+
 #: ../../source/components/nethsm/operation.rst:162
 #: ../../source/components/nethsm/operation.rst:221
 msgid ""
@@ -4976,14 +5004,6 @@ msgstr ""
 #, fuzzy
 msgid "Private keys in raw format can be imported as follows."
 msgstr "Informațiile detaliate pot fi preluate după cum urmează."
-
-#: ../../source/components/nethsm/operation.rst:180
-msgid ""
-"One or multiple mechanisms for the key, see `Key Types and Mechanisms "
-"<#key-types-and-mechanisms>`__"
-msgstr ""
-"Unul sau mai multe mecanisme pentru cheie, a se vedea `Tipuri de chei și "
-"mecanisme <#key-types-and-mechanisms>`__"
 
 #: ../../source/components/nethsm/operation.rst:183
 msgid "``-p``, ``--prime-p`` ``TEXT``"
@@ -5019,18 +5039,6 @@ msgstr "``-d``, ``--data`` ``TEXT``"
 #: ../../source/components/nethsm/operation.rst:190
 msgid "The key data for ED25519 or ECDSA_* keys, base64-encoded"
 msgstr "Datele cheii pentru cheile ED25519 sau ECDSA_*, codificate în baza 64."
-
-#: ../../source/components/nethsm/operation.rst:199
-msgid "The ID of the new key"
-msgstr "ID-ul noii chei"
-
-#: ../../source/components/nethsm/operation.rst:201
-msgid "``--tags`` ``TEXT``"
-msgstr "``--tags`` ``TEXT``"
-
-#: ../../source/components/nethsm/operation.rst:201
-msgid "The Tag for the new key"
-msgstr "Eticheta pentru noua cheie"
 
 #: ../../source/components/nethsm/operation.rst:224
 msgid "Delete Key"
@@ -21075,9 +21083,13 @@ msgstr ""
 "Android."
 
 #: ../../source/components/nitrokeys/fido2/faq.rst:10
+#: ../../source/components/nitrokeys/hsm/faq.rst:10
+#: ../../source/components/nitrokeys/pro/faq.rst:10
+#: ../../source/components/nitrokeys/start/faq.rst:10
+#: ../../source/components/nitrokeys/storage/faq.rst:13
 #, fuzzy
 msgid ""
-"See the `overview <https://www.nitrokey.com/products/nitrokeys>`_ of "
+"See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of "
 "supported use cases."
 msgstr ""
 "Consultați `prezentare generală "
@@ -21120,16 +21132,18 @@ msgstr ""
 "care nu pot fi descoperite."
 
 #: ../../source/components/nitrokeys/fido2/faq.rst:31
+#, fuzzy
 msgid ""
 "After `disabling Enforce Attestation <https://learn.microsoft.com/en-"
 "us/azure/active-directory/authentication/howto-authentication-"
-"passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey"
-" FIDO2 is supported by Azure Entra ID out of the box."
+"passwordless-security-key#fido-security-key-optional-settings>`__ "
+"Nitrokey is supported by Azure Entra ID out of the box."
 msgstr ""
-"După `dezactivarea Enforce Attestation <https://learn.microsoft.com/en-"
-"us/azure/active-directory/authentication/howto-authentication-"
-"passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey"
-" FIDO2 este acceptat de Azure Entra ID din fabrică."
+"După ce `a dezactivat opțiunea Enforce Attestation "
+"<https://learn.microsoft.com/en-us/azure/active-directory/authentication"
+"/howto-authentication-passwordless-security-key#fido-security-key-"
+"optional-settings>`__ Nitrokey 3 este acceptat din start de Azure Entra "
+"ID."
 
 #: ../../source/components/nitrokeys/fido2/firmware-update.rst:2
 #: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:2
@@ -21476,19 +21490,6 @@ msgstr "Nitrokey HSM Întrebări frecvente"
 #: ../../source/components/nitrokeys/storage/faq.rst:9
 msgid "Windows, Linux and macOS."
 msgstr "Windows, Linux și macOS."
-
-#: ../../source/components/nitrokeys/hsm/faq.rst:10
-#: ../../source/components/nitrokeys/pro/faq.rst:10
-#: ../../source/components/nitrokeys/start/faq.rst:10
-#: ../../source/components/nitrokeys/storage/faq.rst:13
-#, fuzzy
-msgid ""
-"See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of "
-"supported use cases."
-msgstr ""
-"Consultați `prezentare generală "
-"<https://www.nitrokey.com/products/nitrokeys>`_ a cazurilor de utilizare "
-"acceptate."
 
 #: ../../source/components/nitrokeys/hsm/faq.rst:14
 #: ../../source/components/nitrokeys/pro/faq.rst:22
@@ -24247,10 +24248,11 @@ msgstr ""
 " litere\"."
 
 #: ../../source/components/nitrokeys/nitrokey3/usbguard.rst:6
+#, fuzzy
 msgid ""
 "Especially thunderbolt (which can be blocked globally, see `this config "
 "as to how "
-"<https://github.com/secureblue/secureblue/tree/live/files/system/etc/modprobe.d>`__"
+"<https://github.com/secureblue/secureblue/tree/live/files/system/usr/lib/modprobe.d>`__"
 " can grant attackers access to your RAM, which means encryption keys and "
 "more."
 msgstr ""
@@ -35180,4 +35182,30 @@ msgstr "Marcaj decupat Ieșire"
 
 #~ msgid "NTP restart"
 #~ msgstr "Repornirea NTP"
+
+#~ msgid ""
+#~ "See the `overview "
+#~ "<https://www.nitrokey.com/products/nitrokeys>`_ of "
+#~ "supported use cases."
+#~ msgstr ""
+#~ "Consultați `prezentare generală "
+#~ "<https://www.nitrokey.com/products/nitrokeys>`_ a "
+#~ "cazurilor de utilizare acceptate."
+
+#~ msgid ""
+#~ "After `disabling Enforce Attestation "
+#~ "<https://learn.microsoft.com/en-us/azure/active-"
+#~ "directory/authentication/howto-authentication-"
+#~ "passwordless-security-key#fido-security-key-"
+#~ "optional-settings`__ Nitrokey FIDO2 is "
+#~ "supported by Azure Entra ID out of"
+#~ " the box."
+#~ msgstr ""
+#~ "După `dezactivarea Enforce Attestation "
+#~ "<https://learn.microsoft.com/en-us/azure/active-"
+#~ "directory/authentication/howto-authentication-"
+#~ "passwordless-security-key#fido-security-key-"
+#~ "optional-settings`__ Nitrokey FIDO2 este "
+#~ "acceptat de Azure Entra ID din "
+#~ "fabrică."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-23 17:30+0000\n"
+"POT-Creation-Date: 2025-12-05 12:49+0000\n"
 "PO-Revision-Date: 2025-11-18 13:08+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: fr\n"
@@ -296,6 +296,7 @@ msgstr "NetHSM peut être utilisé en mode *Attended Boot* et *Unattended Boot*.
 #: ../../source/components/nethsm/operation.rst:76
 #: ../../source/components/nethsm/operation.rst:90
 #: ../../source/components/nethsm/operation.rst:130
+#: ../../source/components/nethsm/operation.rst:138
 #: ../../source/components/nethsm/operation.rst:175
 #: ../../source/components/nethsm/operation.rst:197
 #: ../../source/components/nethsm/operation.rst:238
@@ -639,6 +640,7 @@ msgstr "**Options facultatives**"
 #: ../../source/components/nethsm/getting-started.rst:159
 #: ../../source/components/nethsm/operation.rst:76
 #: ../../source/components/nethsm/operation.rst:90
+#: ../../source/components/nethsm/operation.rst:138
 #: ../../source/components/nethsm/operation.rst:175
 #: ../../source/components/nethsm/operation.rst:197
 #: ../../source/components/nethsm/operation.rst:305
@@ -4926,6 +4928,7 @@ msgstr ""
 "and-mechanisms>`__"
 
 #: ../../source/components/nethsm/operation.rst:81
+#: ../../source/components/nethsm/operation.rst:140
 #: ../../source/components/nethsm/operation.rst:180
 msgid "``-m``, ``--mechanism`` ``MECHANISM``"
 msgstr "``-m``, ``--mechanism`` ``MECHANISM``"
@@ -4940,6 +4943,7 @@ msgstr ""
 "``MECHANISM`` se trouvent dans le tableau ci-dessus."
 
 #: ../../source/components/nethsm/operation.rst:92
+#: ../../source/components/nethsm/operation.rst:143
 #: ../../source/components/nethsm/operation.rst:199
 #: ../../source/components/nethsm/operation.rst:533
 #: ../../source/components/nethsm/operation.rst:580
@@ -4992,6 +4996,30 @@ msgstr ""
 msgid "Private key file in PEM format"
 msgstr "Supprimez le fichier clé en clair :"
 
+#: ../../source/components/nethsm/operation.rst:140
+#: ../../source/components/nethsm/operation.rst:180
+msgid ""
+"One or multiple mechanisms for the key, see `Key Types and Mechanisms "
+"<#key-types-and-mechanisms>`__"
+msgstr ""
+"Un ou plusieurs mécanismes pour la clé, voir `Types de clés et mécanismes"
+" <#key-types-and-mechanisms>`__"
+
+#: ../../source/components/nethsm/operation.rst:143
+#: ../../source/components/nethsm/operation.rst:199
+msgid "The ID of the new key"
+msgstr "L'ID de la nouvelle clé"
+
+#: ../../source/components/nethsm/operation.rst:145
+#: ../../source/components/nethsm/operation.rst:201
+msgid "``--tags`` ``TEXT``"
+msgstr "``--tags`` ``TEXT``"
+
+#: ../../source/components/nethsm/operation.rst:145
+#: ../../source/components/nethsm/operation.rst:201
+msgid "The Tag for the new key"
+msgstr "Le Tag pour la nouvelle clé"
+
 #: ../../source/components/nethsm/operation.rst:162
 #: ../../source/components/nethsm/operation.rst:221
 msgid ""
@@ -5007,14 +5035,6 @@ msgstr ""
 #, fuzzy
 msgid "Private keys in raw format can be imported as follows."
 msgstr "Les informations détaillées peuvent être récupérées comme suit."
-
-#: ../../source/components/nethsm/operation.rst:180
-msgid ""
-"One or multiple mechanisms for the key, see `Key Types and Mechanisms "
-"<#key-types-and-mechanisms>`__"
-msgstr ""
-"Un ou plusieurs mécanismes pour la clé, voir `Types de clés et mécanismes"
-" <#key-types-and-mechanisms>`__"
 
 #: ../../source/components/nethsm/operation.rst:183
 msgid "``-p``, ``--prime-p`` ``TEXT``"
@@ -5050,18 +5070,6 @@ msgstr "``-d``, ``--data`` ``TEXT``"
 #: ../../source/components/nethsm/operation.rst:190
 msgid "The key data for ED25519 or ECDSA_* keys, base64-encoded"
 msgstr "Les données de clé pour les clés ED25519 ou ECDSA_*, encodées en base64"
-
-#: ../../source/components/nethsm/operation.rst:199
-msgid "The ID of the new key"
-msgstr "L'ID de la nouvelle clé"
-
-#: ../../source/components/nethsm/operation.rst:201
-msgid "``--tags`` ``TEXT``"
-msgstr "``--tags`` ``TEXT``"
-
-#: ../../source/components/nethsm/operation.rst:201
-msgid "The Tag for the new key"
-msgstr "Le Tag pour la nouvelle clé"
 
 #: ../../source/components/nethsm/operation.rst:224
 msgid "Delete Key"
@@ -21312,9 +21320,13 @@ msgstr ""
 "Android."
 
 #: ../../source/components/nitrokeys/fido2/faq.rst:10
+#: ../../source/components/nitrokeys/hsm/faq.rst:10
+#: ../../source/components/nitrokeys/pro/faq.rst:10
+#: ../../source/components/nitrokeys/start/faq.rst:10
+#: ../../source/components/nitrokeys/storage/faq.rst:13
 #, fuzzy
 msgid ""
-"See the `overview <https://www.nitrokey.com/products/nitrokeys>`_ of "
+"See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of "
 "supported use cases."
 msgstr ""
 "Voir `l'aperçu <https://www.nitrokey.com/products/nitrokeys>`_ des cas "
@@ -21356,16 +21368,17 @@ msgstr ""
 "découvrables, et un nombre illimité d'identifiants non découvrables."
 
 #: ../../source/components/nitrokeys/fido2/faq.rst:31
+#, fuzzy
 msgid ""
 "After `disabling Enforce Attestation <https://learn.microsoft.com/en-"
 "us/azure/active-directory/authentication/howto-authentication-"
-"passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey"
-" FIDO2 is supported by Azure Entra ID out of the box."
+"passwordless-security-key#fido-security-key-optional-settings>`__ "
+"Nitrokey is supported by Azure Entra ID out of the box."
 msgstr ""
 "Après `désactivation de Enforce Attestation <https://learn.microsoft.com"
 "/en-us/azure/active-directory/authentication/howto-authentication-"
-"passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey"
-" FIDO2 est pris en charge par Azure Entra ID dès le départ."
+"passwordless-security-key#fido-security-key-optional-settings>`__ "
+"Nitrokey 3 est pris en charge par Azure Entra ID dès le départ."
 
 #: ../../source/components/nitrokeys/fido2/firmware-update.rst:2
 #: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:2
@@ -21717,18 +21730,6 @@ msgstr "FAQ sur le HSM de Nitrokey"
 #: ../../source/components/nitrokeys/storage/faq.rst:9
 msgid "Windows, Linux and macOS."
 msgstr "Windows, Linux et macOS."
-
-#: ../../source/components/nitrokeys/hsm/faq.rst:10
-#: ../../source/components/nitrokeys/pro/faq.rst:10
-#: ../../source/components/nitrokeys/start/faq.rst:10
-#: ../../source/components/nitrokeys/storage/faq.rst:13
-#, fuzzy
-msgid ""
-"See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of "
-"supported use cases."
-msgstr ""
-"Voir `l'aperçu <https://www.nitrokey.com/products/nitrokeys>`_ des cas "
-"d'utilisation pris en charge."
 
 #: ../../source/components/nitrokeys/hsm/faq.rst:14
 #: ../../source/components/nitrokeys/pro/faq.rst:22
@@ -24498,10 +24499,11 @@ msgstr ""
 "gouvernementales à trois lettres\"."
 
 #: ../../source/components/nitrokeys/nitrokey3/usbguard.rst:6
+#, fuzzy
 msgid ""
 "Especially thunderbolt (which can be blocked globally, see `this config "
 "as to how "
-"<https://github.com/secureblue/secureblue/tree/live/files/system/etc/modprobe.d>`__"
+"<https://github.com/secureblue/secureblue/tree/live/files/system/usr/lib/modprobe.d>`__"
 " can grant attackers access to your RAM, which means encryption keys and "
 "more."
 msgstr ""
@@ -35585,4 +35587,30 @@ msgstr "Mark cropped Output"
 
 #~ msgid "NTP restart"
 #~ msgstr "Redémarrage de NTP"
+
+#~ msgid ""
+#~ "See the `overview "
+#~ "<https://www.nitrokey.com/products/nitrokeys>`_ of "
+#~ "supported use cases."
+#~ msgstr ""
+#~ "Voir `l'aperçu "
+#~ "<https://www.nitrokey.com/products/nitrokeys>`_ des cas"
+#~ " d'utilisation pris en charge."
+
+#~ msgid ""
+#~ "After `disabling Enforce Attestation "
+#~ "<https://learn.microsoft.com/en-us/azure/active-"
+#~ "directory/authentication/howto-authentication-"
+#~ "passwordless-security-key#fido-security-key-"
+#~ "optional-settings`__ Nitrokey FIDO2 is "
+#~ "supported by Azure Entra ID out of"
+#~ " the box."
+#~ msgstr ""
+#~ "Après `désactivation de Enforce Attestation"
+#~ " <https://learn.microsoft.com/en-us/azure/active-"
+#~ "directory/authentication/howto-authentication-"
+#~ "passwordless-security-key#fido-security-key-"
+#~ "optional-settings`__ Nitrokey FIDO2 est "
+#~ "pris en charge par Azure Entra ID"
+#~ " dès le départ."
 
