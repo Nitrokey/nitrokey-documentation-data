@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-05 12:49+0000\n"
+"POT-Creation-Date: 2025-12-06 11:00+0000\n"
 "PO-Revision-Date: 2025-11-18 13:07+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: el\n"
@@ -32191,7 +32191,12 @@ msgstr ""
 msgid "nitrokey.trussed"
 msgstr "Επαναφορά Nitrokey"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:16
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:17
+#, fuzzy
+msgid "Accessing Trussed Devices"
+msgstr "Λίστα Nitrokey 3 Συσκευές"
+
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:24
 msgid "Trussed Device Objects"
 msgstr "Αντικείμενα συσκευής με δέστρες"
 
@@ -32208,7 +32213,7 @@ msgstr ""
 msgid "Bases: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 msgstr "Βάσεις: :py:class:`~~nitrokey.trussed._base.TrussedBase`"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:33
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:41
 #, fuzzy
 msgid "Update Container Objects"
 msgstr "Κατασκευάστε το δοχείο."
@@ -32233,7 +32238,7 @@ msgstr ""
 "FirmwareMetadata(version: Nitrokey.trussed._utils.Version, signed_by: "
 "Optional[str] = None, signed_by_nitrokey: bool = False)"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:59
 msgid "Utility Objects"
 msgstr "Αντικείμενα κοινής ωφέλειας"
 
@@ -32281,7 +32286,7 @@ msgstr ""
 "Επιστρέφει το βασικό μέρος αυτής της έκδοσης, δηλαδή την έκδοση χωρίς τα "
 "στοιχεία προ-έκδοσης και κατασκευής."
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:76
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:84
 #, fuzzy
 msgid "Trussed Exceptions"
 msgstr "Οδηγίες"
@@ -32408,58 +32413,41 @@ msgid "Listing and Opening Devices"
 msgstr "Λίστα Nitrokey 3 Συσκευές"
 
 #: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:15
+#, fuzzy
 msgid ""
-"Use the :py:meth:`nitrokey.trussed.TrussedDevice.list` function to list "
-"and open all connected devices::"
+"Use the :py:func:`nitrokey.trussed.list` function to list and open all "
+"connected devices::"
 msgstr ""
 "Χρησιμοποιήστε τη συνάρτηση "
 ":py:meth:`nitrokey.trussed.TrussedDevice.list` για να παραθέσετε και να "
 "ανοίξετε όλες τις συνδεδεμένες συσκευές::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:26
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:23
+#, fuzzy
 msgid ""
-"If you know the device path, use "
-":py:meth:`nitrokey.trussed.TrussedDevice.open` instead::"
+"If you know the device path, use :py:func:`nitrokey.trussed.open` "
+"instead::"
 msgstr ""
 "Αν γνωρίζετε τη διαδρομή της συσκευής, χρησιμοποιήστε "
 ":py:meth:`nitrokey.trussed.TrussedDevice.open` αντί::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:39
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:34
 msgid ""
-"Similar functions are available for "
+"If you know the model you want to connect to, you can also use the "
+"``list`` and ``open`` functions in the :py:mod:`nitrokey.nk3` or "
+":py:mod:`nitrokey.nkpk` modules. If you also know the type of the device,"
+" you can use the ``list`` and ``open`` methods of the "
+":py:class:`nitrokey.nk3.NK3`, :py:class:`nitrokey.nkpk.NKPK`, "
 ":py:class:`nitrokey.nk3.NK3Bootloader` and "
-":py:class:`nitrokey.nkpk.NKPKBootloader`. To list both normal and "
-"bootloader devices, use :py:meth:`nitrokey.nk3.list` and "
-":py:meth:`nitrokey.nkpk.list`."
+":py:class:`nitrokey.nkpk.NKPKBootloader` classes."
 msgstr ""
-"Παρόμοιες λειτουργίες είναι διαθέσιμες για τις "
-":py:class:`nitrokey.nk3.NK3Bootloader` και "
-":py:class:`nitrokey.nkpk.NKPKBootloader`. Για να απαριθμήσετε τόσο τις "
-"κανονικές συσκευές όσο και τις συσκευές bootloader, χρησιμοποιήστε τις "
-"επιλογές :py:meth:`nitrokey.nk3.list` και :py:meth:`nitrokey.nkpk.list`."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
-msgid ""
-"Currently, the devices returned by "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` and :py:meth:`nitrokey.nkpk.list` are only "
-"valid until the next call to any of the these functions. See `issue 31 "
-"<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_ for more "
-"information."
-msgstr ""
-"Επί του παρόντος, οι συσκευές που επιστρέφονται από τις "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` και :py:meth:`nitrokey.nkpk.list` ισχύουν "
-"μόνο μέχρι την επόμενη κλήση οποιασδήποτε από αυτές τις συναρτήσεις. Για "
-"περισσότερες πληροφορίες δείτε το `issue 31 <https://github.com/Nitrokey"
-"/nitrokey-sdk-py/issues/31>`_."
-
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:38
 #, fuzzy
 msgid "Using Applications"
 msgstr "Εφαρμογή"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:40
 msgid ""
 "The Nitrokey Python SDK supports these applications for all Trussed "
 "devices:"
@@ -32467,7 +32455,7 @@ msgstr ""
 "Το Nitrokey Python SDK υποστηρίζει αυτές τις εφαρμογές για όλες τις "
 "συσκευές Trussed:"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:42
 msgid ""
 ":py:class:`nitrokey.trussed.admin_app.AdminApp`: access device metadata "
 "and manage device configuration state"
@@ -32476,7 +32464,7 @@ msgstr ""
 "μεταδεδομένα της συσκευής και διαχείριση της κατάστασης διαμόρφωσης της "
 "συσκευής"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:52
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
 msgid ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: setup device"
 " in provisioner mode (only applicable for Hacker devices)"
@@ -32484,12 +32472,12 @@ msgstr ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: ρύθμιση της "
 "συσκευής σε κατάσταση παροχής (ισχύει μόνο για συσκευές Hacker)"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:54
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:45
 #, fuzzy
 msgid "The Nitrokey 3 also provides these applications:"
 msgstr "Nitrokey 3 με εφαρμογή PIV."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:56
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
 msgid ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: securely store passwords"
 " and credentials"
@@ -32497,7 +32485,7 @@ msgstr ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: ασφαλής αποθήκευση "
 "κωδικών πρόσβασης και διαπιστευτηρίων"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:58
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
 msgid "See the API reference for the application classes for more information."
 msgstr ""
 "Ανατρέξτε στην αναφορά API για τις κλάσεις εφαρμογών για περισσότερες "
@@ -35803,4 +35791,41 @@ msgstr "Mark cropped Output"
 #~ "security-key-optional-settings`__ Το "
 #~ "Nitrokey FIDO2 υποστηρίζεται από το "
 #~ "Azure Entra ID εξ αρχής."
+
+#~ msgid ""
+#~ "Similar functions are available for "
+#~ ":py:class:`nitrokey.nk3.NK3Bootloader` and "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. To list "
+#~ "both normal and bootloader devices, use"
+#~ " :py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list`."
+#~ msgstr ""
+#~ "Παρόμοιες λειτουργίες είναι διαθέσιμες για "
+#~ "τις :py:class:`nitrokey.nk3.NK3Bootloader` και "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. Για να "
+#~ "απαριθμήσετε τόσο τις κανονικές συσκευές "
+#~ "όσο και τις συσκευές bootloader, "
+#~ "χρησιμοποιήστε τις επιλογές "
+#~ ":py:meth:`nitrokey.nk3.list` και "
+#~ ":py:meth:`nitrokey.nkpk.list`."
+
+#~ msgid ""
+#~ "Currently, the devices returned by "
+#~ ":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list` are only valid "
+#~ "until the next call to any of "
+#~ "the these functions. See `issue 31 "
+#~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_"
+#~ " for more information."
+#~ msgstr ""
+#~ "Επί του παρόντος, οι συσκευές που "
+#~ "επιστρέφονται από τις "
+#~ ":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` και "
+#~ ":py:meth:`nitrokey.nkpk.list` ισχύουν μόνο μέχρι "
+#~ "την επόμενη κλήση οποιασδήποτε από αυτές"
+#~ " τις συναρτήσεις. Για περισσότερες "
+#~ "πληροφορίες δείτε το `issue 31 "
+#~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_."
 

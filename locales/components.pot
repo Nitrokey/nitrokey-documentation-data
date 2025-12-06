@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-05 12:49+0000\n"
+"POT-Creation-Date: 2025-12-06 11:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18223,7 +18223,11 @@ msgstr ""
 msgid "nitrokey.trussed"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:16
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:17
+msgid "Accessing Trussed Devices"
+msgstr ""
+
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:24
 msgid "Trussed Device Objects"
 msgstr ""
 
@@ -18236,7 +18240,7 @@ msgstr ""
 msgid "Bases: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:33
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:41
 msgid "Update Container Objects"
 msgstr ""
 
@@ -18248,7 +18252,7 @@ msgstr ""
 msgid "FirmwareMetadata(version: nitrokey.trussed._utils.Version, signed_by: Optional[str] = None, signed_by_nitrokey: bool = False)"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:59
 msgid "Utility Objects"
 msgstr ""
 
@@ -18276,7 +18280,7 @@ msgstr ""
 msgid "Returns the core part of this version, i. e. the version without the pre-release and build components."
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:76
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:84
 msgid "Trussed Exceptions"
 msgstr ""
 
@@ -18354,46 +18358,42 @@ msgid "Listing and Opening Devices"
 msgstr ""
 
 #: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:15
-msgid "Use the :py:meth:`nitrokey.trussed.TrussedDevice.list` function to list and open all connected devices::"
+msgid "Use the :py:func:`nitrokey.trussed.list` function to list and open all connected devices::"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:26
-msgid "If you know the device path, use :py:meth:`nitrokey.trussed.TrussedDevice.open` instead::"
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:23
+msgid "If you know the device path, use :py:func:`nitrokey.trussed.open` instead::"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:39
-msgid "Similar functions are available for :py:class:`nitrokey.nk3.NK3Bootloader` and :py:class:`nitrokey.nkpk.NKPKBootloader`. To list both normal and bootloader devices, use :py:meth:`nitrokey.nk3.list` and :py:meth:`nitrokey.nkpk.list`."
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:34
+msgid "If you know the model you want to connect to, you can also use the ``list`` and ``open`` functions in the :py:mod:`nitrokey.nk3` or :py:mod:`nitrokey.nkpk` modules. If you also know the type of the device, you can use the ``list`` and ``open`` methods of the :py:class:`nitrokey.nk3.NK3`, :py:class:`nitrokey.nkpk.NKPK`, :py:class:`nitrokey.nk3.NK3Bootloader` and :py:class:`nitrokey.nkpk.NKPKBootloader` classes."
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
-msgid "Currently, the devices returned by :py:meth:`nitrokey.trussed.TrussedDevice.list`, :py:meth:`nitrokey.nk3.list` and :py:meth:`nitrokey.nkpk.list` are only valid until the next call to any of the these functions. See `issue 31 <https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_ for more information."
-msgstr ""
-
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:38
 msgid "Using Applications"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:40
 msgid "The Nitrokey Python SDK supports these applications for all Trussed devices:"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:42
 msgid ":py:class:`nitrokey.trussed.admin_app.AdminApp`: access device metadata and manage device configuration state"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:52
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
 msgid ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: setup device in provisioner mode (only applicable for Hacker devices)"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:54
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:45
 msgid "The Nitrokey 3 also provides these applications:"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:56
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
 msgid ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: securely store passwords and credentials"
 msgstr ""
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:58
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
 msgid "See the API reference for the application classes for more information."
 msgstr ""
 

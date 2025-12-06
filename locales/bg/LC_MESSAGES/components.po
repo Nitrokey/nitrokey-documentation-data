@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-05 12:49+0000\n"
+"POT-Creation-Date: 2025-12-06 11:00+0000\n"
 "PO-Revision-Date: 2025-11-18 13:07+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: bg\n"
@@ -31526,7 +31526,12 @@ msgstr ""
 msgid "nitrokey.trussed"
 msgstr "Нулиране на Nitrokey"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:16
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:17
+#, fuzzy
+msgid "Accessing Trussed Devices"
+msgstr "Списък на устройствата Nitrokey 3"
+
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:24
 msgid "Trussed Device Objects"
 msgstr "Обекти на устройства с ферми"
 
@@ -31543,7 +31548,7 @@ msgstr ""
 msgid "Bases: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 msgstr "Бази: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:33
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:41
 #, fuzzy
 msgid "Update Container Objects"
 msgstr "Изградете контейнера."
@@ -31568,7 +31573,7 @@ msgstr ""
 "FirmwareMetadata(version: Nitrokey.trussed._utils.Version, signed_by: "
 "Optional[str] = None, signed_by_nitrokey: bool = False)"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:59
 msgid "Utility Objects"
 msgstr "Комуникационни обекти"
 
@@ -31615,7 +31620,7 @@ msgstr ""
 "Връща основната част на тази версия, т.е. версията без компонентите pre-"
 "release и build."
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:76
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:84
 #, fuzzy
 msgid "Trussed Exceptions"
 msgstr "Инструкции"
@@ -31742,62 +31747,46 @@ msgid "Listing and Opening Devices"
 msgstr "Списък на устройствата Nitrokey 3"
 
 #: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:15
+#, fuzzy
 msgid ""
-"Use the :py:meth:`nitrokey.trussed.TrussedDevice.list` function to list "
-"and open all connected devices::"
+"Use the :py:func:`nitrokey.trussed.list` function to list and open all "
+"connected devices::"
 msgstr ""
 "Използвайте функцията :py:meth:`nitrokey.trussed.TrussedDevice.list`, за "
 "да изброите и отворите всички свързани устройства::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:26
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:23
+#, fuzzy
 msgid ""
-"If you know the device path, use "
-":py:meth:`nitrokey.trussed.TrussedDevice.open` instead::"
+"If you know the device path, use :py:func:`nitrokey.trussed.open` "
+"instead::"
 msgstr ""
 "Ако знаете пътя до устройството, използвайте вместо това "
 ":py:meth:`nitrokey.trussed.TrussedDevice.open`::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:39
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:34
 msgid ""
-"Similar functions are available for "
+"If you know the model you want to connect to, you can also use the "
+"``list`` and ``open`` functions in the :py:mod:`nitrokey.nk3` or "
+":py:mod:`nitrokey.nkpk` modules. If you also know the type of the device,"
+" you can use the ``list`` and ``open`` methods of the "
+":py:class:`nitrokey.nk3.NK3`, :py:class:`nitrokey.nkpk.NKPK`, "
 ":py:class:`nitrokey.nk3.NK3Bootloader` and "
-":py:class:`nitrokey.nkpk.NKPKBootloader`. To list both normal and "
-"bootloader devices, use :py:meth:`nitrokey.nk3.list` and "
-":py:meth:`nitrokey.nkpk.list`."
+":py:class:`nitrokey.nkpk.NKPKBootloader` classes."
 msgstr ""
-"Подобни функции са налични за :py:class:`nitrokey.nk3.NK3Bootloader` и "
-":py:class:`nitrokey.nkpk.NKPKBootloader`. За да изведете в списък както "
-"нормалните устройства, така и устройствата с bootloader, използвайте "
-":py:meth:`nitrokey.nk3.list` и :py:meth:`nitrokey.nkpk.list`."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
-msgid ""
-"Currently, the devices returned by "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` and :py:meth:`nitrokey.nkpk.list` are only "
-"valid until the next call to any of the these functions. See `issue 31 "
-"<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_ for more "
-"information."
-msgstr ""
-"Понастоящем устройствата, върнати от "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` и :py:meth:`nitrokey.nkpk.list`, са валидни "
-"само до следващото извикване на някоя от тези функции. Вижте `issue 31 "
-"<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_ за повече "
-"информация."
-
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:38
 #, fuzzy
 msgid "Using Applications"
 msgstr "Приложение"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:40
 msgid ""
 "The Nitrokey Python SDK supports these applications for all Trussed "
 "devices:"
 msgstr "Nitrokey Python SDK поддържа тези приложения за всички устройства с ферми:"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:42
 msgid ""
 ":py:class:`nitrokey.trussed.admin_app.AdminApp`: access device metadata "
 "and manage device configuration state"
@@ -31806,7 +31795,7 @@ msgstr ""
 " устройството и управление на състоянието на конфигурацията на "
 "устройството"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:52
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
 msgid ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: setup device"
 " in provisioner mode (only applicable for Hacker devices)"
@@ -31814,12 +31803,12 @@ msgstr ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: настройка на"
 " устройството в режим на провизор (приложимо само за устройствата Hacker)"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:54
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:45
 #, fuzzy
 msgid "The Nitrokey 3 also provides these applications:"
 msgstr "Nitrokey 3 с приложение PIV."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:56
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
 msgid ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: securely store passwords"
 " and credentials"
@@ -31827,7 +31816,7 @@ msgstr ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: сигурно съхранение на "
 "пароли и пълномощия"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:58
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
 msgid "See the API reference for the application classes for more information."
 msgstr "За повече информация вижте справката за API на класовете за приложения."
 
@@ -35058,4 +35047,39 @@ msgstr "Маркирайте изрязаното Изход"
 #~ "optional-settings`__ Често задавани въпроси"
 #~ " за Nitrokey FIDO2 се поддържа от "
 #~ "Azure Entra ID out of the box."
+
+#~ msgid ""
+#~ "Similar functions are available for "
+#~ ":py:class:`nitrokey.nk3.NK3Bootloader` and "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. To list "
+#~ "both normal and bootloader devices, use"
+#~ " :py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list`."
+#~ msgstr ""
+#~ "Подобни функции са налични за "
+#~ ":py:class:`nitrokey.nk3.NK3Bootloader` и "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. За да "
+#~ "изведете в списък както нормалните "
+#~ "устройства, така и устройствата с "
+#~ "bootloader, използвайте :py:meth:`nitrokey.nk3.list` "
+#~ "и :py:meth:`nitrokey.nkpk.list`."
+
+#~ msgid ""
+#~ "Currently, the devices returned by "
+#~ ":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list` are only valid "
+#~ "until the next call to any of "
+#~ "the these functions. See `issue 31 "
+#~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_"
+#~ " for more information."
+#~ msgstr ""
+#~ "Понастоящем устройствата, върнати от "
+#~ ":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` и "
+#~ ":py:meth:`nitrokey.nkpk.list`, са валидни само "
+#~ "до следващото извикване на някоя от "
+#~ "тези функции. Вижте `issue 31 "
+#~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_"
+#~ " за повече информация."
 

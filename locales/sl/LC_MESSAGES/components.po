@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-12-05 12:49+0000\n"
+"POT-Creation-Date: 2025-12-06 11:00+0000\n"
 "PO-Revision-Date: 2025-11-18 13:08+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: sl\n"
@@ -30992,7 +30992,12 @@ msgstr ""
 msgid "nitrokey.trussed"
 msgstr "Ponastavitev Nitrokey"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:16
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:17
+#, fuzzy
+msgid "Accessing Trussed Devices"
+msgstr "Seznam naprav Nitrokey 3"
+
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:24
 msgid "Trussed Device Objects"
 msgstr "Objekte z vezanimi napravami"
 
@@ -31009,7 +31014,7 @@ msgstr ""
 msgid "Bases: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 msgstr "Osnove: :py:class:`~nitrokey.trussed._base.TrussedBase`"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:33
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:41
 #, fuzzy
 msgid "Update Container Objects"
 msgstr "Zgradite posodo."
@@ -31034,7 +31039,7 @@ msgstr ""
 "FirmwareMetadata(version: Nitrokey.trussed._utils.Version, signed_by: "
 "Neobvezno[str] = None, signed_by_nitrokey: bool = False)"
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:59
 msgid "Utility Objects"
 msgstr "Uporabni predmeti"
 
@@ -31081,7 +31086,7 @@ msgstr ""
 "Vrne osnovni del te različice, tj. različico brez komponent za predizdajo"
 " in sestavo."
 
-#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:76
+#: ../../source/components/software/nitrokey-sdk-py/api/nitrokey.trussed.rst:84
 #, fuzzy
 msgid "Trussed Exceptions"
 msgstr "Navodila"
@@ -31206,62 +31211,46 @@ msgid "Listing and Opening Devices"
 msgstr "Seznam naprav Nitrokey 3"
 
 #: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:15
+#, fuzzy
 msgid ""
-"Use the :py:meth:`nitrokey.trussed.TrussedDevice.list` function to list "
-"and open all connected devices::"
+"Use the :py:func:`nitrokey.trussed.list` function to list and open all "
+"connected devices::"
 msgstr ""
 "Uporabite funkcijo :py:meth:`nitrokey.trussed.TrussedDevice.list` za "
 "seznam in odprtje vseh povezanih naprav::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:26
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:23
+#, fuzzy
 msgid ""
-"If you know the device path, use "
-":py:meth:`nitrokey.trussed.TrussedDevice.open` instead::"
+"If you know the device path, use :py:func:`nitrokey.trussed.open` "
+"instead::"
 msgstr ""
 "Če poznate pot do naprave, namesto tega uporabite "
 ":py:meth:`nitrokey.trussed.TrussedDevice.open`::"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:39
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:34
 msgid ""
-"Similar functions are available for "
+"If you know the model you want to connect to, you can also use the "
+"``list`` and ``open`` functions in the :py:mod:`nitrokey.nk3` or "
+":py:mod:`nitrokey.nkpk` modules. If you also know the type of the device,"
+" you can use the ``list`` and ``open`` methods of the "
+":py:class:`nitrokey.nk3.NK3`, :py:class:`nitrokey.nkpk.NKPK`, "
 ":py:class:`nitrokey.nk3.NK3Bootloader` and "
-":py:class:`nitrokey.nkpk.NKPKBootloader`. To list both normal and "
-"bootloader devices, use :py:meth:`nitrokey.nk3.list` and "
-":py:meth:`nitrokey.nkpk.list`."
+":py:class:`nitrokey.nkpk.NKPKBootloader` classes."
 msgstr ""
-"Podobne funkcije so na voljo za :py:class:`nitrokey.nk3.NK3Bootloader` in"
-" :py:class:`nitrokey.nkpk.NKPKBootloader`. Za seznam običajnih naprav in "
-"naprav z zagonskim nalagalnikom uporabite :py:meth:`nitrokey.nk3.list` in"
-" :py:meth:`nitrokey.nkpk.list`."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
-msgid ""
-"Currently, the devices returned by "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` and :py:meth:`nitrokey.nkpk.list` are only "
-"valid until the next call to any of the these functions. See `issue 31 "
-"<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_ for more "
-"information."
-msgstr ""
-"Trenutno so naprave, ki jih vrnejo funkcije "
-":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
-":py:meth:`nitrokey.nk3.list` in :py:meth:`nitrokey.nkpk.list`, veljavne "
-"le do naslednjega klica katere koli od teh funkcij. Za več informacij "
-"glejte `številka 31 <https://github.com/Nitrokey/nitrokey-sdk-"
-"py/issues/31>`_."
-
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:38
 #, fuzzy
 msgid "Using Applications"
 msgstr "Aplikacija"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:40
 msgid ""
 "The Nitrokey Python SDK supports these applications for all Trussed "
 "devices:"
 msgstr "Nitrokey Python SDK podpira te aplikacije za vse naprave Trussed:"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:51
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:42
 msgid ""
 ":py:class:`nitrokey.trussed.admin_app.AdminApp`: access device metadata "
 "and manage device configuration state"
@@ -31269,7 +31258,7 @@ msgstr ""
 ":py:class:`nitrokey.trussed.admin_app.AdminApp`: dostop do metapodatkov "
 "naprave in upravljanje stanja konfiguracije naprave"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:52
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:43
 msgid ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: setup device"
 " in provisioner mode (only applicable for Hacker devices)"
@@ -31277,12 +31266,12 @@ msgstr ""
 ":py:class:`nitrokey.trussed.provisioner_app.ProvisionerApp`: nastavitev "
 "naprave v načinu provisioner (velja samo za naprave Hacker)"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:54
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:45
 #, fuzzy
 msgid "The Nitrokey 3 also provides these applications:"
 msgstr "Nitrokey 3 z aplikacijo PIV."
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:56
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:47
 msgid ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: securely store passwords"
 " and credentials"
@@ -31290,7 +31279,7 @@ msgstr ""
 ":py:class:`nitrokey.nk3.secrets_app.SecretsApp`: varno shranjevanje gesel"
 " in poverilnic"
 
-#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:58
+#: ../../source/components/software/nitrokey-sdk-py/guides/usage.rst:49
 msgid "See the API reference for the application classes for more information."
 msgstr "Za več informacij glejte referenco API za aplikacijske razrede."
 
@@ -34450,4 +34439,38 @@ msgstr "Označite obrezano Izhod"
 #~ "optional-settings`__ Aplikacija Azure Entra"
 #~ " ID podpira Nitrokey FIDO2 že v "
 #~ "izhodišču."
+
+#~ msgid ""
+#~ "Similar functions are available for "
+#~ ":py:class:`nitrokey.nk3.NK3Bootloader` and "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. To list "
+#~ "both normal and bootloader devices, use"
+#~ " :py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list`."
+#~ msgstr ""
+#~ "Podobne funkcije so na voljo za "
+#~ ":py:class:`nitrokey.nk3.NK3Bootloader` in "
+#~ ":py:class:`nitrokey.nkpk.NKPKBootloader`. Za seznam "
+#~ "običajnih naprav in naprav z zagonskim"
+#~ " nalagalnikom uporabite :py:meth:`nitrokey.nk3.list`"
+#~ " in :py:meth:`nitrokey.nkpk.list`."
+
+#~ msgid ""
+#~ "Currently, the devices returned by "
+#~ ":py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` and "
+#~ ":py:meth:`nitrokey.nkpk.list` are only valid "
+#~ "until the next call to any of "
+#~ "the these functions. See `issue 31 "
+#~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_"
+#~ " for more information."
+#~ msgstr ""
+#~ "Trenutno so naprave, ki jih vrnejo "
+#~ "funkcije :py:meth:`nitrokey.trussed.TrussedDevice.list`, "
+#~ ":py:meth:`nitrokey.nk3.list` in "
+#~ ":py:meth:`nitrokey.nkpk.list`, veljavne le do "
+#~ "naslednjega klica katere koli od teh "
+#~ "funkcij. Za več informacij glejte "
+#~ "`številka 31 <https://github.com/Nitrokey/nitrokey-"
+#~ "sdk-py/issues/31>`_."
 
