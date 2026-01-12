@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-07 12:27+0000\n"
+"POT-Creation-Date: 2026-01-12 12:53+0000\n"
 "PO-Revision-Date: 2026-01-07 12:33+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
-"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10873,35 +10873,39 @@ msgstr "选择密码学算法"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:13
 msgid ""
-"I’m going to assume that you’re as paranoid as I am, so I will be using "
-"the following command for generating private keys:"
-msgstr "我将假设你和我一样偏执，所以我将使用以下命令来生成私钥。"
+"Prior generating your private key you can use this command in order to "
+"list all compatible algorithms:"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:19
-msgid ""
-"But, if you’re less paranoid that I am, you can safely choose the "
-"following options:"
-msgstr "但是，如果你不像我这么偏执，你可以安全地选择以下选项。"
+msgid "When you will need to generate your private key, you can use this command:"
+msgstr ""
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:26
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:25
+#, fuzzy
+msgid "Some examples here:"
+msgstr "例子："
+
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:33
+#, fuzzy
 msgid ""
-"Likewise, I will be using the sha512 algorithm throughout this article, "
-"but sha256 can safely be used."
+"`NIST P-384` and `sha512` algorithms will be used throughout this "
+"article, but `NIST P-256` or `RSA-4096` and `sha256` can safely be used."
 msgstr "同样，我将在本文中使用sha512算法，但也可以安全地使用sha256算法。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:29
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:36
 msgid "Preparing to Start"
 msgstr "准备开始"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:31
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:38
 msgid "To start with, you need to pick a directory to store your CA."
 msgstr "首先，你需要选择一个目录来存储你的CA。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:42
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:49
 msgid "Install the necessary tools:"
 msgstr "安装必要的工具。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:59
 msgid ""
 "For Windows download the official `OpenSC releases "
 "<https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install "
@@ -10910,51 +10914,51 @@ msgid ""
 "tools and their binaries are within your ``PATH``."
 msgstr "对于Windows，下载官方的`OpenSC发布的<https://github.com/OpenSC/OpenSC/releases>`__，并确保你安装`p11tool，如描述的<https://github.com/thales-e-security/p11tool>`__。只要两个工具和它们的二进制文件都在你的``PATH``内，使用PowerShell的大多数命令应该是相同的。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:58
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:65
 msgid "Creating The Root Certificate Authority"
 msgstr "创建根证书颁发机构"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:60
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:67
 msgid ""
 "We start by generating the private key for the certificate authority "
 "directly on the Nitrokey HSM. This allows us to use the private key in "
 "the future, but not access it."
 msgstr "我们首先在Nitrokey HSM上直接为证书机构生成私钥。这允许我们在将来使用私钥，但不能访问它。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:83
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:90
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
 msgstr "注意ID号（e0161cc8b6f5d66ac6835ecdecb623fc0506a675），我们以后会需要它。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:85
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:240
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:92
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:247
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
 msgstr "如果你将来需要这个ID，你可以在Nitrokey HSM上列出这些钥匙。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:91
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:246
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:98
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:253
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
 msgstr "我们需要创建一个配置文件来生成一个自签名的公共证书。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:97
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:252
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:104
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:259
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
 msgstr "在<角括号>中填写请求信息，并附上你的CA的信息。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:157
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:164
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
 msgstr "从私钥生成自签名的公共证书。使用先前的私钥ID值。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:165
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:172
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that "
 "Signature-Algorithm matches above and below. Verify that Issuer and "
@@ -10962,57 +10966,57 @@ msgid ""
 "Usage matches what was in the v3_ca information in our config file."
 msgstr "验证根证书是否正确生成。验证签名-算法是否与上面和下面相匹配。验证签发人和主题是否匹配，所有根证书都是自签的。验证密钥使用与我们配置文件中v3_ca信息中的内容相匹配。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:213
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:220
 msgid "Creating The Intermediate Certificate Authority"
 msgstr "创建中级证书颁发机构"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:215
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:222
 msgid ""
 "We continue by generating the private key for the intermediate "
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
 " the private key in the future, but not access it."
 msgstr "我们继续在Nitrokey HSM上直接生成中间证书颁发机构的私钥。这使我们能够在未来使用私钥，但不能访问它。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:238
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:245
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
 msgstr "注意ID号（bcb48fe9b566ae61891aabbfde6a23d4ff3ab639），我们以后会需要它。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:279
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:286
 msgid ""
 "Generate the certificate signing request for the intermediate CA from the"
 " intermediate CA’s private key. Use the private key ID value from "
 "earlier."
 msgstr "从中间CA的私钥中生成中间CA的证书签署请求。使用先前的私钥ID值。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:287
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:294
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
 msgstr "验证CSR的创建是否正确。验证你的主题是否正确。验证你的公钥和签名算法是否正确。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:320
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:525
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:327
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:532
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr "我们需要找出你的私钥的完全合格的PKCS#11 URI。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:358
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:563
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:365
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:570
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr "在这个例子中，完全合格的PKCS#11 URI是。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:364
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:371
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
 msgstr "现在，我们需要创建一个配置文件，使用根证书的私钥来签署中间证书的CSR。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:416
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:423
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr "然后用根证书签署中级证书。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:456
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:463
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that the"
 " Issuer and Subject are different, and correct. Verify that the Key Usage"
@@ -11020,57 +11024,57 @@ msgid ""
 " above and below."
 msgstr "验证根证书的生成是否正确。验证签发人和主题是否不同，并且正确。验证密钥的使用与配置文件相匹配。验证签名算法上下都正确。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:503
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
 msgstr "验证中间证书是否能与根证书进行验证。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:517
 msgid "Create a certificate chain file:"
 msgstr "创建一个证书链文件。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:516
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
 msgid "You now have a certificate authority backed by an HSM."
 msgstr "你现在有一个由HSM支持的证书授权。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:519
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:526
 msgid "Sign a Server Certificate"
 msgstr "签署服务器证书"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:521
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:528
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
 msgstr "现在你有了一个证书授权，你可能想知道如何使用它。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:530
 msgid ""
 "Create a CSR in the normal method for your application. Proper creation "
 "of your certificate, including SAN, for your particular application is "
 "outside the scope of this document."
 msgstr "以正常的方法为你的应用创建CSR。为你的特定应用正确创建你的证书，包括SAN，不在本文件的范围之内。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:569
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:576
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
 msgstr "创建一个配置文件，使用中间证书的私钥来签署你服务器的CSR。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:624
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:631
 msgid "Then run openssl to sign the server’s CSR."
 msgstr "然后运行openssl来签署服务器的CSR。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:673
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
 #: ../../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:92
 msgid "References"
 msgstr "参考文献"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:675
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
 msgid "I used the following resources to help in compiling this document."
 msgstr "我使用了以下资源来帮助编纂本文件。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:677
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:684
 msgid ""
 "`How to initialize your Nitrokey HSM "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -11079,7 +11083,7 @@ msgstr ""
 "`如何初始化你的Nitrokey HSM <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM"
 "#initialize-the-device>`__。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:678
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
@@ -11087,7 +11091,7 @@ msgstr ""
 "`如何创建根和中级CA <https://jamielinux.com/docs/openssl-certificate-authority"
 "/create-the-root-pair.html>`__。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:679
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:686
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
@@ -11095,7 +11099,7 @@ msgstr ""
 "`如何确保你的中间CA和服务器证书的序列号符合规范 "
 "<https://www.phildev.net/ssl/creating_ca.html>`__。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:687
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
@@ -11103,7 +11107,7 @@ msgstr ""
 "`如何生成ECC私钥 <https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-"
 "certificate-with-lets-encrypt-51bc>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:681
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:688
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
@@ -11111,7 +11115,7 @@ msgstr ""
 "`如何从你的HSM中找到PCKS11 URI "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:689
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
@@ -11119,7 +11123,7 @@ msgstr ""
 "`故障排除（论坛） <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-"
 "support-signing/2598/14>`__。"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:692
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__"
@@ -13069,6 +13073,27 @@ msgstr "下表说明了哪种算法可以在哪种设备上使用。"
 #, fuzzy
 msgid "Supported algorithms per device"
 msgstr "支持对称密钥算法："
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
+#, fuzzy
+msgid "Algorithm"
+msgstr "算法"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/start/faq.rst:77
+msgid "Start"
+msgstr "开始"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro + Storage"
+msgstr "恢复"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro 2 + Storage 2"
+msgstr "储存支架"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
 msgid "rsa1024"
@@ -18684,8 +18709,7 @@ msgid ""
 "Nitrokeys are fully open source and open hardware, reducing vendor lock-"
 "in, enabling customizations, and 3rd party security audits for higher "
 "security."
-msgstr "硝基完全开放源代码和开放硬件，减少了供应商锁定，实现了定制化，并通过第三方安"
-"全审计，提高了安全性。"
+msgstr "硝基完全开放源代码和开放硬件，减少了供应商锁定，实现了定制化，并通过第三方安全审计，提高了安全性。"
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:39
 msgid "Nitrokeys are made in Germany."
@@ -18696,8 +18720,7 @@ msgid ""
 "Nitrokeys have a standard-compliant USB plug which works reliably on any "
 "USB port with thousands of plug in cycles and prevent user confusion, "
 "thus reducing support requests."
-msgstr "硝基键盘有一个符合标准的 USB 插头，可以在任何 USB "
-"端口上可靠地工作，插拔次数可达数千次，避免了用户的困惑，从而减少了支持请求。"
+msgstr "硝基键盘有一个符合标准的 USB 插头，可以在任何 USB 端口上可靠地工作，插拔次数可达数千次，避免了用户的困惑，从而减少了支持请求。"
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:41
 msgid "Nitrokey is also available with an encrypted mass storage."
@@ -18719,8 +18742,7 @@ msgstr "我们是一家总部设在德国/欧洲的公司，没有政府要求�
 msgid ""
 "We offer a large quantity of guides in our documentation as well as a "
 "free, fast and efficient email support in German, English and French."
-msgstr "我们在文档中提供了大量指南，并提供免费、快速和高效的德语、英语和法语电子邮件"
-"支持。"
+msgstr "我们在文档中提供了大量指南，并提供免费、快速和高效的德语、英语和法语电子邮件支持。"
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:45
 msgid "We offer attractive volume discounts."
@@ -19721,11 +19743,6 @@ msgstr "要禁用安全元素："
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:29
 msgid "nitropy nk3 set-config opcard.use_se050_backend false"
 msgstr "硝酸盐 nk3 set-config opcard.use_se050_backend false"
-
-#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
-#, fuzzy
-msgid "Algorithm"
-msgstr "算法"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
 #, fuzzy
@@ -21606,10 +21623,6 @@ msgstr ""
 #: ../../source/components/nitrokeys/start/faq.rst:2
 msgid "Nitrokey Start FAQ"
 msgstr "硝基钥匙启动常见问题"
-
-#: ../../source/components/nitrokeys/start/faq.rst:77
-msgid "Start"
-msgstr "开始"
 
 #: ../../source/components/nitrokeys/start/faq.rst:110
 msgid "Nitrokey Start is implemented in the microprocessor."
@@ -29574,3 +29587,17 @@ msgstr "标记裁剪的输出"
 #~ "返回的设备仅在下一次调用这些函数之前有效。更多信息请参阅`第 31 "
 #~ "期<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_"
 #~ " 。"
+
+#~ msgid ""
+#~ "I’m going to assume that you’re as"
+#~ " paranoid as I am, so I will"
+#~ " be using the following command for"
+#~ " generating private keys:"
+#~ msgstr "我将假设你和我一样偏执，所以我将使用以下命令来生成私钥。"
+
+#~ msgid ""
+#~ "But, if you’re less paranoid that "
+#~ "I am, you can safely choose the"
+#~ " following options:"
+#~ msgstr "但是，如果你不像我这么偏执，你可以安全地选择以下选项。"
+

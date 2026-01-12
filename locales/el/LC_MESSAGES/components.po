@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-07 12:27+0000\n"
+"POT-Creation-Date: 2026-01-12 12:53+0000\n"
 "PO-Revision-Date: 2026-01-07 12:33+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -13018,41 +13017,41 @@ msgstr "Επιλογή κρυπτογραφικών αλγορίθμων"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:13
 msgid ""
-"I’m going to assume that you’re as paranoid as I am, so I will be using "
-"the following command for generating private keys:"
+"Prior generating your private key you can use this command in order to "
+"list all compatible algorithms:"
 msgstr ""
-"Θα υποθέσω ότι είστε το ίδιο παρανοϊκοί με εμένα, οπότε θα χρησιμοποιήσω "
-"την ακόλουθη εντολή για τη δημιουργία ιδιωτικών κλειδιών:"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:19
-msgid ""
-"But, if you’re less paranoid that I am, you can safely choose the "
-"following options:"
+msgid "When you will need to generate your private key, you can use this command:"
 msgstr ""
-"Αλλά, αν είστε λιγότερο παρανοϊκοί από εμένα, μπορείτε να επιλέξετε με "
-"ασφάλεια τις ακόλουθες επιλογές:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:26
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:25
+#, fuzzy
+msgid "Some examples here:"
+msgstr "Παραδείγματα:"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:33
+#, fuzzy
 msgid ""
-"Likewise, I will be using the sha512 algorithm throughout this article, "
-"but sha256 can safely be used."
+"`NIST P-384` and `sha512` algorithms will be used throughout this "
+"article, but `NIST P-256` or `RSA-4096` and `sha256` can safely be used."
 msgstr ""
 "Ομοίως, θα χρησιμοποιήσω τον αλγόριθμο sha512 σε όλο αυτό το άρθρο, αλλά "
 "ο sha256 μπορεί να χρησιμοποιηθεί με ασφάλεια."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:29
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:36
 msgid "Preparing to Start"
 msgstr "Προετοιμασία για την έναρξη"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:31
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:38
 msgid "To start with, you need to pick a directory to store your CA."
 msgstr "Αρχικά, πρέπει να επιλέξετε έναν κατάλογο για να αποθηκεύσετε την CA σας."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:42
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:49
 msgid "Install the necessary tools:"
 msgstr "Εγκαταστήστε τα απαραίτητα εργαλεία:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:59
 msgid ""
 "For Windows download the official `OpenSC releases "
 "<https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install "
@@ -13068,11 +13067,11 @@ msgstr ""
 "εφόσον και τα δύο εργαλεία και τα δυαδικά τους αρχεία βρίσκονται μέσα στο"
 " ``PATH``."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:58
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:65
 msgid "Creating The Root Certificate Authority"
 msgstr "Δημιουργία της αρχής πιστοποιητικού ρίζας"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:60
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:67
 msgid ""
 "We start by generating the private key for the certificate authority "
 "directly on the Nitrokey HSM. This allows us to use the private key in "
@@ -13083,7 +13082,7 @@ msgstr ""
 "χρησιμοποιούμε το ιδιωτικό κλειδί στο μέλλον, αλλά όχι να έχουμε πρόσβαση"
 " σε αυτό."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:83
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:90
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
@@ -13091,8 +13090,8 @@ msgstr ""
 "Σημειώστε τον αριθμό ID (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), θα "
 "τον χρειαστούμε αργότερα."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:85
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:240
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:92
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:247
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
@@ -13100,8 +13099,8 @@ msgstr ""
 "Αν χρειαστείτε την ταυτότητα στο μέλλον, μπορείτε να καταχωρίσετε τα "
 "κλειδιά στο Nitrokey HSM:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:91
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:246
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:98
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:253
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
@@ -13109,8 +13108,8 @@ msgstr ""
 "Πρέπει να δημιουργήσουμε ένα αρχείο ρυθμίσεων για να δημιουργήσουμε ένα "
 "αυτο-υπογεγραμμένο δημόσιο πιστοποιητικό."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:97
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:252
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:104
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:259
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
@@ -13118,7 +13117,7 @@ msgstr ""
 "Συμπληρώστε τις πληροφορίες αίτησης σε <αγκύλες> με πληροφορίες για την "
 "CA σας."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:157
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:164
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
@@ -13127,7 +13126,7 @@ msgstr ""
 "κλειδί. Χρησιμοποιήστε την τιμή id του ιδιωτικού κλειδιού από "
 "προηγουμένως."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:165
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:172
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that "
 "Signature-Algorithm matches above and below. Verify that Issuer and "
@@ -13140,11 +13139,11 @@ msgstr ""
 "ρίζας είναι αυτουπογεγραμμένα. Επαληθεύστε ότι το Key Usage ταιριάζει με "
 "αυτό που υπήρχε στις πληροφορίες v3_ca στο αρχείο ρυθμίσεων."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:213
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:220
 msgid "Creating The Intermediate Certificate Authority"
 msgstr "Δημιουργία της ενδιάμεσης αρχής πιστοποιητικών"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:215
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:222
 msgid ""
 "We continue by generating the private key for the intermediate "
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
@@ -13155,7 +13154,7 @@ msgstr ""
 "χρησιμοποιούμε το ιδιωτικό κλειδί στο μέλλον, αλλά όχι να έχουμε πρόσβαση"
 " σε αυτό."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:238
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:245
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
@@ -13163,7 +13162,7 @@ msgstr ""
 "Σημειώστε τον αριθμό ID (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), θα "
 "τον χρειαστούμε αργότερα."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:279
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:286
 msgid ""
 "Generate the certificate signing request for the intermediate CA from the"
 " intermediate CA’s private key. Use the private key ID value from "
@@ -13173,7 +13172,7 @@ msgstr ""
 " το ιδιωτικό κλειδί της ενδιάμεσης CA. Χρησιμοποιήστε την τιμή "
 "αναγνωριστικού ιδιωτικού κλειδιού από προηγουμένως."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:287
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:294
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
@@ -13182,19 +13181,19 @@ msgstr ""
 " σωστό. Βεβαιωθείτε ότι το Δημόσιο κλειδί και ο αλγόριθμος υπογραφής "
 "είναι σωστά."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:320
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:525
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:327
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:532
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
 "Πρέπει να βρούμε το πλήρως αναγνωρισμένο URI PKCS#11 για το ιδιωτικό σας "
 "κλειδί:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:358
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:563
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:365
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:570
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr "Σε αυτή την περίπτωση, το πλήρως προσδιορισμένο URI PKCS#11 είναι:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:364
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:371
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
@@ -13203,13 +13202,13 @@ msgstr ""
 "χρησιμοποιήσουμε το ιδιωτικό κλειδί του ριζικού πιστοποιητικού για να "
 "υπογράψουμε το csr του ενδιάμεσου πιστοποιητικού."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:416
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:423
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr ""
 "Στη συνέχεια, υπογράψτε το ενδιάμεσο πιστοποιητικό με το πιστοποιητικό "
 "ρίζας."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:456
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:463
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that the"
 " Issuer and Subject are different, and correct. Verify that the Key Usage"
@@ -13221,7 +13220,7 @@ msgstr ""
 "χρήση κλειδιού ταιριάζει με το αρχείο ρυθμίσεων. Επαληθεύστε ότι ο "
 "αλγόριθμος υπογραφής είναι σωστός πάνω και κάτω."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:503
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
@@ -13229,19 +13228,19 @@ msgstr ""
 "Επαληθεύστε ότι το ενδιάμεσο πιστοποιητικό επαληθεύεται έναντι του "
 "πιστοποιητικού ρίζας."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:517
 msgid "Create a certificate chain file:"
 msgstr "Δημιουργήστε ένα αρχείο αλυσίδας πιστοποιητικών:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:516
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
 msgid "You now have a certificate authority backed by an HSM."
 msgstr "Τώρα έχετε μια αρχή πιστοποιητικών που υποστηρίζεται από μια HSM."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:519
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:526
 msgid "Sign a Server Certificate"
 msgstr "Υπογραφή πιστοποιητικού διακομιστή"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:521
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:528
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
@@ -13249,7 +13248,7 @@ msgstr ""
 "Τώρα που έχετε μια αρχή πιστοποιητικών, θα θέλατε πιθανώς να μάθετε πώς "
 "να τη χρησιμοποιείτε."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:530
 msgid ""
 "Create a CSR in the normal method for your application. Proper creation "
 "of your certificate, including SAN, for your particular application is "
@@ -13260,7 +13259,7 @@ msgstr ""
 "συγκεκριμένη εφαρμογή σας είναι εκτός του πεδίου εφαρμογής αυτού του "
 "εγγράφου."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:569
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:576
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
@@ -13268,24 +13267,24 @@ msgstr ""
 "Δημιουργήστε ένα αρχείο ρυθμίσεων για τη χρήση του ιδιωτικού κλειδιού του"
 " ενδιάμεσου πιστοποιητικού για την υπογραφή των CSR των διακομιστών σας."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:624
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:631
 msgid "Then run openssl to sign the server’s CSR."
 msgstr ""
 "Στη συνέχεια, εκτελέστε το openssl για να υπογράψετε το CSR του "
 "διακομιστή."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:673
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
 #: ../../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:92
 msgid "References"
 msgstr "Αναφορές"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:675
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
 "Χρησιμοποίησα τις ακόλουθες πηγές για να βοηθήσω στη σύνταξη αυτού του "
 "εγγράφου."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:677
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:684
 msgid ""
 "`How to initialize your Nitrokey HSM "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -13295,7 +13294,7 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
 "device>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:678
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
@@ -13304,7 +13303,7 @@ msgstr ""
 "<https://jamielinux.com/docs/openssl-certificate-authority/create-the-"
 "root-pair.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:679
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:686
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
@@ -13313,7 +13312,7 @@ msgstr ""
 "ενδιάμεσης CA και του διακομιστή σας είναι σύμφωνοι με τις προδιαγραφές "
 "<https://www.phildev.net/ssl/creating_ca.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:687
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
@@ -13321,7 +13320,7 @@ msgstr ""
 "`Πώς να δημιουργήσετε ιδιωτικά κλειδιά ECC <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:681
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:688
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
@@ -13329,7 +13328,7 @@ msgstr ""
 "`Πώς να βρείτε το URI PCKS11 από το HSM σας "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:689
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
@@ -13337,7 +13336,7 @@ msgstr ""
 "`Επίλυση προβλημάτων (φόρουμ) <https://support.nitrokey.com/t/pki-ca-"
 "nitrokey-hsm-does-not-support-signing/2598/14>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:692
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__"
@@ -15767,6 +15766,27 @@ msgstr ""
 #, fuzzy
 msgid "Supported algorithms per device"
 msgstr "Υποστηριζόμενοι αλγόριθμοι συμμετρικού κλειδιού:"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
+#, fuzzy
+msgid "Algorithm"
+msgstr "Αλγόριθμοι"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/start/faq.rst:77
+msgid "Start"
+msgstr "Έναρξη"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro + Storage"
+msgstr "Επαναφορά"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro 2 + Storage 2"
+msgstr "Βάση αποθήκευσης"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
 msgid "rsa1024"
@@ -22592,9 +22612,9 @@ msgid ""
 "in, enabling customizations, and 3rd party security audits for higher "
 "security."
 msgstr ""
-"Τα Nitrokey είναι πλήρως ανοικτού κώδικα και ανοικτού υλικού, μειώνοντας τον "
-"εγκλωβισμό στον προμηθευτή, επιτρέποντας τις προσαρμογές και τους ελέγχους "
-"ασφαλείας από τρίτους για μεγαλύτερη ασφάλεια."
+"Τα Nitrokey είναι πλήρως ανοικτού κώδικα και ανοικτού υλικού, μειώνοντας "
+"τον εγκλωβισμό στον προμηθευτή, επιτρέποντας τις προσαρμογές και τους "
+"ελέγχους ασφαλείας από τρίτους για μεγαλύτερη ασφάλεια."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:39
 msgid "Nitrokeys are made in Germany."
@@ -22607,21 +22627,21 @@ msgid ""
 "thus reducing support requests."
 msgstr ""
 "Τα Nitrokey διαθέτουν ένα τυπικά συμβατό βύσμα USB, το οποίο λειτουργεί "
-"αξιόπιστα σε οποιαδήποτε θύρα USB με χιλιάδες κύκλους σύνδεσης και αποτρέπει "
-"τη σύγχυση των χρηστών, μειώνοντας έτσι τα αιτήματα υποστήριξης."
+"αξιόπιστα σε οποιαδήποτε θύρα USB με χιλιάδες κύκλους σύνδεσης και "
+"αποτρέπει τη σύγχυση των χρηστών, μειώνοντας έτσι τα αιτήματα "
+"υποστήριξης."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:41
 msgid "Nitrokey is also available with an encrypted mass storage."
-msgstr ""
-"Το Nitrokey είναι επίσης διαθέσιμο με κρυπτογραφημένη μαζική αποθήκευση."
+msgstr "Το Nitrokey είναι επίσης διαθέσιμο με κρυπτογραφημένη μαζική αποθήκευση."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:42
 msgid ""
 "Nitrokeys support Measured Boot to secure your computer with tamper "
 "detection."
 msgstr ""
-"Τα Nitrokey υποστηρίζουν Measured Boot για την ασφάλεια του υπολογιστή σας "
-"με ανίχνευση παραβίασης."
+"Τα Nitrokey υποστηρίζουν Measured Boot για την ασφάλεια του υπολογιστή "
+"σας με ανίχνευση παραβίασης."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:43
 msgid ""
@@ -23817,11 +23837,6 @@ msgstr "Για να απενεργοποιήσετε το Secure Element:"
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:29
 msgid "nitropy nk3 set-config opcard.use_se050_backend false"
 msgstr "Νιτροπία nk3 set-config opcard.use_se050_backend false"
-
-#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
-#, fuzzy
-msgid "Algorithm"
-msgstr "Αλγόριθμοι"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
 #, fuzzy
@@ -26105,10 +26120,6 @@ msgstr ""
 #: ../../source/components/nitrokeys/start/faq.rst:2
 msgid "Nitrokey Start FAQ"
 msgstr "Συχνές ερωτήσεις για το Nitrokey Start"
-
-#: ../../source/components/nitrokeys/start/faq.rst:77
-msgid "Start"
-msgstr "Έναρξη"
 
 #: ../../source/components/nitrokeys/start/faq.rst:110
 msgid "Nitrokey Start is implemented in the microprocessor."
@@ -35915,3 +35926,24 @@ msgstr "Mark cropped Output"
 #~ " τις συναρτήσεις. Για περισσότερες "
 #~ "πληροφορίες δείτε το `issue 31 "
 #~ "<https://github.com/Nitrokey/nitrokey-sdk-py/issues/31>`_."
+
+#~ msgid ""
+#~ "I’m going to assume that you’re as"
+#~ " paranoid as I am, so I will"
+#~ " be using the following command for"
+#~ " generating private keys:"
+#~ msgstr ""
+#~ "Θα υποθέσω ότι είστε το ίδιο "
+#~ "παρανοϊκοί με εμένα, οπότε θα "
+#~ "χρησιμοποιήσω την ακόλουθη εντολή για τη"
+#~ " δημιουργία ιδιωτικών κλειδιών:"
+
+#~ msgid ""
+#~ "But, if you’re less paranoid that "
+#~ "I am, you can safely choose the"
+#~ " following options:"
+#~ msgstr ""
+#~ "Αλλά, αν είστε λιγότερο παρανοϊκοί από"
+#~ " εμένα, μπορείτε να επιλέξετε με "
+#~ "ασφάλεια τις ακόλουθες επιλογές:"
+

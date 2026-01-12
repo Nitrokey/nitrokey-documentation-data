@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-07 12:27+0000\n"
+"POT-Creation-Date: 2026-01-12 12:53+0000\n"
 "PO-Revision-Date: 2026-01-07 12:33+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/de/>\n"
 "Language: de\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -12857,43 +12856,43 @@ msgstr "Kryptographische Algorithmen auswählen"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:13
 msgid ""
-"I’m going to assume that you’re as paranoid as I am, so I will be using "
-"the following command for generating private keys:"
+"Prior generating your private key you can use this command in order to "
+"list all compatible algorithms:"
 msgstr ""
-"Da ich davon ausgehe, dass du genauso paranoid bist wie ich, verwende ich"
-" den folgenden Befehl, um private Schlüssel zu erzeugen:"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:19
-msgid ""
-"But, if you’re less paranoid that I am, you can safely choose the "
-"following options:"
+msgid "When you will need to generate your private key, you can use this command:"
 msgstr ""
-"Wenn du aber weniger paranoid bist als ich, kannst du getrost die "
-"folgenden Optionen wählen:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:26
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:25
+#, fuzzy
+msgid "Some examples here:"
+msgstr "Beispiele:"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:33
+#, fuzzy
 msgid ""
-"Likewise, I will be using the sha512 algorithm throughout this article, "
-"but sha256 can safely be used."
+"`NIST P-384` and `sha512` algorithms will be used throughout this "
+"article, but `NIST P-256` or `RSA-4096` and `sha256` can safely be used."
 msgstr ""
 "Ebenso werde ich in diesem Artikel den sha512 Algorithmus verwenden, aber"
 " sha256 kann auch verwendet werden."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:29
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:36
 msgid "Preparing to Start"
 msgstr "Vorbereiten des Starts"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:31
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:38
 msgid "To start with, you need to pick a directory to store your CA."
 msgstr ""
 "Zunächst müssen Sie ein Verzeichnis auswählen, in dem Ihre CA gespeichert"
 " werden soll."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:42
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:49
 msgid "Install the necessary tools:"
 msgstr "Installieren Sie die erforderlichen Werkzeuge:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:59
 msgid ""
 "For Windows download the official `OpenSC releases "
 "<https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install "
@@ -12908,11 +12907,11 @@ msgstr ""
 "PowerShell sollten die meisten Befehle identisch sein, solange sich beide"
 " Tools und ihre Binärdateien in Ihrem ``PATH`` befinden."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:58
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:65
 msgid "Creating The Root Certificate Authority"
 msgstr "Erstellen der Root-Zertifizierungsstelle"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:60
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:67
 msgid ""
 "We start by generating the private key for the certificate authority "
 "directly on the Nitrokey HSM. This allows us to use the private key in "
@@ -12922,7 +12921,7 @@ msgstr ""
 "Zertifizierungsstelle direkt auf dem Nitrokey HSM. Dadurch können wir den"
 " privaten Schlüssel in Zukunft verwenden, aber nicht darauf zugreifen."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:83
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:90
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
@@ -12930,8 +12929,8 @@ msgstr ""
 "Notiere die ID-Nummer (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), wir "
 "brauchen sie später."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:85
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:240
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:92
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:247
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
@@ -12939,8 +12938,8 @@ msgstr ""
 "Wenn du die ID in Zukunft brauchst, kannst du die Schlüssel auf dem "
 "Nitrokey HSM auflisten:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:91
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:246
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:98
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:253
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
@@ -12948,8 +12947,8 @@ msgstr ""
 "Wir müssen eine Konfigurationsdatei erstellen, um ein selbstsigniertes "
 "öffentliches Zertifikat zu erzeugen."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:97
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:252
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:104
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:259
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
@@ -12957,7 +12956,7 @@ msgstr ""
 "Fülle die Anfrage in <eckigen Klammern> mit Informationen zu deinem CA "
 "aus."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:157
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:164
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
@@ -12965,7 +12964,7 @@ msgstr ""
 "Erzeugen Sie das selbstsignierte öffentliche Zertifikat aus dem privaten "
 "Schlüssel. Verwenden Sie den Wert der privaten Schlüssel-ID von vorhin."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:165
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:172
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that "
 "Signature-Algorithm matches above and below. Verify that Issuer and "
@@ -12978,11 +12977,11 @@ msgstr ""
 "Stammzertifikate sind selbstsigniert. Überprüfen Sie, ob Key Usage mit "
 "den v3_ca-Informationen in unserer Konfigurationsdatei übereinstimmt."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:213
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:220
 msgid "Creating The Intermediate Certificate Authority"
 msgstr "Erstellen der Zwischenzertifizierungsstelle"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:215
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:222
 msgid ""
 "We continue by generating the private key for the intermediate "
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
@@ -12993,7 +12992,7 @@ msgstr ""
 "Dadurch können wir den privaten Schlüssel in Zukunft verwenden, aber "
 "nicht darauf zugreifen."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:238
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:245
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
@@ -13001,7 +13000,7 @@ msgstr ""
 "Notiere die ID-Nummer (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), wir "
 "brauchen sie später."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:279
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:286
 msgid ""
 "Generate the certificate signing request for the intermediate CA from the"
 " intermediate CA’s private key. Use the private key ID value from "
@@ -13011,7 +13010,7 @@ msgstr ""
 "des privaten Schlüssels der Zwischen-CA. Verwende den ID-Wert des "
 "privaten Schlüssels von vorhin."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:287
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:294
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
@@ -13020,19 +13019,19 @@ msgstr ""
 "korrekt ist. Überprüfe, ob dein öffentlicher Schlüssel und dein "
 "Signaturalgorithmus korrekt sind."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:320
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:525
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:327
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:532
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
 "Wir müssen die voll qualifizierte PKCS#11 URI für deinen privaten "
 "Schlüssel herausfinden:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:358
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:563
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:365
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:570
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr "In diesem Fall lautet der vollständig qualifizierte PKCS#11-URI:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:364
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:371
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
@@ -13041,11 +13040,11 @@ msgstr ""
 "Schlüssel des Stammzertifikats zum Signieren der csr des "
 "Zwischenzertifikats zu verwenden."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:416
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:423
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr "Signieren Sie dann das Zwischenzertifikat mit dem Stammzertifikat."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:456
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:463
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that the"
 " Issuer and Subject are different, and correct. Verify that the Key Usage"
@@ -13058,7 +13057,7 @@ msgstr ""
 "übereinstimmt. Überprüfen Sie, ob die Signaturalgorithmen oben und unten "
 "korrekt sind."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:503
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
@@ -13066,21 +13065,21 @@ msgstr ""
 "Überprüfen Sie, ob das Zwischenzertifikat mit dem Stammzertifikat "
 "übereinstimmt."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:510
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:517
 msgid "Create a certificate chain file:"
 msgstr "Erstellen Sie eine Zertifikatskettendatei:"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:516
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
 msgid "You now have a certificate authority backed by an HSM."
 msgstr ""
 "Sie haben nun eine Zertifizierungsstelle, die durch ein HSM unterstützt "
 "wird."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:519
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:526
 msgid "Sign a Server Certificate"
 msgstr "Ein Server-Zertifikat signieren"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:521
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:528
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
@@ -13088,7 +13087,7 @@ msgstr ""
 "Jetzt, wo du eine Zertifizierungsstelle hast, möchtest du wahrscheinlich "
 "wissen, wie du sie nutzen kannst."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:523
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:530
 msgid ""
 "Create a CSR in the normal method for your application. Proper creation "
 "of your certificate, including SAN, for your particular application is "
@@ -13098,7 +13097,7 @@ msgstr ""
 "ordnungsgemäße Erstellung deines Zertifikats, einschließlich SAN, für "
 "deine spezielle Anwendung liegt außerhalb des Rahmens dieses Dokuments."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:569
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:576
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
@@ -13106,22 +13105,22 @@ msgstr ""
 "Erstellen Sie eine Konfigurationsdatei, um den privaten Schlüssel des "
 "Zwischenzertifikats zum Signieren der CSRs Ihrer Server zu verwenden."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:624
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:631
 msgid "Then run openssl to sign the server’s CSR."
 msgstr "Führen Sie dann openssl aus, um die CSR des Servers zu signieren."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:673
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
 #: ../../source/components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:92
 msgid "References"
 msgstr "Referenzen"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:675
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
 "Bei der Zusammenstellung dieses Dokuments habe ich die folgenden Quellen "
 "verwendet."
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:677
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:684
 msgid ""
 "`How to initialize your Nitrokey HSM "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -13131,7 +13130,7 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
 "device>`_"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:678
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
@@ -13140,7 +13139,7 @@ msgstr ""
 "<https://jamielinux.com/docs/openssl-certificate-authority/create-the-"
 "root-pair.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:679
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:686
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
@@ -13149,7 +13148,7 @@ msgstr ""
 " CA- und Server-Zertifikate den Spezifikationen entsprechen "
 "<https://www.phildev.net/ssl/creating_ca.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:680
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:687
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
@@ -13157,7 +13156,7 @@ msgstr ""
 "`Erzeugung privater ECC-Schlüssel <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:681
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:688
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
@@ -13165,7 +13164,7 @@ msgstr ""
 "`So finden Sie die PCKS11 URI von Ihrem HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:682
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:689
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
@@ -13173,7 +13172,7 @@ msgstr ""
 "`Fehlerbehebung (Forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
 
-#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:685
+#: ../../source/components/nitrokeys/features/openpgp-card/certificate-authority.rst:692
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__"
@@ -15583,6 +15582,27 @@ msgstr ""
 #, fuzzy
 msgid "Supported algorithms per device"
 msgstr "Unterstützte symmetrische Schlüsselalgorithmen:"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
+#, fuzzy
+msgid "Algorithm"
+msgstr "Algorithmen"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/start/faq.rst:77
+msgid "Start"
+msgstr "Start"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro + Storage"
+msgstr "Wiederherstellen"
+
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#, fuzzy
+msgid "Pro 2 + Storage 2"
+msgstr "Lagerhalterung"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:197
 msgid "rsa1024"
@@ -22381,9 +22401,10 @@ msgid ""
 "in, enabling customizations, and 3rd party security audits for higher "
 "security."
 msgstr ""
-"Nitrokeys sind vollständig quelloffen und mit offener Hardware ausgestattet, "
-"was die Abhängigkeit von bestimmten Anbietern verringert, Anpassungen "
-"ermöglicht und Sicherheitsaudits durch Dritte für mehr Sicherheit sorgt."
+"Nitrokeys sind vollständig quelloffen und mit offener Hardware "
+"ausgestattet, was die Abhängigkeit von bestimmten Anbietern verringert, "
+"Anpassungen ermöglicht und Sicherheitsaudits durch Dritte für mehr "
+"Sicherheit sorgt."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:39
 msgid "Nitrokeys are made in Germany."
@@ -22395,10 +22416,10 @@ msgid ""
 "USB port with thousands of plug in cycles and prevent user confusion, "
 "thus reducing support requests."
 msgstr ""
-"Nitrokeys verfügen über einen standardkonformen USB-Stecker, der zuverlässig "
-"an jedem USB-Anschluss mit tausenden von Einsteckzyklen funktioniert und "
-"Verwirrung beim Benutzer verhindert, wodurch sich die Zahl der "
-"Supportanfragen verringert."
+"Nitrokeys verfügen über einen standardkonformen USB-Stecker, der "
+"zuverlässig an jedem USB-Anschluss mit tausenden von Einsteckzyklen "
+"funktioniert und Verwirrung beim Benutzer verhindert, wodurch sich die "
+"Zahl der Supportanfragen verringert."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:41
 msgid "Nitrokey is also available with an encrypted mass storage."
@@ -22425,9 +22446,9 @@ msgid ""
 "We offer a large quantity of guides in our documentation as well as a "
 "free, fast and efficient email support in German, English and French."
 msgstr ""
-"Wir bieten eine große Anzahl von Anleitungen in unserer Dokumentation sowie "
-"einen kostenlosen, schnellen und effizienten E-Mail-Support in Deutsch, "
-"Englisch und Französisch."
+"Wir bieten eine große Anzahl von Anleitungen in unserer Dokumentation "
+"sowie einen kostenlosen, schnellen und effizienten E-Mail-Support in "
+"Deutsch, Englisch und Französisch."
 
 #: ../../source/components/nitrokeys/nitrokey3/faq.rst:45
 msgid "We offer attractive volume discounts."
@@ -23595,11 +23616,6 @@ msgstr "So deaktivieren Sie das Secure Element:"
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:29
 msgid "nitropy nk3 set-config opcard.use_se050_backend false"
 msgstr "nitropy nk3 set-config opcard.use_se050_backend false"
-
-#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
-#, fuzzy
-msgid "Algorithm"
-msgstr "Algorithmen"
 
 #: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:35
 #, fuzzy
@@ -25860,10 +25876,6 @@ msgstr ""
 #: ../../source/components/nitrokeys/start/faq.rst:2
 msgid "Nitrokey Start FAQ"
 msgstr "Nitrokey Start FAQ"
-
-#: ../../source/components/nitrokeys/start/faq.rst:77
-msgid "Start"
-msgstr "Start"
 
 #: ../../source/components/nitrokeys/start/faq.rst:110
 msgid "Nitrokey Start is implemented in the microprocessor."
@@ -35623,3 +35635,24 @@ msgstr "Beschnittene Ausgabe markieren"
 #~ "dieser Funktionen gültig. Siehe `Ausgabe "
 #~ "31 <https://github.com/Nitrokey/nitrokey-sdk-"
 #~ "py/issues/31>`_ für weitere Informationen."
+
+#~ msgid ""
+#~ "I’m going to assume that you’re as"
+#~ " paranoid as I am, so I will"
+#~ " be using the following command for"
+#~ " generating private keys:"
+#~ msgstr ""
+#~ "Da ich davon ausgehe, dass du "
+#~ "genauso paranoid bist wie ich, verwende"
+#~ " ich den folgenden Befehl, um private"
+#~ " Schlüssel zu erzeugen:"
+
+#~ msgid ""
+#~ "But, if you’re less paranoid that "
+#~ "I am, you can safely choose the"
+#~ " following options:"
+#~ msgstr ""
+#~ "Wenn du aber weniger paranoid bist "
+#~ "als ich, kannst du getrost die "
+#~ "folgenden Optionen wählen:"
+
