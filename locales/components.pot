@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 11:28+0000\n"
+"POT-Creation-Date: 2026-02-23 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2116,31 +2116,91 @@ msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
 msgstr ""
 
 #: ../../source/components/nethsm/ejbca.rst:7
-msgid "`EJBCA <https://www.ejbca.org/>`__ Community is a PKI Certificate Authority software available as open source."
+msgid "`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available in both Community (CE) and Enterprise Edition (EE)."
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:9
-msgid "To be able to use NetHSM with EJBCA you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+#: ../../source/components/nethsm/ejbca.rst:10
+msgid "EJBCA CE"
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:11
+#: ../../source/components/nethsm/ejbca.rst:12
+msgid "EJBCA Community Edition is an open source PKI Certificate Authority software."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:14
+msgid "To be able to use NetHSM with EJBCA CE you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:16
 msgid "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry in the ``/etc/ejbca/conf/web.properties`` file:"
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:21
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid "The ``418`` in the name is an index that must be unique for each PKCS#11 module in the configuration file."
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:23
+#: ../../source/components/nethsm/ejbca.rst:28
 msgid "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token name is ``NetHSM``."
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:28
+#: ../../source/components/nethsm/ejbca.rst:33
 msgid "Docker Example"
 msgstr ""
 
-#: ../../source/components/nethsm/ejbca.rst:30
+#: ../../source/components/nethsm/ejbca.rst:35
 msgid "We provide an example setup using docker for testing. If you want to experiment with it you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps described in the file `container/ejbca/README.md <https://github.com/Nitrokey/nethsm-pkcs11/blob/main/container/ejbca/README.md>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:39
+msgid "EJBCA EE"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:41
+msgid "EJBCA Enterprise Edition provides advanced features and enterprise support."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:43
+msgid "Configuration for EJBCA EE differs from the Community Edition. Instead of configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition uses a **sidecar container** approach. This sidecar container provides the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling seamless integration without modifying the main EJBCA container."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:48
+msgid "For detailed information on configuring Hardware Security Modules (HSM) with EJBCA EE, refer to the official `EJBCA HSM documentation <https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-hsm>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:52
+msgid "Docker Setup"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:54
+msgid "We provide a complete containerized setup for EJBCA EE integration with NetHSM. The setup includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:56
+msgid "EJBCA EE container"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:60
+msgid "You can find the container image and configuration in the `container/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:64
+msgid "The directory includes a complete ``docker-compose.yml`` file that brings up all necessary components, including a NetHSM instance for testing purposes. This provides a ready-to-use environment for experimenting with EJBCA EE and NetHSM integration."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:69
+msgid "``Dockerfile`` and ``docker-compose.yml`` contain references to the official repositories, make sure to run ``docker login`` before making use of them."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:72
+msgid "Currently a limitation is that there is no way to select the *Padding Scheme* for a particular *Crypto Token*. Therefore RSA will always use PKCS#1 padding (and not PSS)."
 msgstr ""
 
 #: ../../source/components/nethsm/faq.rst:2

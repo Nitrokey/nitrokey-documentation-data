@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-16 11:28+0000\n"
+"POT-Creation-Date: 2026-02-23 09:38+0000\n"
 "PO-Revision-Date: 2026-02-16 11:33+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Portuguese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pt/>\n"
 "Language: pt\n"
+"Language-Team: Portuguese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/pt/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -3286,21 +3285,33 @@ msgstr "O EJBCA requer, pelo menos, o NetHSM v3 e o nethsm-pkcs11 v2."
 #: ../../source/components/nethsm/ejbca.rst:7
 #, fuzzy
 msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ Community is a PKI Certificate "
-"Authority software available as open source."
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
 msgstr ""
 "`EJBCA <https://www.ejbca.org/>`__ é um software de Autoridade de "
 "Certificação PKI disponível como código aberto."
 
-#: ../../source/components/nethsm/ejbca.rst:9
+#: ../../source/components/nethsm/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA CE"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/ejbca.rst:12
 msgid ""
-"To be able to use NetHSM with EJBCA you need to `setup "
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
 msgstr ""
 "Para poder utilizar o NetHSM com o EJBCA, é necessário `configurar "
 "primeiro <pkcs11-setup.html>`__ o módulo NetHSM PKCS#11."
 
-#: ../../source/components/nethsm/ejbca.rst:11
+#: ../../source/components/nethsm/ejbca.rst:16
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3308,7 +3319,7 @@ msgstr ""
 "Em seguida, configure o EJBCA para utilizar o módulo NetHSM PKCS#11, "
 "adicionando uma entrada no ficheiro ``/etc/ejbca/conf/web.properties``:"
 
-#: ../../source/components/nethsm/ejbca.rst:21
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3316,7 +3327,7 @@ msgstr ""
 "O ``418`` no nome é um índice que deve ser único para cada módulo PKCS#11"
 " no ficheiro de configuração."
 
-#: ../../source/components/nethsm/ejbca.rst:23
+#: ../../source/components/nethsm/ejbca.rst:28
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3330,12 +3341,12 @@ msgstr ""
 " tipo de Crypto Token é ``PKCS#11 Crypto Token`` e o nome do Crypto Token"
 " é ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:28
+#: ../../source/components/nethsm/ejbca.rst:33
 #, fuzzy
 msgid "Docker Example"
 msgstr "**Exemplo***"
 
-#: ../../source/components/nethsm/ejbca.rst:30
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "We provide an example setup using docker for testing. If you want to "
@@ -3348,6 +3359,87 @@ msgstr ""
 "Se quiser experimentar o exemplo dado, pode utilizar o git para clonar o "
 "repositório `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-pkcs11>`__"
 " e executar os seguintes comandos:"
+
+#: ../../source/components/nethsm/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA EE"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "**Exemplo***"
+
+#: ../../source/components/nethsm/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "Construir o contentor."
+
+#: ../../source/components/nethsm/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
 
 #: ../../source/components/nethsm/faq.rst:2
 #, fuzzy
@@ -19305,8 +19397,8 @@ msgid ""
 "This also works with preboot FileVault authentication for macOS Silicon "
 "models."
 msgstr ""
-"Isto também funciona com a autenticação FileVault antes do arranque para os "
-"modelos macOS Silicon."
+"Isto também funciona com a autenticação FileVault antes do arranque para "
+"os modelos macOS Silicon."
 
 #: ../../source/components/nitrokeys/features/piv/guides/local_user_logon_on_macos.rst:9
 #, fuzzy
@@ -35711,3 +35803,4 @@ msgstr "Marcar a saída cortada"
 #~ "<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
 #~ "%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf"
 #~ ">%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__"
+

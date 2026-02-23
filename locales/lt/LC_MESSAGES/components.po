@@ -8,19 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-16 11:28+0000\n"
+"POT-Creation-Date: 2026-02-23 09:38+0000\n"
 "PO-Revision-Date: 2026-02-16 11:33+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/lt/>\n"
 "Language: lt\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/lt/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100"
+" > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > "
+"19)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
-"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -3244,21 +3243,33 @@ msgstr "EJBCA reikia bent NetHSM v3 ir nethsm-pkcs11 v2."
 #: ../../source/components/nethsm/ejbca.rst:7
 #, fuzzy
 msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ Community is a PKI Certificate "
-"Authority software available as open source."
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
 msgstr ""
 "`EJBCA <https://www.ejbca.org/>`__ - tai PKI sertifikatų tarnybos "
 "programinė įranga, prieinama kaip atvirojo kodo programa."
 
-#: ../../source/components/nethsm/ejbca.rst:9
+#: ../../source/components/nethsm/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA CE"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/ejbca.rst:12
 msgid ""
-"To be able to use NetHSM with EJBCA you need to `setup "
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
 "<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
 msgstr ""
 "Kad galėtumėte naudoti NetHSM su EJBCA, pirmiausia turite `nustatyti "
 "<pkcs11-setup.html>`__ NetHSM PKCS#11 modulį."
 
-#: ../../source/components/nethsm/ejbca.rst:11
+#: ../../source/components/nethsm/ejbca.rst:16
 msgid ""
 "Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
 "in the ``/etc/ejbca/conf/web.properties`` file:"
@@ -3266,7 +3277,7 @@ msgstr ""
 "Tada sukonfigūruokite EJBCA naudoti NetHSM PKCS#11 modulį, pridėdami "
 "įrašą į ``/etc/ejbca/conf/web.properties`` failą:"
 
-#: ../../source/components/nethsm/ejbca.rst:21
+#: ../../source/components/nethsm/ejbca.rst:26
 msgid ""
 "The ``418`` in the name is an index that must be unique for each PKCS#11 "
 "module in the configuration file."
@@ -3274,7 +3285,7 @@ msgstr ""
 "Pavadinime esantis ``418`` yra indeksas, kuris turi būti unikalus "
 "kiekvienam PKCS#11 moduliui konfigūracijos faile."
 
-#: ../../source/components/nethsm/ejbca.rst:23
+#: ../../source/components/nethsm/ejbca.rst:28
 msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
@@ -3288,12 +3299,12 @@ msgstr ""
 "Kriptožetono tipas yra ``PKCS#11 Crypto Token``, o kriptožetono "
 "pavadinimas - ``NetHSM``."
 
-#: ../../source/components/nethsm/ejbca.rst:28
+#: ../../source/components/nethsm/ejbca.rst:33
 #, fuzzy
 msgid "Docker Example"
 msgstr "Pavyzdys"
 
-#: ../../source/components/nethsm/ejbca.rst:30
+#: ../../source/components/nethsm/ejbca.rst:35
 #, fuzzy
 msgid ""
 "We provide an example setup using docker for testing. If you want to "
@@ -3306,6 +3317,87 @@ msgstr ""
 "Jei norite paeksperimentuoti su pateiktu pavyzdžiu, galite naudoti git, "
 "kad klonuotumėte `nethsm-pkcs11 saugyklą <https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ ir paleisti šias komandas:"
+
+#: ../../source/components/nethsm/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA EE"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "Pavyzdys"
+
+#: ../../source/components/nethsm/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "Pastatykite konteinerį."
+
+#: ../../source/components/nethsm/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+
+#: ../../source/components/nethsm/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
 
 #: ../../source/components/nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -35242,3 +35334,4 @@ msgstr "Pažymėti apkarpytą išvestį"
 #~ "<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
 #~ "%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf"
 #~ ">%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__."
+
