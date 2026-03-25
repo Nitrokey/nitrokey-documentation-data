@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-25 09:31+0000\n"
+"POT-Creation-Date: 2026-03-25 10:06+0000\n"
 "PO-Revision-Date: 2026-03-20 11:11+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ru\n"
@@ -10401,7 +10401,7 @@ msgid "Click on “Sign in with security key”."
 msgstr "Нажмите \"Войти с помощью ключа безопасности\"."
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:15
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:48
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:72
 msgid "img0"
 msgstr "img0"
 
@@ -10660,15 +10660,12 @@ msgid "SSH Authentication with FIDO2"
 msgstr "Аутентификация без пароля с помощью Microsoft"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:6
+#, fuzzy
 msgid ""
 "SSH (Secure Shell) is a network protocol used to securely access and "
-"manage remote systems such as servers or code repositories (e.g. GitLab, "
-"GitHub). It uses cryptographic key pairs for authentication, allowing "
-"passwordless logins with strong security. With a Nitrokey, the private "
-"SSH key is generated and stored directly on the device, so it never "
-"leaves the hardware. Each login requires you to touch the Nitrokey, "
-"adding a simple physical confirmation that protects against unauthorized "
-"access."
+"manage remote systems such as servers or code repositories. It uses "
+"cryptographic key pairs for authentication, allowing passwordless logins "
+"with strong security."
 msgstr ""
 "SSH (Secure Shell) - это сетевой протокол, используемый для безопасного "
 "доступа и управления удаленными системами, такими как серверы или "
@@ -10680,24 +10677,79 @@ msgstr ""
 " прикоснуться к Nitrokey, что является простым физическим подтверждением,"
 " защищающим от несанкционированного доступа."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:9
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:8
+#, fuzzy
+msgid ""
+"With a Nitrokey, the private SSH key is generated and stored directly on "
+"the device, so it never leaves the hardware. Each login requires you to "
+"touch the Nitrokey, adding a simple physical confirmation that protects "
+"against unauthorized access. For example, when connecting to a server, "
+"GitLab, or GitHub."
+msgstr ""
+"SSH (Secure Shell) - это сетевой протокол, используемый для безопасного "
+"доступа и управления удаленными системами, такими как серверы или "
+"репозитории кода (например, GitLab, GitHub). Он использует пары "
+"криптографических ключей для аутентификации, позволяя осуществлять вход "
+"без пароля и обеспечивая надежную защиту. При использовании Nitrokey "
+"закрытый SSH-ключ генерируется и хранится непосредственно на устройстве, "
+"поэтому он никогда не покидает его. При каждом входе в систему необходимо"
+" прикоснуться к Nitrokey, что является простым физическим подтверждением,"
+" защищающим от несанкционированного доступа."
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:11
+#, fuzzy
+msgid "Non-Discoverable Credentials"
+msgstr "Добавление учетных данных"
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:13
+msgid ""
+"A non-discoverable credential is the default credential type created when"
+" the user registers their Nitrokey with an authentication system that "
+"supports FIDO2/WebAuthn. The authentication system stores the key handle,"
+" while the private key remains securely inside the Nitrokey. This "
+"configuration uses no storage space on the Nitrokey and depends on the "
+"authentication system to supply the key handle during login. The FIDO2 "
+"PIN controls access to the Nitrokey and authorizes all operations "
+"involving private keys."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
+#, fuzzy
+msgid "Discoverable Credentials"
+msgstr "Добавление учетных данных"
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
+msgid ""
+"A discoverable credential is stored directly on the Nitrokey, including "
+"all credential information and metadata required for authentication. This"
+" allows the credential to be found automatically by the authentication "
+"system without providing an external key handle and enables username-less"
+" authentication. Discoverable credentials are protected by the FIDO2 PIN,"
+" which authorizes their use and ensures that only the authorized user can"
+" access them. Each credential typically occupies a few hundred bytes of "
+"secure storage. The total number of credentials depends on the Nitrokey "
+"model and firmware version, typically between 25 and 100 entries."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
 msgid "Generating SSH Key"
 msgstr "Генерация ключей"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:11
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
 #, fuzzy
 msgid "Insert the Nitrokey into your computer."
 msgstr "Вставьте Nitrokey в порт USB на компьютере."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:13
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:31
+#, fuzzy
 msgid ""
 "Open a terminal and create your SSH key. Replace ``\"your_comment\"`` "
 "with a label to identify it (e.g., \"Nitrokey GitLab\"). By default, the "
-"key is a non-resident key, meaning a local key handle is stored in "
+"key is a non-discoverable key, meaning a local key handle is stored in "
 "``~/.ssh/`` while the private key remains securely on the Nitrokey. Use "
-"the ``-O resident`` option if you want the key to be portable across "
-"systems."
+"the ``-O resident`` option if you want the key to be a discoverable "
+"credential, making it portable across systems."
 msgstr ""
 "Откройте терминал и создайте свой SSH-ключ. Замените ``\"your_comment\"``"
 " меткой для его идентификации (например, \"Nitrokey GitLab\"). По "
@@ -10706,17 +10758,30 @@ msgstr ""
 "Nitrokey. Используйте опцию ``-O resident``, если вы хотите, чтобы ключ "
 "был переносимым между системами."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:21
-msgid "or to create a resident key"
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:39
+#, fuzzy
+msgid "or to create a discoverable credential"
 msgstr "или создать резидентный ключ"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:29
-msgid "Resident keys can later be listed and imported on another system with:"
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:45
+msgid ""
+"The ``-O resident`` option creates a discoverable credential, storing the"
+" key handle directly on the Nitrokey. This means anyone with physical "
+"access to the device can list the stored credentials and see which "
+"services they were registered with."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
+#, fuzzy
+msgid ""
+"Discoverable credentials can later be listed and imported on another "
+"system with:"
 msgstr ""
 "Резидентные ключи могут быть позже перечислены и импортированы в другую "
 "систему с помощью:"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:36
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:56
+#, fuzzy
 msgid ""
 "During key generation, you may also be asked to set a **passphrase**. "
 "This passphrase encrypts the local key handle stored in ``~/.ssh/`` (not "
@@ -10724,7 +10789,7 @@ msgid ""
 "device). The passphrase is different from the FIDO2 device PIN. The PIN "
 "protects the physical key itself, while the passphrase protects your "
 "local SSH public key file. We recommend to use a passphrase to protect "
-"non-resident keys only."
+"non-discoverable keys only."
 msgstr ""
 "Во время генерации ключа вам также может быть предложено задать парольную"
 " фразу **** . Эта фраза шифрует локальный ключ-ручку, хранящийся в "
@@ -10734,7 +10799,7 @@ msgstr ""
 "файл открытого ключа SSH. Мы рекомендуем использовать кодовую фразу "
 "только для защиты нерезидентных ключей."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:38
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:58
 msgid ""
 "When asked for a file path, accept the default option "
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
@@ -10744,11 +10809,11 @@ msgstr ""
 "(``~/.ssh/id_ed25519_sk``) или выберите собственное имя, например "
 "``id_ed25519_sk_gitlab``."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:60
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
 msgstr "Если Nitrokey мигает, подтвердите операцию, коснувшись его."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:42
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:62
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
@@ -10756,7 +10821,7 @@ msgstr ""
 "В конечном итоге будут созданы следующие файлы. Имена файлов могут "
 "отличаться, если при генерации ключа вы указали пользовательское имя."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:44
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:64
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
@@ -10764,16 +10829,25 @@ msgstr ""
 "``~/.ssh/id_ed25519_sk`` → ключ к закрытому ключу (надежно хранится на "
 "Nitrokey)"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:46
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:66
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
 msgstr "``~/.ssh/id_ed25519_sk.pub`` → файл открытого ключа"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:53
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:70
+#, fuzzy
+msgid ""
+"The file names may differ if you specified a custom name when generating "
+"the key."
+msgstr ""
+"В конечном итоге будут созданы следующие файлы. Имена файлов могут "
+"отличаться, если при генерации ключа вы указали пользовательское имя."
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:77
 #, fuzzy
 msgid "Adding Your Public Key"
 msgstr "Загрузка открытого ключа"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:55
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:79
 msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
@@ -10781,24 +10855,30 @@ msgstr ""
 "После создания пары ключей SSH открытый ключ необходимо добавить к службе"
 " или серверу, к которому вы хотите получить доступ."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:57
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
+msgid "For Git Services (GitLab, GitHub, etc.)"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
 msgid "Display your public key:"
 msgstr "Экспорт открытого ключа"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:63
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:90
 msgid "Example output (do not use this key)::"
 msgstr "Пример вывода (не используйте этот ключ)::"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:67
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
+msgid "Copy the output and add it to your account’s SSH key settings."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
+#, fuzzy
 msgid ""
-"Copy the output and add it to your account’s SSH key settings. See "
-"`GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-"
-"account>` or `GitHub <https://docs.github.com/en/authentication"
+"See `GitLab  <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-"
+"gitlab-account>`_ or `GitHub  <https://docs.github.com/en/authentication"
 "/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-"
-"account>` for detailed steps. To enable SSH remote server access, add "
-"your public key to the file ``~/.ssh/authorized_keys`` of your user "
-"account on the SSH server."
+"account>`_ for detailed steps."
 msgstr ""
 "Скопируйте полученный результат и добавьте его в настройки SSH-ключа "
 "вашей учетной записи. Подробные шаги описаны в `GitLab "
@@ -10808,6 +10888,12 @@ msgstr ""
 "account>`. Чтобы включить удаленный доступ к серверу по SSH, добавьте "
 "свой открытый ключ в файл ``~/.ssh/authorized_keys`` вашей учетной записи"
 " пользователя на SSH-сервере."
+
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:98
+msgid ""
+"To enable SSH remote server access, add your public key to the file "
+"``~/.ssh/authorized_keys`` of your user account on the SSH server."
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
