@@ -30,16 +30,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-25 10:06+0000\n"
-"PO-Revision-Date: 2026-03-20 11:11+0000\n"
+"PO-Revision-Date: 2026-03-25 10:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10712,6 +10713,14 @@ msgid ""
 "PIN controls access to the Nitrokey and authorizes all operations "
 "involving private keys."
 msgstr ""
+"Не обнаруживаемый ключ - это тип ключа, создаваемый по умолчанию, когда "
+"пользователь регистрирует свой Nitrokey в системе аутентификации, "
+"поддерживающей FIDO2/WebAuthn. Система аутентификации хранит ключ-ручку, а "
+"закрытый ключ остается в Nitrokey в безопасном месте. Эта конфигурация не "
+"использует пространство для хранения на Nitrokey и зависит от системы "
+"аутентификации, которая предоставляет ключ-ключ при входе в систему. PIN-код "
+"FIDO2 контролирует доступ к Nitrokey и авторизует все операции с закрытыми "
+"ключами."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
 #, fuzzy
@@ -10730,6 +10739,16 @@ msgid ""
 "secure storage. The total number of credentials depends on the Nitrokey "
 "model and firmware version, typically between 25 and 100 entries."
 msgstr ""
+"Обнаруживаемый мандат хранится непосредственно на Nitrokey, включая всю "
+"информацию о мандате и метаданные, необходимые для аутентификации. Это "
+"позволяет системе аутентификации автоматически находить учетную запись без "
+"предоставления внешнего ключа и обеспечивает аутентификацию без "
+"использования имени пользователя. Обнаруживаемые учетные данные защищены "
+"FIDO2 PIN-кодом, который авторизует их использование и гарантирует, что "
+"доступ к ним может получить только авторизованный пользователь. Каждая "
+"учетная запись обычно занимает несколько сотен байт в защищенном хранилище. "
+"Общее количество учетных данных зависит от модели Nitrokey и версии "
+"прошивки, обычно оно составляет от 25 до 100 записей."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
@@ -10770,6 +10789,10 @@ msgid ""
 "access to the device can list the stored credentials and see which "
 "services they were registered with."
 msgstr ""
+"Опция ``-O resident`` создает открываемую учетную запись, сохраняя ключ-"
+"ручку непосредственно на Nitrokey. Это означает, что любой человек, имеющий "
+"физический доступ к устройству, может просмотреть список сохраненных учетных "
+"данных и узнать, в каких службах они были зарегистрированы."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
 #, fuzzy
@@ -10857,7 +10880,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
 msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr ""
+msgstr "Для сервисов Git (GitLab, GitHub и т. д.)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
@@ -10871,6 +10894,8 @@ msgstr "Пример вывода (не используйте этот ключ
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
 msgid "Copy the output and add it to your account’s SSH key settings."
 msgstr ""
+"Скопируйте полученный результат и добавьте его в настройки SSH-ключа вашей "
+"учетной записи."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
 #, fuzzy
@@ -10894,6 +10919,9 @@ msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
 msgstr ""
+"Чтобы включить удаленный доступ к серверу по SSH, добавьте свой открытый "
+"ключ в файл ``~/.ssh/authorized_keys`` вашей учетной записи пользователя на "
+"SSH-сервере."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -35548,4 +35576,3 @@ msgstr "Отметить обрезанный выход"
 
 #~ msgid "Password"
 #~ msgstr "Пароль"
-

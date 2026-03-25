@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-25 10:06+0000\n"
-"PO-Revision-Date: 2026-03-20 11:11+0000\n"
+"PO-Revision-Date: 2026-03-25 10:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/de/>\n"
 "Language: de\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10824,6 +10825,15 @@ msgid ""
 "PIN controls access to the Nitrokey and authorizes all operations "
 "involving private keys."
 msgstr ""
+"Ein nicht auffindbarer Berechtigungsnachweis ist der "
+"Standardberechtigungstyp, der erstellt wird, wenn der Benutzer seinen "
+"Nitrokey bei einem Authentifizierungssystem registriert, das FIDO2/WebAuthn "
+"unterstützt. Das Authentifizierungssystem speichert das Schlüsselhandle, "
+"während der private Schlüssel sicher im Nitrokey verbleibt. Diese "
+"Konfiguration verwendet keinen Speicherplatz auf dem Nitrokey und hängt "
+"davon ab, dass das Authentifizierungssystem das Schlüsselhandle bei der "
+"Anmeldung bereitstellt. Die FIDO2-PIN steuert den Zugriff auf den Nitrokey "
+"und autorisiert alle Vorgänge mit privaten Schlüsseln."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
 #, fuzzy
@@ -10842,6 +10852,18 @@ msgid ""
 "secure storage. The total number of credentials depends on the Nitrokey "
 "model and firmware version, typically between 25 and 100 entries."
 msgstr ""
+"Ein auffindbarer Berechtigungsnachweis wird direkt auf dem Nitrokey "
+"gespeichert, einschließlich aller für die Authentifizierung erforderlichen "
+"Berechtigungsnachweisinformationen und Metadaten. Dadurch kann der "
+"Berechtigungsnachweis automatisch vom Authentifizierungssystem gefunden "
+"werden, ohne dass ein externes Schlüsselhandle erforderlich ist, und "
+"ermöglicht eine Authentifizierung ohne Benutzernamen. Erkennbare "
+"Berechtigungsnachweise sind durch die FIDO2-PIN geschützt, die ihre "
+"Verwendung autorisiert und sicherstellt, dass nur der autorisierte Benutzer "
+"auf sie zugreifen kann. Jeder Berechtigungsnachweis belegt in der Regel "
+"einige hundert Bytes an sicherem Speicherplatz. Die Gesamtzahl der "
+"Berechtigungsnachweise hängt vom Nitrokey-Modell und der Firmware-Version ab "
+"und liegt normalerweise zwischen 25 und 100 Einträgen."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
@@ -10883,6 +10905,11 @@ msgid ""
 "access to the device can list the stored credentials and see which "
 "services they were registered with."
 msgstr ""
+"Die Option ``-O resident`` erstellt einen auffindbaren Berechtigungsnachweis "
+"und speichert das Schlüsselhandle direkt auf dem Nitrokey. Das bedeutet, "
+"dass jeder, der physischen Zugriff auf das Gerät hat, die gespeicherten "
+"Anmeldeinformationen auflisten und sehen kann, bei welchen Diensten sie "
+"registriert wurden."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
 #, fuzzy
@@ -10977,7 +11004,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
 msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr ""
+msgstr "Für Git-Dienste (GitLab, GitHub, usw.)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
@@ -10991,6 +11018,8 @@ msgstr "Beispielausgabe (diese Taste nicht verwenden)::"
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
 msgid "Copy the output and add it to your account’s SSH key settings."
 msgstr ""
+"Kopieren Sie die Ausgabe und fügen Sie sie zu den SSH-Schlüsseleinstellungen "
+"Ihres Kontos hinzu."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
 #, fuzzy
@@ -11015,6 +11044,9 @@ msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
 msgstr ""
+"Um den SSH-Fernzugang zum Server zu ermöglichen, fügen Sie Ihren "
+"öffentlichen Schlüssel in die Datei ``~/.ssh/authorized_keys`` Ihres "
+"Benutzerkontos auf dem SSH-Server ein."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -36207,4 +36239,3 @@ msgstr "Beschnittene Ausgabe markieren"
 
 #~ msgid "Password"
 #~ msgstr "Passwort"
-

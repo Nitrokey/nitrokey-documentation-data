@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-25 10:06+0000\n"
-"PO-Revision-Date: 2026-03-20 11:11+0000\n"
+"PO-Revision-Date: 2026-03-25 10:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10524,6 +10525,13 @@ msgid ""
 "PIN controls access to the Nitrokey and authorizes all operations "
 "involving private keys."
 msgstr ""
+"Nezjistitelný pověření je výchozí typ pověření vytvořený při registraci "
+"klíče Nitrokey do ověřovacího systému, který podporuje FIDO2/WebAuthn. "
+"Ověřovací systém uloží klíčový handle, zatímco soukromý klíč zůstane "
+"bezpečně uložen uvnitř klíče Nitrokey. Tato konfigurace nevyužívá žádný "
+"úložný prostor v klíči Nitrokey a závisí na autentizačním systému, který při "
+"přihlašování poskytne handle klíče. Kód PIN FIDO2 řídí přístup ke klíči "
+"Nitrokey a autorizuje všechny operace se soukromými klíči."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
 #, fuzzy
@@ -10542,6 +10550,14 @@ msgid ""
 "secure storage. The total number of credentials depends on the Nitrokey "
 "model and firmware version, typically between 25 and 100 entries."
 msgstr ""
+"Zjistitelné pověření je uloženo přímo na klíči Nitrokey, včetně všech "
+"informací o pověření a metadat potřebných k ověření. To umožňuje automatické "
+"nalezení pověření autentizačním systémem bez nutnosti zadávat externí handle "
+"klíče a umožňuje autentizaci bez uživatelského jména. Zjistitelné pověření "
+"je chráněno kódem FIDO2 PIN, který autorizuje jeho použití a zajišťuje, že k "
+"němu má přístup pouze oprávněný uživatel. Každé pověření obvykle zabírá "
+"několik set bajtů zabezpečeného úložiště. Celkový počet pověření závisí na "
+"modelu Nitrokey a verzi firmwaru, obvykle se pohybuje mezi 25 a 100 záznamy."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
@@ -10582,6 +10598,10 @@ msgid ""
 "access to the device can list the stored credentials and see which "
 "services they were registered with."
 msgstr ""
+"Volba ``-O resident`` vytvoří zjistitelné pověření a uloží klíčový handle "
+"přímo na Nitrokey. To znamená, že kdokoli s fyzickým přístupem k zařízení "
+"může vypsat uložené pověření a zjistit, ke kterým službám bylo "
+"zaregistrováno."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
 #, fuzzy
@@ -10667,7 +10687,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
 msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr ""
+msgstr "Pro služby Git (GitLab, GitHub atd.)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
@@ -10680,7 +10700,7 @@ msgstr "Příklad výstupu (tento klíč nepoužívejte)::"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
 msgid "Copy the output and add it to your account’s SSH key settings."
-msgstr ""
+msgstr "Zkopírujte výstup a přidejte jej do nastavení klíče SSH svého účtu."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
 #, fuzzy
@@ -10704,6 +10724,9 @@ msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
 msgstr ""
+"Chcete-li povolit vzdálený přístup k serveru SSH, přidejte svůj veřejný klíč "
+"do souboru ``~/.ssh/authorized_keys`` svého uživatelského účtu na serveru "
+"SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -35027,4 +35050,3 @@ msgstr "Označit oříznutý výstup"
 
 #~ msgid "Password"
 #~ msgstr "Heslo"
-

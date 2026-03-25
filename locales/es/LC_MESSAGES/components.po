@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-25 10:06+0000\n"
-"PO-Revision-Date: 2026-03-20 11:11+0000\n"
+"PO-Revision-Date: 2026-03-25 10:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10818,6 +10819,15 @@ msgid ""
 "PIN controls access to the Nitrokey and authorizes all operations "
 "involving private keys."
 msgstr ""
+"Una credencial no detectable es el tipo de credencial predeterminado que se "
+"crea cuando el usuario registra su Nitrokey en un sistema de autenticación "
+"compatible con FIDO2/WebAuthn. El sistema de autenticación almacena el "
+"manejador de la clave, mientras que la clave privada permanece segura dentro "
+"de la Nitrokey. Esta configuración no utiliza espacio de almacenamiento en "
+"la Nitrokey y depende del sistema de autenticación para proporcionar el "
+"identificador de la clave durante el inicio de sesión. El PIN FIDO2 controla "
+"el acceso a la Nitrokey y autoriza todas las operaciones relacionadas con "
+"las claves privadas."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
 #, fuzzy
@@ -10836,6 +10846,16 @@ msgid ""
 "secure storage. The total number of credentials depends on the Nitrokey "
 "model and firmware version, typically between 25 and 100 entries."
 msgstr ""
+"Una credencial detectable se almacena directamente en la Nitrokey, "
+"incluyendo toda la información de la credencial y los metadatos necesarios "
+"para la autenticación. Esto permite que el sistema de autenticación "
+"encuentre automáticamente la credencial sin necesidad de proporcionar una "
+"clave externa y permite la autenticación sin nombre de usuario. Las "
+"credenciales detectables están protegidas por el PIN FIDO2, que autoriza su "
+"uso y garantiza que sólo el usuario autorizado pueda acceder a ellas. Cada "
+"credencial suele ocupar unos cientos de bytes de almacenamiento seguro. El "
+"número total de credenciales depende del modelo de Nitrokey y de la versión "
+"del firmware, normalmente entre 25 y 100 entradas."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
@@ -10876,6 +10896,10 @@ msgid ""
 "access to the device can list the stored credentials and see which "
 "services they were registered with."
 msgstr ""
+"La opción ``-O resident`` crea una credencial detectable, almacenando la "
+"llave directamente en el Nitrokey. Esto significa que cualquiera con acceso "
+"físico al dispositivo puede listar las credenciales almacenadas y ver con "
+"qué servicios se registraron."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
 #, fuzzy
@@ -10966,7 +10990,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
 msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr ""
+msgstr "Para servicios Git (GitLab, GitHub, etc.)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
@@ -10980,6 +11004,7 @@ msgstr "Ejemplo de salida (no utilice esta tecla)::"
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
 msgid "Copy the output and add it to your account’s SSH key settings."
 msgstr ""
+"Copie el resultado y añádalo a la configuración de la clave SSH de su cuenta."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
 #, fuzzy
@@ -11003,6 +11028,9 @@ msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
 msgstr ""
+"Para habilitar el acceso remoto SSH al servidor, añada su clave pública al "
+"archivo ``~/.ssh/authorized_keys`` de su cuenta de usuario en el servidor "
+"SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -35896,4 +35924,3 @@ msgstr "Marcar la salida recortada"
 
 #~ msgid "Password"
 #~ msgstr "Contraseña"
-

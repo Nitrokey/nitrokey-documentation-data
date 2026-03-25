@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-25 10:06+0000\n"
-"PO-Revision-Date: 2026-03-20 11:11+0000\n"
+"PO-Revision-Date: 2026-03-25 10:13+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -10872,6 +10873,15 @@ msgid ""
 "PIN controls access to the Nitrokey and authorizes all operations "
 "involving private keys."
 msgstr ""
+"Un justificatif non découvrable est le type de justificatif par défaut créé "
+"lorsque l'utilisateur enregistre sa Nitrokey auprès d'un système "
+"d'authentification prenant en charge FIDO2/WebAuthn. Le système "
+"d'authentification stocke la poignée de la clé, tandis que la clé privée "
+"reste en sécurité à l'intérieur de la Nitrokey. Cette configuration "
+"n'utilise pas d'espace de stockage sur la Nitrokey et dépend du système "
+"d'authentification pour fournir l'identifiant de la clé lors de la "
+"connexion. Le PIN de Nitrokey FIDO2 contrôle l'accès à la Nitrokey et "
+"autorise toutes les opérations impliquant des clés privées."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:19
 #, fuzzy
@@ -10890,6 +10900,17 @@ msgid ""
 "secure storage. The total number of credentials depends on the Nitrokey "
 "model and firmware version, typically between 25 and 100 entries."
 msgstr ""
+"Un justificatif découvrable est stocké directement sur la Nitrokey, y "
+"compris toutes les informations sur le justificatif et les métadonnées "
+"nécessaires à l'authentification. Cela permet au système d'authentification "
+"de trouver automatiquement le justificatif sans avoir à fournir une clé "
+"externe et permet une authentification sans nom d'utilisateur. Les "
+"références découvrables sont protégées par le code PIN FIDO2, qui autorise "
+"leur utilisation et garantit que seul l'utilisateur autorisé peut y accéder. "
+"Chaque identifiant occupe généralement quelques centaines d'octets de "
+"stockage sécurisé. Le nombre total d'identifiants dépend du modèle de "
+"Nitrokey et de la version du micrologiciel, généralement entre 25 et 100 "
+"entrées."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:27
 #, fuzzy
@@ -10931,6 +10952,10 @@ msgid ""
 "access to the device can list the stored credentials and see which "
 "services they were registered with."
 msgstr ""
+"L'option ``-O resident`` crée un justificatif découvrable, en stockant "
+"l'identifiant de la clé directement sur la Nitrokey. Cela signifie que toute "
+"personne ayant un accès physique à l'appareil peut dresser la liste des "
+"identifiants stockés et voir avec quels services ils ont été enregistrés."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
 #, fuzzy
@@ -11022,7 +11047,7 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
 msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr ""
+msgstr "Pour les services Git (GitLab, GitHub, etc.)"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 #, fuzzy
@@ -11036,6 +11061,8 @@ msgstr "Exemple de sortie (ne pas utiliser cette touche): :"
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
 msgid "Copy the output and add it to your account’s SSH key settings."
 msgstr ""
+"Copiez le résultat et ajoutez-le aux paramètres de la clé SSH de votre "
+"compte."
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
 #, fuzzy
@@ -11059,6 +11086,9 @@ msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
 msgstr ""
+"Pour permettre l'accès au serveur distant SSH, ajoutez votre clé publique au "
+"fichier ``~/.ssh/authorized_keys`` de votre compte d'utilisateur sur le "
+"serveur SSH."
 
 #: ../../source/components/nitrokeys/features/fido2/website.rst:2
 msgid "2FA Website Login"
@@ -36318,4 +36348,3 @@ msgstr "Mark cropped Output"
 
 #~ msgid "Password"
 #~ msgstr "Mot de passe"
-
