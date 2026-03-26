@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 20:20+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -905,7 +905,7 @@ msgstr "查询网络配置"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "只有配置了 IPv6，才会显示 IPv6 字段。"
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -930,7 +930,8 @@ msgstr "NetHSM不支持DHCP（动态主机配置协议）。"
 msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
-msgstr ""
+msgstr "IPv6 是可选的，默认情况下不配置。要禁用 IPv6，请省略``--ipv6-cidr`` "
+"和``--ipv6-gateway`` 选项。"
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -972,6 +973,8 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"要配置 IPv6，请包含可选的``ipv6`` 字段以及``cidr`` 和``gateway`` 属性。"
+"要禁用 IPv6，请省略``ipv6`` 字段。"
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2425,26 +2428,27 @@ msgstr "用户密码"
 msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
-msgstr ""
+msgstr "该功能目前为技术预览版，有以下临时限制："
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
 "If a cluster is lost (quorum is lost), the only means of recovery is "
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
-msgstr ""
+msgstr "如果集群丢失（法定人数丢失），唯一的恢复方法就是工厂重置+还原。确保经常备份。"
+"未来的版本将包括从磁盘数据恢复的方法。"
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
-msgstr ""
+msgstr "通过使用 etcd Learner 或 Mirror 来支持双节点集群的主动/被动设置尚未推出。"
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
-msgstr ""
+msgstr "节点之间的系统时间目前必须手动同步。未来的版本将包括自动时钟同步功能。"
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2456,6 +2460,11 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM 4.0 以后的版本支持集群，可在多个 NetHSM "
+"之间直接同步数据。这支持高频率的密钥生成，实现了高可用性和负载平衡。NetHSM "
+"集群基于`etcd<https://etcd.io>`__，它使用`Raft 共识算法<https://raft.github."
+"io/>`__，以实现强一致性。这可以确保所有 NetHSM "
+"中的数据（如密钥）在任何时候都是正确的。"
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2464,6 +2473,9 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"在建立 NetHSM 集群之前，请先熟悉这项技术及其限制条件，以避免意外中断和数据丢"
+"失。除本文档外，您可能还需要参考`etcd 的文档<https://etcd.io/docs/latest/"
+"learning/>`__。"
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2477,44 +2489,52 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"我们将 \"节点 \"称为预计成为群集一部分的 NetHSM。**一个由** "
+"``N``**节点组成的群集将继续运行，只要至少有** ``(N/"
+"2)+1``**节点是健康和可连接的。** 健康、可连接节点的最小数量称为**法定人数** "
+"。"
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "这意味着会出现以下情况。"
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "一个节点宕机，但仍能达到法定人数"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
 "In a 3-node cluster, if one node fails (crashes or becomes unreachable "
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
-msgstr ""
+msgstr "在 3 节点集群中，如果一个节点出现故障（崩溃或因网络状况无法访问），其他两个节"
+"点将继续工作并为请求提供服务。"
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
-msgstr ""
+msgstr "如果故障节点仍然健康（例如只是网络问题），它在隔离时将无法运行（甚至不能只读"
+"）。"
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
-msgstr ""
+msgstr "但是，如果节点恢复，它将与群集的其他节点重新同步，并在不丢失数据的情况下恢复"
+"运行。"
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
 "If it never recovers, it has to be removed from the cluster (see next "
 "section), factory reset, and go through the join process again from "
 "scratch."
-msgstr ""
+msgstr "如果始终无法恢复，则必须将其从群集中删除（见下一节）、出厂重置，并从头开始重"
+"新进行连接过程。"
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "发生网络分区，但仍能达到法定人数"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2522,36 +2542,39 @@ msgid ""
 "cluster where e.g. 3 nodes are in one physical location A and 2 nodes are"
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
-msgstr ""
+msgstr "这只是前一种情况的概括。在一个 5 节点集群中，3 个节点位于一个物理位置 A，2 "
+"个节点位于另一个物理位置 B："
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
-msgstr ""
+msgstr "位置 A 中的 3 个节点符合法定人数（本例中为 3），因此它们继续运行。"
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
-msgstr ""
+msgstr "位置 B 中的 2 个节点**不符合** 法定人数（仍为 "
+"3），因此它们将停止运行（甚至只读）。"
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
-msgstr ""
+msgstr "如果网络问题得到解决，这 2 个节点将与其他 3 个节点顺利连接。"
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "法定人数永久丧失"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
 "A failure causing all subsets of the cluster to lose quorum will render "
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
-msgstr ""
+msgstr "如果故障导致群集的所有子集失去法定人数，除非故障得到解决，否则群集及其数据将"
+"完全丢失。在这种情况下，必须在工厂重置节点并恢复备份。"
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2560,12 +2583,15 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"例如，在一个 2 节点集群（法定人数为 2）中，如果单个节点发生故障，就会出现这种"
+"情况。在这种情况下，事后无法将故障节点从群集中清除，因为剩余的健康节点已经无"
+"法运行，因为它已经失去了法定人数。"
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
-msgstr ""
+msgstr "因此，建议集群中的节点数始终为奇数，并经常备份。"
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2577,16 +2603,22 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"* 需要明确的是，*暂时失去法定人数（例如，如果您一起重启集群的所有节点，或临时"
+"网络故障隔离了节点）并不是问题：一旦有足够的节点重新连接（无需手动重新连接）"
+"以达到法定人数，集群将恢复正常运行。只有永久性故障（如网络分区、网络配置错误"
+"、身份验证问题或硬件故障）才需要手动操作。"
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"更多信息，请参阅`etcd 的常见问题<https://etcd.io/docs/v3.6/faq/#why-an-odd-"
+"number-of-cluster-members>`__。"
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "2 节点集群"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2595,10 +2627,13 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"目前还不支持双节点主动/被动集群，将在未来版本中添加。我们建议引入第 3 "
+"个节点，即第 3 个 NetHSM 或可在任何主机上运行的 etcd \"见证\"。请参见下一节 "
+"\"见证\"。"
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "见证人"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2608,6 +2643,10 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"``etcd``集群的性质使集群中节点越多越可靠。如`Operational Redundancy`_ "
+"部分所述，群集最好至少有 3 "
+"个节点，以便有发生故障的余地，因为如果只有一个节点发生故障，2 "
+"个节点的群集就会完全失效。"
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2620,6 +2659,11 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"不过，该功能的设计使您不需要为集群添加完整、真实的 NetHSM "
+"设备，就能达到稳定的节点数。相反，您可以自行部署并添加一个 \"见证 \"节点"
+"。这种节点只是``etcd`` 的一个实例，运行在您选择的机器上（或容器中），并连接到"
+"群集。群集中的真实设备会将其视为一个正常节点，并接收来自设备的所有数据和更新"
+"（当然，您无法对其执行任何 HSM 操作 - 它只能存储数据）。"
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2632,6 +2676,8 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"见证节点（或任何有访问权限的人）可直接访问群集中所有节点的存储后台（例如，您"
+"可以使用``etcdctl get \"/\" \"0\"`` 转储所有条目和相应值）。"
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2640,27 +2686,31 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"不过，除了配置版本（``/config/version``，应始终为 \"1\"）外，严格来说，所有值"
+"都经过加密（节点特定值使用设备密钥，其他值使用域密钥），以确保敏感数据的机密"
+"性。"
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "但请注意，恶意节点可以"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
 "write garbage as the value for any entry in the store, which will cause "
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
-msgstr ""
+msgstr "将垃圾写入存储中的任何条目，这将导致节点解密失败（可能会导致某些系统条目崩溃"
+"）。"
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
-msgstr ""
+msgstr "列出条目名称，如用户、命名空间和键，你可能会认为这些名称比较敏感。"
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "节点之间共享的内容"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2671,27 +2721,32 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"拥有 NetHSM 集群意味着它们之间共享大部分数据。对一个节点上的键、用户或命名空"
+"间的任何添加、修改或删除，最终都会反映到其他所有节点上。一般来说，任何修改状"
+"态的操作都会修改每个节点的状态。这包括备份**还原** "
+"操作，该操作与正常操作一样。"
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
 "The following sections detail what data is fully local, what data is "
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
-msgstr ""
+msgstr "下面几节将详细介绍哪些数据是完全本地的，哪些数据存储在共享的``etcd`` "
+"存储器中，但仍是特定于节点的，以及哪些数据是跨节点完全共享的。"
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "未存储在 etcd 中"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
-msgstr ""
+msgstr "每个节点的**设备密钥** 只存储在本地，不会在节点间共享。"
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "存储在 etcd 中，但特定于节点"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2699,6 +2754,8 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"以下数据存储在``etcd`` 中，每个节点的作用域不同。因此，每个节点都可以访问** "
+"，但在各节点之间，*并不统一* （每个节点可以有不同的数据值）。"
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -2733,11 +2790,11 @@ msgstr "Httpd 配置"
 
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
-msgstr ""
+msgstr "解锁盐（以便每个节点都有自己的解锁口令）"
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "锁定域键"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -2746,20 +2803,24 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"请注意，虽然每个节点都有自己版本的锁定域密钥（因为每个节点都用自己的设备密钥"
+"或解锁口令锁定域密钥），但底层域密钥是**跨节点共享的** （用于访问它们共享的 "
+"HSM 数据，如密钥）。"
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "存储在 etcd 中并共享"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
-msgstr ""
+msgstr "以下所有数据都存储在全局范围内的``etcd`` "
+"中，因此在集群的所有节点上都是统一的："
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "HSM 数据："
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -2778,11 +2839,11 @@ msgstr "命名空间"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domain 商店版本"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
+msgstr "集群 CA（用于跨集群验证节点）"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -2796,6 +2857,9 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"请注意，目前配置/域存储版本只能是版本 1（如果您的软件版本支持群集，"
+"那么您拥有的就是版本 1）。有关在群集中安装软件更新的安全性，请参阅`"
+"\"群集中的软件更新 \"部分。"
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -2806,7 +2870,7 @@ msgstr "准备开始"
 msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
-msgstr ""
+msgstr "任何集群最初都是从一个节点开始的。新节点会一个接一个地加入集群。"
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -2817,20 +2881,21 @@ msgstr "准备开始"
 msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
-msgstr ""
+msgstr "节点之间的网络通信使用 TLS 证书进行加密和验证。"
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
 "All nodes that are expected to be part of the same cluster must first "
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
-msgstr ""
+msgstr "预计将成为同一群集一部分的所有节点必须首先安装一个共同的证书颁发机构 "
+"(CA)，以便验证其他节点是否合法。"
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
-msgstr ""
+msgstr "在下文中，我们假定所有节点都是全新配置和运行的。"
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -2850,22 +2915,23 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "创建和安装 CA"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
 "Users should create a CA by their own means and according to their own "
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
-msgstr ""
+msgstr "用户应根据自己的操作限制，通过自己的方式创建 "
+"CA，确保它至少允许使用``keyCertSign`` 密钥。"
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "例如，可使用``openssl`` 创建最小 CA："
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "现在必须在每个节点上安装该 CA。"
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -2886,13 +2952,17 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"为了正确验证节点，集群后端（etcd）希望每个节点都有一个包含正确填写的主题别名"
+"（SAN）字段的证书。特别是，预计只能通过其 IP 访问的节点需要在证书中正确填写 "
+"IP SAN。IP SAN 可通过在名称前添加 \"IP: \"来请求 CSR，如``openssl``："
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
-msgstr ""
+msgstr "有了获得的 CSR（我们称之为``nethsm."
+"csr``），我们就可以为其生成证书，准备安装。例如``openssl``："
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -2912,20 +2982,24 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"最后，现在可以通过``/config/tls/cluster-ca.pem`` 端点安装 CA (``CA."
+"pem``)（请参阅`API 文档<https://nethsmdemo.nitrokey.com/api_docs/index.html>`"
+"__ ）。这只有在安装的 TLS 证书已由其签名后才能实现。否则，操作将被拒绝。"
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "每个节点都必须重复这一过程。"
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "时钟同步"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
-msgstr ""
+msgstr "确保每个节点都已配置准确的系统时间。如果没有，请使用``/config/time`` "
+"端点调整它们的时钟。"
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -2934,15 +3008,15 @@ msgstr "添加一个ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "向群集添加节点分两步进行："
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
-msgstr ""
+msgstr "将新成员注册到群集（通过群集的任何一个成员）"
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "告诉新节点加入"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -2954,11 +3028,12 @@ msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
-msgstr ""
+msgstr "首先确保在用于注册新加入者的节点上配置了备份口令（请参阅``/config/backup-"
+"passphrase`` 端点的 API 文档）。"
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "注册新节点"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -2969,6 +3044,10 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"注册节点会立即在群集中引入一个新节点，并修改法定人数阈值，即使该节点尚未实际"
+"加入。这会导致现有节点无法运行，直到新节点实际加入。请参阅`API "
+"文档<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__和本文档的`"
+"Operational Redundancy`_ 部分。"
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -2978,13 +3057,18 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"准备好要加入的节点的 IP 地址。该节点的完整*URL* （在``etcd`` 术语中也称为*"
+"peer URL* ）将是``https://<IP_of_node>:2380``（例如``https://192.168.1."
+"1:2380``）。**的端口必须是** 2380，因此要确保节点之间的防火墙允许该端口的 "
+"TCP 流量。"
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
-msgstr ""
+msgstr "您可以在预期加入的节点上调用``GET /cluster/members``，仔细检查 URL "
+"是否正确。这将只列出一个成员：它自己。"
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -2995,10 +3079,14 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"然后在群集的任何现有节点上注册该预期 URL（如果还没有群集，"
+"则在将作为群集初始节点的 NetHSM 上进行注册）。这项工作是通过``POST /cluster/"
+"members`` 端点完成的（请参阅`API 文档<https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>`__ ），将包含 URL 的 JSON 主体传递给它。"
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "如果成功，则返回表单的 JSON 正文："
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3008,14 +3096,17 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"其中包含新节点加入集群所需的信息。特别是，它列出了群集的所有成员（其中名称为"
+"空的成员为新加入者）。它还包含由解锁口令和备份口令加密的域密钥，因此之前必须"
+"配置备份口令。"
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "下一步请保留该回复。"
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "实际加入群集"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3026,13 +3117,18 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"获取上一步的响应，并在其中附加一个``backupPassphrase`` 字段，该字段中包含新加"
+"入者所注册节点的备份口令，然后将该数据传递给预期加入节点上的``POST /cluster/"
+"join`` 调用（请参阅`API 文档<https://nethsmdemo.nitrokey.com/api_docs/index."
+"html>`__ ）。"
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
-msgstr ""
+msgstr "假设群集和节点都能相互联系，这将执行实际的加入操作，擦除新加入者的数据，使其"
+"状态与群集状态同步。"
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3043,6 +3139,9 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"根据网络和群集情况，此操作可能需要几十秒。如果此操作立即失败（如群集无法访问"
+"或身份验证失败），该节点的状态将不会被清除，加入将被恢复。但是，一旦首次加入"
+"成功，该操作就是最终操作，只能通过出厂重置来恢复。"
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3052,6 +3151,8 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"如果连接成功，节点将处于``Locked`` 状态，必须使用注册时使用的节点的解锁口令才"
+"能解锁。之后，可以更改解锁口令（解锁口令仍针对特定节点，不会在节点间共享）。"
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3062,6 +3163,10 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"即使在加入成功后，如果集群的数据库很大或集群很忙，新加入者也可能需要一些时间"
+"才能完全同步其状态。在这段时间内，所有节点（尤其包括新加入的节点）的响应速度"
+"可能会降低或无响应。例如，在尝试解锁时，新加入的节点最初可能会返回错误。在这"
+"种情况下，请给它一些时间，然后再试一次。"
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3079,6 +3184,8 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"您需要一个``etcd`` v3.6 可用的环境，该环境的 IPv4 "
+"地址（至少）可以被群集的其他成员访问。需要允许往来于 2380 端口的 TCP 流量。"
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3086,6 +3193,8 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"在``etcd`` 中创建一个存放数据的空目录，并写下其路径（我们将使用``/var/etcd/"
+"data``）。确保将启动进程的用户拥有读写该目录的权限。"
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3094,19 +3203,22 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"将用于验证群集中节点的 CA 证书传输到计算机。您应该已在`创建和安装 CA`_ "
+"部分创建了一个。我们将把它存储在``/var/etcd/CA.pem``。"
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
-msgstr ""
+msgstr "然后，您需要为见证者创建一个证书，并在 CA "
+"上签名，这样它就可以与同行通信了。例如，可以通过``openssl`` 来完成："
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
-msgstr ""
+msgstr "将生成的``witness.key`` 和``witness.pem`` 也存储在``/var/etcd`` 中。"
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3118,13 +3230,14 @@ msgid ""
 "Follow the normal instructions from the `Registering a New Node`_ section"
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
-msgstr ""
+msgstr "按照`Registering a New Node`_ 章节中的正常说明，用给定的 URL "
+"向现有群集发出新成员加入的信号。"
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
-msgstr ""
+msgstr "写下群集的回复：其中应包含群集成员名单和一个加入者工具包（您不需要这部分）。"
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3138,35 +3251,41 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"与 NetHSM 自动为自己选择节点名称（使用设备 "
+"ID）不同，您必须为添加的每个见证者选择一个名称，*，确保名称是唯一的* "
+"。在以下示例中，我们将使用 \"witness1\"。"
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
-msgstr ""
+msgstr "有了 NetHSM 登记证人的回复，准备表格的变量："
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
-msgstr ""
+msgstr "假设 NetHSM 的响应存储在``response.json`` 文件中，则可以通过以下``jq`` "
+"表达式自动生成最后两个变量："
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
-msgstr ""
+msgstr "例如，使用`Registering a New Node`_ 章节中提供的响应示例，您将得到以下结果："
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"最后，使用``docs/etcd_witness.conf.template`` 中提供的模板文件创建``etcd.conf"
+".yml`` 文件："
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "这样你就能得到一个表格文件："
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3178,18 +3297,20 @@ msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
-msgstr ""
+msgstr "以您喜欢的方式（手动、``systemd`` "
+"服务、容器等）启动``etcd``，将其指向上一步创建的配置文件："
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
 "You should see it start, join the cluster and catch up with the data. "
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
-msgstr ""
+msgstr "你应该能看到它启动、加入群集并获取数据。一段时间后，你应该可以通过``etcdctl``"
+" 客户端检查它是否健康："
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "该键应存在并包含 \"1\"。"
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3198,6 +3319,8 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"确保该进程继续运行，因为它现在是群集的正式成员。如果需要退出，请首先将其从群"
+"集中删除（请参阅专用部分）。如果其可及 IP 发生变化，请从群集中更新其 URL。"
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3216,6 +3339,9 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"备份操作与不使用群集时相同，可从群集的任何节点请求。它将备份整个群集的数据，"
+"包括节点特定字段（不过，除非在未配置的节点上恢复备份，否则这些字段将被忽略）"
+"。"
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3224,25 +3350,30 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"在一个群集上完成的备份可以在同一个群集上还原，即使此后添加或删除了一些节点。"
+"在运行中的群集上进行的此类还原不会影响配置值（只有键、用户和命名空间），就像"
+"其他任何部分还原一样。"
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
-msgstr ""
+msgstr "在未配置的节点上恢复备份将恢复用于创建备份的节点的特定节点字段（如网络配置、"
+"证书等）。"
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
-msgstr ""
+msgstr "在应用还原的节点将更改转发给其他节点时，还原大型备份可能会使群集在一段时间内"
+"不堪重负。"
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
-msgstr ""
+msgstr "此操作仍与 NetHSM 以前版本的备份兼容。"
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3251,6 +3382,9 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"在节点 A 上还原在另一个节点 Z 上使用不同域密钥制作的备份，"
+"会像以前一样正确重写 A 的域密钥。但是，如果 A 与节点 B 在一个群集中，B "
+"将无法运行，因为 Z 的域密钥无法在 B 上还原。"
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3259,23 +3393,28 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"换句话说，只能在具有在同一群集中完成的备份的群集中执行还原操作（尽管此后节点"
+"可能已被移除或添加）。如果要在某个节点上还原外来备份，首先要安全地将其从群集"
+"中移除，然后进行出厂重置并还原备份。"
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "干净利落地删除节点"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
-msgstr ""
+msgstr "只要集群的某些部分仍符合法定人数，其任何成员都可以用来将另一个节点从集群中删"
+"除，无论该节点是已经无法访问还是预计将无法访问。"
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
-msgstr ""
+msgstr "首先必须知道要删除的节点的 ID，通过``GET /cluster/members`` "
+"列出所有节点，然后查找正确的节点。"
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3283,6 +3422,8 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"然后，可以通过调用``DELETE /cluster/members/<id>`` 将其删除。如果有关节点仍然"
+"健康，这将使其与群集的其他节点隔离，并使其无法运行。"
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3293,7 +3434,7 @@ msgstr "软件更新"
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
-msgstr ""
+msgstr "未来的更新将被标记为 \"集群安全\"（这应该是大多数）或 \"集群不安全\"。"
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3303,6 +3444,9 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"群集安全更新可应用于群集中的节点，而无需先将它们从群集中移除。不过，与所有操"
+"作一样，应确保一次只在一个节点上进行，并且在群集中删除一个节点不会低于法定人"
+"数（例如，如果更新失败）。"
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3311,14 +3455,16 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"群集不安全更新必须应用于隔离节点。您应该拆除群集（逐个删除节点），出厂重置除"
+"一个节点外的所有节点，将更新应用到每个节点，然后让所有重置节点加入剩余节点。"
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "确保在进行此类操作前进行备份。"
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "重新配置现有群集"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3332,6 +3478,9 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"现有群集（有两个或两个以上节点）**，在运行过程中不能** 更改其群集 "
+"CA。如果需要更改此证书：选择一个节点，移除所有其他节点，更新 "
+"CA，然后让其他成员重新加入。"
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3345,6 +3494,8 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"修改一个节点的网络配置（如更改其 IP）会自动将更新通知其他节点。但应确保每次只"
+"在单个节点上执行此类更新，而且在群集中失去该节点不会失去法定人数。"
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -31198,4 +31349,3 @@ msgstr "标记裁剪的输出"
 #~ "NetHSM 4.0 以后版本支持现代集群。此功能目前为技术预览版，可能会有所更改。更多信息` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __。"
-
