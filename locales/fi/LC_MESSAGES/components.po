@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:57+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/fi/>\n"
 "Language: fi\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/fi/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -955,7 +956,7 @@ msgstr "Verkon kokoonpanon kysely"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "IPv6-kentät näkyvät vain, jos IPv6 on määritetty."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -981,6 +982,9 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"IPv6 on valinnainen, eikä sitä ole määritetty oletusarvoisesti. Jos haluat "
+"poistaa IPv6:n käytöstä, jätä ``--ipv6-cidr`` ja ``--ipv6-gateway`` -"
+"vaihtoehdot pois."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1022,6 +1026,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Jos haluat määrittää IPv6:n, sisällytä valinnainen ``ipv6`` -kenttä sekä "
+"``cidr`` ja ``gateway`` -ominaisuudet. Jos haluat poistaa IPv6:n käytöstä, "
+"jätä ``ipv6`` -kenttä pois."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2668,6 +2675,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Tämä ominaisuus on tällä hetkellä tekninen esikatselu, jossa on seuraavat "
+"väliaikaiset rajoitukset:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2675,18 +2684,25 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Jos klusteri katoaa (khorum katoaa), ainoa keino palautukseen on "
+"tehdasasetusten palautus + palautus. Varmista, että varmuuskopioidaan usein. "
+"Tulevat versiot sisältävät keinoja levyllä olevien tietojen palauttamiseen."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Aktiivinen/passiivinen asennus kahden solmun klustereiden tukemiseksi joko "
+"etcd Learnerin tai Mirrorin avulla ei ole vielä käytettävissä."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Solmujen välinen järjestelmäaika on toistaiseksi synkronoitava "
+"manuaalisesti. Tuleva versio sisältää automaattisen kellonajan synkronoinnin."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2698,6 +2714,13 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM 4.0:sta alkaen tukee klusterointia, jonka avulla tietoja voidaan "
+"synkronoida suoraan useiden NetHSM:ien välillä. Tämä tukee suurta avainten "
+"tuottamistiheyttä, toteuttaa korkean käytettävyyden ja kuorman "
+"tasapainottamisen. NetHSM-klusteri perustuu `etcd:hen <https://etcd.io>`__, "
+"joka käyttää `Raft-konsensusalgoritmia <https://raft.github.io/>`__ vahvaan "
+"yhdenmukaisuuteen. Näin varmistetaan, että tiedot (esim. avaimet) ovat aina "
+"oikein kaikissa NetHSM:issä."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2706,6 +2729,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Ennen NetHSM-klusterin perustamista tutustu tähän tekniikkaan ja sen "
+"rajoituksiin, jotta vältät vahingossa tapahtuvan käyttökatkoksen ja tietojen "
+"menetyksen. Tämän asiakirjan lisäksi kannattaa tutustua myös `etcd:n "
+"dokumentaatioon <https://etcd.io/docs/latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2719,14 +2746,19 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"Kutsumme solmuksi NetHSM:ää, jonka odotetaan olevan osa klusteria. **** ` "
+"`N`` **-solmujen muodostama klusteri jatkaa toimintaansa niin kauan kuin "
+"vähintään** ``(N/2)+1`` **-solmut ovat terveitä ja tavoitettavissa.** Tätä "
+"terveiden ja tavoitettavissa olevien solmujen vähimmäismäärää kutsutaan "
+"**koorumiksi**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Tämä merkitsee seuraavia skenaarioita."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Yksi solmu kaatuu ja päätösvaltaisuus saavutetaan silti"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2734,18 +2766,26 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Kolmen solmun klusterissa, jos yksi solmu epäonnistuu (kaatuu tai ei ole "
+"tavoitettavissa verkko-olosuhteiden vuoksi), kaksi muuta solmua jatkavat "
+"toimintaansa ja palvelevat pyyntöjä."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Jos vikaantunut solmu on edelleen terve (esim. kyse oli vain verkko-"
+"ongelmasta), se on eristettynä toimintakyvytön (ei edes lukukäyttöön)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Jos solmu kuitenkin toipuu, se synkronoituu puhtaasti uudelleen klusterin "
+"muiden solmujen kanssa ja tulee jälleen toimintakuntoiseksi menettämättä "
+"tietoja."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2753,10 +2793,12 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Jos se ei koskaan toivu, se on poistettava klusterista (ks. seuraava jakso), "
+"palautettava tehdasasetukset ja aloitettava liittymisprosessi alusta."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "Verkon jakaminen tapahtuu ja päätösvaltaisuus saavutetaan silti."
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2765,28 +2807,38 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Tämä on vain edellisen skenaarion yleistys. Viiden solmun klusterissa, jossa "
+"esimerkiksi kolme solmua on yhdessä fyysisessä paikassa A ja kaksi solmua "
+"toisessa paikassa B, verkko-ongelma, joka eristää A:n ja B:n, tarkoittaisi "
+"seuraavaa:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"Sijainnin A kolme solmua täyttävät päätösvaltaisuuden (tässä tapauksessa "
+"kolme), joten ne jatkavat toimintaansa."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"Sijainnissa B olevat 2 solmua ovat **** eivät täytä päätösvaltaisuutta ("
+"edelleen 3), joten ne lopettavat toimintansa (jopa vain lukutoiminnolla)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Jos verkko-ongelma on ratkaistu, 2 solmua yhdistyy puhtaasti takaisin 3 "
+"muuhun solmuun."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Päätösvalta on pysyvästi menetetty"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2794,6 +2846,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"Vika, joka aiheuttaa sen, että kaikki klusterin osajoukot menettävät "
+"koorumin, johtaa klusterin ja sen tietojen täydelliseen katoamiseen, ellei "
+"vikaa korjata. Tällöin solmut on nollattava tehtaalla ja varmuuskopio on "
+"palautettava."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2802,12 +2858,18 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"Näin voi tapahtua esimerkiksi, jos yksi solmu vikaantuu kahden solmun "
+"klusterissa (jossa päätösvaltaisuus on 2). Tässä tilanteessa vikaantunutta "
+"solmua ei voida jälkikäteen poistaa klusterista, koska jäljelle jäävä terve "
+"solmu on jo toimintakyvytön, koska se on menettänyt kvorumin."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Siksi on suositeltavaa, että klusterissa on aina pariton määrä solmuja ja "
+"että varmuuskopioita tehdään usein."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2819,16 +2881,25 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Selvyyden vuoksi mainittakoon, että *tilapäinen* khorumin menettäminen ("
+"esimerkiksi jos käynnistät kaikki klusterin solmut uudelleen yhdessä tai jos "
+"väliaikainen verkkovika eristää solmut) ei ole ongelma: kun tarpeeksi monta "
+"solmua on yhdistetty uudelleen (ilman manuaalista uudelleenliittämistä) "
+"khorumin saavuttamiseksi, klusteri jatkaa normaalia toimintaansa. Ainoastaan "
+"pysyvät viat, kuten verkon osiot, verkon virheelliset konfiguraatiot, "
+"todennusongelmat tai laitteistoviat, vaativat manuaalisia toimenpiteitä."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Lisätietoja on osoitteessa `etcd:n FAQ-osiossa <https://etcd.io/docs/v3.6/"
+"faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "2 solmun klusteri"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2837,10 +2908,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Kahden solmun aktiivinen/passiivinen klusteri ei ole vielä tuettu, ja se "
+"lisätään tulevassa versiossa. Suosittelemme, että otamme käyttöön kolmannen "
+"solmun, joko kolmannen NetHSM:n tai etcd:n \"todistajan\", jota voidaan "
+"käyttää millä tahansa isännällä. Katso seuraava jakso \"Todistaja\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Todistaja"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2850,6 +2925,11 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Klusterointi on sitä luotettavampaa, mitä enemmän solmuja klusterissa on. "
+"``etcd``. Kuten kohdassa `Operational Redundancy`_ selitetään, klustereissa "
+"olisi mieluiten oltava vähintään kolme solmua, jotta niissä olisi tilaa "
+"epäonnistua, sillä kahden solmun klusteri epäonnistuu kokonaan, jos vain "
+"yksi solmu epäonnistuu."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2862,6 +2942,14 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Ominaisuus on kuitenkin suunniteltu niin, että sinun ei tarvitse lisätä "
+"klusteriin kokonaista, oikeaa NetHSM-laitetta, jotta saavutetaan vakaa "
+"solmujen määrä. Sen sijaan voit itse ottaa käyttöön ja lisätä \"todistaja\"-"
+"solmun. Tällainen solmu on vain ``etcd`` -ohjelman instanssi, joka toimii "
+"valitsemallasi koneella (tai kontissa) ja on liitetty klusteriin. Klusterin "
+"oikeat laitteet tunnistavat sen tavalliseksi solmuksi, ja se vastaanottaa "
+"kaikki tiedot ja päivitykset laitteilta (mutta et tietenkään voi suorittaa "
+"sillä mitään HSM-operaatioita - se vain tallentaa tietoja)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2874,6 +2962,10 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Todistajasolmulla (tai kenellä tahansa, jolla on pääsy siihen) on suora "
+"pääsy klusterin kaikkien solmujen tallennustietoihin (voit esimerkiksi "
+"tyhjentää kaikki merkinnät ja vastaavat arvot komennolla ``etcdctl get \"/\" "
+"\"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2882,10 +2974,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Lukuun ottamatta konfigurointiversiota (``/config/version``, jonka pitäisi "
+"aina olla \"1\"), kaikki arvot on kuitenkin salattu (joko laiteavaimella "
+"solmukohtaisten arvojen osalta tai toimialueen avaimilla muiden arvojen "
+"osalta), mikä takaa arkaluonteisten tietojen luottamuksellisuuden."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Huomaa kuitenkin, että haitallinen solmu voi:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2893,16 +2989,21 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"kirjoittaa roskaa minkä tahansa tallennuksen arvoksi, mikä aiheuttaa sen, "
+"että solmut eivät onnistu purkamaan sitä (mikä voi johtaa joidenkin "
+"järjestelmämerkintöjen kaatumisiin)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"luettelon merkintöjen nimet, kuten käyttäjät, nimiavaruudet ja avaimet, "
+"joita voit pitää arkaluonteisina."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Mitä jaetaan solmujen välillä"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2913,6 +3014,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"NetHSM-klusteri tarkoittaa, että suurin osa tiedoista on jaettu niiden "
+"välillä. Avainten, käyttäjien tai nimiavaruuksien lisääminen, muuttaminen "
+"tai poistaminen yhdessä solmussa heijastuu lopulta kaikkiin muihin "
+"solmuihin. Yleisesti ottaen mikä tahansa toiminto, joka muuttaa tilaa, "
+"muuttaa jokaisen solmun tilaa. Tämä koskee myös varmuuskopiointia "
+"**palautusta**, joka toimii normaalisti."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2920,20 +3027,26 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"Seuraavissa jaksoissa kerrotaan yksityiskohtaisesti, mitkä tiedot ovat "
+"täysin paikallisia, mitkä tiedot tallennetaan jaettuun ``etcd`` -varastoon "
+"mutta pysyvät solmukohtaisina ja mitkä tiedot ovat täysin jaettuja solmujen "
+"välillä."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Ei tallennettu etcd:hen"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Kunkin solmun **laiteavain** tallennetaan vain paikallisesti eikä sitä "
+"koskaan jaeta solmujen kesken."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Tallennettu etcd:hen, mutta solmukohtainen"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2941,6 +3054,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Seuraavat tiedot on tallennettu osoitteeseen ``etcd`` kunkin solmun eri "
+"alueille. Se on siis *jokaisen solmun käytettävissä* mutta ei *yhtenäinen* "
+"solmujen välillä (jokaisella solmulla voi olla eri arvo tälle tiedolle)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -2976,10 +3092,12 @@ msgstr "Httpd-konfigurointi"
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
 msgstr ""
+"lukituksen avaussuola (jotta jokaisella solmulla on oma lukituksen "
+"avaussalasana)"
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "lukittu verkkotunnuksen avain"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -2988,20 +3106,27 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Huomaa, että vaikka jokaisella solmulla on oma versionsa lukitusta "
+"toimialueen avaimesta (koska jokainen solmu lukitsee sen omalla "
+"laiteavaimella tai lukituksen avauslauseella), taustalla oleva toimialueen "
+"avain on **jaettu** solmujen kesken (jotta ne voivat käyttää yhteisiä HSM-"
+"tietojaan, kuten avaimia)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Tallennettu etcd:hen ja jaettu"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Kaikki seuraavat tiedot tallennetaan osoitteeseen ``etcd`` globaalissa "
+"laajuudessa, joten ne ovat yhdenmukaisia kaikissa klusterin solmuissa:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "HSM-tiedot:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3020,11 +3145,11 @@ msgstr "Nimiavaruudet"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
+msgstr "klusterin CA (käytetään solmujen todennukseen koko klusterin alueella)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3038,6 +3163,10 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Huomaa, että toistaiseksi konfiguraatio-/verkkotunnussäilön versio voi olla "
+"vain versio 1 (jos ohjelmistoversiosi tukee klusterointia, sinulla on se). "
+"Katso lisätietoja ohjelmistopäivitysten asentamisen turvallisuudesta "
+"klusterissa kohdasta `Software Updates in Clusters`_."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3049,6 +3178,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Jokainen klusteri alkaa aluksi yhdestä solmusta. Uudet solmut liittyvät "
+"klusteriin yksi kerrallaan."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3060,6 +3191,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Solmujen välinen verkkoliikenne salataan ja todennetaan niiden TLS-"
+"varmenteella."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3067,12 +3200,17 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Kaikkien solmujen, joiden odotetaan olevan osa samaa klusteria, on ensin "
+"asennettava yhteinen varmentaja, jonka avulla ne voivat tarkistaa, että muut "
+"solmut ovat laillisia."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"Seuraavassa oletetaan, että kaikki solmut ovat juuri käyttöönotettuja ja "
+"toiminnassa."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3092,7 +3230,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "CA:n luominen ja asentaminen"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3100,14 +3238,17 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Käyttäjien on luotava varmentaja omilla keinoillaan ja omien "
+"toimintarajoitustensa mukaisesti varmistaen, että se sallii vähintään "
+"``keyCertSign`` avaimen käytön."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "Minimaalinen CA voidaan luoda esimerkiksi komennolla ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Tämä CA on nyt asennettava jokaiseen solmuun."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3129,6 +3270,13 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Jotta solmut voidaan todentaa asianmukaisesti, klusteroinnin "
+"taustajärjestelmä (etcd) odottaa, että jokaisella solmulla on varmenne, "
+"jonka SAN-kenttä (Subject Alt Names) on täytetty oikein. Erityisesti "
+"solmujen, joiden odotetaan olevan tavoitettavissa vain IP-osoitteensa "
+"kautta, on oltava varmenteessa asianmukainen IP-SAN-kenttä. IP SAN:t voidaan "
+"pyytää CSR:ää varten lisäämällä nimiin \"IP:\", kuten osoitteessa "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3136,6 +3284,8 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Saadun CSR:n (kutsutaan sitä ``nethsm.csr``) perusteella voimme luoda sille "
+"varmenteen, joka on valmis asennettavaksi. Esimerkiksi ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3156,20 +3306,26 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Lopuksi CA (``CA.pem``) voidaan nyt asentaa ``/config/tls/cluster-ca.pem`` -"
+"päätepisteen avulla (katso `API-asiakirjat <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>`__). Tämä on mahdollista vasta, kun asennettu TLS-"
+"varmenne on sen allekirjoittama. Muussa tapauksessa toimenpide hylätään."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Tämä prosessi on toistettava jokaisen solmun kohdalla."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Kellon synkronointi"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Varmista, että jokaiselle solmulle on määritetty tarkka järjestelmäaika. Jos "
+"näin ei ole, säädä niiden kelloja ``/config/time`` -päätteellä."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3178,15 +3334,15 @@ msgstr "ADSK:n lisääminen"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Solmun lisääminen klusteriin tapahtuu kahdessa vaiheessa:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
-msgstr ""
+msgstr "rekisteröidä lisäys klusteriin (minkä tahansa sen jäsenen kautta)."
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "kerro uudelle solmulle liittymisestä"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3199,10 +3355,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Varmista ensin, että varasalasana on määritetty solmuun, jota käytetään "
+"uuden liittyjän rekisteröintiin (katso ``/config/backup-passphrase`` -"
+"päätepisteen API-dokumentaatio)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Uuden solmun rekisteröinti"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3213,6 +3372,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Solmun rekisteröiminen tuo välittömästi uuden solmun klusteriin ja muuttaa "
+"päätösvaltaisuuskynnystä, vaikka solmu ei olisikaan vielä liittynyt. Tämä "
+"voi tehdä olemassa olevista solmuista toimintakyvyttömiä, kunnes uusi solmu "
+"on todella liittynyt. Katso `API-asiakirjat <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>`__ ja `Operational Redundancy`_ tämän asiakirjan osassa."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3222,6 +3386,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Pidä käsillä sen solmun IP-osoite, joka liittyy. Kyseisen solmun täydellinen "
+"*URL-osoite* (kutsutaan myös *vertaisverkko-osoitteeksi* terminologiassa "
+"``etcd``) on ``https://<IP_of_node>:2380`` (esim. ``https://192.168.1."
+"1:2380``). Portin **on** oltava 2380, joten varmista, että solmujen välinen "
+"palomuuri sallii TCP-liikenteen kyseiseen porttiin."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3229,6 +3398,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Voit tarkistaa, että URL-osoite on oikea, kutsumalla ``GET /cluster/members``"
+" solmuun, johon odotetaan liittymistä. Tämän pitäisi listata vain yksi jäsen:"
+" itsensä."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3239,10 +3411,16 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Rekisteröi sitten odotettu URL-osoite mihin tahansa olemassa olevaan "
+"klusterin solmuun (jos sinulla ei vielä ole klusteria, tee tämä NetHSM:ssä, "
+"joka toimii klusterin ensimmäisenä solmuna). Tämä tehdään käyttämällä ``POST "
+"/cluster/members`` -päätepistettä (katso `API-dokumentaatio "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) ja antamalla sille "
+"URL-osoitteen sisältävä JSON-runko."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "Jos tämä onnistuu, se palauttaa lomakkeen JSON-rungon:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3252,14 +3430,19 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"joka sisältää tiedot, joita uusi solmu tarvitsee liittyäkseen klusteriin. "
+"Siinä luetellaan erityisesti kaikki klusterin jäsenet (jossa jäsen, jonka "
+"nimi on tyhjä, on uusi liittyjä). Se sisältää myös toimialueen avaimen, joka "
+"on salattu sekä avaus- että varmuuslausekkeella - joten varmuuslauseke on "
+"määritettävä aiemmin."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Säilytä vastaus seuraavaa vaihetta varten."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Varsinainen liittyminen klusteriin"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3270,6 +3453,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Ota viimeisen vaiheen vastaus ja liitä siihen ``backupPassphrase`` -kenttä, "
+"joka sisältää sen solmun varmuuskopiointisalasanan, johon uusi liittyjä on "
+"rekisteröity, ja siirrä nämä tiedot kutsuun ``POST /cluster/join`` (katso "
+"`API-asiakirjat <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) "
+"solmussa, johon liittyjän odotetaan liittyvän."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3277,6 +3465,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Olettaen, että sekä klusteri että solmu voivat tavoittaa toisensa, tämä "
+"toteuttaa varsinaisen liittymisen, pyyhkii uuden liittyjän tiedot ja "
+"synkronoi sen sijaan sen tilan klusterin tilan kanssa."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3287,6 +3478,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"Verkko- ja klusteriolosuhteista riippuen tämä toimenpide voi kestää muutamia "
+"kymmeniä sekunteja. Jos operaatio epäonnistuu välittömästi (esim. klusteria "
+"ei saavuteta tai todennus epäonnistuu), solmun tilaa ei pyyhitä ja "
+"liittyminen peruutetaan. Kuitenkin heti kun ensimmäinen liittyminen "
+"onnistuu, tämä operaatio on lopullinen, ja se voidaan peruuttaa vain "
+"tehdasasetusten palauttamisella."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3296,6 +3493,10 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Jos liittyminen onnistuu, solmu päätyy tilaan ``Locked``, ja sen lukitus on "
+"avattava rekisteröinnissä käytetyn solmun avaussalasanalla. Tämän jälkeen "
+"avaussalasana voidaan vaihtaa (avaussalasanat ovat solmukohtaisia, eikä "
+"niitä jaeta solmujen kesken)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3306,6 +3507,12 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Jos klusterin tietokanta on suuri tai klusteri on kiireinen, uuden liittyjän "
+"tilan täydellinen synkronointi voi kestää jonkin aikaa, vaikka liittyminen "
+"olisi onnistunut. Tuona aikana kaikki solmut (erityisesti uusi liittyjä) "
+"saattavat olla vähemmän tai ei ollenkaan reagoivia. Erityisesti uusi "
+"liittyjä voi aluksi palauttaa virheitä esimerkiksi yrittäessään avata "
+"lukitusta. Anna tällöin aikaa ja yritä uudelleen."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3323,6 +3530,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Tarvitset ympäristön, jossa on saatavilla ``etcd`` v3.6 ja jossa on IPv4-"
+"osoite (vähintään), johon klusterin muut jäsenet voivat päästä. TCP-liikenne "
+"porttiin 2380 ja portista 2380 on sallittava."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3330,6 +3540,9 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Luo tyhjä hakemisto, johon ``etcd`` tallentaa tietonsa, ja kirjoita sen "
+"polku (me käytämme ``/var/etcd/data``). Varmista, että prosessin "
+"käynnistävällä käyttäjällä on oikeudet lukea ja kirjoittaa hakemistoon."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3338,6 +3551,9 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Siirrä koneelle CA-varmenne, jota käytetään klusterin solmujen todennukseen. "
+"Sinun olisi pitänyt luoda sellainen kohdassa `CA:n luominen ja asentaminen`"
+"_. Säilytämme sen osoitteessa ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3345,12 +3561,17 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Tämän jälkeen sinun on luotava todistajaa varten varmenne ja "
+"allekirjoitettava se varmentajan kanssa, jotta se voi kommunikoida "
+"vertaistensa kanssa. Tämä voidaan tehdä esimerkiksi osoitteessa ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Tallenna tuloksena saadut ``witness.key`` ja ``witness.pem`` myös "
+"osoitteeseen ``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3363,12 +3584,17 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Noudata tavallisia ohjeita osiosta `Registering a New Node`_ (Uuden solmun "
+"rekisteröinti) antaaksesi olemassa olevalle klusterille signaalin uuden "
+"jäsenen lisäämisestä annetulla URL-osoitteella (URL-osoitteilla)."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Kirjoita klusterin vastaus muistiin: sen pitäisi sisältää luettelo klusterin "
+"jäsenistä ja liitännäispaketti (et tarvitse tätä osaa)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3382,12 +3608,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Toisin kuin NetHSM:t, jotka valitsevat solmun nimen itselleen "
+"automaattisesti (laitteen tunnuksen avulla), sinun on valittava nimi "
+"jokaiselle lisäämäsi todistajalle, *varmistaen, että nimet ovat yksilöllisiä*"
+". Käytämme seuraavissa esimerkeissä nimeä \"witness1\"."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Valmistele NetHSM:n vastauksen kanssa todistajan rekisteröintiä varten "
+"lomakkeen muuttujat:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3395,22 +3627,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Jos oletetaan, että NetHSM-vastaus on tallennettu tiedostoon ``response."
+"json``, voit luoda nämä kaksi viimeistä muuttujaa automaattisesti "
+"seuraavilla ``jq`` lausekkeilla:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"Esimerkiksi kohdassa `Registering a New Node`_ annetun esimerkkivastauksen "
+"avulla saat seuraavanlaisen vastauksen:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Luo lopuksi ``etcd.conf.yml``-tiedosto käyttämällä ``docs/etcd_witness.conf."
+"template``-tiedostossa annettua mallitiedostoa:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Tämän pitäisi antaa tiedosto lomakkeesta:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3423,6 +3662,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Käynnistä ``etcd`` haluamallasi tavalla (manuaalisesti, ``systemd`` "
+"palveluna, säiliönä jne.) osoittamalla se edellisessä vaiheessa luotuun "
+"konfiguraatiotiedostoon:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3430,10 +3672,13 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Sen pitäisi käynnistyä, liittyä klusteriin ja saada tiedot kiinni. Jonkin "
+"ajan kuluttua sinun pitäisi pystyä tarkistamaan, että se on kunnossa "
+"``etcdctl`` -asiakasohjelmalla:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Tämän avaimen on oltava olemassa ja sen on sisällettävä \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3442,6 +3687,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Varmista, että tämä prosessi on käynnissä, sillä se on nyt klusterin oikea "
+"jäsen. Jos sinun on poistettava se käytöstä, poista se ensin kunnolla "
+"klusterista (ks. oma osio). Jos sen tavoitettavissa oleva IP-osoite muuttuu, "
+"päivitä sen URL-osoite klusterista."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3460,6 +3709,10 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Varmuuskopiointi toimii samalla tavalla kuin ilman klusteria, ja sitä "
+"voidaan pyytää mistä tahansa klusterin solmusta. Se varmuuskopioi koko "
+"klusterin tiedot, mukaan lukien solmukohtaiset kentät (vaikka niitä ei oteta "
+"huomioon, ellei varmuuskopiointia palauteta varaamattomaan solmuun)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3468,6 +3721,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"Klusterissa tehty varmuuskopio voidaan palauttaa samassa klusterissa, vaikka "
+"joitakin solmuja olisi lisätty tai poistettu sen jälkeen. Tällaiset "
+"toiminnassa oleviin klustereihin tehdyt palautukset eivät vaikuta "
+"konfiguraatioarvoihin (vain avaimiin, käyttäjiin ja nimiavaruuksiin), kuten "
+"muutkaan osittaiset palautukset."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3475,18 +3733,25 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Varmuuskopion palauttaminen käyttöönottamattomaan solmuun palauttaa sen "
+"solmun solmukohtaiset kentät (kuten verkkokokoonpanon, varmenteet jne.), "
+"jota käytettiin varmuuskopion luomiseen."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Suuren varmuuskopion palauttaminen voi kuormittaa klusteria jonkin aikaa, "
+"kun palautusta suorittava solmu välittää muutoksia muille."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Tämä toiminto on yhteensopiva aiemmilla NetHSM-versioilla tehtyjen "
+"varmuuskopioiden kanssa."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3495,6 +3760,10 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Kun palautat solmuun A varmuuskopion, joka on tehty toisessa solmussa Z eri "
+"toimialueavaimella, A:n toimialueavain kirjoitetaan oikein uudelleen, kuten "
+"aiemmin. Jos A oli kuitenkin klusterissa solmun B kanssa, B:stä tulee "
+"toimintakyvytön, koska Z:n toimialueavainta ei palauteta B:hen."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3503,10 +3772,14 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Suorita palautus siis vain klusterissa, jonka varmuuskopiot on tehty samassa "
+"klusterissa (vaikka solmuja on saatettu poistaa tai lisätä sen jälkeen). Jos "
+"haluat palauttaa solmun vieraan varmuuskopion, poista se ensin turvallisesti "
+"klusterista, palauta se sitten tehdasasetuksiin ja palauta varmuuskopio."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Solmun poistaminen siististi"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3514,12 +3787,17 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Niin kauan kuin jokin osa klusterista on vielä päätösvaltainen, mitä tahansa "
+"sen jäsentä voidaan käyttää toisen solmun poistamiseen klusterista, olipa "
+"tämä solmu jo saavuttamattomissa tai odotettavissa."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Sinun on ensin tiedettävä poistettavan solmun ID, listaamalla kaikki solmut "
+"osoitteessa ``GET /cluster/members`` ja etsimällä oikea solmu."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3527,6 +3805,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Sen jälkeen se voidaan poistaa kutsumalla ``DELETE /cluster/members/<id>``. "
+"Jos kyseinen solmu oli vielä terve, tämä eristää sen muusta klusterista ja "
+"tekee siitä toimintakelvottoman."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3538,6 +3819,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Tulevat päivitykset merkitään \"klusteriturvallisiksi\" (tämän pitäisi olla "
+"suurin osa) tai \"klusteriturvattomiksi\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3547,6 +3830,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Cluster-turvallisia päivityksiä voidaan soveltaa klusteriin kuuluviin "
+"solmuihin poistamatta niitä ensin klusterista. Kuten kaikkien muidenkin "
+"toimintojen kohdalla, sinun on kuitenkin varmistettava, että tämä tehdään "
+"yhdelle solmulle kerrallaan ja sellaisessa klusterissa, jossa solmun "
+"poistaminen ei alita päätösvaltaisuutta (esim. jos päivitys epäonnistuu)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3555,14 +3843,19 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Klusterin epävarmat päivitykset on tehtävä eristettyihin solmuihin. Sinun on "
+"purettava klusteri (poistamalla solmut yksi kerrallaan), palautettava kaikki "
+"solmut yhtä lukuun ottamatta tehdasasetuksiin, sovellettava päivitystä "
+"jokaiseen solmuun ja saatettava kaikki palautetut solmut liittymään jäljelle "
+"jääneeseen solmuun."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "Varmista varmuuskopiointi ennen tällaisia toimintoja."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Olemassa olevan klusterin uudelleenkonfigurointi"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3576,6 +3869,10 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Olemassa oleva klusteri (jossa on kaksi tai useampi solmu) **** ei voi "
+"muuttaa klusterin CA:ta käytön aikana. Jos haluat muuttaa varmenteen: "
+"valitse yksi solmu, poista kaikki muut solmut, päivitä varmenteen varmentaja "
+"ja pyydä sitten muita jäseniä liittymään uudelleen."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3589,6 +3886,11 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Solmun verkkokonfiguraation muuttaminen (esim. sen IP-osoitteen muuttaminen) "
+"ilmoittaa päivityksestä automaattisesti muille solmuille. Sinun on kuitenkin "
+"varmistettava, että teet tällaisia päivityksiä vain yhdelle solmulle "
+"kerrallaan ja klusterissa, jossa solmun menettäminen ei aiheuta "
+"päätösvaltaisuuden menetystä."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36334,4 +36636,3 @@ msgstr "Merkitse rajattu tuotos"
 #~ "voidaan muuttaa. Lisätietoja ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-
