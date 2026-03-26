@@ -9,17 +9,18 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:57+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/lt/>\n"
 "Language: lt\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/lt/>\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100"
-" > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > "
-"19)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -963,7 +964,7 @@ msgstr "Užklausa apie tinklo konfigūraciją"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "IPv6 laukai rodomi tik tuo atveju, jei sukonfigūruotas IPv6."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -990,6 +991,9 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"IPv6 yra neprivalomas ir pagal numatytuosius nustatymus nekonfigūruojamas. "
+"Norėdami išjungti IPv6, praleiskite ``--ipv6-cidr`` ir ``--ipv6-gateway`` "
+"parinktis."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1032,6 +1036,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Jei norite konfigūruoti IPv6, įtraukite neprivalomą ``ipv6`` lauką su "
+"``cidr`` ir ``gateway`` savybėmis. Norėdami išjungti IPv6, neįtraukite "
+"``ipv6`` lauko."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2696,6 +2703,7 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Šiuo metu ši funkcija yra techninė peržiūra su šiais laikinais apribojimais:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2703,18 +2711,26 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Jei klasteris prarandamas (prarandamas kvorumas), vienintelė atkūrimo "
+"priemonė yra gamyklinis atstatymas + atkūrimas. Būtinai dažnai darykite "
+"atsargines kopijas. Ateityje bus įtrauktos priemonės, skirtos atkurti "
+"duomenis diske."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Aktyvioji / pasyvioji sąranka, skirta dviejų mazgų klasteriams palaikyti, "
+"naudojant \"etcd Learner\" arba \"Mirror\", dar nepasiekiama."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Sistemos laiką tarp mazgų kol kas reikia sinchronizuoti rankiniu būdu. "
+"Ateityje bus išleista automatinė laikrodžio sinchronizacija."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2726,6 +2742,13 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM 4.0 ir vėlesnėse versijose palaikomas klasterizavimas, kad būtų "
+"galima tiesiogiai sinchronizuoti duomenis tarp kelių NetHSM. Taip palaikomas "
+"didelis raktų generavimo dažnumas, įgyvendinamas didelis prieinamumas ir "
+"apkrovos balansavimas. NetHSM klasteris yra pagrįstas `etcd <https://etcd."
+"io>`__, kuriame naudojamas `Raft konsensuso algoritmas <https://raft.github."
+"io/>`__, užtikrinantis stiprų nuoseklumą. Taip užtikrinama, kad duomenys ("
+"pvz., raktai) visuomet būtų teisingi visuose NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2734,6 +2757,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Prieš kurdami NetHSM klasterį susipažinkite su šia technologija ir jos "
+"apribojimais, kad išvengtumėte atsitiktinio gedimo ir duomenų praradimo. Be "
+"šio dokumento, taip pat galite susipažinti su `etcd dokumentacija "
+"<https://etcd.io/docs/latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2747,14 +2774,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"\"Mazgu\" vadinsime NetHSM, kuris turėtų būti klasterio dalis. **** ` `N`` **"
+"mazgų klasteris veiks tol, kol bent** ``(N/2)+1`` **mazgai bus sveiki ir "
+"pasiekiami.** Šis minimalus sveikų ir pasiekiamų mazgų kiekis vadinamas "
+"**kvorumu**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Tai reiškia, kad galimi tokie scenarijai."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Vienas mazgas neveikia, o kvorumas vis tiek pasiekiamas"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2762,18 +2793,25 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Jei 3 mazgų klasteryje vienas mazgas neveikia (sugenda arba tampa "
+"nepasiekiamas dėl tinklo sąlygų), kiti du mazgai toliau veikia ir aptarnauja "
+"užklausas."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Jei sugedęs mazgas vis dar sveikas (pvz., tai buvo tik tinklo problema), jis "
+"bus neveikiantis, kol bus izoliuotas (net tik skaitymui)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Tačiau jei mazgas atsigauna, jis vėl sinchronizuojasi su kitais klasterio "
+"mazgais ir vėl gali veikti neprarasdamas duomenų."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2781,10 +2819,13 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Jei jis neatsigauna, jį reikia pašalinti iš klasterio (žr. kitą skyrių), "
+"atstatyti gamyklinius parametrus ir vėl iš naujo atlikti prisijungimo "
+"procesą."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "Įvyksta tinklo padalijimas, o kvorumas vis tiek pasiekiamas"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2793,28 +2834,37 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Tai tik ankstesnio scenarijaus apibendrinimas. 5 mazgų klasteryje, kuriame, "
+"pvz., 3 mazgai yra vienoje fizinėje vietoje A, o 2 mazgai - kitoje vietoje "
+"B, A ir B izoliuojanti tinklo problema reikštų, kad:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"3 mazgai, esantys A vietoje, atitinka kvorumą (šiuo atveju 3), todėl jie "
+"toliau veikia."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"2 mazgai, esantys B vietoje, **neatitinka** kvorumo (vis dar 3), todėl jie "
+"nustos veikti (net ir skaitymo režimu)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Jei tinklo problema bus išspręsta, 2 mazgai galės prisijungti prie kitų 3 "
+"mazgų."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Kvorumas prarastas ilgam"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2822,6 +2872,9 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"Jei dėl gedimo visi klasterio poaibiai netenka kvorumo, klasteris ir jo "
+"duomenys bus visiškai prarasti, nebent gedimas būtų pašalintas. Tokiu atveju "
+"mazgai turi būti gamykliškai atstatyti ir atkurta atsarginė kopija."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2830,12 +2883,17 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"Taip gali nutikti, pavyzdžiui, jei 2 mazgų klasteryje (kur kvorumas yra 2) "
+"sugenda vienas mazgas. Tokiu atveju nepavykusio mazgo negalima pašalinti iš "
+"klasterio, nes likęs sveikas mazgas jau neveikia, nes prarado kvorumą."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Todėl patariama klasteryje visada turėti nelyginį mazgų skaičių ir dažnai "
+"daryti atsargines kopijas."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2847,16 +2905,25 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Kad būtų aišku, *laikinai* prarasti kvorumą (pavyzdžiui, jei iš naujo "
+"paleidžiate visus klasterio mazgus kartu arba dėl laikino tinklo gedimo "
+"izoliuojami mazgai) nėra problema: kai tik vėl bus sujungta pakankamai mazgų "
+"(nereikės rankiniu būdu vėl prisijungti), kad būtų pasiektas kvorumas, "
+"klasteris vėl pradės veikti įprastai. Tik dėl nuolatinių gedimų, tokių kaip "
+"tinklo pertvaros, netinkama tinklo konfigūracija, autentifikavimo problemos "
+"ar aparatinės įrangos gedimai, reikės imtis veiksmų rankiniu būdu."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Daugiau informacijos rasite `etcd DUK <https://etcd.io/docs/v3.6/faq/#why-an-"
+"odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "2 mazgų klasteris"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2865,10 +2932,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Dviejų mazgų aktyvus ir pasyvus klasteris dar nepalaikomas ir bus pridėtas "
+"būsimoje versijoje. Rekomenduojame įdiegti trečiąjį mazgą - trečiąjį NetHSM "
+"arba etcd \"liudininką\", kuris galėtų veikti bet kuriame kompiuteryje. Žr. "
+"kitą skyrių \"Liudininkas\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Liudytojas"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2878,6 +2949,10 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Dėl klasterizavimo su ``etcd`` pobūdžio jis tuo patikimesnis, kuo daugiau "
+"mazgų yra klasteryje. Kaip paaiškinta `Skyriuje \"Operacinis atleidimas\", "
+"idealiu atveju klasteriuose turėtų būti bent 3 mazgai, kad būtų vietos "
+"gedimams, nes 2 mazgų klasteris visiškai sugenda, jei sugenda tik vienas."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2890,6 +2965,14 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Tačiau funkcija sukurta taip, kad norint pasiekti stabilų mazgų skaičių "
+"nebūtina į klasterį įtraukti viso tikro \"NetHSM\" įrenginio. Vietoj to "
+"galite patys įdiegti ir pridėti \"liudininko\" mazgą. Toks mazgas yra "
+"tiesiog ``etcd`` egzempliorius, veikiantis jūsų pasirinktame kompiuteryje ("
+"arba konteineryje) ir prijungtas prie klasterio. Tikrieji klasterio "
+"įrenginiai jį atpažins kaip įprastą mazgą, jis gaus visus duomenis ir "
+"atnaujinimus iš įrenginių (tačiau, žinoma, su juo negalėsite atlikti jokių "
+"HSM operacijų - jis tik saugo duomenis)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2902,6 +2985,9 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Liudytojo mazgas (arba bet kuris kitas asmuo, turintis prieigą prie jo) turi "
+"tiesioginę prieigą prie visų klasterio mazgų saugyklų (pvz., galite išmesti "
+"visus įrašus ir atitinkamas reikšmes naudodami ``etcdctl get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2910,10 +2996,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Tačiau, išskyrus konfigūracijos versiją (``/config/version``, kuri visada "
+"turėtų būti \"1\"), griežtai visos reikšmės yra užšifruotos (naudojant "
+"įrenginio raktą konkrečiam mazgui būdingoms reikšmėms arba domeno raktus "
+"kitoms reikšmėms), taip užtikrinant slaptų duomenų konfidencialumą."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Tačiau atkreipkite dėmesį, kad kenkėjiškas mazgas gali:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2921,16 +3011,21 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"įrašyti šiukšles kaip bet kurio saugyklos įrašo reikšmę, todėl mazgai "
+"nesugebės jo iššifruoti (dėl to gali sutrikti kai kurių sistemos įrašų "
+"veikimas)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"naudotojų, vardų erdvių ir raktų, kuriuos galite laikyti slaptais, sąrašo "
+"įrašų pavadinimus."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Kas bendrai naudojama tarp mazgų"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2941,6 +3036,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"NetHSM klasteris reiškia, kad didžiąja dalimi duomenų dalijamasi "
+"tarpusavyje. Bet koks raktų, naudotojų ar vardų erdvių papildymas, "
+"pakeitimas ar ištrynimas viename mazge galiausiai atsispindi visuose kituose "
+"mazguose. Apskritai bet kokia būseną keičianti operacija keičia kiekvieno "
+"mazgo būseną. Tai apima ir atsarginės kopijos **atkūrimo** operaciją, kuri "
+"veikia įprastai."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2948,20 +3049,25 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"Tolesniuose skirsniuose išsamiai aprašoma, kokie duomenys yra visiškai "
+"vietiniai, kokie duomenys saugomi bendroje ``etcd`` saugykloje, tačiau lieka "
+"priklausomi nuo mazgo, ir kokie duomenys yra visiškai bendri visiems mazgams."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Nėra saugoma etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Kiekvieno mazgo **įrenginio raktas** saugomas tik vietoje ir juo niekada "
+"nesidalijama tarp mazgų."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Saugoma \"etcd\", bet priklauso konkrečiam mazgui"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2969,6 +3075,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Toliau nurodyti duomenys saugomi ``etcd`` skirtingose kiekvieno mazgo "
+"apimtyse. Taigi jie yra *prieinami* kiekvienam mazgui, tačiau nėra *vienodi* "
+"tarp mazgų (kiekvienas mazgas gali turėti skirtingą šių duomenų reikšmę)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -3004,10 +3113,11 @@ msgstr "Httpd konfigūracija"
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
 msgstr ""
+"atrakinimo druska (kad kiekvienas mazgas turėtų savo atrakinimo slaptažodį)."
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "užrakintas domeno raktas"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -3016,20 +3126,26 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Atkreipkite dėmesį, kad nors kiekvienas mazgas turi savo užrakinto domeno "
+"rakto versiją (nes kiekvienas mazgas jį užrakina savo įrenginio raktu arba "
+"atrakinimo slaptažodžiu), pagrindiniu domeno raktu **dalijamasi** tarp mazgų "
+"(kad būtų galima pasiekti bendrus HSM duomenis, pvz., raktus)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Saugoma etcd ir bendrinama"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Visi toliau išvardyti duomenys saugomi ``etcd`` globalioje srityje, todėl "
+"yra vienodi visuose klasterio mazguose:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "HSM duomenys:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3048,11 +3164,11 @@ msgstr "Vardų sritys"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domenų parduotuvės versija"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
+msgstr "klasterio CA (naudojama autentiškumo nustatymui tarp klasterio mazgų)."
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3066,6 +3182,11 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Atkreipkite dėmesį, kad kol kas konfigūracijos / domeno saugyklos versija "
+"gali būti tik 1 versija (jei jūsų programinės įrangos versija palaiko "
+"klasterių kūrimą, vadinasi, ją turite). Daugiau informacijos apie "
+"programinės įrangos atnaujinimų diegimo saugumą klasteryje rasite `Software "
+"Updates in Clusters`_ skyriuje."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3077,6 +3198,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Bet kuris klasteris iš pradžių pradedamas nuo vieno mazgo. Nauji mazgai prie "
+"klasterio prisijungs vienas po kito."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3088,6 +3211,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Tinklo duomenų srautas tarp mazgų šifruojamas ir autentiškumas patvirtinamas "
+"naudojant jų TLS sertifikatą."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3095,12 +3220,16 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Visi mazgai, kurie turėtų būti to paties klasterio dalis, pirmiausia turi "
+"įdiegti bendrą sertifikatų tarnybą (CA), kad galėtų patikrinti, ar kiti "
+"mazgai yra teisėti."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"Toliau darysime prielaidą, kad visi mazgai yra šviežiai įrengti ir veikia."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3121,7 +3250,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "CA kūrimas ir diegimas"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3129,14 +3258,16 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Vartotojai turėtų sukurti CA savo priemonėmis ir pagal savo veiklos "
+"apribojimus, įsitikinę, kad ji leidžia naudoti bent ``keyCertSign`` raktą."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "Pavyzdžiui, minimalią CA galima sukurti naudojant ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Dabar ši CA turi būti įdiegta kiekviename mazge."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3159,6 +3290,11 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Kad būtų tinkamai patvirtintas mazgų autentiškumas, klasterio duomenų bazėje "
+"(etcd) tikimasi, kad kiekvienas mazgas turi sertifikatą su tinkamai "
+"užpildytu laukeliu Subject Alt Names (SAN). Ypač mazgai, kuriuos tikimasi "
+"pasiekti tik per jų IP, savo sertifikate turi turėti tinkamą IP SAN. IP SAN "
+"galima prašyti CSR, prie vardų pridedant priešdėlį \"IP:\", kaip ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3166,6 +3302,8 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Turėdami gautą CSR (pavadinkime jį ``nethsm.csr``), galime jam sugeneruoti "
+"sertifikatą, kurį galima įdiegti. Pavyzdžiui, naudodami ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3187,20 +3325,26 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Galiausiai CA (``CA.pem``) dabar galima įdiegti naudojant ``/config/tls/"
+"cluster-ca.pem`` galinį tašką (žr. `API dokumentaciją <https://nethsmdemo."
+"nitrokey.com/api_docs/index.html>`__). Tai įmanoma tik tada, kai įdiegtas "
+"TLS sertifikatas yra pasirašytas. Priešingu atveju operacija bus atmesta."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Šį procesą reikia pakartoti kiekvienam mazgui."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Laikrodžio sinchronizavimas"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Įsitikinkite, kad kiekviename mazge nustatytas tikslus sistemos laikas. Jei "
+"ne, sureguliuokite jų laikrodžius naudodami ``/config/time`` galinį tašką."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3209,15 +3353,15 @@ msgstr "ADSK pridėjimas"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Mazgas į klasterį įtraukiamas dviem etapais:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
-msgstr ""
+msgstr "užregistruoti papildymą klasteryje (per bet kurį iš jo narių)."
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "nurodyti naujam mazgui prisijungti"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3230,10 +3374,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Pirmiausia įsitikinkite, kad mazge, kuris bus naudojamas registruojant naują "
+"jungiklį, sukonfigūruota atsarginė slaptažodžių frazė (žr. ``/config/backup-"
+"passphrase`` galinio taško API dokumentaciją)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Naujo mazgo registravimas"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3244,6 +3391,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Užregistravus mazgą, į klasterį iš karto įtraukiamas naujas mazgas ir "
+"pakeičiama kvorumo riba, net jei mazgas iš tikrųjų dar nėra prisijungęs. Dėl "
+"to esami mazgai gali būti neveikiantys, kol naujas mazgas iš tikrųjų "
+"prisijungs. Žr. šio dokumento `API dokumentaciją <https://nethsmdemo.nitrokey"
+".com/api_docs/index.html>`__ ir `skyrių Operational Redundancy`_."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3253,6 +3405,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Turėkite prisijungiančio mazgo IP adresą. To mazgo pilnas *URL* (dar "
+"vadinamas *lygiaverčiu URL* ` `etcd`` terminologijoje) bus "
+"``https://<IP_of_node>:2380`` (pvz., ``https://192.168.1.1:2380``). "
+"Prievadas **turi būti** 2380, todėl įsitikinkite, kad tarp mazgų esanti "
+"ugniasienė leidžia TCP srautą šiuo prievadu."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3260,6 +3417,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Galite dar kartą patikrinti, ar URL yra teisingas, iškvietę ``GET /cluster/"
+"members`` mazge, prie kurio tikimasi prisijungti. Tai turėtų išvardyti tik "
+"vieną narį - jį patį."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3270,10 +3430,15 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Tada užregistruokite tą laukiamą URL bet kuriame esančiame klasterio mazge ("
+"jei dar neturite klasterio, atlikite tai \"NetHSM\", kuris bus pradinis "
+"klasterio mazgas). Tai atliekama naudojant ``POST /cluster/members`` galinį "
+"tašką (žr. `API dokumentaciją <https://nethsmdemo.nitrokey.com/api_docs/index"
+".html>`__), perduodant jam JSON kūną, kuriame yra URL."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "Jei pavyksta, grąžinamas JSON formos kūnas:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3283,14 +3448,19 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"kuriame pateikiama informacija, reikalinga naujam mazgui prisijungti prie "
+"klasterio. Visų pirma, jame išvardijami visi klasterio nariai (kai narys su "
+"tuščiu pavadinimu yra naujasis prisijungiantysis). Jame taip pat yra domeno "
+"raktas, užšifruotas atrakinimo ir atsargine slaptažodžių frazėmis - taigi "
+"prieš tai turi būti sukonfigūruota atsarginė slaptažodžių frazė."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Šį atsakymą pasilikite kitam žingsniui."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Faktinis prisijungimas prie klasterio"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3301,6 +3471,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Paimkite paskutinio žingsnio atsakymą, pridėkite prie jo ``backupPassphrase``"
+" lauką, kuriame yra atsarginė mazgo, kuriame buvo užregistruotas naujas "
+"prisijungiantysis, slaptažodžių frazė, ir perduokite šiuos duomenis į ``POST "
+"/cluster/join`` (žr. `API dokumentaciją <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>`__), esantį mazge, prie kurio tikimasi prisijungti."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3308,6 +3483,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Darant prielaidą, kad ir klasteris, ir mazgas gali pasiekti vienas kitą, bus "
+"atliktas tikrasis prisijungimas, ištrinti naujojo prisijungiančiojo mazgo "
+"duomenys, kad jo būsena būtų sinchronizuota su klasterio būkle."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3318,6 +3496,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"Priklausomai nuo tinklo ir klasterio sąlygų, ši operacija gali užtrukti "
+"keliasdešimt sekundžių. Jei ši operacija nepavyksta iš karto (pvz., "
+"klasteris buvo nepasiekiamas arba nepavyko nustatyti autentiškumo), šio "
+"mazgo būsena nebus ištrinta ir prisijungimas bus atšauktas. Tačiau kai tik "
+"pirmasis prisijungimas yra sėkmingas, ši operacija yra galutinė ir gali būti "
+"atšaukta tik atliekant gamyklinį atstatymą."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3327,6 +3511,11 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Jei šis prisijungimas sėkmingas, mazgas atsidurs ``Locked`` būsenoje ir "
+"turės būti atrakintas naudojant registracijai naudoto mazgo atrakinimo "
+"slaptažodį. Vėliau atrakinimo slaptažodį galima pakeisti (atrakinimo "
+"slaptažodžiai lieka priklausomi nuo konkretaus mazgo ir nėra bendrinami tarp "
+"mazgų)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3337,6 +3526,13 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Net ir po sėkmingo prisijungimo, jei klasterio duomenų bazė yra didelė arba "
+"klasteris yra užimtas, gali prireikti šiek tiek laiko, kol naujasis "
+"prisijungiantysis visiškai sinchronizuos savo būseną. Per tą laiką visi "
+"mazgai (ypač naujasis prisijungęs mazgas) gali būti mažiau jautrūs arba "
+"visai nereaguoti. Ypač naujasis prisijungimo mazgas iš pradžių gali grąžinti "
+"klaidas, pavyzdžiui, bandant jį atrakinti. Tokiu atveju skirkite tam šiek "
+"tiek laiko ir bandykite dar kartą."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3354,6 +3550,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Jums reikės aplinkos su ``etcd`` v3.6 versija, kurios IPv4 adresą (bent jau) "
+"gali pasiekti kiti klasterio nariai. Reikia leisti TCP srautą į 2380 "
+"prievadą ir iš jo."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3361,6 +3560,9 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Sukurkite tuščią katalogą, kuriame bus saugomi ``etcd`` duomenys, ir "
+"įrašykite jo kelią (mes naudosime ``/var/etcd/data``). Užtikrinkite, kad "
+"naudotojas, kuris paleis procesą, turėtų teisę skaityti ir rašyti į katalogą."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3369,6 +3571,9 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Perkelkite į kompiuterį CA sertifikatą, kuris naudojamas klasterio mazgams "
+"autentifikuoti. Jį turėjote sukurti `CA sukūrimas ir įdiegimas`_ skyriuje. "
+"Jį laikysime ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3376,12 +3581,16 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Tada reikės sukurti liudytojo sertifikatą ir pasirašyti jį CA, kad jis "
+"galėtų bendrauti su savo kolegomis. Tai galima padaryti, pavyzdžiui, "
+"naudojant ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Gautus ``witness.key`` ir ``witness.pem`` taip pat saugokite ``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3394,12 +3603,17 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Vadovaukitės įprastomis instrukcijomis, pateiktomis skyriuje `Registring a "
+"New Node`_ (Naujo mazgo registravimas), kad praneštumėte esamam klasteriui "
+"apie naujo nario, turinčio nurodytą (-us) URL adresą (-us), įtraukimą."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Užrašykite klasterio atsakymą: jame turėtų būti klasterio narių sąrašas ir "
+"prisijungimo rinkinys (šios dalies jums neprireiks)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3413,12 +3627,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Skirtingai nei \"NetHSM\", kurie automatiškai pasirenka mazgo pavadinimą ("
+"naudodami įrenginio ID), jūs turite pasirinkti kiekvieno pridėto liudytojo "
+"pavadinimą, *įsitikinkite, kad pavadinimai yra unikalūs*. Toliau pateiktuose "
+"pavyzdžiuose naudosime \"witness1\"."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Kartu su NetHSM atsakymu dėl liudytojo registravimo parengkite formos "
+"kintamuosius:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3426,22 +3646,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Darant prielaidą, kad NetHSM atsakymas saugomas ``response.json`` faile, "
+"šiuos du paskutinius kintamuosius galite sukurti automatiškai naudodami šias "
+"``jq`` išraiškas:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"Pavyzdžiui, pagal atsakymo pavyzdį, pateiktą `Naujo mazgo registravimas`_ "
+"skyriuje, gausite:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Galiausiai sukurkite ``etcd.conf.yml`` failą, naudodami ``docs/etcd_witness."
+"conf.template`` pateiktą šablono failą:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Taip gausite formos failą:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3454,6 +3681,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Paleiskite ``etcd`` pageidaujamu būdu (rankiniu būdu, ``systemd`` paslauga, "
+"konteineriu ir t. t.), nurodydami į ankstesniame žingsnyje sukurtą "
+"konfigūracijos failą:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3461,10 +3691,13 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Turėtumėte pamatyti, kaip jis įsijungia, prisijungia prie klasterio ir "
+"pasiveja duomenis. Po kurio laiko, naudodami ``etcdctl`` klientą, turėtumėte "
+"patikrinti, ar jis yra sveikas:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Šis raktas turi egzistuoti ir jame turi būti \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3473,6 +3706,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Įsitikinkite, kad šis procesas toliau veikia, nes dabar jis yra tinkamas "
+"klasterio narys. Jei norite nutraukti jo veiklą, pirmiausia tinkamai "
+"pašalinkite jį iš klasterio (žr. tam skirtą skyrių). Jei pasikeičia jo "
+"pasiekiamas IP, atnaujinkite jo URL iš klasterio."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3491,6 +3728,11 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Atsarginės kopijos kūrimo operacija veikia taip pat, kaip ir be klasterio, "
+"ir ją galima užsakyti iš bet kurio klasterio mazgo. Ji sukuria viso "
+"klasterio duomenų atsarginę kopiją, įskaitant konkrečiam mazgui būdingus "
+"laukus (tačiau jie bus ignoruojami, nebent atsarginė kopija būtų atkuriama "
+"neperduotame mazge)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3499,6 +3741,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"Klasteryje padarytą atsarginę kopiją galima atkurti tame pačiame klasteryje, "
+"net jei nuo to laiko kai kurie mazgai buvo pridėti arba pašalinti. Toks "
+"atstatymas, atliktas veikiančiuose klasteriuose, neturės įtakos "
+"konfigūracijos reikšmėms (tik raktams, naudotojams, vardų sritims), kaip ir "
+"bet kuris kitas dalinis atstatymas."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3506,18 +3753,26 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Atkuriant atsarginę kopiją neprovizuotame mazge bus atkurti mazgui būdingi "
+"laukai (pvz., tinklo konfigūracija, sertifikatai ir kt.), kurie buvo "
+"naudojami kuriant atsarginę kopiją."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Atkuriant didelės apimties atsarginę kopiją, kurį laiką gali būti perkrautas "
+"klasteris, kol atstatymą taikantis mazgas perduoda pakeitimus kitiems "
+"mazgams."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Ši operacija išlieka suderinama su atsarginėmis kopijomis, padarytomis "
+"naudojant ankstesnes NetHSM versijas."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3526,6 +3781,10 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Atkuriant mazge A atsarginę kopiją, padarytą kitame mazge Z su kitu domeno "
+"raktu, bus teisingai perrašytas A domeno raktas, kaip ir anksčiau. Tačiau "
+"jei A buvo klasteryje su mazgu B, B taps neveikiantis, nes Z domeno raktas "
+"nebus atkurtas B mazge."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3534,10 +3793,15 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Kitaip tariant, atkurkite tik klasterį, kurio atsarginės kopijos padarytos "
+"tame pačiame klasteryje (nors po to mazgai galėjo būti pašalinti arba "
+"pridėti). Jei norite atkurti svetimą mazgo atsarginę kopiją, pirmiausia "
+"saugiai pašalinkite jį iš klasterio, tada iš naujo nustatykite jo gamyklinę "
+"padėtį ir atkurkite atsarginę kopiją."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Švarus mazgo pašalinimas"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3545,12 +3809,17 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Kol tam tikra klasterio dalis vis dar atitinka kvorumą, bet kuris iš jos "
+"narių gali būti naudojamas kitam mazgui pašalinti iš klasterio, nesvarbu, ar "
+"šis mazgas jau nepasiekiamas, ar tikimasi, kad bus nepasiekiamas."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Pirmiausia turite sužinoti norimo pašalinti mazgo ID, išvardydami visus "
+"mazgus per ``GET /cluster/members`` ir ieškodami tinkamo mazgo."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3558,6 +3827,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Tada jį galima pašalinti skambinant į ``DELETE /cluster/members/<id>``. Jei "
+"atitinkamas mazgas vis dar buvo sveikas, jis bus atskirtas nuo likusios "
+"klasterio dalies ir taps neveikiantis."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3569,6 +3841,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Būsimi atnaujinimai bus pažymėti kaip \"saugūs klasteriui\" (tokių turėtų "
+"būti dauguma) arba \"nesaugūs klasteriui\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3578,6 +3852,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Klasterio saugūs atnaujinimai gali būti taikomi mazgams, kurie yra klasterio "
+"dalis, prieš tai jų nepašalinus iš klasterio. Tačiau, kaip ir atlikdami "
+"visas operacijas, turėtumėte užtikrinti, kad tai būtų atliekama po vieną "
+"mazgą ir klasteryje, iš kurio pašalinus mazgą nesumažėtų kvorumas (pvz., jei "
+"atnaujinimas nepavyksta)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3586,14 +3865,18 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Klasterio nesaugūs atnaujinimai turi būti taikomi izoliuotiems mazgams. "
+"Turėtumėte išardyti klasterį (po vieną pašalinti mazgus), atstatyti visų "
+"mazgų, išskyrus vieną, gamyklinius parametrus, taikyti atnaujinimą "
+"kiekvienam mazgui, tada visus atstatytus mazgus prijungti prie likusio mazgo."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "Prieš atlikdami tokias operacijas būtinai sukurkite atsarginę kopiją."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Esamo klasterio konfigūracijos keitimas"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3607,6 +3890,10 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Esamas klasteris (su dviem ar daugiau mazgų) **negali** pakeisti savo "
+"klasterio CA, kol jis veikia. Jei reikia pakeisti šį sertifikatą: "
+"pasirinkite mazgą, pašalinkite visus kitus mazgus, atnaujinkite CA, tada "
+"liepkite kitiems nariams vėl prisijungti."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3620,6 +3907,10 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Pakeitus mazgo tinklo konfigūraciją (pvz., pakeitus jo IP adresą), kiti "
+"mazgai bus automatiškai informuoti apie atnaujinimą. Tačiau turėtumėte "
+"užtikrinti, kad tokius atnaujinimus vienu metu atliktumėte tik viename mazge "
+"ir tik tokiame klasteryje, kurio praradimas nesumažintų kvorumo."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36652,4 +36943,3 @@ msgstr "Pažymėti apkarpytą išvestį"
 #~ "būti pakeista. Daugiau informacijos ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-
