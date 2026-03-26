@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:56+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/el/>\n"
 "Language: el\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/el/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -995,7 +996,7 @@ msgstr "Ερώτηση για τη διαμόρφωση του δικτύου"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "Τα πεδία IPv6 εμφανίζονται μόνο εάν έχει ρυθμιστεί το IPv6."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -1022,6 +1023,9 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"Το IPv6 είναι προαιρετικό και δεν έχει ρυθμιστεί από προεπιλογή. Για να "
+"απενεργοποιήσετε το IPv6, παραλείψτε τις επιλογές ``--ipv6-cidr`` και "
+"``--ipv6-gateway``."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1064,6 +1068,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Για να ρυθμίσετε τις παραμέτρους IPv6, συμπεριλάβετε το προαιρετικό πεδίο "
+"``ipv6`` με τις ιδιότητες ``cidr`` και ``gateway``. Για να απενεργοποιήσετε "
+"το IPv6, παραλείψτε το πεδίο ``ipv6``."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2761,6 +2768,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Αυτή η λειτουργία είναι επί του παρόντος μια τεχνική προεπισκόπηση με τους "
+"ακόλουθους προσωρινούς περιορισμούς:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2768,18 +2777,27 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Εάν μια συστάδα χαθεί (η απαρτία έχει χαθεί), ο μόνος τρόπος ανάκτησης είναι "
+"η επαναφορά + επαναφορά από το εργοστάσιο. Φροντίστε να δημιουργείτε συχνά "
+"αντίγραφα ασφαλείας. Οι μελλοντικές εκδόσεις θα περιλαμβάνουν μέσα ανάκτησης "
+"από δεδομένα σε δίσκο."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Η ενεργή/παθητική ρύθμιση για την υποστήριξη συστάδων δύο κόμβων, είτε με τη "
+"χρήση του etcd Learner είτε με το Mirror, δεν είναι ακόμη διαθέσιμη."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Η ώρα του συστήματος μεταξύ των κόμβων πρέπει να συγχρονίζεται προς το παρόν "
+"χειροκίνητα. Μια μελλοντική έκδοση θα περιλαμβάνει αυτόματο συγχρονισμό του "
+"ρολογιού."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2791,6 +2809,13 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"Το NetHSM 4.0 και μετά υποστηρίζει ομαδοποίηση για τον άμεσο συγχρονισμό "
+"δεδομένων μεταξύ πολλών NetHSM. Αυτό υποστηρίζει υψηλή συχνότητα παραγωγής "
+"κλειδιών, πραγματοποιεί υψηλή διαθεσιμότητα και εξισορρόπηση φορτίου. Μια "
+"συστάδα NetHSM βασίζεται στο `etcd <https://etcd.io>`__ το οποίο "
+"χρησιμοποιεί τον αλγόριθμο συναίνεσης `Raft <https://raft.github.io/>`__ για "
+"ισχυρή συνέπεια. Αυτό εξασφαλίζει ότι τα δεδομένα (π.χ. κλειδιά) είναι σωστά "
+"σε όλα τα NetHSM ανά πάσα στιγμή."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2799,6 +2824,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Πριν από τη δημιουργία ενός συμπλέγματος NetHSM εξοικειωθείτε με αυτή την "
+"τεχνολογία και τους περιορισμούς της για να αποφύγετε τυχαίες διακοπές και "
+"απώλεια δεδομένων. Εκτός από αυτό το έγγραφο, μπορείτε να ανατρέξετε και "
+"στην τεκμηρίωση του `etcd <https://etcd.io/docs/latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2812,14 +2841,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"Θα ονομάζουμε \"κόμβο\" ένα NetHSM που αναμένεται να είναι μέρος μιας "
+"συστάδας. **Μια συστάδα κόμβων** ``N`` **θα συνεχίσει να λειτουργεί εφόσον "
+"τουλάχιστον οι κόμβοι** ``(N/2)+1`` **είναι υγιείς και προσβάσιμοι.** Αυτή η "
+"ελάχιστη ποσότητα υγιών, προσβάσιμων κόμβων ονομάζεται **απαρτία**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Αυτό συνεπάγεται τα ακόλουθα σενάρια."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Ένας κόμβος πέφτει και η απαρτία εξακολουθεί να επιτυγχάνεται"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2827,18 +2860,27 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Σε μια συστάδα 3 κόμβων, εάν ένας κόμβος αποτύχει (καταρρεύσει ή γίνει μη "
+"προσβάσιμος λόγω συνθηκών δικτύου), οι άλλοι δύο κόμβοι θα συνεχίσουν να "
+"λειτουργούν και να εξυπηρετούν τις αιτήσεις."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Αν ο κόμβος που απέτυχε είναι ακόμα υγιής (π.χ. ήταν απλώς ένα πρόβλημα "
+"δικτύου), θα είναι μη λειτουργικός όσο είναι απομονωμένος (ούτε καν μόνο για "
+"ανάγνωση)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Ωστόσο, εάν ο κόμβος ανακάμψει, θα επανασυγχρονιστεί με τον καθαρό τρόπο με "
+"το υπόλοιπο σύμπλεγμα και θα γίνει ξανά λειτουργικός, χωρίς να χαθούν "
+"δεδομένα."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2846,10 +2888,14 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Εάν δεν ανακάμψει ποτέ, πρέπει να αφαιρεθεί από τη συστάδα (βλ. επόμενη "
+"ενότητα), να γίνει επαναφορά εργοστασιακών ρυθμίσεων και να ξαναρχίσει η "
+"διαδικασία σύνδεσης από την αρχή."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
 msgstr ""
+"Συμβαίνει μια κατάτμηση δικτύου και η απαρτία εξακολουθεί να επιτυγχάνεται"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2858,28 +2904,38 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Αυτό είναι απλώς μια γενίκευση του προηγούμενου σεναρίου. Σε μια συστάδα 5 "
+"κόμβων όπου π.χ. 3 κόμβοι βρίσκονται σε μια φυσική τοποθεσία Α και 2 κόμβοι "
+"σε μια άλλη τοποθεσία Β, ένα πρόβλημα δικτύου που απομονώνει τα Α και Β θα "
+"σήμαινε τα εξής:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"Οι 3 κόμβοι στη θέση Α πληρούν την απαρτία (3 σε αυτή την περίπτωση), οπότε "
+"συνεχίζουν να λειτουργούν."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"Οι 2 κόμβοι στη θέση Β είναι **δεν** πληρούν την απαρτία (εξακολουθούν να "
+"είναι 3), οπότε θα σταματήσουν να λειτουργούν (ακόμη και μόνο για ανάγνωση)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Εάν το πρόβλημα του δικτύου επιλυθεί, οι 2 κόμβοι θα επανενωθούν με "
+"καθαρότητα με τους άλλους 3."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Η απαρτία χάνεται οριστικά"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2887,6 +2943,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"Μια αποτυχία που προκαλεί απώλεια απαρτίας σε όλα τα υποσύνολα της συστάδας "
+"θα καταστήσει τη συστάδα και τα δεδομένα της εντελώς χαμένα, εκτός εάν "
+"επιλυθεί η αποτυχία. Σε αυτή την περίπτωση, οι κόμβοι πρέπει να επανέλθουν "
+"εργοστασιακά και να αποκατασταθεί ένα αντίγραφο ασφαλείας."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2895,12 +2955,19 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"Αυτό μπορεί να συμβεί, για παράδειγμα, εάν ένας κόμβος αποτύχει σε μια "
+"συστάδα 2 κόμβων (όπου η απαρτία είναι 2). Σε αυτή την περίπτωση, ο "
+"αποτυχημένος κόμβος δεν μπορεί να αφαιρεθεί καθαρά από τη συστάδα εκ των "
+"υστέρων, επειδή ο εναπομείνας υγιής κόμβος είναι ήδη μη λειτουργικός, αφού "
+"έχει χάσει την απαρτία."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Ως εκ τούτου, συνιστάται να έχετε πάντα έναν περιττό αριθμό κόμβων σε μια "
+"συστάδα και να δημιουργείτε συχνά αντίγραφα ασφαλείας."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2912,16 +2979,26 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Για να γίνω σαφής, το *προσωρινά* απώλεια της απαρτίας (για παράδειγμα, αν "
+"επανεκκινείτε όλους τους κόμβους μιας συστάδας μαζί ή μια προσωρινή βλάβη "
+"του δικτύου απομονώνει τους κόμβους) δεν αποτελεί πρόβλημα: μόλις "
+"επανασυνδεθούν αρκετοί κόμβοι (χωρίς να χρειαστεί να επανασυνδεθούν "
+"χειροκίνητα) για να επιτευχθεί απαρτία, η συστάδα θα συνεχίσει την κανονική "
+"της λειτουργία. Μόνο μόνιμες αποτυχίες, όπως κατατμήσεις δικτύου, "
+"λανθασμένες ρυθμίσεις δικτύου, προβλήματα αυθεντικοποίησης ή βλάβες υλικού, "
+"θα απαιτήσουν χειροκίνητη ενέργεια."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Για περισσότερες πληροφορίες, ανατρέξτε στο `ΣΥΧΝΈΣ ΕΡΩΤΉΣΕΙΣ του etcd "
+"<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "Συστάδα 2 κόμβων"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2930,10 +3007,15 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Δεν υποστηρίζεται ακόμα η ενεργή/παθητική συστάδα δύο κόμβων και θα "
+"προστεθεί σε μελλοντική έκδοση. Συνιστούμε την εισαγωγή ενός 3ου κόμβου, "
+"είτε ενός 3ου NetHSM είτε ενός \"μάρτυρα\" etcd, ο οποίος θα μπορούσε να "
+"λειτουργεί σε οποιονδήποτε κεντρικό υπολογιστή. Δείτε την επόμενη ενότητα "
+"\"Μάρτυρας\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Μάρτυρας"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2943,6 +3025,11 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Η φύση της συσταδοποίησης με ``etcd`` την καθιστά πιο αξιόπιστη όσο "
+"περισσότεροι κόμβοι υπάρχουν στη συστάδα. Όπως εξηγείται στην ενότητα `"
+"Λειτουργικός πλεονασμός`_, οι συστάδες θα πρέπει ιδανικά να έχουν "
+"τουλάχιστον 3 κόμβους για να έχουν περιθώριο αποτυχίας, καθώς μια συστάδα 2 "
+"κόμβων θα αποτύχει πλήρως αν αποτύχει μόνο ο ένας."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2955,6 +3042,16 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Ωστόσο, ο σχεδιασμός της λειτουργίας είναι τέτοιος ώστε να μην χρειάζεται να "
+"προσθέσετε μια πλήρη, πραγματική συσκευή NetHSM στη συστάδα σας για να "
+"επιτύχετε έναν σταθερό αριθμό κόμβων. Αντ' αυτού, μπορείτε να αναπτύξετε και "
+"να προσθέσετε έναν κόμβο \"μάρτυρα\" μόνοι σας. Ένας τέτοιος κόμβος είναι "
+"απλώς μια περίπτωση του ``etcd`` που εκτελείται στο μηχάνημα της επιλογής "
+"σας (ή σε ένα container) και είναι συνδεδεμένο με τη συστάδα. Θα "
+"αναγνωρίζεται ως κανονικός κόμβος από τις πραγματικές συσκευές της συστάδας "
+"και θα λαμβάνει όλα τα δεδομένα και τις ενημερώσεις από τις συσκευές (αλλά "
+"φυσικά δεν θα μπορείτε να εκτελέσετε καμία λειτουργία HSM με αυτόν - "
+"αποθηκεύει μόνο δεδομένα)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2967,6 +3064,10 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Ο κόμβος μάρτυρας (ή οποιοσδήποτε έχει πρόσβαση σε αυτόν) έχει άμεση "
+"πρόσβαση στο storage backend όλων των κόμβων της συστάδας (π.χ. μπορείτε να "
+"αποθηκεύσετε όλες τις καταχωρήσεις και τις αντίστοιχες τιμές με το ``etcdctl "
+"get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2975,10 +3076,15 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Ωστόσο, με εξαίρεση την έκδοση παραμέτρων (``/config/version``, η οποία θα "
+"πρέπει πάντα να είναι \"1\"), όλες οι τιμές είναι κρυπτογραφημένες (είτε με "
+"ένα κλειδί συσκευής για τις τιμές που αφορούν συγκεκριμένους κόμβους είτε με "
+"τα κλειδιά τομέα για τις υπόλοιπες), εξασφαλίζοντας την εμπιστευτικότητα των "
+"ευαίσθητων δεδομένων."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Σημειώστε ωστόσο ότι ένας κακόβουλος κόμβος μπορεί:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2986,16 +3092,22 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"να γράψετε σκουπίδια ως τιμή για οποιαδήποτε καταχώρηση στο χώρο "
+"αποθήκευσης, γεγονός που θα προκαλέσει την αποτυχία αποκρυπτογράφησης από "
+"τους κόμβους (γεγονός που μπορεί να οδηγήσει σε συντριβές για ορισμένες "
+"καταχωρήσεις του συστήματος)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"ονόματα καταχωρήσεων λίστας, όπως χρήστες, χώροι ονομάτων και κλειδιά, τα "
+"οποία μπορεί να θεωρείτε ευαίσθητα."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Τι μοιράζεται μεταξύ των κόμβων"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -3006,6 +3118,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"Η ύπαρξη ενός συμπλέγματος NetHSM σημαίνει ότι τα περισσότερα δεδομένα είναι "
+"κοινά μεταξύ τους. Οποιαδήποτε προσθήκη, τροποποίηση ή διαγραφή κλειδιών, "
+"χρηστών ή χώρων ονομάτων σε έναν κόμβο αντανακλάται τελικά σε όλους τους "
+"άλλους. Γενικά, οποιαδήποτε λειτουργία που τροποποιεί την κατάσταση θα "
+"τροποποιήσει την κατάσταση για κάθε κόμβο. Αυτό περιλαμβάνει τη λειτουργία "
+"backup **restore** η οποία λειτουργεί κανονικά."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -3013,20 +3131,26 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"Στις επόμενες ενότητες περιγράφεται λεπτομερώς ποια δεδομένα είναι πλήρως "
+"τοπικά, ποια δεδομένα αποθηκεύονται στον κοινόχρηστο αποθηκευτικό χώρο "
+"``etcd`` αλλά παραμένουν ειδικά για τον κόμβο και ποια δεδομένα είναι πλήρως "
+"κοινόχρηστα σε όλους τους κόμβους."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Δεν αποθηκεύεται στο etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Το κλειδί συσκευής **** κάθε κόμβου παραμένει αποθηκευμένο μόνο τοπικά και "
+"δεν διαμοιράζεται ποτέ μεταξύ των κόμβων."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Αποθηκευμένο στο etcd αλλά συγκεκριμένο για τον κόμβο"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -3034,6 +3158,10 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Τα ακόλουθα δεδομένα αποθηκεύονται στη διεύθυνση ``etcd`` σε διαφορετικά "
+"πεδία για κάθε κόμβο. Ως εκ τούτου, είναι *προσβάσιμα* σε κάθε κόμβο, αλλά "
+"όχι *ομοιόμορφα* σε όλους τους κόμβους (κάθε κόμβος μπορεί να έχει "
+"διαφορετική τιμή για τα δεδομένα αυτά)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -3069,10 +3197,12 @@ msgstr "Διαμόρφωση Httpd"
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
 msgstr ""
+"αλάτι ξεκλειδώματος (ώστε κάθε κόμβος να έχει τη δική του φράση πρόσβασης "
+"ξεκλειδώματος)"
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "κλειδωμένο κλειδί τομέα"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -3081,20 +3211,27 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Σημειώστε ότι ενώ κάθε κόμβος έχει τη δική του έκδοση του κλειδωμένου "
+"κλειδιού τομέα (επειδή κάθε κόμβος το κλειδώνει με το δικό του κλειδί "
+"συσκευής ή τη δική του φράση πρόσβασης ξεκλειδώματος), το υποκείμενο κλειδί "
+"τομέα είναι **κοινόχρηστο** σε όλους τους κόμβους (για πρόσβαση στα κοινά "
+"δεδομένα HSM, όπως τα κλειδιά)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Αποθηκεύεται στο etcd και μοιράζεται"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Όλα τα παρακάτω δεδομένα αποθηκεύονται στο ``etcd`` στην παγκόσμια εμβέλεια, "
+"ώστε να είναι ομοιόμορφα σε όλους τους κόμβους μιας συστάδας:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "Δεδομένα HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3113,11 +3250,13 @@ msgstr "Χώροι ονομάτων"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
 msgstr ""
+"cluster CA (χρησιμοποιείται για τον έλεγχο ταυτότητας των κόμβων σε όλο το "
+"σύμπλεγμα)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3131,6 +3270,11 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Σημειώστε ότι προς το παρόν η έκδοση του config/domain store μπορεί να είναι "
+"μόνο η έκδοση 1 (αν η έκδοση του λογισμικού σας υποστηρίζει clustering, τότε "
+"αυτή έχετε). Ανατρέξτε στην ενότητα `Ενημερώσεις λογισμικού σε συστάδες`_ "
+"για περισσότερες λεπτομέρειες σχετικά με την ασφάλεια της εγκατάστασης "
+"ενημερώσεων λογισμικού εντός μιας συστάδας."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3142,6 +3286,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Κάθε συστάδα θα ξεκινάει αρχικά από έναν κόμβο. Οι νέοι κόμβοι θα "
+"εντάσσονται στη συστάδα ένας προς έναν."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3153,6 +3299,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Η δικτυακή κυκλοφορία μεταξύ των κόμβων κρυπτογραφείται και πιστοποιείται με "
+"τη χρήση του πιστοποιητικού TLS."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3160,12 +3308,17 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Όλοι οι κόμβοι που αναμένεται να είναι μέρος της ίδιας συστάδας πρέπει πρώτα "
+"να εγκαταστήσουν μια κοινή Αρχή Πιστοποιητικών (CA) που θα τους επιτρέψει να "
+"επαληθεύουν ότι οι άλλοι κόμβοι είναι νόμιμοι."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"Στη συνέχεια, υποθέτουμε ότι όλοι οι κόμβοι είναι πρόσφατα εφοδιασμένοι και "
+"λειτουργικοί."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3186,7 +3339,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "Δημιουργία και εγκατάσταση μιας CA"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3194,14 +3347,18 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Οι χρήστες θα πρέπει να δημιουργήσουν μια CA με τα δικά τους μέσα και "
+"σύμφωνα με τους δικούς τους λειτουργικούς περιορισμούς, διασφαλίζοντας ότι "
+"επιτρέπει τουλάχιστον τη χρήση του κλειδιού ``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
 msgstr ""
+"Για παράδειγμα, μια ελάχιστη CA μπορεί να δημιουργηθεί με το ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Αυτή η CA πρέπει τώρα να εγκατασταθεί σε κάθε κόμβο."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3224,6 +3381,12 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Για την ορθή αυθεντικοποίηση των κόμβων, το backend ομαδοποίησης (etcd) "
+"αναμένει ότι κάθε κόμβος διαθέτει πιστοποιητικό με σωστά συμπληρωμένο το "
+"πεδίο Subject Alt Names (SAN). Ειδικότερα, οι κόμβοι που αναμένεται να "
+"προσεγγίζονται μόνο μέσω της IP τους πρέπει να έχουν ένα σωστό IP SAN στο "
+"πιστοποιητικό τους. Τα IP SAN μπορούν να ζητηθούν για το CSR με το πρόθεμα "
+"\"IP:\" στα ονόματα, όπως στο ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3231,6 +3394,9 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Με δεδομένο το CSR που αποκτήθηκε (ας το ονομάσουμε ``nethsm.csr``), "
+"μπορούμε στη συνέχεια να δημιουργήσουμε ένα πιστοποιητικό για αυτό, έτοιμο "
+"για εγκατάσταση. Για παράδειγμα με το ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3252,20 +3418,27 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Τέλος, η CA (``CA.pem``) μπορεί τώρα να εγκατασταθεί με το τελικό σημείο ``/"
+"config/tls/cluster-ca.pem`` (ανατρέξτε στην τεκμηρίωση `API "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). Αυτό είναι εφικτό "
+"μόνο όταν το εγκατεστημένο πιστοποιητικό TLS υπογραφεί από αυτήν. "
+"Διαφορετικά, η λειτουργία θα απορριφθεί."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Αυτή η διαδικασία πρέπει να επαναληφθεί για κάθε κόμβο."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Συγχρονισμός ρολογιού"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Βεβαιωθείτε ότι σε κάθε κόμβο έχει προβλεφθεί ακριβής ώρα συστήματος. Εάν "
+"όχι, ρυθμίστε τα ρολόγια τους με το τελικό σημείο ``/config/time``."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3274,15 +3447,15 @@ msgstr "Προσθήκη ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Η προσθήκη ενός κόμβου σε μια συστάδα γίνεται σε δύο βήματα:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
-msgstr ""
+msgstr "να καταχωρήσετε την προσθήκη στη συστάδα (μέσω οποιουδήποτε μέλους της)"
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "πείτε στον νέο κόμβο να ενταχθεί"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3295,10 +3468,14 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Πρώτα βεβαιωθείτε ότι έχει ρυθμιστεί μια εφεδρική συνθηματική φράση στον "
+"κόμβο που θα χρησιμοποιηθεί για την εγγραφή ενός νέου εντασσόμενου ("
+"ανατρέξτε στην τεκμηρίωση API του σημείου τερματισμού ``/config/backup-"
+"passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Εγγραφή νέου κόμβου"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3309,6 +3486,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Η εγγραφή ενός κόμβου εισάγει αμέσως έναν νέο κόμβο στη συστάδα, "
+"τροποποιώντας το κατώφλι απαρτίας, ακόμη και αν ο κόμβος δεν έχει ενταχθεί "
+"ακόμη. Αυτό μπορεί να καταστήσει τους υπάρχοντες κόμβους μη λειτουργικούς "
+"μέχρι να ενταχθεί ο νέος κόμβος. Ανατρέξτε στην τεκμηρίωση `API "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ και στην ενότητα `"
+"Operational Redundancy`_ του παρόντος εγγράφου."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3318,6 +3501,12 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Να έχετε στη διάθεσή σας την IP του κόμβου που θα συνδεθεί. Η πλήρης "
+"διεύθυνση *URL* (που ονομάζεται επίσης *peer URL* στην ορολογία ``etcd``) "
+"αυτού του κόμβου θα είναι ``https://<IP_of_node>:2380`` (π.χ. ``https://192."
+"168.1.1:2380``). Η θύρα **πρέπει** να είναι 2380, οπότε βεβαιωθείτε ότι "
+"οποιοδήποτε τείχος προστασίας μεταξύ των κόμβων επιτρέπει την κυκλοφορία TCP "
+"σε αυτή τη θύρα."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3325,6 +3514,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Μπορείτε να επιβεβαιώσετε ότι η διεύθυνση URL είναι σωστή καλώντας το ``GET /"
+"cluster/members`` στον κόμβο που αναμένεται να ενταχθεί. Αυτό θα πρέπει να "
+"εμφανίζει μόνο ένα μέλος: τον εαυτό του."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3335,10 +3527,16 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Στη συνέχεια, καταχωρίστε την αναμενόμενη διεύθυνση URL σε οποιονδήποτε "
+"υπάρχοντα κόμβο της συστάδας (αν δεν έχετε ακόμη συστάδα, κάντε το στον "
+"NetHSM που θα χρησιμεύσει ως ο αρχικός κόμβος της συστάδας). Αυτό γίνεται "
+"χρησιμοποιώντας το τελικό σημείο ``POST /cluster/members`` (ανατρέξτε στην "
+"τεκμηρίωση `API <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), "
+"περνώντας του ένα σώμα JSON που περιέχει τη διεύθυνση URL."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "Εάν είναι επιτυχής, επιστρέφει ένα σώμα JSON της φόρμας:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3348,14 +3546,20 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"το οποίο περιέχει πληροφορίες που είναι απαραίτητες για την ένταξη του νέου "
+"κόμβου στη συστάδα. Συγκεκριμένα, παραθέτει όλα τα μέλη της συστάδας (όπου "
+"το μέλος με κενό όνομα είναι ο νέος εντασσόμενος). Περιέχει επίσης το κλειδί "
+"του τομέα που κρυπτογραφείται τόσο από τη φράση ξεκλειδώματος όσο και από "
+"την εφεδρική φράση πρόσβασης - επομένως πρέπει να έχει ρυθμιστεί "
+"προηγουμένως μια εφεδρική φράση πρόσβασης."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Κρατήστε αυτή την απάντηση για το επόμενο βήμα."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Πραγματική συμμετοχή στο Cluster"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3366,6 +3570,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Πάρτε την απόκριση από το τελευταίο βήμα και προσθέστε σε αυτήν ένα πεδίο "
+"``backupPassphrase`` που περιέχει την εφεδρική συνθηματική φράση του κόμβου "
+"στον οποίο έχει εγγραφεί ο νέος εντασσόμενος και μεταβιβάστε αυτά τα "
+"δεδομένα σε μια κλήση προς ``POST /cluster/join`` (ανατρέξτε στην τεκμηρίωση "
+"του API ` <https://nethsmdemo.nitrokey.com/api_docs/index.html>` __) στον "
+"κόμβο που αναμένεται να ενταχθεί."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3373,6 +3583,10 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Υποθέτοντας ότι τόσο η συστάδα όσο και ο κόμβος μπορούν να προσεγγίσουν ο "
+"ένας τον άλλον, αυτό θα πραγματοποιήσει την πραγματική ένωση, διαγράφοντας "
+"τα δεδομένα του νέου συμμετέχοντα για να συγχρονίσει την κατάστασή του με "
+"εκείνη της συστάδας."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3383,6 +3597,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"Ανάλογα με τις συνθήκες δικτύωσης και συστάδας, η λειτουργία αυτή μπορεί να "
+"διαρκέσει μερικές δεκάδες δευτερόλεπτα. Εάν αυτή η λειτουργία αποτύχει "
+"αμέσως (π.χ. η συστάδα δεν ήταν προσβάσιμη ή ο έλεγχος ταυτότητας απέτυχε), "
+"η κατάσταση αυτού του κόμβου δεν θα διαγραφεί και η σύνδεση θα επαναληφθεί. "
+"Ωστόσο, μόλις μια πρώτη σύνδεση είναι επιτυχής, η λειτουργία αυτή είναι "
+"οριστική και μπορεί να αναστραφεί μόνο με επαναφορά εργοστασιακών ρυθμίσεων."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3392,6 +3612,11 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Εάν αυτή η σύνδεση είναι επιτυχής, ο κόμβος θα βρεθεί σε κατάσταση ``Locked``"
+" και θα πρέπει να ξεκλειδωθεί με τη φράση πρόσβασης ξεκλειδώματος του κόμβου "
+"που χρησιμοποιήθηκε για την εγγραφή. Στη συνέχεια, η συνθηματική φράση "
+"ξεκλειδώματος μπορεί να αλλάξει (οι συνθηματικές φράσεις ξεκλειδώματος "
+"παραμένουν ειδικές για κάθε κόμβο και δεν διαμοιράζονται μεταξύ των κόμβων)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3402,6 +3627,14 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Ακόμα και μετά την επιτυχή σύνδεση, αν η βάση δεδομένων της συστάδας είναι "
+"μεγάλη ή αν η συστάδα είναι απασχολημένη, μπορεί να χρειαστεί κάποιος χρόνος "
+"για να συγχρονίσει πλήρως την κατάστασή του ο νέος εντασσόμενος. Κατά τη "
+"διάρκεια αυτού του χρόνου, όλοι οι κόμβοι (συμπεριλαμβανομένου ιδίως του "
+"νέου εντασσόμενου) ενδέχεται να μην ανταποκρίνονται ή να μην "
+"ανταποκρίνονται. Ειδικά ο νέος εντασσόμενος μπορεί αρχικά να επιστρέφει "
+"σφάλματα όταν προσπαθεί να τον ξεκλειδώσει, για παράδειγμα. Σε αυτή την "
+"περίπτωση, δώστε λίγο χρόνο και δοκιμάστε ξανά."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3419,6 +3652,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Θα χρειαστείτε ένα περιβάλλον με διαθέσιμο το ``etcd`` v3.6, με διεύθυνση "
+"IPv4 (τουλάχιστον) προσβάσιμη από τα άλλα μέλη της συστάδας σας. Πρέπει να "
+"επιτρέπεται η κυκλοφορία TCP από και προς τη θύρα 2380."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3426,6 +3662,10 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Δημιουργήστε έναν άδειο κατάλογο όπου το ``etcd`` θα αποθηκεύει τα δεδομένα "
+"του, και γράψτε τη διαδρομή του (θα χρησιμοποιήσουμε το ``/var/etcd/data``). "
+"Βεβαιωθείτε ότι ο χρήστης που θα εκκινήσει τη διαδικασία έχει δικαίωμα "
+"ανάγνωσης και εγγραφής στον κατάλογο."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3434,6 +3674,10 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Μεταφέρετε στο μηχάνημα το πιστοποιητικό CA που χρησιμοποιείται για τον "
+"έλεγχο ταυτότητας των κόμβων της συστάδας. Θα πρέπει να έχετε δημιουργήσει "
+"ένα στην ενότητα `Δημιουργία και εγκατάσταση μιας CA`_. Θα το αποθηκεύσουμε "
+"στο ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3441,12 +3685,17 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Στη συνέχεια, θα πρέπει να δημιουργήσετε ένα πιστοποιητικό για τον μάρτυρα "
+"και να το υπογράψετε με την CA, ώστε να μπορεί να επικοινωνεί με τους "
+"ομότιμούς του. Αυτό μπορεί να γίνει για παράδειγμα μέσω του ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Αποθηκεύστε τα προκύπτοντα ``witness.key`` και ``witness.pem`` στο ``/var/"
+"etcd`` επίσης."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3459,12 +3708,18 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Ακολουθήστε τις συνήθεις οδηγίες από την ενότητα `Εγγραφή νέου κόμβου`_ για "
+"να δηλώσετε στην υπάρχουσα συστάδα την προσθήκη ενός νέου μέλους με τη "
+"συγκεκριμένη διεύθυνση URL(s)."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Καταγράψτε την απάντηση από το σύμπλεγμα: θα πρέπει να περιέχει τη λίστα των "
+"μελών του συμπλέγματος και ένα κιτ σύνδεσης (δεν θα χρειαστείτε αυτό το "
+"μέρος)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3478,12 +3733,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Σε αντίθεση με τα NetHSM που επιλέγουν αυτόματα ένα όνομα κόμβου για τον "
+"εαυτό τους (χρησιμοποιώντας το αναγνωριστικό συσκευής), πρέπει να επιλέξετε "
+"ένα όνομα για κάθε μάρτυρα που προσθέτετε, *φροντίζοντας τα ονόματα να είναι "
+"μοναδικά*. Θα χρησιμοποιήσουμε το \"witness1\" στα ακόλουθα παραδείγματα."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Με την απάντηση του NetHSM για την εγγραφή του μάρτυρα, ετοιμάστε μεταβλητές "
+"του εντύπου:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3491,22 +3752,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Υποθέτοντας ότι η απόκριση NetHSM είναι αποθηκευμένη σε ένα αρχείο ``response"
+".json``, μπορείτε να δημιουργήσετε αυτές τις δύο τελευταίες μεταβλητές "
+"αυτόματα με τις ακόλουθες εκφράσεις ``jq``:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"Για παράδειγμα, με το παράδειγμα απάντησης που παρέχεται στην ενότητα `"
+"Registering a New Node`_, θα έχετε:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Τέλος, δημιουργήστε ένα αρχείο ``etcd.conf.yml`` χρησιμοποιώντας το πρότυπο "
+"αρχείο που παρέχεται στο ``docs/etcd_witness.conf.template``:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Αυτό θα σας δώσει ένα αρχείο της φόρμας:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3519,6 +3787,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Εκκινήστε το ``etcd`` με τον τρόπο που προτιμάτε (χειροκίνητα, ``systemd`` "
+"υπηρεσία, δοχείο κ.λπ.), δείχνοντάς του το αρχείο ρυθμίσεων που "
+"δημιουργήθηκε στο προηγούμενο βήμα:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3526,10 +3797,13 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Θα πρέπει να το δείτε να ξεκινάει, να συμμετέχει στη συστάδα και να φτάνει "
+"τα δεδομένα. Μετά από κάποιο χρονικό διάστημα, θα πρέπει να μπορείτε να "
+"ελέγξετε ότι είναι υγιής με τον πελάτη ``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Αυτό το κλειδί πρέπει να υπάρχει και να περιέχει \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3538,6 +3812,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Βεβαιωθείτε ότι αυτή η διαδικασία συνεχίζει να εκτελείται, καθώς είναι πλέον "
+"ένα κανονικό μέλος της συστάδας σας. Αν χρειαστεί να την παροπλίσετε, πρώτα "
+"αφαιρέστε την κατάλληλα από τη συστάδα (δείτε την ενότητα dedicated). Εάν "
+"αλλάξει η προσβάσιμη IP του, ενημερώστε τη διεύθυνση URL του από τη συστάδα."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3556,6 +3834,12 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Η λειτουργία δημιουργίας αντιγράφων ασφαλείας λειτουργεί όπως και χωρίς "
+"συστάδα και μπορεί να ζητηθεί από οποιονδήποτε κόμβο της συστάδας. Θα "
+"δημιουργήσει αντίγραφα ασφαλείας των δεδομένων ολόκληρης της συστάδας, "
+"συμπεριλαμβανομένων των πεδίων που αφορούν συγκεκριμένους κόμβους (αν και "
+"αυτά θα αγνοηθούν, εκτός αν επαναφέρετε το αντίγραφο ασφαλείας σε έναν κόμβο "
+"χωρίς πρόβλεψη)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3564,6 +3848,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"Ένα αντίγραφο ασφαλείας που έχει γίνει σε μια συστάδα μπορεί να "
+"αποκατασταθεί στην ίδια συστάδα, ακόμη και αν έχουν προστεθεί ή αφαιρεθεί "
+"κάποιοι κόμβοι από τότε. Τέτοιες επαναφορές που γίνονται σε λειτουργικές "
+"συστάδες δεν θα επηρεάσουν τις τιμές διαμόρφωσης (μόνο τα κλειδιά, τους "
+"χρήστες, τους χώρους ονομάτων), όπως κάθε άλλη μερική επαναφορά."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3571,18 +3860,27 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Η επαναφορά ενός αντιγράφου ασφαλείας σε έναν κόμβο που δεν έχει "
+"προγραμματιστεί, θα επαναφέρει τα πεδία που αφορούν τον κόμβο (όπως "
+"ρυθμίσεις δικτύου, πιστοποιητικά κ.λπ.) του κόμβου που χρησιμοποιήθηκε για "
+"τη δημιουργία του αντιγράφου ασφαλείας."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Η επαναφορά ενός μεγάλου αντιγράφου ασφαλείας μπορεί να επιβαρύνει τη "
+"συστάδα για κάποιο χρονικό διάστημα, ενώ ο κόμβος που εφαρμόζει την "
+"επαναφορά προωθεί τις αλλαγές στους υπόλοιπους."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Αυτή η λειτουργία παραμένει συμβατή με τα αντίγραφα ασφαλείας που έχουν "
+"γίνει σε προηγούμενες εκδόσεις του NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3591,6 +3889,11 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Η επαναφορά σε έναν κόμβο Α ενός αντιγράφου ασφαλείας που έχει δημιουργηθεί "
+"σε έναν άλλο κόμβο Ζ με διαφορετικό κλειδί τομέα θα επανεγγράψει σωστά το "
+"κλειδί τομέα του Α, όπως και πριν. Ωστόσο, εάν ο Α βρισκόταν σε συστάδα με "
+"τον κόμβο Β, ο Β θα καταστεί μη λειτουργικός, καθώς το κλειδί τομέα του Ζ "
+"δεν θα επαναφερθεί στον Β."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3599,10 +3902,16 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Με άλλα λόγια, εκτελείτε επαναφορά μόνο σε ένα σύμπλεγμα με αντίγραφα "
+"ασφαλείας που έχουν γίνει στο ίδιο σύμπλεγμα (αν και πάλι οι κόμβοι μπορεί "
+"να έχουν αφαιρεθεί ή προστεθεί από τότε). Αν θέλετε να επαναφέρετε ένα ξένο "
+"αντίγραφο ασφαλείας σε έναν κόμβο, πρώτα αφαιρέστε τον με ασφάλεια από τη "
+"συστάδα του, στη συνέχεια επαναφέρετε τον εργοστασιακά και επαναφέρετε το "
+"αντίγραφο ασφαλείας."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Καθαρή αφαίρεση ενός κόμβου"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3610,12 +3919,19 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Εφόσον κάποιο τμήμα της συστάδας εξακολουθεί να πληροί την απαρτία, "
+"οποιοδήποτε από τα μέλη της μπορεί να χρησιμοποιηθεί για την απομάκρυνση "
+"ενός άλλου κόμβου από τη συστάδα, είτε αυτός ο κόμβος είναι ήδη μη "
+"προσβάσιμος είτε αναμένεται να γίνει."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Πρέπει πρώτα να γνωρίζετε το αναγνωριστικό του κόμβου που θέλετε να "
+"αφαιρέσετε, απαριθμώντας όλους τους κόμβους μέσω του ``GET /cluster/members``"
+" και αναζητώντας τον σωστό."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3623,6 +3939,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Στη συνέχεια, μπορεί να αφαιρεθεί καλώντας ``DELETE /cluster/members/<id>``. "
+"Εάν ο εν λόγω κόμβος ήταν ακόμα υγιής, αυτό θα τον απομονώσει από το "
+"υπόλοιπο σύμπλεγμα και θα τον καταστήσει μη λειτουργικό."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3634,6 +3953,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Οι μελλοντικές ενημερώσεις θα επισημαίνονται ως \"cluster-safe\" (αυτή θα "
+"πρέπει να είναι η πλειοψηφία) ή \"cluster-unsafe\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3643,6 +3964,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Οι ασφαλείς για τη συστάδα ενημερώσεις μπορούν να εφαρμοστούν σε κόμβους που "
+"αποτελούν μέρος μιας συστάδας χωρίς να τους αφαιρέσετε πρώτα από τη συστάδα. "
+"Ωστόσο, όπως συμβαίνει με όλες τις λειτουργίες, θα πρέπει να βεβαιωθείτε ότι "
+"το κάνετε αυτό σε έναν κόμβο κάθε φορά και σε ένα σύμπλεγμα όπου η αφαίρεση "
+"ενός κόμβου δεν μειώνει την απαρτία (π.χ. αν η ενημέρωση αποτύχει)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3651,14 +3977,20 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Οι ενημερώσεις που δεν είναι ασφαλείς για συστάδες πρέπει να εφαρμόζονται σε "
+"απομονωμένους κόμβους. Θα πρέπει να διαλύσετε τη συστάδα (αφαιρώντας έναν "
+"έναν τους κόμβους), να επαναφέρετε όλους τους κόμβους εκτός από έναν, να "
+"εφαρμόσετε την ενημέρωση σε κάθε κόμβο και, στη συνέχεια, να κάνετε όλους "
+"τους κόμβους που έχουν επαναφερθεί να ενωθούν με τον εναπομείναντα κόμβο."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
 msgstr ""
+"Φροντίστε να δημιουργείτε αντίγραφα ασφαλείας πριν από τέτοιες λειτουργίες."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Επαναδιαμόρφωση υπάρχουσας συστάδας"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3672,6 +4004,11 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Μια υπάρχουσα συστάδα (με δύο ή περισσότερους κόμβους) **δεν μπορεί να** "
+"αλλάξει την CA της συστάδας ενώ βρίσκεται σε λειτουργία. Εάν πρέπει να "
+"αλλάξετε αυτό το πιστοποιητικό: επιλέξτε έναν κόμβο, αφαιρέστε όλους τους "
+"άλλους κόμβους, ενημερώστε την CA και, στη συνέχεια, βάλτε τα άλλα μέλη να "
+"επανενταχθούν."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3685,6 +4022,11 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Η τροποποίηση των ρυθμίσεων δικτύου ενός κόμβου (π.χ. αλλαγή της IP του) θα "
+"ενημερώσει αυτόματα τους άλλους κόμβους για την ενημέρωση. Ωστόσο, θα πρέπει "
+"να βεβαιωθείτε ότι εκτελείτε τέτοιες ενημερώσεις μόνο σε έναν κόμβο κάθε "
+"φορά και σε μια συστάδα όπου η απώλεια του κόμβου αυτού δεν θα χάσει την "
+"απαρτία."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -37703,4 +38045,3 @@ msgstr "Mark cropped Output"
 #~ "Περισσότερες πληροφορίες ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-

@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:56+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/da/>\n"
 "Language: da\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/da/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -966,7 +967,7 @@ msgstr "Spørg efter netværkskonfigurationen"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "IPv6-felterne vises kun, hvis IPv6 er konfigureret."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -993,6 +994,8 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"IPv6 er valgfri og ikke konfigureret som standard. For at deaktivere IPv6 "
+"skal du udelade valgmulighederne ``--ipv6-cidr`` og ``--ipv6-gateway``."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1035,6 +1038,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"For at konfigurere IPv6 skal du inkludere det valgfrie felt ``ipv6`` med "
+"egenskaberne ``cidr`` og ``gateway``. Hvis du vil deaktivere IPv6, skal du "
+"udelade feltet ``ipv6``."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2675,6 +2681,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Denne funktion er i øjeblikket en teknisk forhåndsvisning med følgende "
+"midlertidige begrænsninger:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2682,18 +2690,25 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Hvis en klynge går tabt (quorum går tabt), er den eneste måde at genoprette "
+"på fabriksnulstilling + gendannelse. Sørg for at tage backup ofte. "
+"Fremtidige udgivelser vil indeholde metoder til at gendanne data på disken."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Aktiv/passiv opsætning til understøttelse af to-node-klynger, enten ved at "
+"bruge etcd Learner eller Mirror, er endnu ikke tilgængelig."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Systemtid mellem noder skal indtil videre synkroniseres manuelt. En "
+"fremtidig udgave vil indeholde automatisk synkronisering af uret."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2705,6 +2720,12 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM 4.0 og fremefter understøtter klyngedannelse for at synkronisere data "
+"direkte mellem flere NetHSM'er. Dette understøtter høj frekvens af "
+"nøglegenerationer, realiserer høj tilgængelighed og belastningsbalancering. "
+"En NetHSM-klynge er baseret på `etcd <https://etcd.io>`__, som bruger `Raft-"
+"konsensusalgoritmen <https://raft.github.io/>`__ til stærk konsistens. Det "
+"sikrer, at data (f.eks. nøgler) til enhver tid er korrekte i alle NetHSM'er."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2713,6 +2734,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Før du opsætter en NetHSM-klynge, skal du gøre dig bekendt med denne "
+"teknologi og dens begrænsninger for at undgå utilsigtede udfald og datatab. "
+"Ud over dette dokument kan du også se `etcd's dokumentation <https://etcd.io/"
+"docs/latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2726,14 +2751,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"Vi vil kalde \"node\" en NetHSM, der forventes at være en del af en klynge. "
+"**En klynge af** ``N`` **noder vil fortsætte med at fungere, så længe "
+"mindst** ``(N/2)+1`` **noder er sunde og kan nås.** Den minimale mængde af "
+"sunde, tilgængelige noder kaldes **quorum**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Det indebærer følgende scenarier."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Et knudepunkt går ned, og quorum er stadig nået"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2741,18 +2770,26 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"I en klynge med tre noder vil de to andre noder fortsætte med at arbejde og "
+"betjene anmodninger, hvis en node fejler (går ned eller bliver utilgængelig "
+"på grund af netværksforhold)."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Hvis den fejlslagne node stadig er sund (f.eks. hvis det bare var et "
+"netværksproblem), vil den være ubrugelig, mens den er isoleret (ikke engang "
+"skrivebeskyttet)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Men hvis noden kommer sig, synkroniseres den igen med resten af klyngen og "
+"bliver funktionsdygtig igen uden at miste data."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2760,10 +2797,12 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Hvis den aldrig kommer sig, skal den fjernes fra klyngen (se næste afsnit), "
+"fabriksnulstilles og gennemgå join-processen igen fra bunden."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "En netværksopdeling sker, og quorum er stadig nået"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2772,28 +2811,38 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Dette er blot en generalisering af det foregående scenarie. I en klynge med "
+"5 noder, hvor f.eks. 3 noder befinder sig på en fysisk placering A og 2 "
+"noder på en anden placering B, vil et netværksproblem, der isolerer A og B, "
+"betyde følgende:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"De 3 noder på placering A opfylder quorum (3 i dette tilfælde), så de "
+"fortsætter med at fungere."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"De 2 noder på placering B er **ikke** opfylder quorum (stadig 3), så de "
+"holder op med at fungere (selv skrivebeskyttet)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Hvis netværksproblemet er løst, vil de 2 noder rent faktisk slutte sig til "
+"de 3 andre."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Beslutningsdygtigheden er varigt tabt"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2801,6 +2850,9 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"En fejl, der får alle delmængder af klyngen til at miste quorum, gør, at "
+"klyngen og dens data går helt tabt, medmindre fejlen løses. I så fald skal "
+"noderne nulstilles fra fabrikken, og en backup skal gendannes."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2809,12 +2861,18 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"Det kan f.eks. ske, hvis en enkelt node fejler i en klynge med 2 noder (hvor "
+"quorum er 2). I denne situation kan den fejlslagne node ikke fjernes fra "
+"klyngen bagefter, fordi den resterende sunde node allerede er ude af drift, "
+"da den har mistet quorum."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Derfor anbefales det altid at have et ulige antal noder i en klynge og at "
+"tage backup ofte."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2826,16 +2884,26 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"For at gøre det klart, så er det ikke et problem, at *midlertidigt* mister "
+"beslutningsdygtighed (f.eks. hvis du genstarter alle noder i en klynge "
+"sammen, eller en midlertidig netværksfejl isolerer noder): Når nok noder er "
+"forbundet igen (uden at skulle tilsluttes manuelt) til at nå "
+"beslutningsdygtighed, vil klyngen genoptage sin normale drift. Kun "
+"permanente fejl som f.eks. netværkspartitioner, fejlkonfigurationer i "
+"netværket, autentificeringsproblemer eller hardwarefejl kræver manuel "
+"handling."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"For mere information, se `etcd's OFTE STILLEDE SPØRGSMÅL <https://etcd.io/"
+"docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "2-node klynge"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2844,10 +2912,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"En aktiv/passiv klynge med to noder er ikke understøttet endnu og vil blive "
+"tilføjet i en fremtidig version. Vi anbefaler at introducere en 3. node, "
+"enten en 3. NetHSM eller et etcd-\"vidne\", som kan betjenes på en hvilken "
+"som helst vært. Se næste afsnit \"Vidne\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Vidne"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2857,6 +2929,10 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Klyngens natur med ``etcd`` gør den mere pålidelig, jo flere noder der er i "
+"klyngen. Som forklaret i afsnittet `Operational Redundancy`_ bør klynger "
+"ideelt set have mindst 3 noder for at have plads til at fejle, da en klynge "
+"med 2 noder vil fejle helt, hvis kun den ene fejler."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2869,6 +2945,14 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Men funktionen er designet sådan, at du ikke behøver at tilføje en fuld, "
+"ægte NetHSM-enhed til din klynge for at nå et stabilt antal noder. I stedet "
+"kan du selv implementere og tilføje en \"vidne\"-node. En sådan node er bare "
+"en instans af ``etcd``, der kører på en maskine efter eget valg (eller i en "
+"container) og er forbundet til klyngen. Den vil blive genkendt som en normal "
+"node af de rigtige enheder i klyngen og modtage alle data og opdateringer "
+"fra enhederne (men du vil selvfølgelig ikke kunne udføre nogen HSM-"
+"operationer med den - den gemmer kun data)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2881,6 +2965,9 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Vidnenoden (eller enhver med adgang til den) har direkte adgang til storage "
+"backend for alle noder i klyngen (f.eks. kan du dumpe alle poster og "
+"tilhørende værdier med ``etcdctl get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2889,10 +2976,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Men med undtagelse af config-versionen (``/config/version``, som altid skal "
+"være \"1\") er alle værdier krypterede (med enten en enhedsnøgle for "
+"nodespecifikke værdier eller domænenøgler for andre), hvilket sikrer "
+"fortroligheden af følsomme data."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Bemærk dog, at en ondsindet node kan:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2900,16 +2991,21 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"skrive skrald som værdi for en hvilken som helst post i lageret, hvilket vil "
+"få noder til at fejle i dekrypteringen (hvilket kan føre til nedbrud for "
+"nogle systemposter)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"listepostnavne som brugere, navneområder og nøgler, som du måske betragter "
+"som følsomme."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Hvad deles mellem noder?"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2920,6 +3016,11 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"At have en klynge af NetHSM'er betyder, at de fleste data deles mellem dem. "
+"Enhver tilføjelse, ændring eller sletning af nøgler, brugere eller "
+"namespaces på én node vil i sidste ende blive afspejlet på alle de andre. "
+"Generelt vil enhver operation, der ændrer tilstanden, ændre tilstanden for "
+"alle noder. Dette omfatter backup **restore**, som fungerer som normalt."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2927,20 +3028,25 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"De følgende afsnit beskriver, hvilke data der er helt lokale, hvilke data "
+"der gemmes i det delte ``etcd`` lager, men forbliver nodespecifikke, og "
+"hvilke data der er helt delte på tværs af noder."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Ikke gemt i etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"**enhedsnøglen** for hver node gemmes kun lokalt og deles aldrig på tværs af "
+"noder."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Gemt i etcd, men node-specifik"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2948,6 +3054,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Følgende data er gemt i ``etcd`` i forskellige scopes for hver node. Det er "
+"derfor *tilgængeligt* for alle noder, men ikke *ensartet* på tværs af noder ("
+"hver node kan have en forskellig værdi for disse data)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -2982,11 +3091,11 @@ msgstr "Httpd-konfiguration"
 
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
-msgstr ""
+msgstr "oplåsningssalt (så hver node har sin egen oplåsningspassphrase)"
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "Låst domænenøgle"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -2995,20 +3104,26 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Bemærk, at selvom hver node har sin egen version af den låste domænenøgle ("
+"fordi hver node låser den med sin egen enhedsnøgle eller oplåsningspasfrase)"
+", så deles den underliggende domænenøgle **** på tværs af noder (for at få "
+"adgang til deres fælles HSM-data, f.eks. nøgler)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Gemt i etcd og delt"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Alle de følgende data gemmes i ``etcd`` i det globale scope, så de er ens på "
+"tværs af alle noder i en klynge:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "HSM-data:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3027,11 +3142,11 @@ msgstr "Navnerum"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
+msgstr "klynge-CA (bruges til at autentificere noder på tværs af klyngen)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3045,6 +3160,10 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Bemærk, at config/domain store-versionen indtil videre kun kan være version "
+"1 (hvis din softwareversion understøtter klyngedannelse, så er det den, du "
+"har). Se afsnittet `Softwareopdateringer i klynger`_ for flere detaljer om "
+"sikkerheden ved at installere softwareopdateringer i en klynge."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3056,6 +3175,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Enhver klynge starter oprindeligt med en enkelt node. Nye noder vil slutte "
+"sig til klyngen en efter en."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3067,6 +3188,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Netværkstrafikken mellem noderne er krypteret og autentificeret ved hjælp af "
+"deres TLS-certifikat."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3074,12 +3197,16 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Alle noder, der forventes at være en del af den samme klynge, skal først "
+"installere en fælles Certificate Authority (CA), der gør det muligt for dem "
+"at verificere, at andre noder er legitime."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"I det følgende antager vi, at alle knudepunkter er nyetablerede og i drift."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3100,7 +3227,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "Oprettelse og installation af en CA"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3108,14 +3235,17 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Brugere bør oprette en CA på deres egen måde og i henhold til deres egne "
+"operationelle begrænsninger og sørge for, at den mindst tillader brug af "
+"nøglen ``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "En minimal CA kan f.eks. oprettes med ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Denne CA skal nu installeres på hver node."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3138,6 +3268,11 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"For at kunne godkende noder korrekt forventer klyngens backend (etcd), at "
+"hver node har et certifikat med et korrekt udfyldt SAN-felt (Subject Alt "
+"Names). Især skal noder, der kun forventes at kunne nås via deres IP, have "
+"et korrekt IP-SAN i deres certifikat. Der kan anmodes om IP-SAN'er til "
+"CSR'en ved at sætte \"IP:\" foran navnene, som i ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3145,6 +3280,9 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Med den opnåede CSR (lad os kalde den ``nethsm.csr``) kan vi derefter "
+"generere et certifikat til den, som er klar til at blive installeret. For "
+"eksempel med ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3166,20 +3304,26 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Endelig kan CA (``CA.pem``) nu installeres med ``/config/tls/cluster-ca.pem``"
+" endpoint (se `API-dokumentation <https://nethsmdemo.nitrokey.com/api_docs/"
+"index.html>`__). Dette er kun muligt, når det installerede TLS-certifikat er "
+"underskrevet af det. Ellers vil operationen blive afvist."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Denne proces skal gentages for hver node."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Ur-synkronisering"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Sørg for, at alle noder har fået en nøjagtig systemtid. Hvis ikke, skal du "
+"justere deres ure med ``/config/time`` endpoint."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3188,15 +3332,17 @@ msgstr "Tilføjelse af en ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Tilføjelse af en node til en klynge sker i to trin:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
 msgstr ""
+"registrer tilføjelsen til klyngen (gennem et hvilket som helst af dens "
+"medlemmer)"
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "Fortæl den nye node, at den skal deltage"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3209,10 +3355,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Sørg først for, at der er konfigureret en backup-passphrase på den node, der "
+"skal bruges til at registrere en ny snedker (se API-dokumentationen for "
+"slutpunktet ``/config/backup-passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Registrering af et nyt knudepunkt"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3223,6 +3372,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Registrering af en node introducerer straks en ny node i klyngen og ændrer "
+"quorumtærsklen, selv om noden faktisk ikke har sluttet sig til endnu. Dette "
+"kan gøre de eksisterende noder ubrugelige, indtil den nye node rent faktisk "
+"er kommet til. Se `API-dokumentation <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>`__ og afsnittet `Operational Redundancy`_ i dette "
+"dokument."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3232,6 +3387,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Hav IP-adressen på den node, der skal deltage, ved hånden. Den fulde *URL* ("
+"også kaldet *peer URL* i ``etcd`` terminologi) for denne node vil være "
+"``https://<IP_of_node>:2380`` (f.eks. ``https://192.168.1.1:2380``). Porten "
+"**skal** være 2380, så sørg for, at en eventuel firewall mellem noderne "
+"tillader TCP-trafik på den port."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3239,6 +3399,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Du kan dobbelttjekke, at URL'en er korrekt, ved at kalde ``GET /cluster/"
+"members`` på den node, der forventes at deltage. Dette bør kun vise ét "
+"medlem: sig selv."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3249,10 +3412,16 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Registrer derefter den forventede URL på en eksisterende node i klyngen ("
+"hvis du ikke har en klynge endnu, skal du gøre det på den NetHSM, der skal "
+"fungere som den første node i klyngen). Dette gøres ved hjælp af ``POST /"
+"cluster/members`` endpoint (se `API-dokumentation <https://nethsmdemo."
+"nitrokey.com/api_docs/index.html>`__), hvor du sender en JSON body, der "
+"indeholder URL'en."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "Hvis det lykkes, returneres en JSON-krop af formularen:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3262,14 +3431,19 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"som indeholder de oplysninger, der er nødvendige for, at den nye node kan "
+"slutte sig til klyngen. Den indeholder især en liste over alle medlemmer af "
+"klyngen (hvor medlemmet med et tomt navn er den nye deltager). Den "
+"indeholder også domænenøglen, der er krypteret med både oplåsnings- og "
+"backup-passphrase - så der skal være konfigureret en backup-passphrase før."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Gem det svar til næste trin."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Faktisk tilslutning til klyngen"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3280,6 +3454,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Tag svaret fra det sidste trin og tilføj et ``backupPassphrase``-felt, der "
+"indeholder backup-passphrasen for den node, hvor den nye deltager blev "
+"registreret, og send disse data til et kald til ``POST /cluster/join`` (se "
+"`API-dokumentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) "
+"på den node, der forventes at deltage."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3287,6 +3466,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Forudsat at både klyngen og noden kan nå hinanden, vil dette gennemføre den "
+"faktiske tilslutning og slette dataene på den nye deltager for i stedet at "
+"synkronisere dens tilstand med klyngens."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3297,6 +3479,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"Afhængigt af netværks- og klyngeforholdene kan denne operation tage et par "
+"dusin sekunder. Hvis operationen mislykkes med det samme (f.eks. hvis "
+"klyngen ikke kan nås, eller hvis autentificeringen mislykkes), bliver denne "
+"nodes tilstand ikke slettet, og tilslutningen bliver gjort om. Men så snart "
+"en første tilslutning er vellykket, er denne operation endelig og kan kun "
+"annulleres ved en fabriksnulstilling."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3306,6 +3494,10 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Hvis denne tilslutning er vellykket, ender noden i tilstanden ``Locked`` og "
+"skal låses op med oplåsningspasfrasen for den node, der blev brugt til "
+"registrering. Bagefter kan oplåsningspasfrasen ændres (oplåsningspasfraser "
+"forbliver nodespecifikke og deles ikke på tværs af noder)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3316,6 +3508,12 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Selv efter at joinen er lykkedes, hvis klyngens database er stor, eller hvis "
+"klyngen har travlt, kan det tage noget tid for den nye joiner at "
+"synkronisere sin tilstand fuldt ud. I løbet af den tid kan alle noder ("
+"herunder især den nye joiner) være mindre responsive eller ikke responsive. "
+"Især den nye snedker kan i starten returnere fejl, når man f.eks. forsøger "
+"at låse den op. I så fald skal du give det lidt tid og prøve igen."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3333,6 +3531,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Du skal bruge et miljø med ``etcd`` v3.6 tilgængelig, med en IPv4-adresse "
+"(mindst), der kan nås af de andre medlemmer af din klynge. TCP-trafik til og "
+"fra port 2380 skal være tilladt."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3340,6 +3541,9 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Opret en tom mappe, hvor ``etcd`` skal gemme sine data, og skriv dens sti "
+"ned (vi bruger ``/var/etcd/data``). Sørg for, at den bruger, der skal starte "
+"processen, har tilladelse til at læse og skrive til mappen."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3348,6 +3552,9 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Overfør CA-certifikatet, der bruges til at autentificere noder i klyngen, "
+"til maskinen. Du burde have oprettet et i afsnittet `Oprettelse og "
+"installation af en CA`_. Vi gemmer det i ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3355,12 +3562,16 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Derefter skal du oprette et certifikat til vidnet og underskrive det med "
+"CA'en, så det kan kommunikere med sine kolleger. Dette kan f.eks. gøres via "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Gem også de resulterende ``witness.key`` og ``witness.pem`` i ``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3373,12 +3584,17 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Følg de normale instruktioner fra afsnittet `Registering a New Node`_ for at "
+"signalere til den eksisterende klynge, at der er tilføjet et nyt medlem med "
+"de(n) angivne URL(er)."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Skriv svaret fra klyngen ned: Det bør indeholde en liste over "
+"klyngemedlemmer og et joiner-kit (du får ikke brug for denne del)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3392,12 +3608,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"I modsætning til NetHSM'er, som automatisk vælger et nodenavn til sig selv ("
+"ved hjælp af enhedens ID), skal du vælge et navn til hvert vidne, du "
+"tilføjer, *og sørge for, at navnene er unikke*. Vi bruger \"witness1\" i de "
+"følgende eksempler."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Med NetHSM's svar på registrering af vidnet skal du udarbejde variabler af "
+"formularen:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3405,22 +3627,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Hvis vi antager, at svaret fra NetHSM er gemt i en ``response.json`` fil, "
+"kan du generere disse to sidste variabler automatisk med følgende ``jq`` "
+"udtryk:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"For eksempel med det eksempel på svar, der findes i afsnittet `Registrering "
+"af et nyt knudepunkt`_, vil du få:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Til sidst skal du oprette en ``etcd.conf.yml``-fil ved at bruge den "
+"skabelonfil, der findes i ``docs/etcd_witness.conf.template``:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Det burde give dig en fil med formularen:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3433,6 +3662,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Start ``etcd`` på din foretrukne måde (manuelt, ``systemd`` service, "
+"container osv.), og peg på den konfigurationsfil, der blev oprettet i det "
+"foregående trin:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3440,10 +3672,13 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Du skulle gerne se den starte, slutte sig til klyngen og indhente data. "
+"Efter et stykke tid bør du kunne tjekke, at den er sund og rask med klienten "
+"``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Denne nøgle skal eksistere og indeholde \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3452,6 +3687,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Sørg for, at denne proces bliver ved med at køre, da den nu er et rigtigt "
+"medlem af din klynge. Hvis du skal afvikle den, skal du først fjerne den "
+"korrekt fra klyngen (se det dedikerede afsnit). Hvis dens tilgængelige IP "
+"ændres, skal du opdatere dens URL fra klyngen."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3470,6 +3709,11 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Backup-operationen fungerer på samme måde som uden en klynge og kan "
+"rekvireres fra enhver node i klyngen. Den vil sikkerhedskopiere data for "
+"hele klyngen, inklusive nodespecifikke felter (selvom disse vil blive "
+"ignoreret, medmindre sikkerhedskopien gendannes på en ikke-provisioneret "
+"node)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3478,6 +3722,10 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"En backup, der er lavet på en klynge, kan gendannes på den samme klynge, "
+"selv om nogle noder er blevet tilføjet eller fjernet siden. Sådanne "
+"gendannelser på operationelle klynger vil ikke påvirke konfigurationsværdier "
+"(kun nøgler, brugere, navneområder), ligesom enhver anden delvis gendannelse."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3485,18 +3733,25 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Gendannelse af en sikkerhedskopi på en ikke-provisioneret node vil gendanne "
+"de nodespecifikke felter (som netværkskonfiguration, certifikater osv.) på "
+"den node, der blev brugt til at oprette sikkerhedskopien."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Gendannelse af en stor backup kan overbelaste klyngen i nogen tid, mens den "
+"node, der foretager gendannelsen, videresender ændringer til de andre."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Denne handling forbliver kompatibel med sikkerhedskopier, der er lavet på "
+"tidligere versioner af NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3505,6 +3760,10 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Hvis man på en node A gendanner en backup, der er lavet på en anden node Z "
+"med en anden domænenøgle, vil A's domænenøgle blive omskrevet korrekt som "
+"før. Men hvis A var i en klynge med node B, vil B blive ubrugelig, da Z's "
+"domænenøgle ikke vil blive gendannet på B."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3513,10 +3772,15 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Med andre ord skal du kun udføre en gendannelse i en klynge med "
+"sikkerhedskopier, der er lavet i samme klynge (selvom der igen kan være "
+"fjernet eller tilføjet noder siden). Hvis du vil gendanne en fremmed "
+"sikkerhedskopi på en node, skal du først fjerne den sikkert fra dens klynge, "
+"derefter fabriksindstille den og gendanne sikkerhedskopien."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Fjernelse af et knudepunkt på en ren måde"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3524,12 +3788,17 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Så længe en del af klyngen stadig er beslutningsdygtig, kan ethvert af dens "
+"medlemmer bruges til at fjerne en anden node fra klyngen, uanset om denne "
+"node allerede er utilgængelig eller forventes at blive det."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Du skal først kende ID'et på den node, du vil fjerne, ved at liste alle "
+"noder via ``GET /cluster/members`` og lede efter den rigtige."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3537,6 +3806,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Derefter kan den fjernes ved at kalde ``DELETE /cluster/members/<id>``. Hvis "
+"den pågældende node stadig var sund, vil dette isolere den fra resten af "
+"klyngen og gøre den ubrugelig."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3548,6 +3820,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Fremtidige opdateringer vil blive markeret som \"klyngesikker\" (det burde "
+"være de fleste) eller \"klyngeusikker\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3557,6 +3831,10 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Klyngesikre opdateringer kan anvendes på noder, der er en del af en klynge, "
+"uden at fjerne dem fra klyngen først. Men som med alle andre operationer "
+"skal du sørge for at gøre det på én node ad gangen og i en klynge, hvor det "
+"at fjerne en node ikke går under quorum (f.eks. hvis opdateringen mislykkes)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3565,14 +3843,18 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Klynge-usikre opdateringer skal anvendes på isolerede noder. Du skal "
+"afmontere klyngen (fjerne noder en efter en), fabriksnulstille alle noder "
+"undtagen én, anvende opdateringen på alle noder og derefter få alle "
+"nulstillede noder til at slutte sig til den resterende node."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "Sørg for at tage backup før sådanne operationer."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Rekonfigurering af en eksisterende klynge"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3586,6 +3868,10 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"En eksisterende klynge (med to eller flere noder) **kan ikke** ændre sin "
+"klynge-CA, mens den er i drift. Hvis du har brug for at ændre certifikatet, "
+"skal du vælge en node, fjerne alle andre noder, opdatere CA'et og derefter "
+"få de andre medlemmer til at tilslutte sig igen."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3599,6 +3885,10 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Hvis man ændrer en nodes netværkskonfiguration (f.eks. ændrer dens IP), "
+"informeres de andre noder automatisk om opdateringen. Du bør dog sikre dig, "
+"at du kun udfører sådanne opdateringer på en enkelt node ad gangen og i en "
+"klynge, hvor tabet af den pågældende node ikke vil medføre tab af quorum."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36401,4 +36691,3 @@ msgstr "Mærke beskåret Output"
 #~ "og kan blive ændret. Yderligere "
 #~ "`information "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`__."
-

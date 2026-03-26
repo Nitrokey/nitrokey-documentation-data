@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:56+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -956,6 +957,7 @@ msgstr "Dotaz na konfiguraci sítě"
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
 msgstr ""
+"Pole IPv6 se zobrazí pouze v případě, že je nakonfigurován protokol IPv6."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -981,6 +983,9 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"Protokol IPv6 je volitelný a ve výchozím nastavení není nakonfigurován. "
+"Chcete-li IPv6 zakázat, vynechejte volby ``--ipv6-cidr`` a "
+"``--ipv6-gateway``."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1022,6 +1027,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Chcete-li konfigurovat protokol IPv6, zahrňte nepovinné pole ``ipv6`` s "
+"vlastnostmi ``cidr`` a ``gateway``. Chcete-li IPv6 zakázat, vynechte pole "
+"``ipv6``."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2657,6 +2665,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Tato funkce je v současné době technickým náhledem s následujícími dočasnými "
+"omezeními:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2664,18 +2674,25 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Pokud dojde ke ztrátě clusteru (ztrátě kvora), jediným způsobem obnovy je "
+"tovární reset + obnovení. Dbejte na časté zálohování. Budoucí verze budou "
+"obsahovat prostředky pro obnovu dat na disku."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Aktivní/pasivní nastavení pro podporu clusterů se dvěma uzly, a to buď "
+"pomocí etcd Learner, nebo Mirror, zatím není k dispozici."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Systémový čas mezi uzly musí být prozatím synchronizován ručně. Budoucí "
+"verze bude obsahovat automatickou synchronizaci hodin."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2687,6 +2704,12 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM od verze 4.0 podporuje clustering pro přímou synchronizaci dat mezi "
+"několika NetHSM. To podporuje vysokou frekvenci generování klíčů, realizuje "
+"vysokou dostupnost a vyrovnávání zátěže. Cluster NetHSM je založen na `etcd "
+"<https://etcd.io>`__, který používá konsensuální algoritmus `Raft "
+"<https://raft.github.io/>`__ pro silnou konzistenci. Tím je zajištěno, že "
+"data (např. klíče) jsou ve všech NetHSM vždy správná."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2695,6 +2718,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Před nastavením clusteru NetHSM se seznamte s touto technologií a jejími "
+"omezeními, abyste předešli náhodnému výpadku a ztrátě dat. Kromě tohoto "
+"dokumentu se můžete podívat také do dokumentace `etcd <https://etcd.io/docs/"
+"latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2708,14 +2735,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"\"Uzlem\" budeme nazývat NetHSM, který má být součástí clusteru. **Klastr** "
+"``N`` **uzlů bude fungovat tak dlouho, dokud budou alespoň** ``(N/2)+1`` **"
+"uzly zdravé a dosažitelné.** Toto minimální množství zdravých a "
+"dosažitelných uzlů se nazývá **kvorum**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Z toho vyplývají následující scénáře."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Výpadek jednoho uzlu a dosažení kvora"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2723,18 +2754,25 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Pokud v clusteru se třemi uzly dojde k selhání jednoho uzlu (havárii nebo "
+"nedostupnosti v důsledku síťových podmínek), ostatní dva uzly budou nadále "
+"pracovat a obsluhovat požadavky."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Pokud je selhávající uzel stále zdravý (např. šlo pouze o problém se sítí), "
+"bude při izolaci nefunkční (ani pro čtení)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Pokud se však uzel zotaví, čistě se znovu synchronizuje se zbytkem clusteru "
+"a je opět provozuschopný, aniž by došlo ke ztrátě dat."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2742,10 +2780,12 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Pokud se neobnoví, je třeba jej vyjmout z clusteru (viz další část), obnovit "
+"tovární nastavení a projít procesem připojení znovu od začátku."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "Dojde k rozdělení sítě a kvorum je stále dosaženo"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2754,28 +2794,37 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Jedná se pouze o zobecnění předchozího scénáře. V clusteru s 5 uzly, kde "
+"jsou např. 3 uzly v jednom fyzickém umístění A a 2 uzly v jiném umístění B, "
+"by síťový problém izolující A a B znamenal následující:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"Tři uzly v lokalitě A splňují kvorum (v tomto případě 3), takže pokračují v "
+"provozu."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"Dva uzly v lokalitě B jsou **nesplňují** kvorum (stále 3), takže přestanou "
+"pracovat (i jen pro čtení)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Pokud je problém se sítí vyřešen, 2 uzly se čistě připojí zpět k ostatním 3 "
+"uzlům."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Kvorum je trvale ztraceno"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2783,6 +2832,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"Selhání, které způsobí, že všechny podmnožiny clusteru ztratí kvorum, "
+"způsobí, že cluster a jeho data budou zcela ztraceny, pokud se nepodaří "
+"selhání vyřešit. V takovém případě je nutné uzly resetovat z výroby a "
+"obnovit zálohu."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2791,12 +2844,17 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"K tomu může dojít například při selhání jednoho uzlu v clusteru se dvěma "
+"uzly (kde je kvorum 2). V této situaci nelze selhávající uzel z clusteru "
+"dodatečně čistě odstranit, protože zbývající zdravý uzel je již nefunkční, "
+"protože ztratil kvorum."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Proto se doporučuje mít v clusteru vždy lichý počet uzlů a často zálohovat."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2808,16 +2866,25 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Aby bylo jasno, *dočasně* ztráta kvora (například pokud restartujete všechny "
+"uzly clusteru společně nebo pokud dojde k dočasnému selhání sítě, které uzly "
+"izoluje) není problém: jakmile se znovu připojí dostatečný počet uzlů (aniž "
+"by se musely ručně znovu připojovat), aby bylo dosaženo kvora, cluster bude "
+"pokračovat v normálním provozu. Pouze trvalé poruchy, jako je rozdělení "
+"sítě, chybná konfigurace sítě, problémy s ověřováním nebo selhání hardwaru, "
+"budou vyžadovat ruční zásah."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Další informace naleznete na adrese `etcd v sekci ČASTO KLADENÉ DOTAZY "
+"<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "Cluster se 2 uzly"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2826,10 +2893,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Aktivní/pasivní cluster se dvěma uzly zatím není podporován a bude přidán v "
+"některé z budoucích verzí. Doporučujeme zavést třetí uzel, buď třetí NetHSM, "
+"nebo \"svědka\" etcd, který by mohl být provozován na libovolném hostiteli. "
+"Viz další část \"Svědek\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Svědek"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2839,6 +2910,10 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Povaha shlukování pomocí ``etcd`` je tím spolehlivější, čím více uzlů je ve "
+"shluku. Jak je vysvětleno v části `Provozní redundance`_, clustery by měly "
+"mít v ideálním případě alespoň 3 uzly, aby měly prostor pro selhání, protože "
+"cluster se 2 uzly zcela selže, pokud selže pouze jeden."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2851,6 +2926,14 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Funkce je však navržena tak, že k dosažení stabilního počtu uzlů není nutné "
+"přidávat do clusteru plné, skutečné zařízení NetHSM. Místo toho můžete sami "
+"nasadit a přidat \"svědecký\" uzel. Takovým uzlem je pouze instance ``etcd`` "
+"běžící na vámi zvoleném počítači (nebo v kontejneru) a připojená ke "
+"clusteru. Bude rozpoznán jako normální uzel od skutečných zařízení v "
+"clusteru a bude přijímat všechna data a aktualizace ze zařízení (ale "
+"samozřejmě s ním nebudete moci provádět žádné operace HSM - pouze ukládá "
+"data)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2863,6 +2946,9 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Svědecký uzel (nebo kdokoli s přístupem k němu) má přímý přístup k úložišti "
+"všech uzlů v clusteru (např. můžete vypsat všechny záznamy a odpovídající "
+"hodnoty pomocí ``etcdctl get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2871,10 +2957,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"S výjimkou verze konfigurace (``/config/version``, která by měla být vždy \"1"
+"\") jsou však striktně všechny hodnoty šifrovány (buď klíčem zařízení pro "
+"hodnoty specifické pro uzel, nebo klíči domény pro ostatní hodnoty), což "
+"zajišťuje důvěrnost citlivých dat."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Všimněte si však, že škodlivý uzel může:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2882,16 +2972,20 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"zapsat jako hodnotu libovolné položky v úložišti smetí, což způsobí, že uzly "
+"selžou při dešifrování (což může vést k pádu některých systémových položek)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"názvy položek seznamu, jako jsou uživatelé, obory názvů a klíče, které "
+"můžete považovat za citlivé."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Co je sdíleno mezi uzly"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2902,6 +2996,11 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"Existence shluku NetHSM znamená, že většina dat je mezi nimi sdílena. "
+"Jakékoli přidání, změna nebo odstranění klíčů, uživatelů nebo jmenných "
+"prostorů v jednom uzlu se nakonec projeví ve všech ostatních. Obecně platí, "
+"že každá operace, která mění stav, změní stav každého uzlu. To se týká i "
+"operace zálohování **obnovení**, která funguje normálně."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2909,20 +3008,25 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"V následujících částech je podrobně popsáno, která data jsou plně lokální, "
+"která data jsou uložena ve sdíleném úložišti ``etcd``, ale zůstávají "
+"specifická pro uzel, a která data jsou plně sdílená mezi uzly."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Není uloženo v etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Klíč zařízení **** každého uzlu zůstává uložen pouze lokálně a není nikdy "
+"sdílen mezi uzly."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Uloženo v etcd, ale specifické pro uzel"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2930,6 +3034,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Následující data jsou uložena na ``etcd`` v různých oborech pro každý uzel. "
+"Jsou tedy *přístupná* každému uzlu, ale nejsou *jednotná* napříč uzly (každý "
+"uzel může mít pro tato data jinou hodnotu)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -2964,11 +3071,11 @@ msgstr "Konfigurace Httpd"
 
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
-msgstr ""
+msgstr "odemykací sůl (aby měl každý uzel vlastní odemykací frázi)."
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "uzamčený klíč domény"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -2977,20 +3084,26 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Všimněte si, že zatímco každý uzel má svou vlastní verzi uzamčeného klíče "
+"domény (protože každý uzel jej uzamyká svým vlastním klíčem zařízení nebo "
+"odemykací frází), základní klíč domény je **sdílený** mezi uzly (pro přístup "
+"k jejich sdíleným datům HSM, jako jsou klíče)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Uloženo v etcd a sdíleno"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Všechna následující data jsou uložena na adrese ``etcd`` v globálním "
+"rozsahu, takže jsou jednotná pro všechny uzly clusteru:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "Údaje HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3009,11 +3122,12 @@ msgstr "Prostory názvů"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/verze doménového úložiště"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
 msgstr ""
+"certifikační autorita clusteru (slouží k ověřování uzlů v rámci clusteru)."
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3027,6 +3141,10 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Všimněte si, že verze konfigurace/úložiště domény může být prozatím pouze "
+"verze 1 (pokud vaše verze softwaru podporuje clustering, pak ji máte). Další "
+"podrobnosti o bezpečnosti instalace aktualizací softwaru v rámci clusteru "
+"naleznete v části `Software Updates in Clusters`_."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3038,6 +3156,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Každý cluster bude zpočátku spuštěn z jediného uzlu. Nové uzly se ke "
+"clusteru připojují jeden po druhém."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3049,6 +3169,7 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Síťový provoz mezi uzly je šifrován a ověřován pomocí jejich certifikátu TLS."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3056,12 +3177,17 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Všechny uzly, které mají být součástí stejného clusteru, musí nejprve "
+"nainstalovat společnou certifikační autoritu, která jim umožní ověřit, zda "
+"jsou ostatní uzly legitimní."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"V následujícím textu předpokládáme, že všechny uzly jsou čerstvě zajištěny a "
+"funkční."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3081,7 +3207,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "Vytvoření a instalace certifikační autority"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3089,14 +3215,19 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Uživatelé by si měli vytvořit certifikační autoritu vlastními prostředky a "
+"podle vlastních provozních omezení a ujistit se, že umožňuje alespoň použití "
+"klíče ``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
 msgstr ""
+"Minimální certifikační autoritu lze například vytvořit pomocí adresy "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Tato certifikační autorita musí být nyní nainstalována v každém uzlu."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3118,6 +3249,12 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Pro správné ověření uzlů očekává backend clusteru (etcd), že každý uzel má "
+"certifikát se správně vyplněným polem Subject Alt Names (SAN). Zejména uzly, "
+"u nichž se očekává, že budou dosažitelné pouze prostřednictvím své IP "
+"adresy, musí mít v certifikátu správně vyplněnou IP SAN. IP SAN lze pro CSR "
+"vyžádat tak, že se ke jménům přidá předpona \"IP:\", jako například "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3125,6 +3262,9 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Vzhledem k získanému CSR (nazvěme jej ``nethsm.csr``) pro něj můžeme "
+"vygenerovat certifikát, který je připraven k instalaci. Například pomocí "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3145,20 +3285,27 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Nakonec lze nyní nainstalovat certifikační autoritu (``CA.pem``) pomocí "
+"koncového bodu ``/config/tls/cluster-ca.pem`` (viz dokumentace API ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). To je možné až "
+"po podepsání nainstalovaného certifikátu TLS. V opačném případě bude operace "
+"odmítnuta."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Tento postup je třeba opakovat pro každý uzel."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Synchronizace hodin"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Ujistěte se, že každý uzel byl vybaven přesným systémovým časem. Pokud tomu "
+"tak není, upravte jejich hodiny pomocí koncového bodu ``/config/time``."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3167,15 +3314,16 @@ msgstr "Přidání služby ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Přidání uzlu do clusteru se provádí ve dvou krocích:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
 msgstr ""
+"zaregistrovat přírůstek do clusteru (prostřednictvím některého z jeho členů)."
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "sdělit novému uzlu, aby se připojil"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3188,10 +3336,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Nejprve se ujistěte, že je v uzlu, který bude použit k registraci nového "
+"joineru, nakonfigurována záložní přístupová fráze (viz dokumentace API "
+"koncového bodu ``/config/backup-passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Registrace nového uzlu"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3202,6 +3353,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Registrací uzlu se do clusteru okamžitě zavede nový uzel, čímž se změní "
+"prahová hodnota kvora, i když se uzel ve skutečnosti ještě nepřipojil. To "
+"může způsobit nefunkčnost stávajících uzlů, dokud se nový uzel skutečně "
+"nepřipojí. Viz dokumentace rozhraní API ` <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>` __ a část `Provozní redundance`_ tohoto dokumentu."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3211,6 +3367,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Mějte po ruce IP adresu uzlu, který se připojí. Úplné *URL* (v terminologii "
+"``etcd`` se také nazývá *peer URL* ) tohoto uzlu bude "
+"``https://<IP_of_node>:2380`` (např. ``https://192.168.1.1:2380``). Port **"
+"musí být** 2380, takže se ujistěte, že případný firewall mezi uzly povolí "
+"provoz TCP na tomto portu."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3218,6 +3379,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Správnost adresy URL můžete překontrolovat zavoláním adresy ``GET /cluster/"
+"members`` na uzlu, který se má připojit. To by mělo vypsat pouze jeden člen: "
+"sebe sama."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3228,10 +3392,16 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Poté zaregistrujte očekávanou adresu URL v libovolném existujícím uzlu "
+"clusteru (pokud ještě nemáte cluster, proveďte to v zařízení NetHSM, které "
+"bude sloužit jako počáteční uzel clusteru). To se provádí pomocí koncového "
+"bodu ``POST /cluster/members`` (viz dokumentace API ` <https://nethsmdemo."
+"nitrokey.com/api_docs/index.html>` __), kterému předáte tělo JSON obsahující "
+"adresu URL."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "V případě úspěchu se vrátí tělo JSON formuláře:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3241,14 +3411,19 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"který obsahuje informace nezbytné pro připojení nového uzlu ke clusteru. "
+"Zejména obsahuje seznam všech členů clusteru (kde člen s prázdným jménem je "
+"nový člen). Obsahuje také doménový klíč zašifrovaný odemykací i záložní "
+"přístupovou frází - záložní přístupová fráze tedy musela být nakonfigurována "
+"dříve."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Tuto odpověď si ponechte pro další krok."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Skutečné připojení ke clusteru"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3259,6 +3434,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Vezměte odpověď z posledního kroku a připojte k ní pole ``backupPassphrase`` "
+"obsahující záložní přístupovou frázi uzlu, na kterém byl nový spojovatel "
+"zaregistrován, a předejte tato data volání ``POST /cluster/join`` (viz "
+"dokumentace rozhraní API ` <https://nethsmdemo.nitrokey.com/api_docs/index."
+"html>` __) na uzlu, který se má připojit."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3266,6 +3446,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Za předpokladu, že se cluster i uzel mohou navzájem spojit, dojde k "
+"vlastnímu připojení, přičemž se vymažou data nového připojeného uzlu a místo "
+"toho se synchronizuje jeho stav se stavem clusteru."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3276,6 +3459,11 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"V závislosti na podmínkách sítě a clusteru může tato operace trvat několik "
+"desítek sekund. Pokud tato operace selže okamžitě (např. cluster nebyl "
+"dosažitelný nebo selhalo ověřování), stav tohoto uzlu nebude vymazán a "
+"připojení bude vráceno zpět. Jakmile je však první připojení úspěšné, je "
+"tato operace konečná a lze ji vrátit pouze obnovením továrního nastavení."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3285,6 +3473,10 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Pokud je toto připojení úspěšné, uzel se ocitne ve stavu ``Locked`` a musí "
+"být odemčen pomocí odemykací fráze uzlu, který byl použit pro registraci. "
+"Poté lze odemykací heslovou frázi změnit (odemykací heslové fráze zůstávají "
+"specifické pro daný uzel a nejsou sdíleny mezi uzly)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3295,6 +3487,12 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"I po úspěšném připojení může v případě, že je databáze clusteru rozsáhlá "
+"nebo je cluster zaneprázdněn, nějakou dobu trvat, než nový připojený člen "
+"plně synchronizuje svůj stav. Během této doby mohou všechny uzly (včetně "
+"zejména nového připojeného uzlu) reagovat hůře nebo nereagovat vůbec. "
+"Zejména nový uzel může zpočátku vracet chyby například při pokusu o "
+"odemknutí. V takovém případě mu dejte nějaký čas a zkuste to znovu."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3312,6 +3510,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Budete potřebovat prostředí s dostupnou verzí ``etcd`` v3.6 s adresou IPv4 "
+"(alespoň) dosažitelnou pro ostatní členy clusteru. Je třeba povolit provoz "
+"TCP na port 2380 a z něj."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3319,6 +3520,10 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Vytvořte prázdný adresář, do kterého se budou ukládat data ``etcd``, a "
+"zapište k němu cestu (my použijeme ``/var/etcd/data``). Zajistěte, aby "
+"uživatel, který bude proces spouštět, měl oprávnění ke čtení a zápisu do "
+"adresáře."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3327,6 +3532,10 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Přeneste do počítače certifikát certifikační autority, který se používá k "
+"ověřování uzlů v clusteru. Měli jste jej vytvořit v části `Vytvoření a "
+"instalace certifikační autority`_. Uložíme jej do adresáře ``/var/etcd/CA."
+"pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3334,12 +3543,16 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Poté je třeba vytvořit certifikát pro svědka a podepsat jej certifikační "
+"autoritou, aby mohl komunikovat se svými protějšky. To lze provést například "
+"pomocí ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Výsledné ``witness.key`` a ``witness.pem`` uložte také do ``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3352,12 +3565,16 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Podle běžných pokynů v části `Registrování nového uzlu`_ signalizujte "
+"stávajícímu clusteru přidání nového člena s danou adresou URL."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Zapište si odpověď od clusteru: měla by obsahovat seznam členů clusteru a "
+"sadu pro připojení (tuto část nebudete potřebovat)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3371,12 +3588,16 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Na rozdíl od zařízení NetHSM, která si automaticky vybírají název uzlu ("
+"pomocí ID zařízení), je nutné zvolit název pro každého přidaného svědka, *a "
+"ujistit se, že názvy jsou jedinečné*. V následujících příkladech budeme "
+"používat \"witness1\"."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
-msgstr ""
+msgstr "S odpovědí NetHSM na registraci svědka připravte proměnné formuláře:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3384,22 +3605,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Za předpokladu, že je odpověď NetHSM uložena v souboru ``response.json``, "
+"můžete tyto dvě poslední proměnné generovat automaticky pomocí následujících "
+"výrazů ``jq``:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"Například v příkladu odpovědi uvedeném v části `Registrování nového uzlu`_ "
+"se zobrazí:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Nakonec vytvořte soubor ``etcd.conf.yml`` pomocí šablony souboru uvedené v ``"
+"docs/etcd_witness.conf.template``:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Tím se vám zobrazí soubor formuláře:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3412,6 +3640,8 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Spusťte ``etcd`` preferovaným způsobem (ručně, ``systemd`` služba, kontejner "
+"atd.) a nasměrujte jej na konfigurační soubor vytvořený v předchozím kroku:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3419,10 +3649,12 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Mělo by se spustit, připojit ke clusteru a dohnat data. Po nějaké době byste "
+"měli být schopni zkontrolovat, zda je v pořádku, pomocí klienta ``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Tento klíč by měl existovat a obsahovat hodnotu \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3431,6 +3663,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Ujistěte se, že tento proces běží dál, protože je nyní řádným členem "
+"clusteru. Pokud jej potřebujete vyřadit z provozu, nejprve jej řádně "
+"odeberte z clusteru (viz část věnovaná tomuto procesu). Pokud se změní jeho "
+"dosažitelná IP adresa, aktualizujte jeho adresu URL z clusteru."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3449,6 +3685,10 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Operace zálohování funguje stejně jako bez clusteru a lze o ni požádat z "
+"kteréhokoli uzlu clusteru. Zálohuje data celého clusteru, včetně polí "
+"specifických pro uzel (ta však budou ignorována, pokud se záloha neobnovuje "
+"na nezálohovaném uzlu)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3457,6 +3697,10 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"Zálohu provedenou na clusteru lze obnovit na stejném clusteru, i když byly "
+"některé uzly od té doby přidány nebo odebrány. Takové obnovení provedené na "
+"provozních clusterech neovlivní hodnoty konfigurace (pouze klíče, uživatele, "
+"jmenné prostory), stejně jako jakékoli jiné částečné obnovení."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3464,18 +3708,25 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Obnovení zálohy na neschváleném uzlu obnoví pole specifická pro uzel (jako "
+"je konfigurace sítě, certifikáty atd.) uzlu, který byl použit k vytvoření "
+"zálohy."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Obnovení rozsáhlé zálohy může na nějakou dobu zahltit cluster, zatímco uzel, "
+"který obnovu provádí, předává změny ostatním."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Tato operace zůstává kompatibilní se zálohami provedenými v předchozích "
+"verzích NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3484,6 +3735,9 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Obnovení zálohy provedené v uzlu A v jiném uzlu Z s jiným klíčem domény "
+"správně přepíše klíč domény A jako dříve. Pokud však byl A v clusteru s "
+"uzlem B, stane se B nefunkčním, protože doménový klíč Z nebude na B obnoven."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3492,10 +3746,14 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Jinými slovy, obnovu provádějte pouze v clusteru se zálohami provedenými ve "
+"stejném clusteru (i když uzly mohly být od té doby odebrány nebo přidány). "
+"Pokud chcete obnovit cizí zálohu v uzlu, nejprve jej bezpečně odeberte z "
+"jeho clusteru, poté jej obnovte do továrního nastavení a obnovte zálohu."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Čisté odstranění uzlu"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3503,12 +3761,18 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Dokud některá část clusteru stále splňuje kvorum, může být kterýkoli z jeho "
+"členů použit k odstranění jiného uzlu z clusteru, ať už je tento uzel již "
+"nedostupný, nebo se očekává, že bude."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Nejprve musíte znát ID uzlu, který chcete odstranit, a to tak, že si "
+"vylistujete všechny uzly přes ``GET /cluster/members`` a vyhledáte ten "
+"správný."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3516,6 +3780,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Pak jej lze odstranit voláním ``DELETE /cluster/members/<id>``. Pokud byl "
+"dotyčný uzel dosud zdravý, dojde k jeho izolaci od zbytku clusteru a k jeho "
+"znefunkčnění."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3527,6 +3794,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Budoucí aktualizace budou označeny jako \"cluster-safe\" (to by měla být "
+"většina) nebo \"cluster-unsafe\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3536,6 +3805,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Na uzly, které jsou součástí clusteru, lze aplikovat aktualizace bezpečné "
+"pro cluster, aniž by byly z clusteru nejprve odstraněny. Stejně jako u všech "
+"operací byste však měli zajistit, aby se tak dělo vždy na jednom uzlu a v "
+"clusteru, kde odebráním uzlu nedojde k poklesu kvora (např. pokud se "
+"aktualizace nezdaří)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3544,14 +3818,18 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Aktualizace, které nejsou bezpečné pro cluster, musí být aplikovány na "
+"izolované uzly. Měli byste cluster rozložit (odebírat uzly jeden po druhém), "
+"obnovit tovární nastavení všech uzlů kromě jednoho, aplikovat aktualizaci na "
+"každý uzel a poté všechny obnovené uzly připojit ke zbývajícímu uzlu."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "Před těmito operacemi nezapomeňte zálohovat."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Rekonfigurace stávajícího clusteru"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3565,6 +3843,11 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Existující cluster (se dvěma nebo více uzly) **nemůže** změnit svou "
+"certifikační autoritu clusteru za provozu. Pokud potřebujete tento "
+"certifikát změnit: vyberte uzel, odstraňte všechny ostatní uzly, "
+"aktualizujte certifikační autoritu a poté nechte ostatní členy znovu "
+"připojit."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3578,6 +3861,10 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Změna síťové konfigurace uzlu (např. změna jeho IP) automaticky informuje "
+"ostatní uzly o aktualizaci. Měli byste však zajistit, abyste takové "
+"aktualizace prováděli vždy pouze v jediném uzlu a v clusteru, jehož ztráta "
+"nezpůsobí ztrátu kvora."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36194,4 +36481,3 @@ msgstr "Označit oříznutý výstup"
 #~ " "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-
