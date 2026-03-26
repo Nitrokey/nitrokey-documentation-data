@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:58+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sl/>\n"
 "Language: sl\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/sl/>\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
-"|| n%100==4 ? 2 : 3;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -964,7 +965,7 @@ msgstr "Poizvedovanje po konfiguraciji omrežja"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "Polja IPv6 so prikazana le, če je konfiguriran IPv6."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -990,6 +991,8 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"IPv6 je neobvezen in privzeto ni konfiguriran. Če želite onemogočiti IPv6, "
+"izpustite možnosti ``--ipv6-cidr`` in ``--ipv6-gateway``."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1031,6 +1034,9 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Če želite konfigurirati IPv6, vključite neobvezno polje ``ipv6`` z "
+"lastnostmi ``cidr`` in ``gateway``. Če želite onemogočiti IPv6, izpustite "
+"polje ``ipv6``."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2668,6 +2674,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Ta funkcija je trenutno tehnični predogled z naslednjimi začasnimi "
+"omejitvami:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2675,18 +2683,25 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"Če se gruča izgubi (izgubi se kvorum), je edini način obnovitve tovarniška "
+"ponastavitev + obnovitev. Pogosto ustvarjajte varnostne kopije. Prihodnje "
+"izdaje bodo vključevale sredstva za obnovitev podatkov na disku."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Aktivna/pasivna nastavitev za podporo gručam z dvema vozliščema, bodisi z "
+"uporabo sistema etcd Learner ali Mirror, še ni na voljo."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Sistemski čas med vozlišči je treba za zdaj sinhronizirati ročno. Prihodnja "
+"izdaja bo vključevala samodejno sinhronizacijo ure."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2698,6 +2713,12 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM od različice 4.0 naprej podpira grozdenje za neposredno "
+"sinhronizacijo podatkov med več NetHSM. To omogoča visoko pogostost "
+"generiranja ključev, visoko razpoložljivost in izravnavo obremenitve. Grozd "
+"NetHSM temelji na `etcd <https://etcd.io>`__, ki uporablja algoritem "
+"soglasja `Raft <https://raft.github.io/>`__ za močno skladnost. To "
+"zagotavlja, da so podatki (npr. ključi) v vseh enotah NetHSM vedno pravilni."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2706,6 +2727,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Pred vzpostavitvijo gruče NetHSM se seznanite s to tehnologijo in njenimi "
+"omejitvami, da se izognete naključnemu izpadu in izgubi podatkov. Poleg tega "
+"dokumenta si lahko ogledate tudi dokumentacijo `etcd <https://etcd.io/docs/"
+"latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2719,14 +2744,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"Vozlišče bomo imenovali NetHSM, za katerega se pričakuje, da bo del gruče. **"
+"Grozd vozlišč** ``N`` **bo deloval, dokler bodo vsaj** ``(N/2)+1`` **"
+"vozlišča zdrava in dosegljiva.** To minimalno število zdravih in dosegljivih "
+"vozlišč se imenuje **kvorum**."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "To pomeni naslednje scenarije."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Eno vozlišče je v okvari, kvorum pa je še vedno dosežen"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2734,18 +2763,25 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Če v gruči s tremi vozlišči eno vozlišče odpove (odpove ali postane "
+"nedosegljivo zaradi omrežnih razmer), ostali dve vozlišči nadaljujeta z "
+"delom in servisirata zahteve."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"Če je okvarjeno vozlišče še vedno zdravo (npr. je šlo le za omrežno težavo), "
+"med izolacijo ne bo delovalo (niti samo za branje)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Če se vozlišče obnovi, se ponovno sinhronizira s preostalimi deli gruče in "
+"ponovno postane operativno, ne da bi izgubilo podatke."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2753,10 +2789,12 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Če se ne obnovi, ga je treba odstraniti iz gruče (glejte naslednji razdelek)"
+", ga tovarniško ponastaviti in postopek združevanja ponoviti od začetka."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "Zgodi se delitev omrežja in kvorum je še vedno dosežen"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2765,28 +2803,37 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"To je le posplošitev prejšnjega scenarija. V gruči s petimi vozlišči, kjer "
+"so npr. 3 vozlišča na fizični lokaciji A in 2 vozlišči na drugi lokaciji B, "
+"bi omrežni problem, ki bi izoliral vozlišči A in B, pomenil naslednje:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"Tri vozlišča na lokaciji A izpolnjujejo kvorum (v tem primeru 3), zato še "
+"naprej delujejo."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"Dve vozlišči na lokaciji B **ne** izpolnjujeta kvoruma (še vedno 3), zato "
+"bosta prenehali delovati (tudi samo za branje)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Če je težava z omrežjem odpravljena, se bosta dve vozlišči brez težav "
+"pridružili ostalim trem vozliščem."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Kvorum je trajno izgubljen"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2794,6 +2841,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"Zaradi napake, ki povzroči izgubo kvoruma vseh podmnožic gruče, bodo gruča "
+"in njeni podatki popolnoma izgubljeni, razen če se napaka odpravi. V tem "
+"primeru je treba vozlišča tovarniško ponastaviti in obnoviti varnostno "
+"kopijo."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2802,12 +2853,18 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"To se lahko zgodi na primer, če v gruči z dvema vozliščema (kjer je kvorum 2)"
+" odpove eno vozlišče. V tem primeru odpovedanega vozlišča ni mogoče naknadno "
+"odstraniti iz gruče, saj preostalo zdravo vozlišče že ne deluje, ker je "
+"izgubilo kvorum."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Zato je priporočljivo, da je v gruči vedno liho število vozlišč in da "
+"pogosto izdelujete varnostne kopije."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2819,16 +2876,25 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Da bi bilo jasno, *začasno* izgubi kvorum (na primer, če ponovno zaženete "
+"vsa vozlišča v gruči skupaj ali če so vozlišča izolirana zaradi začasne "
+"okvare omrežja), ni težava: ko se ponovno poveže dovolj vozlišč (brez "
+"ročnega ponovnega povezovanja), da se doseže kvorum, bo gruča nadaljevala z "
+"običajnim delovanjem. Ročno ukrepanje bo potrebno le pri trajnih okvarah, "
+"kot so omrežne razdelitve, napačna konfiguracija omrežja, težave z "
+"avtentikacijo ali okvare strojne opreme."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Za več informacij si oglejte `POGOSTA VPRAŠANJA in odgovore etcd "
+"<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "Grozd z dvema vozliščema"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2837,10 +2903,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Aktivna/pasivna gruča z dvema vozliščema še ni podprta in bo dodana v "
+"prihodnji različici. Priporočamo uvedbo tretjega vozlišča, bodisi tretjega "
+"NetHSM bodisi \"priče\" etcd, ki bi lahko delovala v katerem koli "
+"gostitelju. Glejte naslednji razdelek \"Priča\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Priča"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2850,6 +2920,11 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Zaradi narave združevanja v gruče s ``etcd`` je zanesljivost toliko večja, "
+"kolikor več je vozlišč v gruči. Kot je pojasnjeno v razdelku `Operativna "
+"redundanca`_, bi bilo najbolje, da bi imele gruče vsaj tri vozlišča, da bi "
+"imeli prostor za odpoved, saj bo gruča z dvema vozliščema v celoti "
+"odpovedala, če odpove samo eno."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2862,6 +2937,13 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Vendar je funkcija zasnovana tako, da vam za doseganje stabilnega števila "
+"vozlišč v gručo ni treba dodati celotne prave naprave NetHSM. Namesto tega "
+"lahko sami namestite in dodate vozlišče \"priče\". Takšno vozlišče je samo "
+"primerek ``etcd``, ki teče na izbranem računalniku (ali v vsebniku) in je "
+"povezan s skupnostjo. Prave naprave v gruči ga bodo prepoznale kot navadno "
+"vozlišče in bo prejemalo vse podatke in posodobitve iz naprav (seveda pa z "
+"njim ne boste mogli izvajati nobenih operacij HSM - samo shranjuje podatke)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2874,6 +2956,9 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Vozlišče priče (ali kdor koli z dostopom do njega) ima neposreden dostop do "
+"zaledja za shranjevanje vseh vozlišč v gruči (npr. vse vnose in ustrezne "
+"vrednosti lahko izpišete s ``etcdctl get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2882,10 +2967,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Z izjemo različice konfiguracije (``/config/version``, ki mora biti vedno \"1"
+"\") so vse vrednosti šifrirane (s ključem naprave za vrednosti, specifične "
+"za vozlišče, ali ključi domene za druge vrednosti), kar zagotavlja zaupnost "
+"občutljivih podatkov."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Vendar upoštevajte, da lahko zlonamerno vozlišče:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2893,16 +2982,21 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"zapisati smeti kot vrednost za kateri koli vnos v shrambo, zaradi česar "
+"vozlišča ne bodo uspela dešifrirati (kar lahko pri nekaterih sistemskih "
+"vnosih povzroči sesutje)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"seznam imen vnosov, kot so uporabniki, imenski prostori in ključi, ki so "
+"lahko občutljivi."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Kaj je v skupni rabi med vozlišči"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2913,6 +3007,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"Če je v gruči NetHSM, to pomeni, da se večina podatkov deli med njimi. Vsako "
+"dodajanje, spreminjanje ali brisanje ključev, uporabnikov ali prostorov imen "
+"na enem vozlišču se sčasoma odrazi na vseh drugih vozliščih. Na splošno "
+"vsaka operacija, ki spreminja stanje, spremeni stanje za vsako vozlišče. To "
+"vključuje operacijo varnostnega kopiranja **obnovitve**, ki deluje kot "
+"običajno."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2920,20 +3020,26 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"V naslednjih razdelkih je podrobno opisano, kateri podatki so v celoti "
+"lokalni, kateri podatki so shranjeni v skupni shrambi ``etcd``, vendar "
+"ostajajo specifični za vozlišče, in kateri podatki so v celoti v skupni rabi "
+"med vozlišči."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Ni shranjeno v etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Ključ naprave **** vsakega vozlišča je shranjen samo lokalno in se nikoli ne "
+"deli med vozlišči."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Shranjeno v etcd, vendar specifično za vozlišče"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2941,6 +3047,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Naslednji podatki so shranjeni v ``etcd`` v različnih obsegih za vsako "
+"vozlišče. Zato je *dostopen* vsakemu vozlišču, ni pa *enoten* med vozlišči ("
+"vsako vozlišče ima lahko drugačno vrednost teh podatkov)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -2975,11 +3084,11 @@ msgstr "Konfiguracija Httpd"
 
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
-msgstr ""
+msgstr "sol za odklepanje (da ima vsako vozlišče svojo geslo za odklepanje)."
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "ključ zaklenjene domene"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -2988,20 +3097,26 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Upoštevajte, da ima sicer vsako vozlišče svojo različico zaklenjenega "
+"domenskega ključa (ker ga vsako vozlišče zaklene s svojim ključem naprave "
+"ali geslom za odklepanje), vendar je osnovni domenski ključ **v skupni rabi**"
+" med vozlišči (za dostop do skupnih podatkov HSM, kot so ključi)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Shranjeno v etcd in v skupni rabi"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Vsi naslednji podatki so shranjeni v ``etcd`` v globalnem obsegu, zato so "
+"enotni za vsa vozlišča v gruči:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "Podatki HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3020,11 +3135,11 @@ msgstr "Prostori imen"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
+msgstr "CA gruče (uporablja se za avtentikacijo vozlišč v gruči)."
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3038,6 +3153,11 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Upoštevajte, da je različica konfiguracije/skladišča domen za zdaj lahko "
+"samo različica 1 (če vaša različica programske opreme podpira združevanje v "
+"gruče, potem imate to različico). Za več podrobnosti o varnosti nameščanja "
+"posodobitev programske opreme v gruči glejte poglavje `Software Updates in "
+"Clusters`_ (Posodobitve programske opreme v gruči)."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3049,6 +3169,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Vsaka gruča se na začetku začne z enim vozliščem. Nova vozlišča se grozdu "
+"pridružijo eno za drugim."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3060,6 +3182,7 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Omrežni promet med vozlišči je šifriran in overjen z njihovim potrdilom TLS."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3067,12 +3190,17 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Vsa vozlišča, ki naj bi bila del iste gruče, morajo najprej namestiti skupno "
+"overitelja potrdil (CA), ki jim bo omogočal preverjanje, ali so druga "
+"vozlišča legitimna."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"V nadaljevanju predpostavljamo, da so vsa vozlišča sveže zagotovljena in "
+"delujejo."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3092,7 +3220,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "Ustvarjanje in namestitev CA"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3100,14 +3228,17 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Uporabniki naj CA ustvarijo na lasten način in v skladu s svojimi "
+"operativnimi omejitvami ter se prepričajo, da omogoča vsaj uporabo ključa "
+"``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "Minimalni CA lahko na primer ustvarite s ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Ta CA mora biti zdaj nameščen v vsakem vozlišču."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3130,6 +3261,12 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Za pravilno avtentikacijo vozlišč zaledni sistem gručenja (etcd) pričakuje, "
+"da ima vsako vozlišče potrdilo z ustrezno izpolnjenim poljem Subject Alt "
+"Names (SAN). Zlasti vozlišča, za katera se pričakuje, da bodo dosegljiva "
+"samo prek svojega IP, morajo imeti v svojem potrdilu ustrezno SAN IP. Za IP "
+"SAN se lahko zahtevajo v CSR tako, da se imeni doda predpona \"IP:\", kot v "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3137,6 +3274,8 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Glede na pridobljeni CSR (imenujmo ga ``nethsm.csr``) lahko zanj ustvarimo "
+"potrdilo, ki je pripravljeno za namestitev. Na primer z ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3158,20 +3297,26 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"Končno lahko CA (``CA.pem``) zdaj namestite s končno točko ``/config/tls/"
+"cluster-ca.pem`` (glejte dokumentacijo API ` <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>` __). To je mogoče šele, ko je nameščeno potrdilo "
+"TLS podpisano z njim. V nasprotnem primeru bo operacija zavrnjena."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Ta postopek je treba ponoviti za vsako vozlišče."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Sinhronizacija ure"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Prepričajte se, da je bilo vsako vozlišče opremljeno z natančnim sistemskim "
+"časom. Če ne, prilagodite njihove ure s končno točko ``/config/time``."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3180,15 +3325,15 @@ msgstr "Dodajanje ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Dodajanje vozlišča v gručo poteka v dveh korakih:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
-msgstr ""
+msgstr "registracijo dodatka v gruči (prek katere koli njene članice)."
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "sporočite novemu vozlišču, naj se pridruži"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3201,10 +3346,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"Najprej se prepričajte, da je v vozlišču, ki bo uporabljeno za registracijo "
+"novega priključka, konfigurirana rezervna gesla (glejte dokumentacijo API "
+"končne točke ``/config/backup-passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Registracija novega vozlišča"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3215,6 +3363,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Z registracijo vozlišča se v gručo takoj vključi novo vozlišče in spremeni "
+"prag kvoruma, čeprav se vozlišče dejansko še ni pridružilo. Zaradi tega "
+"lahko obstoječa vozlišča ne delujejo, dokler se novo vozlišče dejansko ne "
+"pridruži. Oglejte si dokumentacijo API ` <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>` __ in razdelek `Operational Redundancy`_ tega "
+"dokumenta."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3224,6 +3378,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Pri roki imejte naslov IP vozlišča, ki se bo pridružilo. Polni *URL* (v "
+"terminologiji ``etcd`` imenovan tudi *peer URL* ) tega vozlišča bo "
+"``https://<IP_of_node>:2380`` (npr. ``https://192.168.1.1:2380``). Vrata **"
+"morajo biti** 2380, zato se prepričajte, da požarni zid med vozlišči "
+"dovoljuje promet TCP na teh vratih."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3231,6 +3390,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Pravilnost naslova URL lahko preverite tako, da na vozlišču, ki naj bi se "
+"pridružilo, pokličete ``GET /cluster/members``. Ta mora navesti samo enega "
+"člana: samega sebe."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3241,10 +3403,15 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Nato registrirajte ta pričakovani naslov URL v katerem koli obstoječem "
+"vozlišču gruče (če še nimate gruče, to storite v NetHSM, ki bo služil kot "
+"začetno vozlišče gruče). To storite z uporabo končne točke ``POST /cluster/"
+"members`` (glejte dokumentacijo API ` <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html>` __) in ji posredujete telo JSON, ki vsebuje naslov URL."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "Če je postopek uspešen, se vrne telo JSON obrazca:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3254,14 +3421,18 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"ki vsebuje informacije, potrebne za pridružitev novega vozlišča k gruči. "
+"Zlasti vsebuje seznam vseh članov gruče (pri čemer je član s praznim imenom "
+"novi član). Vsebuje tudi ključ domene, ki je šifriran z gesli za odklepanje "
+"in rezervno geslo - zato je treba pred tem konfigurirati rezervno geslo."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Odziv shranite za naslednji korak."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Dejanska pridružitev gruči"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3272,6 +3443,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Vzemite odgovor iz zadnjega koraka in mu dodajte polje ``backupPassphrase``, "
+"ki vsebuje rezervno geslo vozlišča, na katerem je bil registriran novi član, "
+"ter te podatke prenesite v klic ``POST /cluster/join`` (glejte dokumentacijo "
+"API ` <https://nethsmdemo.nitrokey.com/api_docs/index.html>` __) v vozlišču, "
+"ki naj bi se mu pridružil."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3279,6 +3455,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Ob predpostavki, da sta gruča in vozlišče dosegljiva, se izvede dejanska "
+"pridružitev, pri čemer se izbrišejo podatki novega udeleženca, da se njegovo "
+"stanje sinhronizira s stanjem gruče."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3289,6 +3468,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"Odvisno od razmer v omrežju in gruči lahko ta operacija traja nekaj deset "
+"sekund. Če ta operacija takoj propade (npr. gruča ni bila dosegljiva ali "
+"avtentikacija ni uspela), stanje tega vozlišča ne bo izbrisano in "
+"pridružitev bo vrnjena. Vendar je takoj, ko je prva pridružitev uspešna, ta "
+"operacija dokončna in jo je mogoče razveljaviti le s tovarniško "
+"ponastavitvijo."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3298,6 +3483,11 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"Če je pridružitev uspešna, se vozlišče znajde v stanju ``Locked`` in ga je "
+"treba odkleniti z geslom za odklepanje vozlišča, ki je bilo uporabljeno za "
+"registracijo. Kasneje je mogoče geslo za odklepanje spremeniti (gesla za "
+"odklepanje ostanejo specifična za posamezno vozlišče in se ne delijo med "
+"vozlišči)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3308,6 +3498,12 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Če je podatkovna zbirka gruče velika ali če je gruča zasedena, lahko traja "
+"nekaj časa, da novi član v celoti sinhronizira svoje stanje tudi po uspešni "
+"združitvi. V tem času so lahko vsa vozlišča (vključno z novim članom) manj "
+"odzivna ali neodzivna. Zlasti novi priključek lahko na začetku vrne napake, "
+"ko ga na primer poskušate odkleniti. V tem primeru mu dajte nekaj časa in "
+"poskusite znova."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3325,6 +3521,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Potrebovali boste okolje, v katerem je na voljo ``etcd`` v3.6, z naslovom "
+"IPv4 (vsaj), ki je dosegljiv drugim članom vaše gruče. Dovoljen mora biti "
+"promet TCP na vrata 2380 in z njih."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3332,6 +3531,9 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Ustvarite prazen imenik, v katerem bo ``etcd`` hranil svoje podatke, in "
+"zapišite njegovo pot (mi bomo uporabili ``/var/etcd/data``). Zagotovite, da "
+"ima uporabnik, ki bo zagnal proces, dovoljenje za branje in pisanje v imenik."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3340,6 +3542,9 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"V računalnik prenesite potrdilo CA, ki se uporablja za preverjanje "
+"pristnosti vozlišč v gruči. Ustvariti bi ga morali v razdelku `Ustvarjanje "
+"in namestitev CA`_. Shranili ga bomo v ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3347,12 +3552,16 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Nato boste morali ustvariti potrdilo za pričo in ga podpisati s CA, da bo "
+"lahko komunicirala s svojimi vrstniki. To lahko storite na primer prek "
+"``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Dobljene ``witness.key`` in ``witness.pem`` shranite tudi v ``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3365,12 +3574,17 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Sledite običajnim navodilom iz poglavja `Registering a New Node`_ ("
+"Registracija novega vozlišča), da obstoječi gruči sporočite dodajanje novega "
+"člana z navedenim(-i) naslovom(-i) URL."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Zapišite odgovor grozda: vsebovati mora seznam članov grozda in komplet za "
+"pridružitev (tega dela ne boste potrebovali)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3384,12 +3598,17 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Za razliko od naprav NetHSM, ki samodejno izberejo ime vozlišča (z uporabo "
+"ID naprave), morate izbrati ime za vsako dodano pričo, *pri tem pa "
+"poskrbite, da so imena edinstvena*. V naslednjih primerih bomo uporabili ime "
+"\"witness1\"."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Z odgovorom NetHSM za registracijo priče pripravite spremenljivke obrazca:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3397,22 +3616,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Ob predpostavki, da je odgovor NetHSM shranjen v datoteki ``response.json``, "
+"lahko zadnji dve spremenljivki ustvarite samodejno z naslednjimi izrazi "
+"``jq``:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"Na primer, v primeru odgovora iz poglavja `Registering a New Node`_ ("
+"Registracija novega vozlišča) je na voljo:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"Na koncu ustvarite datoteko ``etcd.conf.yml`` z uporabo datoteke s predlogo, "
+"ki je na voljo v datoteki ``docs/etcd_witness.conf.template``:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Tako boste dobili datoteko z obrazcem:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3425,6 +3651,8 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Zagon ``etcd`` na želeni način (ročno, ``systemd`` storitev, vsebnik itd.) "
+"in ga usmerite na konfiguracijsko datoteko, ustvarjeno v prejšnjem koraku:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3432,10 +3660,12 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Videli bi morali, da se začne, se pridruži gruči in dohiti podatke. Čez "
+"nekaj časa boste lahko preverili, ali je zdrava, z odjemalcem ``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Ta ključ mora obstajati in vsebovati vrednost \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3444,6 +3674,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Prepričajte se, da se ta proces še naprej izvaja, saj je zdaj pravi član "
+"vaše gruče. Če ga morate izključiti, ga najprej ustrezno odstranite iz gruče "
+"(glejte namensko poglavje). Če se njegov dosegljivi IP spremeni, posodobite "
+"njegov URL iz gruče."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3462,6 +3696,11 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Varnostno kopiranje deluje enako kot brez gruče in ga lahko zahtevate iz "
+"katerega koli vozlišča gruče. Varnostna kopija bo ustvarila podatke za "
+"celotno gručo, vključno s polji za posamezna vozlišča (čeprav bodo ta "
+"prezrta, razen če se varnostna kopija obnovi v vozlišču, ki ni bilo "
+"dodeljeno)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3470,6 +3709,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"Varnostno kopijo, izdelano v gruči, je mogoče obnoviti v isti gruči, tudi če "
+"so bila od takrat dodana ali odstranjena nekatera vozlišča. Takšne "
+"obnovitve, opravljene v delujočih gručah, ne bodo vplivale na "
+"konfiguracijske vrednosti (samo na ključe, uporabnike, prostore imen), tako "
+"kot vsaka druga delna obnovitev."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3477,18 +3721,26 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Obnovitev varnostne kopije v vozlišču, ki ni bilo dodeljeno, bo obnovila "
+"polja, značilna za vozlišče (kot so omrežna konfiguracija, certifikati itd.) "
+"vozlišča, ki je bilo uporabljeno za ustvarjanje varnostne kopije."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Obnovitev velike varnostne kopije lahko za nekaj časa preobremeni gručo, "
+"medtem ko vozlišče, ki izvaja obnovitev, posreduje spremembe drugim "
+"vozliščem."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Ta operacija ostaja združljiva z varnostnimi kopijami, narejenimi v "
+"prejšnjih različicah NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3497,6 +3749,10 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Obnovitev varnostne kopije, izdelane v drugem vozlišču Z z drugačnim "
+"domenskim ključem, v vozlišču A bo pravilno prepisala domenski ključ "
+"vozlišča A kot prej. Če pa je bil A v gruči z vozliščem B, bo vozlišče B "
+"postalo neuporabno, saj se domenski ključ Z ne bo obnovil na vozlišču B."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3505,10 +3761,15 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Z drugimi besedami, obnovitev izvajajte le v gruči, katere varnostne kopije "
+"so bile izdelane v isti gruči (čeprav so bila vozlišča od takrat morda "
+"odstranjena ali dodana). Če želite obnoviti tujo varnostno kopijo v "
+"vozlišču, ga najprej varno odstranite iz gruče, nato ga tovarniško "
+"ponastavite in obnovite varnostno kopijo."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Čisto odstranjevanje vozlišča"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3516,12 +3777,18 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Dokler del gruče še vedno izpolnjuje kvorum, je mogoče katerega koli njenega "
+"člana uporabiti za odstranitev drugega vozlišča iz gruče, ne glede na to, "
+"ali je to vozlišče že nedosegljivo ali pa se pričakuje, da bo."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Najprej morate poznati ID vozlišča, ki ga želite odstraniti, in sicer tako, "
+"da na spletni strani ``GET /cluster/members`` naštejete vsa vozlišča in "
+"poiščete pravo."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3529,6 +3796,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Nato ga lahko odstranite s klicem ``DELETE /cluster/members/<id>``. Če je "
+"bilo zadevno vozlišče še vedno zdravo, ga boste s tem izolirali od "
+"preostanka gruče in onemogočili njegovo delovanje."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3540,6 +3810,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Prihodnje posodobitve bodo označene kot \"varne za gruče\" (to naj bi bila "
+"večina) ali \"nevarne za gruče\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3549,6 +3821,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Posodobitve, ki so varne za gruče, lahko uporabite za vozlišča, ki so del "
+"gruče, ne da bi jih prej odstranili iz gruče. Vendar morate tako kot pri "
+"vseh operacijah zagotoviti, da to storite na enem vozlišču hkrati in v "
+"gruči, kjer odstranitev vozlišča ne zmanjša kvoruma (npr. če posodobitev ne "
+"uspe)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3557,14 +3834,19 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Posodobitve, ki niso varne za gručo, je treba uporabiti v izoliranih "
+"vozliščih. Skupino morate razstaviti (vozlišča odstraniti eno za drugim), "
+"tovarniško ponastaviti vsa vozlišča razen enega, posodobitev uporabiti v "
+"vsakem vozlišču, nato pa vsa ponastavljena vozlišča združiti s preostalim "
+"vozliščem."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
-msgstr ""
+msgstr "Pred takimi operacijami naredite varnostno kopijo."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Ponovno konfiguriranje obstoječe gruče"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3578,6 +3860,10 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Obstoječa gruča (z dvema ali več vozlišči) **med delovanjem ne more** "
+"spremeniti svojega CA gruče. Če morate to potrdilo spremeniti: izberite "
+"vozlišče, odstranite vsa druga vozlišča, posodobite CA, nato pa naj se drugi "
+"člani ponovno pridružijo."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3591,6 +3877,10 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Če spremenite omrežno konfiguracijo vozlišča (npr. spremenite njegov IP), "
+"bodo druga vozlišča samodejno obveščena o posodobitvi. Vendar morate "
+"zagotoviti, da take posodobitve izvajate le na enem vozlišču naenkrat in v "
+"gruči, v kateri izguba tega vozlišča ne bi povzročila izgube kvoruma."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36304,4 +36594,3 @@ msgstr "Označite obrezano Izhod"
 #~ " spremeni. Dodatne informacije na ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-
