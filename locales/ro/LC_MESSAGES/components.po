@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 18:36+0000\n"
-"PO-Revision-Date: 2026-03-26 09:03+0000\n"
+"PO-Revision-Date: 2026-03-26 18:58+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/ro/>\n"
 "Language: ro\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/ro/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
-"< 20)) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -971,7 +972,7 @@ msgstr "Interogarea configurației rețelei"
 
 #: ../../source/components/nethsm/administration.rst:402
 msgid "The IPv6 fields are only shown if IPv6 is configured."
-msgstr ""
+msgstr "Câmpurile IPv6 sunt afișate numai dacă IPv6 este configurat."
 
 #: ../../source/components/nethsm/administration.rst:404
 msgid ""
@@ -998,6 +999,8 @@ msgid ""
 "IPv6 is optional and not configured by default. To disable IPv6, omit the"
 " ``--ipv6-cidr`` and ``--ipv6-gateway`` options."
 msgstr ""
+"IPv6 este opțional și nu este configurat implicit. Pentru a dezactiva IPv6, "
+"omiteți opțiunile ``--ipv6-cidr`` și ``--ipv6-gateway``."
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``-a``, ``--ip-address``"
@@ -1040,6 +1043,8 @@ msgid ""
 "To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and "
 "``gateway`` properties. To disable IPv6, omit the ``ipv6`` field."
 msgstr ""
+"Pentru a configura IPv6, includeți câmpul opțional ``ipv6`` cu proprietățile "
+"``cidr`` și ``gateway``. Pentru a dezactiva IPv6, omiteți câmpul ``ipv6``."
 
 #: ../../source/components/nethsm/administration.rst:458
 msgid "Time"
@@ -2717,6 +2722,8 @@ msgid ""
 "This feature is currently a technical preview with the following "
 "temporary limitations:"
 msgstr ""
+"Această caracteristică este în prezent o previzualizare tehnică cu "
+"următoarele limitări temporare:"
 
 #: ../../source/components/nethsm/clustering.rst:7
 msgid ""
@@ -2724,18 +2731,26 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
+"În cazul în care un cluster este pierdut (quorum-ul este pierdut), singurul "
+"mijloc de recuperare este resetarea din fabrică + restaurarea. Asigurați-vă "
+"că faceți des copii de siguranță. Versiunile viitoare vor include mijloace "
+"de recuperare a datelor de pe disc."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
 "Active/passive setup to support two-node clusters, either by utilizing "
 "etcd Learner or Mirror, is not yet available."
 msgstr ""
+"Configurarea activă/pasivă pentru a susține clustere cu două noduri, fie "
+"prin utilizarea etcd Learner sau Mirror, nu este încă disponibilă."
 
 #: ../../source/components/nethsm/clustering.rst:9
 msgid ""
 "System time between nodes must be manually synchronized for now. A future"
 " release will include automatic clock sync."
 msgstr ""
+"Ora sistemului între noduri trebuie sincronizată manual pentru moment. O "
+"versiune viitoare va include sincronizarea automată a ceasului."
 
 #: ../../source/components/nethsm/clustering.rst:11
 msgid ""
@@ -2747,6 +2762,13 @@ msgid ""
 "This ensures that the data (e.g. keys) is correct in all NetHSMs at all "
 "times."
 msgstr ""
+"NetHSM 4.0 și versiunile ulterioare acceptă gruparea pentru sincronizarea "
+"directă a datelor între mai multe NetHSM-uri. Acest lucru susține frecvența "
+"ridicată a generațiilor de chei, realizează disponibilitatea ridicată și "
+"echilibrarea sarcinii. Un cluster NetHSM se bazează pe `etcd <https://etcd."
+"io>`__ care utilizează algoritmul de consens `Raft <https://raft.github.io/>`"
+"__ pentru o coerență puternică. Acest lucru garantează că datele (de "
+"exemplu, cheile) sunt corecte în toate NetHSM-urile în orice moment."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2755,6 +2777,11 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
+"Înainte de a configura un cluster NetHSM, familiarizați-vă cu această "
+"tehnologie și cu constrângerile sale pentru a evita întreruperile "
+"accidentale și pierderea de date. În plus față de acest document, este "
+"posibil să doriți să consultați și documentația `etcd <https://etcd.io/docs/"
+"latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2768,14 +2795,18 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
+"Vom numi \"nod\" un NetHSM care se așteaptă să facă parte dintr-un cluster. "
+"**Un grup de** ``N`` **noduri va continua să funcționeze atâta timp cât cel "
+"puțin** ``(N/2)+1`` **noduri sunt sănătoase și accesibile.** Acest număr "
+"minim de noduri sănătoase și accesibile se numește cvorum **** ."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
-msgstr ""
+msgstr "Acest lucru implică următoarele scenarii."
 
 #: ../../source/components/nethsm/clustering.rst:24
 msgid "One Node Goes Down and Quorum is Still Reached"
-msgstr ""
+msgstr "Un nod cade și cvorumul este totuși atins"
 
 #: ../../source/components/nethsm/clustering.rst:26
 msgid ""
@@ -2783,18 +2814,27 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
+"Într-un cluster cu 3 noduri, dacă un nod cedează (se blochează sau devine "
+"inaccesibil din cauza condițiilor de rețea), celelalte două noduri vor "
+"continua să lucreze și să servească cererile."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
+"În cazul în care nodul defect este încă sănătos (de exemplu, a fost doar o "
+"problemă de rețea), acesta va fi inutilizabil în timp ce este izolat (nici "
+"măcar numai pentru citire)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
 " of the cluster and becomes operable again, without losing data."
 msgstr ""
+"Cu toate acestea, dacă nodul își revine, acesta se va resincroniza în mod "
+"curat cu restul clusterului și va deveni din nou operațional, fără a pierde "
+"date."
 
 #: ../../source/components/nethsm/clustering.rst:32
 msgid ""
@@ -2802,10 +2842,13 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
+"Dacă nu își revine, trebuie să fie scos din cluster (a se vedea secțiunea "
+"următoare), resetat din fabrică și să treacă din nou prin procesul de "
+"conectare de la zero."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
-msgstr ""
+msgstr "Are loc o partiție a rețelei și cvorumul este totuși atins"
 
 #: ../../source/components/nethsm/clustering.rst:37
 msgid ""
@@ -2814,28 +2857,38 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
+"Aceasta este doar o generalizare a scenariului anterior. Într-un cluster cu "
+"5 noduri în care, de exemplu, 3 noduri sunt într-o locație fizică A și 2 "
+"noduri sunt într-o altă locație B, o problemă de rețea care izolează A și B "
+"ar însemna următoarele:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr ""
+"Cele 3 noduri din locația A îndeplinesc cvorumul (3 în acest caz), deci "
+"continuă să funcționeze."
 
 #: ../../source/components/nethsm/clustering.rst:40
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
+"Cele 2 noduri din locația B sunt **nu** întrunesc cvorumul (încă 3), astfel "
+"încât acestea vor înceta să funcționeze (chiar și numai în citire)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
+"Dacă problema de rețea este rezolvată, cele 2 noduri se vor alătura cu "
+"ușurință celorlalte 3."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
-msgstr ""
+msgstr "Cvorumul este pierdut definitiv"
 
 #: ../../source/components/nethsm/clustering.rst:46
 msgid ""
@@ -2843,6 +2896,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
+"O defecțiune care face ca toate subseturile clusterului să piardă cvorumul "
+"va face ca clusterul și datele sale să fie complet pierdute, cu excepția "
+"cazului în care defecțiunea este rezolvată. În acest caz, nodurile trebuie "
+"resetate din fabrică și trebuie restaurată o copie de rezervă."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2851,12 +2908,19 @@ msgid ""
 "cleanly removed from the cluster after the fact, because the remaining "
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
+"Acest lucru se poate întâmpla, de exemplu, dacă un singur nod cedează într-"
+"un cluster cu 2 noduri (unde cvorumul este 2). În această situație, nodul "
+"defect nu poate fi eliminat curat din cluster după ce s-a întâmplat, "
+"deoarece nodul sănătos rămas este deja inoperabil, deoarece a pierdut "
+"cvorumul."
 
 #: ../../source/components/nethsm/clustering.rst:50
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
+"Prin urmare, este recomandat să aveți întotdeauna un număr impar de noduri "
+"într-un cluster și să efectuați des copii de rezervă."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2868,16 +2932,26 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
+"Pentru a fi clar, ** pierderea temporară a cvorumului (de exemplu, dacă "
+"reporniți toate nodurile unui cluster împreună sau dacă o defecțiune "
+"temporară a rețelei izolează nodurile) nu este o problemă: odată ce "
+"suficiente noduri sunt reconectate (fără a fi necesară reconectarea manuală) "
+"pentru a atinge cvorumul, clusterul își va relua funcționarea normală. Doar "
+"defecțiunile permanente, cum ar fi partițiile de rețea, configurațiile "
+"greșite ale rețelei, problemele de autentificare sau defecțiunile hardware, "
+"vor necesita o acțiune manuală."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
+"Pentru mai multe informații, consultați ÎNTREBĂRI FRECVENTE `etcd "
+"<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
-msgstr ""
+msgstr "Cluster cu 2 noduri"
 
 #: ../../source/components/nethsm/clustering.rst:59
 msgid ""
@@ -2886,10 +2960,14 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
+"Un cluster activ/pasiv cu două noduri nu este încă acceptat și va fi adăugat "
+"într-o versiune viitoare. Recomandăm introducerea unui al treilea nod, fie "
+"un al treilea NetHSM, fie un \"martor\" etcd care ar putea fi operat pe "
+"orice gazdă. Consultați secțiunea următoare \"Martor\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
-msgstr ""
+msgstr "Martor"
 
 #: ../../source/components/nethsm/clustering.rst:64
 msgid ""
@@ -2899,6 +2977,12 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
+"Natura clusterizării cu ``etcd`` face ca aceasta să fie mai fiabilă cu cât "
+"există mai multe noduri în cluster. După cum se explică în secțiunea `"
+"Operational Redundancy`_ (Redundanță operațională), clusterele ar trebui să "
+"aibă în mod ideal cel puțin 3 noduri pentru a avea spațiu de eroare, "
+"deoarece un cluster cu 2 noduri va ceda în întregime dacă numai unul dintre "
+"ele cedează."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2911,6 +2995,15 @@ msgid ""
 "receive all data and updates from devices (but of course you won't be "
 "able to perform any HSM operations with it — it only stores data)."
 msgstr ""
+"Cu toate acestea, concepția funcției este astfel încât nu trebuie să "
+"adăugați un dispozitiv NetHSM complet și real la clusterul dvs. pentru a "
+"atinge un număr stabil de noduri. În schimb, puteți implementa și adăuga "
+"singur un nod \"martor\". Un astfel de nod este doar o instanță a ``etcd`` "
+"care rulează pe mașina aleasă de dvs. (sau într-un container) și care este "
+"conectată la cluster. Acesta va fi recunoscut ca un nod normal de către "
+"dispozitivele reale din cluster și va primi toate datele și actualizările de "
+"la dispozitive (dar, desigur, nu veți putea efectua nicio operațiune HSM cu "
+"el - acesta doar stochează date)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2923,6 +3016,9 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
+"Nodul martor (sau oricine are acces la acesta) are acces direct la backend-"
+"ul de stocare al tuturor nodurilor din cluster (de exemplu, puteți descărca "
+"toate intrările și valorile corespunzătoare cu ``etcdctl get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -2931,10 +3027,14 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
+"Cu toate acestea, cu excepția versiunii config (``/config/version``, care ar "
+"trebui să fie întotdeauna \"1\"), strict toate valorile sunt criptate (fie "
+"cu o cheie de dispozitiv pentru valorile specifice nodului, fie cu cheile "
+"domeniului pentru celelalte), asigurând confidențialitatea datelor sensibile."
 
 #: ../../source/components/nethsm/clustering.rst:75
 msgid "Note however that a malicious node can:"
-msgstr ""
+msgstr "Rețineți totuși că un nod rău intenționat poate:"
 
 #: ../../source/components/nethsm/clustering.rst:77
 msgid ""
@@ -2942,16 +3042,21 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
+"scrieți gunoi ca valoare pentru orice intrare din magazin, ceea ce va face "
+"ca nodurile să nu reușească să o decripteze (ceea ce poate duce la blocări "
+"pentru unele intrări de sistem)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
+"lista de nume de intrări, cum ar fi utilizatori, spații de nume și chei, pe "
+"care le puteți considera sensibile."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
-msgstr ""
+msgstr "Ce este partajat între noduri"
 
 #: ../../source/components/nethsm/clustering.rst:83
 msgid ""
@@ -2962,6 +3067,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
+"Existența unui grup de NetHSM înseamnă că majoritatea datelor sunt partajate "
+"între acestea. Orice adăugare, modificare sau ștergere de chei, utilizatori "
+"sau spații de nume pe un nod se reflectă în cele din urmă pe toate "
+"celelalte. În general, orice operațiune care modifică starea va modifica "
+"starea pentru fiecare nod. Aceasta include operațiunea de backup **restore** "
+"care funcționează în mod normal."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -2969,20 +3080,25 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
+"Următoarele secțiuni detaliază ce date sunt complet locale, ce date sunt "
+"stocate în magazinul partajat ``etcd``, dar rămân specifice nodului, și ce "
+"date sunt complet partajate între noduri."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
-msgstr ""
+msgstr "Nu este stocat în etcd"
 
 #: ../../source/components/nethsm/clustering.rst:90
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr ""
+"Cheia dispozitivului **** a fiecărui nod rămâne stocată doar local și nu "
+"este niciodată partajată între noduri."
 
 #: ../../source/components/nethsm/clustering.rst:93
 msgid "Stored in etcd but Node-Specific"
-msgstr ""
+msgstr "Stocat în etcd, dar specific nodului"
 
 #: ../../source/components/nethsm/clustering.rst:95
 msgid ""
@@ -2990,6 +3106,9 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
+"Următoarele date sunt stocate în ``etcd`` în domenii diferite pentru fiecare "
+"nod. Prin urmare, acestea sunt *accesibile* fiecărui nod, dar nu *uniforme* "
+"între noduri (fiecare nod poate avea o valoare diferită pentru aceste date)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -3025,10 +3144,12 @@ msgstr "Configurație Httpd"
 #: ../../source/components/nethsm/clustering.rst:104
 msgid "unlock salt (so each node has its own unlock passphrase)"
 msgstr ""
+"sare de deblocare (astfel încât fiecare nod să aibă propria sa frază de "
+"acces de deblocare)"
 
 #: ../../source/components/nethsm/clustering.rst:105
 msgid "locked domain key"
-msgstr ""
+msgstr "cheie de domeniu blocată"
 
 #: ../../source/components/nethsm/clustering.rst:107
 msgid ""
@@ -3037,20 +3158,26 @@ msgid ""
 "passphrase), the underlying domain key is **shared** across nodes (to "
 "access their shared HSM data, such as keys)."
 msgstr ""
+"Rețineți că, deși fiecare nod are propria versiune a cheii de domeniu "
+"blocate (deoarece fiecare nod o blochează cu propria cheie de dispozitiv sau "
+"frază de acces de deblocare), cheia de domeniu de bază este **partajată** "
+"între noduri (pentru a accesa datele lor HSM partajate, cum ar fi cheile)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
-msgstr ""
+msgstr "Stocat în etcd și partajat"
 
 #: ../../source/components/nethsm/clustering.rst:112
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
+"Toate datele următoare sunt stocate în ``etcd`` în domeniul global, astfel "
+"încât acestea sunt uniforme pe toate nodurile unui cluster:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
-msgstr ""
+msgstr "Date HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
@@ -3069,11 +3196,12 @@ msgstr "Spații de nume"
 
 #: ../../source/components/nethsm/clustering.rst:122
 msgid "config/domain store version"
-msgstr ""
+msgstr "configurare/versiunea magazinului de domenii"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
 msgstr ""
+"cluster CA (utilizat pentru autentificarea nodurilor în cadrul clusterului)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3087,6 +3215,11 @@ msgid ""
 "have). Refer to the `Software Updates in Clusters`_ section for more "
 "details on the safety of installing software updates within a cluster."
 msgstr ""
+"Rețineți că, deocamdată, versiunea config/domain store poate fi doar "
+"versiunea 1 (dacă versiunea dvs. de software acceptă clustering, atunci "
+"aceasta este versiunea pe care o aveți). Consultați secțiunea `Software "
+"Updates in Clusters`_ pentru mai multe detalii privind siguranța instalării "
+"actualizărilor software în cadrul unui cluster."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3098,6 +3231,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
+"Orice cluster va porni inițial de la un singur nod. Noi noduri se vor "
+"alătura clusterului unul câte unul."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3109,6 +3244,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
+"Traficul de rețea între noduri este criptat și autentificat utilizând "
+"certificatul TLS al acestora."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3116,12 +3253,17 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
+"Toate nodurile care se așteaptă să facă parte din același cluster trebuie să "
+"instaleze mai întâi o autoritate de certificare (CA) comună care le va "
+"permite să verifice dacă celelalte noduri sunt legitime."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr ""
+"În cele ce urmează, presupunem că toate nodurile sunt proaspăt provizionate "
+"și operaționale."
 
 #: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
@@ -3142,7 +3284,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:148
 msgid "Creating and Installing a CA"
-msgstr ""
+msgstr "Crearea și instalarea unui CA"
 
 #: ../../source/components/nethsm/clustering.rst:150
 msgid ""
@@ -3150,14 +3292,17 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
+"Utilizatorii trebuie să creeze o AC prin propriile mijloace și în "
+"conformitate cu propriile constrângeri operaționale, asigurându-se că "
+"aceasta permite cel puțin utilizarea cheii ``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
-msgstr ""
+msgstr "De exemplu, o AC minimă poate fi creată cu ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:159
 msgid "This CA now has to be installed on every node."
-msgstr ""
+msgstr "Acest CA trebuie să fie instalat pe fiecare nod."
 
 #: ../../source/components/nethsm/clustering.rst:161
 #, fuzzy
@@ -3180,6 +3325,12 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
+"Pentru autentificarea corectă a nodurilor, backend-ul de clustering (etcd) "
+"se așteaptă ca fiecare nod să aibă un certificat cu un câmp Subject Alt "
+"Names (SAN) completat corespunzător. În special, nodurile la care se "
+"așteaptă să se ajungă numai prin IP trebuie să aibă un SAN IP corespunzător "
+"în certificat. SAN-urile IP pot fi solicitate pentru CSR prin adăugarea "
+"prefixului \"IP:\" la nume, ca în ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3187,6 +3338,8 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
+"Având în vedere CSR-ul obținut (să îl numim ``nethsm.csr``), putem genera un "
+"certificat pentru acesta, gata de instalare. De exemplu, cu ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3208,20 +3361,27 @@ msgid ""
 "possible once the installed TLS certificate is signed by it. Otherwise, "
 "the operation will be rejected."
 msgstr ""
+"În cele din urmă, CA (``CA.pem``) poate fi acum instalat cu punctul final ``/"
+"config/tls/cluster-ca.pem`` (consultați documentația API ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). Acest lucru este "
+"posibil numai după ce certificatul TLS instalat este semnat de aceasta. În "
+"caz contrar, operațiunea va fi respinsă."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
-msgstr ""
+msgstr "Acest proces trebuie să fie repetat pentru fiecare nod."
 
 #: ../../source/components/nethsm/clustering.rst:185
 msgid "Clock Sync"
-msgstr ""
+msgstr "Sincronizare ceas"
 
 #: ../../source/components/nethsm/clustering.rst:187
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
+"Asigurați-vă că fiecare nod a fost prevăzut cu o oră exactă a sistemului. În "
+"caz contrar, reglați ceasurile acestora cu punctul final ``/config/time``."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3230,15 +3390,16 @@ msgstr "Adăugarea unei ADSK"
 
 #: ../../source/components/nethsm/clustering.rst:192
 msgid "Adding a node to a cluster is done in two steps:"
-msgstr ""
+msgstr "Adăugarea unui nod la un cluster se face în doi pași:"
 
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
 msgstr ""
+"înregistrați adăugarea la cluster (prin oricare dintre membrii acestuia)"
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
-msgstr ""
+msgstr "spune nodului nou să se alăture"
 
 #: ../../source/components/nethsm/clustering.rst:198
 #, fuzzy
@@ -3251,10 +3412,13 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
+"În primul rând, asigurați-vă că o frază de acces de rezervă este configurată "
+"pe nodul care va fi utilizat pentru a înregistra un nou membru (consultați "
+"documentația API a punctului final ``/config/backup-passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
-msgstr ""
+msgstr "Înregistrarea unui nod nou"
 
 #: ../../source/components/nethsm/clustering.rst:206
 msgid ""
@@ -3265,6 +3429,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the "
 "`Operational Redundancy`_ section of this document."
 msgstr ""
+"Înregistrarea unui nod introduce imediat un nou nod în cluster, modificând "
+"pragul de cvorum, chiar dacă nodul nu s-a alăturat încă efectiv. Acest lucru "
+"poate face ca nodurile existente să devină inoperabile până când noul nod se "
+"alătură efectiv. Consultați documentația `API <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>`__ și secțiunea `Operational Redundancy`_ din "
+"prezentul document."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3274,6 +3444,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
+"Aveți la îndemână IP-ul nodului care se va alătura. URL-ul complet ** ("
+"denumit și *peer URL* în terminologia ``etcd``) al nodului respectiv va fi "
+"``https://<IP_of_node>:2380`` (de exemplu, ``https://192.168.1.1:2380``). "
+"Portul **trebuie** să fie 2380, deci asigurați-vă că orice firewall dintre "
+"noduri va permite traficul TCP pe acest port."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3281,6 +3456,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
+"Puteți verifica de două ori dacă URL-ul este corect apelând ``GET /cluster/"
+"members`` pe nodul care se așteaptă să se alăture. Aceasta ar trebui să "
+"listeze un singur membru: el însuși."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3291,10 +3469,16 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
+"Apoi înregistrați URL-ul așteptat pe orice nod existent al clusterului (dacă "
+"nu aveți încă un cluster, faceți acest lucru pe NetHSM care va servi ca nod "
+"inițial al clusterului). Acest lucru se face utilizând punctul final ``POST /"
+"cluster/members`` (consultați documentația `API <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>`__), transmițându-i un corp JSON care conține URL-"
+"ul."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
-msgstr ""
+msgstr "În caz de succes, aceasta returnează un corp JSON al formularului:"
 
 #: ../../source/components/nethsm/clustering.rst:236
 msgid ""
@@ -3304,14 +3488,20 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
+"care conține informațiile necesare pentru ca noul nod să se alăture "
+"clusterului. În special, acesta enumeră toți membrii clusterului (unde "
+"membrul cu numele gol este noul membru). Acesta conține, de asemenea, cheia "
+"de domeniu criptată atât de fraza de acces de deblocare, cât și de cea de "
+"rezervă - astfel încât trebuie să fi fost configurată anterior o frază de "
+"acces de rezervă."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
-msgstr ""
+msgstr "Păstrați acest răspuns pentru pasul următor."
 
 #: ../../source/components/nethsm/clustering.rst:241
 msgid "Actually Joining the Cluster"
-msgstr ""
+msgstr "Intrarea efectivă în cluster"
 
 #: ../../source/components/nethsm/clustering.rst:243
 msgid ""
@@ -3322,6 +3512,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
+"Luați răspunsul de la ultimul pas și adăugați la acesta un câmp "
+"``backupPassphrase`` care conține fraza de rezervă a nodului pe care a fost "
+"înregistrat noul membru și transmiteți aceste date unui apel către ``POST /"
+"cluster/join`` (consultați documentația API ` <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>` __) pe nodul care se așteaptă să se alăture."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3329,6 +3524,9 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
+"Presupunând că atât clusterul, cât și nodul pot ajunge unul la celălalt, "
+"această operațiune va pune în aplicare aderarea efectivă, ștergând datele de "
+"pe noul membru pentru a sincroniza starea acestuia cu cea a clusterului."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3339,6 +3537,12 @@ msgid ""
 "first join is successful, this operation is final and can only be "
 "reverted by a factory reset."
 msgstr ""
+"În funcție de condițiile de rețea și de cluster, această operațiune poate "
+"dura câteva zeci de secunde. Dacă această operațiune eșuează imediat (de "
+"exemplu, clusterul nu a fost accesibil sau autentificarea a eșuat), starea "
+"acestui nod nu va fi ștearsă, iar alăturarea va fi reluată. Cu toate "
+"acestea, de îndată ce o primă alăturare are succes, această operațiune este "
+"definitivă și poate fi anulată numai printr-o resetare din fabrică."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3348,6 +3552,11 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
+"În cazul în care această alăturare are succes, nodul va ajunge în starea "
+"``Locked`` și trebuie deblocat cu fraza de acces de deblocare a nodului care "
+"a fost utilizat pentru înregistrare. Ulterior, fraza de deblocare poate fi "
+"modificată (frazele de deblocare rămân specifice nodului și nu sunt "
+"partajate între noduri)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3358,6 +3567,13 @@ msgid ""
 "new joiner in particular may initially return errors when trying to "
 "unlock it for example. In that case, give it some time and try again."
 msgstr ""
+"Chiar și după ce unirea a reușit, dacă baza de date a clusterului este mare "
+"sau dacă clusterul este ocupat, poate dura ceva timp până când noul membru "
+"își sincronizează complet starea. În acest timp, este posibil ca toate "
+"nodurile (inclusiv, în special, noul membru) să fie mai puțin receptive sau "
+"să nu răspundă. Este posibil ca noul conector, în special, să returneze "
+"inițial erori atunci când încearcă să îl deblocheze, de exemplu. În acest "
+"caz, acordați-i puțin timp și încercați din nou."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3375,6 +3591,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
+"Veți avea nevoie de un mediu cu ``etcd`` v3.6 disponibil, cu o adresă IPv4 ("
+"cel puțin) care poate fi accesată de ceilalți membri ai clusterului. "
+"Traficul TCP către și de la portul 2380 trebuie să fie permis."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3382,6 +3601,9 @@ msgid ""
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
 " launch the process has permission to read and write to the directory."
 msgstr ""
+"Creați un director gol în care ``etcd`` își va stoca datele și scrieți calea "
+"sa (vom folosi ``/var/etcd/data``). Asigurați-vă că utilizatorul care va "
+"lansa procesul are permisiunea de a citi și de a scrie în director."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid ""
@@ -3390,6 +3612,10 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
+"Transferați pe computer certificatul CA care este utilizat pentru "
+"autentificarea nodurilor din cluster. Ar fi trebuit să creați unul în "
+"secțiunea `Creating and Installing a CA`_. Îl vom stoca în ``/var/etcd/CA."
+"pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3397,12 +3623,17 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
+"Apoi va trebui să creați un certificat pentru martor și să îl semnați cu CA, "
+"astfel încât acesta să poată comunica cu colegii săi. Acest lucru se poate "
+"face, de exemplu, prin ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
+"Stocați rezultatele ``witness.key`` și ``witness.pem`` ``/var/etcd`` de "
+"asemenea."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3415,12 +3646,18 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
+"Urmați instrucțiunile normale din secțiunea `Înregistrarea unui nod nou`_ "
+"pentru a semnala clusterului existent adăugarea unui nou membru cu URL-ul "
+"(URL-urile) dat(e)."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
+"Notați răspunsul din partea clusterului: acesta ar trebui să conțină lista "
+"membrilor clusterului și un kit de aderare (nu veți avea nevoie de această "
+"parte)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3434,12 +3671,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
+"Spre deosebire de NetHSM care își aleg automat un nume de nod (folosind ID-"
+"ul dispozitivului), trebuie să alegeți un nume pentru fiecare martor pe care "
+"îl adăugați, *asigurându-vă că numele sunt unice*. Vom folosi \"martor1\" în "
+"exemplele următoare."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
+"Odată cu răspunsul NetHSM de înregistrare a martorului, pregătiți "
+"variabilele formularului:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3447,22 +3690,29 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
+"Presupunând că răspunsul NetHSM este stocat într-un fișier ``response.json``"
+", puteți genera automat aceste ultime două variabile cu următoarele expresii "
+"``jq``:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
+"De exemplu, cu exemplul de răspuns furnizat în secțiunea `Înregistrarea unui "
+"nod nou`_, veți avea:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
 msgstr ""
+"În cele din urmă, creați un fișier ``etcd.conf.yml`` utilizând fișierul "
+"șablon furnizat în ``docs/etcd_witness.conf.template``:"
 
 #: ../../source/components/nethsm/clustering.rst:325
 msgid "This should give you a file of the form:"
-msgstr ""
+msgstr "Acest lucru ar trebui să vă ofere un fișier al formularului:"
 
 #: ../../source/components/nethsm/clustering.rst:350
 #, fuzzy
@@ -3475,6 +3725,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
+"Porniți ``etcd`` în modul preferat (manual, ``systemd`` serviciu, container "
+"etc.), direcționându-l către fișierul de configurare creat în etapa "
+"anterioară:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3482,10 +3735,13 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
+"Ar trebui să-l vedeți pornind, alăturându-se clusterului și recuperând "
+"datele. După ceva timp, ar trebui să puteți verifica dacă este sănătos cu "
+"ajutorul clientului ``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
-msgstr ""
+msgstr "Această cheie trebuie să existe și să conțină \"1\"."
 
 #: ../../source/components/nethsm/clustering.rst:367
 msgid ""
@@ -3494,6 +3750,10 @@ msgid ""
 "from the cluster (see the dedicated section). If its reachable IP "
 "changes, update its URL from the cluster."
 msgstr ""
+"Asigurați-vă că acest proces continuă să ruleze, deoarece acum este un "
+"membru adecvat al clusterului dvs. Dacă trebuie să îl dezafectați, mai întâi "
+"eliminați-l corespunzător din cluster (consultați secțiunea dedicată). Dacă "
+"IP-ul său accesibil se modifică, actualizați-i URL-ul din cluster."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3512,6 +3772,11 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
+"Operațiunea de backup funcționează la fel ca în absența unui cluster și "
+"poate fi solicitată de la orice nod al clusterului. Operațiunea va efectua o "
+"copie de siguranță a datelor pentru întregul cluster, inclusiv a câmpurilor "
+"specifice nodului (deși acestea vor fi ignorate dacă nu se restabilește "
+"copia de siguranță pe un nod neaprovizionat)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3520,6 +3785,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
+"O copie de rezervă efectuată pe un cluster poate fi restaurată pe același "
+"cluster, chiar dacă unele noduri au fost adăugate sau eliminate de atunci. "
+"Astfel de restaurări efectuate pe clustere operaționale nu vor afecta "
+"valorile de configurare (doar cheile, utilizatorii, spațiile de nume), ca "
+"orice altă restaurare parțială."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3527,18 +3797,26 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
+"Restaurarea unei copii de siguranță pe un nod neaprovizionat va restabili "
+"câmpurile specifice nodului (cum ar fi configurația rețelei, certificatele "
+"etc.) ale nodului care a fost utilizat pentru a crea copia de siguranță."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
+"Restaurarea unei copii de rezervă mari poate copleși clusterul pentru o "
+"anumită perioadă de timp, în timp ce nodul care aplică restaurarea transmite "
+"modificările către celelalte noduri."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr ""
+"Această operațiune rămâne compatibilă cu salvările efectuate pe versiunile "
+"anterioare ale NetHSM."
 
 #: ../../source/components/nethsm/clustering.rst:386
 msgid ""
@@ -3547,6 +3825,11 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
+"Restaurarea pe un nod A a unei copii de siguranță efectuate pe un alt nod Z "
+"cu o cheie de domeniu diferită va rescrie corect cheia de domeniu a lui A, "
+"ca înainte. Cu toate acestea, dacă A se afla într-un cluster cu nodul B, B "
+"va deveni inoperabil, deoarece cheia de domeniu a lui Z nu va fi restaurată "
+"pe B."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3555,10 +3838,15 @@ msgid ""
 "since). If you want to restore a foreign backup on a node, first safely "
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
+"Cu alte cuvinte, efectuați o restaurare numai într-un cluster cu copii de "
+"rezervă efectuate în același cluster (deși, din nou, nodurile pot fi "
+"eliminate sau adăugate de atunci). Dacă doriți să restaurați o copie de "
+"rezervă străină pe un nod, mai întâi scoateți-l în siguranță din clusterul "
+"său, apoi resetați-l din fabrică și restaurați copia de rezervă."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
-msgstr ""
+msgstr "Îndepărtarea curată a unui nod"
 
 #: ../../source/components/nethsm/clustering.rst:393
 msgid ""
@@ -3566,12 +3854,18 @@ msgid ""
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr ""
+"Atât timp cât o parte a clusterului îndeplinește cvorumul, oricare dintre "
+"membrii săi poate fi folosit pentru a elimina un alt nod din cluster, "
+"indiferent dacă acest nod este deja inaccesibil sau se așteaptă să fie."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
+"Mai întâi trebuie să cunoașteți ID-ul nodului pe care doriți să îl "
+"eliminați, enumerând toate nodurile prin ``GET /cluster/members`` și "
+"căutându-l pe cel potrivit."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3579,6 +3873,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
+"Apoi, acesta poate fi eliminat prin apelarea ``DELETE /cluster/members/<id>``"
+". Dacă nodul în cauză era încă sănătos, acest lucru îl va izola de restul "
+"clusterului și îl va face inoperabil."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3590,6 +3887,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
+"Actualizările viitoare vor fi marcate ca \"cluster-safe\" (aceasta ar trebui "
+"să fie majoritatea) sau \"cluster-unsafe\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3599,6 +3898,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
+"Actualizările sigure pentru cluster pot fi aplicate nodurilor care fac parte "
+"dintr-un cluster fără a le elimina mai întâi din cluster. Cu toate acestea, "
+"la fel ca în cazul tuturor operațiunilor, trebuie să vă asigurați că faceți "
+"acest lucru pe câte un nod și într-un cluster în care eliminarea unui nod nu "
+"scade cvorumul (de exemplu, dacă actualizarea eșuează)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3607,14 +3911,21 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
+"Actualizările nesigure pentru clustere trebuie aplicate nodurilor izolate. "
+"Ar trebui să dezmembrați clusterul (eliminând nodurile unul câte unul), să "
+"resetați din fabrică toate nodurile cu excepția unuia, să aplicați "
+"actualizarea la fiecare nod, apoi să faceți ca toate nodurile resetate să se "
+"alăture nodului rămas."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
 msgstr ""
+"Asigurați-vă că efectuați o copie de siguranță înainte de astfel de "
+"operațiuni."
 
 #: ../../source/components/nethsm/clustering.rst:411
 msgid "Reconfiguring an Existing Cluster"
-msgstr ""
+msgstr "Reconfigurarea unui cluster existent"
 
 #: ../../source/components/nethsm/clustering.rst:414
 #, fuzzy
@@ -3628,6 +3939,10 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
+"Un cluster existent (cu două sau mai multe noduri) **nu poate** să își "
+"schimbe CA-ul clusterului în timpul funcționării. Dacă trebuie să modificați "
+"acest certificat: alegeți un nod, eliminați toate celelalte noduri, "
+"actualizați CA, apoi cereți celorlalți membri să se alăture din nou."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3641,6 +3956,11 @@ msgid ""
 "however ensure that you only perform such updates on a single node at a "
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr ""
+"Modificarea configurației de rețea a unui nod (de exemplu, schimbarea IP-"
+"ului acestuia) va informa automat celelalte noduri cu privire la "
+"actualizare. Cu toate acestea, trebuie să vă asigurați că efectuați astfel "
+"de actualizări numai pe un singur nod la un moment dat și într-un cluster în "
+"care pierderea nodului respectiv nu va duce la pierderea cvorumului."
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -37079,4 +37399,3 @@ msgstr "Marcaj decupat Ieșire"
 #~ "modificată. Informații suplimentare ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
-
