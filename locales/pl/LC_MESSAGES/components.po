@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-26 18:36+0000\n"
+"POT-Creation-Date: 2026-03-27 11:29+0000\n"
 "PO-Revision-Date: 2026-03-26 18:57+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2713,10 +2712,10 @@ msgid ""
 "factory-reset + restore. Make sure to back up often. Future releases will"
 " include means to recover from on-disk data."
 msgstr ""
-"Jeśli klaster zostanie utracony (kworum zostanie utracone), jedynym sposobem "
-"na odzyskanie jest fabryczny reset + przywracanie. Należy często tworzyć "
-"kopie zapasowe. Przyszłe wersje będą zawierać środki do odzyskiwania danych "
-"z dysku."
+"Jeśli klaster zostanie utracony (kworum zostanie utracone), jedynym "
+"sposobem na odzyskanie jest fabryczny reset + przywracanie. Należy często"
+" tworzyć kopie zapasowe. Przyszłe wersje będą zawierać środki do "
+"odzyskiwania danych z dysku."
 
 #: ../../source/components/nethsm/clustering.rst:8
 msgid ""
@@ -2747,10 +2746,10 @@ msgstr ""
 "NetHSM od wersji 4.0 obsługuje klastrowanie w celu bezpośredniej "
 "synchronizacji danych między kilkoma NetHSM. Zapewnia to wysoką "
 "częstotliwość generowania kluczy, wysoką dostępność i równoważenie "
-"obciążenia. Klaster NetHSM jest oparty na `etcd <https://etcd.io>`__, który "
-"wykorzystuje algorytm konsensusu `Raft <https://raft.github.io/>`__ dla "
-"zapewnienia silnej spójności. Gwarantuje to, że dane (np. klucze) są "
-"poprawne we wszystkich NetHSM przez cały czas."
+"obciążenia. Klaster NetHSM jest oparty na `etcd <https://etcd.io>`__, "
+"który wykorzystuje algorytm konsensusu `Raft <https://raft.github.io/>`__"
+" dla zapewnienia silnej spójności. Gwarantuje to, że dane (np. klucze) są"
+" poprawne we wszystkich NetHSM przez cały czas."
 
 #: ../../source/components/nethsm/clustering.rst:13
 msgid ""
@@ -2759,10 +2758,10 @@ msgid ""
 "In addition to this document you may want to refer to `etcd's "
 "documentation <https://etcd.io/docs/latest/learning/>`__ too."
 msgstr ""
-"Przed skonfigurowaniem klastra NetHSM należy zapoznać się z tą technologią i "
-"jej ograniczeniami, aby uniknąć przypadkowej awarii i utraty danych. Oprócz "
-"tego dokumentu warto również zapoznać się z dokumentacją `etcd <https://etcd."
-"io/docs/latest/learning/>`__."
+"Przed skonfigurowaniem klastra NetHSM należy zapoznać się z tą "
+"technologią i jej ograniczeniami, aby uniknąć przypadkowej awarii i "
+"utraty danych. Oprócz tego dokumentu warto również zapoznać się z "
+"dokumentacją `etcd <https://etcd.io/docs/latest/learning/>`__."
 
 #: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
@@ -2776,10 +2775,10 @@ msgid ""
 "least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal "
 "amount of healthy, reachable nodes is called the **quorum**."
 msgstr ""
-"Będziemy nazywać \"węzłem\" NetHSM, który ma być częścią klastra. **Klaster "
-"węzłów** ``N`` **będzie działał tak długo, jak długo co najmniej węzły** ``("
-"N/2)+1`` **będą zdrowe i osiągalne.** Ta minimalna liczba zdrowych, "
-"osiągalnych węzłów nazywana jest kworum **** ."
+"Będziemy nazywać \"węzłem\" NetHSM, który ma być częścią klastra. "
+"**Klaster węzłów** ``N`` **będzie działał tak długo, jak długo co "
+"najmniej węzły** ``(N/2)+1`` **będą zdrowe i osiągalne.** Ta minimalna "
+"liczba zdrowych, osiągalnych węzłów nazywana jest kworum **** ."
 
 #: ../../source/components/nethsm/clustering.rst:21
 msgid "This implies the following scenarios."
@@ -2795,17 +2794,17 @@ msgid ""
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr ""
-"W 3-węzłowym klastrze, jeśli jeden węzeł ulegnie awarii (ulegnie awarii lub "
-"stanie się nieosiągalny z powodu warunków sieciowych), dwa pozostałe węzły "
-"będą nadal działać i obsługiwać żądania."
+"W 3-węzłowym klastrze, jeśli jeden węzeł ulegnie awarii (ulegnie awarii "
+"lub stanie się nieosiągalny z powodu warunków sieciowych), dwa pozostałe "
+"węzły będą nadal działać i obsługiwać żądania."
 
 #: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
 " it will be inoperable while isolated (not even read-only)."
 msgstr ""
-"Jeśli uszkodzony węzeł jest nadal zdrowy (np. był to tylko problem z siecią)"
-", nie będzie działał podczas izolacji (nawet tylko do odczytu)."
+"Jeśli uszkodzony węzeł jest nadal zdrowy (np. był to tylko problem z "
+"siecią), nie będzie działał podczas izolacji (nawet tylko do odczytu)."
 
 #: ../../source/components/nethsm/clustering.rst:30
 msgid ""
@@ -2821,9 +2820,9 @@ msgid ""
 "section), factory reset, and go through the join process again from "
 "scratch."
 msgstr ""
-"Jeśli nigdy nie odzyska sprawności, musi zostać usunięty z klastra (patrz "
-"następna sekcja), przywrócony do ustawień fabrycznych i ponownie przejść "
-"przez proces dołączania od zera."
+"Jeśli nigdy nie odzyska sprawności, musi zostać usunięty z klastra (patrz"
+" następna sekcja), przywrócony do ustawień fabrycznych i ponownie przejść"
+" przez proces dołączania od zera."
 
 #: ../../source/components/nethsm/clustering.rst:35
 msgid "A Network Partition Happens and Quorum is Still Reached"
@@ -2836,10 +2835,10 @@ msgid ""
 " in another location B, a network problem isolating A and B would mean "
 "the following:"
 msgstr ""
-"Jest to tylko uogólnienie poprzedniego scenariusza. W 5-węzłowym klastrze, w "
-"którym np. 3 węzły znajdują się w jednej fizycznej lokalizacji A, a 2 węzły "
-"w innej lokalizacji B, problem sieciowy izolujący A i B oznaczałby, co "
-"następuje:"
+"Jest to tylko uogólnienie poprzedniego scenariusza. W 5-węzłowym "
+"klastrze, w którym np. 3 węzły znajdują się w jednej fizycznej "
+"lokalizacji A, a 2 węzły w innej lokalizacji B, problem sieciowy "
+"izolujący A i B oznaczałby, co następuje:"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid ""
@@ -2854,16 +2853,16 @@ msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will stop operating (even read-only)."
 msgstr ""
-"2 węzły w lokalizacji B nie **** spełniają kworum (nadal 3), więc przestaną "
-"działać (nawet tylko do odczytu)."
+"2 węzły w lokalizacji B nie **** spełniają kworum (nadal 3), więc "
+"przestaną działać (nawet tylko do odczytu)."
 
 #: ../../source/components/nethsm/clustering.rst:41
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr ""
-"Jeśli problem z siecią zostanie rozwiązany, 2 węzły dołączą z powrotem do 3 "
-"pozostałych."
+"Jeśli problem z siecią zostanie rozwiązany, 2 węzły dołączą z powrotem do"
+" 3 pozostałych."
 
 #: ../../source/components/nethsm/clustering.rst:44
 msgid "The Quorum is Durably Lost"
@@ -2875,9 +2874,10 @@ msgid ""
 "the cluster and its data completely lost, unless the failure is resolved."
 " In this case, nodes must be factory-reset and a backup must be restored."
 msgstr ""
-"Awaria powodująca utratę kworum przez wszystkie podzbiory klastra spowoduje "
-"całkowitą utratę klastra i jego danych, chyba że awaria zostanie usunięta. W "
-"takim przypadku należy zresetować węzły i przywrócić kopię zapasową."
+"Awaria powodująca utratę kworum przez wszystkie podzbiory klastra "
+"spowoduje całkowitą utratę klastra i jego danych, chyba że awaria "
+"zostanie usunięta. W takim przypadku należy zresetować węzły i przywrócić"
+" kopię zapasową."
 
 #: ../../source/components/nethsm/clustering.rst:48
 msgid ""
@@ -2887,8 +2887,8 @@ msgid ""
 "healthy node is already inoperable since it has lost quorum."
 msgstr ""
 "Może się to zdarzyć na przykład w przypadku awarii pojedynczego węzła w "
-"klastrze 2-węzłowym (gdzie kworum wynosi 2). W takiej sytuacji uszkodzony "
-"węzeł nie może zostać czysto usunięty z klastra po fakcie, ponieważ "
+"klastrze 2-węzłowym (gdzie kworum wynosi 2). W takiej sytuacji uszkodzony"
+" węzeł nie może zostać czysto usunięty z klastra po fakcie, ponieważ "
 "pozostały zdrowy węzeł już nie działa, ponieważ utracił kworum."
 
 #: ../../source/components/nethsm/clustering.rst:50
@@ -2896,8 +2896,8 @@ msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr ""
-"Dlatego zaleca się, aby zawsze mieć nieparzystą liczbę węzłów w klastrze i "
-"często tworzyć kopie zapasowe."
+"Dlatego zaleca się, aby zawsze mieć nieparzystą liczbę węzłów w klastrze "
+"i często tworzyć kopie zapasowe."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid ""
@@ -2909,21 +2909,22 @@ msgid ""
 " network partitions, network misconfigurations, authentication issues or "
 "hardware failures, will require manual action."
 msgstr ""
-"Dla jasności, *tymczasowo* utrata kworum (na przykład w przypadku ponownego "
-"uruchomienia wszystkich węzłów klastra razem lub tymczasowej awarii sieci "
-"izolującej węzły) nie stanowi problemu: po ponownym połączeniu "
-"wystarczającej liczby węzłów (bez konieczności ręcznego ponownego łączenia) "
-"w celu osiągnięcia kworum, klaster wznowi normalne działanie. Tylko trwałe "
-"awarie, takie jak partycje sieciowe, błędna konfiguracja sieci, problemy z "
-"uwierzytelnianiem lub awarie sprzętu, będą wymagały ręcznego działania."
+"Dla jasności, *tymczasowo* utrata kworum (na przykład w przypadku "
+"ponownego uruchomienia wszystkich węzłów klastra razem lub tymczasowej "
+"awarii sieci izolującej węzły) nie stanowi problemu: po ponownym "
+"połączeniu wystarczającej liczby węzłów (bez konieczności ręcznego "
+"ponownego łączenia) w celu osiągnięcia kworum, klaster wznowi normalne "
+"działanie. Tylko trwałe awarie, takie jak partycje sieciowe, błędna "
+"konfiguracja sieci, problemy z uwierzytelnianiem lub awarie sprzętu, będą"
+" wymagały ręcznego działania."
 
 #: ../../source/components/nethsm/clustering.rst:54
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 msgstr ""
-"Więcej informacji można znaleźć w FAQ `etcd <https://etcd.io/docs/v3.6/faq/"
-"#why-an-odd-number-of-cluster-members>`__."
+"Więcej informacji można znaleźć w FAQ `etcd "
+"<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-cluster-members>`__."
 
 #: ../../source/components/nethsm/clustering.rst:57
 msgid "2-Node Cluster"
@@ -2936,10 +2937,10 @@ msgid ""
 "NetHSM or an etcd \"witness\" which could be operated on any host. See "
 "the next section \"Witness\"."
 msgstr ""
-"Dwuwęzłowy aktywny/pasywny klaster nie jest jeszcze obsługiwany i zostanie "
-"dodany w przyszłej wersji. Zalecamy wprowadzenie trzeciego węzła, albo "
-"trzeciego NetHSM, albo \"świadka\" etcd, który może być obsługiwany na "
-"dowolnym hoście. Zobacz następną sekcję \"Świadek\"."
+"Dwuwęzłowy aktywny/pasywny klaster nie jest jeszcze obsługiwany i "
+"zostanie dodany w przyszłej wersji. Zalecamy wprowadzenie trzeciego "
+"węzła, albo trzeciego NetHSM, albo \"świadka\" etcd, który może być "
+"obsługiwany na dowolnym hoście. Zobacz następną sekcję \"Świadek\"."
 
 #: ../../source/components/nethsm/clustering.rst:62
 msgid "Witness"
@@ -2953,11 +2954,11 @@ msgid ""
 "have room to fail, since a 2-node cluster will entirely fail if only one "
 "fails."
 msgstr ""
-"Natura klastrowania z ``etcd`` sprawia, że jest ono tym bardziej niezawodne, "
-"im więcej węzłów znajduje się w klastrze. Jak wyjaśniono w sekcji `"
-"Operational Redundancy`_, klastry powinny mieć co najmniej 3 węzły, aby mieć "
-"miejsce na awarię, ponieważ 2-węzłowy klaster całkowicie zawiedzie, jeśli "
-"zawiedzie tylko jeden."
+"Natura klastrowania z ``etcd`` sprawia, że jest ono tym bardziej "
+"niezawodne, im więcej węzłów znajduje się w klastrze. Jak wyjaśniono w "
+"sekcji `Operational Redundancy`_, klastry powinny mieć co najmniej 3 "
+"węzły, aby mieć miejsce na awarię, ponieważ 2-węzłowy klaster całkowicie "
+"zawiedzie, jeśli zawiedzie tylko jeden."
 
 #: ../../source/components/nethsm/clustering.rst:66
 msgid ""
@@ -2972,12 +2973,13 @@ msgid ""
 msgstr ""
 "Konstrukcja funkcji jest jednak taka, że nie trzeba dodawać pełnego, "
 "rzeczywistego urządzenia NetHSM do klastra, aby osiągnąć stabilną liczbę "
-"węzłów. Zamiast tego można samodzielnie wdrożyć i dodać węzeł \"świadek\". "
-"Taki węzeł to po prostu instancja ``etcd`` uruchomiona na wybranej maszynie ("
-"lub w kontenerze) i podłączona do klastra. Zostanie on rozpoznany jako "
-"normalny węzeł z prawdziwych urządzeń w klastrze i otrzyma wszystkie dane i "
-"aktualizacje z urządzeń (ale oczywiście nie będzie można wykonywać na nim "
-"żadnych operacji HSM - przechowuje on tylko dane)."
+"węzłów. Zamiast tego można samodzielnie wdrożyć i dodać węzeł "
+"\"świadek\". Taki węzeł to po prostu instancja ``etcd`` uruchomiona na "
+"wybranej maszynie (lub w kontenerze) i podłączona do klastra. Zostanie on"
+" rozpoznany jako normalny węzeł z prawdziwych urządzeń w klastrze i "
+"otrzyma wszystkie dane i aktualizacje z urządzeń (ale oczywiście nie "
+"będzie można wykonywać na nim żadnych operacji HSM - przechowuje on tylko"
+" dane)."
 
 #: ../../source/components/nethsm/clustering.rst:69
 #, fuzzy
@@ -2990,10 +2992,10 @@ msgid ""
 "storage backend of all nodes in the cluster (e.g. you can dump all "
 "entries and corresponding values with ``etcdctl get \"/\" \"0\"``)."
 msgstr ""
-"Węzeł świadek (lub każdy, kto ma do niego dostęp) ma bezpośredni dostęp do "
-"zaplecza pamięci masowej wszystkich węzłów w klastrze (np. można zrzucić "
-"wszystkie wpisy i odpowiadające im wartości za pomocą ``etcdctl get \"/\" \"0"
-"\"``)."
+"Węzeł świadek (lub każdy, kto ma do niego dostęp) ma bezpośredni dostęp "
+"do zaplecza pamięci masowej wszystkich węzłów w klastrze (np. można "
+"zrzucić wszystkie wpisy i odpowiadające im wartości za pomocą ``etcdctl "
+"get \"/\" \"0\"``)."
 
 #: ../../source/components/nethsm/clustering.rst:73
 msgid ""
@@ -3002,9 +3004,9 @@ msgid ""
 "(with either a device key for node-specific values or the domain keys for"
 " others), ensuring the confidentiality of sensitive data."
 msgstr ""
-"Jednak z wyjątkiem wersji konfiguracji (``/config/version``, która zawsze "
-"powinna wynosić \"1\"), ściśle wszystkie wartości są szyfrowane (kluczem "
-"urządzenia dla wartości specyficznych dla węzła lub kluczami domeny dla "
+"Jednak z wyjątkiem wersji konfiguracji (``/config/version``, która zawsze"
+" powinna wynosić \"1\"), ściśle wszystkie wartości są szyfrowane (kluczem"
+" urządzenia dla wartości specyficznych dla węzła lub kluczami domeny dla "
 "innych), zapewniając poufność wrażliwych danych."
 
 #: ../../source/components/nethsm/clustering.rst:75
@@ -3017,17 +3019,17 @@ msgid ""
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
-"zapisać śmieci jako wartość dowolnego wpisu w magazynie, co spowoduje, że "
-"węzły nie będą mogły go odszyfrować (co może prowadzić do awarii niektórych "
-"wpisów systemowych)."
+"zapisać śmieci jako wartość dowolnego wpisu w magazynie, co spowoduje, że"
+" węzły nie będą mogły go odszyfrować (co może prowadzić do awarii "
+"niektórych wpisów systemowych)."
 
 #: ../../source/components/nethsm/clustering.rst:78
 msgid ""
 "list entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
-"lista nazw wpisów, takich jak użytkownicy, przestrzenie nazw i klucze, które "
-"można uznać za wrażliwe."
+"lista nazw wpisów, takich jak użytkownicy, przestrzenie nazw i klucze, "
+"które można uznać za wrażliwe."
 
 #: ../../source/components/nethsm/clustering.rst:81
 msgid "What is Shared Between Nodes"
@@ -3042,12 +3044,12 @@ msgid ""
 "node. This includes the backup **restore** operation which works as "
 "normal."
 msgstr ""
-"Posiadanie klastra NetHSM oznacza, że większość danych jest współdzielona "
-"między nimi. Każde dodanie, modyfikacja lub usunięcie kluczy, użytkowników "
-"lub przestrzeni nazw w jednym węźle jest ostatecznie odzwierciedlane we "
-"wszystkich pozostałych. Ogólnie rzecz biorąc, każda operacja modyfikująca "
-"stan modyfikuje stan każdego węzła. Obejmuje to operację tworzenia kopii "
-"zapasowej **restore**, która działa normalnie."
+"Posiadanie klastra NetHSM oznacza, że większość danych jest współdzielona"
+" między nimi. Każde dodanie, modyfikacja lub usunięcie kluczy, "
+"użytkowników lub przestrzeni nazw w jednym węźle jest ostatecznie "
+"odzwierciedlane we wszystkich pozostałych. Ogólnie rzecz biorąc, każda "
+"operacja modyfikująca stan modyfikuje stan każdego węzła. Obejmuje to "
+"operację tworzenia kopii zapasowej **restore**, która działa normalnie."
 
 #: ../../source/components/nethsm/clustering.rst:85
 msgid ""
@@ -3055,9 +3057,10 @@ msgid ""
 "stored in the shared ``etcd`` store but remains node-specific, and what "
 "data is fully shared across nodes."
 msgstr ""
-"Poniższe sekcje szczegółowo opisują, jakie dane są w pełni lokalne, jakie "
-"dane są przechowywane we współdzielonym magazynie ``etcd``, ale pozostają "
-"specyficzne dla węzła, a jakie dane są w pełni współdzielone między węzłami."
+"Poniższe sekcje szczegółowo opisują, jakie dane są w pełni lokalne, jakie"
+" dane są przechowywane we współdzielonym magazynie ``etcd``, ale "
+"pozostają specyficzne dla węzła, a jakie dane są w pełni współdzielone "
+"między węzłami."
 
 #: ../../source/components/nethsm/clustering.rst:88
 msgid "Not Stored in etcd"
@@ -3081,9 +3084,10 @@ msgid ""
 "node. It is hence *accessible* to every node but not *uniform* across "
 "nodes (each node can have a different value for this data)."
 msgstr ""
-"Następujące dane są przechowywane w ``etcd`` w różnych zakresach dla każdego "
-"węzła. Jest więc *dostępny* dla każdego węzła, ale nie *jednolity* między "
-"węzłami (każdy węzeł może mieć inną wartość dla tych danych)."
+"Następujące dane są przechowywane w ``etcd`` w różnych zakresach dla "
+"każdego węzła. Jest więc *dostępny* dla każdego węzła, ale nie "
+"*jednolity* między węzłami (każdy węzeł może mieć inną wartość dla tych "
+"danych)."
 
 #: ../../source/components/nethsm/clustering.rst:97
 #: ../../source/components/nethsm/clustering.rst:120
@@ -3133,9 +3137,9 @@ msgid ""
 msgstr ""
 "Należy pamiętać, że chociaż każdy węzeł ma własną wersję zablokowanego "
 "klucza domeny (ponieważ każdy węzeł blokuje go za pomocą własnego klucza "
-"urządzenia lub hasła odblokowującego), klucz domeny jest **współdzielony** "
-"między węzłami (aby uzyskać dostęp do ich współdzielonych danych HSM, takich "
-"jak klucze)."
+"urządzenia lub hasła odblokowującego), klucz domeny jest "
+"**współdzielony** między węzłami (aby uzyskać dostęp do ich "
+"współdzielonych danych HSM, takich jak klucze)."
 
 #: ../../source/components/nethsm/clustering.rst:110
 msgid "Stored in etcd and Shared"
@@ -3146,8 +3150,8 @@ msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr ""
-"Wszystkie poniższe dane są przechowywane w ``etcd`` w zakresie globalnym, "
-"więc są jednolite we wszystkich węzłach klastra:"
+"Wszystkie poniższe dane są przechowywane w ``etcd`` w zakresie globalnym,"
+" więc są jednolite we wszystkich węzłach klastra:"
 
 #: ../../source/components/nethsm/clustering.rst:114
 msgid "HSM data:"
@@ -3174,8 +3178,7 @@ msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
 msgid "cluster CA (used to authenticate nodes across cluster)"
-msgstr ""
-"urząd certyfikacji klastra (używany do uwierzytelniania węzłów w klastrze)"
+msgstr "urząd certyfikacji klastra (używany do uwierzytelniania węzłów w klastrze)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
@@ -3192,8 +3195,8 @@ msgstr ""
 "Należy pamiętać, że na razie wersja config/domain store może być tylko "
 "wersją 1 (jeśli Twoja wersja oprogramowania obsługuje klastrowanie, to "
 "właśnie ją posiadasz). Więcej informacji na temat bezpieczeństwa "
-"instalowania aktualizacji oprogramowania w klastrze można znaleźć w sekcji `"
-"Software Updates in Clusters`_."
+"instalowania aktualizacji oprogramowania w klastrze można znaleźć w "
+"sekcji `Software Updates in Clusters`_."
 
 #: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
@@ -3205,8 +3208,8 @@ msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr ""
-"Każdy klaster będzie początkowo składał się z jednego węzła. Nowe węzły będą "
-"dołączać do klastra jeden po drugim."
+"Każdy klaster będzie początkowo składał się z jednego węzła. Nowe węzły "
+"będą dołączać do klastra jeden po drugim."
 
 #: ../../source/components/nethsm/clustering.rst:134
 #, fuzzy
@@ -3218,8 +3221,8 @@ msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr ""
-"Ruch sieciowy między węzłami jest szyfrowany i uwierzytelniany przy użyciu "
-"ich certyfikatu TLS."
+"Ruch sieciowy między węzłami jest szyfrowany i uwierzytelniany przy "
+"użyciu ich certyfikatu TLS."
 
 #: ../../source/components/nethsm/clustering.rst:138
 msgid ""
@@ -3227,9 +3230,9 @@ msgid ""
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr ""
-"Wszystkie węzły, które mają być częścią tego samego klastra, muszą najpierw "
-"zainstalować wspólny urząd certyfikacji (CA), który pozwoli im zweryfikować, "
-"czy inne węzły są legalne."
+"Wszystkie węzły, które mają być częścią tego samego klastra, muszą "
+"najpierw zainstalować wspólny urząd certyfikacji (CA), który pozwoli im "
+"zweryfikować, czy inne węzły są legalne."
 
 #: ../../source/components/nethsm/clustering.rst:140
 msgid ""
@@ -3266,9 +3269,9 @@ msgid ""
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr ""
-"Użytkownicy powinni utworzyć urząd certyfikacji za pomocą własnych środków i "
-"zgodnie z własnymi ograniczeniami operacyjnymi, upewniając się, że pozwala "
-"on co najmniej na użycie klucza ``keyCertSign``."
+"Użytkownicy powinni utworzyć urząd certyfikacji za pomocą własnych "
+"środków i zgodnie z własnymi ograniczeniami operacyjnymi, upewniając się,"
+" że pozwala on co najmniej na użycie klucza ``keyCertSign``."
 
 #: ../../source/components/nethsm/clustering.rst:152
 msgid "For example, a minimal CA can be created with ``openssl``:"
@@ -3301,12 +3304,12 @@ msgid ""
 "requested for the CSR by prefixing \"IP:\" to the names, as in "
 "``openssl``:"
 msgstr ""
-"Aby prawidłowo uwierzytelnić węzły, zaplecze klastrowania (etcd) oczekuje, "
-"że każdy węzeł ma certyfikat z prawidłowo wypełnionym polem Subject Alt "
-"Names (SAN). W szczególności węzły, które mają być osiągalne tylko za "
-"pośrednictwem ich adresu IP, muszą mieć odpowiednią sieć SAN IP w swoim "
-"certyfikacie. Sieci SAN IP mogą być wymagane dla CSR poprzez dodanie "
-"prefiksu \"IP:\" do nazw, jak w ``openssl``:"
+"Aby prawidłowo uwierzytelnić węzły, zaplecze klastrowania (etcd) "
+"oczekuje, że każdy węzeł ma certyfikat z prawidłowo wypełnionym polem "
+"Subject Alt Names (SAN). W szczególności węzły, które mają być osiągalne "
+"tylko za pośrednictwem ich adresu IP, muszą mieć odpowiednią sieć SAN IP "
+"w swoim certyfikacie. Sieci SAN IP mogą być wymagane dla CSR poprzez "
+"dodanie prefiksu \"IP:\" do nazw, jak w ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:170
 msgid ""
@@ -3314,9 +3317,9 @@ msgid ""
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr ""
-"Biorąc pod uwagę uzyskany CSR (nazwijmy go ``nethsm.csr``), możemy następnie "
-"wygenerować dla niego certyfikat, gotowy do zainstalowania. Na przykład z "
-"``openssl``:"
+"Biorąc pod uwagę uzyskany CSR (nazwijmy go ``nethsm.csr``), możemy "
+"następnie wygenerować dla niego certyfikat, gotowy do zainstalowania. Na "
+"przykład z ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:177
 #, fuzzy
@@ -3340,9 +3343,9 @@ msgid ""
 msgstr ""
 "Wreszcie, CA (``CA.pem``) można teraz zainstalować za pomocą punktu "
 "końcowego ``/config/tls/cluster-ca.pem`` (patrz dokumentacja API ` "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). Jest to możliwe "
-"tylko wtedy, gdy zainstalowany certyfikat TLS jest przez niego podpisany. W "
-"przeciwnym razie operacja zostanie odrzucona."
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). Jest to "
+"możliwe tylko wtedy, gdy zainstalowany certyfikat TLS jest przez niego "
+"podpisany. W przeciwnym razie operacja zostanie odrzucona."
 
 #: ../../source/components/nethsm/clustering.rst:182
 msgid "This process has to be repeated for every node."
@@ -3357,8 +3360,9 @@ msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
 msgstr ""
-"Upewnij się, że każdy węzeł został zaopatrzony w dokładny czas systemowy. "
-"Jeśli nie, dostosuj ich zegary za pomocą punktu końcowego ``/config/time``."
+"Upewnij się, że każdy węzeł został zaopatrzony w dokładny czas systemowy."
+" Jeśli nie, dostosuj ich zegary za pomocą punktu końcowego "
+"``/config/time``."
 
 #: ../../source/components/nethsm/clustering.rst:190
 #, fuzzy
@@ -3372,7 +3376,8 @@ msgstr "Dodanie węzła do klastra odbywa się w dwóch krokach:"
 #: ../../source/components/nethsm/clustering.rst:194
 msgid "register the addition to the cluster (through any one of its members)"
 msgstr ""
-"zarejestrować dodatek do klastra (za pośrednictwem dowolnego z jego członków)"
+"zarejestrować dodatek do klastra (za pośrednictwem dowolnego z jego "
+"członków)"
 
 #: ../../source/components/nethsm/clustering.rst:195
 msgid "tell the new node to join"
@@ -3389,9 +3394,9 @@ msgid ""
 "be used to register a new joiner (see the API documentation of the "
 "``/config/backup-passphrase`` endpoint)."
 msgstr ""
-"Najpierw upewnij się, że zapasowe hasło jest skonfigurowane na węźle, który "
-"zostanie użyty do zarejestrowania nowego łącznika (zobacz dokumentację API "
-"punktu końcowego ``/config/backup-passphrase``)."
+"Najpierw upewnij się, że zapasowe hasło jest skonfigurowane na węźle, "
+"który zostanie użyty do zarejestrowania nowego łącznika (zobacz "
+"dokumentację API punktu końcowego ``/config/backup-passphrase``)."
 
 #: ../../source/components/nethsm/clustering.rst:203
 msgid "Registering a New Node"
@@ -3410,8 +3415,8 @@ msgstr ""
 "modyfikując próg kworum, nawet jeśli węzeł jeszcze nie dołączył. Może to "
 "spowodować, że istniejące węzły nie będą działać do czasu faktycznego "
 "dołączenia nowego węzła. Zapoznaj się z dokumentacją API ` "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __ i sekcją `"
-"Operational Redundancy`_ tego dokumentu."
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __ i sekcją "
+"`Operational Redundancy`_ tego dokumentu."
 
 #: ../../source/components/nethsm/clustering.rst:208
 msgid ""
@@ -3421,11 +3426,11 @@ msgid ""
 "port **must** be 2380, so ensure any firewall between the nodes will "
 "allow TCP traffic on that port."
 msgstr ""
-"Należy mieć pod ręką adres IP węzła, który się przyłączy. Pełny adres URL ** "
-"(nazywany również *peer URL* w terminologii ``etcd``) tego węzła będzie "
-"``https://<IP_of_node>:2380`` (np. ``https://192.168.1.1:2380``). Port "
-"**musi** być 2380, więc upewnij się, że firewall między węzłami zezwala na "
-"ruch TCP na tym porcie."
+"Należy mieć pod ręką adres IP węzła, który się przyłączy. Pełny adres URL"
+" ** (nazywany również *peer URL* w terminologii ``etcd``) tego węzła "
+"będzie ``https://<IP_of_node>:2380`` (np. ``https://192.168.1.1:2380``). "
+"Port **musi** być 2380, więc upewnij się, że firewall między węzłami "
+"zezwala na ruch TCP na tym porcie."
 
 #: ../../source/components/nethsm/clustering.rst:210
 msgid ""
@@ -3433,9 +3438,9 @@ msgid ""
 "/cluster/members`` on the node that is expected to join. This should list"
 " just one member: itself."
 msgstr ""
-"Możesz dwukrotnie sprawdzić, czy adres URL jest poprawny, wywołując ``GET /"
-"cluster/members`` na węźle, który ma zostać dołączony. Powinno to wyświetlić "
-"tylko jednego członka: samego siebie."
+"Możesz dwukrotnie sprawdzić, czy adres URL jest poprawny, wywołując ``GET"
+" /cluster/members`` na węźle, który ma zostać dołączony. Powinno to "
+"wyświetlić tylko jednego członka: samego siebie."
 
 #: ../../source/components/nethsm/clustering.rst:212
 msgid ""
@@ -3446,12 +3451,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a "
 "JSON body containing the URL."
 msgstr ""
-"Następnie zarejestruj ten oczekiwany adres URL na dowolnym istniejącym węźle "
-"klastra (jeśli nie masz jeszcze klastra, zrób to na NetHSM, który posłuży "
-"jako początkowy węzeł klastra). Odbywa się to za pomocą punktu końcowego ``"
-"POST /cluster/members`` (patrz dokumentacja API ` <https://nethsmdemo."
-"nitrokey.com/api_docs/index.html>` __), przekazując mu treść JSON "
-"zawierającą adres URL."
+"Następnie zarejestruj ten oczekiwany adres URL na dowolnym istniejącym "
+"węźle klastra (jeśli nie masz jeszcze klastra, zrób to na NetHSM, który "
+"posłuży jako początkowy węzeł klastra). Odbywa się to za pomocą punktu "
+"końcowego ``POST /cluster/members`` (patrz dokumentacja API ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __), przekazując "
+"mu treść JSON zawierającą adres URL."
 
 #: ../../source/components/nethsm/clustering.rst:214
 msgid "If successful, this returns a JSON body of the form:"
@@ -3465,11 +3470,11 @@ msgid ""
 " key encrypted by both the unlock and backup passphrases — so a backup "
 "passphrase must have been configured before."
 msgstr ""
-"który zawiera informacje niezbędne do dołączenia nowego węzła do klastra. W "
-"szczególności zawiera listę wszystkich członków klastra (gdzie członek z "
-"pustą nazwą jest nowym członkiem). Zawiera również klucz domeny zaszyfrowany "
-"zarówno przez hasło odblokowujące, jak i zapasowe - więc hasło zapasowe "
-"musiało zostać skonfigurowane wcześniej."
+"który zawiera informacje niezbędne do dołączenia nowego węzła do klastra."
+" W szczególności zawiera listę wszystkich członków klastra (gdzie członek"
+" z pustą nazwą jest nowym członkiem). Zawiera również klucz domeny "
+"zaszyfrowany zarówno przez hasło odblokowujące, jak i zapasowe - więc "
+"hasło zapasowe musiało zostać skonfigurowane wcześniej."
 
 #: ../../source/components/nethsm/clustering.rst:238
 msgid "Keep that response for the next step."
@@ -3488,11 +3493,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node "
 "that is expected to join."
 msgstr ""
-"Weź odpowiedź z ostatniego kroku i dołącz do niej pole ``backupPassphrase`` "
-"zawierające zapasowe hasło węzła, na którym zarejestrowano nowego "
-"dołączającego, i przekaż te dane do wywołania ``POST /cluster/join`` (patrz "
-"dokumentacja API ` <https://nethsmdemo.nitrokey.com/api_docs/index.html>` __)"
-" na węźle, który ma dołączyć."
+"Weź odpowiedź z ostatniego kroku i dołącz do niej pole "
+"``backupPassphrase`` zawierające zapasowe hasło węzła, na którym "
+"zarejestrowano nowego dołączającego, i przekaż te dane do wywołania "
+"``POST /cluster/join`` (patrz dokumentacja API ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __) na węźle, "
+"który ma dołączyć."
 
 #: ../../source/components/nethsm/clustering.rst:245
 msgid ""
@@ -3500,9 +3506,10 @@ msgid ""
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr ""
-"Zakładając, że zarówno klaster, jak i węzeł mogą się ze sobą skontaktować, "
-"spowoduje to faktyczne dołączenie, wymazując dane nowego dołączającego, aby "
-"zamiast tego zsynchronizować jego stan ze stanem klastra."
+"Zakładając, że zarówno klaster, jak i węzeł mogą się ze sobą "
+"skontaktować, spowoduje to faktyczne dołączenie, wymazując dane nowego "
+"dołączającego, aby zamiast tego zsynchronizować jego stan ze stanem "
+"klastra."
 
 #: ../../source/components/nethsm/clustering.rst:247
 msgid ""
@@ -3514,12 +3521,12 @@ msgid ""
 "reverted by a factory reset."
 msgstr ""
 "W zależności od warunków sieciowych i klastra operacja ta może potrwać "
-"kilkadziesiąt sekund. Jeśli ta operacja nie powiedzie się natychmiast (np. "
-"klaster nie był osiągalny lub uwierzytelnianie nie powiodło się), stan tego "
-"węzła nie zostanie wyczyszczony, a połączenie zostanie przywrócone. Jednak "
-"gdy tylko pierwsze dołączenie zakończy się powodzeniem, operacja ta jest "
-"ostateczna i można ją przywrócić tylko poprzez przywrócenie ustawień "
-"fabrycznych."
+"kilkadziesiąt sekund. Jeśli ta operacja nie powiedzie się natychmiast "
+"(np. klaster nie był osiągalny lub uwierzytelnianie nie powiodło się), "
+"stan tego węzła nie zostanie wyczyszczony, a połączenie zostanie "
+"przywrócone. Jednak gdy tylko pierwsze dołączenie zakończy się "
+"powodzeniem, operacja ta jest ostateczna i można ją przywrócić tylko "
+"poprzez przywrócenie ustawień fabrycznych."
 
 #: ../../source/components/nethsm/clustering.rst:249
 msgid ""
@@ -3529,11 +3536,11 @@ msgid ""
 "(unlock passphrases remain node-specific and are not shared across "
 "nodes)."
 msgstr ""
-"Jeśli to połączenie się powiedzie, węzeł znajdzie się w stanie ``Locked`` i "
-"musi zostać odblokowany za pomocą hasła odblokowującego węzła, który został "
-"użyty do rejestracji. Następnie hasło odblokowujące może zostać zmienione ("
-"hasła odblokowujące pozostają specyficzne dla węzła i nie są współdzielone "
-"między węzłami)."
+"Jeśli to połączenie się powiedzie, węzeł znajdzie się w stanie ``Locked``"
+" i musi zostać odblokowany za pomocą hasła odblokowującego węzła, który "
+"został użyty do rejestracji. Następnie hasło odblokowujące może zostać "
+"zmienione (hasła odblokowujące pozostają specyficzne dla węzła i nie są "
+"współdzielone między węzłami)."
 
 #: ../../source/components/nethsm/clustering.rst:252
 msgid ""
@@ -3546,11 +3553,11 @@ msgid ""
 msgstr ""
 "Nawet po pomyślnym dołączeniu, jeśli baza danych klastra jest duża lub "
 "klaster jest zajęty, może upłynąć trochę czasu, zanim nowy podmiot "
-"dołączający w pełni zsynchronizuje swój stan. W tym czasie wszystkie węzły ("
-"w tym w szczególności nowy łącznik) mogą być mniej responsywne lub nie "
-"reagować. W szczególności nowy łącznik może początkowo zwracać błędy podczas "
-"próby jego odblokowania. W takim przypadku należy dać mu trochę czasu i "
-"spróbować ponownie."
+"dołączający w pełni zsynchronizuje swój stan. W tym czasie wszystkie "
+"węzły (w tym w szczególności nowy łącznik) mogą być mniej responsywne lub"
+" nie reagować. W szczególności nowy łącznik może początkowo zwracać błędy"
+" podczas próby jego odblokowania. W takim przypadku należy dać mu trochę "
+"czasu i spróbować ponownie."
 
 #: ../../source/components/nethsm/clustering.rst:255
 #, fuzzy
@@ -3568,9 +3575,9 @@ msgid ""
 "address (at least) reachable by the other members of your cluster. TCP "
 "traffic to and from port 2380 needs to be allowed."
 msgstr ""
-"Potrzebne będzie środowisko z dostępnym ``etcd`` v3.6, z adresem IPv4 (co "
-"najmniej) osiągalnym przez innych członków klastra. Ruch TCP do i z portu "
-"2380 musi być dozwolony."
+"Potrzebne będzie środowisko z dostępnym ``etcd`` v3.6, z adresem IPv4 (co"
+" najmniej) osiągalnym przez innych członków klastra. Ruch TCP do i z "
+"portu 2380 musi być dozwolony."
 
 #: ../../source/components/nethsm/clustering.rst:262
 msgid ""
@@ -3590,9 +3597,9 @@ msgid ""
 "`Creating and Installing a CA`_ section. We'll store it in "
 "``/var/etcd/CA.pem``."
 msgstr ""
-"Przenieś na maszynę certyfikat CA, który jest używany do uwierzytelniania "
-"węzłów w klastrze. Powinieneś go utworzyć w sekcji `Tworzenie i instalacja "
-"CA`_. Będziemy go przechowywać w ``/var/etcd/CA.pem``."
+"Przenieś na maszynę certyfikat CA, który jest używany do uwierzytelniania"
+" węzłów w klastrze. Powinieneś go utworzyć w sekcji `Tworzenie i "
+"instalacja CA`_. Będziemy go przechowywać w ``/var/etcd/CA.pem``."
 
 #: ../../source/components/nethsm/clustering.rst:266
 msgid ""
@@ -3600,8 +3607,8 @@ msgid ""
 "with the CA so it can communicate with its peers. This can be done for "
 "example through ``openssl``:"
 msgstr ""
-"Następnie należy utworzyć certyfikat dla świadka i podpisać go w urzędzie "
-"certyfikacji, aby mógł komunikować się ze swoimi rówieśnikami. Można to "
+"Następnie należy utworzyć certyfikat dla świadka i podpisać go w urzędzie"
+" certyfikacji, aby mógł komunikować się ze swoimi rówieśnikami. Można to "
 "zrobić na przykład poprzez ``openssl``:"
 
 #: ../../source/components/nethsm/clustering.rst:279
@@ -3609,8 +3616,8 @@ msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr ""
-"Przechowuj również wynikowe ``witness.key`` i ``witness.pem`` w ``/var/"
-"etcd``."
+"Przechowuj również wynikowe ``witness.key`` i ``witness.pem`` w "
+"``/var/etcd``."
 
 #: ../../source/components/nethsm/clustering.rst:282
 #, fuzzy
@@ -3623,17 +3630,17 @@ msgid ""
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr ""
-"Postępuj zgodnie z normalnymi instrukcjami z sekcji `Registration a New Node`"
-"_, aby zasygnalizować istniejącemu klastrowi dodanie nowego członka z "
-"podanym adresem URL."
+"Postępuj zgodnie z normalnymi instrukcjami z sekcji `Registration a New "
+"Node`_, aby zasygnalizować istniejącemu klastrowi dodanie nowego członka "
+"z podanym adresem URL."
 
 #: ../../source/components/nethsm/clustering.rst:286
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr ""
-"Zapisz odpowiedź z klastra: powinna ona zawierać listę członków klastra i "
-"zestaw dołączający (ta część nie będzie potrzebna)."
+"Zapisz odpowiedź z klastra: powinna ona zawierać listę członków klastra i"
+" zestaw dołączający (ta część nie będzie potrzebna)."
 
 #: ../../source/components/nethsm/clustering.rst:289
 #, fuzzy
@@ -3647,18 +3654,18 @@ msgid ""
 "*making sure the names are unique*. We will use \"witness1\" in the "
 "following examples."
 msgstr ""
-"W przeciwieństwie do NetHSM, które automatycznie wybierają dla siebie nazwę "
-"węzła (używając identyfikatora urządzenia), należy wybrać nazwę dla każdego "
-"dodawanego świadka, *upewniając się, że nazwy są unikalne*. W poniższych "
-"przykładach użyjemy nazwy \"witness1\"."
+"W przeciwieństwie do NetHSM, które automatycznie wybierają dla siebie "
+"nazwę węzła (używając identyfikatora urządzenia), należy wybrać nazwę dla"
+" każdego dodawanego świadka, *upewniając się, że nazwy są unikalne*. W "
+"poniższych przykładach użyjemy nazwy \"witness1\"."
 
 #: ../../source/components/nethsm/clustering.rst:293
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr ""
-"Wraz z odpowiedzią NetHSM na rejestrację świadka należy przygotować zmienne "
-"formularza:"
+"Wraz z odpowiedzią NetHSM na rejestrację świadka należy przygotować "
+"zmienne formularza:"
 
 #: ../../source/components/nethsm/clustering.rst:302
 msgid ""
@@ -3666,17 +3673,17 @@ msgid ""
 "can generate these last two variables automatically with the following "
 "``jq`` expressions:"
 msgstr ""
-"Zakładając, że odpowiedź NetHSM jest przechowywana w pliku ``response.json``"
-", można wygenerować te dwie ostatnie zmienne automatycznie za pomocą "
-"następujących wyrażeń ``jq``:"
+"Zakładając, że odpowiedź NetHSM jest przechowywana w pliku "
+"``response.json``, można wygenerować te dwie ostatnie zmienne "
+"automatycznie za pomocą następujących wyrażeń ``jq``:"
 
 #: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr ""
-"Na przykład w przypadku przykładowej odpowiedzi podanej w sekcji `"
-"Rejestracja nowego węzła`_, otrzymasz:"
+"Na przykład w przypadku przykładowej odpowiedzi podanej w sekcji "
+"`Rejestracja nowego węzła`_, otrzymasz:"
 
 #: ../../source/components/nethsm/clustering.rst:318
 msgid ""
@@ -3701,8 +3708,9 @@ msgid ""
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr ""
-"Uruchom ``etcd`` w preferowany sposób (ręcznie, ``systemd`` usługa, kontener "
-"itp.), wskazując na plik konfiguracyjny utworzony w poprzednim kroku:"
+"Uruchom ``etcd`` w preferowany sposób (ręcznie, ``systemd`` usługa, "
+"kontener itp.), wskazując na plik konfiguracyjny utworzony w poprzednim "
+"kroku:"
 
 #: ../../source/components/nethsm/clustering.rst:359
 msgid ""
@@ -3710,9 +3718,9 @@ msgid ""
 "After some time, you should be able to check that it is healthy with the "
 "``etcdctl`` client:"
 msgstr ""
-"Powinieneś zobaczyć, jak się uruchamia, dołącza do klastra i dogania dane. "
-"Po pewnym czasie powinieneś być w stanie sprawdzić, czy jest zdrowy za "
-"pomocą klienta ``etcdctl``:"
+"Powinieneś zobaczyć, jak się uruchamia, dołącza do klastra i dogania "
+"dane. Po pewnym czasie powinieneś być w stanie sprawdzić, czy jest zdrowy"
+" za pomocą klienta ``etcdctl``:"
 
 #: ../../source/components/nethsm/clustering.rst:365
 msgid "This key should exist and contain \"1\"."
@@ -3727,8 +3735,8 @@ msgid ""
 msgstr ""
 "Upewnij się, że proces ten jest nadal uruchomiony, ponieważ jest teraz "
 "prawidłowym członkiem klastra. Jeśli musisz go zlikwidować, najpierw "
-"prawidłowo usuń go z klastra (zobacz dedykowaną sekcję). Jeśli zmieni się "
-"jego osiągalny adres IP, zaktualizuj jego adres URL z klastra."
+"prawidłowo usuń go z klastra (zobacz dedykowaną sekcję). Jeśli zmieni się"
+" jego osiągalny adres IP, zaktualizuj jego adres URL z klastra."
 
 #: ../../source/components/nethsm/clustering.rst:370
 #, fuzzy
@@ -3747,11 +3755,11 @@ msgid ""
 "whole cluster, including node-specific fields (though these will be "
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr ""
-"Operacja tworzenia kopii zapasowej działa tak samo, jak bez klastra i można "
-"jej zażądać z dowolnego węzła klastra. Spowoduje ona utworzenie kopii "
-"zapasowej danych dla całego klastra, w tym pól specyficznych dla węzła (choć "
-"zostaną one zignorowane, chyba że kopia zapasowa zostanie przywrócona na "
-"nieobsługiwanym węźle)."
+"Operacja tworzenia kopii zapasowej działa tak samo, jak bez klastra i "
+"można jej zażądać z dowolnego węzła klastra. Spowoduje ona utworzenie "
+"kopii zapasowej danych dla całego klastra, w tym pól specyficznych dla "
+"węzła (choć zostaną one zignorowane, chyba że kopia zapasowa zostanie "
+"przywrócona na nieobsługiwanym węźle)."
 
 #: ../../source/components/nethsm/clustering.rst:377
 msgid ""
@@ -3760,11 +3768,11 @@ msgid ""
 "operational clusters will not affect configuration values (only keys, "
 "users, namespaces), like any other partial restore."
 msgstr ""
-"Kopię zapasową wykonaną w klastrze można przywrócić w tym samym klastrze, "
-"nawet jeśli od tego czasu niektóre węzły zostały dodane lub usunięte. Takie "
-"przywracanie wykonane na klastrach operacyjnych nie wpłynie na wartości "
-"konfiguracyjne (tylko klucze, użytkownicy, przestrzenie nazw), jak każde "
-"inne częściowe przywracanie."
+"Kopię zapasową wykonaną w klastrze można przywrócić w tym samym klastrze,"
+" nawet jeśli od tego czasu niektóre węzły zostały dodane lub usunięte. "
+"Takie przywracanie wykonane na klastrach operacyjnych nie wpłynie na "
+"wartości konfiguracyjne (tylko klucze, użytkownicy, przestrzenie nazw), "
+"jak każde inne częściowe przywracanie."
 
 #: ../../source/components/nethsm/clustering.rst:379
 msgid ""
@@ -3772,17 +3780,19 @@ msgid ""
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr ""
-"Przywrócenie kopii zapasowej na nieobsługiwanym węźle spowoduje przywrócenie "
-"pól specyficznych dla węzła (takich jak konfiguracja sieci, certyfikaty itp.)"
-" węzła, który został użyty do utworzenia kopii zapasowej."
+"Przywrócenie kopii zapasowej na nieobsługiwanym węźle spowoduje "
+"przywrócenie pól specyficznych dla węzła (takich jak konfiguracja sieci, "
+"certyfikaty itp.) węzła, który został użyty do utworzenia kopii "
+"zapasowej."
 
 #: ../../source/components/nethsm/clustering.rst:381
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr ""
-"Przywracanie dużej kopii zapasowej może przez pewien czas obciążać klaster, "
-"podczas gdy węzeł stosujący przywracanie przekazuje zmiany do innych."
+"Przywracanie dużej kopii zapasowej może przez pewien czas obciążać "
+"klaster, podczas gdy węzeł stosujący przywracanie przekazuje zmiany do "
+"innych."
 
 #: ../../source/components/nethsm/clustering.rst:383
 msgid ""
@@ -3799,10 +3809,11 @@ msgid ""
 " was in a cluster with node B, B will become inoperable as Z's domain key"
 " will not be restored on B."
 msgstr ""
-"Przywrócenie na węźle A kopii zapasowej wykonanej na innym węźle Z z innym "
-"kluczem domeny spowoduje poprawne przepisanie klucza domeny A, tak jak "
-"poprzednio. Jeśli jednak A znajdował się w klastrze z węzłem B, B przestanie "
-"działać, ponieważ klucz domeny Z nie zostanie przywrócony na B."
+"Przywrócenie na węźle A kopii zapasowej wykonanej na innym węźle Z z "
+"innym kluczem domeny spowoduje poprawne przepisanie klucza domeny A, tak "
+"jak poprzednio. Jeśli jednak A znajdował się w klastrze z węzłem B, B "
+"przestanie działać, ponieważ klucz domeny Z nie zostanie przywrócony na "
+"B."
 
 #: ../../source/components/nethsm/clustering.rst:388
 msgid ""
@@ -3812,10 +3823,10 @@ msgid ""
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr ""
 "Innymi słowy, przywracanie należy wykonywać tylko w klastrze z kopiami "
-"zapasowymi wykonanymi w tym samym klastrze (choć od tego czasu węzły mogły "
-"zostać usunięte lub dodane). Jeśli chcesz przywrócić obcą kopię zapasową na "
-"węźle, najpierw bezpiecznie usuń go z klastra, a następnie przywróć "
-"ustawienia fabryczne i przywróć kopię zapasową."
+"zapasowymi wykonanymi w tym samym klastrze (choć od tego czasu węzły "
+"mogły zostać usunięte lub dodane). Jeśli chcesz przywrócić obcą kopię "
+"zapasową na węźle, najpierw bezpiecznie usuń go z klastra, a następnie "
+"przywróć ustawienia fabryczne i przywróć kopię zapasową."
 
 #: ../../source/components/nethsm/clustering.rst:391
 msgid "Removing a Node Cleanly"
@@ -3828,17 +3839,18 @@ msgid ""
 " node is already unreachable or is expected to be."
 msgstr ""
 "Tak długo, jak część klastra nadal spełnia kworum, każdy z jego członków "
-"może zostać użyty do usunięcia innego węzła z klastra, niezależnie od tego, "
-"czy ten węzeł jest już nieosiągalny, czy też oczekuje się, że będzie."
+"może zostać użyty do usunięcia innego węzła z klastra, niezależnie od "
+"tego, czy ten węzeł jest już nieosiągalny, czy też oczekuje się, że "
+"będzie."
 
 #: ../../source/components/nethsm/clustering.rst:395
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
 msgstr ""
-"Najpierw musisz znać identyfikator węzła, który chcesz usunąć, wyświetlając "
-"listę wszystkich węzłów za pośrednictwem ``GET /cluster/members`` i szukając "
-"właściwego."
+"Najpierw musisz znać identyfikator węzła, który chcesz usunąć, "
+"wyświetlając listę wszystkich węzłów za pośrednictwem ``GET "
+"/cluster/members`` i szukając właściwego."
 
 #: ../../source/components/nethsm/clustering.rst:397
 msgid ""
@@ -3846,9 +3858,9 @@ msgid ""
 "the node in question was still healthy, this will isolate it from the "
 "rest of the cluster and render it inoperable."
 msgstr ""
-"Następnie można go usunąć, wywołując ``DELETE /cluster/members/<id>``. Jeśli "
-"dany węzeł był nadal zdrowy, spowoduje to odizolowanie go od reszty klastra "
-"i uniemożliwi jego działanie."
+"Następnie można go usunąć, wywołując ``DELETE /cluster/members/<id>``. "
+"Jeśli dany węzeł był nadal zdrowy, spowoduje to odizolowanie go od reszty"
+" klastra i uniemożliwi jego działanie."
 
 #: ../../source/components/nethsm/clustering.rst:400
 #, fuzzy
@@ -3860,8 +3872,8 @@ msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr ""
-"Przyszłe aktualizacje zostaną oznaczone jako \"cluster-safe\" (powinna to "
-"być większość) lub \"cluster-unsafe\"."
+"Przyszłe aktualizacje zostaną oznaczone jako \"cluster-safe\" (powinna to"
+" być większość) lub \"cluster-unsafe\"."
 
 #: ../../source/components/nethsm/clustering.rst:404
 msgid ""
@@ -3871,11 +3883,11 @@ msgid ""
 "cluster where removing a node does not go below the quorum (e.g. if the "
 "update fails)."
 msgstr ""
-"Aktualizacje bezpieczne dla klastrów mogą być stosowane do węzłów, które są "
-"częścią klastra bez wcześniejszego usuwania ich z klastra. Jednak tak jak w "
-"przypadku wszystkich operacji, należy upewnić się, że jest to wykonywane na "
-"jednym węźle naraz i w klastrze, w którym usunięcie węzła nie spadnie "
-"poniżej kworum (np. jeśli aktualizacja się nie powiedzie)."
+"Aktualizacje bezpieczne dla klastrów mogą być stosowane do węzłów, które "
+"są częścią klastra bez wcześniejszego usuwania ich z klastra. Jednak tak "
+"jak w przypadku wszystkich operacji, należy upewnić się, że jest to "
+"wykonywane na jednym węźle naraz i w klastrze, w którym usunięcie węzła "
+"nie spadnie poniżej kworum (np. jeśli aktualizacja się nie powiedzie)."
 
 #: ../../source/components/nethsm/clustering.rst:406
 msgid ""
@@ -3884,11 +3896,11 @@ msgid ""
 "nodes but one, apply the update to every node, then make all reset nodes "
 "join the remaining node."
 msgstr ""
-"Aktualizacje niebezpieczne dla klastrów muszą być stosowane do odizolowanych "
-"węzłów. Należy zdemontować klaster (usuwając węzły jeden po drugim), "
-"przywrócić ustawienia fabryczne wszystkich węzłów z wyjątkiem jednego, "
-"zastosować aktualizację do każdego węzła, a następnie sprawić, by wszystkie "
-"zresetowane węzły dołączyły do pozostałego węzła."
+"Aktualizacje niebezpieczne dla klastrów muszą być stosowane do "
+"odizolowanych węzłów. Należy zdemontować klaster (usuwając węzły jeden po"
+" drugim), przywrócić ustawienia fabryczne wszystkich węzłów z wyjątkiem "
+"jednego, zastosować aktualizację do każdego węzła, a następnie sprawić, "
+"by wszystkie zresetowane węzły dołączyły do pozostałego węzła."
 
 #: ../../source/components/nethsm/clustering.rst:408
 msgid "Make sure to back up before such operations."
@@ -3910,10 +3922,11 @@ msgid ""
 "choose a node, remove all other nodes, update the CA, then have the other"
 " members re-join."
 msgstr ""
-"Istniejący klaster (z dwoma lub więcej węzłami) **nie może** zmienić swojego "
-"urzędu certyfikacji klastra podczas działania. Jeśli musisz zmienić ten "
-"certyfikat: wybierz węzeł, usuń wszystkie inne węzły, zaktualizuj urząd "
-"certyfikacji, a następnie poproś pozostałych członków o ponowne dołączenie."
+"Istniejący klaster (z dwoma lub więcej węzłami) **nie może** zmienić "
+"swojego urzędu certyfikacji klastra podczas działania. Jeśli musisz "
+"zmienić ten certyfikat: wybierz węzeł, usuń wszystkie inne węzły, "
+"zaktualizuj urząd certyfikacji, a następnie poproś pozostałych członków o"
+" ponowne dołączenie."
 
 #: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
@@ -3929,8 +3942,8 @@ msgid ""
 msgstr ""
 "Modyfikacja konfiguracji sieciowej węzła (np. zmiana jego adresu IP) "
 "automatycznie poinformuje inne węzły o aktualizacji. Powinieneś jednak "
-"upewnić się, że wykonujesz takie aktualizacje tylko na jednym węźle naraz i "
-"w klastrze, w którym utrata tego węzła nie spowoduje utraty kworum."
+"upewnić się, że wykonujesz takie aktualizacje tylko na jednym węźle naraz"
+" i w klastrze, w którym utrata tego węzła nie spowoduje utraty kworum."
 
 #: ../../source/components/nethsm/container/index.rst:2
 msgid "Container"
@@ -11598,7 +11611,7 @@ msgid "Click on “Sign in with security key”."
 msgstr "Kliknij na \"Zaloguj się za pomocą klucza bezpieczeństwa\"."
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:15
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:72
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:66
 msgid "img0"
 msgstr "img0"
 
@@ -11958,10 +11971,14 @@ msgstr "Włóż Nitrokey do portu USB w komputerze."
 msgid ""
 "Open a terminal and create your SSH key. Replace ``\"your_comment\"`` "
 "with a label to identify it (e.g., \"Nitrokey GitLab\"). By default, the "
-"key is a non-discoverable key, meaning a local key handle is stored in "
-"``~/.ssh/`` while the private key remains securely on the Nitrokey. Use "
-"the ``-O resident`` option if you want the key to be a discoverable "
-"credential, making it portable across systems."
+"key is created as a non-discoverable credential. In this case, a local "
+"key handle is stored in ~/.ssh/ while the private key remains on the "
+"Nitrokey. This means the key is tied to the system where it was "
+"generated, since the local key handle file is required for "
+"authentication. Use the -O resident option to create a discoverable "
+"credential. In this case, the credential is stored on the Nitrokey, "
+"making it portable and usable across different systems without copying "
+"any local files."
 msgstr ""
 "Otwórz terminal i utwórz klucz SSH. Zastąp ``\"your_comment\"`` etykietą,"
 " aby go zidentyfikować (np. \"Nitrokey GitLab\"). Domyślnie klucz jest "
@@ -11970,25 +11987,17 @@ msgstr ""
 "bezpiecznie na Nitrokey. Użyj opcji ``-O resident``, jeśli chcesz, aby "
 "klucz był przenośny między systemami."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:39
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:34
 #, fuzzy
-msgid "or to create a discoverable credential"
-msgstr "lub utworzyć klucz rezydentny"
+msgid "Non-discoverable credential:"
+msgstr "Dodawanie poświadczeń"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:45
-msgid ""
-"The ``-O resident`` option creates a discoverable credential, storing the"
-" key handle directly on the Nitrokey. This means anyone with physical "
-"access to the device can list the stored credentials and see which "
-"services they were registered with."
-msgstr ""
-"Opcja ``-O resident`` tworzy wykrywalne dane uwierzytelniające, "
-"przechowując uchwyt klucza bezpośrednio na Nitrokey. Oznacza to, że "
-"każdy, kto ma fizyczny dostęp do urządzenia, może wyświetlić listę "
-"przechowywanych danych uwierzytelniających i zobaczyć, w jakich usługach "
-"zostały one zarejestrowane."
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:40
+#, fuzzy
+msgid "Discoverable credential:"
+msgstr "Dodawanie poświadczeń"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:49
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:48
 #, fuzzy
 msgid ""
 "Discoverable credentials can later be listed and imported on another "
@@ -11997,7 +12006,7 @@ msgstr ""
 "Klucze rezydentne mogą być później wymienione i zaimportowane do innego "
 "systemu:"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:56
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:54
 #, fuzzy
 msgid ""
 "During key generation, you may also be asked to set a **passphrase**. "
@@ -12016,7 +12025,7 @@ msgstr ""
 "plik klucza publicznego SSH. Zalecamy używanie hasła tylko do ochrony "
 "kluczy nierezydentnych."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:58
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:56
 msgid ""
 "When asked for a file path, accept the default option "
 "(``~/.ssh/id_ed25519_sk``) or choose a custom name like "
@@ -12026,11 +12035,11 @@ msgstr ""
 "(``~/.ssh/id_ed25519_sk``) lub wybierz niestandardową nazwę, taką jak "
 "``id_ed25519_sk_gitlab``."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:60
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:58
 msgid "If the Nitrokey blinks, confirm the operation by touching it."
 msgstr "Jeśli Nitrokey miga, potwierdź operację dotykając go."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:62
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:60
 msgid ""
 "Eventually the following files will be created. The file names may differ"
 " if you specified a custom name when generating the key."
@@ -12038,7 +12047,7 @@ msgstr ""
 "Ostatecznie zostaną utworzone następujące pliki. Nazwy plików mogą się "
 "różnić, jeśli określono niestandardową nazwę podczas generowania klucza."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:64
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:62
 msgid ""
 "``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on "
 "the Nitrokey)"
@@ -12046,25 +12055,16 @@ msgstr ""
 "``~/.ssh/id_ed25519_sk`` → uchwyt do klucza prywatnego (przechowywanego "
 "bezpiecznie na Nitrokey)"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:66
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:64
 msgid "``~/.ssh/id_ed25519_sk.pub`` → public key file"
 msgstr "``~/.ssh/id_ed25519_sk.pub`` → plik klucza publicznego"
 
 #: ../../source/components/nitrokeys/features/fido2/ssh.rst:70
 #, fuzzy
-msgid ""
-"The file names may differ if you specified a custom name when generating "
-"the key."
-msgstr ""
-"Ostatecznie zostaną utworzone następujące pliki. Nazwy plików mogą się "
-"różnić, jeśli określono niestandardową nazwę podczas generowania klucza."
-
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:77
-#, fuzzy
 msgid "Adding Your Public Key"
 msgstr "Przesyłanie klucza publicznego"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:79
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:72
 msgid ""
 "Once your SSH key pair is generated, the public key must be added to the "
 "service or server you want to access."
@@ -12072,24 +12072,20 @@ msgstr ""
 "Po wygenerowaniu pary kluczy SSH, klucz publiczny musi zostać dodany do "
 "usługi lub serwera, do którego chcesz uzyskać dostęp."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:82
-msgid "For Git Services (GitLab, GitHub, etc.)"
-msgstr "W przypadku usług Git (GitLab, GitHub itp.)"
-
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:74
 #, fuzzy
 msgid "Display your public key:"
 msgstr "Wyeksportuj klucz publiczny"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:90
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:80
 msgid "Example output (do not use this key)::"
 msgstr "Przykładowe wyjście (nie używaj tego klawisza)::"
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:94
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:84
 msgid "Copy the output and add it to your account’s SSH key settings."
 msgstr "Skopiuj dane wyjściowe i dodaj je do ustawień klucza SSH swojego konta."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:96
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:86
 #, fuzzy
 msgid ""
 "See `GitLab  <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-"
@@ -12105,7 +12101,7 @@ msgstr ""
 "SSH, dodaj swój klucz publiczny do pliku ``~/.ssh/authorized_keys`` "
 "swojego konta użytkownika na serwerze SSH."
 
-#: ../../source/components/nitrokeys/features/fido2/ssh.rst:98
+#: ../../source/components/nitrokeys/features/fido2/ssh.rst:88
 msgid ""
 "To enable SSH remote server access, add your public key to the file "
 "``~/.ssh/authorized_keys`` of your user account on the SSH server."
@@ -29336,7 +29332,7 @@ msgid "Save the changes and reboot."
 msgstr "Zapisz zmiany za pomocą ``:wq``."
 
 #: ../../source/components/nitropad-nitropc/os-reinstallation.rst:8
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:49
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:43
 msgid ""
 "Booting this USB drive entirely erases all data on the hard disk or SSD "
 "of the NitroPad without further warning. Don’t boot this USB drive on any"
@@ -29349,21 +29345,12 @@ msgstr ""
 "zachować. Upewnij się, że sformatowałeś napęd USB po użyciu go zgodnie z "
 "przeznaczeniem."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:15
-msgid ""
-"Due to a bug Linux Mint 21 is currently not supported. The latest "
-"supported version is Linux Mint 20.1"
-msgstr ""
-"Z powodu błędu Linux Mint 21 nie jest obecnie wspierany. Najnowsza "
-"wspierana wersja to Linux Mint 20.1"
-
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:17
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:13
 #, fuzzy
 msgid ""
 "Download the latest Stable Release of the operating system images: "
 "`Ubuntu Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS "
-"<https://www.qubes-os.org/downloads/>`__, `Linux Mint "
-"<https://linuxmint.com/download.php>`__"
+"<https://www.qubes-os.org/downloads/>`__"
 msgstr ""
 "Pobierz jeden z obrazów systemu operacyjnego: `Ubuntu Linux "
 "<https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS "
@@ -29371,7 +29358,7 @@ msgstr ""
 "<https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__, `Linux Mint "
 "<https://linuxmint.com/download.php>`__."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:22
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:16
 msgid ""
 "Optional: Download hash sum and `verify <https://proprivacy.com/guides"
 "/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the "
@@ -29381,13 +29368,13 @@ msgstr ""
 "<https://proprivacy.com/guides/how-why-and-when-you-should-hash-check"
 "#how-to-hash-check>`__ pobrany obraz systemu operacyjnego."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:26
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:20
 msgid "Write the operating system image to any USB drive. Possible applications:"
 msgstr ""
 "Zapis obrazu systemu operacyjnego na dowolnym napędzie USB. Możliwe "
 "zastosowania:"
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:29
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:23
 msgid ""
 "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
@@ -29395,15 +29382,15 @@ msgstr ""
 "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:31
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:25
 msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 msgstr "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:32
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:26
 msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 msgstr "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:34
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:28
 msgid ""
 "Connect the USB drive to your NitroPad and start it. In Heads menu select"
 " Boot Options -> USB Boot."
@@ -29411,11 +29398,11 @@ msgstr ""
 "Podłącz napęd USB do Twojego NitroPada i uruchom go. W menu nagłówkowym "
 "wybierz Boot Options -> USB Boot."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:37
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:31
 msgid "On Qubes use the \"latest Kernel\" version of the install options"
 msgstr "Na Qubes użyj wersji \"najnowsze jądro\" w opcjach instalacji"
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:39
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:33
 msgid ""
 "Depending on the operating system you may need to confirm its "
 "reinstallation."
@@ -29423,12 +29410,12 @@ msgstr ""
 "W zależności od systemu operacyjnego może być konieczne potwierdzenie "
 "jego reinstalacji."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:42
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:36
 #, fuzzy
 msgid "`Sign the boot partition <heads/system-update.html>`_ (Heads only)."
 msgstr "`Podpisać partycję rozruchową. <system-update.html>`_."
 
-#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:45
+#: ../../source/components/nitropad-nitropc/os-reinstallation.rst:39
 msgid ""
 "To avoid accidential overwriting of valuable data, format the USB drive "
 "afterwards."
@@ -30206,55 +30193,58 @@ msgstr ""
 
 #: ../../source/components/nitropad-nitropc/sealed-hardware.rst:28
 #, fuzzy
-msgid "Nitropad NV41"
+msgid "Nitropad V56"
 msgstr "Nitropad NV41:"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:30
-msgid "NV41"
-msgstr "NV41"
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:29
+#, fuzzy
+msgid "V56"
+msgstr "V54"
+
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:33
+#, fuzzy
+msgid "Nitropad V56 with GPU"
+msgstr "Nitropad NV41:"
 
 #: ../../source/components/nitropad-nitropc/sealed-hardware.rst:34
-#, fuzzy
-msgid "Nitropad NS50"
-msgstr "Nitropad NS50:"
+msgid "V56 with GPU"
+msgstr ""
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:35
-msgid "NS50"
-msgstr "NS50"
-
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:39
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:38
 #, fuzzy
 msgid "Nitropad V54"
 msgstr "Nitropad NV41:"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:40
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:39
 msgid "V54"
 msgstr "V54"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:44
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:43
 #, fuzzy
-msgid "NitroPad X230"
-msgstr "NitroPad X230:"
+msgid "NitroPad T480"
+msgstr "NitroPad T430:"
 
 #: ../../source/components/nitropad-nitropc/sealed-hardware.rst:45
-msgid "X230"
-msgstr "X230"
+#, fuzzy
+msgid "T480"
+msgstr "T430"
 
 #: ../../source/components/nitropad-nitropc/sealed-hardware.rst:49
 #, fuzzy
-msgid "NitroPad T430"
+msgid "NitroPad T480s"
 msgstr "NitroPad T430:"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:50
-msgid "T430"
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:51
+#, fuzzy
+msgid "T480s"
 msgstr "T430"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:54
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:55
 #, fuzzy
 msgid "NitroPC Pro 2"
 msgstr "Nitrokey Pro 2"
 
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:56
+#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:57
 msgid ""
 "For the NitroPC Pro 2 we use tamper evident tape on the casing. After "
 "receiving your computer check that no tape have been removed. Then you "
@@ -30264,22 +30254,6 @@ msgstr ""
 "otrzymaniu komputera należy sprawdzić, czy żadna taśma nie została "
 "usunięta. Następnie można usunąć taśmę i użyć alkoholu do usunięcia "
 "śladów manipulacji."
-
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:61
-#, fuzzy
-msgid "NitroPad T480"
-msgstr "NitroPad T430:"
-
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:63
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:69
-#, fuzzy
-msgid "T480"
-msgstr "T430"
-
-#: ../../source/components/nitropad-nitropc/sealed-hardware.rst:67
-#, fuzzy
-msgid "NitroPad T480s"
-msgstr "NitroPad T430:"
 
 #: ../../source/components/nitropad-nitropc/secure-starting-procedure.rst:4
 #, fuzzy
@@ -32298,98 +32272,6 @@ msgstr ""
 "Jeśli czas systemowy jest nieprawidłowy, spróbuj postępować zgodnie z "
 "`tej dokumentacji <https://docs.opnsense.org/manual/ntpd.html>`__."
 
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:2
-#, fuzzy
-msgid "Update OpenWrt NW678"
-msgstr "Aktualizacja oprogramowania układowego OpenWrt"
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:6
-msgid ""
-"We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade "
-"<https://openwrt.org/docs/guide-"
-"user/installation/attended.sysupgrade>`__. To be able to use this service"
-" you need to configure it to ignore the \"nitrowall\" package, if it has "
-"been installed before:"
-msgstr ""
-"Zalecamy aktualizację OpenWrt za pomocą preinstalowanej usługi `Attended "
-"Sysupgrade <https://openwrt.org/docs/guide-"
-"user/installation/attended.sysupgrade>`__. Aby móc korzystać z tej "
-"usługi, należy skonfigurować ją tak, aby ignorowała pakiet \"nitrowall\","
-" jeśli został on wcześniej zainstalowany:"
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:8
-msgid ""
-"Go to System -> Attended Sysupgrade -> Configuration and enable the "
-"Advanced Mode -> Save & Apply"
-msgstr ""
-"Przejdź do System -> Attended Sysupgrade -> Konfiguracja i włącz Tryb "
-"zaawansowany -> Zapisz i zastosuj."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:12
-msgid "Go back to overview and search for available updates"
-msgstr "Wróć do przeglądu i wyszukaj dostępne aktualizacje"
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:16
-msgid ""
-"Search through the list of installed packages and remove the "
-"\"nitrowall\" package. Then Request Firmware Image"
-msgstr ""
-"Przeszukaj listę zainstalowanych pakietów i usuń pakiet \"nitrowall\". "
-"Następnie poproś o obraz oprogramowania układowego"
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:20
-msgid ""
-"Wait for the image to be build. Then install it. Check if \"keep settings"
-" and current configuration\" is set"
-msgstr ""
-"Poczekaj, aż obraz zostanie utworzony. Następnie zainstaluj go. Sprawdź, "
-"czy opcja \"zachowaj ustawienia i bieżącą konfigurację\" jest włączona."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:24
-msgid "The software will be installed and the NitroWall will restart."
-msgstr "Oprogramowanie zostanie zainstalowane, a NitroWall uruchomi się ponownie."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:26
-msgid ""
-"After the restart we need to reinstall the `nitrowall.ipk "
-"<https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_"
-" package. This will resize your disk and add the kernel parameter "
-"*pcie_aspm=off* to your */boot/grub/grub.cfg* which fixes a problem with "
-"the *igb* driver `bug "
-"<https://bugzilla.kernel.org/show_bug.cgi?id=205073>`_."
-msgstr ""
-"Po ponownym uruchomieniu musimy ponownie zainstalować pakiet "
-"`nitrowall.ipk "
-"<https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_."
-" Spowoduje to zmianę rozmiaru dysku i dodanie parametru jądra "
-"*pcie_aspm=off* do pliku */boot/grub/grub.cfg*, który naprawia problem ze"
-" sterownikiem *igb* ` "
-"<https://bugzilla.kernel.org/show_bug.cgi?id=205073>`_ ."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:28
-msgid "Under System -> Software -> Upload Package, upload the package"
-msgstr "W sekcji System -> Oprogramowanie -> Prześlij pakiet, prześlij pakiet."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:34
-msgid "Install it. Afterwards the NitroWall will restart."
-msgstr "Zainstaluj go. Następnie NitroWall uruchomi się ponownie."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:38
-msgid ""
-"Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-"
-"user/installation/attended.sysupgrade>`__."
-msgstr ""
-"Aktualizacja OpenWrt przez `Attended Sysupgrade <https://openwrt.org/docs"
-"/guide-user/installation/attended.sysupgrade>`__."
-
-#: ../../source/components/nitrowall/firmware-update-nw678.rst:40
-msgid ""
-"Alternatively to the above instructions, you can login via ssh and "
-"execute this script::"
-msgstr ""
-"Alternatywnie do powyższych instrukcji, można zalogować się przez ssh i "
-"wykonać ten skrypt::"
-
 #: ../../source/components/nitrowall/index.rst:2
 #, fuzzy
 msgid "NitroWall"
@@ -32745,23 +32627,6 @@ msgstr "uszczelnienie numer jeden"
 #: ../../source/components/nitrowall/sealed-hardware.rst:18
 msgid "sealing bottom"
 msgstr "uszczelnienie dna"
-
-#: ../../source/components/nitrowall/sealed-hardware.rst:21
-#, fuzzy
-msgid "NW678, NW4J3"
-msgstr "NitroWall NW678, NW4J3"
-
-#: ../../source/components/nitrowall/sealed-hardware.rst:22
-msgid "sealing number one"
-msgstr "uszczelnienie numer jeden"
-
-#: ../../source/components/nitrowall/sealed-hardware.rst:25
-msgid "sealing number two"
-msgstr "uszczelnienie numer dwa"
-
-#: ../../source/components/nitrowall/sealed-hardware.rst:28
-msgid "sealing number three"
-msgstr "uszczelnienie numer trzy"
 
 #: ../../source/components/software/nitrokey-sdk-py/api/index.rst:2
 #, fuzzy
@@ -36874,3 +36739,186 @@ msgstr "Zaznacz przycięte Wyjście"
 #~ "ulec zmianie. Więcej informacji ` "
 #~ "<https://github.com/Nitrokey/nethsm/blob/clustering/docs/clustering.md>`"
 #~ " __."
+
+#~ msgid "or to create a discoverable credential"
+#~ msgstr "lub utworzyć klucz rezydentny"
+
+#~ msgid ""
+#~ "The ``-O resident`` option creates a "
+#~ "discoverable credential, storing the key "
+#~ "handle directly on the Nitrokey. This"
+#~ " means anyone with physical access to"
+#~ " the device can list the stored "
+#~ "credentials and see which services they"
+#~ " were registered with."
+#~ msgstr ""
+#~ "Opcja ``-O resident`` tworzy wykrywalne "
+#~ "dane uwierzytelniające, przechowując uchwyt "
+#~ "klucza bezpośrednio na Nitrokey. Oznacza "
+#~ "to, że każdy, kto ma fizyczny "
+#~ "dostęp do urządzenia, może wyświetlić "
+#~ "listę przechowywanych danych uwierzytelniających "
+#~ "i zobaczyć, w jakich usługach zostały"
+#~ " one zarejestrowane."
+
+#~ msgid ""
+#~ "The file names may differ if you"
+#~ " specified a custom name when "
+#~ "generating the key."
+#~ msgstr ""
+#~ "Ostatecznie zostaną utworzone następujące "
+#~ "pliki. Nazwy plików mogą się różnić, "
+#~ "jeśli określono niestandardową nazwę podczas"
+#~ " generowania klucza."
+
+#~ msgid "For Git Services (GitLab, GitHub, etc.)"
+#~ msgstr "W przypadku usług Git (GitLab, GitHub itp.)"
+
+#~ msgid ""
+#~ "Due to a bug Linux Mint 21 "
+#~ "is currently not supported. The latest"
+#~ " supported version is Linux Mint 20.1"
+#~ msgstr ""
+#~ "Z powodu błędu Linux Mint 21 nie"
+#~ " jest obecnie wspierany. Najnowsza "
+#~ "wspierana wersja to Linux Mint 20.1"
+
+#~ msgid "Nitropad NV41"
+#~ msgstr "Nitropad NV41:"
+
+#~ msgid "NV41"
+#~ msgstr "NV41"
+
+#~ msgid "Nitropad NS50"
+#~ msgstr "Nitropad NS50:"
+
+#~ msgid "NS50"
+#~ msgstr "NS50"
+
+#~ msgid "NitroPad X230"
+#~ msgstr "NitroPad X230:"
+
+#~ msgid "X230"
+#~ msgstr "X230"
+
+#~ msgid "NitroPad T430"
+#~ msgstr "NitroPad T430:"
+
+#~ msgid "T430"
+#~ msgstr "T430"
+
+#~ msgid "Update OpenWrt NW678"
+#~ msgstr "Aktualizacja oprogramowania układowego OpenWrt"
+
+#~ msgid ""
+#~ "We recommend updating OpenWrt via the"
+#~ " pre-installed `Attended Sysupgrade "
+#~ "<https://openwrt.org/docs/guide-"
+#~ "user/installation/attended.sysupgrade>`__. To be "
+#~ "able to use this service you need"
+#~ " to configure it to ignore the "
+#~ "\"nitrowall\" package, if it has been"
+#~ " installed before:"
+#~ msgstr ""
+#~ "Zalecamy aktualizację OpenWrt za pomocą "
+#~ "preinstalowanej usługi `Attended Sysupgrade "
+#~ "<https://openwrt.org/docs/guide-"
+#~ "user/installation/attended.sysupgrade>`__. Aby móc "
+#~ "korzystać z tej usługi, należy "
+#~ "skonfigurować ją tak, aby ignorowała "
+#~ "pakiet \"nitrowall\", jeśli został on "
+#~ "wcześniej zainstalowany:"
+
+#~ msgid ""
+#~ "Go to System -> Attended Sysupgrade "
+#~ "-> Configuration and enable the Advanced"
+#~ " Mode -> Save & Apply"
+#~ msgstr ""
+#~ "Przejdź do System -> Attended Sysupgrade"
+#~ " -> Konfiguracja i włącz Tryb "
+#~ "zaawansowany -> Zapisz i zastosuj."
+
+#~ msgid "Go back to overview and search for available updates"
+#~ msgstr "Wróć do przeglądu i wyszukaj dostępne aktualizacje"
+
+#~ msgid ""
+#~ "Search through the list of installed "
+#~ "packages and remove the \"nitrowall\" "
+#~ "package. Then Request Firmware Image"
+#~ msgstr ""
+#~ "Przeszukaj listę zainstalowanych pakietów i"
+#~ " usuń pakiet \"nitrowall\". Następnie "
+#~ "poproś o obraz oprogramowania układowego"
+
+#~ msgid ""
+#~ "Wait for the image to be build."
+#~ " Then install it. Check if \"keep "
+#~ "settings and current configuration\" is "
+#~ "set"
+#~ msgstr ""
+#~ "Poczekaj, aż obraz zostanie utworzony. "
+#~ "Następnie zainstaluj go. Sprawdź, czy "
+#~ "opcja \"zachowaj ustawienia i bieżącą "
+#~ "konfigurację\" jest włączona."
+
+#~ msgid "The software will be installed and the NitroWall will restart."
+#~ msgstr ""
+#~ "Oprogramowanie zostanie zainstalowane, a "
+#~ "NitroWall uruchomi się ponownie."
+
+#~ msgid ""
+#~ "After the restart we need to "
+#~ "reinstall the `nitrowall.ipk "
+#~ "<https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_"
+#~ " package. This will resize your disk"
+#~ " and add the kernel parameter "
+#~ "*pcie_aspm=off* to your */boot/grub/grub.cfg* "
+#~ "which fixes a problem with the "
+#~ "*igb* driver `bug "
+#~ "<https://bugzilla.kernel.org/show_bug.cgi?id=205073>`_."
+#~ msgstr ""
+#~ "Po ponownym uruchomieniu musimy ponownie "
+#~ "zainstalować pakiet `nitrowall.ipk "
+#~ "<https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_."
+#~ " Spowoduje to zmianę rozmiaru dysku i"
+#~ " dodanie parametru jądra *pcie_aspm=off* do"
+#~ " pliku */boot/grub/grub.cfg*, który naprawia "
+#~ "problem ze sterownikiem *igb* ` "
+#~ "<https://bugzilla.kernel.org/show_bug.cgi?id=205073>`_ ."
+
+#~ msgid "Under System -> Software -> Upload Package, upload the package"
+#~ msgstr "W sekcji System -> Oprogramowanie -> Prześlij pakiet, prześlij pakiet."
+
+#~ msgid "Install it. Afterwards the NitroWall will restart."
+#~ msgstr "Zainstaluj go. Następnie NitroWall uruchomi się ponownie."
+
+#~ msgid ""
+#~ "Update OpenWrt via `Attended Sysupgrade "
+#~ "<https://openwrt.org/docs/guide-"
+#~ "user/installation/attended.sysupgrade>`__."
+#~ msgstr ""
+#~ "Aktualizacja OpenWrt przez `Attended "
+#~ "Sysupgrade <https://openwrt.org/docs/guide-"
+#~ "user/installation/attended.sysupgrade>`__."
+
+#~ msgid ""
+#~ "Alternatively to the above instructions, "
+#~ "you can login via ssh and execute"
+#~ " this script::"
+#~ msgstr ""
+#~ "Alternatywnie do powyższych instrukcji, można"
+#~ " zalogować się przez ssh i wykonać"
+#~ " ten skrypt::"
+
+#~ msgid "NW678, NW4J3"
+#~ msgstr "NitroWall NW678, NW4J3"
+
+#~ msgid "sealing number one"
+#~ msgstr "uszczelnienie numer jeden"
+
+#~ msgid "sealing number two"
+#~ msgstr "uszczelnienie numer dwa"
+
+#~ msgid "sealing number three"
+#~ msgstr "uszczelnienie numer trzy"
+
