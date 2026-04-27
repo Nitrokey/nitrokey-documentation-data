@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-27 08:45+0000\n"
-"PO-Revision-Date: 2026-04-23 11:25+0000\n"
+"PO-Revision-Date: 2026-04-27 08:54+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/pl/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -7621,7 +7622,7 @@ msgstr "Aby zweryfikować podpis za pomocą OpenSSL:"
 
 #: ../../source/components/nethsm/pkiproxy.rst:2
 msgid "Windows KSP and PKCS#11 with PKI Proxy"
-msgstr ""
+msgstr "Windows KSP i PKCS#11 z PKI Proxy"
 
 #: ../../source/components/nethsm/pkiproxy.rst:4
 msgid ""
@@ -7636,16 +7637,28 @@ msgid ""
 "directly. In all other cases use the `NetHSM PKCS#11 driver "
 "<pkcs11-setup.html>`__ directly."
 msgstr ""
+"Niniejszy dokument wyjaśnia użycie PKI Proxy z NetHSM. PKI Proxy umożliwia "
+"korzystanie z NetHSM za pośrednictwem natywnych interfejsów API systemu "
+"Microsoft Windows. W tym celu PKI Proxy zawiera KSP (Key Storage Provider), "
+"który umożliwia jego użycie za pośrednictwem interfejsu CNG (Cryptography "
+"API: Next Generation). Dodatkowo zapewnia dostęp PKCS#11 do NetHSM, ale "
+"powinno to być używane tylko wtedy, gdy konfiguracja tego wymaga, na "
+"przykład, jeśli potrzebujesz dodatkowych funkcji uwierzytelniania PKI Proxy "
+"lub chcesz użyć PKI Proxy jako bramy, aby uniknąć bezpośredniego narażania "
+"NetHSM na klientów. We wszystkich innych przypadkach należy używać "
+"bezpośrednio sterownika `NetHSM PKCS#11 <pkcs11-setup.html>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:10
 msgid "The deployment of NetHSM with PKI Proxy looks like this."
-msgstr ""
+msgstr "Wdrożenie NetHSM z PKI Proxy wygląda następująco."
 
 #: ../../source/components/nethsm/pkiproxy.rst:12
 msgid ""
 "Connection between NetHSM and PKI Proxy Server, Client and exposed client"
 " interfaces."
 msgstr ""
+"Połączenie między NetHSM a serwerem proxy PKI, klientem i odsłoniętymi "
+"interfejsami klienta."
 
 #: ../../source/components/nethsm/pkiproxy.rst:16
 msgid ""
@@ -7658,10 +7671,18 @@ msgid ""
 "clients is encrypted. PKI Proxy server and client can be executed on the "
 "same computer."
 msgstr ""
+"NetHSM udostępnia interfejs API REST, który jest używany przez sterownik "
+"NetHSM PKCS#11. PKI Proxy używa tego sterownika do łączenia się z NetHSM i "
+"uzyskiwania dostępu do jego kluczy i certyfikatów. Klienci PKI Proxy używają "
+"REST API serwera PKI Proxy, aby uzyskać dostęp do kluczy i certyfikatów. "
+"Aplikacje na kliencie mogą korzystać z natywnego interfejsu API systemu "
+"Windows lub sterownika PKCS#11. Komunikacja między NetHSM a serwerem PKI "
+"Proxy i klientami PKI Proxy jest szyfrowana. Serwer i klient PKI Proxy mogą "
+"być uruchomione na tym samym komputerze."
 
 #: ../../source/components/nethsm/pkiproxy.rst:22
 msgid "Possible use cases of this setup are:"
-msgstr ""
+msgstr "Możliwe przypadki użycia tej konfiguracji są następujące:"
 
 #: ../../source/components/nethsm/pkiproxy.rst:24
 #, fuzzy
@@ -7679,6 +7700,8 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__ for more "
 "information."
 msgstr ""
+"Więcej informacji można znaleźć w oficjalnej dokumentacji `PKI Proxy "
+"<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:31
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:12
@@ -7693,12 +7716,16 @@ msgid ""
 "NetHSM (hardware or containerized) - Provisioned - IP address of the "
 "NetHSM must be known, and the HTTPS port must be reachable."
 msgstr ""
+"NetHSM (sprzętowy lub kontenerowy) - Provisioned - adres IP NetHSM musi być "
+"znany, a port HTTPS musi być osiągalny."
 
 #: ../../source/components/nethsm/pkiproxy.rst:36
 msgid ""
 "Windows machine - Nitrokey NetHSM PKCS#11 driver installed and configured"
 " (only required on the PKI Proxy Server)."
 msgstr ""
+"Maszyna z systemem Windows - zainstalowany i skonfigurowany sterownik NetHSM "
+"PKCS#11 (wymagany tylko na serwerze PKI Proxy)."
 
 #: ../../source/components/nethsm/pkiproxy.rst:40
 msgid ""
@@ -7712,16 +7739,26 @@ msgid ""
 "pkcs11/blob/main/p11nethsm.example.conf>`__ for a better understanding "
 "how to configure it."
 msgstr ""
+"Na niektórych komputerach serwer proxy PKI może ulec awarii podczas "
+"procedury rozładowywania modułu NetHSM PKCS#11. Jest to błąd w zależności "
+"modułu i śledzony w `tym <https://github.com/Nitrokey/nethsm-pkcs11/issues/"
+"327>`__ wydaniu GitHub. Jeśli napotkasz ten błąd, ustaw opcję konfiguracji "
+"``disable_thread_pool`` na ``true`` w pliku konfiguracyjnym NetHSM PKCS#11. "
+"Zapoznaj się z przykładowym plikiem konfiguracyjnym ` <https://github.com/"
+"Nitrokey/nethsm-pkcs11/blob/main/p11nethsm.example.conf>` __, aby lepiej "
+"zrozumieć, jak go skonfigurować."
 
 #: ../../source/components/nethsm/pkiproxy.rst:46
 msgid "PKI Proxy - Server"
-msgstr ""
+msgstr "Serwer proxy PKI"
 
 #: ../../source/components/nethsm/pkiproxy.rst:48
 msgid ""
 "The PKI Proxy server shares the keys and certificates from a NetHSM for "
 "different users."
 msgstr ""
+"Serwer PKI Proxy udostępnia klucze i certyfikaty z NetHSM dla różnych "
+"użytkowników."
 
 #: ../../source/components/nethsm/pkiproxy.rst:53
 #, fuzzy
@@ -7734,6 +7771,7 @@ msgstr "Pobierz i uruchom `Nitrokey App <https://www.nitrokey.com/download>`__."
 #: ../../source/components/nethsm/pkiproxy.rst:128
 msgid "Open the installer and follow the installation wizard."
 msgstr ""
+"Otwórz instalator i postępuj zgodnie z instrukcjami kreatora instalacji."
 
 #: ../../source/components/nethsm/pkiproxy.rst:55
 msgid ""
@@ -7741,12 +7779,17 @@ msgid ""
 "location you can also run it with the following command from the *Run* "
 "dialog or the PowerShell."
 msgstr ""
+"Otwórz PKI Proxy z menu Start. Jeśli zainstalowałeś go w domyślnej "
+"lokalizacji, możesz również uruchomić go za pomocą następującego polecenia z "
+"okna dialogowego *Uruchom* lub PowerShell."
 
 #: ../../source/components/nethsm/pkiproxy.rst:63
 msgid ""
 "PKI Proxy will minimize to the system tray, even if the main window is "
 "closed."
 msgstr ""
+"PKI Proxy zminimalizuje się do zasobnika systemowego, nawet jeśli główne "
+"okno zostanie zamknięte."
 
 #: ../../source/components/nethsm/pkiproxy.rst:66
 #, fuzzy
@@ -7755,7 +7798,7 @@ msgstr "Konfiguracja pamięci masowej"
 
 #: ../../source/components/nethsm/pkiproxy.rst:68
 msgid "The instructions below configure the PKI Proxy."
-msgstr ""
+msgstr "Poniższe instrukcje konfigurują serwer proxy PKI."
 
 #: ../../source/components/nethsm/pkiproxy.rst:70
 #, fuzzy
@@ -7772,6 +7815,8 @@ msgid ""
 "Make sure the checkbox **Enable TLS** is checked and an apropriate "
 "certificate is used."
 msgstr ""
+"Upewnij się, że pole wyboru **Enable TLS** jest zaznaczone i używany jest "
+"odpowiedni certyfikat."
 
 #: ../../source/components/nethsm/pkiproxy.rst:73
 #, fuzzy
@@ -7783,12 +7828,16 @@ msgid ""
 "Create a new user by clicking on the **New...** button. Choose an "
 "authentication type which is supported by all clients."
 msgstr ""
+"Utwórz nowego użytkownika, klikając przycisk **New...**. Wybierz typ "
+"uwierzytelniania obsługiwany przez wszystkich klientów."
 
 #: ../../source/components/nethsm/pkiproxy.rst:76
 msgid ""
 "In the menu bar of main window click the **Start** button to start the "
 "PKI Proxy service."
 msgstr ""
+"Na pasku menu okna głównego kliknij przycisk **Start**, aby uruchomić usługę "
+"PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:79
 #, fuzzy
@@ -7800,10 +7849,12 @@ msgid ""
 "In the following we configure which certificates from the NetHSM are made"
 " available through PKI Proxy."
 msgstr ""
+"Poniżej konfigurujemy, które certyfikaty z NetHSM są udostępniane przez PKI "
+"Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:83
 msgid "Make sure the PKI Proxy main window is open."
-msgstr ""
+msgstr "Upewnij się, że główne okno PKI Proxy jest otwarte."
 
 #: ../../source/components/nethsm/pkiproxy.rst:84
 #, fuzzy
@@ -7815,6 +7866,8 @@ msgid ""
 "Click on the **New...** button. This will open the **Share Certificate** "
 "window."
 msgstr ""
+"Kliknij przycisk **New...**. Spowoduje to otwarcie okna **Share "
+"Certificate**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:87
 msgid ""
@@ -7822,10 +7875,12 @@ msgid ""
 "**Certificate** frame of the window. This will open the **Select a "
 "Private Key** window."
 msgstr ""
+"Kliknij przycisk **Select Certificate or Key...** w ramce **Certificate** "
+"okna. Spowoduje to otwarcie okna **Select a Private Key**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:89
 msgid "Change to the **Security Key** tab."
-msgstr ""
+msgstr "Przejdź do karty **Security Key**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:90
 msgid ""
@@ -7833,6 +7888,9 @@ msgid ""
 "library file. The text field **PKCS#11 Library** now shows the path to "
 "the library file."
 msgstr ""
+"Kliknij przycisk **Browse...** i wybierz plik biblioteki sterownika NetHSM "
+"PKCS#11. W polu tekstowym **PKCS#11 Library** pojawi się ścieżka do pliku "
+"biblioteki."
 
 #: ../../source/components/nethsm/pkiproxy.rst:92
 msgid ""
@@ -7840,6 +7898,8 @@ msgid ""
 "contains the certificate. The listed slots depend on your configuration "
 "of the PKCS#11 module."
 msgstr ""
+"Z menu rozwijanego **Security Key (PKCS#11)** wybierz gniazdo zawierające "
+"certyfikat. Wymienione gniazda zależą od konfiguracji modułu PKCS#11."
 
 #: ../../source/components/nethsm/pkiproxy.rst:94
 #, fuzzy
@@ -7852,6 +7912,9 @@ msgid ""
 "certificates and generic keys on the NetHSM. Select the certificate or "
 "generic key you want to share with PKI Proxy."
 msgstr ""
+"Lista tekstowa poniżej **Certificates** pokazuje teraz listę dostępnych "
+"certyfikatów i kluczy generycznych na NetHSM. Wybierz certyfikat lub klucz "
+"ogólny, który chcesz udostępnić PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:97
 msgid ""
@@ -7859,12 +7922,16 @@ msgid ""
 "back to the **Share Certificate** window. The window will now show the "
 "details of the selected certificate."
 msgstr ""
+"Kliknij przycisk **OK**, aby potwierdzić wybór. Spowoduje to powrót do okna "
+"**Share Certificate**. Okno wyświetli teraz szczegóły wybranego certyfikatu."
 
 #: ../../source/components/nethsm/pkiproxy.rst:101
 msgid ""
 "Click on the **Add...** button, in the **Access and Permissions** frame "
 "of the window. This will open the **Select user** window."
 msgstr ""
+"Kliknij przycisk **Add...** w ramce **Access and Permissions** okna. "
+"Spowoduje to otwarcie okna **Select user**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:103
 msgid ""
@@ -7873,6 +7940,10 @@ msgid ""
 "the selection. If you choose to create a new user the **New User** window"
 " will be shown afterwards."
 msgstr ""
+"Wybierz istniejącego użytkownika z rozwijanego menu lub utwórz nowego, "
+"wybierając **Create New User...**. Kliknij przycisk **OK**, aby potwierdzić "
+"wybór. W przypadku wybrania opcji utworzenia nowego użytkownika zostanie "
+"wyświetlone okno **New User**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:106
 msgid ""
@@ -7881,46 +7952,62 @@ msgid ""
 "changed with the checkboxes at the bottom of the **Access and "
 "Permissions** frame."
 msgstr ""
+"Z powrotem w oknie **Udostępnij certyfikat** upewnij się również, że "
+"zezwalasz tylko na wymagane operacje dla certyfikatu lub klucza ogólnego. "
+"Można to zmienić za pomocą pól wyboru w dolnej części ramki **Access and "
+"Permissions**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:108
 msgid ""
 "Click on the **OK** button to publish the certificate. This will bring "
 "you back to the main window of PKI Proxy."
 msgstr ""
+"Kliknij przycisk **OK**, aby opublikować certyfikat. Spowoduje to powrót do "
+"głównego okna PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:110
 msgid ""
 "The text list below **Certificate Management** now shows the published "
 "certificate."
 msgstr ""
+"Lista tekstowa poniżej **Certificate Management** pokazuje teraz "
+"opublikowany certyfikat."
 
 #: ../../source/components/nethsm/pkiproxy.rst:113
 msgid ""
 "Make sure the mechanisms of the shared key on the NetHSM allow the "
 "intended usage in PKI Proxy."
 msgstr ""
+"Upewnij się, że mechanizmy klucza współdzielonego na NetHSM pozwalają na "
+"zamierzone użycie w PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:116
 msgid "PKI Proxy - Client"
-msgstr ""
+msgstr "PKI Proxy - Klient"
 
 #: ../../source/components/nethsm/pkiproxy.rst:118
 msgid ""
 "The PKI Proxy client tools provide different ways to access the shared "
 "keys and certificates from a PKI Proxy server."
 msgstr ""
+"Narzędzia klienckie PKI Proxy zapewniają różne sposoby dostępu do "
+"współdzielonych kluczy i certyfikatów z serwera PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:121
 msgid ""
 "The PKI Proxy server contains the client tools. Hence, the machine which "
 "runs the server can also be a client to itself."
 msgstr ""
+"Serwer PKI Proxy zawiera narzędzia klienckie. Dlatego maszyna, na której "
+"działa serwer, może być również klientem dla siebie."
 
 #: ../../source/components/nethsm/pkiproxy.rst:127
 msgid ""
 "Download the *PKI Proxy 2024 - Client Tools* from the `/n software "
 "website <https://www.nsoftware.com/pkiproxy/download>`__."
 msgstr ""
+"Pobierz *PKI Proxy 2024 - Client Tools* ze strony internetowej `/n software "
+"<https://www.nsoftware.com/pkiproxy/download>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:131
 #, fuzzy
@@ -7936,6 +8023,11 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningksp>`__"
 " for more information."
 msgstr ""
+"PKI Proxy zapewnia KSP do połączenia z serwerem PKI Proxy. KSP umożliwia "
+"korzystanie z natywnych interfejsów API systemu Windows z aplikacjami za "
+"pośrednictwem interfejsu CNG (Cryptography API: Next Generation). Więcej "
+"informacji można znaleźć w dokumentacji `PKI Proxy <https://cdn.nsoftware."
+"com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningksp>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:140
 msgid ""
@@ -7944,6 +8036,9 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " for more information."
 msgstr ""
+"PKI Proxy zapewnia moduł PKCS#11 do połączenia z serwerem PKI Proxy. Więcej "
+"informacji można znaleźć w dokumentacji `PKI Proxy <https://cdn.nsoftware."
+"com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__."
 
 #: ../../source/components/nethsm/ssh.rst:2
 #: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
@@ -37279,4 +37374,3 @@ msgstr "Zaznacz przycięte Wyjście"
 #~ msgstr ""
 #~ "Nitrokey FIDO2 skonfigurowany według `tych "
 #~ "instrukcji <https://docs.nitrokey.com/fido2/linux>`__."
-

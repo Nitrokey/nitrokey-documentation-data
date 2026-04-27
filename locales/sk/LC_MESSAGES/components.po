@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-27 08:45+0000\n"
-"PO-Revision-Date: 2026-03-26 18:58+0000\n"
+"PO-Revision-Date: 2026-04-27 08:54+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -7527,7 +7528,7 @@ msgstr "Overenie podpisu pomocou OpenSSL:"
 
 #: ../../source/components/nethsm/pkiproxy.rst:2
 msgid "Windows KSP and PKCS#11 with PKI Proxy"
-msgstr ""
+msgstr "Systém Windows KSP a PKCS#11 s PKI Proxy"
 
 #: ../../source/components/nethsm/pkiproxy.rst:4
 msgid ""
@@ -7542,16 +7543,28 @@ msgid ""
 "directly. In all other cases use the `NetHSM PKCS#11 driver "
 "<pkcs11-setup.html>`__ directly."
 msgstr ""
+"Tento dokument vysvetľuje používanie PKI Proxy s NetHSM. PKI Proxy umožňuje "
+"používanie NetHSM prostredníctvom natívnych rozhraní API systému Microsoft "
+"Windows. Na tento účel PKI Proxy obsahuje KSP (Key Storage Provider), ktorý "
+"umožňuje jeho používanie prostredníctvom rozhrania CNG (Cryptography API: "
+"Next Generation). Okrem toho poskytuje prístup PKCS#11 k NetHSM, ale to by "
+"sa malo používať len vtedy, ak si to vyžaduje vaše nastavenie, napríklad ak "
+"potrebujete ďalšie funkcie overovania PKI Proxy alebo ak chcete používať PKI "
+"Proxy ako bránu, aby ste nemuseli vystavovať NetHSM priamo klientom. Vo "
+"všetkých ostatných prípadoch použite priamo ovládač `NetHSM PKCS#11 "
+"<pkcs11-setup.html>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:10
 msgid "The deployment of NetHSM with PKI Proxy looks like this."
-msgstr ""
+msgstr "Nasadenie NetHSM s PKI Proxy vyzerá takto."
 
 #: ../../source/components/nethsm/pkiproxy.rst:12
 msgid ""
 "Connection between NetHSM and PKI Proxy Server, Client and exposed client"
 " interfaces."
 msgstr ""
+"Spojenie medzi NetHSM a serverom PKI Proxy, klientom a vystavenými "
+"klientskymi rozhraniami."
 
 #: ../../source/components/nethsm/pkiproxy.rst:16
 msgid ""
@@ -7564,10 +7577,18 @@ msgid ""
 "clients is encrypted. PKI Proxy server and client can be executed on the "
 "same computer."
 msgstr ""
+"NetHSM poskytuje rozhranie REST API, ktoré používa ovládač NetHSM PKCS#11. "
+"Proxy server PKI používa tento ovládač na pripojenie k NetHSM a prístup k "
+"jeho kľúčom a certifikátom. Klienti servera PKI Proxy používajú na prístup "
+"ku kľúčom a certifikátom rozhranie REST API servera PKI Proxy. Aplikácie na "
+"klientovi môžu používať buď natívne rozhranie API systému Windows, alebo "
+"ovládač PKCS#11. Komunikácia medzi NetHSM a serverom PKI Proxy a klientmi "
+"PKI Proxy je šifrovaná. Server PKI Proxy a klient môžu byť spustené na tom "
+"istom počítači."
 
 #: ../../source/components/nethsm/pkiproxy.rst:22
 msgid "Possible use cases of this setup are:"
-msgstr ""
+msgstr "Možné prípady použitia tohto nastavenia sú:"
 
 #: ../../source/components/nethsm/pkiproxy.rst:24
 #, fuzzy
@@ -7585,6 +7606,8 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__ for more "
 "information."
 msgstr ""
+"Ďalšie informácie nájdete aj v oficiálnej dokumentácii `PKI Proxy "
+"<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:31
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:12
@@ -7599,12 +7622,16 @@ msgid ""
 "NetHSM (hardware or containerized) - Provisioned - IP address of the "
 "NetHSM must be known, and the HTTPS port must be reachable."
 msgstr ""
+"NetHSM (hardvérový alebo kontajnerový) - Zabezpečený - IP adresa NetHSM musí "
+"byť známa a port HTTPS musí byť dosiahnuteľný."
 
 #: ../../source/components/nethsm/pkiproxy.rst:36
 msgid ""
 "Windows machine - Nitrokey NetHSM PKCS#11 driver installed and configured"
 " (only required on the PKI Proxy Server)."
 msgstr ""
+"Počítač so systémom Windows - nainštalovaný a nakonfigurovaný ovládač "
+"Nitrokey NetHSM PKCS#11 (vyžaduje sa len na serveri PKI Proxy)."
 
 #: ../../source/components/nethsm/pkiproxy.rst:40
 msgid ""
@@ -7618,16 +7645,26 @@ msgid ""
 "pkcs11/blob/main/p11nethsm.example.conf>`__ for a better understanding "
 "how to configure it."
 msgstr ""
+"Na niektorých počítačoch môže server PKI Proxy počas postupu vykladania "
+"modulu NetHSM PKCS#11 spadnúť. Ide o chybu v závislosti modulu a sleduje sa "
+"na stránke `tento <https://github.com/Nitrokey/nethsm-pkcs11/issues/327>`__ "
+"GitHub issue. Ak sa stretnete s touto chybou, nastavte, prosím, v "
+"konfiguračnom súbore NetHSM PKCS#11 konfiguračnú možnosť "
+"``disable_thread_pool`` na ``true``. Pre lepšie pochopenie spôsobu "
+"konfigurácie si pozrite `príklad konfiguračného súboru <https://github.com/"
+"Nitrokey/nethsm-pkcs11/blob/main/p11nethsm.example.conf>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:46
 msgid "PKI Proxy - Server"
-msgstr ""
+msgstr "Proxy server PKI - server"
 
 #: ../../source/components/nethsm/pkiproxy.rst:48
 msgid ""
 "The PKI Proxy server shares the keys and certificates from a NetHSM for "
 "different users."
 msgstr ""
+"Server PKI Proxy zdieľa kľúče a certifikáty z NetHSM pre rôznych "
+"používateľov."
 
 #: ../../source/components/nethsm/pkiproxy.rst:53
 #, fuzzy
@@ -7641,7 +7678,7 @@ msgstr ""
 #: ../../source/components/nethsm/pkiproxy.rst:54
 #: ../../source/components/nethsm/pkiproxy.rst:128
 msgid "Open the installer and follow the installation wizard."
-msgstr ""
+msgstr "Otvorte inštalačný program a postupujte podľa sprievodcu inštaláciou."
 
 #: ../../source/components/nethsm/pkiproxy.rst:55
 msgid ""
@@ -7649,12 +7686,17 @@ msgid ""
 "location you can also run it with the following command from the *Run* "
 "dialog or the PowerShell."
 msgstr ""
+"V ponuke Štart otvorte aplikáciu PKI Proxy. Ak ste ho nainštalovali do "
+"predvoleného umiestnenia, môžete ho spustiť aj nasledujúcim príkazom z "
+"dialógového okna *Run* alebo PowerShell."
 
 #: ../../source/components/nethsm/pkiproxy.rst:63
 msgid ""
 "PKI Proxy will minimize to the system tray, even if the main window is "
 "closed."
 msgstr ""
+"Program PKI Proxy sa minimalizuje do systémovej lišty, aj keď je hlavné okno "
+"zatvorené."
 
 #: ../../source/components/nethsm/pkiproxy.rst:66
 #, fuzzy
@@ -7663,7 +7705,7 @@ msgstr "Konfigurácia úložiska"
 
 #: ../../source/components/nethsm/pkiproxy.rst:68
 msgid "The instructions below configure the PKI Proxy."
-msgstr ""
+msgstr "Podľa nasledujúcich pokynov nakonfigurujte server PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:70
 #, fuzzy
@@ -7680,6 +7722,8 @@ msgid ""
 "Make sure the checkbox **Enable TLS** is checked and an apropriate "
 "certificate is used."
 msgstr ""
+"Uistite sa, že je začiarknuté políčko **Enable TLS** a že sa používa vhodný "
+"certifikát."
 
 #: ../../source/components/nethsm/pkiproxy.rst:73
 #, fuzzy
@@ -7691,12 +7735,16 @@ msgid ""
 "Create a new user by clicking on the **New...** button. Choose an "
 "authentication type which is supported by all clients."
 msgstr ""
+"Vytvorte nového používateľa kliknutím na tlačidlo **New...**. Vyberte typ "
+"overovania, ktorý je podporovaný všetkými klientmi."
 
 #: ../../source/components/nethsm/pkiproxy.rst:76
 msgid ""
 "In the menu bar of main window click the **Start** button to start the "
 "PKI Proxy service."
 msgstr ""
+"Na paneli ponúk hlavného okna kliknite na tlačidlo **Start**, čím spustíte "
+"službu PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:79
 #, fuzzy
@@ -7708,10 +7756,12 @@ msgid ""
 "In the following we configure which certificates from the NetHSM are made"
 " available through PKI Proxy."
 msgstr ""
+"V nasledujúcom kroku nakonfigurujeme, ktoré certifikáty z NetHSM sa "
+"sprístupnia prostredníctvom PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:83
 msgid "Make sure the PKI Proxy main window is open."
-msgstr ""
+msgstr "Uistite sa, že je otvorené hlavné okno servera PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:84
 #, fuzzy
@@ -7723,6 +7773,7 @@ msgid ""
 "Click on the **New...** button. This will open the **Share Certificate** "
 "window."
 msgstr ""
+"Kliknite na tlačidlo **New...**. Tým sa otvorí okno **Share Certificate**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:87
 msgid ""
@@ -7730,10 +7781,13 @@ msgid ""
 "**Certificate** frame of the window. This will open the **Select a "
 "Private Key** window."
 msgstr ""
+"Kliknite na tlačidlo **Select Certificate or Key... (Vybrať certifikát alebo "
+"kľúč...)** v rámčeku okna **Certificate**. Tým sa otvorí okno **Select a "
+"Private Key (Vyberte súkromný kľúč)**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:89
 msgid "Change to the **Security Key** tab."
-msgstr ""
+msgstr "Prejdite na kartu **Security Key**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:90
 msgid ""
@@ -7741,6 +7795,9 @@ msgid ""
 "library file. The text field **PKCS#11 Library** now shows the path to "
 "the library file."
 msgstr ""
+"Kliknite na tlačidlo **Browse...** a vyberte súbor knižnice ovládača NetHSM "
+"PKCS#11. V textovom poli **PKCS#11 Library** sa teraz zobrazí cesta k súboru "
+"knižnice."
 
 #: ../../source/components/nethsm/pkiproxy.rst:92
 msgid ""
@@ -7748,6 +7805,8 @@ msgid ""
 "contains the certificate. The listed slots depend on your configuration "
 "of the PKCS#11 module."
 msgstr ""
+"Z rozbaľovacej ponuky **Security Key (PKCS#11)** vyberte slot, ktorý "
+"obsahuje certifikát. Uvedené sloty závisia od konfigurácie modulu PKCS#11."
 
 #: ../../source/components/nethsm/pkiproxy.rst:94
 #, fuzzy
@@ -7760,6 +7819,9 @@ msgid ""
 "certificates and generic keys on the NetHSM. Select the certificate or "
 "generic key you want to share with PKI Proxy."
 msgstr ""
+"V textovom zozname pod **Certificates** sa teraz zobrazuje zoznam dostupných "
+"certifikátov a generických kľúčov v NetHSM. Vyberte certifikát alebo "
+"generický kľúč, ktorý chcete zdieľať s PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:97
 msgid ""
@@ -7767,12 +7829,18 @@ msgid ""
 "back to the **Share Certificate** window. The window will now show the "
 "details of the selected certificate."
 msgstr ""
+"Výber potvrďte kliknutím na tlačidlo **OK**. Tým sa vrátite do okna **"
+"Akciový certifikát**. V okne sa teraz zobrazia podrobnosti o vybranom "
+"certifikáte."
 
 #: ../../source/components/nethsm/pkiproxy.rst:101
 msgid ""
 "Click on the **Add...** button, in the **Access and Permissions** frame "
 "of the window. This will open the **Select user** window."
 msgstr ""
+"Kliknite na tlačidlo **Add... (Pridať...)** v rámci okna **Access and "
+"Permissions (Prístup a oprávnenia)**. Tým sa otvorí okno **Select user** ("
+"Vybrať používateľa)."
 
 #: ../../source/components/nethsm/pkiproxy.rst:103
 msgid ""
@@ -7781,6 +7849,10 @@ msgid ""
 "the selection. If you choose to create a new user the **New User** window"
 " will be shown afterwards."
 msgstr ""
+"Vyberte existujúceho používateľa z rozbaľovacej ponuky alebo vytvorte nového "
+"používateľa výberom položky **Create New User...**. Výber potvrďte kliknutím "
+"na tlačidlo **OK**. Ak sa rozhodnete vytvoriť nového používateľa, zobrazí sa "
+"následne okno **New User (Nový používateľ)**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:106
 msgid ""
@@ -7789,46 +7861,61 @@ msgid ""
 "changed with the checkboxes at the bottom of the **Access and "
 "Permissions** frame."
 msgstr ""
+"V okne **Share Certificate** sa tiež uistite, že sú povolené len požadované "
+"operácie pre certifikát alebo generický kľúč. To môžete zmeniť pomocou "
+"zaškrtávacích políčok v spodnej časti rámu **Prístup a oprávnenia**."
 
 #: ../../source/components/nethsm/pkiproxy.rst:108
 msgid ""
 "Click on the **OK** button to publish the certificate. This will bring "
 "you back to the main window of PKI Proxy."
 msgstr ""
+"Kliknutím na tlačidlo **OK** zverejnite certifikát. Tým sa vrátite do "
+"hlavného okna servera PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:110
 msgid ""
 "The text list below **Certificate Management** now shows the published "
 "certificate."
 msgstr ""
+"V textovom zozname pod **Správa certifikátov** sa teraz zobrazuje zverejnený "
+"certifikát."
 
 #: ../../source/components/nethsm/pkiproxy.rst:113
 msgid ""
 "Make sure the mechanisms of the shared key on the NetHSM allow the "
 "intended usage in PKI Proxy."
 msgstr ""
+"Uistite sa, že mechanizmy zdieľaného kľúča v NetHSM umožňujú zamýšľané "
+"použitie v PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:116
 msgid "PKI Proxy - Client"
-msgstr ""
+msgstr "Proxy server PKI - klient"
 
 #: ../../source/components/nethsm/pkiproxy.rst:118
 msgid ""
 "The PKI Proxy client tools provide different ways to access the shared "
 "keys and certificates from a PKI Proxy server."
 msgstr ""
+"Nástroje klienta PKI Proxy poskytujú rôzne spôsoby prístupu k zdieľaným "
+"kľúčom a certifikátom zo servera PKI Proxy."
 
 #: ../../source/components/nethsm/pkiproxy.rst:121
 msgid ""
 "The PKI Proxy server contains the client tools. Hence, the machine which "
 "runs the server can also be a client to itself."
 msgstr ""
+"Server PKI Proxy obsahuje klientske nástroje. Preto počítač, na ktorom je "
+"server spustený, môže byť zároveň klientom pre seba samého."
 
 #: ../../source/components/nethsm/pkiproxy.rst:127
 msgid ""
 "Download the *PKI Proxy 2024 - Client Tools* from the `/n software "
 "website <https://www.nsoftware.com/pkiproxy/download>`__."
 msgstr ""
+"Stiahnite si *PKI Proxy 2024 - Client Tools* z webovej stránky `/n software "
+"<https://www.nsoftware.com/pkiproxy/download>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:131
 #, fuzzy
@@ -7844,6 +7931,11 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningksp>`__"
 " for more information."
 msgstr ""
+"PKI Proxy poskytuje KSP na prepojenie so serverom PKI Proxy. KSP umožňuje "
+"používať natívne API systému Windows s aplikáciami prostredníctvom rozhrania "
+"CNG (Cryptography API: Next Generation). Viac informácií nájdete v "
+"dokumentácii `PKI Proxy <https://cdn.nsoftware.com/help/PK1/app/nsoftware."
+"PKIProxy.htm#pg_runningksp>`__."
 
 #: ../../source/components/nethsm/pkiproxy.rst:140
 msgid ""
@@ -7852,6 +7944,9 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " for more information."
 msgstr ""
+"PKI Proxy poskytuje modul PKCS#11 na prepojenie so serverom PKI Proxy. Viac "
+"informácií nájdete v dokumentácii `PKI Proxy <https://cdn.nsoftware.com/help/"
+"PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__."
 
 #: ../../source/components/nethsm/ssh.rst:2
 #: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
@@ -37035,4 +37130,3 @@ msgstr "Označiť orezaný výstup"
 #~ msgstr ""
 #~ "Nitrokey FIDO2 nakonfigurovaný podľa `týchto"
 #~ " pokynov <https://docs.nitrokey.com/fido2/linux>`__."
-

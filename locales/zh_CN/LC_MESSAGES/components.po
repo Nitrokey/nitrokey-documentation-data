@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-27 08:45+0000\n"
-"PO-Revision-Date: 2026-04-23 11:25+0000\n"
+"PO-Revision-Date: 2026-04-27 08:54+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -6682,7 +6682,7 @@ msgstr "使用 OpenSSL 验证签名："
 
 #: ../../source/components/nethsm/pkiproxy.rst:2
 msgid "Windows KSP and PKCS#11 with PKI Proxy"
-msgstr ""
+msgstr "使用 PKI 代理的 Windows KSP 和 PKCS#11"
 
 #: ../../source/components/nethsm/pkiproxy.rst:4
 msgid ""
@@ -6697,16 +6697,23 @@ msgid ""
 "directly. In all other cases use the `NetHSM PKCS#11 driver "
 "<pkcs11-setup.html>`__ directly."
 msgstr ""
+"本文档介绍 PKI 代理与 NetHSM 的用法。PKI 代理可通过本地 Microsoft Windows "
+"API 使用 NetHSM。为此，PKI 代理包含一个 KSP（密钥存储提供程序），可通过 CNG（"
+"密码 API：下一代）接口使用。此外，它还提供对 NetHSM 的 PKCS#11 "
+"访问，但只有在您的设置需要时才可使用，例如需要 PKI Proxy 的额外身份验证功能，"
+"或希望将 PKI Proxy 用作网关以避免直接将 NetHSM "
+"暴露给客户端。在所有其他情况下，请直接使用`NetHSM PKCS#11 "
+"驱动程序<pkcs11-setup.html>`__ 。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:10
 msgid "The deployment of NetHSM with PKI Proxy looks like this."
-msgstr ""
+msgstr "使用 PKI 代理的 NetHSM 部署情况如下。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:12
 msgid ""
 "Connection between NetHSM and PKI Proxy Server, Client and exposed client"
 " interfaces."
-msgstr ""
+msgstr "NetHSM 与 PKI 代理服务器、客户端和暴露的客户端接口之间的连接。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:16
 msgid ""
@@ -6719,10 +6726,16 @@ msgid ""
 "clients is encrypted. PKI Proxy server and client can be executed on the "
 "same computer."
 msgstr ""
+"NetHSM 提供 REST API，由 NetHSM PKCS#11 驱动程序使用。PKI "
+"代理使用该驱动程序连接 NetHSM 并访问其密钥和证书。PKI 代理的客户端使用 PKI "
+"代理服务器的 REST API 访问密钥和证书。客户端上的应用程序可以使用本地 Windows "
+"API 或 PKCS#11 驱动程序。NetHSM 与 PKI 代理服务器和 PKI "
+"代理客户端之间的通信是加密的。PKI "
+"代理服务器和客户端可以在同一台计算机上运行。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:22
 msgid "Possible use cases of this setup are:"
-msgstr ""
+msgstr "这种设置的可能用例有"
 
 #: ../../source/components/nethsm/pkiproxy.rst:24
 #, fuzzy
@@ -6740,6 +6753,8 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__ for more "
 "information."
 msgstr ""
+"更多信息，请参阅`PKI 代理官方文档<https://cdn.nsoftware.com/help/PK1/app/"
+"default.htm>`__。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:31
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:12
@@ -6753,13 +6768,15 @@ msgstr "先决条件"
 msgid ""
 "NetHSM (hardware or containerized) - Provisioned - IP address of the "
 "NetHSM must be known, and the HTTPS port must be reachable."
-msgstr ""
+msgstr "NetHSM（硬件或容器化） - 已配置 - 必须知道 NetHSM 的 IP 地址，且 HTTPS "
+"端口必须可以到达。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:36
 msgid ""
 "Windows machine - Nitrokey NetHSM PKCS#11 driver installed and configured"
 " (only required on the PKI Proxy Server)."
-msgstr ""
+msgstr "Windows 机器 - 已安装并配置 Nitrokey NetHSM PKCS#11 驱动程序（仅 PKI "
+"代理服务器需要）。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:40
 msgid ""
@@ -6773,16 +6790,23 @@ msgid ""
 "pkcs11/blob/main/p11nethsm.example.conf>`__ for a better understanding "
 "how to configure it."
 msgstr ""
+"在某些机器上，PKI 代理服务器可能会在 NetHSM PKCS#11 "
+"模块卸载过程中崩溃。这是模块依赖关系中的一个错误，已在`this<https://github."
+"com/Nitrokey/nethsm-pkcs11/issues/327>`__ GitHub issue "
+"中进行了跟踪。如果遇到此错误，请在 NetHSM PKCS#11 "
+"配置文件中将``disable_thread_pool`` "
+"配置选项设置为``true``。请参阅`示例配置文件<https://github.com/Nitrokey/"
+"nethsm-pkcs11/blob/main/p11nethsm.example.conf>`__ 以更好地了解如何配置。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:46
 msgid "PKI Proxy - Server"
-msgstr ""
+msgstr "PKI 代理 - 服务器"
 
 #: ../../source/components/nethsm/pkiproxy.rst:48
 msgid ""
 "The PKI Proxy server shares the keys and certificates from a NetHSM for "
 "different users."
-msgstr ""
+msgstr "PKI 代理服务器为不同用户共享来自 NetHSM 的密钥和证书。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:53
 #, fuzzy
@@ -6794,20 +6818,21 @@ msgstr "下载并启动`Nitrokey App <https://www.nitrokey.com/download>`__。"
 #: ../../source/components/nethsm/pkiproxy.rst:54
 #: ../../source/components/nethsm/pkiproxy.rst:128
 msgid "Open the installer and follow the installation wizard."
-msgstr ""
+msgstr "打开安装程序，按照安装向导进行操作。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:55
 msgid ""
 "Open PKI Proxy from the Start menu. If you installed it to the default "
 "location you can also run it with the following command from the *Run* "
 "dialog or the PowerShell."
-msgstr ""
+msgstr "从 \"开始 \"菜单打开 PKI 代理。如果将其安装到默认位置，也可以从*Run* "
+"对话框或 PowerShell 中使用以下命令运行它。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:63
 msgid ""
 "PKI Proxy will minimize to the system tray, even if the main window is "
 "closed."
-msgstr ""
+msgstr "即使主窗口已关闭，PKI 代理也会最小化到系统托盘。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:66
 #, fuzzy
@@ -6816,7 +6841,7 @@ msgstr "存储配置"
 
 #: ../../source/components/nethsm/pkiproxy.rst:68
 msgid "The instructions below configure the PKI Proxy."
-msgstr ""
+msgstr "下面的说明用于配置 PKI 代理。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:70
 #, fuzzy
@@ -6832,7 +6857,7 @@ msgstr "选择``SETTINGS`` 选项卡。"
 msgid ""
 "Make sure the checkbox **Enable TLS** is checked and an apropriate "
 "certificate is used."
-msgstr ""
+msgstr "确保选中**Enable TLS** 复选框，并使用适当的证书。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:73
 #, fuzzy
@@ -6843,13 +6868,13 @@ msgstr "切换到 \"设备 \"视图。"
 msgid ""
 "Create a new user by clicking on the **New...** button. Choose an "
 "authentication type which is supported by all clients."
-msgstr ""
+msgstr "单击**New...** 按钮创建新用户。选择所有客户端都支持的验证类型。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:76
 msgid ""
 "In the menu bar of main window click the **Start** button to start the "
 "PKI Proxy service."
-msgstr ""
+msgstr "在主窗口的菜单栏中单击**Start** 按钮启动 PKI 代理服务。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:79
 #, fuzzy
@@ -6860,11 +6885,11 @@ msgstr "为NetHSM TLS接口设置证书"
 msgid ""
 "In the following we configure which certificates from the NetHSM are made"
 " available through PKI Proxy."
-msgstr ""
+msgstr "下面我们将配置通过 PKI 代理提供哪些来自 NetHSM 的证书。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:83
 msgid "Make sure the PKI Proxy main window is open."
-msgstr ""
+msgstr "确保 PKI 代理主窗口已打开。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:84
 #, fuzzy
@@ -6875,7 +6900,7 @@ msgstr "切换到 \"设备 \"视图。"
 msgid ""
 "Click on the **New...** button. This will open the **Share Certificate** "
 "window."
-msgstr ""
+msgstr "单击**New...** 按钮。这将打开**股票** 窗口。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:87
 msgid ""
@@ -6883,10 +6908,12 @@ msgid ""
 "**Certificate** frame of the window. This will open the **Select a "
 "Private Key** window."
 msgstr ""
+"单击窗口**Certificate** 框中的**Select Certificate or Key...** "
+"按钮。这将打开**选择私钥** 窗口。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:89
 msgid "Change to the **Security Key** tab."
-msgstr ""
+msgstr "更改为**安全密钥** 选项卡。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:90
 msgid ""
@@ -6894,13 +6921,16 @@ msgid ""
 "library file. The text field **PKCS#11 Library** now shows the path to "
 "the library file."
 msgstr ""
+"单击**Browse...** 按钮并选择 NetHSM PKCS#11 驱动程序库文件。文本字段**PKCS#"
+"11 库** 现在显示库文件的路径。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:92
 msgid ""
 "From the dropdown menu **Security Key (PKCS#11)** choose the slot which "
 "contains the certificate. The listed slots depend on your configuration "
 "of the PKCS#11 module."
-msgstr ""
+msgstr "从下拉菜单**Security Key (PKCS#11)** 中选择包含证书的插槽。所列插槽取决于 "
+"PKCS#11 模块的配置。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:94
 #, fuzzy
@@ -6913,19 +6943,22 @@ msgid ""
 "certificates and generic keys on the NetHSM. Select the certificate or "
 "generic key you want to share with PKI Proxy."
 msgstr ""
+"**Certificates** 下方的文本列表现在显示 NetHSM 上可用证书和通用密钥的列表。"
+"选择要与 PKI 代理共享的证书或通用密钥。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:97
 msgid ""
 "Click on the **OK** button to confirm the selection. This will bring you "
 "back to the **Share Certificate** window. The window will now show the "
 "details of the selected certificate."
-msgstr ""
+msgstr "单击**OK** 按钮确认选择。这将使您返回**股票** "
+"窗口。窗口现在将显示所选证书的详细信息。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:101
 msgid ""
 "Click on the **Add...** button, in the **Access and Permissions** frame "
 "of the window. This will open the **Select user** window."
-msgstr ""
+msgstr "单击窗口**访问和权限** 框中的**添加...** 按钮。这将打开**选择用户** 窗口。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:103
 msgid ""
@@ -6934,6 +6967,9 @@ msgid ""
 "the selection. If you choose to create a new user the **New User** window"
 " will be shown afterwards."
 msgstr ""
+"从下拉菜单中选择一个现有用户，或选择**Create New User...** "
+"创建一个新用户。单击**OK** 按钮确认选择。如果选择创建新用户，则随后将显示**"
+"New User** 窗口。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:106
 msgid ""
@@ -6941,47 +6977,51 @@ msgid ""
 " required operations for the certificate or generic key. This can be "
 "changed with the checkboxes at the bottom of the **Access and "
 "Permissions** frame."
-msgstr ""
+msgstr "回到**共享证书** "
+"窗口，确保只允许对证书或通用密钥进行所需的操作。这可以通过**访问和权限** "
+"框架底部的复选框进行更改。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:108
 msgid ""
 "Click on the **OK** button to publish the certificate. This will bring "
 "you back to the main window of PKI Proxy."
-msgstr ""
+msgstr "点击**OK** 按钮发布证书。这将使您返回 PKI 代理主窗口。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:110
 msgid ""
 "The text list below **Certificate Management** now shows the published "
 "certificate."
-msgstr ""
+msgstr "**Certificate Management** 下方的文本列表现在显示已发布的证书。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:113
 msgid ""
 "Make sure the mechanisms of the shared key on the NetHSM allow the "
 "intended usage in PKI Proxy."
-msgstr ""
+msgstr "确保 NetHSM 上的共享密钥机制允许在 PKI 代理中使用。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:116
 msgid "PKI Proxy - Client"
-msgstr ""
+msgstr "PKI 代理 - 客户端"
 
 #: ../../source/components/nethsm/pkiproxy.rst:118
 msgid ""
 "The PKI Proxy client tools provide different ways to access the shared "
 "keys and certificates from a PKI Proxy server."
-msgstr ""
+msgstr "PKI 代理客户端工具提供了从 PKI 代理服务器访问共享密钥和证书的不同方法。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:121
 msgid ""
 "The PKI Proxy server contains the client tools. Hence, the machine which "
 "runs the server can also be a client to itself."
-msgstr ""
+msgstr "PKI 代理服务器包含客户端工具。因此，运行服务器的机器本身也可以是客户端。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:127
 msgid ""
 "Download the *PKI Proxy 2024 - Client Tools* from the `/n software "
 "website <https://www.nsoftware.com/pkiproxy/download>`__."
 msgstr ""
+"从`/n 软件网站<https://www.nsoftware.com/pkiproxy/download>`__ 下载*PKI "
+"Proxy 2024 - Client Tools* 。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:131
 #, fuzzy
@@ -6997,6 +7037,10 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningksp>`__"
 " for more information."
 msgstr ""
+"PKI 代理提供一个 KSP，用于连接 PKI 代理服务器。KSP 可通过 CNG（密码 "
+"API：下一代）接口与应用程序一起使用本地 Windows API。更多信息请参阅`PKI "
+"Proxy 文档<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy."
+"htm#pg_runningksp>`__ 。"
 
 #: ../../source/components/nethsm/pkiproxy.rst:140
 msgid ""
@@ -7005,6 +7049,9 @@ msgid ""
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " for more information."
 msgstr ""
+"PKI 代理提供一个 PKCS#11 模块，用于连接 PKI 代理服务器。更多信息请参阅`PKI "
+"Proxy 文档<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy."
+"htm#pg_runningpkcs11>`__ 。"
 
 #: ../../source/components/nethsm/ssh.rst:2
 #: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
@@ -31643,4 +31690,3 @@ msgstr "标记裁剪的输出"
 #~ "Nitrokey FIDO2 configured following `these "
 #~ "instructions <https://docs.nitrokey.com/fido2/linux>`__."
 #~ msgstr "Nitrokey FIDO2的配置如下：`这些说明<https://docs.nitrokey.com/fido2/linux>`__。"
-
