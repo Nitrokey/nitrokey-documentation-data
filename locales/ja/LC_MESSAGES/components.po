@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-20 09:32+0000\n"
+"POT-Creation-Date: 2026-05-22 08:23+0000\n"
 "PO-Revision-Date: 2026-05-20 09:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2330,196 +2329,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__ で見ることができます。"
 
-#: ../../source/components/nethsm/apache.rst:2
-msgid "Apache"
-msgstr "アパッチ"
-
-#: ../../source/components/nethsm/apache.rst:4
-msgid ""
-"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
-"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"`Apache httpd<https://httpd.apache.org/>`__ を設定して、NetHSM の PKCS#11 "
-"モジュールを使用する OpenSSL エンジン経由で NetHSM を使用することができます。"
-
-#: ../../source/components/nethsm/apache.rst:6
-#: ../../source/components/nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr "証明書ファイルはディスク上にある必要がありますが、秘密鍵はNetHSMから使用できます。"
-
-#: ../../source/components/nethsm/apache.rst:8
-#: ../../source/components/nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "全例は` <#example>`__ の下にある。"
-
-#: ../../source/components/nethsm/apache.rst:11
-#: ../../source/components/nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "OpenSSLの設定"
-
-#: ../../source/components/nethsm/apache.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
-"Apache httpd.)"
-msgstr ""
-"`OpenSSL Engine setup guide<openssl.html#engine>`__ "
-"に従って、OpenSSLエンジンをセットアップしてください（OpenSSLプロバイダーはまだApache httpdではサポートされていません）。"
-
-#: ../../source/components/nethsm/apache.rst:16
-msgid "Httpd Configuration"
-msgstr "Httpdの設定"
-
-#: ../../source/components/nethsm/apache.rst:18
-msgid "Add the following lines to your ``httpd.conf`` :"
-msgstr "``httpd.conf`` に以下の行を追加する："
-
-#: ../../source/components/nethsm/apache.rst:37
-#, fuzzy
-msgid ""
-"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
-"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
-msgstr ""
-"``SSLCertificateKeyFile`` は、NetHSMの秘密鍵を指すPKCS#11`URI<https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ でなければならない。"
-
-#: ../../source/components/nethsm/apache.rst:41
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"httpd won't start."
-msgstr ""
-"証明書は別途生成し、NetHSM "
-"にアップロードする必要があります。ディスク上の証明書とNetHSM内のキーが一致しない場合、httpdは起動しません。"
-
-#: ../../source/components/nethsm/apache.rst:45
-#: ../../source/components/nethsm/nginx.rst:72
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 設定"
-
-#: ../../source/components/nethsm/apache.rst:57
-msgid ""
-"To secure the password you can provide it via an environment variable "
-"(see `Passwords <pkcs11-setup.html#passwords>`__) or provide it in the "
-"httpd configuration:"
-msgstr ""
-"パスワードを保護するには、環境変数（`パスワード<pkcs11-setup.html#passwords>`__ "
-"を参照）を使うか、httpdのコンフィギュレーションで指定します："
-
-#: ../../source/components/nethsm/apache.rst:65
-#: ../../source/components/nethsm/nginx.rst:92
-#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
-msgid "Example"
-msgstr "例"
-
-#: ../../source/components/nethsm/apache.rst:67
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"`の例<https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/apache>`__ を試してみたい場合は、git を使って`nethsm-pkcs11 "
-"リポジトリ<https://github.com/Nitrokey/nethsm-pkcs11>`__ "
-"をクローンし、以下のコマンドを実行してください："
-
-#: ../../source/components/nethsm/apache.rst:70
-#: ../../source/components/nethsm/nginx.rst:97
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr "生成スクリプトを実行すると、``webserver`` キーが削除され、置き換わる。"
-
-#: ../../source/components/nethsm/apache.rst:72
-#: ../../source/components/nethsm/nginx.rst:99
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started.html>`__ for more information. Besides an "
-"administrator, you are going to need an operator account."
-msgstr ""
-"NetHSMを設定する。本物のNetHSMでもコンテナでもよい。詳しくは`スタートアップガイド<getting-started.html>`__ "
-"を参照。管理者の他に、オペレーター・アカウントが必要です。"
-
-#: ../../source/components/nethsm/apache.rst:73
-#: ../../source/components/nethsm/nginx.rst:100
-msgid ""
-"Download and install the latest version of the nethsm-pkcs11 driver "
-"`available from here <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__."
-msgstr ""
-"nethsm-pkcs11 ドライバー` <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__ から最新版をダウンロードしてインストールしてください。"
-
-#: ../../source/components/nethsm/apache.rst:74
-#: ../../source/components/nethsm/nginx.rst:101
-msgid ""
-"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
-"<openssl.html>`__. You do not need to create a configuration file."
-msgstr ""
-"`OpenSSL Manual<openssl.html>`__ の説明に従って、OpenSSL "
-"PKCS11エンジンをインストールする。設定ファイルを作成する必要はありません。"
-
-#: ../../source/components/nethsm/apache.rst:75
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"` `` ` の変数 ` `, ` `, ` ` を調整し、 ` ` に NetHSM の URL とポート、 ` "
-"に管理者アカウントのユーザー名、 ` ` に対応するパスワードを設定する。さらに、 ` ` に OpenSSL PKCS11 "
-"エンジンの絶対パスを、 ` ` に NetHSM PKCS11 "
-"ライブラリの絶対パスを設定する。container/apache/generate.sh` `HOST` `ADMIN_ACCOUNT` "
-"`ADMIN_ACCOUNT_PWD` `HOST`ADMIN_ACCOUNT` `ADMIN_ACCOUNT_PWD` "
-"`OPENSSL_PKCS11_ENGINE_PATH` `NETHSM_PKCS11_LIBRARY_PATH`"
-
-#: ../../source/components/nethsm/apache.rst:76
-#: ../../source/components/nethsm/nginx.rst:103
-msgid ""
-"Create a NetHSM PKCS11 configuration file in one of the `known locations "
-"<pkcs11-setup.html#configuration>`__, e.g., "
-"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
-"account and use the same NetHSM instance specified in the generate script"
-" before."
-msgstr ""
-"NetHSM PKCS11 設定ファイルを` <pkcs11-setup.html#configuration>`__ "
-"のいずれかの既知の場所、例えば``/etc/nitrokey/p11nethsm.conf`` "
-"に作成します。オペレーター・アカウントを設定し、生成スクリプトで指定したのと同じNetHSMインスタンスを使用する必要があります。"
-
-#: ../../source/components/nethsm/apache.rst:77
-msgid ""
-"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr "``container/apache/p11nethsm.conf``のPKCS11設定を、NetHSMsのURLと有効なオペレーター認証情報で更新します。"
-
-#: ../../source/components/nethsm/apache.rst:78
-#: ../../source/components/nethsm/nginx.rst:105
-msgid "Generate the certificate and key."
-msgstr "証明書と鍵を生成する。"
-
-#: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/nginx.rst:111
-msgid "Build the container."
-msgstr "コンテナを作る。"
-
-#: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/nginx.rst:117
-msgid "Run the container."
-msgstr "コンテナを実行する。"
-
-#: ../../source/components/nethsm/apache.rst:96
-msgid ""
-"The Apache test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
-"warn you that the websites certificate is self-signed."
-msgstr "アパッチのテスト・ページは、`https://localhost:9443/<https://localhost:9443/>`__にあります。ブラウザは、うまくいけば、ウェブサイトの証明書が自己署名であることを警告することに注意してください。"
-
 #: ../../source/components/nethsm/clustering.rst:2
 #, fuzzy
 msgid "Clustering"
@@ -3543,6 +3352,933 @@ msgid ""
 "time, and in a cluster where losing that node would not lose quorum."
 msgstr "あるノードのネットワーク設定を変更すると（IPを変更するなど）、他のノードにその更新が自動的に通知されます。ただし、このような更新は一度に1つのノードに対してのみ行い、そのノードを失ってもクォーラムが失われないクラスタ内で行うようにしてください。"
 
+#: ../../source/components/nethsm/compatible/apache.rst:2
+msgid "Apache"
+msgstr "アパッチ"
+
+#: ../../source/components/nethsm/compatible/apache.rst:4
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"`Apache httpd<https://httpd.apache.org/>`__ を設定して、NetHSM の PKCS#11 "
+"モジュールを使用する OpenSSL エンジン経由で NetHSM を使用することができます。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:6
+#: ../../source/components/nethsm/compatible/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr "証明書ファイルはディスク上にある必要がありますが、秘密鍵はNetHSMから使用できます。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:8
+#: ../../source/components/nethsm/compatible/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "全例は` <#example>`__ の下にある。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:11
+#: ../../source/components/nethsm/compatible/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "OpenSSLの設定"
+
+#: ../../source/components/nethsm/compatible/apache.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"`OpenSSL Engine setup guide<openssl.html#engine>`__ "
+"に従って、OpenSSLエンジンをセットアップしてください（OpenSSLプロバイダーはまだApache httpdではサポートされていません）。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:16
+msgid "Httpd Configuration"
+msgstr "Httpdの設定"
+
+#: ../../source/components/nethsm/compatible/apache.rst:18
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "``httpd.conf`` に以下の行を追加する："
+
+#: ../../source/components/nethsm/compatible/apache.rst:37
+#, fuzzy
+msgid ""
+"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+"``SSLCertificateKeyFile`` は、NetHSMの秘密鍵を指すPKCS#11`URI<https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ でなければならない。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:41
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"証明書は別途生成し、NetHSM "
+"にアップロードする必要があります。ディスク上の証明書とNetHSM内のキーが一致しない場合、httpdは起動しません。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:45
+#: ../../source/components/nethsm/compatible/nginx.rst:72
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 設定"
+
+#: ../../source/components/nethsm/compatible/apache.rst:57
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Passwords <../pkcs11-setup.html#passwords>`__) or provide it in the"
+" httpd configuration:"
+msgstr ""
+"パスワードを保護するには、環境変数（`パスワード<pkcs11-setup.html#passwords>`__ "
+"を参照）を使うか、httpdのコンフィギュレーションで指定します："
+
+#: ../../source/components/nethsm/compatible/apache.rst:65
+#: ../../source/components/nethsm/compatible/nginx.rst:92
+#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
+msgid "Example"
+msgstr "例"
+
+#: ../../source/components/nethsm/compatible/apache.rst:67
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"`の例<https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/apache>`__ を試してみたい場合は、git を使って`nethsm-pkcs11 "
+"リポジトリ<https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+"をクローンし、以下のコマンドを実行してください："
+
+#: ../../source/components/nethsm/compatible/apache.rst:70
+#: ../../source/components/nethsm/compatible/nginx.rst:97
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr "生成スクリプトを実行すると、``webserver`` キーが削除され、置き換わる。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:72
+#: ../../source/components/nethsm/compatible/nginx.rst:99
+#, fuzzy
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <../getting-started.html>`__ for more information. Besides "
+"an administrator, you are going to need an operator account."
+msgstr ""
+"NetHSMを設定する。本物のNetHSMでもコンテナでもよい。詳しくは`スタートアップガイド<getting-started.html>`__ "
+"を参照。管理者の他に、オペレーター・アカウントが必要です。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:73
+#: ../../source/components/nethsm/compatible/nginx.rst:100
+msgid ""
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+msgstr ""
+"nethsm-pkcs11 ドライバー` <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__ から最新版をダウンロードしてインストールしてください。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:74
+#: ../../source/components/nethsm/compatible/nginx.rst:101
+msgid ""
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
+msgstr ""
+"`OpenSSL Manual<openssl.html>`__ の説明に従って、OpenSSL "
+"PKCS11エンジンをインストールする。設定ファイルを作成する必要はありません。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:75
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"` `` ` の変数 ` `, ` `, ` ` を調整し、 ` ` に NetHSM の URL とポート、 ` "
+"に管理者アカウントのユーザー名、 ` ` に対応するパスワードを設定する。さらに、 ` ` に OpenSSL PKCS11 "
+"エンジンの絶対パスを、 ` ` に NetHSM PKCS11 "
+"ライブラリの絶対パスを設定する。container/apache/generate.sh` `HOST` `ADMIN_ACCOUNT` "
+"`ADMIN_ACCOUNT_PWD` `HOST`ADMIN_ACCOUNT` `ADMIN_ACCOUNT_PWD` "
+"`OPENSSL_PKCS11_ENGINE_PATH` `NETHSM_PKCS11_LIBRARY_PATH`"
+
+#: ../../source/components/nethsm/compatible/apache.rst:76
+#: ../../source/components/nethsm/compatible/nginx.rst:103
+#, fuzzy
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<../pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+"NetHSM PKCS11 設定ファイルを` <pkcs11-setup.html#configuration>`__ "
+"のいずれかの既知の場所、例えば``/etc/nitrokey/p11nethsm.conf`` "
+"に作成します。オペレーター・アカウントを設定し、生成スクリプトで指定したのと同じNetHSMインスタンスを使用する必要があります。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:77
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr "``container/apache/p11nethsm.conf``のPKCS11設定を、NetHSMsのURLと有効なオペレーター認証情報で更新します。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:78
+#: ../../source/components/nethsm/compatible/nginx.rst:105
+msgid "Generate the certificate and key."
+msgstr "証明書と鍵を生成する。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:84
+#: ../../source/components/nethsm/compatible/nginx.rst:111
+msgid "Build the container."
+msgstr "コンテナを作る。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:90
+#: ../../source/components/nethsm/compatible/nginx.rst:117
+msgid "Run the container."
+msgstr "コンテナを実行する。"
+
+#: ../../source/components/nethsm/compatible/apache.rst:96
+msgid ""
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr "アパッチのテスト・ページは、`https://localhost:9443/<https://localhost:9443/>`__にあります。ブラウザは、うまくいけば、ウェブサイトの証明書が自己署名であることを警告することに注意してください。"
+
+#: ../../source/components/nethsm/compatible/cascade.rst:2
+msgid "Cascade"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/cascade.rst:4
+msgid ""
+"NetHSM can be used to secure your DNSSEC keys with Cascade. Details are "
+"documented in the `Cascade documentation "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:2
+msgid "EJBCA"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:5
+msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
+msgstr "EJBCAには少なくともNetHSM v3とnethsm-pkcs11 v2が必要です。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:7
+#, fuzzy
+msgid ""
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
+msgstr "`EJBCA<https://www.ejbca.org/>`__は、オープンソースで利用可能なPKI認証局ソフトウェアです。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA Community"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:12
+msgid ""
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr "EJBCA Community Editionは、オープンソースのPKI認証局ソフトウェアです。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
+"<../pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+msgstr ""
+"<pkcs11-setup.html>`NetHSM を EJBCA で使用するには、`__ NetHSM PKCS#11 "
+"モジュールをセットアップする必要があります。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:16
+msgid ""
+"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+"次に、``/etc/ejbca/conf/web.properties`` ファイルにエントリーを追加して、NetHSM PKCS#11 "
+"モジュールを使用するように EJBCA を設定する："
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:26
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr "名前の``418`` は、コンフィギュレーション・ファイル内の各PKCS#11モジュールで一意でなければならないインデックスである。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:28
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``NetHSM``."
+msgstr ""
+"EJBCAを再起動した後、EJBCA Admin "
+"GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``で新しいCrypto"
+" Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto Token`` で、Crypto Token "
+"名は``NetHSM`` である。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:33
+#, fuzzy
+msgid "Docker Example"
+msgstr "例"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:35
+#, fuzzy
+msgid ""
+"We provide an example setup using docker for testing. If you want to "
+"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
+" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
+" described in the file `container/ejbca/README.md "
+"<https://github.com/Nitrokey/nethsm-"
+"pkcs11/blob/main/container/ejbca/README.md>`__."
+msgstr ""
+"与えられた例で実験したい場合は、gitを使って`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey"
+"/nethsm-pkcs11>`__をクローンし、以下のコマンドを実行することができます："
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA Enterprise"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr "EJBCAエンタープライズ版は、高度な機能とエンタープライズサポートを提供します。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+"EJBCA EE の構成は、Community Edition "
+"とは異なる。EJBCAでPKCS#11モジュールを直接構成する代わりに、Enterprise Editionでは**サイドカーコンテナ** "
+"のアプローチを使用します。このサイドカーコンテナは、NetHSMへのp11ng（PKCS#11 Next "
+"Generation）接続を提供し、メインのEJBCAコンテナを変更することなく、シームレスな統合を可能にします。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+"EJBCA EEを使用したハードウェアセキュリティモジュール（HSM）の設定に関する詳細情報については、公式の`EJBCA "
+"HSMドキュメント<https://docs.keyfactor.com/ejbca/latest/hardware-security-"
+"modules-hsm>`__を参照してください。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "例"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr "NetHSM と EJBCA EE を統合するための完全なコンテナ化されたセットアップを提供します。セットアップには以下が含まれます："
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "コンテナを作る。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr "NetHSM PKCS#11 サイドカーコンテナ (p11ng)"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr "テスト用NetHSMコンテナ"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+"NetHSM-pkcs11 リポジトリの`container/ejbca-ee/ "
+"ディレクトリ<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container"
+"/ejbca-ee>`__ にコンテナ・イメージとコンフィギュレーションがある。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+"このディレクトリには、``docker-compose.yml`` ファイルが含まれており、テスト用の NetHSM "
+"インスタンスを含む必要なコンポーネントがすべて表示されます。これは、EJBCA "
+"EEとNetHSMの統合を実験するためのすぐに使える環境を提供します。"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+"`Dockerfile`` と ` ` には公式リポジトリへの参照が含まれているので、それらを利用する前に ` ` を必ず実行してください"
+"。`docker-compose.yml` `docker login`"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
+"現在のところ、特定の*Crypto Token* に対して*Padding Scheme* "
+"を選択する方法がないという制約がある。したがって、RSA は常に PKCS#1 パディングを使用する（PSS は使用しない）。"
+
+#: ../../source/components/nethsm/compatible/index.rst:2
+#, fuzzy
+msgid "Compatible Software"
+msgstr "ソースからコンパイルする"
+
+#: ../../source/components/nethsm/compatible/index.rst:4
+msgid ""
+"NetHSM can be used in conjunction with a wide range of existing software."
+" The following list includes examples of software with which integration "
+"has already been tested. However, NetHSM can be integrated into almost "
+"any software via the `API or the PKCS#11 module. <../integration.html>`__"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:2
+msgid "Knot DNS"
+msgstr "ノットDNS"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:4
+#, fuzzy
+msgid ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
+"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
+"please install and configure the PKCS#11 module as `described here "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"`Knot DNS<https://www.knot-dns.cz/>`__ "
+"はDNSSECに使用できるオープンソースの権威DNSサーバーです。NetHSMでKnotDNSを使用するには、` "
+"<./pkcs11-setup.html>`__に記載されているように、PKCS#11モジュールをインストールして設定してください。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:7
+msgid "Manual Mode"
+msgstr "マニュアル・モード"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:9
+msgid "In manual mode the keys have to be generated and managed manually."
+msgstr "手動モードでは、キーを手動で生成し、管理しなければならない。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:11
+msgid ""
+"Only the Operator user is needed in the PKCS#11 module configuration "
+"file. The password can be specified using the ``pin-value`` in the "
+"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
+msgstr ""
+"PKCS#11 モジュール設定ファイルで必要なのは、Operator ユーザーのみである。パスワードは、knot.confの`PKCS#11 "
+"URI<https://www.rfc-editor.org/rfc/rfc7512>`__の``pin-value``で指定できる。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:13
+msgid ""
+"Add the following lines to the KnotDNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr "KnotDNS 設定ファイル``/etc/knot/knot.conf`` に以下の行を追加する："
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:34
+msgid ""
+"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
+"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
+"needed."
+msgstr ""
+"PKCS#11 URIの``token`` の値は、``p11nethsm.conf`` の``label`` "
+"である。``libnethsm_pkcs11.so`` へのパスは必要に応じて調整してください。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:37
+msgid "To generate the keys run the following commands:"
+msgstr "キーを生成するには、以下のコマンドを実行する："
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:60
+msgid "Automatic Mode"
+msgstr "自動モード"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:62
+msgid ""
+"In automatic mode the keys are generated by Knot DNS and stored in the "
+"NetHSM."
+msgstr "自動モードでは、鍵はKnot DNSによって生成され、NetHSMに保存される。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:64
+msgid ""
+"An Administrator and an Operator user are needed in the PKCS#11 module "
+"configuration."
+msgstr "PKCS#11 モジュールの設定には、Administrator と Operator ユーザーが必要である。"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:66
+msgid ""
+"Add the following lines to the Knot DNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr "Knot DNS設定ファイル``/etc/knot/knot.conf`` に以下の行を追加する："
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:92
+msgid ""
+"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
+"module ignores the given label and always returns the hexadecimal key id "
+"as label. The policy uses very short key lifetimes and TTL's for testing "
+"purposes."
+msgstr ""
+"``key-label`` を``on`` "
+"に設定しても何も変わらず、pkcs11モジュールは与えられたラベルを無視し、常に16進数のキーIDをラベルとして返す。pkcs11モジュールは与えられたラベルを無視し、常に16進数のキーIDをラベルとして返します。このポリシーでは、テスト目的で非常に短いキー寿命とTTLを使用しています。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:2
+msgid "Nginx"
+msgstr "Nginx"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:4
+msgid ""
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"`nginx<https://nginx.org/>`__ を設定して、NetHSM の PKCS#11 モジュールを使用する OpenSSL "
+"エンジン経由で NetHSM を使用することができます。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
+msgstr ""
+"`OpenSSL Engine setup guide<openssl.html#engine>`__ "
+"に従ってOpenSSLエンジンをセットアップする。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr "プロバイダはNginxではまだサポートされていません。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+"libp11 "
+"OpenSSLエンジンのバージョン0.4.12またはそれ以前を使用し、多くのキーを持つNetHSMを使用すると、Nginxの初期ロードが遅くなります（1,000キーで1分以上）。バージョン0.4.13以降を使用するか、`ソース<https://github.com/OpenSC/libp11>`__"
+" からエンジンをビルドすることをお勧めします。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:21
+msgid "Nginx Configuration"
+msgstr "Nginxの設定"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:60
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr "``ssl_certificate`` はディスク上の証明書ファイルを指していなければならない。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:62
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+"``ssl_certificate_key``はOpenSSLのコンフィギュレーションである。ここでは PKCS#11 モジュールを搭載した "
+"OpenSSL エンジンを使用し、ラベル/ID が``webserver`` で、鍵のタイプが``private`` の秘密鍵を選択する。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:69
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"nginx won't start."
+msgstr ""
+"証明書を別途生成し、NetHSM "
+"にアップロードする必要があります。ディスク上の証明書とNetHSM内のキーが一致しない場合、nginxは起動しません。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:84
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an `environment variable "
+"<../pkcs11-setup.html#passwords>`__) or provide it in the nginx "
+"configuration:"
+msgstr ""
+"パスワードを保護するには、`環境変数<pkcs11-setup.html#passwords>`__) "
+"を使用するか、nginxのコンフィギュレーションで指定します："
+
+#: ../../source/components/nethsm/compatible/nginx.rst:94
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"`の例<https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/nginx>`__ を試してみたい場合は、git を使って`nethsm-pkcs11 "
+"リポジトリ<https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+"をクローンし、以下のコマンドを実行してください："
+
+#: ../../source/components/nethsm/compatible/nginx.rst:102
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"` `` ` の変数 ` `, ` `, ` ` を調整し、 ` ` に NetHSM の URL とポート、 ` "
+"に管理者アカウントのユーザー名、 ` ` に対応するパスワードを設定する。さらに、 ` ` に OpenSSL PKCS11 "
+"エンジンの絶対パスを、 ` ` に NetHSM PKCS11 "
+"ライブラリの絶対パスを設定する。container/nginx/generate.sh` `HOST` `ADMIN_ACCOUNT` "
+"`ADMIN_ACCOUNT_PWD` `HOST`ADMIN_ACCOUNT` `ADMIN_ACCOUNT_PWD` "
+"`OPENSSL_PKCS11_ENGINE_PATH` `NETHSM_PKCS11_LIBRARY_PATH`"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:104
+msgid ""
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr "``container/nginx/p11nethsm.conf``のPKCS11設定を、NetHSMsのURLと有効なオペレーター認証情報で更新します。"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:123
+#, fuzzy
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, will warn you that "
+"the websites certificate is self-signed."
+msgstr "NGINXテストページは、`https://localhost:9443/<https://localhost:9443/>`__にあります。ブラウザは、うまくいけば、ウェブサイトの証明書が自己署名であることを警告することに注意してください。"
+
+#: ../../source/components/nethsm/compatible/openbao.rst:2
+#, fuzzy
+msgid "OpenBao"
+msgstr "操作方法"
+
+#: ../../source/components/nethsm/compatible/openbao.rst:4
+msgid ""
+"NetHSM can be used to auto-unseal you OpenBao. Details are documented in "
+"the `OpenBao documentation "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr "オープンDNSSEC"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+"`OpenDNSSEC<https://www.opendnssec.org/>`__ "
+"ドメイン名のセキュリティを管理するためのツールスイートです。PKCS#11モジュールを直接ロードし、鍵を管理することができる。"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:6
+#, fuzzy
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
+" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
+" used instead."
+msgstr ""
+"OpenDNSSEC のインストールとセットアップは、`OpenDNSSEC "
+"クイックスタートガイド<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__"
+" に従ってください。``SoftHSM`` をインストールする必要はありません。代わりに NetHSM PKCS#11 モジュールが使用されます。"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+"OpenDNSSEC は鍵を管理し、それを使用するためのアクセスを必要とするので、PKCS#11 "
+"モジュールの設定ファイルで管理者とオペレータの両方のアカウントを設定する必要があります。"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+"``/etc/opendnssec/conf.xml`` ファイルを編集することで、libnethsm_pkcs11.so "
+"モジュールをロードするように OpenDNSSEC を設定することができます。以下の行を追加する必要があります："
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:35
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+"``/root/libnethsm_pkcs11.so`` "
+"をlibnethsm_pkcs11.soモジュールへのパスに置き換える。``<TokenLabel>`` は``p11nethsm.conf`` "
+"設定ファイルで設定したラベルと一致させる必要がある。``<PIN>`` はオペレータの暗証番号で、``conf.xml`` "
+"ファイルにプレーンテキストで設定するか、``ods-hsmutil login`` を使用する。OpenDNSSEC は PIN "
+"がないと起動しません。"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:39
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+"また、``/etc/opendnssec/kasp.xml`` の``<Repository>`` "
+"フィールドを、デフォルトの``SoftHSM`` ではなく、``NetHSM`` に更新する必要がある："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:2
+msgid "OpenSSL"
+msgstr "オープンSSL"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:6
+msgid ""
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
+msgstr ""
+"秘密鍵を取得しようとすると、OpenSSLがクラッシュします。秘密鍵は NetHSM "
+"からは取り出せないので、これは正常な動作です。代わりに公開鍵を取得するとよいでしょう（以下の例を参照）。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:9
+msgid "Engine"
+msgstr "エンジン"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:12
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
+msgstr ""
+"エンジン (libp11) のバージョンが 0.4.12 以前の場合、NetHSM に EdDSA キーがあると OpenSSL "
+"がキーを見つけられません。バージョン 0.4.12 以前では、キーが要求されると、エンジンは NetHSM "
+"上のすべてのキーを一覧表示します。ラベルまたは ID でキーを検索する場合は、バージョン 0.4.13 "
+"以降を使用するか、`libp11<https://github.com/OpenSC/libp11>`__ "
+"をソースからビルドすることを推奨します。エンジンのバイナリは``src/.libs/pkcs11.so`` になります。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:17
+msgid ""
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
+msgstr ""
+"OpenSSLエンジンインターフェースは、OpenSSL用のカスタムバックエンドを実装するための古い方法で、OpenSSL "
+"3では非推奨となっています。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:19
+#: ../../source/components/nethsm/compatible/openssl.rst:101
+#, fuzzy
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<../pkcs11-setup.html>`__."
+msgstr "PKCS#11 モジュールをセットアップする必要があります。` <pkcs11-setup.html>`__ 以下の手順に従ってください。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:21
+msgid "Install the engine:"
+msgstr "エンジンを取り付ける："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:24
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:30
+#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
+msgid "Fedora"
+msgstr "フェドラ"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:36
+msgid "Arch Linux"
+msgstr "アーチ・リナックス"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:42
+msgid ""
+"Next you need to configure OpenSSL to use the engine. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr "次に、このエンジンを使うようにOpenSSLを設定する必要がある。これは``openssl.cnf`` ファイルに以下の行を追加することで行う："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:61
+#: ../../source/components/nethsm/compatible/openssl.rst:127
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr "環境変数``OPENSSL_CONF`` を使って、OpenSSLにOpenSSL設定ファイルのパスを指定することができます。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:64
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr "メインのOpenSSLコンフィギュレーション・ファイルがこれらの行だけを含むように変更されると、OpenSSLを使用する他のプログラムを壊してしまう可能性があります。したがって、エンジン用に別のコンフィギュレーション・ファイルを作成した方がよいでしょう。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:67
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` "
+"を、先にインストールしたPKCS#11モジュールへのパスに置き換える。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:69
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` "
+"をインストールしたOpenSSLエンジンのパスに置き換えてください。パスはディストリビューションによって異なります。``engines-3`` "
+"の数字はOpenSSLのバージョンに対応しています。Debian の場合、OpenSSL 3 エンジンのパスは``/usr/lib/x86_64"
+"-linux-gnu/engines-3/libpkcs11.so`` です。Fedora "
+"の場合は``/usr/lib64/engines-3/libpkcs11.so`` です。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:71
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"`PKCS#11 URI<https://www.rfc-editor.org/rfc/rfc7512>`__ を使用することで、NetHSM "
+"上で鍵を使用できる："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:77
+msgid "This will use the key ``webserver``."
+msgstr "これには``webserver`` というキーが使われる。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:80
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr "GnuTLS <https://gnutls.org/>` から``p11tool`` コマンドを使えば、鍵の完全なURIを取得できる："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:87
+msgid "Example Command"
+msgstr "コマンド例"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:89
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr "NetHSM上の非対称鍵ペアの公開鍵を取得する："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:97
+msgid "Provider"
+msgstr "プロバイダー"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:99
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+"OpenSSLプロバイダー・インターフェースは、OpenSSLのカスタム・バックエンドを実装する新しい方法です。`pkcs11-provider "
+"バックエンド<https://github.com/latchset/pkcs11-provider>`__ はまだ開発の初期段階です。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:103
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+"プロバイダーをインストールする。Fedora には``pkcs11-provider`` "
+"というパッケージが存在する。他のLinuxディストリビューションでは、`ソースからビルドする必要がある<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:105
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"次に、プロバイダーを使用するようにOpenSSLを設定する必要があります。これは、``openssl.cnf`` "
+"ファイルに以下の行を追加することで行う："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:122
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+"``module`` をインストールしたプロバイダーのパスに、``pkcs11-module-path`` "
+"をインストールしたPKCS#11モジュールのパスに設定する。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:124
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+"NetHSMをデフォルトのプロバイダーとして設定したい場合は、``default = pkcs11`` を``provider_sect`` "
+"セクションに追加してください。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:131
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr "メインのOpenSSLコンフィギュレーション・ファイルがこれらの行だけを含むように変更された場合、OpenSSLを使用する他のプログラムを壊してしまう可能性があります。したがって、プロバイダー用に別の設定ファイルを作成した方がよいでしょう。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:133
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"その後、`PKCS#11 URI<https://www.rfc-editor.org/rfc/rfc7512>`__ "
+"を使用することで、NetHSM 上で鍵を使用することができる："
+
+#: ../../source/components/nethsm/compatible/openssl.rst:139
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr "NetHSMをデフォルトのプロバイダーとして設定した場合は、``-provider pkcs11`` 引数を省略することができる。"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:142
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
+"現在、手動でURIにキータイプを設定する場合、プロバイダはキーを見つけることができません。URI の``;type=private`` "
+"または``;type=public`` の部分を省略することで動作するようになります。"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:2
+#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
+#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
+msgid "SSH"
+msgstr "SSH"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr "SSH 認証には NetHSM を使用できます。コマンドラインか SSH 設定で PKCS#11 モジュールのパスを渡す必要があります。"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:7
+msgid "Command line"
+msgstr "コマンドライン"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:12
+msgid "SSH config"
+msgstr "SSH設定"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+"SSHがデフォルトでNetHSMを使うように設定することもできます。そのためには、``~/.ssh/config`` "
+"ファイルに以下の行を追加してください："
+
+#: ../../source/components/nethsm/compatible/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr "SSHはNetHSM上でサーバーが受け付けるキーを検索します。"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr "NetHSM の鍵を SSH``authorized_keys`` フォーマットで一覧表示するには、以下のコマンドを使用する："
+
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
 msgid "Container"
@@ -3939,16 +4675,16 @@ msgstr "コンテナは、次のように実行できます。"
 #: ../../source/components/nethsm/container/production-image.rst:107
 #: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:45
-#: ../../source/components/nethsm/integration.rst:43
-#: ../../source/components/nethsm/integration.rst:56
+#: ../../source/components/nethsm/integration.rst:45
+#: ../../source/components/nethsm/integration.rst:58
 msgid "Docker"
 msgstr "ドッカー"
 
 #: ../../source/components/nethsm/container/production-image.rst:112
 #: ../../source/components/nethsm/container/production-image.rst:142
 #: ../../source/components/nethsm/container/test-image.rst:50
-#: ../../source/components/nethsm/integration.rst:48
-#: ../../source/components/nethsm/integration.rst:61
+#: ../../source/components/nethsm/integration.rst:50
+#: ../../source/components/nethsm/integration.rst:63
 msgid "Podman"
 msgstr "ポッドマン"
 
@@ -4047,184 +4783,6 @@ msgid ""
 "chapter `NetHSM introduction <../getting-started.html#Provisioning>`__ to"
 " learn more."
 msgstr "コンテナは自己署名のTLS証明書を使用しています。正しい接続設定を使用して、接続を確立するようにしてください。詳しくは、`NetHSM導入編<index.html>`__の章をご参照ください。"
-
-#: ../../source/components/nethsm/ejbca.rst:2
-msgid "EJBCA"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:5
-msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
-msgstr "EJBCAには少なくともNetHSM v3とnethsm-pkcs11 v2が必要です。"
-
-#: ../../source/components/nethsm/ejbca.rst:7
-#, fuzzy
-msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
-"software available in both Community (CE) and Enterprise Edition (EE)."
-msgstr "`EJBCA<https://www.ejbca.org/>`__は、オープンソースで利用可能なPKI認証局ソフトウェアです。"
-
-#: ../../source/components/nethsm/ejbca.rst:10
-#, fuzzy
-msgid "EJBCA Community"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:12
-msgid ""
-"EJBCA Community Edition is an open source PKI Certificate Authority "
-"software."
-msgstr "EJBCA Community Editionは、オープンソースのPKI認証局ソフトウェアです。"
-
-#: ../../source/components/nethsm/ejbca.rst:14
-#, fuzzy
-msgid ""
-"To be able to use NetHSM with EJBCA CE you need to `setup "
-"<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
-msgstr ""
-"<pkcs11-setup.html>`NetHSM を EJBCA で使用するには、`__ NetHSM PKCS#11 "
-"モジュールをセットアップする必要があります。"
-
-#: ../../source/components/nethsm/ejbca.rst:16
-msgid ""
-"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
-"in the ``/etc/ejbca/conf/web.properties`` file:"
-msgstr ""
-"次に、``/etc/ejbca/conf/web.properties`` ファイルにエントリーを追加して、NetHSM PKCS#11 "
-"モジュールを使用するように EJBCA を設定する："
-
-#: ../../source/components/nethsm/ejbca.rst:26
-msgid ""
-"The ``418`` in the name is an index that must be unique for each PKCS#11 "
-"module in the configuration file."
-msgstr "名前の``418`` は、コンフィギュレーション・ファイル内の各PKCS#11モジュールで一意でなければならないインデックスである。"
-
-#: ../../source/components/nethsm/ejbca.rst:28
-msgid ""
-"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
-"GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``NetHSM``."
-msgstr ""
-"EJBCAを再起動した後、EJBCA Admin "
-"GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``で新しいCrypto"
-" Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto Token`` で、Crypto Token "
-"名は``NetHSM`` である。"
-
-#: ../../source/components/nethsm/ejbca.rst:33
-#, fuzzy
-msgid "Docker Example"
-msgstr "例"
-
-#: ../../source/components/nethsm/ejbca.rst:35
-#, fuzzy
-msgid ""
-"We provide an example setup using docker for testing. If you want to "
-"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
-" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
-" described in the file `container/ejbca/README.md "
-"<https://github.com/Nitrokey/nethsm-"
-"pkcs11/blob/main/container/ejbca/README.md>`__."
-msgstr ""
-"与えられた例で実験したい場合は、gitを使って`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey"
-"/nethsm-pkcs11>`__をクローンし、以下のコマンドを実行することができます："
-
-#: ../../source/components/nethsm/ejbca.rst:39
-#, fuzzy
-msgid "EJBCA Enterprise"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:41
-msgid ""
-"EJBCA Enterprise Edition provides advanced features and enterprise "
-"support."
-msgstr "EJBCAエンタープライズ版は、高度な機能とエンタープライズサポートを提供します。"
-
-#: ../../source/components/nethsm/ejbca.rst:43
-msgid ""
-"Configuration for EJBCA EE differs from the Community Edition. Instead of"
-" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
-" uses a **sidecar container** approach. This sidecar container provides "
-"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
-"seamless integration without modifying the main EJBCA container."
-msgstr ""
-"EJBCA EE の構成は、Community Edition "
-"とは異なる。EJBCAでPKCS#11モジュールを直接構成する代わりに、Enterprise Editionでは**サイドカーコンテナ** "
-"のアプローチを使用します。このサイドカーコンテナは、NetHSMへのp11ng（PKCS#11 Next "
-"Generation）接続を提供し、メインのEJBCAコンテナを変更することなく、シームレスな統合を可能にします。"
-
-#: ../../source/components/nethsm/ejbca.rst:48
-msgid ""
-"For detailed information on configuring Hardware Security Modules (HSM) "
-"with EJBCA EE, refer to the official `EJBCA HSM documentation "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-msgstr ""
-"EJBCA EEを使用したハードウェアセキュリティモジュール（HSM）の設定に関する詳細情報については、公式の`EJBCA "
-"HSMドキュメント<https://docs.keyfactor.com/ejbca/latest/hardware-security-"
-"modules-hsm>`__を参照してください。"
-
-#: ../../source/components/nethsm/ejbca.rst:52
-#, fuzzy
-msgid "Docker Setup"
-msgstr "例"
-
-#: ../../source/components/nethsm/ejbca.rst:54
-msgid ""
-"We provide a complete containerized setup for EJBCA EE integration with "
-"NetHSM. The setup includes:"
-msgstr "NetHSM と EJBCA EE を統合するための完全なコンテナ化されたセットアップを提供します。セットアップには以下が含まれます："
-
-#: ../../source/components/nethsm/ejbca.rst:56
-#, fuzzy
-msgid "EJBCA EE container"
-msgstr "コンテナを作る。"
-
-#: ../../source/components/nethsm/ejbca.rst:57
-msgid "NetHSM PKCS#11 sidecar container (p11ng)"
-msgstr "NetHSM PKCS#11 サイドカーコンテナ (p11ng)"
-
-#: ../../source/components/nethsm/ejbca.rst:58
-msgid "NetHSM container for testing"
-msgstr "テスト用NetHSMコンテナ"
-
-#: ../../source/components/nethsm/ejbca.rst:60
-msgid ""
-"You can find the container image and configuration in the `container"
-"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
-msgstr ""
-"NetHSM-pkcs11 リポジトリの`container/ejbca-ee/ "
-"ディレクトリ<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container"
-"/ejbca-ee>`__ にコンテナ・イメージとコンフィギュレーションがある。"
-
-#: ../../source/components/nethsm/ejbca.rst:64
-msgid ""
-"The directory includes a complete ``docker-compose.yml`` file that brings"
-" up all necessary components, including a NetHSM instance for testing "
-"purposes. This provides a ready-to-use environment for experimenting with"
-" EJBCA EE and NetHSM integration."
-msgstr ""
-"このディレクトリには、``docker-compose.yml`` ファイルが含まれており、テスト用の NetHSM "
-"インスタンスを含む必要なコンポーネントがすべて表示されます。これは、EJBCA "
-"EEとNetHSMの統合を実験するためのすぐに使える環境を提供します。"
-
-#: ../../source/components/nethsm/ejbca.rst:69
-msgid ""
-"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
-"official repositories, make sure to run ``docker login`` before making "
-"use of them."
-msgstr ""
-"`Dockerfile`` と ` ` には公式リポジトリへの参照が含まれているので、それらを利用する前に ` ` を必ず実行してください"
-"。`docker-compose.yml` `docker login`"
-
-#: ../../source/components/nethsm/ejbca.rst:72
-msgid ""
-"Currently a limitation is that there is no way to select the *Padding "
-"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
-"PKCS#1 padding (and not PSS)."
-msgstr ""
-"現在のところ、特定の*Crypto Token* に対して*Padding Scheme* "
-"を選択する方法がないという制約がある。したがって、RSA は常に PKCS#1 パディングを使用する（PSS は使用しない）。"
 
 #: ../../source/components/nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -4346,6 +4904,14 @@ msgstr "パフォーマンス向上"
 #, fuzzy
 msgid "Remote attestation"
 msgstr "遠隔認証とクラウドサービス"
+
+#: ../../source/components/nethsm/faq.rst:44
+msgid ""
+"If the software supports `PKCS#11 or can talk to a REST API "
+"<integration.html>`__ the answer is most likely yes. There is also "
+"already a list of `compatible and tested software "
+"<compatible/index.html>`__."
+msgstr ""
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -4644,15 +5210,17 @@ msgstr "統合化"
 
 #: ../../source/components/nethsm/integration.rst:4
 msgid ""
-"The chapter describes processes for various tasks and aims at all user "
-"groups."
-msgstr "この章では、あらゆるユーザーグループを対象に、さまざまなタスクのプロセスを解説しています。"
+"This chapter describes how to integrate NetHSM into applications and how "
+"to test that integration. If you are searching for software, which "
+"already integrates well with NetHSM, here is a `list of compatible "
+"software. <compatible/index.html>`__"
+msgstr ""
 
-#: ../../source/components/nethsm/integration.rst:7
+#: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../../source/components/nethsm/integration.rst:9
+#: ../../source/components/nethsm/integration.rst:11
 msgid ""
 "NetHSM's primary interface is a modern REST-API that guarantees best "
 "performance and functionality. The API specification is available in "
@@ -4665,12 +5233,12 @@ msgstr ""
 "で利用可能で、`API ブラウザ<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ "
 "で検査とテストが可能です。"
 
-#: ../../source/components/nethsm/integration.rst:14
+#: ../../source/components/nethsm/integration.rst:16
 #: ../../source/components/nethsm/pkiproxy.rst:138
 msgid "PKCS#11"
 msgstr "ピーケーシーエスナンバーイレブン"
 
-#: ../../source/components/nethsm/integration.rst:16
+#: ../../source/components/nethsm/integration.rst:18
 msgid ""
 "The NetHSM supports the PKCS#11 standard. The required driver is "
 "available from the `repository <https://github.com/Nitrokey/nethsm-"
@@ -4683,15 +5251,15 @@ msgstr ""
 "から入手できます。このリポジトリには、さまざまなオペレーティングシステム用のソースコードとライブラリが含まれています。`PKCS#11 "
 "ガイド<pkcs11-setup.html>`_ に使い方が詳しく説明されています。"
 
-#: ../../source/components/nethsm/integration.rst:22
+#: ../../source/components/nethsm/integration.rst:24
 msgid "Development and Testing"
 msgstr "開発とテスト"
 
-#: ../../source/components/nethsm/integration.rst:25
+#: ../../source/components/nethsm/integration.rst:27
 msgid "Demo Instance"
 msgstr "デモ・インスタンス"
 
-#: ../../source/components/nethsm/integration.rst:27
+#: ../../source/components/nethsm/integration.rst:29
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -4703,21 +5271,21 @@ msgstr ""
 " で利用可能です。8 時間ごと（CET 6:00、14:00、22:00）にリセットされる。ユーザー \"admin\"、パスワード "
 "\"adminadmin\"、ロック解除パスワード \"unlockunlock\"。"
 
-#: ../../source/components/nethsm/integration.rst:31
+#: ../../source/components/nethsm/integration.rst:33
 msgid "Container Image"
 msgstr "コンテナイメージ"
 
-#: ../../source/components/nethsm/integration.rst:33
+#: ../../source/components/nethsm/integration.rst:35
 msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
 msgstr "NetHSM`コンテナイメージ<container/index.html>`__ は、テストおよび本番でご利用いただけます。"
 
-#: ../../source/components/nethsm/integration.rst:36
+#: ../../source/components/nethsm/integration.rst:38
 msgid "Integration Into Custom Application"
 msgstr "カスタム・アプリケーションへの統合"
 
-#: ../../source/components/nethsm/integration.rst:38
+#: ../../source/components/nethsm/integration.rst:40
 #, fuzzy
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
@@ -4737,24 +5305,24 @@ msgstr ""
 "Generator<https://github.com/OpenAPITools/openapi-generator>`_ "
 "を使用することをお勧めします。"
 
-#: ../../source/components/nethsm/integration.rst:40
+#: ../../source/components/nethsm/integration.rst:42
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "利用可能な全言語の一覧は、以下のように取得できます。"
 
-#: ../../source/components/nethsm/integration.rst:53
+#: ../../source/components/nethsm/integration.rst:55
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "NetHSMクライアントは、以下のようにしてお使いのプログラミング言語用に生成することができます。"
 
-#: ../../source/components/nethsm/integration.rst:66
+#: ../../source/components/nethsm/integration.rst:68
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
 "documentation how to use it."
 msgstr "生成されたクライアントコード（この例ではJavaScript）は、``./out/``ディレクトリに作成されます。このフォルダには、使用方法の必要なドキュメントも含まれています。"
 
-#: ../../source/components/nethsm/integration.rst:70
+#: ../../source/components/nethsm/integration.rst:72
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -4767,11 +5335,11 @@ msgstr ""
 "に設定されている場合、コンテキストの変更が必要です。この場合，ボリュームマウントは``:z`` とポストフィックスされ，``-v "
 "\"${PWD}/out:/out:z\"`` となる必要があります．"
 
-#: ../../source/components/nethsm/integration.rst:76
+#: ../../source/components/nethsm/integration.rst:78
 msgid "Command-line interface"
 msgstr "コマンドライン・インターフェイス"
 
-#: ../../source/components/nethsm/integration.rst:78
+#: ../../source/components/nethsm/integration.rst:80
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -4785,89 +5353,6 @@ msgstr ""
 "ベースの`pynitrokey<https://pypi.org/project/pynitrokey/>`_ "
 "で配布されています。``nethsm`` という代替のサードパーティアプリケーションがあり、これは Rust crate`nethsm-"
 "cli<https://crates.io/crates/nethsm-cli/>`_ で開発されている。"
-
-#: ../../source/components/nethsm/knotdns.rst:2
-msgid "Knot DNS"
-msgstr "ノットDNS"
-
-#: ../../source/components/nethsm/knotdns.rst:4
-msgid ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
-"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
-"please install and configure the PKCS#11 module as `described here "
-"<./pkcs11-setup.html>`__."
-msgstr ""
-"`Knot DNS<https://www.knot-dns.cz/>`__ "
-"はDNSSECに使用できるオープンソースの権威DNSサーバーです。NetHSMでKnotDNSを使用するには、` "
-"<./pkcs11-setup.html>`__に記載されているように、PKCS#11モジュールをインストールして設定してください。"
-
-#: ../../source/components/nethsm/knotdns.rst:7
-msgid "Manual Mode"
-msgstr "マニュアル・モード"
-
-#: ../../source/components/nethsm/knotdns.rst:9
-msgid "In manual mode the keys have to be generated and managed manually."
-msgstr "手動モードでは、キーを手動で生成し、管理しなければならない。"
-
-#: ../../source/components/nethsm/knotdns.rst:11
-msgid ""
-"Only the Operator user is needed in the PKCS#11 module configuration "
-"file. The password can be specified using the ``pin-value`` in the "
-"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
-msgstr ""
-"PKCS#11 モジュール設定ファイルで必要なのは、Operator ユーザーのみである。パスワードは、knot.confの`PKCS#11 "
-"URI<https://www.rfc-editor.org/rfc/rfc7512>`__の``pin-value``で指定できる。"
-
-#: ../../source/components/nethsm/knotdns.rst:13
-msgid ""
-"Add the following lines to the KnotDNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr "KnotDNS 設定ファイル``/etc/knot/knot.conf`` に以下の行を追加する："
-
-#: ../../source/components/nethsm/knotdns.rst:34
-msgid ""
-"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
-"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
-"needed."
-msgstr ""
-"PKCS#11 URIの``token`` の値は、``p11nethsm.conf`` の``label`` "
-"である。``libnethsm_pkcs11.so`` へのパスは必要に応じて調整してください。"
-
-#: ../../source/components/nethsm/knotdns.rst:37
-msgid "To generate the keys run the following commands:"
-msgstr "キーを生成するには、以下のコマンドを実行する："
-
-#: ../../source/components/nethsm/knotdns.rst:60
-msgid "Automatic Mode"
-msgstr "自動モード"
-
-#: ../../source/components/nethsm/knotdns.rst:62
-msgid ""
-"In automatic mode the keys are generated by Knot DNS and stored in the "
-"NetHSM."
-msgstr "自動モードでは、鍵はKnot DNSによって生成され、NetHSMに保存される。"
-
-#: ../../source/components/nethsm/knotdns.rst:64
-msgid ""
-"An Administrator and an Operator user are needed in the PKCS#11 module "
-"configuration."
-msgstr "PKCS#11 モジュールの設定には、Administrator と Operator ユーザーが必要である。"
-
-#: ../../source/components/nethsm/knotdns.rst:66
-msgid ""
-"Add the following lines to the Knot DNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr "Knot DNS設定ファイル``/etc/knot/knot.conf`` に以下の行を追加する："
-
-#: ../../source/components/nethsm/knotdns.rst:92
-msgid ""
-"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
-"module ignores the given label and always returns the hexadecimal key id "
-"as label. The policy uses very short key lifetimes and TTL's for testing "
-"purposes."
-msgstr ""
-"``key-label`` を``on`` "
-"に設定しても何も変わらず、pkcs11モジュールは与えられたラベルを無視し、常に16進数のキーIDをラベルとして返す。pkcs11モジュールは与えられたラベルを無視し、常に16進数のキーIDをラベルとして返します。このポリシーでは、テスト目的で非常に短いキー寿命とTTLを使用しています。"
 
 #: ../../source/components/nethsm/metrics.rst:7
 msgid "Metric"
@@ -5084,401 +5569,6 @@ msgstr "アップタイム"
 #: ../../source/components/nethsm/metrics.rst:89
 msgid "Uptime in seconds."
 msgstr "アップタイムは秒単位。"
-
-#: ../../source/components/nethsm/nginx.rst:2
-msgid "Nginx"
-msgstr "Nginx"
-
-#: ../../source/components/nethsm/nginx.rst:4
-msgid ""
-"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
-"OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"`nginx<https://nginx.org/>`__ を設定して、NetHSM の PKCS#11 モジュールを使用する OpenSSL "
-"エンジン経由で NetHSM を使用することができます。"
-
-#: ../../source/components/nethsm/nginx.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__."
-msgstr ""
-"`OpenSSL Engine setup guide<openssl.html#engine>`__ "
-"に従ってOpenSSLエンジンをセットアップする。"
-
-#: ../../source/components/nethsm/nginx.rst:15
-msgid "Providers aren't supported yet by Nginx."
-msgstr "プロバイダはNginxではまだサポートされていません。"
-
-#: ../../source/components/nethsm/nginx.rst:18
-msgid ""
-"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
-" a lot of key will make the initial loading of Nginx slow (more than a "
-"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
-"newer or to build the engine from `source "
-"<https://github.com/OpenSC/libp11>`__."
-msgstr ""
-"libp11 "
-"OpenSSLエンジンのバージョン0.4.12またはそれ以前を使用し、多くのキーを持つNetHSMを使用すると、Nginxの初期ロードが遅くなります（1,000キーで1分以上）。バージョン0.4.13以降を使用するか、`ソース<https://github.com/OpenSC/libp11>`__"
-" からエンジンをビルドすることをお勧めします。"
-
-#: ../../source/components/nethsm/nginx.rst:21
-msgid "Nginx Configuration"
-msgstr "Nginxの設定"
-
-#: ../../source/components/nethsm/nginx.rst:60
-msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
-msgstr "``ssl_certificate`` はディスク上の証明書ファイルを指していなければならない。"
-
-#: ../../source/components/nethsm/nginx.rst:62
-msgid ""
-"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
-"the OpenSSL engine with the PKCS#11 module and select the private key "
-"with the label/ID ``webserver`` and the key type ``private``."
-msgstr ""
-"``ssl_certificate_key``はOpenSSLのコンフィギュレーションである。ここでは PKCS#11 モジュールを搭載した "
-"OpenSSL エンジンを使用し、ラベル/ID が``webserver`` で、鍵のタイプが``private`` の秘密鍵を選択する。"
-
-#: ../../source/components/nethsm/nginx.rst:69
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"nginx won't start."
-msgstr ""
-"証明書を別途生成し、NetHSM "
-"にアップロードする必要があります。ディスク上の証明書とNetHSM内のキーが一致しない場合、nginxは起動しません。"
-
-#: ../../source/components/nethsm/nginx.rst:84
-msgid ""
-"To secure the password you can provide it via an `environment variable "
-"<pkcs11-setup.html#passwords>`__) or provide it in the nginx "
-"configuration:"
-msgstr ""
-"パスワードを保護するには、`環境変数<pkcs11-setup.html#passwords>`__) "
-"を使用するか、nginxのコンフィギュレーションで指定します："
-
-#: ../../source/components/nethsm/nginx.rst:94
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"`の例<https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/nginx>`__ を試してみたい場合は、git を使って`nethsm-pkcs11 "
-"リポジトリ<https://github.com/Nitrokey/nethsm-pkcs11>`__ "
-"をクローンし、以下のコマンドを実行してください："
-
-#: ../../source/components/nethsm/nginx.rst:102
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"` `` ` の変数 ` `, ` `, ` ` を調整し、 ` ` に NetHSM の URL とポート、 ` "
-"に管理者アカウントのユーザー名、 ` ` に対応するパスワードを設定する。さらに、 ` ` に OpenSSL PKCS11 "
-"エンジンの絶対パスを、 ` ` に NetHSM PKCS11 "
-"ライブラリの絶対パスを設定する。container/nginx/generate.sh` `HOST` `ADMIN_ACCOUNT` "
-"`ADMIN_ACCOUNT_PWD` `HOST`ADMIN_ACCOUNT` `ADMIN_ACCOUNT_PWD` "
-"`OPENSSL_PKCS11_ENGINE_PATH` `NETHSM_PKCS11_LIBRARY_PATH`"
-
-#: ../../source/components/nethsm/nginx.rst:104
-msgid ""
-"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr "``container/nginx/p11nethsm.conf``のPKCS11設定を、NetHSMsのURLと有効なオペレーター認証情報で更新します。"
-
-#: ../../source/components/nethsm/nginx.rst:123
-#, fuzzy
-msgid ""
-"The NGINX test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, will warn you that "
-"the websites certificate is self-signed."
-msgstr "NGINXテストページは、`https://localhost:9443/<https://localhost:9443/>`__にあります。ブラウザは、うまくいけば、ウェブサイトの証明書が自己署名であることを警告することに注意してください。"
-
-#: ../../source/components/nethsm/opendnssec.rst:2
-msgid "OpenDNSSEC"
-msgstr "オープンDNSSEC"
-
-#: ../../source/components/nethsm/opendnssec.rst:4
-msgid ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
-" the security of domain names. It can directly load a PKCS#11 module and "
-"manage the keys."
-msgstr ""
-"`OpenDNSSEC<https://www.opendnssec.org/>`__ "
-"ドメイン名のセキュリティを管理するためのツールスイートです。PKCS#11モジュールを直接ロードし、鍵を管理することができる。"
-
-#: ../../source/components/nethsm/opendnssec.rst:6
-#, fuzzy
-msgid ""
-"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
-"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
-" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
-" used instead."
-msgstr ""
-"OpenDNSSEC のインストールとセットアップは、`OpenDNSSEC "
-"クイックスタートガイド<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__"
-" に従ってください。``SoftHSM`` をインストールする必要はありません。代わりに NetHSM PKCS#11 モジュールが使用されます。"
-
-#: ../../source/components/nethsm/opendnssec.rst:8
-msgid ""
-"As OpenDNSSEC needs access to manage the keys and then use them, you will"
-" need to configure both administrator and operator account in the PKCS#11"
-" module configuration file."
-msgstr ""
-"OpenDNSSEC は鍵を管理し、それを使用するためのアクセスを必要とするので、PKCS#11 "
-"モジュールの設定ファイルで管理者とオペレータの両方のアカウントを設定する必要があります。"
-
-#: ../../source/components/nethsm/opendnssec.rst:10
-msgid ""
-"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
-"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
-"following lines:"
-msgstr ""
-"``/etc/opendnssec/conf.xml`` ファイルを編集することで、libnethsm_pkcs11.so "
-"モジュールをロードするように OpenDNSSEC を設定することができます。以下の行を追加する必要があります："
-
-#: ../../source/components/nethsm/opendnssec.rst:35
-msgid ""
-"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
-"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
-"the label you set in the ``p11nethsm.conf`` configuration file. The "
-"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
-" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
-"a pin provided or it will refuse to start."
-msgstr ""
-"``/root/libnethsm_pkcs11.so`` "
-"をlibnethsm_pkcs11.soモジュールへのパスに置き換える。``<TokenLabel>`` は``p11nethsm.conf`` "
-"設定ファイルで設定したラベルと一致させる必要がある。``<PIN>`` はオペレータの暗証番号で、``conf.xml`` "
-"ファイルにプレーンテキストで設定するか、``ods-hsmutil login`` を使用する。OpenDNSSEC は PIN "
-"がないと起動しません。"
-
-#: ../../source/components/nethsm/opendnssec.rst:39
-msgid ""
-"You also need to update the ``<Repository>`` fields in "
-"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
-"``SoftHSM`` :"
-msgstr ""
-"また、``/etc/opendnssec/kasp.xml`` の``<Repository>`` "
-"フィールドを、デフォルトの``SoftHSM`` ではなく、``NetHSM`` に更新する必要がある："
-
-#: ../../source/components/nethsm/openssl.rst:2
-msgid "OpenSSL"
-msgstr "オープンSSL"
-
-#: ../../source/components/nethsm/openssl.rst:6
-msgid ""
-"Trying to retrieve the private key will crash OpenSSL. This is normal "
-"because private keys cannot be extracted from a NetHSM. You may want to "
-"retrieve the public key instead (see example below)."
-msgstr ""
-"秘密鍵を取得しようとすると、OpenSSLがクラッシュします。秘密鍵は NetHSM "
-"からは取り出せないので、これは正常な動作です。代わりに公開鍵を取得するとよいでしょう（以下の例を参照）。"
-
-#: ../../source/components/nethsm/openssl.rst:9
-msgid "Engine"
-msgstr "エンジン"
-
-#: ../../source/components/nethsm/openssl.rst:12
-msgid ""
-"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key. On version "
-"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
-"is requested. When searching a key by label or id, it is recommended to "
-"use version 0.4.13 or newer, or build `libp11 "
-"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
-" be in ``src/.libs/pkcs11.so``."
-msgstr ""
-"エンジン (libp11) のバージョンが 0.4.12 以前の場合、NetHSM に EdDSA キーがあると OpenSSL "
-"がキーを見つけられません。バージョン 0.4.12 以前では、キーが要求されると、エンジンは NetHSM "
-"上のすべてのキーを一覧表示します。ラベルまたは ID でキーを検索する場合は、バージョン 0.4.13 "
-"以降を使用するか、`libp11<https://github.com/OpenSC/libp11>`__ "
-"をソースからビルドすることを推奨します。エンジンのバイナリは``src/.libs/pkcs11.so`` になります。"
-
-#: ../../source/components/nethsm/openssl.rst:17
-msgid ""
-"The OpenSSL engine interface is the old way to implement custom backends "
-"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
-"stable way to use the NetHSM with OpenSSL."
-msgstr ""
-"OpenSSLエンジンインターフェースは、OpenSSL用のカスタムバックエンドを実装するための古い方法で、OpenSSL "
-"3では非推奨となっています。"
-
-#: ../../source/components/nethsm/openssl.rst:19
-#: ../../source/components/nethsm/openssl.rst:101
-msgid ""
-"You will need to setup the PKCS#11 module, following `these instructions "
-"<pkcs11-setup.html>`__."
-msgstr "PKCS#11 モジュールをセットアップする必要があります。` <pkcs11-setup.html>`__ 以下の手順に従ってください。"
-
-#: ../../source/components/nethsm/openssl.rst:21
-msgid "Install the engine:"
-msgstr "エンジンを取り付ける："
-
-#: ../../source/components/nethsm/openssl.rst:24
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../../source/components/nethsm/openssl.rst:30
-#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
-msgid "Fedora"
-msgstr "フェドラ"
-
-#: ../../source/components/nethsm/openssl.rst:36
-msgid "Arch Linux"
-msgstr "アーチ・リナックス"
-
-#: ../../source/components/nethsm/openssl.rst:42
-msgid ""
-"Next you need to configure OpenSSL to use the engine. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr "次に、このエンジンを使うようにOpenSSLを設定する必要がある。これは``openssl.cnf`` ファイルに以下の行を追加することで行う："
-
-#: ../../source/components/nethsm/openssl.rst:61
-#: ../../source/components/nethsm/openssl.rst:127
-msgid ""
-"You can specify to OpenSSL the path of the OpenSSL configuration file "
-"using the ``OPENSSL_CONF`` environment variable."
-msgstr "環境変数``OPENSSL_CONF`` を使って、OpenSSLにOpenSSL設定ファイルのパスを指定することができます。"
-
-#: ../../source/components/nethsm/openssl.rst:64
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the engine."
-msgstr "メインのOpenSSLコンフィギュレーション・ファイルがこれらの行だけを含むように変更されると、OpenSSLを使用する他のプログラムを壊してしまう可能性があります。したがって、エンジン用に別のコンフィギュレーション・ファイルを作成した方がよいでしょう。"
-
-#: ../../source/components/nethsm/openssl.rst:67
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
-" path to the PKCS#11 module you installed earlier."
-msgstr ""
-"``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` "
-"を、先にインストールしたPKCS#11モジュールへのパスに置き換える。"
-
-#: ../../source/components/nethsm/openssl.rst:69
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
-"path to the OpenSSL engine you installed. The path varies depending on "
-"your distribution. The number in ``engines-3`` corresponds to your "
-"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-msgstr ""
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` "
-"をインストールしたOpenSSLエンジンのパスに置き換えてください。パスはディストリビューションによって異なります。``engines-3`` "
-"の数字はOpenSSLのバージョンに対応しています。Debian の場合、OpenSSL 3 エンジンのパスは``/usr/lib/x86_64"
-"-linux-gnu/engines-3/libpkcs11.so`` です。Fedora "
-"の場合は``/usr/lib64/engines-3/libpkcs11.so`` です。"
-
-#: ../../source/components/nethsm/openssl.rst:71
-msgid ""
-"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"`PKCS#11 URI<https://www.rfc-editor.org/rfc/rfc7512>`__ を使用することで、NetHSM "
-"上で鍵を使用できる："
-
-#: ../../source/components/nethsm/openssl.rst:77
-msgid "This will use the key ``webserver``."
-msgstr "これには``webserver`` というキーが使われる。"
-
-#: ../../source/components/nethsm/openssl.rst:80
-msgid ""
-"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
-"get the full URI of the keys:"
-msgstr "GnuTLS <https://gnutls.org/>` から``p11tool`` コマンドを使えば、鍵の完全なURIを取得できる："
-
-#: ../../source/components/nethsm/openssl.rst:87
-msgid "Example Command"
-msgstr "コマンド例"
-
-#: ../../source/components/nethsm/openssl.rst:89
-msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
-msgstr "NetHSM上の非対称鍵ペアの公開鍵を取得する："
-
-#: ../../source/components/nethsm/openssl.rst:97
-msgid "Provider"
-msgstr "プロバイダー"
-
-#: ../../source/components/nethsm/openssl.rst:99
-msgid ""
-"The OpenSSL provider interface is the new way to implement custom "
-"backends for OpenSSL. The `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
-"stage of development."
-msgstr ""
-"OpenSSLプロバイダー・インターフェースは、OpenSSLのカスタム・バックエンドを実装する新しい方法です。`pkcs11-provider "
-"バックエンド<https://github.com/latchset/pkcs11-provider>`__ はまだ開発の初期段階です。"
-
-#: ../../source/components/nethsm/openssl.rst:103
-msgid ""
-"Install the provider. For Fedora a package named ``pkcs11-provider`` "
-"exists. For other Linux distributions you will need to `build it from "
-"source "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-msgstr ""
-"プロバイダーをインストールする。Fedora には``pkcs11-provider`` "
-"というパッケージが存在する。他のLinuxディストリビューションでは、`ソースからビルドする必要がある<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__。"
-
-#: ../../source/components/nethsm/openssl.rst:105
-msgid ""
-"Then you need to configure OpenSSL to use the provider. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"次に、プロバイダーを使用するようにOpenSSLを設定する必要があります。これは、``openssl.cnf`` "
-"ファイルに以下の行を追加することで行う："
-
-#: ../../source/components/nethsm/openssl.rst:122
-msgid ""
-"Set ``module`` to the path of the provider you installed and ``pkcs11"
-"-module-path`` to the path of the PKCS#11 module you installed."
-msgstr ""
-"``module`` をインストールしたプロバイダーのパスに、``pkcs11-module-path`` "
-"をインストールしたPKCS#11モジュールのパスに設定する。"
-
-#: ../../source/components/nethsm/openssl.rst:124
-msgid ""
-"If you want to set NetHSM as the default provider, you can add ``default "
-"= pkcs11`` to the ``provider_sect`` section."
-msgstr ""
-"NetHSMをデフォルトのプロバイダーとして設定したい場合は、``default = pkcs11`` を``provider_sect`` "
-"セクションに追加してください。"
-
-#: ../../source/components/nethsm/openssl.rst:131
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the provider."
-msgstr "メインのOpenSSLコンフィギュレーション・ファイルがこれらの行だけを含むように変更された場合、OpenSSLを使用する他のプログラムを壊してしまう可能性があります。したがって、プロバイダー用に別の設定ファイルを作成した方がよいでしょう。"
-
-#: ../../source/components/nethsm/openssl.rst:133
-msgid ""
-"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"その後、`PKCS#11 URI<https://www.rfc-editor.org/rfc/rfc7512>`__ "
-"を使用することで、NetHSM 上で鍵を使用することができる："
-
-#: ../../source/components/nethsm/openssl.rst:139
-msgid ""
-"If you set NetHSM as the default provider, you can omit the ``-provider "
-"pkcs11`` argument."
-msgstr "NetHSMをデフォルトのプロバイダーとして設定した場合は、``-provider pkcs11`` 引数を省略することができる。"
-
-#: ../../source/components/nethsm/openssl.rst:142
-msgid ""
-"Currently when manually setting a key type in the URI the provider will "
-"not be able to find the key. You can omit the ``;type=private`` or "
-"``;type=public`` part of the URI to make it work."
-msgstr ""
-"現在、手動でURIにキータイプを設定する場合、プロバイダはキーを見つけることができません。URI の``;type=private`` "
-"または``;type=public`` の部分を省略することで動作するようになります。"
 
 #: ../../source/components/nethsm/operation.rst:2
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:9
@@ -7281,45 +7371,6 @@ msgstr ""
 "Proxy "
 "documentation<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " を参照してください。"
-
-#: ../../source/components/nethsm/ssh.rst:2
-#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
-#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
-#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
-msgid "SSH"
-msgstr "SSH"
-
-#: ../../source/components/nethsm/ssh.rst:4
-msgid ""
-"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
-"module path in the command line or the SSH configuration."
-msgstr "SSH 認証には NetHSM を使用できます。コマンドラインか SSH 設定で PKCS#11 モジュールのパスを渡す必要があります。"
-
-#: ../../source/components/nethsm/ssh.rst:7
-msgid "Command line"
-msgstr "コマンドライン"
-
-#: ../../source/components/nethsm/ssh.rst:12
-msgid "SSH config"
-msgstr "SSH設定"
-
-#: ../../source/components/nethsm/ssh.rst:19
-msgid ""
-"You can also set up SSH to use the NetHSM by default. To do so, add the "
-"following lines to your ``~/.ssh/config`` file:"
-msgstr ""
-"SSHがデフォルトでNetHSMを使うように設定することもできます。そのためには、``~/.ssh/config`` "
-"ファイルに以下の行を追加してください："
-
-#: ../../source/components/nethsm/ssh.rst:27
-msgid "SSH will search for a key on the NetHSM that is accepted by the server."
-msgstr "SSHはNetHSM上でサーバーが受け付けるキーを検索します。"
-
-#: ../../source/components/nethsm/ssh.rst:29
-msgid ""
-"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
-" following command:"
-msgstr "NetHSM の鍵を SSH``authorized_keys`` フォーマットで一覧表示するには、以下のコマンドを使用する："
 
 #: ../../source/components/nethsm/system_recovery.rst:2
 msgid "System Recovery"
@@ -32646,3 +32697,10 @@ msgstr "マーク クロップド出力"
 #~ "Poldi の開発リポジトリの master "
 #~ "ブランチに含まれているので、いずれは新しいバージョンでリリースされるでしょう。それまでは Poldi "
 #~ "をソースからビルドするのが唯一の方法です。"
+
+#~ msgid ""
+#~ "The chapter describes processes for "
+#~ "various tasks and aims at all user"
+#~ " groups."
+#~ msgstr "この章では、あらゆるユーザーグループを対象に、さまざまなタスクのプロセスを解説しています。"
+

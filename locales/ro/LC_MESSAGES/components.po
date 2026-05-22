@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-20 09:32+0000\n"
+"POT-Creation-Date: 2026-05-22 08:23+0000\n"
 "PO-Revision-Date: 2026-05-20 09:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2503,216 +2502,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__."
 
-#: ../../source/components/nethsm/apache.rst:2
-msgid "Apache"
-msgstr "Apache"
-
-#: ../../source/components/nethsm/apache.rst:4
-msgid ""
-"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
-"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"Puteți configura `Apache httpd <https://httpd.apache.org/>`__ pentru a "
-"utiliza NetHSM prin intermediul motorului OpenSSL, care utilizează apoi "
-"modulul PKCS#11 al NetHSM."
-
-#: ../../source/components/nethsm/apache.rst:6
-#: ../../source/components/nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-"Fișierul de certificat trebuie să se afle pe disc, dar cheia privată "
-"poate fi utilizată din NetHSM."
-
-#: ../../source/components/nethsm/apache.rst:8
-#: ../../source/components/nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "Un exemplu complet este disponibil `mai jos <#example>`__."
-
-#: ../../source/components/nethsm/apache.rst:11
-#: ../../source/components/nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "Configurația OpenSSL"
-
-#: ../../source/components/nethsm/apache.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
-"Apache httpd.)"
-msgstr ""
-"Configurați motorul OpenSSL urmând ghidul de configurare a motorului "
-"OpenSSL `OpenSSL Engine <openssl.html#engine>`__. (Furnizorii OpenSSL nu "
-"sunt încă suportați de Apache httpd.)"
-
-#: ../../source/components/nethsm/apache.rst:16
-msgid "Httpd Configuration"
-msgstr "Configurație Httpd"
-
-#: ../../source/components/nethsm/apache.rst:18
-msgid "Add the following lines to your ``httpd.conf`` :"
-msgstr "Adăugați următoarele linii la ``httpd.conf`` :"
-
-#: ../../source/components/nethsm/apache.rst:37
-#, fuzzy
-msgid ""
-"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
-"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
-msgstr ""
-"``SSLCertificateKeyFile`` trebuie să fie un PKCS#11 `URI <https://www"
-".rfc-editor.org/rfc/rfc7512>`__ care să indice cheia privată din NetHSM."
-
-#: ../../source/components/nethsm/apache.rst:41
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"httpd won't start."
-msgstr ""
-"Trebuie să generați certificatul separat și apoi să îl încărcați în "
-"NetHSM. Dacă certificatul de pe disc și cheia din NetHSM nu corespund, "
-"httpd nu va porni."
-
-#: ../../source/components/nethsm/apache.rst:45
-#: ../../source/components/nethsm/nginx.rst:72
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 Configurație"
-
-#: ../../source/components/nethsm/apache.rst:57
-msgid ""
-"To secure the password you can provide it via an environment variable "
-"(see `Passwords <pkcs11-setup.html#passwords>`__) or provide it in the "
-"httpd configuration:"
-msgstr ""
-"Pentru a securiza parola, o puteți furniza prin intermediul unei "
-"variabile de mediu (consultați `Parole <pkcs11-setup.html#passwords>`__) "
-"sau o puteți furniza în configurația httpd:"
-
-#: ../../source/components/nethsm/apache.rst:65
-#: ../../source/components/nethsm/nginx.rst:92
-#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
-msgid "Example"
-msgstr "Exemplu"
-
-#: ../../source/components/nethsm/apache.rst:67
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Dacă doriți să experimentați cu exemplul `dat "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" utilizați git pentru a clona depozitul `nethsm-pkcs11 "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ și rulați următoarele "
-"comenzi:"
-
-#: ../../source/components/nethsm/apache.rst:70
-#: ../../source/components/nethsm/nginx.rst:97
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-"Rularea scriptului de generare șterge cheia ``webserver`` și o "
-"înlocuiește."
-
-#: ../../source/components/nethsm/apache.rst:72
-#: ../../source/components/nethsm/nginx.rst:99
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started.html>`__ for more information. Besides an "
-"administrator, you are going to need an operator account."
-msgstr ""
-"Configurați un NetHSM, fie unul real, fie un container. Pentru mai multe "
-"informații, consultați ghidul `get-started <getting-started.html>`__. Pe "
-"lângă un administrator, veți avea nevoie de un cont de operator."
-
-#: ../../source/components/nethsm/apache.rst:73
-#: ../../source/components/nethsm/nginx.rst:100
-msgid ""
-"Download and install the latest version of the nethsm-pkcs11 driver "
-"`available from here <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__."
-msgstr ""
-"Descărcați și instalați cea mai recentă versiune de nethsm-pkcs11 driver "
-"`disponibil de aici <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__."
-
-#: ../../source/components/nethsm/apache.rst:74
-#: ../../source/components/nethsm/nginx.rst:101
-msgid ""
-"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
-"<openssl.html>`__. You do not need to create a configuration file."
-msgstr ""
-"Instalați motorul OpenSSL PKCS11 așa cum este descris în `OpenSSL Manual "
-"<openssl.html>`__. Nu este necesar să creați un fișier de configurare."
-
-#: ../../source/components/nethsm/apache.rst:75
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Ajustați variabilele ``HOST``, ``ADMIN_ACCOUNT`` și ``ADMIN_ACCOUNT_PWD``"
-" în ``container/apache/generate.sh`` astfel încât ``HOST`` să conțină "
-"URL-ul și portul NetHSMs, ``ADMIN_ACCOUNT`` să conțină numele de "
-"utilizator al contului de administrator și ``ADMIN_ACCOUNT_PWD`` parola "
-"corespunzătoare. În continuare, configurați calea absolută a motorului "
-"OpenSSL PKCS11 în ``OPENSSL_PKCS11_ENGINE_PATH`` și calea absolută a "
-"bibliotecii PKCS11 NetHSM în ``NETHSM_PKCS11_LIBRARY_PATH``."
-
-#: ../../source/components/nethsm/apache.rst:76
-#: ../../source/components/nethsm/nginx.rst:103
-msgid ""
-"Create a NetHSM PKCS11 configuration file in one of the `known locations "
-"<pkcs11-setup.html#configuration>`__, e.g., "
-"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
-"account and use the same NetHSM instance specified in the generate script"
-" before."
-msgstr ""
-"Creați un fișier de configurare NetHSM PKCS11 într-una din locațiile "
-"cunoscute ` <pkcs11-setup.html#configuration>`__, de exemplu, "
-"``/etc/nitrokey/p11nethsm.conf``. Acesta trebuie să aibă configurat un "
-"cont de operator și să utilizeze aceeași instanță NetHSM specificată în "
-"scriptul de generare anterior."
-
-#: ../../source/components/nethsm/apache.rst:77
-msgid ""
-"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Actualizați configurația PKCS11 din ``container/apache/p11nethsm.conf`` "
-"cu URL-ul NetHSMs și acreditările valide ale operatorului."
-
-#: ../../source/components/nethsm/apache.rst:78
-#: ../../source/components/nethsm/nginx.rst:105
-msgid "Generate the certificate and key."
-msgstr "Generați certificatul și cheia."
-
-#: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/nginx.rst:111
-msgid "Build the container."
-msgstr "Construiți containerul."
-
-#: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/nginx.rst:117
-msgid "Run the container."
-msgstr "Rulați containerul."
-
-#: ../../source/components/nethsm/apache.rst:96
-msgid ""
-"The Apache test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
-"warn you that the websites certificate is self-signed."
-msgstr ""
-"Pagina de test Apache va fi disponibilă la `https://localhost:9443/ "
-"https://localhost:9443/ <https://localhost:9443/>`__. Rețineți că "
-"browserul dvs. vă va avertiza, sperăm, că certificatul site-ului web este"
-" autofirmat."
-
 #: ../../source/components/nethsm/clustering.rst:2
 #, fuzzy
 msgid "Clustering"
@@ -3987,6 +3776,1044 @@ msgstr ""
 "cluster în care pierderea nodului respectiv nu va duce la pierderea "
 "cvorumului."
 
+#: ../../source/components/nethsm/compatible/apache.rst:2
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/components/nethsm/compatible/apache.rst:4
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"Puteți configura `Apache httpd <https://httpd.apache.org/>`__ pentru a "
+"utiliza NetHSM prin intermediul motorului OpenSSL, care utilizează apoi "
+"modulul PKCS#11 al NetHSM."
+
+#: ../../source/components/nethsm/compatible/apache.rst:6
+#: ../../source/components/nethsm/compatible/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+"Fișierul de certificat trebuie să se afle pe disc, dar cheia privată "
+"poate fi utilizată din NetHSM."
+
+#: ../../source/components/nethsm/compatible/apache.rst:8
+#: ../../source/components/nethsm/compatible/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "Un exemplu complet este disponibil `mai jos <#example>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:11
+#: ../../source/components/nethsm/compatible/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "Configurația OpenSSL"
+
+#: ../../source/components/nethsm/compatible/apache.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"Configurați motorul OpenSSL urmând ghidul de configurare a motorului "
+"OpenSSL `OpenSSL Engine <openssl.html#engine>`__. (Furnizorii OpenSSL nu "
+"sunt încă suportați de Apache httpd.)"
+
+#: ../../source/components/nethsm/compatible/apache.rst:16
+msgid "Httpd Configuration"
+msgstr "Configurație Httpd"
+
+#: ../../source/components/nethsm/compatible/apache.rst:18
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Adăugați următoarele linii la ``httpd.conf`` :"
+
+#: ../../source/components/nethsm/compatible/apache.rst:37
+#, fuzzy
+msgid ""
+"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+"``SSLCertificateKeyFile`` trebuie să fie un PKCS#11 `URI <https://www"
+".rfc-editor.org/rfc/rfc7512>`__ care să indice cheia privată din NetHSM."
+
+#: ../../source/components/nethsm/compatible/apache.rst:41
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"Trebuie să generați certificatul separat și apoi să îl încărcați în "
+"NetHSM. Dacă certificatul de pe disc și cheia din NetHSM nu corespund, "
+"httpd nu va porni."
+
+#: ../../source/components/nethsm/compatible/apache.rst:45
+#: ../../source/components/nethsm/compatible/nginx.rst:72
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 Configurație"
+
+#: ../../source/components/nethsm/compatible/apache.rst:57
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Passwords <../pkcs11-setup.html#passwords>`__) or provide it in the"
+" httpd configuration:"
+msgstr ""
+"Pentru a securiza parola, o puteți furniza prin intermediul unei "
+"variabile de mediu (consultați `Parole <pkcs11-setup.html#passwords>`__) "
+"sau o puteți furniza în configurația httpd:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:65
+#: ../../source/components/nethsm/compatible/nginx.rst:92
+#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
+msgid "Example"
+msgstr "Exemplu"
+
+#: ../../source/components/nethsm/compatible/apache.rst:67
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Dacă doriți să experimentați cu exemplul `dat "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" utilizați git pentru a clona depozitul `nethsm-pkcs11 "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ și rulați următoarele "
+"comenzi:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:70
+#: ../../source/components/nethsm/compatible/nginx.rst:97
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+"Rularea scriptului de generare șterge cheia ``webserver`` și o "
+"înlocuiește."
+
+#: ../../source/components/nethsm/compatible/apache.rst:72
+#: ../../source/components/nethsm/compatible/nginx.rst:99
+#, fuzzy
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <../getting-started.html>`__ for more information. Besides "
+"an administrator, you are going to need an operator account."
+msgstr ""
+"Configurați un NetHSM, fie unul real, fie un container. Pentru mai multe "
+"informații, consultați ghidul `get-started <getting-started.html>`__. Pe "
+"lângă un administrator, veți avea nevoie de un cont de operator."
+
+#: ../../source/components/nethsm/compatible/apache.rst:73
+#: ../../source/components/nethsm/compatible/nginx.rst:100
+msgid ""
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+msgstr ""
+"Descărcați și instalați cea mai recentă versiune de nethsm-pkcs11 driver "
+"`disponibil de aici <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:74
+#: ../../source/components/nethsm/compatible/nginx.rst:101
+msgid ""
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
+msgstr ""
+"Instalați motorul OpenSSL PKCS11 așa cum este descris în `OpenSSL Manual "
+"<openssl.html>`__. Nu este necesar să creați un fișier de configurare."
+
+#: ../../source/components/nethsm/compatible/apache.rst:75
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Ajustați variabilele ``HOST``, ``ADMIN_ACCOUNT`` și ``ADMIN_ACCOUNT_PWD``"
+" în ``container/apache/generate.sh`` astfel încât ``HOST`` să conțină "
+"URL-ul și portul NetHSMs, ``ADMIN_ACCOUNT`` să conțină numele de "
+"utilizator al contului de administrator și ``ADMIN_ACCOUNT_PWD`` parola "
+"corespunzătoare. În continuare, configurați calea absolută a motorului "
+"OpenSSL PKCS11 în ``OPENSSL_PKCS11_ENGINE_PATH`` și calea absolută a "
+"bibliotecii PKCS11 NetHSM în ``NETHSM_PKCS11_LIBRARY_PATH``."
+
+#: ../../source/components/nethsm/compatible/apache.rst:76
+#: ../../source/components/nethsm/compatible/nginx.rst:103
+#, fuzzy
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<../pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+"Creați un fișier de configurare NetHSM PKCS11 într-una din locațiile "
+"cunoscute ` <pkcs11-setup.html#configuration>`__, de exemplu, "
+"``/etc/nitrokey/p11nethsm.conf``. Acesta trebuie să aibă configurat un "
+"cont de operator și să utilizeze aceeași instanță NetHSM specificată în "
+"scriptul de generare anterior."
+
+#: ../../source/components/nethsm/compatible/apache.rst:77
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Actualizați configurația PKCS11 din ``container/apache/p11nethsm.conf`` "
+"cu URL-ul NetHSMs și acreditările valide ale operatorului."
+
+#: ../../source/components/nethsm/compatible/apache.rst:78
+#: ../../source/components/nethsm/compatible/nginx.rst:105
+msgid "Generate the certificate and key."
+msgstr "Generați certificatul și cheia."
+
+#: ../../source/components/nethsm/compatible/apache.rst:84
+#: ../../source/components/nethsm/compatible/nginx.rst:111
+msgid "Build the container."
+msgstr "Construiți containerul."
+
+#: ../../source/components/nethsm/compatible/apache.rst:90
+#: ../../source/components/nethsm/compatible/nginx.rst:117
+msgid "Run the container."
+msgstr "Rulați containerul."
+
+#: ../../source/components/nethsm/compatible/apache.rst:96
+msgid ""
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
+"Pagina de test Apache va fi disponibilă la `https://localhost:9443/ "
+"https://localhost:9443/ <https://localhost:9443/>`__. Rețineți că "
+"browserul dvs. vă va avertiza, sperăm, că certificatul site-ului web este"
+" autofirmat."
+
+#: ../../source/components/nethsm/compatible/cascade.rst:2
+msgid "Cascade"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/cascade.rst:4
+msgid ""
+"NetHSM can be used to secure your DNSSEC keys with Cascade. Details are "
+"documented in the `Cascade documentation "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:2
+msgid "EJBCA"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:5
+msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
+msgstr "EJBCA necesită cel puțin NetHSM v3 și nethsm-pkcs11 v2."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:7
+#, fuzzy
+msgid ""
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
+msgstr ""
+"`EJBCA <https://www.ejbca.org/>`__ este un software de autoritate de "
+"certificare PKI disponibil ca sursă deschisă."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA Community"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:12
+msgid ""
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr ""
+"EJBCA Community Edition este un software open source PKI Certificate "
+"Authority."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
+"<../pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+msgstr ""
+"Pentru a putea utiliza NetHSM cu EJBCA, trebuie să configurați ` "
+"<pkcs11-setup.html>`__ modulul NetHSM PKCS#11 mai întâi."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:16
+msgid ""
+"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+"Apoi, configurați EJBCA pentru a utiliza modulul NetHSM PKCS#11 adăugând "
+"o intrare în fișierul ``/etc/ejbca/conf/web.properties``:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:26
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr ""
+"``418`` din nume este un index care trebuie să fie unic pentru fiecare "
+"modul PKCS#11 din fișierul de configurare."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:28
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``NetHSM``."
+msgstr ""
+"După repornirea EJBCA, puteți adăuga un nou jeton criptografic în EJBCA "
+"Admin GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"Tipul Crypto Token este ``PKCS#11 Crypto Token``, iar numele Crypto Token"
+" este ``NetHSM``."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:33
+#, fuzzy
+msgid "Docker Example"
+msgstr "Exemplu"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:35
+#, fuzzy
+msgid ""
+"We provide an example setup using docker for testing. If you want to "
+"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
+" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
+" described in the file `container/ejbca/README.md "
+"<https://github.com/Nitrokey/nethsm-"
+"pkcs11/blob/main/container/ejbca/README.md>`__."
+msgstr ""
+"Dacă doriți să experimentați cu exemplul dat, puteți folosi git pentru a "
+"clona depozitul `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__ și să rulați următoarele comenzi:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA Enterprise"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr ""
+"EJBCA Enterprise Edition oferă caracteristici avansate și suport pentru "
+"întreprinderi."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+"Configurarea pentru EJBCA EE diferă de cea a ediției comunitare. În loc "
+"să configureze modulul PKCS#11 direct în EJBCA, Enterprise Edition "
+"utilizează o abordare de tip **sidecar container**. Acest container "
+"Sidecar furnizează conexiunea p11ng (PKCS#11 Next Generation) la NetHSM, "
+"permițând o integrare perfectă fără modificarea containerului EJBCA "
+"principal."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+"Pentru informații detaliate privind configurarea modulelor de securitate "
+"hardware (HSM) cu EJBCA EE, consultați documentația oficială `EJBCA HSM "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "Exemplu"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr ""
+"Oferim o configurație containerizată completă pentru integrarea EJBCA EE "
+"cu NetHSM. Configurația include:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "Construiți containerul."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr "NetHSM PKCS#11 container sidecar (p11ng)"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr "Container NetHSM pentru testare"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+"Puteți găsi imaginea și configurația containerului în `container/ejbca-"
+"ee/ directorul <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ al depozitului nethsm-pkcs11."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+"Directorul include un fișier complet ``docker-compose.yml`` care aduce "
+"toate componentele necesare, inclusiv o instanță NetHSM pentru testare. "
+"Acesta oferă un mediu gata de utilizare pentru experimentarea integrării "
+"EJBCA EE și NetHSM."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+"``Dockerfile`` și ``docker-compose.yml`` conțin referințe la depozitele "
+"oficiale, asigurați-vă că rulați ``docker login`` înainte de a le "
+"utiliza."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
+"În prezent, o limitare este că nu există nicio modalitate de a selecta "
+"schema de umplere ** pentru un anumit *Crypto Token*. Prin urmare, RSA va"
+" utiliza întotdeauna umplutura PKCS#1 (și nu PSS)."
+
+#: ../../source/components/nethsm/compatible/index.rst:2
+#, fuzzy
+msgid "Compatible Software"
+msgstr "Compilați din sursă"
+
+#: ../../source/components/nethsm/compatible/index.rst:4
+msgid ""
+"NetHSM can be used in conjunction with a wide range of existing software."
+" The following list includes examples of software with which integration "
+"has already been tested. However, NetHSM can be integrated into almost "
+"any software via the `API or the PKCS#11 module. <../integration.html>`__"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:2
+msgid "Knot DNS"
+msgstr "Nod DNS"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:4
+#, fuzzy
+msgid ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
+"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
+"please install and configure the PKCS#11 module as `described here "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ este un server DNS autoritar open"
+" source care poate fi utilizat pentru DNSSEC. Pentru a utiliza KnotDNS cu"
+" NetHSM, vă rugăm să instalați și să configurați modulul PKCS#11 așa cum "
+"este descris aici ` <./pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:7
+msgid "Manual Mode"
+msgstr "Mod manual"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:9
+msgid "In manual mode the keys have to be generated and managed manually."
+msgstr "În modul manual, cheile trebuie să fie generate și gestionate manual."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:11
+msgid ""
+"Only the Operator user is needed in the PKCS#11 module configuration "
+"file. The password can be specified using the ``pin-value`` in the "
+"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
+msgstr ""
+"Numai utilizatorul Operator este necesar în fișierul de configurare a "
+"modulului PKCS#11. Parola poate fi specificată folosind ``pin-value`` în "
+"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ din knot.conf."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:13
+msgid ""
+"Add the following lines to the KnotDNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Adăugați următoarele linii la fișierul de configurare KnotDNS "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:34
+msgid ""
+"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
+"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
+"needed."
+msgstr ""
+"Valoarea ``token`` din PKCS#11 URI este ``label`` din ``p11nethsm.conf``."
+" Ajustați calea către ``libnethsm_pkcs11.so`` după cum este necesar."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:37
+msgid "To generate the keys run the following commands:"
+msgstr "Pentru a genera cheile, executați următoarele comenzi:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:60
+msgid "Automatic Mode"
+msgstr "Mod automat"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:62
+msgid ""
+"In automatic mode the keys are generated by Knot DNS and stored in the "
+"NetHSM."
+msgstr "În modul automat, cheile sunt generate de Knot DNS și stocate în NetHSM."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:64
+msgid ""
+"An Administrator and an Operator user are needed in the PKCS#11 module "
+"configuration."
+msgstr ""
+"În configurația modulului PKCS#11 sunt necesari un utilizator "
+"Administrator și un utilizator Operator."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:66
+msgid ""
+"Add the following lines to the Knot DNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Adăugați următoarele linii la fișierul de configurare Knot DNS "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:92
+msgid ""
+"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
+"module ignores the given label and always returns the hexadecimal key id "
+"as label. The policy uses very short key lifetimes and TTL's for testing "
+"purposes."
+msgstr ""
+"Setarea ``key-label`` la ``on`` nu schimbă nimic, iar modulul pkcs11 "
+"ignoră eticheta dată și returnează întotdeauna ID-ul hexazecimal al cheii"
+" ca etichetă. Politica utilizează durate de viață foarte scurte ale "
+"cheilor și TTL-uri în scopuri de testare."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:2
+msgid "Nginx"
+msgstr "Nginx"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:4
+msgid ""
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"Puteți configura `nginx <https://nginx.org/>`__ pentru a utiliza NetHSM "
+"prin intermediul motorului OpenSSL, care utilizează apoi modulul PKCS#11 "
+"al NetHSM."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
+msgstr ""
+"Configurați motorul OpenSSL urmând ghidul de configurare a motorului "
+"OpenSSL ` <openssl.html#engine>`__."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr "Furnizorii nu sunt încă suportați de Nginx."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+"Folosirea motorului OpenSSL libp11 versiunea 0.4.12 sau mai veche și a "
+"unui NetHSM cu multe chei va face ca încărcarea inițială a Nginx să fie "
+"lentă (mai mult de un minut pentru o mie de chei). Se recomandă "
+"utilizarea versiunii 0.4.13 sau mai noi sau construirea motorului de pe "
+"`sursa <https://github.com/OpenSC/libp11>`__."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:21
+msgid "Nginx Configuration"
+msgstr "Configurația Nginx"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:60
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr ""
+"Adresa ``ssl_certificate`` trebuie să indice către un fișier de "
+"certificat de pe disc."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:62
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+"``ssl_certificate_key`` poate fi o configurație OpenSSL. Aici folosim "
+"motorul OpenSSL cu modulul PKCS#11 și selectăm cheia privată cu "
+"eticheta/ID ``webserver`` și tipul de cheie ``private``."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:69
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"nginx won't start."
+msgstr ""
+"Trebuie să generați certificatul separat și apoi să îl încărcați în "
+"NetHSM. Dacă certificatul de pe disc și cheia din NetHSM nu se potrivesc,"
+" nginx nu va porni."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:84
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an `environment variable "
+"<../pkcs11-setup.html#passwords>`__) or provide it in the nginx "
+"configuration:"
+msgstr ""
+"Pentru a securiza parola, o puteți furniza prin intermediul unei "
+"variabile de mediu ` <pkcs11-setup.html#passwords>`__) sau o puteți "
+"furniza în configurația nginx:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:94
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Dacă doriți să experimentați cu exemplul `dat "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"utilizați git pentru a clona depozitul `nethsm-pkcs11 "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ și rulați următoarele "
+"comenzi:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:102
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Ajustați variabilele ``HOST``, ``ADMIN_ACCOUNT`` și ``ADMIN_ACCOUNT_PWD``"
+" în ``container/nginx/generate.sh`` astfel încât ``HOST`` să conțină URL-"
+"ul și portul NetHSMs, ``ADMIN_ACCOUNT`` să conțină numele de utilizator "
+"al contului de administrator și ``ADMIN_ACCOUNT_PWD`` parola "
+"corespunzătoare. În continuare, configurați calea absolută a motorului "
+"OpenSSL PKCS11 în ``OPENSSL_PKCS11_ENGINE_PATH`` și calea absolută a "
+"bibliotecii PKCS11 NetHSM în ``NETHSM_PKCS11_LIBRARY_PATH``."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:104
+msgid ""
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Actualizați configurația PKCS11 din ``container/nginx/p11nethsm.conf`` cu"
+" URL-ul NetHSMs și acreditările valide ale operatorului."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:123
+#, fuzzy
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, will warn you that "
+"the websites certificate is self-signed."
+msgstr ""
+"Pagina de test NGINX va fi disponibilă la `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Rețineți că browserul dvs. vă va avertiza, "
+"sperăm, că certificatul site-urilor web este autofirmat."
+
+#: ../../source/components/nethsm/compatible/openbao.rst:2
+#, fuzzy
+msgid "OpenBao"
+msgstr "Operațiunea"
+
+#: ../../source/components/nethsm/compatible/openbao.rst:4
+msgid ""
+"NetHSM can be used to auto-unseal you OpenBao. Details are documented in "
+"the `OpenBao documentation "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr "OpenDNSSEC"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ este o suită de instrumente "
+"pentru gestionarea securității numelor de domenii. Acesta poate încărca "
+"direct un modul PKCS#11 și poate gestiona cheile."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:6
+#, fuzzy
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
+" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
+" used instead."
+msgstr ""
+"Pentru a instala și configura OpenDNSSEC, puteți urma `OpenDNSSEC Quick "
+"Start Guide "
+"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. Nu "
+"este necesar să instalați ``SoftHSM``, modulul NetHSM PKCS#11 va fi "
+"utilizat în locul acestuia."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+"Deoarece OpenDNSSEC are nevoie de acces pentru a gestiona cheile și apoi "
+"pentru a le utiliza, va trebui să configurați atât contul de "
+"administrator, cât și cel de operator în fișierul de configurare a "
+"modulului PKCS#11."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+"Puteți configura OpenDNSSEC pentru a încărca modulul libnethsm_pkcs11.so "
+"prin editarea fișierului ``/etc/opendnssec/conf.xml``. Va trebui să "
+"adăugați următoarele linii:"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:35
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+"Înlocuiți ``/root/libnethsm_pkcs11.so`` cu calea către modulul "
+"libnethsm_pkcs11.so. Trebuie să potriviți ``<TokenLabel>`` cu eticheta pe"
+" care ați setat-o în fișierul de configurare ``p11nethsm.conf``. ` "
+"`<PIN>`` este PIN-ul operatorului, îl puteți seta în text simplu în "
+"fișierul ``conf.xml`` sau puteți utiliza ``ods-hsmutil login``. "
+"OpenDNSSEC trebuie să aibă un PIN furnizat, altfel va refuza să "
+"pornească."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:39
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+"De asemenea, trebuie să actualizați câmpurile ``<Repository>`` din "
+"``/etc/opendnssec/kasp.xml`` la ``NetHSM`` în loc de cele implicite "
+"``SoftHSM`` :"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:2
+msgid "OpenSSL"
+msgstr "OpenSSL"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:6
+msgid ""
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
+msgstr ""
+"Încercarea de a prelua cheia privată va bloca OpenSSL. Acest lucru este "
+"normal, deoarece cheile private nu pot fi extrase dintr-un NetHSM. Este "
+"posibil să doriți să recuperați în schimb cheia publică (a se vedea "
+"exemplul de mai jos)."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:9
+msgid "Engine"
+msgstr "Motor"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:12
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
+msgstr ""
+"Atunci când se utilizează o versiune a motorului (libp11) de 0.4.12 sau "
+"mai veche, dacă există o cheie EdDSA pe NetHSM, OpenSSL nu va găsi nicio "
+"cheie. La versiunea 0.4.12 și la versiunile mai vechi, motorul enumeră "
+"toate cheile de pe NetHSM atunci când se solicită o cheie. Atunci când se"
+" caută o cheie după etichetă sau id, se recomandă să se utilizeze "
+"versiunea 0.4.13 sau mai nouă, sau să se construiască `libp11 "
+"<https://github.com/OpenSC/libp11>`__ din sursă. Binarul motorului va fi "
+"în ``src/.libs/pkcs11.so``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:17
+msgid ""
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
+msgstr ""
+"Interfața motorului OpenSSL este vechea modalitate de a implementa "
+"backend-uri personalizate pentru OpenSSL și este depășită în OpenSSL 3. "
+"Aceasta este încă cea mai stabilă modalitate de a utiliza NetHSM cu "
+"OpenSSL."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:19
+#: ../../source/components/nethsm/compatible/openssl.rst:101
+#, fuzzy
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"Va trebui să configurați modulul PKCS#11, urmând `aceste instrucțiuni "
+"<pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:21
+msgid "Install the engine:"
+msgstr "Montați motorul:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:24
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:30
+#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
+msgid "Fedora"
+msgstr "Fedora"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:36
+msgid "Arch Linux"
+msgstr "Arch Linux"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:42
+msgid ""
+"Next you need to configure OpenSSL to use the engine. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"În continuare, trebuie să configurați OpenSSL pentru a utiliza motorul. "
+"Acest lucru se face prin adăugarea următoarelor linii în fișierul "
+"``openssl.cnf``:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:61
+#: ../../source/components/nethsm/compatible/openssl.rst:127
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+"Puteți specifica pentru OpenSSL calea fișierului de configurare OpenSSL "
+"folosind variabila de mediu ``OPENSSL_CONF``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:64
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+"Dacă fișierul principal de configurare OpenSSL este modificat pentru a "
+"conține doar aceste linii, ar putea întrerupe alte programe care "
+"utilizează OpenSSL. Astfel, este posibil să doriți să creați un fișier de"
+" configurare separat pentru motor."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:67
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"Înlocuiți ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` cu "
+"calea către modulul PKCS#11 pe care l-ați instalat mai devreme."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:69
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+"Înlocuiți ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` cu calea "
+"către motorul OpenSSL pe care l-ați instalat. Calea variază în funcție de"
+" distribuție. Numărul din ``engines-3`` corespunde versiunii OpenSSL. Pe "
+"Debian, calea pentru motorul OpenSSL 3 este ``/usr/lib/x86_64-linux-"
+"gnu/engines-3/libpkcs11.so``; pentru Fedora este "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:71
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Acum puteți utiliza chei pe NetHSM folosind `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, exemplu:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:77
+msgid "This will use the key ``webserver``."
+msgstr "Aceasta va utiliza cheia ``webserver``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:80
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+"Puteți utiliza comanda ``p11tool`` din `GnuTLS <https://gnutls.org/>` "
+"pentru a obține URI-ul complet al cheilor:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:87
+msgid "Example Command"
+msgstr "Exemplu de comandă"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:89
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr "Recuperarea cheii publice a unei perechi de chei asimetrice de pe NetHSM :"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:97
+msgid "Provider"
+msgstr "Furnizor"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:99
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+"Interfața furnizorului OpenSSL este noua modalitate de a implementa "
+"backend-uri personalizate pentru OpenSSL. Backend-ul `pkcs11-provider "
+"<https://github.com/latchset/pkcs11-provider>`__ se află încă într-un "
+"stadiu incipient de dezvoltare."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:103
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+"Instalați furnizorul. Pentru Fedora există un pachet numit "
+"``pkcs11-provider``. Pentru alte distribuții Linux va trebui să `îl "
+"construiți din sursa "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:105
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Apoi trebuie să configurați OpenSSL pentru a utiliza furnizorul. Acest "
+"lucru se face prin adăugarea următoarelor linii în fișierul "
+"``openssl.cnf``:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:122
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+"Setați ``module`` la calea furnizorului pe care l-ați instalat și "
+"``pkcs11-module-path`` la calea modulului PKCS#11 pe care l-ați instalat."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:124
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+"Dacă doriți să setați NetHSM ca furnizor implicit, puteți adăuga "
+"``default = pkcs11`` la secțiunea ``provider_sect``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:131
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Dacă fișierul principal de configurare OpenSSL este modificat pentru a "
+"conține doar aceste linii, ar putea întrerupe alte programe care "
+"utilizează OpenSSL. Astfel, este posibil să doriți să creați un fișier de"
+" configurare separat pentru furnizor."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:133
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Apoi, puteți utiliza chei pe NetHSM folosind `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, de exemplu:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:139
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+"Dacă ați setat NetHSM ca furnizor implicit, puteți omite argumentul "
+"``-provider pkcs11``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:142
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
+"În prezent, atunci când se stabilește manual un tip de cheie în URI, "
+"furnizorul nu va putea găsi cheia respectivă. Puteți omite partea "
+"``;type=private`` sau ``;type=public`` din URI pentru a face să "
+"funcționeze."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:2
+#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
+#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
+msgid "SSH"
+msgstr "SSH"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr ""
+"Puteți utiliza NetHSM pentru autentificarea SSH. Trebuie să treceți calea"
+" modulului PKCS#11 în linia de comandă sau în configurația SSH."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:7
+msgid "Command line"
+msgstr "Linia de comandă"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:12
+msgid "SSH config"
+msgstr "Configurație SSH"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+"De asemenea, puteți configura SSH pentru a utiliza NetHSM în mod "
+"implicit. Pentru a face acest lucru, adăugați următoarele linii la "
+"fișierul ``~/.ssh/config``:"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr "SSH va căuta o cheie pe NetHSM care este acceptată de server."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr ""
+"Pentru a lista cheile unui NetHSM în format SSH ``authorized_keys``, "
+"utilizați următoarea comandă:"
+
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
 msgid "Container"
@@ -4429,16 +5256,16 @@ msgstr "Containerul poate fi executat după cum urmează."
 #: ../../source/components/nethsm/container/production-image.rst:107
 #: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:45
-#: ../../source/components/nethsm/integration.rst:43
-#: ../../source/components/nethsm/integration.rst:56
+#: ../../source/components/nethsm/integration.rst:45
+#: ../../source/components/nethsm/integration.rst:58
 msgid "Docker"
 msgstr "Docker"
 
 #: ../../source/components/nethsm/container/production-image.rst:112
 #: ../../source/components/nethsm/container/production-image.rst:142
 #: ../../source/components/nethsm/container/test-image.rst:50
-#: ../../source/components/nethsm/integration.rst:48
-#: ../../source/components/nethsm/integration.rst:61
+#: ../../source/components/nethsm/integration.rst:50
+#: ../../source/components/nethsm/integration.rst:63
 msgid "Podman"
 msgstr "Podman"
 
@@ -4566,202 +5393,6 @@ msgstr ""
 "utilizați setările de conectare corecte pentru a stabili o conexiune. Vă "
 "rugăm să consultați capitolul `NetHSM introducere <index.html>`__ pentru "
 "a afla mai multe."
-
-#: ../../source/components/nethsm/ejbca.rst:2
-msgid "EJBCA"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:5
-msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
-msgstr "EJBCA necesită cel puțin NetHSM v3 și nethsm-pkcs11 v2."
-
-#: ../../source/components/nethsm/ejbca.rst:7
-#, fuzzy
-msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
-"software available in both Community (CE) and Enterprise Edition (EE)."
-msgstr ""
-"`EJBCA <https://www.ejbca.org/>`__ este un software de autoritate de "
-"certificare PKI disponibil ca sursă deschisă."
-
-#: ../../source/components/nethsm/ejbca.rst:10
-#, fuzzy
-msgid "EJBCA Community"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:12
-msgid ""
-"EJBCA Community Edition is an open source PKI Certificate Authority "
-"software."
-msgstr ""
-"EJBCA Community Edition este un software open source PKI Certificate "
-"Authority."
-
-#: ../../source/components/nethsm/ejbca.rst:14
-#, fuzzy
-msgid ""
-"To be able to use NetHSM with EJBCA CE you need to `setup "
-"<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
-msgstr ""
-"Pentru a putea utiliza NetHSM cu EJBCA, trebuie să configurați ` "
-"<pkcs11-setup.html>`__ modulul NetHSM PKCS#11 mai întâi."
-
-#: ../../source/components/nethsm/ejbca.rst:16
-msgid ""
-"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
-"in the ``/etc/ejbca/conf/web.properties`` file:"
-msgstr ""
-"Apoi, configurați EJBCA pentru a utiliza modulul NetHSM PKCS#11 adăugând "
-"o intrare în fișierul ``/etc/ejbca/conf/web.properties``:"
-
-#: ../../source/components/nethsm/ejbca.rst:26
-msgid ""
-"The ``418`` in the name is an index that must be unique for each PKCS#11 "
-"module in the configuration file."
-msgstr ""
-"``418`` din nume este un index care trebuie să fie unic pentru fiecare "
-"modul PKCS#11 din fișierul de configurare."
-
-#: ../../source/components/nethsm/ejbca.rst:28
-msgid ""
-"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
-"GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``NetHSM``."
-msgstr ""
-"După repornirea EJBCA, puteți adăuga un nou jeton criptografic în EJBCA "
-"Admin GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"Tipul Crypto Token este ``PKCS#11 Crypto Token``, iar numele Crypto Token"
-" este ``NetHSM``."
-
-#: ../../source/components/nethsm/ejbca.rst:33
-#, fuzzy
-msgid "Docker Example"
-msgstr "Exemplu"
-
-#: ../../source/components/nethsm/ejbca.rst:35
-#, fuzzy
-msgid ""
-"We provide an example setup using docker for testing. If you want to "
-"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
-" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
-" described in the file `container/ejbca/README.md "
-"<https://github.com/Nitrokey/nethsm-"
-"pkcs11/blob/main/container/ejbca/README.md>`__."
-msgstr ""
-"Dacă doriți să experimentați cu exemplul dat, puteți folosi git pentru a "
-"clona depozitul `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ și să rulați următoarele comenzi:"
-
-#: ../../source/components/nethsm/ejbca.rst:39
-#, fuzzy
-msgid "EJBCA Enterprise"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:41
-msgid ""
-"EJBCA Enterprise Edition provides advanced features and enterprise "
-"support."
-msgstr ""
-"EJBCA Enterprise Edition oferă caracteristici avansate și suport pentru "
-"întreprinderi."
-
-#: ../../source/components/nethsm/ejbca.rst:43
-msgid ""
-"Configuration for EJBCA EE differs from the Community Edition. Instead of"
-" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
-" uses a **sidecar container** approach. This sidecar container provides "
-"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
-"seamless integration without modifying the main EJBCA container."
-msgstr ""
-"Configurarea pentru EJBCA EE diferă de cea a ediției comunitare. În loc "
-"să configureze modulul PKCS#11 direct în EJBCA, Enterprise Edition "
-"utilizează o abordare de tip **sidecar container**. Acest container "
-"Sidecar furnizează conexiunea p11ng (PKCS#11 Next Generation) la NetHSM, "
-"permițând o integrare perfectă fără modificarea containerului EJBCA "
-"principal."
-
-#: ../../source/components/nethsm/ejbca.rst:48
-msgid ""
-"For detailed information on configuring Hardware Security Modules (HSM) "
-"with EJBCA EE, refer to the official `EJBCA HSM documentation "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-msgstr ""
-"Pentru informații detaliate privind configurarea modulelor de securitate "
-"hardware (HSM) cu EJBCA EE, consultați documentația oficială `EJBCA HSM "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-
-#: ../../source/components/nethsm/ejbca.rst:52
-#, fuzzy
-msgid "Docker Setup"
-msgstr "Exemplu"
-
-#: ../../source/components/nethsm/ejbca.rst:54
-msgid ""
-"We provide a complete containerized setup for EJBCA EE integration with "
-"NetHSM. The setup includes:"
-msgstr ""
-"Oferim o configurație containerizată completă pentru integrarea EJBCA EE "
-"cu NetHSM. Configurația include:"
-
-#: ../../source/components/nethsm/ejbca.rst:56
-#, fuzzy
-msgid "EJBCA EE container"
-msgstr "Construiți containerul."
-
-#: ../../source/components/nethsm/ejbca.rst:57
-msgid "NetHSM PKCS#11 sidecar container (p11ng)"
-msgstr "NetHSM PKCS#11 container sidecar (p11ng)"
-
-#: ../../source/components/nethsm/ejbca.rst:58
-msgid "NetHSM container for testing"
-msgstr "Container NetHSM pentru testare"
-
-#: ../../source/components/nethsm/ejbca.rst:60
-msgid ""
-"You can find the container image and configuration in the `container"
-"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
-msgstr ""
-"Puteți găsi imaginea și configurația containerului în `container/ejbca-"
-"ee/ directorul <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ al depozitului nethsm-pkcs11."
-
-#: ../../source/components/nethsm/ejbca.rst:64
-msgid ""
-"The directory includes a complete ``docker-compose.yml`` file that brings"
-" up all necessary components, including a NetHSM instance for testing "
-"purposes. This provides a ready-to-use environment for experimenting with"
-" EJBCA EE and NetHSM integration."
-msgstr ""
-"Directorul include un fișier complet ``docker-compose.yml`` care aduce "
-"toate componentele necesare, inclusiv o instanță NetHSM pentru testare. "
-"Acesta oferă un mediu gata de utilizare pentru experimentarea integrării "
-"EJBCA EE și NetHSM."
-
-#: ../../source/components/nethsm/ejbca.rst:69
-msgid ""
-"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
-"official repositories, make sure to run ``docker login`` before making "
-"use of them."
-msgstr ""
-"``Dockerfile`` și ``docker-compose.yml`` conțin referințe la depozitele "
-"oficiale, asigurați-vă că rulați ``docker login`` înainte de a le "
-"utiliza."
-
-#: ../../source/components/nethsm/ejbca.rst:72
-msgid ""
-"Currently a limitation is that there is no way to select the *Padding "
-"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
-"PKCS#1 padding (and not PSS)."
-msgstr ""
-"În prezent, o limitare este că nu există nicio modalitate de a selecta "
-"schema de umplere ** pentru un anumit *Crypto Token*. Prin urmare, RSA va"
-" utiliza întotdeauna umplutura PKCS#1 (și nu PSS)."
 
 #: ../../source/components/nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -4901,6 +5532,14 @@ msgstr "Îmbunătățiri de performanță"
 #, fuzzy
 msgid "Remote attestation"
 msgstr "Atestarea la distanță și serviciul cloud"
+
+#: ../../source/components/nethsm/faq.rst:44
+msgid ""
+"If the software supports `PKCS#11 or can talk to a REST API "
+"<integration.html>`__ the answer is most likely yes. There is also "
+"already a list of `compatible and tested software "
+"<compatible/index.html>`__."
+msgstr ""
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -5239,17 +5878,17 @@ msgstr "Integrare"
 
 #: ../../source/components/nethsm/integration.rst:4
 msgid ""
-"The chapter describes processes for various tasks and aims at all user "
-"groups."
+"This chapter describes how to integrate NetHSM into applications and how "
+"to test that integration. If you are searching for software, which "
+"already integrates well with NetHSM, here is a `list of compatible "
+"software. <compatible/index.html>`__"
 msgstr ""
-"Capitolul descrie procesele pentru diferite sarcini și se adresează "
-"tuturor grupurilor de utilizatori."
 
-#: ../../source/components/nethsm/integration.rst:7
+#: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../../source/components/nethsm/integration.rst:9
+#: ../../source/components/nethsm/integration.rst:11
 msgid ""
 "NetHSM's primary interface is a modern REST-API that guarantees best "
 "performance and functionality. The API specification is available in "
@@ -5264,12 +5903,12 @@ msgstr ""
 " inspectată și testată în browserul API ` "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ ."
 
-#: ../../source/components/nethsm/integration.rst:14
+#: ../../source/components/nethsm/integration.rst:16
 #: ../../source/components/nethsm/pkiproxy.rst:138
 msgid "PKCS#11"
 msgstr "PKCS#11"
 
-#: ../../source/components/nethsm/integration.rst:16
+#: ../../source/components/nethsm/integration.rst:18
 msgid ""
 "The NetHSM supports the PKCS#11 standard. The required driver is "
 "available from the `repository <https://github.com/Nitrokey/nethsm-"
@@ -5283,15 +5922,15 @@ msgstr ""
 "sisteme de operare. Ghidul `PKCS#11 <pkcs11-setup.html>`_ descrie în "
 "detaliu modul de utilizare."
 
-#: ../../source/components/nethsm/integration.rst:22
+#: ../../source/components/nethsm/integration.rst:24
 msgid "Development and Testing"
 msgstr "Dezvoltare și testare"
 
-#: ../../source/components/nethsm/integration.rst:25
+#: ../../source/components/nethsm/integration.rst:27
 msgid "Demo Instance"
 msgstr "Instanță demo"
 
-#: ../../source/components/nethsm/integration.rst:27
+#: ../../source/components/nethsm/integration.rst:29
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -5304,11 +5943,11 @@ msgstr ""
 "Utilizator \"admin\", parolă \"adminadmin\", parolă de deblocare "
 "\"unlockunlock\"."
 
-#: ../../source/components/nethsm/integration.rst:31
+#: ../../source/components/nethsm/integration.rst:33
 msgid "Container Image"
 msgstr "Imaginea containerului"
 
-#: ../../source/components/nethsm/integration.rst:33
+#: ../../source/components/nethsm/integration.rst:35
 msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
@@ -5316,11 +5955,11 @@ msgstr ""
 "NetHSM `imagini container <container/index.html>`__ sunt disponibile "
 "pentru testare și producție."
 
-#: ../../source/components/nethsm/integration.rst:36
+#: ../../source/components/nethsm/integration.rst:38
 msgid "Integration Into Custom Application"
 msgstr "Integrarea în aplicația personalizată"
 
-#: ../../source/components/nethsm/integration.rst:38
+#: ../../source/components/nethsm/integration.rst:40
 #, fuzzy
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
@@ -5341,11 +5980,11 @@ msgstr ""
 "toate celelalte limbaje de programare, vă recomandăm să utilizați "
 "`OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
 
-#: ../../source/components/nethsm/integration.rst:40
+#: ../../source/components/nethsm/integration.rst:42
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Lista tuturor limbilor disponibile poate fi consultată după cum urmează."
 
-#: ../../source/components/nethsm/integration.rst:53
+#: ../../source/components/nethsm/integration.rst:55
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -5353,7 +5992,7 @@ msgstr ""
 "Clientul NetHSM poate fi generat pentru limbajul dumneavoastră de "
 "programare după cum urmează."
 
-#: ../../source/components/nethsm/integration.rst:66
+#: ../../source/components/nethsm/integration.rst:68
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -5363,7 +6002,7 @@ msgstr ""
 "directorul ``./out/``. Acest director conține, de asemenea, documentația "
 "necesară modului de utilizare."
 
-#: ../../source/components/nethsm/integration.rst:70
+#: ../../source/components/nethsm/integration.rst:72
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -5378,11 +6017,11 @@ msgstr ""
 "trebuie să fie postfixată cu ``:z``, rezultând ``-v "
 "\"${PWD}/out:/out:z\"``."
 
-#: ../../source/components/nethsm/integration.rst:76
+#: ../../source/components/nethsm/integration.rst:78
 msgid "Command-line interface"
 msgstr "Interfața liniei de comandă"
 
-#: ../../source/components/nethsm/integration.rst:78
+#: ../../source/components/nethsm/integration.rst:80
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -5397,99 +6036,6 @@ msgstr ""
 "<https://pypi.org/project/pynitrokey/>`_. Cu ``nethsm`` există o "
 "aplicație terță alternativă, care este dezvoltată în crate-ul Rust "
 "`nethsm-cli <https://crates.io/crates/nethsm-cli/>`_."
-
-#: ../../source/components/nethsm/knotdns.rst:2
-msgid "Knot DNS"
-msgstr "Nod DNS"
-
-#: ../../source/components/nethsm/knotdns.rst:4
-msgid ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
-"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
-"please install and configure the PKCS#11 module as `described here "
-"<./pkcs11-setup.html>`__."
-msgstr ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ este un server DNS autoritar open"
-" source care poate fi utilizat pentru DNSSEC. Pentru a utiliza KnotDNS cu"
-" NetHSM, vă rugăm să instalați și să configurați modulul PKCS#11 așa cum "
-"este descris aici ` <./pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/knotdns.rst:7
-msgid "Manual Mode"
-msgstr "Mod manual"
-
-#: ../../source/components/nethsm/knotdns.rst:9
-msgid "In manual mode the keys have to be generated and managed manually."
-msgstr "În modul manual, cheile trebuie să fie generate și gestionate manual."
-
-#: ../../source/components/nethsm/knotdns.rst:11
-msgid ""
-"Only the Operator user is needed in the PKCS#11 module configuration "
-"file. The password can be specified using the ``pin-value`` in the "
-"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
-msgstr ""
-"Numai utilizatorul Operator este necesar în fișierul de configurare a "
-"modulului PKCS#11. Parola poate fi specificată folosind ``pin-value`` în "
-"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ din knot.conf."
-
-#: ../../source/components/nethsm/knotdns.rst:13
-msgid ""
-"Add the following lines to the KnotDNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Adăugați următoarele linii la fișierul de configurare KnotDNS "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:34
-msgid ""
-"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
-"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
-"needed."
-msgstr ""
-"Valoarea ``token`` din PKCS#11 URI este ``label`` din ``p11nethsm.conf``."
-" Ajustați calea către ``libnethsm_pkcs11.so`` după cum este necesar."
-
-#: ../../source/components/nethsm/knotdns.rst:37
-msgid "To generate the keys run the following commands:"
-msgstr "Pentru a genera cheile, executați următoarele comenzi:"
-
-#: ../../source/components/nethsm/knotdns.rst:60
-msgid "Automatic Mode"
-msgstr "Mod automat"
-
-#: ../../source/components/nethsm/knotdns.rst:62
-msgid ""
-"In automatic mode the keys are generated by Knot DNS and stored in the "
-"NetHSM."
-msgstr "În modul automat, cheile sunt generate de Knot DNS și stocate în NetHSM."
-
-#: ../../source/components/nethsm/knotdns.rst:64
-msgid ""
-"An Administrator and an Operator user are needed in the PKCS#11 module "
-"configuration."
-msgstr ""
-"În configurația modulului PKCS#11 sunt necesari un utilizator "
-"Administrator și un utilizator Operator."
-
-#: ../../source/components/nethsm/knotdns.rst:66
-msgid ""
-"Add the following lines to the Knot DNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Adăugați următoarele linii la fișierul de configurare Knot DNS "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:92
-msgid ""
-"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
-"module ignores the given label and always returns the hexadecimal key id "
-"as label. The policy uses very short key lifetimes and TTL's for testing "
-"purposes."
-msgstr ""
-"Setarea ``key-label`` la ``on`` nu schimbă nimic, iar modulul pkcs11 "
-"ignoră eticheta dată și returnează întotdeauna ID-ul hexazecimal al cheii"
-" ca etichetă. Politica utilizează durate de viață foarte scurte ale "
-"cheilor și TTL-uri în scopuri de testare."
 
 #: ../../source/components/nethsm/metrics.rst:7
 msgid "Metric"
@@ -5706,459 +6252,6 @@ msgstr "uptime"
 #: ../../source/components/nethsm/metrics.rst:89
 msgid "Uptime in seconds."
 msgstr "Timp de funcționare în secunde."
-
-#: ../../source/components/nethsm/nginx.rst:2
-msgid "Nginx"
-msgstr "Nginx"
-
-#: ../../source/components/nethsm/nginx.rst:4
-msgid ""
-"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
-"OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"Puteți configura `nginx <https://nginx.org/>`__ pentru a utiliza NetHSM "
-"prin intermediul motorului OpenSSL, care utilizează apoi modulul PKCS#11 "
-"al NetHSM."
-
-#: ../../source/components/nethsm/nginx.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__."
-msgstr ""
-"Configurați motorul OpenSSL urmând ghidul de configurare a motorului "
-"OpenSSL ` <openssl.html#engine>`__."
-
-#: ../../source/components/nethsm/nginx.rst:15
-msgid "Providers aren't supported yet by Nginx."
-msgstr "Furnizorii nu sunt încă suportați de Nginx."
-
-#: ../../source/components/nethsm/nginx.rst:18
-msgid ""
-"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
-" a lot of key will make the initial loading of Nginx slow (more than a "
-"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
-"newer or to build the engine from `source "
-"<https://github.com/OpenSC/libp11>`__."
-msgstr ""
-"Folosirea motorului OpenSSL libp11 versiunea 0.4.12 sau mai veche și a "
-"unui NetHSM cu multe chei va face ca încărcarea inițială a Nginx să fie "
-"lentă (mai mult de un minut pentru o mie de chei). Se recomandă "
-"utilizarea versiunii 0.4.13 sau mai noi sau construirea motorului de pe "
-"`sursa <https://github.com/OpenSC/libp11>`__."
-
-#: ../../source/components/nethsm/nginx.rst:21
-msgid "Nginx Configuration"
-msgstr "Configurația Nginx"
-
-#: ../../source/components/nethsm/nginx.rst:60
-msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
-msgstr ""
-"Adresa ``ssl_certificate`` trebuie să indice către un fișier de "
-"certificat de pe disc."
-
-#: ../../source/components/nethsm/nginx.rst:62
-msgid ""
-"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
-"the OpenSSL engine with the PKCS#11 module and select the private key "
-"with the label/ID ``webserver`` and the key type ``private``."
-msgstr ""
-"``ssl_certificate_key`` poate fi o configurație OpenSSL. Aici folosim "
-"motorul OpenSSL cu modulul PKCS#11 și selectăm cheia privată cu "
-"eticheta/ID ``webserver`` și tipul de cheie ``private``."
-
-#: ../../source/components/nethsm/nginx.rst:69
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"nginx won't start."
-msgstr ""
-"Trebuie să generați certificatul separat și apoi să îl încărcați în "
-"NetHSM. Dacă certificatul de pe disc și cheia din NetHSM nu se potrivesc,"
-" nginx nu va porni."
-
-#: ../../source/components/nethsm/nginx.rst:84
-msgid ""
-"To secure the password you can provide it via an `environment variable "
-"<pkcs11-setup.html#passwords>`__) or provide it in the nginx "
-"configuration:"
-msgstr ""
-"Pentru a securiza parola, o puteți furniza prin intermediul unei "
-"variabile de mediu ` <pkcs11-setup.html#passwords>`__) sau o puteți "
-"furniza în configurația nginx:"
-
-#: ../../source/components/nethsm/nginx.rst:94
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Dacă doriți să experimentați cu exemplul `dat "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"utilizați git pentru a clona depozitul `nethsm-pkcs11 "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ și rulați următoarele "
-"comenzi:"
-
-#: ../../source/components/nethsm/nginx.rst:102
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Ajustați variabilele ``HOST``, ``ADMIN_ACCOUNT`` și ``ADMIN_ACCOUNT_PWD``"
-" în ``container/nginx/generate.sh`` astfel încât ``HOST`` să conțină URL-"
-"ul și portul NetHSMs, ``ADMIN_ACCOUNT`` să conțină numele de utilizator "
-"al contului de administrator și ``ADMIN_ACCOUNT_PWD`` parola "
-"corespunzătoare. În continuare, configurați calea absolută a motorului "
-"OpenSSL PKCS11 în ``OPENSSL_PKCS11_ENGINE_PATH`` și calea absolută a "
-"bibliotecii PKCS11 NetHSM în ``NETHSM_PKCS11_LIBRARY_PATH``."
-
-#: ../../source/components/nethsm/nginx.rst:104
-msgid ""
-"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Actualizați configurația PKCS11 din ``container/nginx/p11nethsm.conf`` cu"
-" URL-ul NetHSMs și acreditările valide ale operatorului."
-
-#: ../../source/components/nethsm/nginx.rst:123
-#, fuzzy
-msgid ""
-"The NGINX test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, will warn you that "
-"the websites certificate is self-signed."
-msgstr ""
-"Pagina de test NGINX va fi disponibilă la `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Rețineți că browserul dvs. vă va avertiza, "
-"sperăm, că certificatul site-urilor web este autofirmat."
-
-#: ../../source/components/nethsm/opendnssec.rst:2
-msgid "OpenDNSSEC"
-msgstr "OpenDNSSEC"
-
-#: ../../source/components/nethsm/opendnssec.rst:4
-msgid ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
-" the security of domain names. It can directly load a PKCS#11 module and "
-"manage the keys."
-msgstr ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ este o suită de instrumente "
-"pentru gestionarea securității numelor de domenii. Acesta poate încărca "
-"direct un modul PKCS#11 și poate gestiona cheile."
-
-#: ../../source/components/nethsm/opendnssec.rst:6
-#, fuzzy
-msgid ""
-"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
-"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
-" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
-" used instead."
-msgstr ""
-"Pentru a instala și configura OpenDNSSEC, puteți urma `OpenDNSSEC Quick "
-"Start Guide "
-"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. Nu "
-"este necesar să instalați ``SoftHSM``, modulul NetHSM PKCS#11 va fi "
-"utilizat în locul acestuia."
-
-#: ../../source/components/nethsm/opendnssec.rst:8
-msgid ""
-"As OpenDNSSEC needs access to manage the keys and then use them, you will"
-" need to configure both administrator and operator account in the PKCS#11"
-" module configuration file."
-msgstr ""
-"Deoarece OpenDNSSEC are nevoie de acces pentru a gestiona cheile și apoi "
-"pentru a le utiliza, va trebui să configurați atât contul de "
-"administrator, cât și cel de operator în fișierul de configurare a "
-"modulului PKCS#11."
-
-#: ../../source/components/nethsm/opendnssec.rst:10
-msgid ""
-"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
-"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
-"following lines:"
-msgstr ""
-"Puteți configura OpenDNSSEC pentru a încărca modulul libnethsm_pkcs11.so "
-"prin editarea fișierului ``/etc/opendnssec/conf.xml``. Va trebui să "
-"adăugați următoarele linii:"
-
-#: ../../source/components/nethsm/opendnssec.rst:35
-msgid ""
-"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
-"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
-"the label you set in the ``p11nethsm.conf`` configuration file. The "
-"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
-" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
-"a pin provided or it will refuse to start."
-msgstr ""
-"Înlocuiți ``/root/libnethsm_pkcs11.so`` cu calea către modulul "
-"libnethsm_pkcs11.so. Trebuie să potriviți ``<TokenLabel>`` cu eticheta pe"
-" care ați setat-o în fișierul de configurare ``p11nethsm.conf``. ` "
-"`<PIN>`` este PIN-ul operatorului, îl puteți seta în text simplu în "
-"fișierul ``conf.xml`` sau puteți utiliza ``ods-hsmutil login``. "
-"OpenDNSSEC trebuie să aibă un PIN furnizat, altfel va refuza să "
-"pornească."
-
-#: ../../source/components/nethsm/opendnssec.rst:39
-msgid ""
-"You also need to update the ``<Repository>`` fields in "
-"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
-"``SoftHSM`` :"
-msgstr ""
-"De asemenea, trebuie să actualizați câmpurile ``<Repository>`` din "
-"``/etc/opendnssec/kasp.xml`` la ``NetHSM`` în loc de cele implicite "
-"``SoftHSM`` :"
-
-#: ../../source/components/nethsm/openssl.rst:2
-msgid "OpenSSL"
-msgstr "OpenSSL"
-
-#: ../../source/components/nethsm/openssl.rst:6
-msgid ""
-"Trying to retrieve the private key will crash OpenSSL. This is normal "
-"because private keys cannot be extracted from a NetHSM. You may want to "
-"retrieve the public key instead (see example below)."
-msgstr ""
-"Încercarea de a prelua cheia privată va bloca OpenSSL. Acest lucru este "
-"normal, deoarece cheile private nu pot fi extrase dintr-un NetHSM. Este "
-"posibil să doriți să recuperați în schimb cheia publică (a se vedea "
-"exemplul de mai jos)."
-
-#: ../../source/components/nethsm/openssl.rst:9
-msgid "Engine"
-msgstr "Motor"
-
-#: ../../source/components/nethsm/openssl.rst:12
-msgid ""
-"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key. On version "
-"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
-"is requested. When searching a key by label or id, it is recommended to "
-"use version 0.4.13 or newer, or build `libp11 "
-"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
-" be in ``src/.libs/pkcs11.so``."
-msgstr ""
-"Atunci când se utilizează o versiune a motorului (libp11) de 0.4.12 sau "
-"mai veche, dacă există o cheie EdDSA pe NetHSM, OpenSSL nu va găsi nicio "
-"cheie. La versiunea 0.4.12 și la versiunile mai vechi, motorul enumeră "
-"toate cheile de pe NetHSM atunci când se solicită o cheie. Atunci când se"
-" caută o cheie după etichetă sau id, se recomandă să se utilizeze "
-"versiunea 0.4.13 sau mai nouă, sau să se construiască `libp11 "
-"<https://github.com/OpenSC/libp11>`__ din sursă. Binarul motorului va fi "
-"în ``src/.libs/pkcs11.so``."
-
-#: ../../source/components/nethsm/openssl.rst:17
-msgid ""
-"The OpenSSL engine interface is the old way to implement custom backends "
-"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
-"stable way to use the NetHSM with OpenSSL."
-msgstr ""
-"Interfața motorului OpenSSL este vechea modalitate de a implementa "
-"backend-uri personalizate pentru OpenSSL și este depășită în OpenSSL 3. "
-"Aceasta este încă cea mai stabilă modalitate de a utiliza NetHSM cu "
-"OpenSSL."
-
-#: ../../source/components/nethsm/openssl.rst:19
-#: ../../source/components/nethsm/openssl.rst:101
-msgid ""
-"You will need to setup the PKCS#11 module, following `these instructions "
-"<pkcs11-setup.html>`__."
-msgstr ""
-"Va trebui să configurați modulul PKCS#11, urmând `aceste instrucțiuni "
-"<pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/openssl.rst:21
-msgid "Install the engine:"
-msgstr "Montați motorul:"
-
-#: ../../source/components/nethsm/openssl.rst:24
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../../source/components/nethsm/openssl.rst:30
-#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
-msgid "Fedora"
-msgstr "Fedora"
-
-#: ../../source/components/nethsm/openssl.rst:36
-msgid "Arch Linux"
-msgstr "Arch Linux"
-
-#: ../../source/components/nethsm/openssl.rst:42
-msgid ""
-"Next you need to configure OpenSSL to use the engine. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"În continuare, trebuie să configurați OpenSSL pentru a utiliza motorul. "
-"Acest lucru se face prin adăugarea următoarelor linii în fișierul "
-"``openssl.cnf``:"
-
-#: ../../source/components/nethsm/openssl.rst:61
-#: ../../source/components/nethsm/openssl.rst:127
-msgid ""
-"You can specify to OpenSSL the path of the OpenSSL configuration file "
-"using the ``OPENSSL_CONF`` environment variable."
-msgstr ""
-"Puteți specifica pentru OpenSSL calea fișierului de configurare OpenSSL "
-"folosind variabila de mediu ``OPENSSL_CONF``."
-
-#: ../../source/components/nethsm/openssl.rst:64
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the engine."
-msgstr ""
-"Dacă fișierul principal de configurare OpenSSL este modificat pentru a "
-"conține doar aceste linii, ar putea întrerupe alte programe care "
-"utilizează OpenSSL. Astfel, este posibil să doriți să creați un fișier de"
-" configurare separat pentru motor."
-
-#: ../../source/components/nethsm/openssl.rst:67
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
-" path to the PKCS#11 module you installed earlier."
-msgstr ""
-"Înlocuiți ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` cu "
-"calea către modulul PKCS#11 pe care l-ați instalat mai devreme."
-
-#: ../../source/components/nethsm/openssl.rst:69
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
-"path to the OpenSSL engine you installed. The path varies depending on "
-"your distribution. The number in ``engines-3`` corresponds to your "
-"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-msgstr ""
-"Înlocuiți ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` cu calea "
-"către motorul OpenSSL pe care l-ați instalat. Calea variază în funcție de"
-" distribuție. Numărul din ``engines-3`` corespunde versiunii OpenSSL. Pe "
-"Debian, calea pentru motorul OpenSSL 3 este ``/usr/lib/x86_64-linux-"
-"gnu/engines-3/libpkcs11.so``; pentru Fedora este "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-
-#: ../../source/components/nethsm/openssl.rst:71
-msgid ""
-"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Acum puteți utiliza chei pe NetHSM folosind `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, exemplu:"
-
-#: ../../source/components/nethsm/openssl.rst:77
-msgid "This will use the key ``webserver``."
-msgstr "Aceasta va utiliza cheia ``webserver``."
-
-#: ../../source/components/nethsm/openssl.rst:80
-msgid ""
-"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
-"get the full URI of the keys:"
-msgstr ""
-"Puteți utiliza comanda ``p11tool`` din `GnuTLS <https://gnutls.org/>` "
-"pentru a obține URI-ul complet al cheilor:"
-
-#: ../../source/components/nethsm/openssl.rst:87
-msgid "Example Command"
-msgstr "Exemplu de comandă"
-
-#: ../../source/components/nethsm/openssl.rst:89
-msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
-msgstr "Recuperarea cheii publice a unei perechi de chei asimetrice de pe NetHSM :"
-
-#: ../../source/components/nethsm/openssl.rst:97
-msgid "Provider"
-msgstr "Furnizor"
-
-#: ../../source/components/nethsm/openssl.rst:99
-msgid ""
-"The OpenSSL provider interface is the new way to implement custom "
-"backends for OpenSSL. The `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
-"stage of development."
-msgstr ""
-"Interfața furnizorului OpenSSL este noua modalitate de a implementa "
-"backend-uri personalizate pentru OpenSSL. Backend-ul `pkcs11-provider "
-"<https://github.com/latchset/pkcs11-provider>`__ se află încă într-un "
-"stadiu incipient de dezvoltare."
-
-#: ../../source/components/nethsm/openssl.rst:103
-msgid ""
-"Install the provider. For Fedora a package named ``pkcs11-provider`` "
-"exists. For other Linux distributions you will need to `build it from "
-"source "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-msgstr ""
-"Instalați furnizorul. Pentru Fedora există un pachet numit "
-"``pkcs11-provider``. Pentru alte distribuții Linux va trebui să `îl "
-"construiți din sursa "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-
-#: ../../source/components/nethsm/openssl.rst:105
-msgid ""
-"Then you need to configure OpenSSL to use the provider. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"Apoi trebuie să configurați OpenSSL pentru a utiliza furnizorul. Acest "
-"lucru se face prin adăugarea următoarelor linii în fișierul "
-"``openssl.cnf``:"
-
-#: ../../source/components/nethsm/openssl.rst:122
-msgid ""
-"Set ``module`` to the path of the provider you installed and ``pkcs11"
-"-module-path`` to the path of the PKCS#11 module you installed."
-msgstr ""
-"Setați ``module`` la calea furnizorului pe care l-ați instalat și "
-"``pkcs11-module-path`` la calea modulului PKCS#11 pe care l-ați instalat."
-
-#: ../../source/components/nethsm/openssl.rst:124
-msgid ""
-"If you want to set NetHSM as the default provider, you can add ``default "
-"= pkcs11`` to the ``provider_sect`` section."
-msgstr ""
-"Dacă doriți să setați NetHSM ca furnizor implicit, puteți adăuga "
-"``default = pkcs11`` la secțiunea ``provider_sect``."
-
-#: ../../source/components/nethsm/openssl.rst:131
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the provider."
-msgstr ""
-"Dacă fișierul principal de configurare OpenSSL este modificat pentru a "
-"conține doar aceste linii, ar putea întrerupe alte programe care "
-"utilizează OpenSSL. Astfel, este posibil să doriți să creați un fișier de"
-" configurare separat pentru furnizor."
-
-#: ../../source/components/nethsm/openssl.rst:133
-msgid ""
-"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Apoi, puteți utiliza chei pe NetHSM folosind `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, de exemplu:"
-
-#: ../../source/components/nethsm/openssl.rst:139
-msgid ""
-"If you set NetHSM as the default provider, you can omit the ``-provider "
-"pkcs11`` argument."
-msgstr ""
-"Dacă ați setat NetHSM ca furnizor implicit, puteți omite argumentul "
-"``-provider pkcs11``."
-
-#: ../../source/components/nethsm/openssl.rst:142
-msgid ""
-"Currently when manually setting a key type in the URI the provider will "
-"not be able to find the key. You can omit the ``;type=private`` or "
-"``;type=public`` part of the URI to make it work."
-msgstr ""
-"În prezent, atunci când se stabilește manual un tip de cheie în URI, "
-"furnizorul nu va putea găsi cheia respectivă. Puteți omite partea "
-"``;type=private`` sau ``;type=public`` din URI pentru a face să "
-"funcționeze."
 
 #: ../../source/components/nethsm/operation.rst:2
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:9
@@ -8142,50 +8235,6 @@ msgstr ""
 "Vă rugăm să consultați documentația `PKI Proxy "
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " pentru mai multe informații."
-
-#: ../../source/components/nethsm/ssh.rst:2
-#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
-#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
-#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
-msgid "SSH"
-msgstr "SSH"
-
-#: ../../source/components/nethsm/ssh.rst:4
-msgid ""
-"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
-"module path in the command line or the SSH configuration."
-msgstr ""
-"Puteți utiliza NetHSM pentru autentificarea SSH. Trebuie să treceți calea"
-" modulului PKCS#11 în linia de comandă sau în configurația SSH."
-
-#: ../../source/components/nethsm/ssh.rst:7
-msgid "Command line"
-msgstr "Linia de comandă"
-
-#: ../../source/components/nethsm/ssh.rst:12
-msgid "SSH config"
-msgstr "Configurație SSH"
-
-#: ../../source/components/nethsm/ssh.rst:19
-msgid ""
-"You can also set up SSH to use the NetHSM by default. To do so, add the "
-"following lines to your ``~/.ssh/config`` file:"
-msgstr ""
-"De asemenea, puteți configura SSH pentru a utiliza NetHSM în mod "
-"implicit. Pentru a face acest lucru, adăugați următoarele linii la "
-"fișierul ``~/.ssh/config``:"
-
-#: ../../source/components/nethsm/ssh.rst:27
-msgid "SSH will search for a key on the NetHSM that is accepted by the server."
-msgstr "SSH va căuta o cheie pe NetHSM care este acceptată de server."
-
-#: ../../source/components/nethsm/ssh.rst:29
-msgid ""
-"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
-" following command:"
-msgstr ""
-"Pentru a lista cheile unui NetHSM în format SSH ``authorized_keys``, "
-"utilizați următoarea comandă:"
 
 #: ../../source/components/nethsm/system_recovery.rst:2
 msgid "System Recovery"
@@ -37936,3 +37985,13 @@ msgstr "Marcaj decupat Ieșire"
 #~ " mai nouă în cele din urmă. "
 #~ "Între timp, singura opțiune este să "
 #~ "construiți Poldi din sursă."
+
+#~ msgid ""
+#~ "The chapter describes processes for "
+#~ "various tasks and aims at all user"
+#~ " groups."
+#~ msgstr ""
+#~ "Capitolul descrie procesele pentru diferite"
+#~ " sarcini și se adresează tuturor "
+#~ "grupurilor de utilizatori."
+

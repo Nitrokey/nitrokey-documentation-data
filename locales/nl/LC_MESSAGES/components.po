@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-20 09:32+0000\n"
+"POT-Creation-Date: 2026-05-22 08:23+0000\n"
 "PO-Revision-Date: 2026-05-20 09:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Dutch <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/nl/>\n"
 "Language: nl\n"
+"Language-Team: Dutch <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/nl/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2515,216 +2514,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__."
 
-#: ../../source/components/nethsm/apache.rst:2
-msgid "Apache"
-msgstr "Apache"
-
-#: ../../source/components/nethsm/apache.rst:4
-msgid ""
-"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
-"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"Je kunt `Apache httpd <https://httpd.apache.org/>`__ configureren om "
-"NetHSM te gebruiken via de OpenSSL engine die dan de PKCS#11 module van "
-"NetHSM gebruikt."
-
-#: ../../source/components/nethsm/apache.rst:6
-#: ../../source/components/nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-"Het certificaatbestand moet op de schijf staan, maar de privésleutel kan "
-"worden gebruikt vanaf de NetHSM."
-
-#: ../../source/components/nethsm/apache.rst:8
-#: ../../source/components/nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "Een volledig voorbeeld is beschikbaar `onder <#example>`__."
-
-#: ../../source/components/nethsm/apache.rst:11
-#: ../../source/components/nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "OpenSSL-configuratie"
-
-#: ../../source/components/nethsm/apache.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
-"Apache httpd.)"
-msgstr ""
-"Stel de OpenSSL engine in volgens de `OpenSSL Engine setup guide "
-"<openssl.html#engine>`__. (OpenSSL Providers worden nog niet ondersteund "
-"door Apache httpd)."
-
-#: ../../source/components/nethsm/apache.rst:16
-msgid "Httpd Configuration"
-msgstr "Httpd-configuratie"
-
-#: ../../source/components/nethsm/apache.rst:18
-msgid "Add the following lines to your ``httpd.conf`` :"
-msgstr "Voeg de volgende regels toe aan je ``httpd.conf`` :"
-
-#: ../../source/components/nethsm/apache.rst:37
-#, fuzzy
-msgid ""
-"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
-"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
-msgstr ""
-"De ``SSLCertificateKeyFile`` moet een PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ zijn die verwijst naar de privésleutel in de "
-"NetHSM."
-
-#: ../../source/components/nethsm/apache.rst:41
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"httpd won't start."
-msgstr ""
-"Je moet het certificaat apart genereren en vervolgens uploaden naar de "
-"NetHSM. Als het certificaat op schijf en de sleutel in de NetHSM niet "
-"overeenkomen zal httpd niet starten."
-
-#: ../../source/components/nethsm/apache.rst:45
-#: ../../source/components/nethsm/nginx.rst:72
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 Configuratie"
-
-#: ../../source/components/nethsm/apache.rst:57
-msgid ""
-"To secure the password you can provide it via an environment variable "
-"(see `Passwords <pkcs11-setup.html#passwords>`__) or provide it in the "
-"httpd configuration:"
-msgstr ""
-"Om het wachtwoord te beveiligen kun je het opgeven via een "
-"omgevingsvariabele (zie `Wachtwoorden <pkcs11-setup.html#passwords>`__) "
-"of het opgeven in de httpd-configuratie:"
-
-#: ../../source/components/nethsm/apache.rst:65
-#: ../../source/components/nethsm/nginx.rst:92
-#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
-msgid "Example"
-msgstr "Voorbeeld"
-
-#: ../../source/components/nethsm/apache.rst:67
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Als je wilt experimenteren met het `gegeven voorbeeld "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" gebruik dan git om de `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ te clonen en voer de "
-"volgende commando's uit:"
-
-#: ../../source/components/nethsm/apache.rst:70
-#: ../../source/components/nethsm/nginx.rst:97
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-"Het genereren van het script verwijdert de ``webserver`` sleutel en "
-"vervangt deze."
-
-#: ../../source/components/nethsm/apache.rst:72
-#: ../../source/components/nethsm/nginx.rst:99
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started.html>`__ for more information. Besides an "
-"administrator, you are going to need an operator account."
-msgstr ""
-"Configureer een NetHSM, een echte of een container. Zie de `getting-"
-"started guide <getting-started.html>`__ voor meer informatie. Naast een "
-"beheerder is er ook een operatoraccount nodig."
-
-#: ../../source/components/nethsm/apache.rst:73
-#: ../../source/components/nethsm/nginx.rst:100
-msgid ""
-"Download and install the latest version of the nethsm-pkcs11 driver "
-"`available from here <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__."
-msgstr ""
-"Download en installeer de nieuwste versie van het stuurprogramma nethsm-"
-"pkcs11 `dat beschikbaar is vanaf hier <https://github.com/Nitrokey"
-"/nethsm-pkcs11/releases>`__."
-
-#: ../../source/components/nethsm/apache.rst:74
-#: ../../source/components/nethsm/nginx.rst:101
-msgid ""
-"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
-"<openssl.html>`__. You do not need to create a configuration file."
-msgstr ""
-"Installeer de OpenSSL PKCS11 engine zoals beschreven in de `OpenSSL "
-"Handleiding <openssl.html>`__. U hoeft geen configuratiebestand te maken."
-
-#: ../../source/components/nethsm/apache.rst:75
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Pas de variabelen ``HOST``, ``ADMIN_ACCOUNT`` en ``ADMIN_ACCOUNT_PWD`` in"
-" ``container/apache/generate.sh`` zodanig aan dat ``HOST`` de URL en "
-"poort van je NetHSM bevat, ``ADMIN_ACCOUNT`` de gebruikersnaam van een "
-"administratoraccount bevat en ``ADMIN_ACCOUNT_PWD`` het bijbehorende "
-"wachtwoord. Configureer verder het absolute pad van de OpenSSL PKCS11 "
-"engine in ``OPENSSL_PKCS11_ENGINE_PATH`` en het absolute pad van de "
-"NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-
-#: ../../source/components/nethsm/apache.rst:76
-#: ../../source/components/nethsm/nginx.rst:103
-msgid ""
-"Create a NetHSM PKCS11 configuration file in one of the `known locations "
-"<pkcs11-setup.html#configuration>`__, e.g., "
-"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
-"account and use the same NetHSM instance specified in the generate script"
-" before."
-msgstr ""
-"Maak een NetHSM PKCS11-configuratiebestand aan op een van de `bekende "
-"locaties <pkcs11-setup.html#configuration>`__, bijvoorbeeld "
-"``/etc/nitrokey/p11nethsm.conf``. Er moet een operatoraccount zijn "
-"geconfigureerd en dezelfde NetHSM-instantie worden gebruikt die eerder in"
-" het generatorscript is opgegeven."
-
-#: ../../source/components/nethsm/apache.rst:77
-msgid ""
-"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Werk de PKCS11-configuratie bij in ``container/apache/p11nethsm.conf`` "
-"met de URL van je NetHSMs en geldige operatorgegevens."
-
-#: ../../source/components/nethsm/apache.rst:78
-#: ../../source/components/nethsm/nginx.rst:105
-msgid "Generate the certificate and key."
-msgstr "Genereer het certificaat en de sleutel."
-
-#: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/nginx.rst:111
-msgid "Build the container."
-msgstr "Bouw de container."
-
-#: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/nginx.rst:117
-msgid "Run the container."
-msgstr "Voer de container uit."
-
-#: ../../source/components/nethsm/apache.rst:96
-msgid ""
-"The Apache test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
-"warn you that the websites certificate is self-signed."
-msgstr ""
-"De Apache-testpagina is beschikbaar op `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Merk op dat uw browser u hopelijk zal "
-"waarschuwen dat het websitecertificaat zelfondertekend is."
-
 #: ../../source/components/nethsm/clustering.rst:2
 #, fuzzy
 msgid "Clustering"
@@ -3991,6 +3780,1051 @@ msgstr ""
 "updates alleen uitvoert op een enkel knooppunt tegelijk en in een cluster"
 " waar het verlies van dat knooppunt het quorum niet zou verliezen."
 
+#: ../../source/components/nethsm/compatible/apache.rst:2
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/components/nethsm/compatible/apache.rst:4
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"Je kunt `Apache httpd <https://httpd.apache.org/>`__ configureren om "
+"NetHSM te gebruiken via de OpenSSL engine die dan de PKCS#11 module van "
+"NetHSM gebruikt."
+
+#: ../../source/components/nethsm/compatible/apache.rst:6
+#: ../../source/components/nethsm/compatible/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+"Het certificaatbestand moet op de schijf staan, maar de privésleutel kan "
+"worden gebruikt vanaf de NetHSM."
+
+#: ../../source/components/nethsm/compatible/apache.rst:8
+#: ../../source/components/nethsm/compatible/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "Een volledig voorbeeld is beschikbaar `onder <#example>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:11
+#: ../../source/components/nethsm/compatible/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "OpenSSL-configuratie"
+
+#: ../../source/components/nethsm/compatible/apache.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"Stel de OpenSSL engine in volgens de `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers worden nog niet ondersteund "
+"door Apache httpd)."
+
+#: ../../source/components/nethsm/compatible/apache.rst:16
+msgid "Httpd Configuration"
+msgstr "Httpd-configuratie"
+
+#: ../../source/components/nethsm/compatible/apache.rst:18
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Voeg de volgende regels toe aan je ``httpd.conf`` :"
+
+#: ../../source/components/nethsm/compatible/apache.rst:37
+#, fuzzy
+msgid ""
+"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+"De ``SSLCertificateKeyFile`` moet een PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ zijn die verwijst naar de privésleutel in de "
+"NetHSM."
+
+#: ../../source/components/nethsm/compatible/apache.rst:41
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"Je moet het certificaat apart genereren en vervolgens uploaden naar de "
+"NetHSM. Als het certificaat op schijf en de sleutel in de NetHSM niet "
+"overeenkomen zal httpd niet starten."
+
+#: ../../source/components/nethsm/compatible/apache.rst:45
+#: ../../source/components/nethsm/compatible/nginx.rst:72
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 Configuratie"
+
+#: ../../source/components/nethsm/compatible/apache.rst:57
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Passwords <../pkcs11-setup.html#passwords>`__) or provide it in the"
+" httpd configuration:"
+msgstr ""
+"Om het wachtwoord te beveiligen kun je het opgeven via een "
+"omgevingsvariabele (zie `Wachtwoorden <pkcs11-setup.html#passwords>`__) "
+"of het opgeven in de httpd-configuratie:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:65
+#: ../../source/components/nethsm/compatible/nginx.rst:92
+#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
+msgid "Example"
+msgstr "Voorbeeld"
+
+#: ../../source/components/nethsm/compatible/apache.rst:67
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Als je wilt experimenteren met het `gegeven voorbeeld "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" gebruik dan git om de `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ te clonen en voer de "
+"volgende commando's uit:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:70
+#: ../../source/components/nethsm/compatible/nginx.rst:97
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+"Het genereren van het script verwijdert de ``webserver`` sleutel en "
+"vervangt deze."
+
+#: ../../source/components/nethsm/compatible/apache.rst:72
+#: ../../source/components/nethsm/compatible/nginx.rst:99
+#, fuzzy
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <../getting-started.html>`__ for more information. Besides "
+"an administrator, you are going to need an operator account."
+msgstr ""
+"Configureer een NetHSM, een echte of een container. Zie de `getting-"
+"started guide <getting-started.html>`__ voor meer informatie. Naast een "
+"beheerder is er ook een operatoraccount nodig."
+
+#: ../../source/components/nethsm/compatible/apache.rst:73
+#: ../../source/components/nethsm/compatible/nginx.rst:100
+msgid ""
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+msgstr ""
+"Download en installeer de nieuwste versie van het stuurprogramma nethsm-"
+"pkcs11 `dat beschikbaar is vanaf hier <https://github.com/Nitrokey"
+"/nethsm-pkcs11/releases>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:74
+#: ../../source/components/nethsm/compatible/nginx.rst:101
+msgid ""
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
+msgstr ""
+"Installeer de OpenSSL PKCS11 engine zoals beschreven in de `OpenSSL "
+"Handleiding <openssl.html>`__. U hoeft geen configuratiebestand te maken."
+
+#: ../../source/components/nethsm/compatible/apache.rst:75
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Pas de variabelen ``HOST``, ``ADMIN_ACCOUNT`` en ``ADMIN_ACCOUNT_PWD`` in"
+" ``container/apache/generate.sh`` zodanig aan dat ``HOST`` de URL en "
+"poort van je NetHSM bevat, ``ADMIN_ACCOUNT`` de gebruikersnaam van een "
+"administratoraccount bevat en ``ADMIN_ACCOUNT_PWD`` het bijbehorende "
+"wachtwoord. Configureer verder het absolute pad van de OpenSSL PKCS11 "
+"engine in ``OPENSSL_PKCS11_ENGINE_PATH`` en het absolute pad van de "
+"NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+
+#: ../../source/components/nethsm/compatible/apache.rst:76
+#: ../../source/components/nethsm/compatible/nginx.rst:103
+#, fuzzy
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<../pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+"Maak een NetHSM PKCS11-configuratiebestand aan op een van de `bekende "
+"locaties <pkcs11-setup.html#configuration>`__, bijvoorbeeld "
+"``/etc/nitrokey/p11nethsm.conf``. Er moet een operatoraccount zijn "
+"geconfigureerd en dezelfde NetHSM-instantie worden gebruikt die eerder in"
+" het generatorscript is opgegeven."
+
+#: ../../source/components/nethsm/compatible/apache.rst:77
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Werk de PKCS11-configuratie bij in ``container/apache/p11nethsm.conf`` "
+"met de URL van je NetHSMs en geldige operatorgegevens."
+
+#: ../../source/components/nethsm/compatible/apache.rst:78
+#: ../../source/components/nethsm/compatible/nginx.rst:105
+msgid "Generate the certificate and key."
+msgstr "Genereer het certificaat en de sleutel."
+
+#: ../../source/components/nethsm/compatible/apache.rst:84
+#: ../../source/components/nethsm/compatible/nginx.rst:111
+msgid "Build the container."
+msgstr "Bouw de container."
+
+#: ../../source/components/nethsm/compatible/apache.rst:90
+#: ../../source/components/nethsm/compatible/nginx.rst:117
+msgid "Run the container."
+msgstr "Voer de container uit."
+
+#: ../../source/components/nethsm/compatible/apache.rst:96
+msgid ""
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
+"De Apache-testpagina is beschikbaar op `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Merk op dat uw browser u hopelijk zal "
+"waarschuwen dat het websitecertificaat zelfondertekend is."
+
+#: ../../source/components/nethsm/compatible/cascade.rst:2
+msgid "Cascade"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/cascade.rst:4
+msgid ""
+"NetHSM can be used to secure your DNSSEC keys with Cascade. Details are "
+"documented in the `Cascade documentation "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:2
+msgid "EJBCA"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:5
+msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
+msgstr "EJBCA vereist minimaal NetHSM v3 en nethsm-pkcs11 v2."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:7
+#, fuzzy
+msgid ""
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
+msgstr ""
+"`EJBCA <https://www.ejbca.org/>`__ is een PKI Certificaat Autoriteit "
+"software die beschikbaar is als open source."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA Community"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:12
+msgid ""
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr ""
+"EJBCA Community Edition is een open source PKI Certificate Authority-"
+"software."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
+"<../pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+msgstr ""
+"Om NetHSM te kunnen gebruiken met EJBCA moet je eerst `setup "
+"<pkcs11-setup.html>`__ de NetHSM PKCS#11 module."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:16
+msgid ""
+"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+"Configureer vervolgens EJBCA om de NetHSM PKCS#11 module te gebruiken "
+"door een entry toe te voegen in het ``/etc/ejbca/conf/web.properties`` "
+"bestand:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:26
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr ""
+"De ``418`` in de naam is een index die uniek moet zijn voor elke PKCS#11 "
+"module in het configuratiebestand."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:28
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``NetHSM``."
+msgstr ""
+"Na het herstarten van EJBCA kunt u een nieuw Crypto Token toevoegen in de"
+" EJBCA Admin GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"Het Crypto Token type is ``PKCS#11 Crypto Token`` en de Crypto Token naam"
+" is ``NetHSM``."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:33
+#, fuzzy
+msgid "Docker Example"
+msgstr "Voorbeeld"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:35
+#, fuzzy
+msgid ""
+"We provide an example setup using docker for testing. If you want to "
+"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
+" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
+" described in the file `container/ejbca/README.md "
+"<https://github.com/Nitrokey/nethsm-"
+"pkcs11/blob/main/container/ejbca/README.md>`__."
+msgstr ""
+"Als je wilt experimenteren met het gegeven voorbeeld kun je git gebruiken"
+" om de `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__ te clonen en de volgende commando's uit te voeren:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA Enterprise"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr ""
+"EJBCA Enterprise Edition biedt geavanceerde functies en "
+"bedrijfsondersteuning."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+"De configuratie voor EJBCA EE verschilt van de Community Editie. In "
+"plaats van de PKCS#11-module rechtstreeks in EJBCA te configureren, "
+"gebruikt de Enterprise Editie een **sidecar container** benadering. Deze "
+"zijspancontainer levert de p11ng (PKCS#11 Next Generation) verbinding met"
+" NetHSM, waardoor een naadloze integratie mogelijk is zonder de "
+"hoofdcontainer van EJBCA aan te passen."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+"Raadpleeg de officiële `EJBCA HSM documentatie "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__ voor gedetailleerde informatie over het configureren van Hardware"
+" Security Modules (HSM) met EJBCA EE."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "Voorbeeld"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr ""
+"We bieden een complete gecontaineriseerde setup voor EJBCA EE integratie "
+"met NetHSM. De setup omvat:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "Bouw de container."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr "NetHSM PKCS#11 zijspancontainer (p11ng)"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr "NetHSM container voor testen"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+"Je kunt het container image en de configuratie vinden in de `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ van de nethsm-pkcs11 repository."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+"De map bevat een compleet ``docker-compose.yml`` bestand dat alle "
+"benodigde componenten naar boven brengt, inclusief een NetHSM instantie "
+"voor testdoeleinden. Dit biedt een kant-en-klare omgeving om te "
+"experimenteren met EJBCA EE en NetHSM integratie."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+"``Dockerfile`` en ``docker-compose.yml`` bevatten verwijzingen naar de "
+"officiële repositories, zorg ervoor dat je ``docker login`` uitvoert "
+"voordat je ze gebruikt."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
+"Momenteel is een beperking dat er geen manier is om het *Padding Scheme* "
+"te selecteren voor een bepaald *Crypto Token*. Daarom zal RSA altijd "
+"PKCS#1 padding gebruiken (en niet PSS)."
+
+#: ../../source/components/nethsm/compatible/index.rst:2
+#, fuzzy
+msgid "Compatible Software"
+msgstr "Van bron compileren"
+
+#: ../../source/components/nethsm/compatible/index.rst:4
+msgid ""
+"NetHSM can be used in conjunction with a wide range of existing software."
+" The following list includes examples of software with which integration "
+"has already been tested. However, NetHSM can be integrated into almost "
+"any software via the `API or the PKCS#11 module. <../integration.html>`__"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:2
+msgid "Knot DNS"
+msgstr "Knoop DNS"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:4
+#, fuzzy
+msgid ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
+"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
+"please install and configure the PKCS#11 module as `described here "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ is een open source gezaghebbende "
+"DNS-server die kan worden gebruikt voor DNSSEC. Om KnotDNS te gebruiken "
+"met de NetHSM moet de PKCS#11 module geïnstalleerd en geconfigureerd "
+"worden zoals `hier beschreven <./pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:7
+msgid "Manual Mode"
+msgstr "Handmatige modus"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:9
+msgid "In manual mode the keys have to be generated and managed manually."
+msgstr ""
+"In handmatige modus moeten de sleutels handmatig worden gegenereerd en "
+"beheerd."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:11
+msgid ""
+"Only the Operator user is needed in the PKCS#11 module configuration "
+"file. The password can be specified using the ``pin-value`` in the "
+"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
+msgstr ""
+"Alleen de Operator gebruiker is nodig in het configuratiebestand van de "
+"PKCS#11 module. Het wachtwoord kan worden opgegeven met de ``pin-value`` "
+"in de `PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in "
+"knot.conf."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:13
+msgid ""
+"Add the following lines to the KnotDNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Voeg de volgende regels toe aan het KnotDNS configuratiebestand "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:34
+msgid ""
+"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
+"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
+"needed."
+msgstr ""
+"De ``token`` waarde in de PKCS#11 URI is de ``label`` van de "
+"``p11nethsm.conf``. Pas het pad naar de ``libnethsm_pkcs11.so`` aan als "
+"dat nodig is."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:37
+msgid "To generate the keys run the following commands:"
+msgstr "Voer de volgende commando's uit om de sleutels te genereren:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:60
+msgid "Automatic Mode"
+msgstr "Automatische modus"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:62
+msgid ""
+"In automatic mode the keys are generated by Knot DNS and stored in the "
+"NetHSM."
+msgstr ""
+"In automatische modus worden de sleutels gegenereerd door Knot DNS en "
+"opgeslagen in de NetHSM."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:64
+msgid ""
+"An Administrator and an Operator user are needed in the PKCS#11 module "
+"configuration."
+msgstr ""
+"Een Administrator en een Operator gebruiker zijn nodig in de PKCS#11 "
+"moduleconfiguratie."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:66
+msgid ""
+"Add the following lines to the Knot DNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Voeg de volgende regels toe aan het Knot DNS configuratiebestand "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:92
+msgid ""
+"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
+"module ignores the given label and always returns the hexadecimal key id "
+"as label. The policy uses very short key lifetimes and TTL's for testing "
+"purposes."
+msgstr ""
+"Het instellen van ``key-label`` op ``on`` verandert niets en de pkcs11 "
+"module negeert het gegeven label en retourneert altijd het hexadecimale "
+"sleutel id als label. Het beleid gebruikt zeer korte sleuteltijden en "
+"TTL's voor testdoeleinden."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:2
+msgid "Nginx"
+msgstr "Nginx"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:4
+msgid ""
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"Je kunt `nginx <https://nginx.org/>`__ configureren om NetHSM te "
+"gebruiken via de OpenSSL engine die dan de PKCS#11 module van NetHSM "
+"gebruikt."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
+msgstr ""
+"Stel de OpenSSL engine in door de `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__ te volgen."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr "Providers worden nog niet ondersteund door Nginx."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+"Het gebruik van de libp11 OpenSSL engine versie 0.4.12 of ouder en een "
+"NetHSM met veel sleutels zal het initiële laden van Nginx traag maken "
+"(meer dan een minuut voor duizend sleutels). Het wordt aanbevolen om "
+"versie 0.4.13 of nieuwer te gebruiken of om de engine te bouwen vanaf "
+"`source <https://github.com/OpenSC/libp11>`__."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:21
+msgid "Nginx Configuration"
+msgstr "Nginx configuratie"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:60
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr ""
+"De ``ssl_certificate`` moet verwijzen naar een certificaatbestand op de "
+"schijf."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:62
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+"De ``ssl_certificate_key`` kan een OpenSSL configuratie zijn. Hier "
+"gebruiken we de OpenSSL engine met de PKCS#11 module en selecteren we de "
+"privésleutel met het label/ID ``webserver`` en het sleuteltype "
+"``private``."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:69
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"nginx won't start."
+msgstr ""
+"Je moet het certificaat apart genereren en dan uploaden naar de NetHSM. "
+"Als het certificaat op schijf en de sleutel in de NetHSM niet "
+"overeenkomen zal nginx niet starten."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:84
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an `environment variable "
+"<../pkcs11-setup.html#passwords>`__) or provide it in the nginx "
+"configuration:"
+msgstr ""
+"Om het wachtwoord te beveiligen kun je het opgeven via een "
+"`omgevingsvariabele <pkcs11-setup.html#passwords>`__) of het opgeven in "
+"de nginx configuratie:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:94
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Als je wilt experimenteren met het `gegeven voorbeeld "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"gebruik dan git om de `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ te clonen en voer de "
+"volgende commando's uit:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:102
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Pas de variabelen ``HOST``, ``ADMIN_ACCOUNT`` en ``ADMIN_ACCOUNT_PWD`` in"
+" ``container/nginx/generate.sh`` zodanig aan dat ``HOST`` de URL en poort"
+" van je NetHSM bevat, ``ADMIN_ACCOUNT`` de gebruikersnaam van een "
+"administratoraccount bevat en ``ADMIN_ACCOUNT_PWD`` het bijbehorende "
+"wachtwoord. Configureer verder het absolute pad van de OpenSSL PKCS11 "
+"engine in ``OPENSSL_PKCS11_ENGINE_PATH`` en het absolute pad van de "
+"NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:104
+msgid ""
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Werk de PKCS11-configuratie bij in ``container/nginx/p11nethsm.conf`` met"
+" de URL van je NetHSMs en geldige operatorgegevens."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:123
+#, fuzzy
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, will warn you that "
+"the websites certificate is self-signed."
+msgstr ""
+"De NGINX testpagina zal beschikbaar zijn op `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Merk op dat je browser je hopelijk zal "
+"waarschuwen dat het certificaat van de website zelfondertekend is."
+
+#: ../../source/components/nethsm/compatible/openbao.rst:2
+#, fuzzy
+msgid "OpenBao"
+msgstr "Operatie"
+
+#: ../../source/components/nethsm/compatible/openbao.rst:4
+msgid ""
+"NetHSM can be used to auto-unseal you OpenBao. Details are documented in "
+"the `OpenBao documentation "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr "OpenDNSSEC"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is een gereedschapssuite "
+"voor het beheren van de beveiliging van domeinnamen. Het kan direct een "
+"PKCS#11 module laden en de sleutels beheren."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:6
+#, fuzzy
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
+" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
+" used instead."
+msgstr ""
+"Om OpenDNSSEC te installeren en in te stellen, kun je de `OpenDNSSEC "
+"Quick Start Guide "
+"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__ volgen."
+" Je hoeft ``SoftHSM`` niet te installeren, in plaats daarvan wordt de "
+"NetHSM PKCS#11 module gebruikt."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+"Aangezien OpenDNSSEC toegang nodig heeft om de sleutels te beheren en ze "
+"vervolgens te gebruiken, moet u zowel de administrator als de operator "
+"account configureren in het configuratiebestand van de PKCS#11 module."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+"Je kunt OpenDNSSEC configureren om de libnethsm_pkcs11.so module te laden"
+" door het ``/etc/opendnssec/conf.xml`` bestand te bewerken. Je moet de "
+"volgende regels toevoegen:"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:35
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+"Vervang ``/root/libnethsm_pkcs11.so`` door het pad naar de "
+"libnethsm_pkcs11.so module. De ``<TokenLabel>`` moet overeenkomen met het"
+" label dat je hebt ingesteld in het ``p11nethsm.conf`` "
+"configuratiebestand. De ``<PIN>`` is de operator PIN, je kunt deze in "
+"platte tekst instellen in het ``conf.xml`` bestand of ``ods-hsmutil "
+"login`` gebruiken. OpenDNSSEC heeft een pin nodig, anders weigert het om "
+"op te starten."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:39
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+"Je moet ook de velden ``<Repository>`` in ``/etc/opendnssec/kasp.xml`` "
+"bijwerken naar ``NetHSM`` in plaats van de standaard ``SoftHSM`` :"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:2
+msgid "OpenSSL"
+msgstr "OpenSSL"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:6
+msgid ""
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
+msgstr ""
+"Bij het ophalen van de privésleutel crasht OpenSSL. Dit is normaal omdat "
+"privésleutels niet uit een NetHSM gehaald kunnen worden. In plaats "
+"daarvan is het misschien beter om de publieke sleutel op te halen (zie "
+"onderstaand voorbeeld)."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:9
+msgid "Engine"
+msgstr "Motor"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:12
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
+msgstr ""
+"Bij gebruik van een engine (libp11) versie 0.4.12 of ouder, zorgt het "
+"hebben van een EdDSA-sleutel op de NetHSM ervoor dat OpenSSL geen sleutel"
+" vindt. Op versie 0.4.12 en ouder geeft de engine een lijst van alle "
+"sleutels op de NetHSM wanneer een sleutel wordt aangevraagd. Bij het "
+"zoeken naar een sleutel op label of id, wordt het aangeraden om versie "
+"0.4.13 of nieuwer te gebruiken, of `libp11 "
+"<https://github.com/OpenSC/libp11>`__ vanaf broncode te bouwen. De "
+"binaire engine staat in ``src/.libs/pkcs11.so``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:17
+msgid ""
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
+msgstr ""
+"De OpenSSL engine interface is de oude manier om aangepaste backends voor"
+" OpenSSL te implementeren en het is verouderd in OpenSSL 3. Dit is nog "
+"steeds de meest stabiele manier om de NetHSM met OpenSSL te gebruiken."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:19
+#: ../../source/components/nethsm/compatible/openssl.rst:101
+#, fuzzy
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"U moet de PKCS#11 module instellen volgens `deze instructies "
+"<pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:21
+msgid "Install the engine:"
+msgstr "Installeer de motor:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:24
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:30
+#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
+msgid "Fedora"
+msgstr "Fedora"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:36
+msgid "Arch Linux"
+msgstr "Arch Linux"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:42
+msgid ""
+"Next you need to configure OpenSSL to use the engine. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Vervolgens moet je OpenSSL configureren om de engine te gebruiken. Dit "
+"wordt gedaan door de volgende regels toe te voegen aan uw ``openssl.cnf``"
+" bestand:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:61
+#: ../../source/components/nethsm/compatible/openssl.rst:127
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+"U kunt OpenSSL het pad van het OpenSSL-configuratiebestand geven met de "
+"``OPENSSL_CONF`` omgevingsvariabele."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:64
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+"Als het hoofdconfiguratiebestand van OpenSSL zodanig wordt aangepast dat "
+"het alleen deze regels bevat, kan dit andere programma's die OpenSSL "
+"gebruiken kapot maken. Daarom is het misschien beter om een apart "
+"instellingenbestand voor de engine te maken."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:67
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"Vervang ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` door het"
+" pad naar de PKCS#11 module die je eerder hebt geïnstalleerd."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:69
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+"Vervang ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` door het pad"
+" naar de OpenSSL engine die je hebt geïnstalleerd. Het pad varieert "
+"afhankelijk van je distributie. Het nummer in ``engines-3`` komt overeen "
+"met je OpenSSL versie. Op Debian is het pad voor de OpenSSL 3 engine "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; voor Fedora is het "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:71
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Nu kun je sleutels gebruiken op de NetHSM door `PKCS#11 URI's "
+"<https://www.rfc-editor.org/rfc/rfc7512>`__ te gebruiken, bijvoorbeeld:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:77
+msgid "This will use the key ``webserver``."
+msgstr "Dit gebruikt de sleutel ``webserver``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:80
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+"Je kunt het ``p11tool`` commando van `GnuTLS <https://gnutls.org/>` "
+"gebruiken om de volledige URI van de sleutels te krijgen:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:87
+msgid "Example Command"
+msgstr "Voorbeeldopdracht"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:89
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr ""
+"De openbare sleutel van een asymmetrisch sleutelpaar op de NetHSM ophalen"
+" :"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:97
+msgid "Provider"
+msgstr "Aanbieder"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:99
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+"De OpenSSL provider interface is de nieuwe manier om aangepaste backends "
+"voor OpenSSL te implementeren. De `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is nog in een vroeg "
+"stadium van ontwikkeling."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:103
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+"Installeer de provider. Voor Fedora bestaat er een pakket met de naam "
+"``pkcs11-provider``. Voor andere Linux distributies zul je `moeten bouwen"
+" vanaf de bron "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:105
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Daarna moet je OpenSSL configureren om de provider te gebruiken. Dit doe "
+"je door de volgende regels toe te voegen aan je ``openssl.cnf`` bestand:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:122
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+"Stel ``module`` in op het pad van de provider die je hebt geïnstalleerd "
+"en ``pkcs11-module-path`` op het pad van de PKCS#11 module die je hebt "
+"geïnstalleerd."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:124
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+"Als je NetHSM als standaard provider wilt instellen, kun je ``default = "
+"pkcs11`` toevoegen aan de ``provider_sect`` sectie."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:131
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Als het hoofdconfiguratiebestand van OpenSSL zodanig wordt aangepast dat "
+"het alleen deze regels bevat, kan dit andere programma's die OpenSSL "
+"gebruiken kapot maken. Daarom is het misschien beter om een apart "
+"instellingenbestand voor de provider te maken."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:133
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Vervolgens kun je sleutels gebruiken op de NetHSM door `PKCS#11 URI's "
+"<https://www.rfc-editor.org/rfc/rfc7512>`__ te gebruiken, bijvoorbeeld:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:139
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+"Als je NetHSM als standaard provider instelt, kun je het ``-provider "
+"pkcs11`` argument weglaten."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:142
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
+"Als je momenteel handmatig een sleuteltype in de URI instelt, kan de "
+"provider de sleutel niet vinden. Je kunt het gedeelte ``;type=private`` "
+"of ``;type=public`` van de URI weglaten om het te laten werken."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:2
+#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
+#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
+msgid "SSH"
+msgstr "SSH"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr ""
+"Je kunt NetHSM gebruiken voor SSH-authenticatie. Je moet het PKCS#11 "
+"modulepad doorgeven in de commandoregel of de SSH-configuratie."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:7
+msgid "Command line"
+msgstr "Opdrachtregel"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:12
+msgid "SSH config"
+msgstr "SSH configureren"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+"Je kunt SSH ook instellen om standaard de NetHSM te gebruiken. Voeg "
+"hiervoor de volgende regels toe aan je ``~/.ssh/config`` bestand:"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr ""
+"SSH zoekt naar een sleutel op de NetHSM die door de server wordt "
+"geaccepteerd."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr ""
+"Gebruik het volgende commando om de sleutels van een NetHSM in een SSH "
+"``authorized_keys`` formaat op te sommen:"
+
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
 msgid "Container"
@@ -4433,16 +5267,16 @@ msgstr "De container kan als volgt worden uitgevoerd."
 #: ../../source/components/nethsm/container/production-image.rst:107
 #: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:45
-#: ../../source/components/nethsm/integration.rst:43
-#: ../../source/components/nethsm/integration.rst:56
+#: ../../source/components/nethsm/integration.rst:45
+#: ../../source/components/nethsm/integration.rst:58
 msgid "Docker"
 msgstr "Docker"
 
 #: ../../source/components/nethsm/container/production-image.rst:112
 #: ../../source/components/nethsm/container/production-image.rst:142
 #: ../../source/components/nethsm/container/test-image.rst:50
-#: ../../source/components/nethsm/integration.rst:48
-#: ../../source/components/nethsm/integration.rst:61
+#: ../../source/components/nethsm/integration.rst:50
+#: ../../source/components/nethsm/integration.rst:63
 msgid "Podman"
 msgstr "Podman"
 
@@ -4568,203 +5402,6 @@ msgstr ""
 "dat u de juiste verbindingsinstellingen gebruikt om een verbinding tot "
 "stand te brengen. Zie hoofdstuk `NetHSM introductie <index.html>`__ voor "
 "meer informatie."
-
-#: ../../source/components/nethsm/ejbca.rst:2
-msgid "EJBCA"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:5
-msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
-msgstr "EJBCA vereist minimaal NetHSM v3 en nethsm-pkcs11 v2."
-
-#: ../../source/components/nethsm/ejbca.rst:7
-#, fuzzy
-msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
-"software available in both Community (CE) and Enterprise Edition (EE)."
-msgstr ""
-"`EJBCA <https://www.ejbca.org/>`__ is een PKI Certificaat Autoriteit "
-"software die beschikbaar is als open source."
-
-#: ../../source/components/nethsm/ejbca.rst:10
-#, fuzzy
-msgid "EJBCA Community"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:12
-msgid ""
-"EJBCA Community Edition is an open source PKI Certificate Authority "
-"software."
-msgstr ""
-"EJBCA Community Edition is een open source PKI Certificate Authority-"
-"software."
-
-#: ../../source/components/nethsm/ejbca.rst:14
-#, fuzzy
-msgid ""
-"To be able to use NetHSM with EJBCA CE you need to `setup "
-"<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
-msgstr ""
-"Om NetHSM te kunnen gebruiken met EJBCA moet je eerst `setup "
-"<pkcs11-setup.html>`__ de NetHSM PKCS#11 module."
-
-#: ../../source/components/nethsm/ejbca.rst:16
-msgid ""
-"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
-"in the ``/etc/ejbca/conf/web.properties`` file:"
-msgstr ""
-"Configureer vervolgens EJBCA om de NetHSM PKCS#11 module te gebruiken "
-"door een entry toe te voegen in het ``/etc/ejbca/conf/web.properties`` "
-"bestand:"
-
-#: ../../source/components/nethsm/ejbca.rst:26
-msgid ""
-"The ``418`` in the name is an index that must be unique for each PKCS#11 "
-"module in the configuration file."
-msgstr ""
-"De ``418`` in de naam is een index die uniek moet zijn voor elke PKCS#11 "
-"module in het configuratiebestand."
-
-#: ../../source/components/nethsm/ejbca.rst:28
-msgid ""
-"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
-"GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``NetHSM``."
-msgstr ""
-"Na het herstarten van EJBCA kunt u een nieuw Crypto Token toevoegen in de"
-" EJBCA Admin GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"Het Crypto Token type is ``PKCS#11 Crypto Token`` en de Crypto Token naam"
-" is ``NetHSM``."
-
-#: ../../source/components/nethsm/ejbca.rst:33
-#, fuzzy
-msgid "Docker Example"
-msgstr "Voorbeeld"
-
-#: ../../source/components/nethsm/ejbca.rst:35
-#, fuzzy
-msgid ""
-"We provide an example setup using docker for testing. If you want to "
-"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
-" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
-" described in the file `container/ejbca/README.md "
-"<https://github.com/Nitrokey/nethsm-"
-"pkcs11/blob/main/container/ejbca/README.md>`__."
-msgstr ""
-"Als je wilt experimenteren met het gegeven voorbeeld kun je git gebruiken"
-" om de `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ te clonen en de volgende commando's uit te voeren:"
-
-#: ../../source/components/nethsm/ejbca.rst:39
-#, fuzzy
-msgid "EJBCA Enterprise"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:41
-msgid ""
-"EJBCA Enterprise Edition provides advanced features and enterprise "
-"support."
-msgstr ""
-"EJBCA Enterprise Edition biedt geavanceerde functies en "
-"bedrijfsondersteuning."
-
-#: ../../source/components/nethsm/ejbca.rst:43
-msgid ""
-"Configuration for EJBCA EE differs from the Community Edition. Instead of"
-" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
-" uses a **sidecar container** approach. This sidecar container provides "
-"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
-"seamless integration without modifying the main EJBCA container."
-msgstr ""
-"De configuratie voor EJBCA EE verschilt van de Community Editie. In "
-"plaats van de PKCS#11-module rechtstreeks in EJBCA te configureren, "
-"gebruikt de Enterprise Editie een **sidecar container** benadering. Deze "
-"zijspancontainer levert de p11ng (PKCS#11 Next Generation) verbinding met"
-" NetHSM, waardoor een naadloze integratie mogelijk is zonder de "
-"hoofdcontainer van EJBCA aan te passen."
-
-#: ../../source/components/nethsm/ejbca.rst:48
-msgid ""
-"For detailed information on configuring Hardware Security Modules (HSM) "
-"with EJBCA EE, refer to the official `EJBCA HSM documentation "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-msgstr ""
-"Raadpleeg de officiële `EJBCA HSM documentatie "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__ voor gedetailleerde informatie over het configureren van Hardware"
-" Security Modules (HSM) met EJBCA EE."
-
-#: ../../source/components/nethsm/ejbca.rst:52
-#, fuzzy
-msgid "Docker Setup"
-msgstr "Voorbeeld"
-
-#: ../../source/components/nethsm/ejbca.rst:54
-msgid ""
-"We provide a complete containerized setup for EJBCA EE integration with "
-"NetHSM. The setup includes:"
-msgstr ""
-"We bieden een complete gecontaineriseerde setup voor EJBCA EE integratie "
-"met NetHSM. De setup omvat:"
-
-#: ../../source/components/nethsm/ejbca.rst:56
-#, fuzzy
-msgid "EJBCA EE container"
-msgstr "Bouw de container."
-
-#: ../../source/components/nethsm/ejbca.rst:57
-msgid "NetHSM PKCS#11 sidecar container (p11ng)"
-msgstr "NetHSM PKCS#11 zijspancontainer (p11ng)"
-
-#: ../../source/components/nethsm/ejbca.rst:58
-msgid "NetHSM container for testing"
-msgstr "NetHSM container voor testen"
-
-#: ../../source/components/nethsm/ejbca.rst:60
-msgid ""
-"You can find the container image and configuration in the `container"
-"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
-msgstr ""
-"Je kunt het container image en de configuratie vinden in de `container"
-"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ van de nethsm-pkcs11 repository."
-
-#: ../../source/components/nethsm/ejbca.rst:64
-msgid ""
-"The directory includes a complete ``docker-compose.yml`` file that brings"
-" up all necessary components, including a NetHSM instance for testing "
-"purposes. This provides a ready-to-use environment for experimenting with"
-" EJBCA EE and NetHSM integration."
-msgstr ""
-"De map bevat een compleet ``docker-compose.yml`` bestand dat alle "
-"benodigde componenten naar boven brengt, inclusief een NetHSM instantie "
-"voor testdoeleinden. Dit biedt een kant-en-klare omgeving om te "
-"experimenteren met EJBCA EE en NetHSM integratie."
-
-#: ../../source/components/nethsm/ejbca.rst:69
-msgid ""
-"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
-"official repositories, make sure to run ``docker login`` before making "
-"use of them."
-msgstr ""
-"``Dockerfile`` en ``docker-compose.yml`` bevatten verwijzingen naar de "
-"officiële repositories, zorg ervoor dat je ``docker login`` uitvoert "
-"voordat je ze gebruikt."
-
-#: ../../source/components/nethsm/ejbca.rst:72
-msgid ""
-"Currently a limitation is that there is no way to select the *Padding "
-"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
-"PKCS#1 padding (and not PSS)."
-msgstr ""
-"Momenteel is een beperking dat er geen manier is om het *Padding Scheme* "
-"te selecteren voor een bepaald *Crypto Token*. Daarom zal RSA altijd "
-"PKCS#1 padding gebruiken (en niet PSS)."
 
 #: ../../source/components/nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -4902,6 +5539,14 @@ msgstr "Prestatieverbeteringen"
 #, fuzzy
 msgid "Remote attestation"
 msgstr "Attestatie op afstand en cloudservice"
+
+#: ../../source/components/nethsm/faq.rst:44
+msgid ""
+"If the software supports `PKCS#11 or can talk to a REST API "
+"<integration.html>`__ the answer is most likely yes. There is also "
+"already a list of `compatible and tested software "
+"<compatible/index.html>`__."
+msgstr ""
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -5236,17 +5881,17 @@ msgstr "Integratie"
 
 #: ../../source/components/nethsm/integration.rst:4
 msgid ""
-"The chapter describes processes for various tasks and aims at all user "
-"groups."
+"This chapter describes how to integrate NetHSM into applications and how "
+"to test that integration. If you are searching for software, which "
+"already integrates well with NetHSM, here is a `list of compatible "
+"software. <compatible/index.html>`__"
 msgstr ""
-"Het hoofdstuk beschrijft processen voor verschillende taken en richt zich"
-" op alle gebruikersgroepen."
 
-#: ../../source/components/nethsm/integration.rst:7
+#: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../../source/components/nethsm/integration.rst:9
+#: ../../source/components/nethsm/integration.rst:11
 msgid ""
 "NetHSM's primary interface is a modern REST-API that guarantees best "
 "performance and functionality. The API specification is available in "
@@ -5260,12 +5905,12 @@ msgstr ""
 "/nethsm-api.yaml>`_, en kan worden geïnspecteerd en getest in de `API "
 "browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
 
-#: ../../source/components/nethsm/integration.rst:14
+#: ../../source/components/nethsm/integration.rst:16
 #: ../../source/components/nethsm/pkiproxy.rst:138
 msgid "PKCS#11"
 msgstr "PKCS#11"
 
-#: ../../source/components/nethsm/integration.rst:16
+#: ../../source/components/nethsm/integration.rst:18
 msgid ""
 "The NetHSM supports the PKCS#11 standard. The required driver is "
 "available from the `repository <https://github.com/Nitrokey/nethsm-"
@@ -5279,15 +5924,15 @@ msgstr ""
 "verschillende besturingssystemen. De `PKCS#11 gids <pkcs11-setup.html>`_ "
 "beschrijft het gebruik in detail."
 
-#: ../../source/components/nethsm/integration.rst:22
+#: ../../source/components/nethsm/integration.rst:24
 msgid "Development and Testing"
 msgstr "Ontwikkeling en Testen"
 
-#: ../../source/components/nethsm/integration.rst:25
+#: ../../source/components/nethsm/integration.rst:27
 msgid "Demo Instance"
 msgstr "Demo-instantie"
 
-#: ../../source/components/nethsm/integration.rst:27
+#: ../../source/components/nethsm/integration.rst:29
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -5300,11 +5945,11 @@ msgstr ""
 "\"admin\", wachtwoord \"adminadmin\", ontgrendelingswachtwoord "
 "\"unlockunlock\"."
 
-#: ../../source/components/nethsm/integration.rst:31
+#: ../../source/components/nethsm/integration.rst:33
 msgid "Container Image"
 msgstr "Containerafbeelding"
 
-#: ../../source/components/nethsm/integration.rst:33
+#: ../../source/components/nethsm/integration.rst:35
 msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
@@ -5312,11 +5957,11 @@ msgstr ""
 "NetHSM `container images <container/index.html>`__ zijn beschikbaar voor "
 "testen en productie."
 
-#: ../../source/components/nethsm/integration.rst:36
+#: ../../source/components/nethsm/integration.rst:38
 msgid "Integration Into Custom Application"
 msgstr "Integratie in aangepaste toepassing"
 
-#: ../../source/components/nethsm/integration.rst:38
+#: ../../source/components/nethsm/integration.rst:40
 #, fuzzy
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
@@ -5336,17 +5981,17 @@ msgstr ""
 "alle andere programmeertalen raden we aan `OpenAPI Generator "
 "<https://github.com/OpenAPITools/openapi-generator>`_ te gebruiken."
 
-#: ../../source/components/nethsm/integration.rst:40
+#: ../../source/components/nethsm/integration.rst:42
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "De lijst van alle beschikbare talen kan als volgt worden opgevraagd."
 
-#: ../../source/components/nethsm/integration.rst:53
+#: ../../source/components/nethsm/integration.rst:55
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "De NetHSM-client kan als volgt voor uw programmeertaal worden gegenereerd."
 
-#: ../../source/components/nethsm/integration.rst:66
+#: ../../source/components/nethsm/integration.rst:68
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -5356,7 +6001,7 @@ msgstr ""
 "aangemaakt in de ``./out/`` directory. Deze map bevat ook de nodige "
 "documentatie over het gebruik ervan."
 
-#: ../../source/components/nethsm/integration.rst:70
+#: ../../source/components/nethsm/integration.rst:72
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -5371,11 +6016,11 @@ msgstr ""
 " de volume mount worden gepostfixed met ``:z``, wat resulteert in ``-v "
 "\"${PWD}/out:/out:z\"``."
 
-#: ../../source/components/nethsm/integration.rst:76
+#: ../../source/components/nethsm/integration.rst:78
 msgid "Command-line interface"
 msgstr "Opdrachtregelinterface"
 
-#: ../../source/components/nethsm/integration.rst:78
+#: ../../source/components/nethsm/integration.rst:80
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -5390,105 +6035,6 @@ msgstr ""
 "<https://pypi.org/project/pynitrokey/>`_. Met ``nethsm`` bestaat er een "
 "alternatieve applicatie van derden, die is ontwikkeld in het Rust crate "
 "`nethsm-cli <https://crates.io/crates/nethsm-cli/>`_."
-
-#: ../../source/components/nethsm/knotdns.rst:2
-msgid "Knot DNS"
-msgstr "Knoop DNS"
-
-#: ../../source/components/nethsm/knotdns.rst:4
-msgid ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
-"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
-"please install and configure the PKCS#11 module as `described here "
-"<./pkcs11-setup.html>`__."
-msgstr ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ is een open source gezaghebbende "
-"DNS-server die kan worden gebruikt voor DNSSEC. Om KnotDNS te gebruiken "
-"met de NetHSM moet de PKCS#11 module geïnstalleerd en geconfigureerd "
-"worden zoals `hier beschreven <./pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/knotdns.rst:7
-msgid "Manual Mode"
-msgstr "Handmatige modus"
-
-#: ../../source/components/nethsm/knotdns.rst:9
-msgid "In manual mode the keys have to be generated and managed manually."
-msgstr ""
-"In handmatige modus moeten de sleutels handmatig worden gegenereerd en "
-"beheerd."
-
-#: ../../source/components/nethsm/knotdns.rst:11
-msgid ""
-"Only the Operator user is needed in the PKCS#11 module configuration "
-"file. The password can be specified using the ``pin-value`` in the "
-"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
-msgstr ""
-"Alleen de Operator gebruiker is nodig in het configuratiebestand van de "
-"PKCS#11 module. Het wachtwoord kan worden opgegeven met de ``pin-value`` "
-"in de `PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in "
-"knot.conf."
-
-#: ../../source/components/nethsm/knotdns.rst:13
-msgid ""
-"Add the following lines to the KnotDNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Voeg de volgende regels toe aan het KnotDNS configuratiebestand "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:34
-msgid ""
-"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
-"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
-"needed."
-msgstr ""
-"De ``token`` waarde in de PKCS#11 URI is de ``label`` van de "
-"``p11nethsm.conf``. Pas het pad naar de ``libnethsm_pkcs11.so`` aan als "
-"dat nodig is."
-
-#: ../../source/components/nethsm/knotdns.rst:37
-msgid "To generate the keys run the following commands:"
-msgstr "Voer de volgende commando's uit om de sleutels te genereren:"
-
-#: ../../source/components/nethsm/knotdns.rst:60
-msgid "Automatic Mode"
-msgstr "Automatische modus"
-
-#: ../../source/components/nethsm/knotdns.rst:62
-msgid ""
-"In automatic mode the keys are generated by Knot DNS and stored in the "
-"NetHSM."
-msgstr ""
-"In automatische modus worden de sleutels gegenereerd door Knot DNS en "
-"opgeslagen in de NetHSM."
-
-#: ../../source/components/nethsm/knotdns.rst:64
-msgid ""
-"An Administrator and an Operator user are needed in the PKCS#11 module "
-"configuration."
-msgstr ""
-"Een Administrator en een Operator gebruiker zijn nodig in de PKCS#11 "
-"moduleconfiguratie."
-
-#: ../../source/components/nethsm/knotdns.rst:66
-msgid ""
-"Add the following lines to the Knot DNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Voeg de volgende regels toe aan het Knot DNS configuratiebestand "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:92
-msgid ""
-"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
-"module ignores the given label and always returns the hexadecimal key id "
-"as label. The policy uses very short key lifetimes and TTL's for testing "
-"purposes."
-msgstr ""
-"Het instellen van ``key-label`` op ``on`` verandert niets en de pkcs11 "
-"module negeert het gegeven label en retourneert altijd het hexadecimale "
-"sleutel id als label. Het beleid gebruikt zeer korte sleuteltijden en "
-"TTL's voor testdoeleinden."
 
 #: ../../source/components/nethsm/metrics.rst:7
 msgid "Metric"
@@ -5705,458 +6251,6 @@ msgstr "bedrijfstijd"
 #: ../../source/components/nethsm/metrics.rst:89
 msgid "Uptime in seconds."
 msgstr "Uptime in seconden."
-
-#: ../../source/components/nethsm/nginx.rst:2
-msgid "Nginx"
-msgstr "Nginx"
-
-#: ../../source/components/nethsm/nginx.rst:4
-msgid ""
-"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
-"OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"Je kunt `nginx <https://nginx.org/>`__ configureren om NetHSM te "
-"gebruiken via de OpenSSL engine die dan de PKCS#11 module van NetHSM "
-"gebruikt."
-
-#: ../../source/components/nethsm/nginx.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__."
-msgstr ""
-"Stel de OpenSSL engine in door de `OpenSSL Engine setup guide "
-"<openssl.html#engine>`__ te volgen."
-
-#: ../../source/components/nethsm/nginx.rst:15
-msgid "Providers aren't supported yet by Nginx."
-msgstr "Providers worden nog niet ondersteund door Nginx."
-
-#: ../../source/components/nethsm/nginx.rst:18
-msgid ""
-"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
-" a lot of key will make the initial loading of Nginx slow (more than a "
-"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
-"newer or to build the engine from `source "
-"<https://github.com/OpenSC/libp11>`__."
-msgstr ""
-"Het gebruik van de libp11 OpenSSL engine versie 0.4.12 of ouder en een "
-"NetHSM met veel sleutels zal het initiële laden van Nginx traag maken "
-"(meer dan een minuut voor duizend sleutels). Het wordt aanbevolen om "
-"versie 0.4.13 of nieuwer te gebruiken of om de engine te bouwen vanaf "
-"`source <https://github.com/OpenSC/libp11>`__."
-
-#: ../../source/components/nethsm/nginx.rst:21
-msgid "Nginx Configuration"
-msgstr "Nginx configuratie"
-
-#: ../../source/components/nethsm/nginx.rst:60
-msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
-msgstr ""
-"De ``ssl_certificate`` moet verwijzen naar een certificaatbestand op de "
-"schijf."
-
-#: ../../source/components/nethsm/nginx.rst:62
-msgid ""
-"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
-"the OpenSSL engine with the PKCS#11 module and select the private key "
-"with the label/ID ``webserver`` and the key type ``private``."
-msgstr ""
-"De ``ssl_certificate_key`` kan een OpenSSL configuratie zijn. Hier "
-"gebruiken we de OpenSSL engine met de PKCS#11 module en selecteren we de "
-"privésleutel met het label/ID ``webserver`` en het sleuteltype "
-"``private``."
-
-#: ../../source/components/nethsm/nginx.rst:69
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"nginx won't start."
-msgstr ""
-"Je moet het certificaat apart genereren en dan uploaden naar de NetHSM. "
-"Als het certificaat op schijf en de sleutel in de NetHSM niet "
-"overeenkomen zal nginx niet starten."
-
-#: ../../source/components/nethsm/nginx.rst:84
-msgid ""
-"To secure the password you can provide it via an `environment variable "
-"<pkcs11-setup.html#passwords>`__) or provide it in the nginx "
-"configuration:"
-msgstr ""
-"Om het wachtwoord te beveiligen kun je het opgeven via een "
-"`omgevingsvariabele <pkcs11-setup.html#passwords>`__) of het opgeven in "
-"de nginx configuratie:"
-
-#: ../../source/components/nethsm/nginx.rst:94
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Als je wilt experimenteren met het `gegeven voorbeeld "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"gebruik dan git om de `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ te clonen en voer de "
-"volgende commando's uit:"
-
-#: ../../source/components/nethsm/nginx.rst:102
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Pas de variabelen ``HOST``, ``ADMIN_ACCOUNT`` en ``ADMIN_ACCOUNT_PWD`` in"
-" ``container/nginx/generate.sh`` zodanig aan dat ``HOST`` de URL en poort"
-" van je NetHSM bevat, ``ADMIN_ACCOUNT`` de gebruikersnaam van een "
-"administratoraccount bevat en ``ADMIN_ACCOUNT_PWD`` het bijbehorende "
-"wachtwoord. Configureer verder het absolute pad van de OpenSSL PKCS11 "
-"engine in ``OPENSSL_PKCS11_ENGINE_PATH`` en het absolute pad van de "
-"NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-
-#: ../../source/components/nethsm/nginx.rst:104
-msgid ""
-"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Werk de PKCS11-configuratie bij in ``container/nginx/p11nethsm.conf`` met"
-" de URL van je NetHSMs en geldige operatorgegevens."
-
-#: ../../source/components/nethsm/nginx.rst:123
-#, fuzzy
-msgid ""
-"The NGINX test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, will warn you that "
-"the websites certificate is self-signed."
-msgstr ""
-"De NGINX testpagina zal beschikbaar zijn op `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Merk op dat je browser je hopelijk zal "
-"waarschuwen dat het certificaat van de website zelfondertekend is."
-
-#: ../../source/components/nethsm/opendnssec.rst:2
-msgid "OpenDNSSEC"
-msgstr "OpenDNSSEC"
-
-#: ../../source/components/nethsm/opendnssec.rst:4
-msgid ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
-" the security of domain names. It can directly load a PKCS#11 module and "
-"manage the keys."
-msgstr ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ is een gereedschapssuite "
-"voor het beheren van de beveiliging van domeinnamen. Het kan direct een "
-"PKCS#11 module laden en de sleutels beheren."
-
-#: ../../source/components/nethsm/opendnssec.rst:6
-#, fuzzy
-msgid ""
-"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
-"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
-" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
-" used instead."
-msgstr ""
-"Om OpenDNSSEC te installeren en in te stellen, kun je de `OpenDNSSEC "
-"Quick Start Guide "
-"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__ volgen."
-" Je hoeft ``SoftHSM`` niet te installeren, in plaats daarvan wordt de "
-"NetHSM PKCS#11 module gebruikt."
-
-#: ../../source/components/nethsm/opendnssec.rst:8
-msgid ""
-"As OpenDNSSEC needs access to manage the keys and then use them, you will"
-" need to configure both administrator and operator account in the PKCS#11"
-" module configuration file."
-msgstr ""
-"Aangezien OpenDNSSEC toegang nodig heeft om de sleutels te beheren en ze "
-"vervolgens te gebruiken, moet u zowel de administrator als de operator "
-"account configureren in het configuratiebestand van de PKCS#11 module."
-
-#: ../../source/components/nethsm/opendnssec.rst:10
-msgid ""
-"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
-"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
-"following lines:"
-msgstr ""
-"Je kunt OpenDNSSEC configureren om de libnethsm_pkcs11.so module te laden"
-" door het ``/etc/opendnssec/conf.xml`` bestand te bewerken. Je moet de "
-"volgende regels toevoegen:"
-
-#: ../../source/components/nethsm/opendnssec.rst:35
-msgid ""
-"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
-"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
-"the label you set in the ``p11nethsm.conf`` configuration file. The "
-"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
-" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
-"a pin provided or it will refuse to start."
-msgstr ""
-"Vervang ``/root/libnethsm_pkcs11.so`` door het pad naar de "
-"libnethsm_pkcs11.so module. De ``<TokenLabel>`` moet overeenkomen met het"
-" label dat je hebt ingesteld in het ``p11nethsm.conf`` "
-"configuratiebestand. De ``<PIN>`` is de operator PIN, je kunt deze in "
-"platte tekst instellen in het ``conf.xml`` bestand of ``ods-hsmutil "
-"login`` gebruiken. OpenDNSSEC heeft een pin nodig, anders weigert het om "
-"op te starten."
-
-#: ../../source/components/nethsm/opendnssec.rst:39
-msgid ""
-"You also need to update the ``<Repository>`` fields in "
-"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
-"``SoftHSM`` :"
-msgstr ""
-"Je moet ook de velden ``<Repository>`` in ``/etc/opendnssec/kasp.xml`` "
-"bijwerken naar ``NetHSM`` in plaats van de standaard ``SoftHSM`` :"
-
-#: ../../source/components/nethsm/openssl.rst:2
-msgid "OpenSSL"
-msgstr "OpenSSL"
-
-#: ../../source/components/nethsm/openssl.rst:6
-msgid ""
-"Trying to retrieve the private key will crash OpenSSL. This is normal "
-"because private keys cannot be extracted from a NetHSM. You may want to "
-"retrieve the public key instead (see example below)."
-msgstr ""
-"Bij het ophalen van de privésleutel crasht OpenSSL. Dit is normaal omdat "
-"privésleutels niet uit een NetHSM gehaald kunnen worden. In plaats "
-"daarvan is het misschien beter om de publieke sleutel op te halen (zie "
-"onderstaand voorbeeld)."
-
-#: ../../source/components/nethsm/openssl.rst:9
-msgid "Engine"
-msgstr "Motor"
-
-#: ../../source/components/nethsm/openssl.rst:12
-msgid ""
-"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key. On version "
-"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
-"is requested. When searching a key by label or id, it is recommended to "
-"use version 0.4.13 or newer, or build `libp11 "
-"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
-" be in ``src/.libs/pkcs11.so``."
-msgstr ""
-"Bij gebruik van een engine (libp11) versie 0.4.12 of ouder, zorgt het "
-"hebben van een EdDSA-sleutel op de NetHSM ervoor dat OpenSSL geen sleutel"
-" vindt. Op versie 0.4.12 en ouder geeft de engine een lijst van alle "
-"sleutels op de NetHSM wanneer een sleutel wordt aangevraagd. Bij het "
-"zoeken naar een sleutel op label of id, wordt het aangeraden om versie "
-"0.4.13 of nieuwer te gebruiken, of `libp11 "
-"<https://github.com/OpenSC/libp11>`__ vanaf broncode te bouwen. De "
-"binaire engine staat in ``src/.libs/pkcs11.so``."
-
-#: ../../source/components/nethsm/openssl.rst:17
-msgid ""
-"The OpenSSL engine interface is the old way to implement custom backends "
-"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
-"stable way to use the NetHSM with OpenSSL."
-msgstr ""
-"De OpenSSL engine interface is de oude manier om aangepaste backends voor"
-" OpenSSL te implementeren en het is verouderd in OpenSSL 3. Dit is nog "
-"steeds de meest stabiele manier om de NetHSM met OpenSSL te gebruiken."
-
-#: ../../source/components/nethsm/openssl.rst:19
-#: ../../source/components/nethsm/openssl.rst:101
-msgid ""
-"You will need to setup the PKCS#11 module, following `these instructions "
-"<pkcs11-setup.html>`__."
-msgstr ""
-"U moet de PKCS#11 module instellen volgens `deze instructies "
-"<pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/openssl.rst:21
-msgid "Install the engine:"
-msgstr "Installeer de motor:"
-
-#: ../../source/components/nethsm/openssl.rst:24
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../../source/components/nethsm/openssl.rst:30
-#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
-msgid "Fedora"
-msgstr "Fedora"
-
-#: ../../source/components/nethsm/openssl.rst:36
-msgid "Arch Linux"
-msgstr "Arch Linux"
-
-#: ../../source/components/nethsm/openssl.rst:42
-msgid ""
-"Next you need to configure OpenSSL to use the engine. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"Vervolgens moet je OpenSSL configureren om de engine te gebruiken. Dit "
-"wordt gedaan door de volgende regels toe te voegen aan uw ``openssl.cnf``"
-" bestand:"
-
-#: ../../source/components/nethsm/openssl.rst:61
-#: ../../source/components/nethsm/openssl.rst:127
-msgid ""
-"You can specify to OpenSSL the path of the OpenSSL configuration file "
-"using the ``OPENSSL_CONF`` environment variable."
-msgstr ""
-"U kunt OpenSSL het pad van het OpenSSL-configuratiebestand geven met de "
-"``OPENSSL_CONF`` omgevingsvariabele."
-
-#: ../../source/components/nethsm/openssl.rst:64
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the engine."
-msgstr ""
-"Als het hoofdconfiguratiebestand van OpenSSL zodanig wordt aangepast dat "
-"het alleen deze regels bevat, kan dit andere programma's die OpenSSL "
-"gebruiken kapot maken. Daarom is het misschien beter om een apart "
-"instellingenbestand voor de engine te maken."
-
-#: ../../source/components/nethsm/openssl.rst:67
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
-" path to the PKCS#11 module you installed earlier."
-msgstr ""
-"Vervang ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` door het"
-" pad naar de PKCS#11 module die je eerder hebt geïnstalleerd."
-
-#: ../../source/components/nethsm/openssl.rst:69
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
-"path to the OpenSSL engine you installed. The path varies depending on "
-"your distribution. The number in ``engines-3`` corresponds to your "
-"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-msgstr ""
-"Vervang ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` door het pad"
-" naar de OpenSSL engine die je hebt geïnstalleerd. Het pad varieert "
-"afhankelijk van je distributie. Het nummer in ``engines-3`` komt overeen "
-"met je OpenSSL versie. Op Debian is het pad voor de OpenSSL 3 engine "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; voor Fedora is het "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-
-#: ../../source/components/nethsm/openssl.rst:71
-msgid ""
-"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Nu kun je sleutels gebruiken op de NetHSM door `PKCS#11 URI's "
-"<https://www.rfc-editor.org/rfc/rfc7512>`__ te gebruiken, bijvoorbeeld:"
-
-#: ../../source/components/nethsm/openssl.rst:77
-msgid "This will use the key ``webserver``."
-msgstr "Dit gebruikt de sleutel ``webserver``."
-
-#: ../../source/components/nethsm/openssl.rst:80
-msgid ""
-"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
-"get the full URI of the keys:"
-msgstr ""
-"Je kunt het ``p11tool`` commando van `GnuTLS <https://gnutls.org/>` "
-"gebruiken om de volledige URI van de sleutels te krijgen:"
-
-#: ../../source/components/nethsm/openssl.rst:87
-msgid "Example Command"
-msgstr "Voorbeeldopdracht"
-
-#: ../../source/components/nethsm/openssl.rst:89
-msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
-msgstr ""
-"De openbare sleutel van een asymmetrisch sleutelpaar op de NetHSM ophalen"
-" :"
-
-#: ../../source/components/nethsm/openssl.rst:97
-msgid "Provider"
-msgstr "Aanbieder"
-
-#: ../../source/components/nethsm/openssl.rst:99
-msgid ""
-"The OpenSSL provider interface is the new way to implement custom "
-"backends for OpenSSL. The `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
-"stage of development."
-msgstr ""
-"De OpenSSL provider interface is de nieuwe manier om aangepaste backends "
-"voor OpenSSL te implementeren. De `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ is nog in een vroeg "
-"stadium van ontwikkeling."
-
-#: ../../source/components/nethsm/openssl.rst:103
-msgid ""
-"Install the provider. For Fedora a package named ``pkcs11-provider`` "
-"exists. For other Linux distributions you will need to `build it from "
-"source "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-msgstr ""
-"Installeer de provider. Voor Fedora bestaat er een pakket met de naam "
-"``pkcs11-provider``. Voor andere Linux distributies zul je `moeten bouwen"
-" vanaf de bron "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-
-#: ../../source/components/nethsm/openssl.rst:105
-msgid ""
-"Then you need to configure OpenSSL to use the provider. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"Daarna moet je OpenSSL configureren om de provider te gebruiken. Dit doe "
-"je door de volgende regels toe te voegen aan je ``openssl.cnf`` bestand:"
-
-#: ../../source/components/nethsm/openssl.rst:122
-msgid ""
-"Set ``module`` to the path of the provider you installed and ``pkcs11"
-"-module-path`` to the path of the PKCS#11 module you installed."
-msgstr ""
-"Stel ``module`` in op het pad van de provider die je hebt geïnstalleerd "
-"en ``pkcs11-module-path`` op het pad van de PKCS#11 module die je hebt "
-"geïnstalleerd."
-
-#: ../../source/components/nethsm/openssl.rst:124
-msgid ""
-"If you want to set NetHSM as the default provider, you can add ``default "
-"= pkcs11`` to the ``provider_sect`` section."
-msgstr ""
-"Als je NetHSM als standaard provider wilt instellen, kun je ``default = "
-"pkcs11`` toevoegen aan de ``provider_sect`` sectie."
-
-#: ../../source/components/nethsm/openssl.rst:131
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the provider."
-msgstr ""
-"Als het hoofdconfiguratiebestand van OpenSSL zodanig wordt aangepast dat "
-"het alleen deze regels bevat, kan dit andere programma's die OpenSSL "
-"gebruiken kapot maken. Daarom is het misschien beter om een apart "
-"instellingenbestand voor de provider te maken."
-
-#: ../../source/components/nethsm/openssl.rst:133
-msgid ""
-"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Vervolgens kun je sleutels gebruiken op de NetHSM door `PKCS#11 URI's "
-"<https://www.rfc-editor.org/rfc/rfc7512>`__ te gebruiken, bijvoorbeeld:"
-
-#: ../../source/components/nethsm/openssl.rst:139
-msgid ""
-"If you set NetHSM as the default provider, you can omit the ``-provider "
-"pkcs11`` argument."
-msgstr ""
-"Als je NetHSM als standaard provider instelt, kun je het ``-provider "
-"pkcs11`` argument weglaten."
-
-#: ../../source/components/nethsm/openssl.rst:142
-msgid ""
-"Currently when manually setting a key type in the URI the provider will "
-"not be able to find the key. You can omit the ``;type=private`` or "
-"``;type=public`` part of the URI to make it work."
-msgstr ""
-"Als je momenteel handmatig een sleuteltype in de URI instelt, kan de "
-"provider de sleutel niet vinden. Je kunt het gedeelte ``;type=private`` "
-"of ``;type=public`` van de URI weglaten om het te laten werken."
 
 #: ../../source/components/nethsm/operation.rst:2
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:9
@@ -8149,51 +8243,6 @@ msgstr ""
 "server. Raadpleeg de `PKI Proxy documentatie "
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " voor meer informatie."
-
-#: ../../source/components/nethsm/ssh.rst:2
-#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
-#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
-#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
-msgid "SSH"
-msgstr "SSH"
-
-#: ../../source/components/nethsm/ssh.rst:4
-msgid ""
-"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
-"module path in the command line or the SSH configuration."
-msgstr ""
-"Je kunt NetHSM gebruiken voor SSH-authenticatie. Je moet het PKCS#11 "
-"modulepad doorgeven in de commandoregel of de SSH-configuratie."
-
-#: ../../source/components/nethsm/ssh.rst:7
-msgid "Command line"
-msgstr "Opdrachtregel"
-
-#: ../../source/components/nethsm/ssh.rst:12
-msgid "SSH config"
-msgstr "SSH configureren"
-
-#: ../../source/components/nethsm/ssh.rst:19
-msgid ""
-"You can also set up SSH to use the NetHSM by default. To do so, add the "
-"following lines to your ``~/.ssh/config`` file:"
-msgstr ""
-"Je kunt SSH ook instellen om standaard de NetHSM te gebruiken. Voeg "
-"hiervoor de volgende regels toe aan je ``~/.ssh/config`` bestand:"
-
-#: ../../source/components/nethsm/ssh.rst:27
-msgid "SSH will search for a key on the NetHSM that is accepted by the server."
-msgstr ""
-"SSH zoekt naar een sleutel op de NetHSM die door de server wordt "
-"geaccepteerd."
-
-#: ../../source/components/nethsm/ssh.rst:29
-msgid ""
-"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
-" following command:"
-msgstr ""
-"Gebruik het volgende commando om de sleutels van een NetHSM in een SSH "
-"``authorized_keys`` formaat op te sommen:"
 
 #: ../../source/components/nethsm/system_recovery.rst:2
 msgid "System Recovery"
@@ -37762,3 +37811,13 @@ msgstr "Markeer bijgesneden uitvoer"
 #~ " worden uitgebracht. In de tussentijd "
 #~ "is de enige optie om Poldi vanaf"
 #~ " de broncode te bouwen."
+
+#~ msgid ""
+#~ "The chapter describes processes for "
+#~ "various tasks and aims at all user"
+#~ " groups."
+#~ msgstr ""
+#~ "Het hoofdstuk beschrijft processen voor "
+#~ "verschillende taken en richt zich op "
+#~ "alle gebruikersgroepen."
+

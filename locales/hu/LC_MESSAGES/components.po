@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-20 09:32+0000\n"
+"POT-Creation-Date: 2026-05-22 08:23+0000\n"
 "PO-Revision-Date: 2026-05-20 09:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2488,218 +2487,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__ találhatók."
 
-#: ../../source/components/nethsm/apache.rst:2
-msgid "Apache"
-msgstr "Apache"
-
-#: ../../source/components/nethsm/apache.rst:4
-msgid ""
-"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
-"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"A `Apache httpd <https://httpd.apache.org/>`__ úgy konfigurálható, hogy "
-"az OpenSSL motoron keresztül használja a NetHSM-et, amely aztán a NetHSM "
-"PKCS#11 modulját használja."
-
-#: ../../source/components/nethsm/apache.rst:6
-#: ../../source/components/nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-"A tanúsítványfájlnak a lemezen kell lennie, de a privát kulcs a NetHSM-"
-"ről is használható."
-
-#: ../../source/components/nethsm/apache.rst:8
-#: ../../source/components/nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "Egy teljes példa elérhető a `címen: <#example>`__."
-
-#: ../../source/components/nethsm/apache.rst:11
-#: ../../source/components/nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "OpenSSL konfiguráció"
-
-#: ../../source/components/nethsm/apache.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
-"Apache httpd.)"
-msgstr ""
-"Állítsa be az OpenSSL motort a `OpenSSL Engine setup guide "
-"<openssl.html#engine>`__. (Az OpenSSL szolgáltatókat az Apache httpd még "
-"nem támogatja.)"
-
-#: ../../source/components/nethsm/apache.rst:16
-msgid "Httpd Configuration"
-msgstr "Httpd konfiguráció"
-
-#: ../../source/components/nethsm/apache.rst:18
-msgid "Add the following lines to your ``httpd.conf`` :"
-msgstr "Adja hozzá a következő sorokat a ``httpd.conf`` :"
-
-#: ../../source/components/nethsm/apache.rst:37
-#, fuzzy
-msgid ""
-"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
-"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
-msgstr ""
-"A ``SSLCertificateKeyFile`` egy PKCS#11 `URI <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ kell, hogy legyen, amely a NetHSM-ben lévő "
-"magánkulcsra mutat."
-
-#: ../../source/components/nethsm/apache.rst:41
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"httpd won't start."
-msgstr ""
-"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
-" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, a httpd"
-" nem fog elindulni."
-
-#: ../../source/components/nethsm/apache.rst:45
-#: ../../source/components/nethsm/nginx.rst:72
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 Konfiguráció"
-
-#: ../../source/components/nethsm/apache.rst:57
-msgid ""
-"To secure the password you can provide it via an environment variable "
-"(see `Passwords <pkcs11-setup.html#passwords>`__) or provide it in the "
-"httpd configuration:"
-msgstr ""
-"A jelszó biztonságossá tételéhez megadhatja azt egy környezeti változóval"
-" (lásd `Passwords <pkcs11-setup.html#passwords>`__), vagy megadhatja a "
-"httpd konfigurációjában:"
-
-#: ../../source/components/nethsm/apache.rst:65
-#: ../../source/components/nethsm/nginx.rst:92
-#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
-msgid "Example"
-msgstr "Példa"
-
-#: ../../source/components/nethsm/apache.rst:67
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
-" use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
-"/nethsm-pkcs11/tree/main/container/apache>`__ használd a git-et a "
-"`nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
-"klónozásához és futtasd a következő parancsokat:"
-
-#: ../../source/components/nethsm/apache.rst:70
-#: ../../source/components/nethsm/nginx.rst:97
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-"A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
-"azt."
-
-#: ../../source/components/nethsm/apache.rst:72
-#: ../../source/components/nethsm/nginx.rst:99
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started.html>`__ for more information. Besides an "
-"administrator, you are going to need an operator account."
-msgstr ""
-"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
-" információkért lásd a `getting-started guide <getting-started.html>`__. "
-"A rendszergazdán kívül szükséged lesz egy operátori fiókra is."
-
-#: ../../source/components/nethsm/apache.rst:73
-#: ../../source/components/nethsm/nginx.rst:100
-msgid ""
-"Download and install the latest version of the nethsm-pkcs11 driver "
-"`available from here <https://github.com/Nitrokey/nethsm-"
-"pkcs11/releases>`__."
-msgstr ""
-"Töltse le és telepítse a nethsm-pkcs11 illesztőprogram legújabb verzióját"
-" `innen: <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__."
-
-#: ../../source/components/nethsm/apache.rst:74
-#: ../../source/components/nethsm/nginx.rst:101
-msgid ""
-"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
-"<openssl.html>`__. You do not need to create a configuration file."
-msgstr ""
-"Telepítse az OpenSSL PKCS11 motorját a `OpenSSL kézikönyvben "
-"<openssl.html>`__ leírtak szerint. Nem kell konfigurációs fájlt "
-"létrehoznia."
-
-#: ../../source/components/nethsm/apache.rst:75
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` "
-"változókat a ``container/apache/generate.sh``-ban úgy, hogy a ``HOST`` "
-"tartalmazza a NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza "
-"a rendszergazdai fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a "
-"megfelelő jelszót. Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút "
-"elérési útvonalát a ``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 "
-"könyvtár abszolút elérési útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` "
-"alatt."
-
-#: ../../source/components/nethsm/apache.rst:76
-#: ../../source/components/nethsm/nginx.rst:103
-msgid ""
-"Create a NetHSM PKCS11 configuration file in one of the `known locations "
-"<pkcs11-setup.html#configuration>`__, e.g., "
-"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
-"account and use the same NetHSM instance specified in the generate script"
-" before."
-msgstr ""
-"Hozzon létre egy NetHSM PKCS11 konfigurációs fájlt a `ismert helyek "
-"egyikén <pkcs11-setup.html#configuration>`__, pl. "
-"``/etc/nitrokey/p11nethsm.conf``. Be kell konfigurálnia egy operátori "
-"fiókot, és ugyanazt a NetHSM-példányt kell használnia, amelyet korábban a"
-" generáló szkriptben megadott."
-
-#: ../../source/components/nethsm/apache.rst:77
-msgid ""
-"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Frissítse a PKCS11 konfigurációt a ``container/apache/p11nethsm.conf`` "
-"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő "
-"adatokkal."
-
-#: ../../source/components/nethsm/apache.rst:78
-#: ../../source/components/nethsm/nginx.rst:105
-msgid "Generate the certificate and key."
-msgstr "Generálja a tanúsítványt és a kulcsot."
-
-#: ../../source/components/nethsm/apache.rst:84
-#: ../../source/components/nethsm/nginx.rst:111
-msgid "Build the container."
-msgstr "Építse meg a konténert."
-
-#: ../../source/components/nethsm/apache.rst:90
-#: ../../source/components/nethsm/nginx.rst:117
-msgid "Run the container."
-msgstr "Futtassa a konténert."
-
-#: ../../source/components/nethsm/apache.rst:96
-msgid ""
-"The Apache test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
-"warn you that the websites certificate is self-signed."
-msgstr ""
-"Az Apache tesztoldal a `https://localhost:9443/ "
-"<https://localhost:9443/>`__ címen lesz elérhető. Vegye figyelembe, hogy "
-"a böngészője remélhetőleg figyelmeztetni fogja, hogy a weboldalak "
-"tanúsítványa saját aláírású."
-
 #: ../../source/components/nethsm/clustering.rst:2
 #, fuzzy
 msgid "Clustering"
@@ -3961,6 +3748,1046 @@ msgstr ""
 "egyszerre csak egyetlen csomóponton hajtsa végre, és olyan fürtben, ahol "
 "a csomópont elvesztése nem vezet a kvórum elvesztéséhez."
 
+#: ../../source/components/nethsm/compatible/apache.rst:2
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/components/nethsm/compatible/apache.rst:4
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"A `Apache httpd <https://httpd.apache.org/>`__ úgy konfigurálható, hogy "
+"az OpenSSL motoron keresztül használja a NetHSM-et, amely aztán a NetHSM "
+"PKCS#11 modulját használja."
+
+#: ../../source/components/nethsm/compatible/apache.rst:6
+#: ../../source/components/nethsm/compatible/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+"A tanúsítványfájlnak a lemezen kell lennie, de a privát kulcs a NetHSM-"
+"ről is használható."
+
+#: ../../source/components/nethsm/compatible/apache.rst:8
+#: ../../source/components/nethsm/compatible/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "Egy teljes példa elérhető a `címen: <#example>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:11
+#: ../../source/components/nethsm/compatible/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "OpenSSL konfiguráció"
+
+#: ../../source/components/nethsm/compatible/apache.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"Állítsa be az OpenSSL motort a `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__. (Az OpenSSL szolgáltatókat az Apache httpd még "
+"nem támogatja.)"
+
+#: ../../source/components/nethsm/compatible/apache.rst:16
+msgid "Httpd Configuration"
+msgstr "Httpd konfiguráció"
+
+#: ../../source/components/nethsm/compatible/apache.rst:18
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Adja hozzá a következő sorokat a ``httpd.conf`` :"
+
+#: ../../source/components/nethsm/compatible/apache.rst:37
+#, fuzzy
+msgid ""
+"The ``SSLCertificateFile`` must point to a certificate file on the disk. "
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+"A ``SSLCertificateKeyFile`` egy PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ kell, hogy legyen, amely a NetHSM-ben lévő "
+"magánkulcsra mutat."
+
+#: ../../source/components/nethsm/compatible/apache.rst:41
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
+" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, a httpd"
+" nem fog elindulni."
+
+#: ../../source/components/nethsm/compatible/apache.rst:45
+#: ../../source/components/nethsm/compatible/nginx.rst:72
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 Konfiguráció"
+
+#: ../../source/components/nethsm/compatible/apache.rst:57
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Passwords <../pkcs11-setup.html#passwords>`__) or provide it in the"
+" httpd configuration:"
+msgstr ""
+"A jelszó biztonságossá tételéhez megadhatja azt egy környezeti változóval"
+" (lásd `Passwords <pkcs11-setup.html#passwords>`__), vagy megadhatja a "
+"httpd konfigurációjában:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:65
+#: ../../source/components/nethsm/compatible/nginx.rst:92
+#: ../../source/components/nitrokeys/nitrokey3/firmware-update.rst:66
+msgid "Example"
+msgstr "Példa"
+
+#: ../../source/components/nethsm/compatible/apache.rst:67
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
+"/nethsm-pkcs11/tree/main/container/apache>`__ használd a git-et a "
+"`nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+"klónozásához és futtasd a következő parancsokat:"
+
+#: ../../source/components/nethsm/compatible/apache.rst:70
+#: ../../source/components/nethsm/compatible/nginx.rst:97
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+"A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
+"azt."
+
+#: ../../source/components/nethsm/compatible/apache.rst:72
+#: ../../source/components/nethsm/compatible/nginx.rst:99
+#, fuzzy
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <../getting-started.html>`__ for more information. Besides "
+"an administrator, you are going to need an operator account."
+msgstr ""
+"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
+" információkért lásd a `getting-started guide <getting-started.html>`__. "
+"A rendszergazdán kívül szükséged lesz egy operátori fiókra is."
+
+#: ../../source/components/nethsm/compatible/apache.rst:73
+#: ../../source/components/nethsm/compatible/nginx.rst:100
+msgid ""
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+msgstr ""
+"Töltse le és telepítse a nethsm-pkcs11 illesztőprogram legújabb verzióját"
+" `innen: <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__."
+
+#: ../../source/components/nethsm/compatible/apache.rst:74
+#: ../../source/components/nethsm/compatible/nginx.rst:101
+msgid ""
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
+msgstr ""
+"Telepítse az OpenSSL PKCS11 motorját a `OpenSSL kézikönyvben "
+"<openssl.html>`__ leírtak szerint. Nem kell konfigurációs fájlt "
+"létrehoznia."
+
+#: ../../source/components/nethsm/compatible/apache.rst:75
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` "
+"változókat a ``container/apache/generate.sh``-ban úgy, hogy a ``HOST`` "
+"tartalmazza a NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza "
+"a rendszergazdai fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a "
+"megfelelő jelszót. Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút "
+"elérési útvonalát a ``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 "
+"könyvtár abszolút elérési útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` "
+"alatt."
+
+#: ../../source/components/nethsm/compatible/apache.rst:76
+#: ../../source/components/nethsm/compatible/nginx.rst:103
+#, fuzzy
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<../pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+"Hozzon létre egy NetHSM PKCS11 konfigurációs fájlt a `ismert helyek "
+"egyikén <pkcs11-setup.html#configuration>`__, pl. "
+"``/etc/nitrokey/p11nethsm.conf``. Be kell konfigurálnia egy operátori "
+"fiókot, és ugyanazt a NetHSM-példányt kell használnia, amelyet korábban a"
+" generáló szkriptben megadott."
+
+#: ../../source/components/nethsm/compatible/apache.rst:77
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Frissítse a PKCS11 konfigurációt a ``container/apache/p11nethsm.conf`` "
+"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő "
+"adatokkal."
+
+#: ../../source/components/nethsm/compatible/apache.rst:78
+#: ../../source/components/nethsm/compatible/nginx.rst:105
+msgid "Generate the certificate and key."
+msgstr "Generálja a tanúsítványt és a kulcsot."
+
+#: ../../source/components/nethsm/compatible/apache.rst:84
+#: ../../source/components/nethsm/compatible/nginx.rst:111
+msgid "Build the container."
+msgstr "Építse meg a konténert."
+
+#: ../../source/components/nethsm/compatible/apache.rst:90
+#: ../../source/components/nethsm/compatible/nginx.rst:117
+msgid "Run the container."
+msgstr "Futtassa a konténert."
+
+#: ../../source/components/nethsm/compatible/apache.rst:96
+msgid ""
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
+"Az Apache tesztoldal a `https://localhost:9443/ "
+"<https://localhost:9443/>`__ címen lesz elérhető. Vegye figyelembe, hogy "
+"a böngészője remélhetőleg figyelmeztetni fogja, hogy a weboldalak "
+"tanúsítványa saját aláírású."
+
+#: ../../source/components/nethsm/compatible/cascade.rst:2
+msgid "Cascade"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/cascade.rst:4
+msgid ""
+"NetHSM can be used to secure your DNSSEC keys with Cascade. Details are "
+"documented in the `Cascade documentation "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:2
+msgid "EJBCA"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:5
+msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
+msgstr "Az EJBCA legalább NetHSM v3 és nethsm-pkcs11 v2 szükséges."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:7
+#, fuzzy
+msgid ""
+"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
+"software available in both Community (CE) and Enterprise Edition (EE)."
+msgstr ""
+"`Az EJBCA <https://www.ejbca.org/>`__ egy nyílt forráskódú PKI "
+"tanúsítványkiadó szoftver."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:10
+#, fuzzy
+msgid "EJBCA Community"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:12
+msgid ""
+"EJBCA Community Edition is an open source PKI Certificate Authority "
+"software."
+msgstr ""
+"Az EJBCA Community Edition egy nyílt forráskódú PKI Certificate Authority"
+" szoftver."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:14
+#, fuzzy
+msgid ""
+"To be able to use NetHSM with EJBCA CE you need to `setup "
+"<../pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
+msgstr ""
+"Ahhoz, hogy a NetHSM-et az EJBCA-val használhassa, először a `oldalon "
+"kell beállítania a <pkcs11-setup.html>`__ NetHSM PKCS#11 modult."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:16
+msgid ""
+"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+"Ezután konfigurálja az EJBCA-t a NetHSM PKCS#11 modul használatára a "
+"``/etc/ejbca/conf/web.properties`` fájlban található bejegyzés "
+"hozzáadásával:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:26
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr ""
+"A névben szereplő ``418`` egy index, amelynek a konfigurációs fájlban "
+"minden PKCS#11 modul esetében egyedinek kell lennie."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:28
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``NetHSM``."
+msgstr ""
+"Az EJBCA újraindítása után az EJBCA Admin GUI-ban "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml`` "
+"adhat hozzá egy új kriptotokent. A kriptotoken típusa ``PKCS#11 Crypto "
+"Token``, a kriptotoken neve pedig ``NetHSM``."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:33
+#, fuzzy
+msgid "Docker Example"
+msgstr "Példa"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:35
+#, fuzzy
+msgid ""
+"We provide an example setup using docker for testing. If you want to "
+"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
+" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
+" described in the file `container/ejbca/README.md "
+"<https://github.com/Nitrokey/nethsm-"
+"pkcs11/blob/main/container/ejbca/README.md>`__."
+msgstr ""
+"Ha kísérletezni akarsz az adott példával, akkor a git segítségével "
+"klónozd a `nethsm-pkcs11 tárolót <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__ és futtasd a következő parancsokat:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:39
+#, fuzzy
+msgid "EJBCA Enterprise"
+msgstr "EJBCA"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:41
+msgid ""
+"EJBCA Enterprise Edition provides advanced features and enterprise "
+"support."
+msgstr ""
+"Az EJBCA Enterprise Edition fejlett funkciókat és vállalati támogatást "
+"biztosít."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:43
+msgid ""
+"Configuration for EJBCA EE differs from the Community Edition. Instead of"
+" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
+" uses a **sidecar container** approach. This sidecar container provides "
+"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
+"seamless integration without modifying the main EJBCA container."
+msgstr ""
+"Az EJBCA EE konfigurációja eltér a közösségi kiadástól. Ahelyett, hogy a "
+"PKCS#11 modult közvetlenül az EJBCA-ban konfigurálná, az Enterprise "
+"Edition a **oldalkocsis konténer** megközelítést használja. Ez az "
+"oldalkocsis konténer biztosítja a p11ng (PKCS#11 Next Generation) "
+"kapcsolatot a NetHSM-mel, lehetővé téve a zökkenőmentes integrációt a fő "
+"EJBCA konténer módosítása nélkül."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:48
+msgid ""
+"For detailed information on configuring Hardware Security Modules (HSM) "
+"with EJBCA EE, refer to the official `EJBCA HSM documentation "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+msgstr ""
+"A hardveres biztonsági modulok (HSM) EJBCA EE-vel történő "
+"konfigurálásával kapcsolatos részletes információkat a `EJBCA HSM "
+"hivatalos dokumentációjában talál "
+"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
+"hsm>`__."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:52
+#, fuzzy
+msgid "Docker Setup"
+msgstr "Példa"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:54
+msgid ""
+"We provide a complete containerized setup for EJBCA EE integration with "
+"NetHSM. The setup includes:"
+msgstr ""
+"Az EJBCA EE és a NetHSM integrációjához teljes konténeres beállítást "
+"biztosítunk. A telepítés a következőket tartalmazza:"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:56
+#, fuzzy
+msgid "EJBCA EE container"
+msgstr "Építse meg a konténert."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:57
+msgid "NetHSM PKCS#11 sidecar container (p11ng)"
+msgstr "NetHSM PKCS#11 oldalkocsis konténer (p11ng)"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:58
+msgid "NetHSM container for testing"
+msgstr "NetHSM konténer teszteléshez"
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:60
+msgid ""
+"You can find the container image and configuration in the `container"
+"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
+msgstr ""
+"A konténerkép és a konfiguráció a `container/ejbca-ee/ könyvtárban "
+"található <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container"
+"/ejbca-ee>`__ a NetHSM-pkcs11 tárolóban."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:64
+msgid ""
+"The directory includes a complete ``docker-compose.yml`` file that brings"
+" up all necessary components, including a NetHSM instance for testing "
+"purposes. This provides a ready-to-use environment for experimenting with"
+" EJBCA EE and NetHSM integration."
+msgstr ""
+"A könyvtár tartalmaz egy teljes ``docker-compose.yml`` fájlt, amely az "
+"összes szükséges komponenst, köztük egy NetHSM példányt is felhozza "
+"tesztelési célokra. Ez egy azonnal használható környezetet biztosít az "
+"EJBCA EE és a NetHSM integrációval való kísérletezéshez."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:69
+msgid ""
+"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
+"official repositories, make sure to run ``docker login`` before making "
+"use of them."
+msgstr ""
+"``Dockerfile`` és ``docker-compose.yml`` hivatkozásokat tartalmaz a "
+"hivatalos tárolókra, győződj meg róla, hogy lefuttatod a ``docker login``"
+" mielőtt használnád őket."
+
+#: ../../source/components/nethsm/compatible/ejbca.rst:72
+msgid ""
+"Currently a limitation is that there is no way to select the *Padding "
+"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
+"PKCS#1 padding (and not PSS)."
+msgstr ""
+"Jelenleg az a korlátozás, hogy nincs mód a *Padding Scheme* "
+"kiválasztására egy adott *Crypto Token* Crypto Tokenhez. Ezért az RSA "
+"mindig a PKCS#1 kitöltést fogja használni (és nem a PSS-t)."
+
+#: ../../source/components/nethsm/compatible/index.rst:2
+#, fuzzy
+msgid "Compatible Software"
+msgstr "Fordítás forrásból"
+
+#: ../../source/components/nethsm/compatible/index.rst:4
+msgid ""
+"NetHSM can be used in conjunction with a wide range of existing software."
+" The following list includes examples of software with which integration "
+"has already been tested. However, NetHSM can be integrated into almost "
+"any software via the `API or the PKCS#11 module. <../integration.html>`__"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:2
+msgid "Knot DNS"
+msgstr "Knot DNS"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:4
+#, fuzzy
+msgid ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
+"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
+"please install and configure the PKCS#11 module as `described here "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"`Knot DNS <https://www.knot-dns.cz/>`__ egy nyílt forráskódú, hiteles "
+"DNS-kiszolgáló, amely DNSSEC-hez használható. A KnotDNS NetHSM-mel való "
+"használatához telepítse és konfigurálja a PKCS#11 modult a `itt leírtak "
+"szerint <./pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:7
+msgid "Manual Mode"
+msgstr "Kézi üzemmód"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:9
+msgid "In manual mode the keys have to be generated and managed manually."
+msgstr "Kézi üzemmódban a kulcsokat manuálisan kell létrehozni és kezelni."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:11
+msgid ""
+"Only the Operator user is needed in the PKCS#11 module configuration "
+"file. The password can be specified using the ``pin-value`` in the "
+"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
+msgstr ""
+"A PKCS#11 modul konfigurációs fájljában csak az Operator felhasználóra "
+"van szükség. A jelszó a ``pin-value`` segítségével adható meg a `PKCS#11 "
+"URI <https://www.rfc-editor.org/rfc/rfc7512>`__ a knot.conf állományban."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:13
+msgid ""
+"Add the following lines to the KnotDNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Adja hozzá a következő sorokat a KnotDNS konfigurációs fájlhoz "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:34
+msgid ""
+"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
+"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
+"needed."
+msgstr ""
+"A ``token`` érték a PKCS#11 URI-ban a ``label`` a ``p11nethsm.conf`` "
+"értékéből származik. A ``libnethsm_pkcs11.so`` elérési útvonalát szükség "
+"szerint állítsa be."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:37
+msgid "To generate the keys run the following commands:"
+msgstr "A kulcsok létrehozásához futtassa a következő parancsokat:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:60
+msgid "Automatic Mode"
+msgstr "Automatikus üzemmód"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:62
+msgid ""
+"In automatic mode the keys are generated by Knot DNS and stored in the "
+"NetHSM."
+msgstr ""
+"Automatikus üzemmódban a kulcsokat a Knot DNS generálja és tárolja a "
+"NetHSM-ben."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:64
+msgid ""
+"An Administrator and an Operator user are needed in the PKCS#11 module "
+"configuration."
+msgstr ""
+"A PKCS#11 modul konfigurációjában egy rendszergazda és egy operátor "
+"felhasználóra van szükség."
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:66
+msgid ""
+"Add the following lines to the Knot DNS configuration file "
+"``/etc/knot/knot.conf``:"
+msgstr ""
+"Adja hozzá a következő sorokat a Knot DNS konfigurációs fájlhoz "
+"``/etc/knot/knot.conf``:"
+
+#: ../../source/components/nethsm/compatible/knotdns.rst:92
+msgid ""
+"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
+"module ignores the given label and always returns the hexadecimal key id "
+"as label. The policy uses very short key lifetimes and TTL's for testing "
+"purposes."
+msgstr ""
+"A ``key-label`` ``on`` beállítása nem változtat semmit, és a pkcs11 modul"
+" figyelmen kívül hagyja a megadott címkét, és mindig a hexadecimális "
+"kulcs azonosítóját adja vissza címkeként. A házirend tesztelési célokból "
+"nagyon rövid kulcséletidőt és TTL-t használ."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:2
+msgid "Nginx"
+msgstr "Nginx"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:4
+msgid ""
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"A `nginx <https://nginx.org/>`__ úgy konfigurálható, hogy az OpenSSL "
+"motoron keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 "
+"modulját használja."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
+msgstr ""
+"Állítsa be az OpenSSL-motort a `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr "A szolgáltatókat az Nginx még nem támogatja."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+"A libp11 OpenSSL motor 0.4.12-es vagy régebbi verziójának és egy sok "
+"kulcsot tartalmazó NetHSM-nek a használata lassúvá teszi az Nginx kezdeti"
+" betöltését (több mint egy perc 1 ezer kulcs esetén). Ajánlott a "
+"0.4.13-as vagy újabb verzió használata, vagy a motor építése a `forrásból"
+" <https://github.com/OpenSC/libp11>`__."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:21
+msgid "Nginx Configuration"
+msgstr "Nginx konfiguráció"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:60
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr ""
+"A ``ssl_certificate`` egy lemezen található tanúsítványfájlra kell "
+"mutatnia."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:62
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+"A ``ssl_certificate_key`` lehet egy OpenSSL konfiguráció. Itt az OpenSSL "
+"motort használjuk a PKCS#11 modullal, és kiválasztjuk a privát kulcsot a "
+"``webserver`` címkével/ID-vel és a ``private`` kulcstípussal."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:69
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"nginx won't start."
+msgstr ""
+"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
+" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
+"nginx nem fog elindulni."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:84
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an `environment variable "
+"<../pkcs11-setup.html#passwords>`__) or provide it in the nginx "
+"configuration:"
+msgstr ""
+"A jelszó biztonságossá tételéhez megadhatja azt a `környezeti változóval "
+"<pkcs11-setup.html#passwords>`__), vagy megadhatja az nginx "
+"konfigurációjában:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:94
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
+"/nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
+"pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+"klónozásához és futtasd a következő parancsokat:"
+
+#: ../../source/components/nethsm/compatible/nginx.rst:102
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` "
+"változókat a ``container/nginx/generate.sh``-ban úgy, hogy a ``HOST`` "
+"tartalmazza a NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza "
+"a rendszergazdai fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a "
+"megfelelő jelszót. Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút "
+"elérési útvonalát a ``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 "
+"könyvtár abszolút elérési útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` "
+"alatt."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:104
+msgid ""
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+"Frissítse a PKCS11 konfigurációt a ``container/nginx/p11nethsm.conf`` "
+"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő "
+"adatokkal."
+
+#: ../../source/components/nethsm/compatible/nginx.rst:123
+#, fuzzy
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, will warn you that "
+"the websites certificate is self-signed."
+msgstr ""
+"Az NGINX tesztoldal a `https://localhost:9443/ "
+"<https://localhost:9443/>`__ címen lesz elérhető. Vegye figyelembe, hogy "
+"a böngészője remélhetőleg figyelmeztetni fogja, hogy a weboldalak "
+"tanúsítványa saját aláírású."
+
+#: ../../source/components/nethsm/compatible/openbao.rst:2
+#, fuzzy
+msgid "OpenBao"
+msgstr "Művelet"
+
+#: ../../source/components/nethsm/compatible/openbao.rst:4
+msgid ""
+"NetHSM can be used to auto-unseal you OpenBao. Details are documented in "
+"the `OpenBao documentation "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr "OpenDNSSEC"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ egy eszközcsomag a domain "
+"nevek biztonságának kezelésére. Közvetlenül be tud tölteni egy PKCS#11 "
+"modult és kezelni tudja a kulcsokat."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:6
+#, fuzzy
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
+" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
+" used instead."
+msgstr ""
+"Az OpenDNSSEC telepítéséhez és beállításához kövesse a `OpenDNSSEC Quick "
+"Start Guide "
+"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. Nem "
+"kell telepítenie a ``SoftHSM``, helyette a NetHSM PKCS#11 modult fogja "
+"használni."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+"Mivel az OpenDNSSEC-nek hozzáférésre van szüksége a kulcsok kezeléséhez, "
+"majd használatához, a PKCS#11 modul konfigurációs fájljában mind a "
+"rendszergazdai, mind az üzemeltetői fiókot be kell állítania."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+"A ``/etc/opendnssec/conf.xml`` fájl szerkesztésével beállíthatja, hogy az"
+" OpenDNSSEC betöltse a libnethsm_pkcs11.so modult. A következő sorokat "
+"kell hozzáadni:"
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:35
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+"A ``/root/libnethsm_pkcs11.so`` helyett a libnethsm_pkcs11.so modul "
+"elérési útvonalát kell megadni. A ``<TokenLabel>`` a ``p11nethsm.conf`` "
+"konfigurációs fájlban beállított címkével kell egyeznie. A ``<PIN>`` az "
+"operátor PIN-kódja, ezt vagy egyszerű szövegben állíthatod be a "
+"``conf.xml`` fájlban, vagy használhatod a ``ods-hsmutil login`` fájlt. Az"
+" OpenDNSSEC-nek szüksége van egy PIN-kódra, különben nem fog elindulni."
+
+#: ../../source/components/nethsm/compatible/opendnssec.rst:39
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+"A ``/etc/opendnssec/kasp.xml`` ``NetHSM`` mezőkben a ``<Repository>`` "
+"mezőt is frissítenie kell a ``SoftHSM`` helyett a ` ` mezőre:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:2
+msgid "OpenSSL"
+msgstr "OpenSSL"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:6
+msgid ""
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
+msgstr ""
+"Ha megpróbálja lekérni a privát kulcsot, az OpenSSL összeomlik. Ez "
+"normális, mivel a privát kulcsok nem nyerhetők ki a NetHSM-ből. Helyette "
+"a nyilvános kulcsot érdemes lekérdezni (lásd az alábbi példát)."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:9
+msgid "Engine"
+msgstr "Motor"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:12
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
+msgstr ""
+"Ha a motor (libp11) 0.4.12-es vagy régebbi verzióját használjuk, akkor a "
+"NetHSM-en lévő EdDSA kulcs miatt az OpenSSL nem talál semmilyen kulcsot. "
+"A 0.4.12-es és régebbi verzióknál a motor a NetHSM-en lévő összes kulcsot"
+" felsorolja, amikor kulcsot kérnek. Ha kulcsot keresünk címke vagy "
+"azonosító alapján, ajánlott a 0.4.13-as vagy újabb verziót használni, "
+"vagy a `libp11 <https://github.com/OpenSC/libp11>`__ forrásból való "
+"buildelését. A motor bináris állománya a ``src/.libs/pkcs11.so`` "
+"könyvtárban lesz."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:17
+msgid ""
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
+msgstr ""
+"Az OpenSSL motor interfész a régi módja az OpenSSL egyéni háttértárjainak"
+" megvalósítására, és az OpenSSL 3-ban elavulttá vált. Ez még mindig a "
+"legstabilabb módja a NetHSM használatának az OpenSSL-lel."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:19
+#: ../../source/components/nethsm/compatible/openssl.rst:101
+#, fuzzy
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<../pkcs11-setup.html>`__."
+msgstr ""
+"Be kell állítania a PKCS#11 modult, követve a `ezeket az utasításokat "
+"<pkcs11-setup.html>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:21
+msgid "Install the engine:"
+msgstr "Szerelje be a motort:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:24
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:30
+#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
+msgid "Fedora"
+msgstr "Fedora"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:36
+msgid "Arch Linux"
+msgstr "Arch Linux"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:42
+msgid ""
+"Next you need to configure OpenSSL to use the engine. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Ezután az OpenSSL-t úgy kell konfigurálni, hogy használja a motort. Ezt a"
+" következő sorok hozzáadásával teheti meg a ``openssl.cnf`` fájlban:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:61
+#: ../../source/components/nethsm/compatible/openssl.rst:127
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+"Az OpenSSL számára az OpenSSL konfigurációs fájl elérési útvonalát a "
+"``OPENSSL_CONF`` környezeti változóval adhatja meg."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:64
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+"Ha az OpenSSL fő konfigurációs fájlját úgy módosítják, hogy csak ezeket a"
+" sorokat tartalmazza, akkor ez megszakíthatja az OpenSSL-t használó más "
+"programokat. Ezért érdemes egy külön konfigurációs fájlt létrehozni a "
+"motor számára."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:67
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"A ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` helyett a "
+"korábban telepített PKCS#11 modul elérési útvonalát adja meg."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:69
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+"A ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` helyett a "
+"telepített OpenSSL motor elérési útvonalát kell beírni. Az útvonal a "
+"disztribúciótól függően változik. A ``engines-3`` szám az OpenSSL "
+"verziójának felel meg. Debian esetén az OpenSSL 3 motor elérési útvonala "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; Fedora esetén "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:71
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Most már használhatja a kulcsokat a NetHSM-en a `PKCS#11 URI-k "
+"használatával <https://www.rfc-editor.org/rfc/rfc7512>`__, példa:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:77
+msgid "This will use the key ``webserver``."
+msgstr "Ez a ``webserver`` kulcsot fogja használni."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:80
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+"A ``p11tool`` parancsot használhatja a `GnuTLS <https://gnutls.org/>` "
+"parancsból, hogy megkapja a kulcsok teljes URI-ját:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:87
+msgid "Example Command"
+msgstr "Példa parancs"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:89
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr "Egy aszimmetrikus kulcspár nyilvános kulcsának lekérdezése a NetHSM-en :"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:97
+msgid "Provider"
+msgstr "Szolgáltató"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:99
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+"Az OpenSSL szolgáltatói interfész az új módja az OpenSSL egyéni "
+"háttértárak megvalósításának. A `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ még a fejlesztés korai "
+"szakaszában van."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:103
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+"Telepítse a szolgáltatót. Fedora esetén létezik egy ``pkcs11-provider`` "
+"nevű csomag. Más Linux disztribúciókhoz a `forrásból kell "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:105
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Ezután konfigurálnia kell az OpenSSL-t a szolgáltató használatára. Ehhez "
+"a következő sorokat kell hozzáadni a ``openssl.cnf`` fájlhoz:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:122
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+"Állítsa be a ``module`` a telepített szolgáltató elérési útvonalát, a "
+"``pkcs11-module-path`` pedig a telepített PKCS#11 modul elérési "
+"útvonalát."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:124
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+"Ha a NetHSM-et szeretné alapértelmezett szolgáltatónak beállítani, akkor "
+"a ``default = pkcs11`` a ``provider_sect`` szakaszhoz adhatja hozzá a ` `"
+" címet."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:131
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Ha az OpenSSL fő konfigurációs fájlját úgy módosítják, hogy csak ezeket a"
+" sorokat tartalmazza, akkor ez megszakíthatja az OpenSSL-t használó más "
+"programokat. Ezért érdemes egy külön konfigurációs fájlt létrehozni a "
+"szolgáltató számára."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:133
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Ezután a kulcsokat a NetHSM-en a `PKCS#11 URI-k <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ használatával használhatja, például:"
+
+#: ../../source/components/nethsm/compatible/openssl.rst:139
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+"Ha a NetHSM-et állítja be alapértelmezett szolgáltatónak, elhagyhatja a "
+"``-provider pkcs11`` argumentumot."
+
+#: ../../source/components/nethsm/compatible/openssl.rst:142
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
+"Jelenleg, ha manuálisan állítjuk be a kulcs típusát az URI-ban, a "
+"szolgáltató nem fogja tudni megtalálni a kulcsot. A ``;type=private`` "
+"vagy a ``;type=public`` rész elhagyásával az URI-ból kihagyható, hogy "
+"működjön."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:2
+#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
+#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
+#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
+msgid "SSH"
+msgstr "SSH"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr ""
+"Az SSH-hitelesítéshez használhatja a NetHSM-et. A PKCS#11 modul elérési "
+"útvonalát a parancssorban vagy az SSH konfigurációban kell megadnia."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:7
+msgid "Command line"
+msgstr "Parancssor"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:12
+msgid "SSH config"
+msgstr "SSH konfiguráció"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+"Az SSH-t úgy is beállíthatja, hogy alapértelmezés szerint a NetHSM-et "
+"használja. Ehhez a következő sorokat kell hozzáadni a ``~/.ssh/config`` "
+"fájlhoz:"
+
+#: ../../source/components/nethsm/compatible/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr "Az SSH olyan kulcsot keres a NetHSM-en, amelyet a kiszolgáló elfogad."
+
+#: ../../source/components/nethsm/compatible/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr ""
+"A NetHSM kulcsok SSH ``authorized_keys`` formátumban történő listázásához"
+" használja a következő parancsot:"
+
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
 msgid "Container"
@@ -4398,16 +5225,16 @@ msgstr "A konténer a következőképpen hajtható végre."
 #: ../../source/components/nethsm/container/production-image.rst:107
 #: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:45
-#: ../../source/components/nethsm/integration.rst:43
-#: ../../source/components/nethsm/integration.rst:56
+#: ../../source/components/nethsm/integration.rst:45
+#: ../../source/components/nethsm/integration.rst:58
 msgid "Docker"
 msgstr "Docker"
 
 #: ../../source/components/nethsm/container/production-image.rst:112
 #: ../../source/components/nethsm/container/production-image.rst:142
 #: ../../source/components/nethsm/container/test-image.rst:50
-#: ../../source/components/nethsm/integration.rst:48
-#: ../../source/components/nethsm/integration.rst:61
+#: ../../source/components/nethsm/integration.rst:50
+#: ../../source/components/nethsm/integration.rst:63
 msgid "Podman"
 msgstr "Podman"
 
@@ -4535,203 +5362,6 @@ msgstr ""
 "hogy a kapcsolat létrehozásához a megfelelő kapcsolatbeállításokat "
 "használja. További információkért olvassa el a `NetHSM bevezetés "
 "<index.html>`__ fejezetet."
-
-#: ../../source/components/nethsm/ejbca.rst:2
-msgid "EJBCA"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:5
-msgid "EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2."
-msgstr "Az EJBCA legalább NetHSM v3 és nethsm-pkcs11 v2 szükséges."
-
-#: ../../source/components/nethsm/ejbca.rst:7
-#, fuzzy
-msgid ""
-"`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority "
-"software available in both Community (CE) and Enterprise Edition (EE)."
-msgstr ""
-"`Az EJBCA <https://www.ejbca.org/>`__ egy nyílt forráskódú PKI "
-"tanúsítványkiadó szoftver."
-
-#: ../../source/components/nethsm/ejbca.rst:10
-#, fuzzy
-msgid "EJBCA Community"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:12
-msgid ""
-"EJBCA Community Edition is an open source PKI Certificate Authority "
-"software."
-msgstr ""
-"Az EJBCA Community Edition egy nyílt forráskódú PKI Certificate Authority"
-" szoftver."
-
-#: ../../source/components/nethsm/ejbca.rst:14
-#, fuzzy
-msgid ""
-"To be able to use NetHSM with EJBCA CE you need to `setup "
-"<pkcs11-setup.html>`__ the NetHSM PKCS#11 module first."
-msgstr ""
-"Ahhoz, hogy a NetHSM-et az EJBCA-val használhassa, először a `oldalon "
-"kell beállítania a <pkcs11-setup.html>`__ NetHSM PKCS#11 modult."
-
-#: ../../source/components/nethsm/ejbca.rst:16
-msgid ""
-"Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry "
-"in the ``/etc/ejbca/conf/web.properties`` file:"
-msgstr ""
-"Ezután konfigurálja az EJBCA-t a NetHSM PKCS#11 modul használatára a "
-"``/etc/ejbca/conf/web.properties`` fájlban található bejegyzés "
-"hozzáadásával:"
-
-#: ../../source/components/nethsm/ejbca.rst:26
-msgid ""
-"The ``418`` in the name is an index that must be unique for each PKCS#11 "
-"module in the configuration file."
-msgstr ""
-"A névben szereplő ``418`` egy index, amelynek a konfigurációs fájlban "
-"minden PKCS#11 modul esetében egyedinek kell lennie."
-
-#: ../../source/components/nethsm/ejbca.rst:28
-msgid ""
-"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
-"GUI "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``NetHSM``."
-msgstr ""
-"Az EJBCA újraindítása után az EJBCA Admin GUI-ban "
-"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml`` "
-"adhat hozzá egy új kriptotokent. A kriptotoken típusa ``PKCS#11 Crypto "
-"Token``, a kriptotoken neve pedig ``NetHSM``."
-
-#: ../../source/components/nethsm/ejbca.rst:33
-#, fuzzy
-msgid "Docker Example"
-msgstr "Példa"
-
-#: ../../source/components/nethsm/ejbca.rst:35
-#, fuzzy
-msgid ""
-"We provide an example setup using docker for testing. If you want to "
-"experiment with it you can use git to clone the `nethsm-pkcs11 repository"
-" <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps"
-" described in the file `container/ejbca/README.md "
-"<https://github.com/Nitrokey/nethsm-"
-"pkcs11/blob/main/container/ejbca/README.md>`__."
-msgstr ""
-"Ha kísérletezni akarsz az adott példával, akkor a git segítségével "
-"klónozd a `nethsm-pkcs11 tárolót <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ és futtasd a következő parancsokat:"
-
-#: ../../source/components/nethsm/ejbca.rst:39
-#, fuzzy
-msgid "EJBCA Enterprise"
-msgstr "EJBCA"
-
-#: ../../source/components/nethsm/ejbca.rst:41
-msgid ""
-"EJBCA Enterprise Edition provides advanced features and enterprise "
-"support."
-msgstr ""
-"Az EJBCA Enterprise Edition fejlett funkciókat és vállalati támogatást "
-"biztosít."
-
-#: ../../source/components/nethsm/ejbca.rst:43
-msgid ""
-"Configuration for EJBCA EE differs from the Community Edition. Instead of"
-" configuring the PKCS#11 module directly in EJBCA, the Enterprise Edition"
-" uses a **sidecar container** approach. This sidecar container provides "
-"the p11ng (PKCS#11 Next Generation) connection to NetHSM, enabling "
-"seamless integration without modifying the main EJBCA container."
-msgstr ""
-"Az EJBCA EE konfigurációja eltér a közösségi kiadástól. Ahelyett, hogy a "
-"PKCS#11 modult közvetlenül az EJBCA-ban konfigurálná, az Enterprise "
-"Edition a **oldalkocsis konténer** megközelítést használja. Ez az "
-"oldalkocsis konténer biztosítja a p11ng (PKCS#11 Next Generation) "
-"kapcsolatot a NetHSM-mel, lehetővé téve a zökkenőmentes integrációt a fő "
-"EJBCA konténer módosítása nélkül."
-
-#: ../../source/components/nethsm/ejbca.rst:48
-msgid ""
-"For detailed information on configuring Hardware Security Modules (HSM) "
-"with EJBCA EE, refer to the official `EJBCA HSM documentation "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-msgstr ""
-"A hardveres biztonsági modulok (HSM) EJBCA EE-vel történő "
-"konfigurálásával kapcsolatos részletes információkat a `EJBCA HSM "
-"hivatalos dokumentációjában talál "
-"<https://docs.keyfactor.com/ejbca/latest/hardware-security-modules-"
-"hsm>`__."
-
-#: ../../source/components/nethsm/ejbca.rst:52
-#, fuzzy
-msgid "Docker Setup"
-msgstr "Példa"
-
-#: ../../source/components/nethsm/ejbca.rst:54
-msgid ""
-"We provide a complete containerized setup for EJBCA EE integration with "
-"NetHSM. The setup includes:"
-msgstr ""
-"Az EJBCA EE és a NetHSM integrációjához teljes konténeres beállítást "
-"biztosítunk. A telepítés a következőket tartalmazza:"
-
-#: ../../source/components/nethsm/ejbca.rst:56
-#, fuzzy
-msgid "EJBCA EE container"
-msgstr "Építse meg a konténert."
-
-#: ../../source/components/nethsm/ejbca.rst:57
-msgid "NetHSM PKCS#11 sidecar container (p11ng)"
-msgstr "NetHSM PKCS#11 oldalkocsis konténer (p11ng)"
-
-#: ../../source/components/nethsm/ejbca.rst:58
-msgid "NetHSM container for testing"
-msgstr "NetHSM konténer teszteléshez"
-
-#: ../../source/components/nethsm/ejbca.rst:60
-msgid ""
-"You can find the container image and configuration in the `container"
-"/ejbca-ee/ directory <https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/ejbca-ee>`__ of the nethsm-pkcs11 repository."
-msgstr ""
-"A konténerkép és a konfiguráció a `container/ejbca-ee/ könyvtárban "
-"található <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container"
-"/ejbca-ee>`__ a NetHSM-pkcs11 tárolóban."
-
-#: ../../source/components/nethsm/ejbca.rst:64
-msgid ""
-"The directory includes a complete ``docker-compose.yml`` file that brings"
-" up all necessary components, including a NetHSM instance for testing "
-"purposes. This provides a ready-to-use environment for experimenting with"
-" EJBCA EE and NetHSM integration."
-msgstr ""
-"A könyvtár tartalmaz egy teljes ``docker-compose.yml`` fájlt, amely az "
-"összes szükséges komponenst, köztük egy NetHSM példányt is felhozza "
-"tesztelési célokra. Ez egy azonnal használható környezetet biztosít az "
-"EJBCA EE és a NetHSM integrációval való kísérletezéshez."
-
-#: ../../source/components/nethsm/ejbca.rst:69
-msgid ""
-"``Dockerfile`` and ``docker-compose.yml`` contain references to the "
-"official repositories, make sure to run ``docker login`` before making "
-"use of them."
-msgstr ""
-"``Dockerfile`` és ``docker-compose.yml`` hivatkozásokat tartalmaz a "
-"hivatalos tárolókra, győződj meg róla, hogy lefuttatod a ``docker login``"
-" mielőtt használnád őket."
-
-#: ../../source/components/nethsm/ejbca.rst:72
-msgid ""
-"Currently a limitation is that there is no way to select the *Padding "
-"Scheme* for a particular *Crypto Token*. Therefore RSA will always use "
-"PKCS#1 padding (and not PSS)."
-msgstr ""
-"Jelenleg az a korlátozás, hogy nincs mód a *Padding Scheme* "
-"kiválasztására egy adott *Crypto Token* Crypto Tokenhez. Ezért az RSA "
-"mindig a PKCS#1 kitöltést fogja használni (és nem a PSS-t)."
 
 #: ../../source/components/nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -4870,6 +5500,14 @@ msgstr "Teljesítményjavítás"
 #, fuzzy
 msgid "Remote attestation"
 msgstr "Távoli tanúsítás és felhőszolgáltatás"
+
+#: ../../source/components/nethsm/faq.rst:44
+msgid ""
+"If the software supports `PKCS#11 or can talk to a REST API "
+"<integration.html>`__ the answer is most likely yes. There is also "
+"already a list of `compatible and tested software "
+"<compatible/index.html>`__."
+msgstr ""
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -5206,17 +5844,17 @@ msgstr "Integráció"
 
 #: ../../source/components/nethsm/integration.rst:4
 msgid ""
-"The chapter describes processes for various tasks and aims at all user "
-"groups."
+"This chapter describes how to integrate NetHSM into applications and how "
+"to test that integration. If you are searching for software, which "
+"already integrates well with NetHSM, here is a `list of compatible "
+"software. <compatible/index.html>`__"
 msgstr ""
-"A fejezet a különböző feladatokhoz szükséges folyamatokat írja le, és "
-"minden felhasználói csoportot megcéloz."
 
-#: ../../source/components/nethsm/integration.rst:7
+#: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../../source/components/nethsm/integration.rst:9
+#: ../../source/components/nethsm/integration.rst:11
 msgid ""
 "NetHSM's primary interface is a modern REST-API that guarantees best "
 "performance and functionality. The API specification is available in "
@@ -5230,12 +5868,12 @@ msgstr ""
 "api.yaml>`_, és megtekinthető és tesztelhető a `API böngészőben "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
 
-#: ../../source/components/nethsm/integration.rst:14
+#: ../../source/components/nethsm/integration.rst:16
 #: ../../source/components/nethsm/pkiproxy.rst:138
 msgid "PKCS#11"
 msgstr "PKCS#11"
 
-#: ../../source/components/nethsm/integration.rst:16
+#: ../../source/components/nethsm/integration.rst:18
 msgid ""
 "The NetHSM supports the PKCS#11 standard. The required driver is "
 "available from the `repository <https://github.com/Nitrokey/nethsm-"
@@ -5249,15 +5887,15 @@ msgstr ""
 "operációs rendszerekhez. A `PKCS#11 útmutató <pkcs11-setup.html>`_ "
 "részletesen leírja a használatot."
 
-#: ../../source/components/nethsm/integration.rst:22
+#: ../../source/components/nethsm/integration.rst:24
 msgid "Development and Testing"
 msgstr "Fejlesztés és tesztelés"
 
-#: ../../source/components/nethsm/integration.rst:25
+#: ../../source/components/nethsm/integration.rst:27
 msgid "Demo Instance"
 msgstr "Demo példány"
 
-#: ../../source/components/nethsm/integration.rst:27
+#: ../../source/components/nethsm/integration.rst:29
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -5269,11 +5907,11 @@ msgstr ""
 "(CET 6:00, 14:00, 22:00) újraindul. Felhasználó \"admin\", jelszó "
 "\"adminadmin\", feloldási jelszó \"unlockunlock\"."
 
-#: ../../source/components/nethsm/integration.rst:31
+#: ../../source/components/nethsm/integration.rst:33
 msgid "Container Image"
 msgstr "Konténer kép"
 
-#: ../../source/components/nethsm/integration.rst:33
+#: ../../source/components/nethsm/integration.rst:35
 msgid ""
 "NetHSM `container images <container/index.html>`__ are available for "
 "testing and production."
@@ -5281,11 +5919,11 @@ msgstr ""
 "A NetHSM `konténerképek <container/index.html>`__ elérhetőek tesztelésre "
 "és gyártásra."
 
-#: ../../source/components/nethsm/integration.rst:36
+#: ../../source/components/nethsm/integration.rst:38
 msgid "Integration Into Custom Application"
 msgstr "Egyedi alkalmazásba való integráció"
 
-#: ../../source/components/nethsm/integration.rst:38
+#: ../../source/components/nethsm/integration.rst:40
 #, fuzzy
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
@@ -5306,17 +5944,17 @@ msgstr ""
 "<https://github.com/OpenAPITools/openapi-generator>`_ használatát "
 "javasoljuk."
 
-#: ../../source/components/nethsm/integration.rst:40
+#: ../../source/components/nethsm/integration.rst:42
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "A rendelkezésre álló nyelvek listája a következőképpen hívható le."
 
-#: ../../source/components/nethsm/integration.rst:53
+#: ../../source/components/nethsm/integration.rst:55
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "A NetHSM kliens a következőképpen generálható a programozási nyelvhez."
 
-#: ../../source/components/nethsm/integration.rst:66
+#: ../../source/components/nethsm/integration.rst:68
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -5326,7 +5964,7 @@ msgstr ""
 "könyvtárban lesz létrehozva. Ez a mappa tartalmazza a használatához "
 "szükséges dokumentációt is."
 
-#: ../../source/components/nethsm/integration.rst:70
+#: ../../source/components/nethsm/integration.rst:72
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -5341,11 +5979,11 @@ msgstr ""
 "kötetcsatlakoztatást a ``:z`` utólagos rögzítéssel kell elvégezni, ami a "
 "``-v \"${PWD}/out:/out:z\"`` eredményezi."
 
-#: ../../source/components/nethsm/integration.rst:76
+#: ../../source/components/nethsm/integration.rst:78
 msgid "Command-line interface"
 msgstr "Parancssori interfész"
 
-#: ../../source/components/nethsm/integration.rst:78
+#: ../../source/components/nethsm/integration.rst:80
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -5361,102 +5999,6 @@ msgstr ""
 "terjesztésre. A ``nethsm`` mellett létezik egy alternatív, harmadik "
 "féltől származó alkalmazás, amelyet a `nethsm-cli "
 "<https://crates.io/crates/nethsm-cli/>`_ Rust crate-ben fejlesztettek ki."
-
-#: ../../source/components/nethsm/knotdns.rst:2
-msgid "Knot DNS"
-msgstr "Knot DNS"
-
-#: ../../source/components/nethsm/knotdns.rst:4
-msgid ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative "
-"DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM "
-"please install and configure the PKCS#11 module as `described here "
-"<./pkcs11-setup.html>`__."
-msgstr ""
-"`Knot DNS <https://www.knot-dns.cz/>`__ egy nyílt forráskódú, hiteles "
-"DNS-kiszolgáló, amely DNSSEC-hez használható. A KnotDNS NetHSM-mel való "
-"használatához telepítse és konfigurálja a PKCS#11 modult a `itt leírtak "
-"szerint <./pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/knotdns.rst:7
-msgid "Manual Mode"
-msgstr "Kézi üzemmód"
-
-#: ../../source/components/nethsm/knotdns.rst:9
-msgid "In manual mode the keys have to be generated and managed manually."
-msgstr "Kézi üzemmódban a kulcsokat manuálisan kell létrehozni és kezelni."
-
-#: ../../source/components/nethsm/knotdns.rst:11
-msgid ""
-"Only the Operator user is needed in the PKCS#11 module configuration "
-"file. The password can be specified using the ``pin-value`` in the "
-"`PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf."
-msgstr ""
-"A PKCS#11 modul konfigurációs fájljában csak az Operator felhasználóra "
-"van szükség. A jelszó a ``pin-value`` segítségével adható meg a `PKCS#11 "
-"URI <https://www.rfc-editor.org/rfc/rfc7512>`__ a knot.conf állományban."
-
-#: ../../source/components/nethsm/knotdns.rst:13
-msgid ""
-"Add the following lines to the KnotDNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Adja hozzá a következő sorokat a KnotDNS konfigurációs fájlhoz "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:34
-msgid ""
-"The ``token`` value in the PKCS#11 URI is the ``label`` from the "
-"``p11nethsm.conf``. Adjust the path to the ``libnethsm_pkcs11.so`` as "
-"needed."
-msgstr ""
-"A ``token`` érték a PKCS#11 URI-ban a ``label`` a ``p11nethsm.conf`` "
-"értékéből származik. A ``libnethsm_pkcs11.so`` elérési útvonalát szükség "
-"szerint állítsa be."
-
-#: ../../source/components/nethsm/knotdns.rst:37
-msgid "To generate the keys run the following commands:"
-msgstr "A kulcsok létrehozásához futtassa a következő parancsokat:"
-
-#: ../../source/components/nethsm/knotdns.rst:60
-msgid "Automatic Mode"
-msgstr "Automatikus üzemmód"
-
-#: ../../source/components/nethsm/knotdns.rst:62
-msgid ""
-"In automatic mode the keys are generated by Knot DNS and stored in the "
-"NetHSM."
-msgstr ""
-"Automatikus üzemmódban a kulcsokat a Knot DNS generálja és tárolja a "
-"NetHSM-ben."
-
-#: ../../source/components/nethsm/knotdns.rst:64
-msgid ""
-"An Administrator and an Operator user are needed in the PKCS#11 module "
-"configuration."
-msgstr ""
-"A PKCS#11 modul konfigurációjában egy rendszergazda és egy operátor "
-"felhasználóra van szükség."
-
-#: ../../source/components/nethsm/knotdns.rst:66
-msgid ""
-"Add the following lines to the Knot DNS configuration file "
-"``/etc/knot/knot.conf``:"
-msgstr ""
-"Adja hozzá a következő sorokat a Knot DNS konfigurációs fájlhoz "
-"``/etc/knot/knot.conf``:"
-
-#: ../../source/components/nethsm/knotdns.rst:92
-msgid ""
-"Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 "
-"module ignores the given label and always returns the hexadecimal key id "
-"as label. The policy uses very short key lifetimes and TTL's for testing "
-"purposes."
-msgstr ""
-"A ``key-label`` ``on`` beállítása nem változtat semmit, és a pkcs11 modul"
-" figyelmen kívül hagyja a megadott címkét, és mindig a hexadecimális "
-"kulcs azonosítóját adja vissza címkeként. A házirend tesztelési célokból "
-"nagyon rövid kulcséletidőt és TTL-t használ."
 
 #: ../../source/components/nethsm/metrics.rst:7
 msgid "Metric"
@@ -5673,455 +6215,6 @@ msgstr "üzemidő"
 #: ../../source/components/nethsm/metrics.rst:89
 msgid "Uptime in seconds."
 msgstr "Üzemidő másodpercekben."
-
-#: ../../source/components/nethsm/nginx.rst:2
-msgid "Nginx"
-msgstr "Nginx"
-
-#: ../../source/components/nethsm/nginx.rst:4
-msgid ""
-"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
-"OpenSSL engine which then uses NetHSM's PKCS#11 module."
-msgstr ""
-"A `nginx <https://nginx.org/>`__ úgy konfigurálható, hogy az OpenSSL "
-"motoron keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 "
-"modulját használja."
-
-#: ../../source/components/nethsm/nginx.rst:13
-msgid ""
-"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
-"<openssl.html#engine>`__."
-msgstr ""
-"Állítsa be az OpenSSL-motort a `OpenSSL Engine setup guide "
-"<openssl.html#engine>`__."
-
-#: ../../source/components/nethsm/nginx.rst:15
-msgid "Providers aren't supported yet by Nginx."
-msgstr "A szolgáltatókat az Nginx még nem támogatja."
-
-#: ../../source/components/nethsm/nginx.rst:18
-msgid ""
-"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
-" a lot of key will make the initial loading of Nginx slow (more than a "
-"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
-"newer or to build the engine from `source "
-"<https://github.com/OpenSC/libp11>`__."
-msgstr ""
-"A libp11 OpenSSL motor 0.4.12-es vagy régebbi verziójának és egy sok "
-"kulcsot tartalmazó NetHSM-nek a használata lassúvá teszi az Nginx kezdeti"
-" betöltését (több mint egy perc 1 ezer kulcs esetén). Ajánlott a "
-"0.4.13-as vagy újabb verzió használata, vagy a motor építése a `forrásból"
-" <https://github.com/OpenSC/libp11>`__."
-
-#: ../../source/components/nethsm/nginx.rst:21
-msgid "Nginx Configuration"
-msgstr "Nginx konfiguráció"
-
-#: ../../source/components/nethsm/nginx.rst:60
-msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
-msgstr ""
-"A ``ssl_certificate`` egy lemezen található tanúsítványfájlra kell "
-"mutatnia."
-
-#: ../../source/components/nethsm/nginx.rst:62
-msgid ""
-"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
-"the OpenSSL engine with the PKCS#11 module and select the private key "
-"with the label/ID ``webserver`` and the key type ``private``."
-msgstr ""
-"A ``ssl_certificate_key`` lehet egy OpenSSL konfiguráció. Itt az OpenSSL "
-"motort használjuk a PKCS#11 modullal, és kiválasztjuk a privát kulcsot a "
-"``webserver`` címkével/ID-vel és a ``private`` kulcstípussal."
-
-#: ../../source/components/nethsm/nginx.rst:69
-msgid ""
-"You must generate the certificate separately and then upload it to the "
-"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"nginx won't start."
-msgstr ""
-"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
-" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
-"nginx nem fog elindulni."
-
-#: ../../source/components/nethsm/nginx.rst:84
-msgid ""
-"To secure the password you can provide it via an `environment variable "
-"<pkcs11-setup.html#passwords>`__) or provide it in the nginx "
-"configuration:"
-msgstr ""
-"A jelszó biztonságossá tételéhez megadhatja azt a `környezeti változóval "
-"<pkcs11-setup.html#passwords>`__), vagy megadhatja az nginx "
-"konfigurációjában:"
-
-#: ../../source/components/nethsm/nginx.rst:94
-msgid ""
-"If you want to experiment with the `given example "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"use git to clone the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
-"commands:"
-msgstr ""
-"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
-"/nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
-"pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
-"klónozásához és futtasd a következő parancsokat:"
-
-#: ../../source/components/nethsm/nginx.rst:102
-msgid ""
-"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
-"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
-"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
-"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
-"corresponding password. Further configure the absolute path of the "
-"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
-"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
-msgstr ""
-"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` "
-"változókat a ``container/nginx/generate.sh``-ban úgy, hogy a ``HOST`` "
-"tartalmazza a NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza "
-"a rendszergazdai fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a "
-"megfelelő jelszót. Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút "
-"elérési útvonalát a ``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 "
-"könyvtár abszolút elérési útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` "
-"alatt."
-
-#: ../../source/components/nethsm/nginx.rst:104
-msgid ""
-"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
-"with your NetHSMs URL and valid operator credentials."
-msgstr ""
-"Frissítse a PKCS11 konfigurációt a ``container/nginx/p11nethsm.conf`` "
-"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő "
-"adatokkal."
-
-#: ../../source/components/nethsm/nginx.rst:123
-#, fuzzy
-msgid ""
-"The NGINX test page will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__. Note that your browser, will warn you that "
-"the websites certificate is self-signed."
-msgstr ""
-"Az NGINX tesztoldal a `https://localhost:9443/ "
-"<https://localhost:9443/>`__ címen lesz elérhető. Vegye figyelembe, hogy "
-"a böngészője remélhetőleg figyelmeztetni fogja, hogy a weboldalak "
-"tanúsítványa saját aláírású."
-
-#: ../../source/components/nethsm/opendnssec.rst:2
-msgid "OpenDNSSEC"
-msgstr "OpenDNSSEC"
-
-#: ../../source/components/nethsm/opendnssec.rst:4
-msgid ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
-" the security of domain names. It can directly load a PKCS#11 module and "
-"manage the keys."
-msgstr ""
-"`OpenDNSSEC <https://www.opendnssec.org/>`__ egy eszközcsomag a domain "
-"nevek biztonságának kezelésére. Közvetlenül be tud tölteni egy PKCS#11 "
-"modult és kezelni tudja a kulcsokat."
-
-#: ../../source/components/nethsm/opendnssec.rst:6
-#, fuzzy
-msgid ""
-"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
-"Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__."
-" You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be"
-" used instead."
-msgstr ""
-"Az OpenDNSSEC telepítéséhez és beállításához kövesse a `OpenDNSSEC Quick "
-"Start Guide "
-"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. Nem "
-"kell telepítenie a ``SoftHSM``, helyette a NetHSM PKCS#11 modult fogja "
-"használni."
-
-#: ../../source/components/nethsm/opendnssec.rst:8
-msgid ""
-"As OpenDNSSEC needs access to manage the keys and then use them, you will"
-" need to configure both administrator and operator account in the PKCS#11"
-" module configuration file."
-msgstr ""
-"Mivel az OpenDNSSEC-nek hozzáférésre van szüksége a kulcsok kezeléséhez, "
-"majd használatához, a PKCS#11 modul konfigurációs fájljában mind a "
-"rendszergazdai, mind az üzemeltetői fiókot be kell állítania."
-
-#: ../../source/components/nethsm/opendnssec.rst:10
-msgid ""
-"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
-"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
-"following lines:"
-msgstr ""
-"A ``/etc/opendnssec/conf.xml`` fájl szerkesztésével beállíthatja, hogy az"
-" OpenDNSSEC betöltse a libnethsm_pkcs11.so modult. A következő sorokat "
-"kell hozzáadni:"
-
-#: ../../source/components/nethsm/opendnssec.rst:35
-msgid ""
-"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
-"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
-"the label you set in the ``p11nethsm.conf`` configuration file. The "
-"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
-" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
-"a pin provided or it will refuse to start."
-msgstr ""
-"A ``/root/libnethsm_pkcs11.so`` helyett a libnethsm_pkcs11.so modul "
-"elérési útvonalát kell megadni. A ``<TokenLabel>`` a ``p11nethsm.conf`` "
-"konfigurációs fájlban beállított címkével kell egyeznie. A ``<PIN>`` az "
-"operátor PIN-kódja, ezt vagy egyszerű szövegben állíthatod be a "
-"``conf.xml`` fájlban, vagy használhatod a ``ods-hsmutil login`` fájlt. Az"
-" OpenDNSSEC-nek szüksége van egy PIN-kódra, különben nem fog elindulni."
-
-#: ../../source/components/nethsm/opendnssec.rst:39
-msgid ""
-"You also need to update the ``<Repository>`` fields in "
-"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
-"``SoftHSM`` :"
-msgstr ""
-"A ``/etc/opendnssec/kasp.xml`` ``NetHSM`` mezőkben a ``<Repository>`` "
-"mezőt is frissítenie kell a ``SoftHSM`` helyett a ` ` mezőre:"
-
-#: ../../source/components/nethsm/openssl.rst:2
-msgid "OpenSSL"
-msgstr "OpenSSL"
-
-#: ../../source/components/nethsm/openssl.rst:6
-msgid ""
-"Trying to retrieve the private key will crash OpenSSL. This is normal "
-"because private keys cannot be extracted from a NetHSM. You may want to "
-"retrieve the public key instead (see example below)."
-msgstr ""
-"Ha megpróbálja lekérni a privát kulcsot, az OpenSSL összeomlik. Ez "
-"normális, mivel a privát kulcsok nem nyerhetők ki a NetHSM-ből. Helyette "
-"a nyilvános kulcsot érdemes lekérdezni (lásd az alábbi példát)."
-
-#: ../../source/components/nethsm/openssl.rst:9
-msgid "Engine"
-msgstr "Motor"
-
-#: ../../source/components/nethsm/openssl.rst:12
-msgid ""
-"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key. On version "
-"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
-"is requested. When searching a key by label or id, it is recommended to "
-"use version 0.4.13 or newer, or build `libp11 "
-"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
-" be in ``src/.libs/pkcs11.so``."
-msgstr ""
-"Ha a motor (libp11) 0.4.12-es vagy régebbi verzióját használjuk, akkor a "
-"NetHSM-en lévő EdDSA kulcs miatt az OpenSSL nem talál semmilyen kulcsot. "
-"A 0.4.12-es és régebbi verzióknál a motor a NetHSM-en lévő összes kulcsot"
-" felsorolja, amikor kulcsot kérnek. Ha kulcsot keresünk címke vagy "
-"azonosító alapján, ajánlott a 0.4.13-as vagy újabb verziót használni, "
-"vagy a `libp11 <https://github.com/OpenSC/libp11>`__ forrásból való "
-"buildelését. A motor bináris állománya a ``src/.libs/pkcs11.so`` "
-"könyvtárban lesz."
-
-#: ../../source/components/nethsm/openssl.rst:17
-msgid ""
-"The OpenSSL engine interface is the old way to implement custom backends "
-"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
-"stable way to use the NetHSM with OpenSSL."
-msgstr ""
-"Az OpenSSL motor interfész a régi módja az OpenSSL egyéni háttértárjainak"
-" megvalósítására, és az OpenSSL 3-ban elavulttá vált. Ez még mindig a "
-"legstabilabb módja a NetHSM használatának az OpenSSL-lel."
-
-#: ../../source/components/nethsm/openssl.rst:19
-#: ../../source/components/nethsm/openssl.rst:101
-msgid ""
-"You will need to setup the PKCS#11 module, following `these instructions "
-"<pkcs11-setup.html>`__."
-msgstr ""
-"Be kell állítania a PKCS#11 modult, követve a `ezeket az utasításokat "
-"<pkcs11-setup.html>`__."
-
-#: ../../source/components/nethsm/openssl.rst:21
-msgid "Install the engine:"
-msgstr "Szerelje be a motort:"
-
-#: ../../source/components/nethsm/openssl.rst:24
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../../source/components/nethsm/openssl.rst:30
-#: ../../source/components/software/nitropy/all-platforms/installation.rst:34
-msgid "Fedora"
-msgstr "Fedora"
-
-#: ../../source/components/nethsm/openssl.rst:36
-msgid "Arch Linux"
-msgstr "Arch Linux"
-
-#: ../../source/components/nethsm/openssl.rst:42
-msgid ""
-"Next you need to configure OpenSSL to use the engine. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"Ezután az OpenSSL-t úgy kell konfigurálni, hogy használja a motort. Ezt a"
-" következő sorok hozzáadásával teheti meg a ``openssl.cnf`` fájlban:"
-
-#: ../../source/components/nethsm/openssl.rst:61
-#: ../../source/components/nethsm/openssl.rst:127
-msgid ""
-"You can specify to OpenSSL the path of the OpenSSL configuration file "
-"using the ``OPENSSL_CONF`` environment variable."
-msgstr ""
-"Az OpenSSL számára az OpenSSL konfigurációs fájl elérési útvonalát a "
-"``OPENSSL_CONF`` környezeti változóval adhatja meg."
-
-#: ../../source/components/nethsm/openssl.rst:64
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the engine."
-msgstr ""
-"Ha az OpenSSL fő konfigurációs fájlját úgy módosítják, hogy csak ezeket a"
-" sorokat tartalmazza, akkor ez megszakíthatja az OpenSSL-t használó más "
-"programokat. Ezért érdemes egy külön konfigurációs fájlt létrehozni a "
-"motor számára."
-
-#: ../../source/components/nethsm/openssl.rst:67
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
-" path to the PKCS#11 module you installed earlier."
-msgstr ""
-"A ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` helyett a "
-"korábban telepített PKCS#11 modul elérési útvonalát adja meg."
-
-#: ../../source/components/nethsm/openssl.rst:69
-msgid ""
-"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
-"path to the OpenSSL engine you installed. The path varies depending on "
-"your distribution. The number in ``engines-3`` corresponds to your "
-"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-msgstr ""
-"A ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` helyett a "
-"telepített OpenSSL motor elérési útvonalát kell beírni. Az útvonal a "
-"disztribúciótól függően változik. A ``engines-3`` szám az OpenSSL "
-"verziójának felel meg. Debian esetén az OpenSSL 3 motor elérési útvonala "
-"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; Fedora esetén "
-"``/usr/lib64/engines-3/libpkcs11.so``."
-
-#: ../../source/components/nethsm/openssl.rst:71
-msgid ""
-"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Most már használhatja a kulcsokat a NetHSM-en a `PKCS#11 URI-k "
-"használatával <https://www.rfc-editor.org/rfc/rfc7512>`__, példa:"
-
-#: ../../source/components/nethsm/openssl.rst:77
-msgid "This will use the key ``webserver``."
-msgstr "Ez a ``webserver`` kulcsot fogja használni."
-
-#: ../../source/components/nethsm/openssl.rst:80
-msgid ""
-"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
-"get the full URI of the keys:"
-msgstr ""
-"A ``p11tool`` parancsot használhatja a `GnuTLS <https://gnutls.org/>` "
-"parancsból, hogy megkapja a kulcsok teljes URI-ját:"
-
-#: ../../source/components/nethsm/openssl.rst:87
-msgid "Example Command"
-msgstr "Példa parancs"
-
-#: ../../source/components/nethsm/openssl.rst:89
-msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
-msgstr "Egy aszimmetrikus kulcspár nyilvános kulcsának lekérdezése a NetHSM-en :"
-
-#: ../../source/components/nethsm/openssl.rst:97
-msgid "Provider"
-msgstr "Szolgáltató"
-
-#: ../../source/components/nethsm/openssl.rst:99
-msgid ""
-"The OpenSSL provider interface is the new way to implement custom "
-"backends for OpenSSL. The `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
-"stage of development."
-msgstr ""
-"Az OpenSSL szolgáltatói interfész az új módja az OpenSSL egyéni "
-"háttértárak megvalósításának. A `pkcs11-provider backend "
-"<https://github.com/latchset/pkcs11-provider>`__ még a fejlesztés korai "
-"szakaszában van."
-
-#: ../../source/components/nethsm/openssl.rst:103
-msgid ""
-"Install the provider. For Fedora a package named ``pkcs11-provider`` "
-"exists. For other Linux distributions you will need to `build it from "
-"source "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-msgstr ""
-"Telepítse a szolgáltatót. Fedora esetén létezik egy ``pkcs11-provider`` "
-"nevű csomag. Más Linux disztribúciókhoz a `forrásból kell "
-"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
-
-#: ../../source/components/nethsm/openssl.rst:105
-msgid ""
-"Then you need to configure OpenSSL to use the provider. This is done by "
-"adding the following lines to your ``openssl.cnf`` file:"
-msgstr ""
-"Ezután konfigurálnia kell az OpenSSL-t a szolgáltató használatára. Ehhez "
-"a következő sorokat kell hozzáadni a ``openssl.cnf`` fájlhoz:"
-
-#: ../../source/components/nethsm/openssl.rst:122
-msgid ""
-"Set ``module`` to the path of the provider you installed and ``pkcs11"
-"-module-path`` to the path of the PKCS#11 module you installed."
-msgstr ""
-"Állítsa be a ``module`` a telepített szolgáltató elérési útvonalát, a "
-"``pkcs11-module-path`` pedig a telepített PKCS#11 modul elérési "
-"útvonalát."
-
-#: ../../source/components/nethsm/openssl.rst:124
-msgid ""
-"If you want to set NetHSM as the default provider, you can add ``default "
-"= pkcs11`` to the ``provider_sect`` section."
-msgstr ""
-"Ha a NetHSM-et szeretné alapértelmezett szolgáltatónak beállítani, akkor "
-"a ``default = pkcs11`` a ``provider_sect`` szakaszhoz adhatja hozzá a ` `"
-" címet."
-
-#: ../../source/components/nethsm/openssl.rst:131
-msgid ""
-"If the main OpenSSL configuration file is modified to contain only these "
-"lines, it could break other programs using OpenSSL. Thus, you may want to"
-" create a separate configuration file for the provider."
-msgstr ""
-"Ha az OpenSSL fő konfigurációs fájlját úgy módosítják, hogy csak ezeket a"
-" sorokat tartalmazza, akkor ez megszakíthatja az OpenSSL-t használó más "
-"programokat. Ezért érdemes egy külön konfigurációs fájlt létrehozni a "
-"szolgáltató számára."
-
-#: ../../source/components/nethsm/openssl.rst:133
-msgid ""
-"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
-".rfc-editor.org/rfc/rfc7512>`__, example:"
-msgstr ""
-"Ezután a kulcsokat a NetHSM-en a `PKCS#11 URI-k <https://www.rfc-"
-"editor.org/rfc/rfc7512>`__ használatával használhatja, például:"
-
-#: ../../source/components/nethsm/openssl.rst:139
-msgid ""
-"If you set NetHSM as the default provider, you can omit the ``-provider "
-"pkcs11`` argument."
-msgstr ""
-"Ha a NetHSM-et állítja be alapértelmezett szolgáltatónak, elhagyhatja a "
-"``-provider pkcs11`` argumentumot."
-
-#: ../../source/components/nethsm/openssl.rst:142
-msgid ""
-"Currently when manually setting a key type in the URI the provider will "
-"not be able to find the key. You can omit the ``;type=private`` or "
-"``;type=public`` part of the URI to make it work."
-msgstr ""
-"Jelenleg, ha manuálisan állítjuk be a kulcs típusát az URI-ban, a "
-"szolgáltató nem fogja tudni megtalálni a kulcsot. A ``;type=private`` "
-"vagy a ``;type=public`` rész elhagyásával az URI-ból kihagyható, hogy "
-"működjön."
 
 #: ../../source/components/nethsm/operation.rst:2
 #: ../../source/components/nitrokeys/features/piv/access_control.rst:9
@@ -8109,50 +8202,6 @@ msgstr ""
 "kapcsolódáshoz. További információkért olvassa el a `PKI Proxy "
 "dokumentációját "
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__."
-
-#: ../../source/components/nethsm/ssh.rst:2
-#: ../../source/components/nitrokeys/features/openpgp-card/index.rst:6
-#: ../../source/components/nitrokeys/features/openpgp-card/overview.rst:52
-#: ../../source/components/nitrokeys/features/openpgp-card/ssh/index.rst:2
-msgid "SSH"
-msgstr "SSH"
-
-#: ../../source/components/nethsm/ssh.rst:4
-msgid ""
-"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
-"module path in the command line or the SSH configuration."
-msgstr ""
-"Az SSH-hitelesítéshez használhatja a NetHSM-et. A PKCS#11 modul elérési "
-"útvonalát a parancssorban vagy az SSH konfigurációban kell megadnia."
-
-#: ../../source/components/nethsm/ssh.rst:7
-msgid "Command line"
-msgstr "Parancssor"
-
-#: ../../source/components/nethsm/ssh.rst:12
-msgid "SSH config"
-msgstr "SSH konfiguráció"
-
-#: ../../source/components/nethsm/ssh.rst:19
-msgid ""
-"You can also set up SSH to use the NetHSM by default. To do so, add the "
-"following lines to your ``~/.ssh/config`` file:"
-msgstr ""
-"Az SSH-t úgy is beállíthatja, hogy alapértelmezés szerint a NetHSM-et "
-"használja. Ehhez a következő sorokat kell hozzáadni a ``~/.ssh/config`` "
-"fájlhoz:"
-
-#: ../../source/components/nethsm/ssh.rst:27
-msgid "SSH will search for a key on the NetHSM that is accepted by the server."
-msgstr "Az SSH olyan kulcsot keres a NetHSM-en, amelyet a kiszolgáló elfogad."
-
-#: ../../source/components/nethsm/ssh.rst:29
-msgid ""
-"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
-" following command:"
-msgstr ""
-"A NetHSM kulcsok SSH ``authorized_keys`` formátumban történő listázásához"
-" használja a következő parancsot:"
 
 #: ../../source/components/nethsm/system_recovery.rst:2
 msgid "System Recovery"
@@ -15358,7 +15407,8 @@ msgstr "ECC kulcsok"
 #: ../../source/components/nitrokeys/features/openpgp-card/desktop-login/pam.rst:62
 msgid "The use of ECC keys requires at least Poldi version `0.4.2`."
 msgstr ""
-"Az ECC kulcsok használatához legalább a Poldi \"0.4.2\" verziója szükséges."
+"Az ECC kulcsok használatához legalább a Poldi \"0.4.2\" verziója "
+"szükséges."
 
 #: ../../source/components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:2
 msgid "Login to Windows Domain Computers With MS Active Directory"
@@ -37812,3 +37862,13 @@ msgstr "Mark vágott kimenet"
 #~ "verzióban fog megjelenni. Addig is az"
 #~ " egyetlen lehetőség a Poldi forrásból "
 #~ "történő összeállítása."
+
+#~ msgid ""
+#~ "The chapter describes processes for "
+#~ "various tasks and aims at all user"
+#~ " groups."
+#~ msgstr ""
+#~ "A fejezet a különböző feladatokhoz "
+#~ "szükséges folyamatokat írja le, és "
+#~ "minden felhasználói csoportot megcéloz."
+
