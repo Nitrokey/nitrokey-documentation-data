@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-22 08:23+0000\n"
+"POT-Creation-Date: 2026-05-26 13:13+0000\n"
 "PO-Revision-Date: 2026-05-22 08:29+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2188,6 +2187,7 @@ msgstr ""
 "UserID-passphrase>`__."
 
 #: ../../source/components/nethsm/administration.rst:1212
+#: ../../source/components/nethsm/clustering.rst:118
 msgid "Namespaces"
 msgstr "Prostori imen"
 
@@ -2613,9 +2613,10 @@ msgstr ""
 " naprej delujejo."
 
 #: ../../source/components/nethsm/clustering.rst:40
+#, fuzzy
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
-"they will stop operating (even read-only)."
+"they will stop operating (even read*only)."
 msgstr ""
 "Dve vozlišči na lokaciji B **ne** izpolnjujeta kvoruma (še vedno 3), zato"
 " bosta prenehali delovati (tudi samo za branje)."
@@ -2775,8 +2776,9 @@ msgid "Note however that a malicious node can:"
 msgstr "Vendar upoštevajte, da lahko zlonamerno vozlišče:"
 
 #: ../../source/components/nethsm/clustering.rst:77
+#, fuzzy
 msgid ""
-"write garbage as the value for any entry in the store, which will cause "
+"Write garbage as the value for any entry in the store, which will cause "
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
@@ -2785,8 +2787,9 @@ msgstr ""
 "vnosih povzroči sesutje)."
 
 #: ../../source/components/nethsm/clustering.rst:78
+#, fuzzy
 msgid ""
-"list entry names such as users, namespaces and keys, which you may "
+"List entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
 "seznam imen vnosov, kot so uporabniki, imenski prostori in ključi, ki so "
@@ -2862,30 +2865,33 @@ msgstr "Potrdilo TLS"
 
 #: ../../source/components/nethsm/clustering.rst:100
 #, fuzzy
-msgid "clock configuration"
+msgid "Clock configuration"
 msgstr "Konfiguracija"
 
 #: ../../source/components/nethsm/clustering.rst:101
+#: ../../source/components/nethsm/container/index.rst:6
 #, fuzzy
-msgid "network configuration"
+msgid "Network configuration"
 msgstr "konfiguracija omrežja"
 
 #: ../../source/components/nethsm/clustering.rst:102
 #, fuzzy
-msgid "logging configuration"
+msgid "Logging configuration"
 msgstr "Konfiguracija Nginx"
 
 #: ../../source/components/nethsm/clustering.rst:103
 #, fuzzy
-msgid "unattended boot configuration"
+msgid "Unattended boot configuration"
 msgstr "Konfiguracija Httpd"
 
 #: ../../source/components/nethsm/clustering.rst:104
-msgid "unlock salt (so each node has its own unlock passphrase)"
+#, fuzzy
+msgid "Unlock salt (so each node has its own unlock passphrase)"
 msgstr "sol za odklepanje (da ima vsako vozlišče svojo geslo za odklepanje)."
 
 #: ../../source/components/nethsm/clustering.rst:105
-msgid "locked domain key"
+#, fuzzy
+msgid "Locked domain key"
 msgstr "ključ zaklenjene domene"
 
 #: ../../source/components/nethsm/clustering.rst:107
@@ -2918,30 +2924,27 @@ msgstr "Podatki HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
-msgid "keys"
+msgid "Keys"
 msgstr "Ključni identifikatorji"
 
 #: ../../source/components/nethsm/clustering.rst:117
-#, fuzzy
-msgid "users"
+#: ../../source/components/nethsm/pkcs11-setup.rst:183
+msgid "Users"
 msgstr "Uporabniki"
 
-#: ../../source/components/nethsm/clustering.rst:118
-#, fuzzy
-msgid "namespaces"
-msgstr "Prostori imen"
-
 #: ../../source/components/nethsm/clustering.rst:122
-msgid "config/domain store version"
+#, fuzzy
+msgid "Config/domain store version"
 msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
-msgid "cluster CA (used to authenticate nodes across cluster)"
+#, fuzzy
+msgid "Cluster CA (used to authenticate nodes across cluster)"
 msgstr "CA gruče (uporablja se za avtentikacijo vozlišč v gruči)."
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
-msgid "backup passphrase and backup salt"
+msgid "Backup passphrase and backup salt"
 msgstr "Varnostno geslo lahko nastavite na naslednji način."
 
 #: ../../source/components/nethsm/clustering.rst:126
@@ -3130,11 +3133,13 @@ msgid "Adding a node to a cluster is done in two steps:"
 msgstr "Dodajanje vozlišča v gručo poteka v dveh korakih:"
 
 #: ../../source/components/nethsm/clustering.rst:194
-msgid "register the addition to the cluster (through any one of its members)"
+#, fuzzy
+msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "registracijo dodatka v gruči (prek katere koli njene članice)."
 
 #: ../../source/components/nethsm/clustering.rst:195
-msgid "tell the new node to join"
+#, fuzzy
+msgid "Tell the new node to join"
 msgstr "sporočite novemu vozlišču, naj se pridruži"
 
 #: ../../source/components/nethsm/clustering.rst:198
@@ -3910,8 +3915,8 @@ msgid ""
 "<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
 msgstr ""
 "NetHSM lahko uporabite za zaščito ključev DNSSEC s programom Cascade. "
-"Podrobnosti so dokumentirane v dokumentaciji `Cascade <https://cascade.docs."
-"nlnetlabs.nl/en/latest/nethsm.html>`_."
+"Podrobnosti so dokumentirane v dokumentaciji `Cascade "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
 
 #: ../../source/components/nethsm/compatible/ejbca.rst:2
 msgid "EJBCA"
@@ -4119,10 +4124,10 @@ msgid ""
 "has already been tested. However, NetHSM can be integrated into almost "
 "any software via the `API or the PKCS#11 module. <../integration.html>`__"
 msgstr ""
-"NetHSM se lahko uporablja v povezavi s široko paleto obstoječe programske "
-"opreme. Naslednji seznam vključuje primere programske opreme, s katero je "
-"bila integracija že preizkušena. Vendar je NetHSM mogoče vključiti v skoraj "
-"vsako programsko opremo prek vmesnika API `ali modula PKCS#11. "
+"NetHSM se lahko uporablja v povezavi s široko paleto obstoječe programske"
+" opreme. Naslednji seznam vključuje primere programske opreme, s katero "
+"je bila integracija že preizkušena. Vendar je NetHSM mogoče vključiti v "
+"skoraj vsako programsko opremo prek vmesnika API `ali modula PKCS#11. "
 "<../integration.html>`__"
 
 #: ../../source/components/nethsm/compatible/knotdns.rst:2
@@ -4359,8 +4364,8 @@ msgid ""
 "<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
 msgstr ""
 "NetHSM lahko uporabite za samodejno odpečatenje OpenBao. Podrobnosti so "
-"dokumentirane v dokumentaciji `OpenBao <https://openbao.org/docs/next/guides/"
-"unseal/pkcs11/nitrokey/>`_."
+"dokumentirane v dokumentaciji `OpenBao "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
 
 #: ../../source/components/nethsm/compatible/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -4734,11 +4739,6 @@ msgid ""
 msgstr ""
 "V primerjavi s strojno opremo NetHSM naslednje funkcije niso "
 "implementirane v programskem vmesniku REST API zabojnika:"
-
-#: ../../source/components/nethsm/container/index.rst:6
-#, fuzzy
-msgid "Network configuration"
-msgstr "konfiguracija omrežja"
 
 #: ../../source/components/nethsm/container/index.rst:7
 #: ../../source/components/nitrokeys/storage/factory-reset.rst:2
@@ -5431,9 +5431,9 @@ msgid ""
 "<compatible/index.html>`__."
 msgstr ""
 "Če programska oprema podpira `PKCS#11 ali se lahko pogovarja z vmesnikom "
-"REST API <integration.html>`__, je odgovor najverjetneje pritrdilen. Obstaja "
-"tudi že seznam `združljive in preizkušene programske opreme <compatible/index"
-".html>`__."
+"REST API <integration.html>`__, je odgovor najverjetneje pritrdilen. "
+"Obstaja tudi že seznam `združljive in preizkušene programske opreme "
+"<compatible/index.html>`__."
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -5766,10 +5766,10 @@ msgid ""
 "already integrates well with NetHSM, here is a `list of compatible "
 "software. <compatible/index.html>`__"
 msgstr ""
-"V tem poglavju je opisano, kako NetHSM integrirati v aplikacije in kako to "
-"integracijo preizkusiti. Če iščete programsko opremo, ki se že dobro "
-"povezuje z NetHSM, je tukaj `seznam združljive programske opreme. <"
-"compatible/index.html>`__"
+"V tem poglavju je opisano, kako NetHSM integrirati v aplikacije in kako "
+"to integracijo preizkusiti. Če iščete programsko opremo, ki se že dobro "
+"povezuje z NetHSM, je tukaj `seznam združljive programske opreme. "
+"<compatible/index.html>`__"
 
 #: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
@@ -7368,10 +7368,6 @@ msgstr ""
 "prekine. Da bi preprečili, da bi prišlo do počasnih prekinitev, in da bi "
 "prej odkrili, če se to zgodi, je mogoče za te povezave konfigurirati "
 "ohranitvene signale TCP."
-
-#: ../../source/components/nethsm/pkcs11-setup.rst:183
-msgid "Users"
-msgstr "Uporabniki"
 
 #: ../../source/components/nethsm/pkcs11-setup.rst:185
 msgid ""
@@ -37189,3 +37185,13 @@ msgstr "Označite obrezano Izhod"
 #~ "Poglavje opisuje postopke za različna "
 #~ "opravila in je namenjeno vsem skupinam"
 #~ " uporabnikov."
+
+#~ msgid "network configuration"
+#~ msgstr "konfiguracija omrežja"
+
+#~ msgid "users"
+#~ msgstr "Uporabniki"
+
+#~ msgid "namespaces"
+#~ msgstr "Prostori imen"
+

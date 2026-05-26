@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-22 08:23+0000\n"
+"POT-Creation-Date: 2026-05-26 13:13+0000\n"
 "PO-Revision-Date: 2026-05-22 08:29+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -2212,6 +2211,7 @@ msgstr ""
 "UserID-passphrase>`__."
 
 #: ../../source/components/nethsm/administration.rst:1212
+#: ../../source/components/nethsm/clustering.rst:118
 msgid "Namespaces"
 msgstr "Przestrzenie nazw"
 
@@ -2641,9 +2641,10 @@ msgstr ""
 "działają."
 
 #: ../../source/components/nethsm/clustering.rst:40
+#, fuzzy
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
-"they will stop operating (even read-only)."
+"they will stop operating (even read*only)."
 msgstr ""
 "2 węzły w lokalizacji B nie **** spełniają kworum (nadal 3), więc "
 "przestaną działać (nawet tylko do odczytu)."
@@ -2806,8 +2807,9 @@ msgid "Note however that a malicious node can:"
 msgstr "Należy jednak pamiętać, że złośliwy węzeł może:"
 
 #: ../../source/components/nethsm/clustering.rst:77
+#, fuzzy
 msgid ""
-"write garbage as the value for any entry in the store, which will cause "
+"Write garbage as the value for any entry in the store, which will cause "
 "nodes to fail decrypting it (which may lead to crashes for some system "
 "entries)."
 msgstr ""
@@ -2816,8 +2818,9 @@ msgstr ""
 "niektórych wpisów systemowych)."
 
 #: ../../source/components/nethsm/clustering.rst:78
+#, fuzzy
 msgid ""
-"list entry names such as users, namespaces and keys, which you may "
+"List entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr ""
 "lista nazw wpisów, takich jak użytkownicy, przestrzenie nazw i klucze, "
@@ -2894,30 +2897,32 @@ msgstr "Certyfikat TLS"
 
 #: ../../source/components/nethsm/clustering.rst:100
 #, fuzzy
-msgid "clock configuration"
+msgid "Clock configuration"
 msgstr "Konfiguracja"
 
 #: ../../source/components/nethsm/clustering.rst:101
-#, fuzzy
-msgid "network configuration"
+#: ../../source/components/nethsm/container/index.rst:6
+msgid "Network configuration"
 msgstr "Konfiguracja sieci"
 
 #: ../../source/components/nethsm/clustering.rst:102
 #, fuzzy
-msgid "logging configuration"
+msgid "Logging configuration"
 msgstr "Konfiguracja Nginx"
 
 #: ../../source/components/nethsm/clustering.rst:103
 #, fuzzy
-msgid "unattended boot configuration"
+msgid "Unattended boot configuration"
 msgstr "Konfiguracja httpd"
 
 #: ../../source/components/nethsm/clustering.rst:104
-msgid "unlock salt (so each node has its own unlock passphrase)"
+#, fuzzy
+msgid "Unlock salt (so each node has its own unlock passphrase)"
 msgstr "sól odblokowująca (aby każdy węzeł miał własne hasło odblokowujące)"
 
 #: ../../source/components/nethsm/clustering.rst:105
-msgid "locked domain key"
+#, fuzzy
+msgid "Locked domain key"
 msgstr "zablokowany klucz domeny"
 
 #: ../../source/components/nethsm/clustering.rst:107
@@ -2951,30 +2956,27 @@ msgstr "Dane HSM:"
 
 #: ../../source/components/nethsm/clustering.rst:116
 #, fuzzy
-msgid "keys"
+msgid "Keys"
 msgstr "Identyfikatory kluczy"
 
 #: ../../source/components/nethsm/clustering.rst:117
-#, fuzzy
-msgid "users"
+#: ../../source/components/nethsm/pkcs11-setup.rst:183
+msgid "Users"
 msgstr "Użytkownicy"
 
-#: ../../source/components/nethsm/clustering.rst:118
-#, fuzzy
-msgid "namespaces"
-msgstr "Przestrzenie nazw"
-
 #: ../../source/components/nethsm/clustering.rst:122
-msgid "config/domain store version"
+#, fuzzy
+msgid "Config/domain store version"
 msgstr "config/domain store version"
 
 #: ../../source/components/nethsm/clustering.rst:123
-msgid "cluster CA (used to authenticate nodes across cluster)"
+#, fuzzy
+msgid "Cluster CA (used to authenticate nodes across cluster)"
 msgstr "urząd certyfikacji klastra (używany do uwierzytelniania węzłów w klastrze)"
 
 #: ../../source/components/nethsm/clustering.rst:124
 #, fuzzy
-msgid "backup passphrase and backup salt"
+msgid "Backup passphrase and backup salt"
 msgstr "Hasło zapasowe można ustawić w następujący sposób."
 
 #: ../../source/components/nethsm/clustering.rst:126
@@ -3166,13 +3168,15 @@ msgid "Adding a node to a cluster is done in two steps:"
 msgstr "Dodanie węzła do klastra odbywa się w dwóch krokach:"
 
 #: ../../source/components/nethsm/clustering.rst:194
-msgid "register the addition to the cluster (through any one of its members)"
+#, fuzzy
+msgid "Register the addition to the cluster (through any one of its members)"
 msgstr ""
 "zarejestrować dodatek do klastra (za pośrednictwem dowolnego z jego "
 "członków)"
 
 #: ../../source/components/nethsm/clustering.rst:195
-msgid "tell the new node to join"
+#, fuzzy
+msgid "Tell the new node to join"
 msgstr "nakazuje nowemu węzłowi dołączenie"
 
 #: ../../source/components/nethsm/clustering.rst:198
@@ -3959,9 +3963,9 @@ msgid ""
 "documented in the `Cascade documentation "
 "<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
 msgstr ""
-"NetHSM może być używany do zabezpieczania kluczy DNSSEC za pomocą Cascade. "
-"Szczegóły są udokumentowane w dokumentacji `Cascade <https://cascade.docs."
-"nlnetlabs.nl/en/latest/nethsm.html>`_."
+"NetHSM może być używany do zabezpieczania kluczy DNSSEC za pomocą "
+"Cascade. Szczegóły są udokumentowane w dokumentacji `Cascade "
+"<https://cascade.docs.nlnetlabs.nl/en/latest/nethsm.html>`_."
 
 #: ../../source/components/nethsm/compatible/ejbca.rst:2
 msgid "EJBCA"
@@ -4172,10 +4176,10 @@ msgid ""
 "any software via the `API or the PKCS#11 module. <../integration.html>`__"
 msgstr ""
 "NetHSM może być używany w połączeniu z szeroką gamą istniejącego "
-"oprogramowania. Poniższa lista zawiera przykłady oprogramowania, z którym "
-"integracja została już przetestowana. NetHSM można jednak zintegrować z "
-"niemal każdym oprogramowaniem za pośrednictwem interfejsu API `lub modułu "
-"PKCS#11. <../integration.html>`__"
+"oprogramowania. Poniższa lista zawiera przykłady oprogramowania, z którym"
+" integracja została już przetestowana. NetHSM można jednak zintegrować z "
+"niemal każdym oprogramowaniem za pośrednictwem interfejsu API `lub modułu"
+" PKCS#11. <../integration.html>`__"
 
 #: ../../source/components/nethsm/compatible/knotdns.rst:2
 msgid "Knot DNS"
@@ -4413,9 +4417,9 @@ msgid ""
 "the `OpenBao documentation "
 "<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
 msgstr ""
-"NetHSM może być używany do automatycznego rozłączania OpenBao. Szczegóły są "
-"udokumentowane w dokumentacji `OpenBao <https://openbao.org/docs/next/guides/"
-"unseal/pkcs11/nitrokey/>`_."
+"NetHSM może być używany do automatycznego rozłączania OpenBao. Szczegóły "
+"są udokumentowane w dokumentacji `OpenBao "
+"<https://openbao.org/docs/next/guides/unseal/pkcs11/nitrokey/>`_."
 
 #: ../../source/components/nethsm/compatible/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -4789,10 +4793,6 @@ msgid ""
 msgstr ""
 "W porównaniu do sprzętu NetHSM następujące funkcje nie są "
 "zaimplementowane w interfejsie REST API kontenera oprogramowania:"
-
-#: ../../source/components/nethsm/container/index.rst:6
-msgid "Network configuration"
-msgstr "Konfiguracja sieci"
 
 #: ../../source/components/nethsm/container/index.rst:7
 #: ../../source/components/nitrokeys/storage/factory-reset.rst:2
@@ -5479,10 +5479,10 @@ msgid ""
 "already a list of `compatible and tested software "
 "<compatible/index.html>`__."
 msgstr ""
-"Jeśli oprogramowanie obsługuje `PKCS#11 lub może komunikować się z REST API "
-"<integration.html>`__, odpowiedź jest najprawdopodobniej twierdząca. "
-"Istnieje również lista kompatybilnego i przetestowanego oprogramowania ` <"
-"compatible/index.html>` __."
+"Jeśli oprogramowanie obsługuje `PKCS#11 lub może komunikować się z REST "
+"API <integration.html>`__, odpowiedź jest najprawdopodobniej twierdząca. "
+"Istnieje również lista kompatybilnego i przetestowanego oprogramowania ` "
+"<compatible/index.html>` __."
 
 #: ../../source/components/nethsm/getting-started.rst:2
 #: ../../source/components/nextbox/gettingstarted.rst:2
@@ -5827,9 +5827,9 @@ msgid ""
 "software. <compatible/index.html>`__"
 msgstr ""
 "W tym rozdziale opisano, jak zintegrować NetHSM z aplikacjami i jak "
-"przetestować tę integrację. Jeśli szukasz oprogramowania, które już dobrze "
-"integruje się z NetHSM, oto `lista kompatybilnego oprogramowania. <"
-"compatible/index.html>`__"
+"przetestować tę integrację. Jeśli szukasz oprogramowania, które już "
+"dobrze integruje się z NetHSM, oto `lista kompatybilnego oprogramowania. "
+"<compatible/index.html>`__"
 
 #: ../../source/components/nethsm/integration.rst:9
 msgid "REST-API"
@@ -7438,10 +7438,6 @@ msgstr ""
 "zamknięte, co doprowadzi do przekroczenia limitu czasu następnej próby "
 "połączenia. Aby zapobiec wystąpieniu powolnych timeoutów i wykryć je "
 "wcześniej, można skonfigurować dla nich keepalives TCP."
-
-#: ../../source/components/nethsm/pkcs11-setup.rst:183
-msgid "Users"
-msgstr "Użytkownicy"
 
 #: ../../source/components/nethsm/pkcs11-setup.rst:185
 msgid ""
@@ -37467,3 +37463,13 @@ msgstr "Zaznacz przycięte Wyjście"
 #~ "Rozdział opisuje procesy dla różnych "
 #~ "zadań i skierowany jest do wszystkich"
 #~ " grup użytkowników."
+
+#~ msgid "network configuration"
+#~ msgstr "Konfiguracja sieci"
+
+#~ msgid "users"
+#~ msgstr "Użytkownicy"
+
+#~ msgid "namespaces"
+#~ msgstr "Przestrzenie nazw"
+

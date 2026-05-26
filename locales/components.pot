@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 08:23+0000\n"
+"POT-Creation-Date: 2026-05-26 13:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1535,6 +1535,7 @@ msgid "Information about the `/users/{UserID}/passphrase` endpoint can be found 
 msgstr ""
 
 #: ../../source/components/nethsm/administration.rst:1212
+#: ../../source/components/nethsm/clustering.rst:118
 msgid "Namespaces"
 msgstr ""
 
@@ -1745,7 +1746,7 @@ msgid "The 3 nodes in location A are meeting the quorum (3 in this case), so the
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:40
-msgid "The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read-only)."
+msgid "The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read*only)."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:41
@@ -1813,11 +1814,11 @@ msgid "Note however that a malicious node can:"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:77
-msgid "write garbage as the value for any entry in the store, which will cause nodes to fail decrypting it (which may lead to crashes for some system entries)."
+msgid "Write garbage as the value for any entry in the store, which will cause nodes to fail decrypting it (which may lead to crashes for some system entries)."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:78
-msgid "list entry names such as users, namespaces and keys, which you may consider sensitive."
+msgid "List entry names such as users, namespaces and keys, which you may consider sensitive."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:81
@@ -1858,27 +1859,28 @@ msgid "TLS certificates"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:100
-msgid "clock configuration"
+msgid "Clock configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:101
-msgid "network configuration"
+#: ../../source/components/nethsm/container/index.rst:6
+msgid "Network configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:102
-msgid "logging configuration"
+msgid "Logging configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:103
-msgid "unattended boot configuration"
+msgid "Unattended boot configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:104
-msgid "unlock salt (so each node has its own unlock passphrase)"
+msgid "Unlock salt (so each node has its own unlock passphrase)"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:105
-msgid "locked domain key"
+msgid "Locked domain key"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:107
@@ -1898,27 +1900,24 @@ msgid "HSM data:"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:116
-msgid "keys"
+msgid "Keys"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:117
-msgid "users"
-msgstr ""
-
-#: ../../source/components/nethsm/clustering.rst:118
-msgid "namespaces"
+#: ../../source/components/nethsm/pkcs11-setup.rst:183
+msgid "Users"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:122
-msgid "config/domain store version"
+msgid "Config/domain store version"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:123
-msgid "cluster CA (used to authenticate nodes across cluster)"
+msgid "Cluster CA (used to authenticate nodes across cluster)"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:124
-msgid "backup passphrase and backup salt"
+msgid "Backup passphrase and backup salt"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:126
@@ -2014,11 +2013,11 @@ msgid "Adding a node to a cluster is done in two steps:"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:194
-msgid "register the addition to the cluster (through any one of its members)"
+msgid "Register the addition to the cluster (through any one of its members)"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:195
-msgid "tell the new node to join"
+msgid "Tell the new node to join"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:198
@@ -2796,10 +2795,6 @@ msgstr ""
 
 #: ../../source/components/nethsm/container/index.rst:4
 msgid "Compared to the NetHSM hardware the following functions are not implemented at the software container's REST API:"
-msgstr ""
-
-#: ../../source/components/nethsm/container/index.rst:6
-msgid "Network configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/container/index.rst:7
@@ -4581,10 +4576,6 @@ msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-setup.rst:178
 msgid "To improve performance, connections are kept open with the NetHSM instances to avoid the need for re-opening them. It is possible that in a network with a firewall, these idle connection could be closed, leading to the next connection attempt to timeout. To prevent slow timeouts from happening, and to detect earlier if it does, it is possible to configure TCP keepalives for these."
-msgstr ""
-
-#: ../../source/components/nethsm/pkcs11-setup.rst:183
-msgid "Users"
 msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-setup.rst:185
