@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-22 08:02+0000\n"
+"POT-Creation-Date: 2026-06-30 10:34+0000\n"
 "PO-Revision-Date: 2026-06-16 19:57+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: nl\n"
@@ -5830,6 +5830,7 @@ msgstr ""
 "`Opstartmodus <administration.html#boot-mode>`__ voor meer informatie."
 
 #: ../../source/components/nethsm/index.rst:2
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:9
 msgid "NetHSM"
 msgstr "NetHSM"
 
@@ -7751,10 +7752,13 @@ msgstr ""
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:87
 #: ../../source/components/nethsm/pkcs11-tool.rst:186
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:33
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:66
 msgid "RSA"
 msgstr "RSA"
 
 #: ../../source/components/nethsm/pkcs11-tool.rst:94
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:39
 msgid "ECDSA"
 msgstr "ECDSA"
 
@@ -7922,6 +7926,7 @@ msgstr ""
 "<https://cdn.nsoftware.com/help/PK1/app/default.htm>`__ voor meer "
 "informatie."
 
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:7
 #: ../../source/components/nethsm/pkiproxy.rst:31
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:12
 #: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:12
@@ -8266,6 +8271,573 @@ msgstr ""
 "server. Raadpleeg de `PKI Proxy documentatie "
 "<https://cdn.nsoftware.com/help/PK1/app/nsoftware.PKIProxy.htm#pg_runningpkcs11>`__"
 " voor meer informatie."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:2
+msgid "Windows Active Directory Certificate Services (ADCS) with PKI Proxy"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:4
+msgid ""
+"This document describes the configuration of Windows Active Directory "
+"Certificate Services (ADCS) with PKI Proxy and NetHSM."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:11
+#, fuzzy
+msgid "Provisioned"
+msgstr "*Provisioned*"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:12
+#, fuzzy
+msgid "Administrative access"
+msgstr "Administratieve toegang tot het webpaneel."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:14
+#, fuzzy
+msgid "PKI Proxy server"
+msgstr "PKI-proxy - server"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:16
+msgid "NetHSM PKCS#11 module installed and configured to use the NetHSM"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:18
+msgid "CA server (Windows Server)"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:20
+#, fuzzy
+msgid "ADCS role installed, but not configured"
+msgstr "ADDS-rol geïnstalleerd en geconfigureerd."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:21
+#, fuzzy
+msgid "PKI Proxy client tools installed"
+msgstr "PKI Proxy - Klant"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:22
+msgid ""
+"Client tools are not required if this server is also running the PKI "
+"Proxy server, as it includes the client tools."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:23
+#, fuzzy
+msgid "Pynitrokey installed"
+msgstr "Nitrokey is inactief"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:26
+#, fuzzy
+msgid "Root CA Key and Certificate"
+msgstr "Sleutels en certificaten importeren"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:28
+msgid ""
+"The following table lists the key algorithms and key lengths, together "
+"with the hash algorithms the Windows ADCS can use with NetHSM."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:31
+#, fuzzy
+msgid "Key Algorithm"
+msgstr "Algoritmen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:31
+#, fuzzy
+msgid "Key Length"
+msgstr "Sleuven"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:31
+#, fuzzy
+msgid "Hash Algorithm"
+msgstr "Algoritmen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:33
+#, fuzzy
+msgid "1024"
+msgstr "RSA1024"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:33
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:35
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:37
+msgid "MD2, MD4, MD5, SHA1, SHA256, SHA384, SHA512"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:35
+#, fuzzy
+msgid "2048"
+msgstr "RSA2048"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:37
+#, fuzzy
+msgid "4096"
+msgstr "RSA4096"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:39
+#, fuzzy
+msgid "P256"
+msgstr "nistp256"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:39
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:41
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:43
+msgid "SHA1, SHA256, SHA385, SHA512"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:41
+msgid "P384"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:43
+#, fuzzy
+msgid "P521"
+msgstr "secp521"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:47
+msgid ""
+"Please follow the best practices for selecting a secure key algorithm, "
+"length, and hash algorithm."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:49
+msgid ""
+"A key and certificate can be either newly generated or an existing one "
+"can be migrated. Please refer to the sub-chapters below to learn more "
+"about the approach for your specific situation."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:53
+#, fuzzy
+msgid "Generate a new Root CA Key and Certificate on Windows"
+msgstr "Maak een certificaatketenbestand aan:"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:55
+msgid ""
+"The following instructions create a new key and certificate for use in a "
+"*Root CA* in ADCS."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:58
+msgid ""
+"It is usually easier to generate a key and certificate with the ADCS "
+"configuration wizard and then follow `Migrate existing Key and "
+"Certificate <pkiproxy-windows-ca.html#migrate-existing-key-and-"
+"certificate>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:60
+msgid ""
+"In this case, a request template is used to generate a key with explicit "
+"CA extensions. The specific values need to be adjusted to your "
+"environment."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:63
+msgid ""
+"The request template needs to be saved to a file with the name "
+"``RootCA.inf`` and the content as follows."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:68
+msgid ""
+"This template will generate an RSA key with a key length of 4096 bits. "
+"You need to replace ``<CA-NAME>`` with the name of your CA."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:104
+#, fuzzy
+msgid "Generate the key and certificate from the certificate template."
+msgstr "Maak een certificaatketenbestand aan:"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:110
+msgid ""
+"The certificate has been added to the local machine certificate store. "
+"Export the certificate to a PFX file, replacing ``<THUMBPRINT>`` with the"
+" respective value from the output of the previous command."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:118
+msgid ""
+"The password value is used to encrypt the PKCS#12 archive (PFX file). You"
+" can continue with the chapter `NetHSM Configuration <pkiproxy-windows-"
+"ca.html#nethsm-configuration>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:122
+#, fuzzy
+msgid "Migrate existing Key and Certificate"
+msgstr "Importeren van bestaande sleutel en certificaat"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:124
+msgid ""
+"To migrate an existing key and certificate, they must be exported from "
+"the certificate store on the ADCS, and the resulting archive imported to "
+"the NetHSM."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:127
+msgid ""
+"Before you make changes to a production certificate authority, it's "
+"recommended to create a backup of it. Please refer to `this "
+"<https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage"
+"/component-updates/ca-backup-and-restore-windows-powershell-cmdlets>`__ "
+"page to learn more."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:130
+msgid "Open ``certlm.msc``."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:131
+msgid "Navigate to **Certificates - Local Computer → Personal → Certificates**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:132
+#, fuzzy
+msgid "Select the certificate in the list on the right."
+msgstr "Het certificaat voor de NetHSM TLS-interface instellen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:133
+msgid ""
+"In the menubar on the top, navigate to **Action → All Tasks → "
+"Export...**. This will start the *Certificate Export Wizard*."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:135
+#, fuzzy
+msgid "Confirm the introduction of the assistant with **Next**."
+msgstr "Bevestig de herstart met Enter."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:136
+msgid ""
+"Check the radio button next to **Yes, export the private key** and "
+"confirm with **Next**. If the radio button is not available, the key is "
+"marked as non-exportable. In this case, this guide is not applicable for "
+"the intended use case."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:139
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:144
+msgid "Include all certificates in the certification path if possible"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:140
+msgid ""
+"Check the radio button next to **Yes, export the private key** and "
+"confirm with **Next**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:141
+msgid ""
+"Check the radio button next to **Personal Information Exchange - PKCS #12"
+" (.PFX)**. Ensure you check the following options:"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:145
+msgid "Export all extended properties"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:146
+#, fuzzy
+msgid "Enable certificate privacy"
+msgstr "De certificeringsinstantie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:148
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:157
+#, fuzzy
+msgid "Confirm the selection with **Next**."
+msgstr "Bevestig het aanmaken van het sjabloon met **OK**."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:149
+msgid ""
+"Check the radio button next to **Password**. Enter a password in the "
+"password text fields. From the dropdown next to **Encryption**, choose "
+"**AES256-SHA256**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:154
+msgid ""
+"The encryption method *AES256-SHA256* is only supported from Windows "
+"Server 2019 and Windows 11. For usage on older versions keep the default "
+"*TripleDES-SHA1*."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:158
+#, fuzzy
+msgid "Choose a storage location and file name and confirm with **Next**."
+msgstr ""
+"Geef een reden op voor de intrekking, datum en tijd, en bevestig met "
+"**Ja**."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:161
+msgid ""
+"The exported key and certificate should be stored in a safe location, "
+"where only authorized users can access it."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:163
+#, fuzzy
+msgid "Confirm the export with **Finish**."
+msgstr "Bevestig de herstart met Enter."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:164
+msgid "Make sure the certificate is still selected in the list on the right."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:165
+msgid ""
+"In the menubar on the top, navigate to **Action → All Tasks → Delete**. "
+"Confirm the deletion of the private key and certificate with **Yes**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:168
+msgid ""
+"You can continue with the chapter `NetHSM Configuration <pkiproxy-"
+"windows-ca.html#nethsm-configuration>`__."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:171
+#, fuzzy
+msgid "NetHSM Configuration"
+msgstr "netwerkconfiguratie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:173
+msgid ""
+"The key and certificate from the previous chapter need to be imported to "
+"the NetHSM. With `nitropy <../software/nitropy/index.html>`__ we can "
+"import the PKCS#12 archive directly to the NetHSM."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:176
+msgid ""
+"Import the PKCS#12 archive as follows, while replacing ``<KEY-ID>``, "
+"``<MECHANISM>`` and ``<PKCS12-ARCHIVE>`` with the respective values."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:182
+msgid ""
+"For RSA keys, the mechanism must be ``rsa_signature_pkcs1`` and for ECDSA"
+" keys, ``ecdsa_signature``."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:184
+msgid "You can now verify that the certificate is available on the NetHSM."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:190
+msgid "The key will be listed with the given key ID from the previous command."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:193
+#, fuzzy
+msgid "PKI Proxy Server Configuration"
+msgstr "Opslagconfiguratie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:195
+msgid ""
+"On the PKI Proxy Server, you must share the just added certificate from "
+"the NetHSM. Please follow the steps in `Publish Certificates from the "
+"NetHSM <pkiproxy.html#publish-certificates-from-the-nethsm>`__ to learn "
+"more."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:199
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:228
+#, fuzzy
+msgid "Windows ADCS Configuration"
+msgstr "OpenSSL-configuratie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:202
+#, fuzzy
+msgid "PKI Proxy Client Tools Configuration"
+msgstr "Client-zijde configuratie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:204
+msgid ""
+"In the following, we make the key and certificate available in the "
+"Windows local machine certificate store."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:206
+#, fuzzy
+msgid "Open the **PKI Proxy Certificate Manager**."
+msgstr "Voorkant van de server"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:207
+#, fuzzy
+msgid "Click the **Add...** button."
+msgstr "Selecteer de knop ``SAVE``."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:208
+msgid "Fill the required fields."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:210
+msgid "Location, e.g., ``https://localhost:9266``"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:211
+#: ../../source/components/nitrokeys/features/piv/key_management.rst:20
+msgid "Authentication"
+msgstr "Authenticatie"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:212
+#, fuzzy
+msgid "User"
+msgstr "Gebruikers"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:213
+#, fuzzy
+msgid "Secret Key/Password/SPN"
+msgstr "Wachtwoord gebruiker opnieuw instellen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:214
+#, fuzzy
+msgid "Certificate Store: ``LOCALMACHINE/bs/My``"
+msgstr "CA Certificaat en ``chain.crt``"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:216
+#, fuzzy
+msgid ""
+"Confirm the configuration with the **OK** button. This will bring you "
+"back to the previous window."
+msgstr ""
+"Klik op de knop **OK** om het certificaat te publiceren. Dit brengt je "
+"terug naar het hoofdvenster van PKI Proxy."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:218
+#, fuzzy
+msgid ""
+"The list under **Certificate Management** in the **PKI Proxy Certificate "
+"Manager** should now show the just added certificate."
+msgstr ""
+"De tekstlijst onder **Certificaatbeheer** toont nu het gepubliceerde "
+"certificaat."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:220
+msgid ""
+"You can now verify that the certificate is available in the local machine"
+" certificate store."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:222
+msgid ""
+"Open the **Run** dialog, either by right clicking on the Windows **Start "
+"Menu** and choosing **Run** or pressing **Windows Key + R** on your "
+"keyboard."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:223
+msgid ""
+"In the **Run** dialog, enter ``certlm.msc`` and confirm by pressing "
+"**Enter** on your keyboard or by clicking **OK**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:224
+msgid ""
+"In the appearing certificate manager, navigate in the tree structure on "
+"the left to **Certificates - Local Computer → Personal → Certificates**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:225
+#, fuzzy
+msgid "The published certificate is now listed on the right."
+msgstr "Het certificaat voor de NetHSM TLS-interface instellen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:230
+msgid ""
+"Open the **Server Manager** from the **Start menu** or by pressing "
+"**Windows Key + R** on your keyboard and enter ``ServerManager.exe``."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:231
+msgid ""
+"In the menu bar on the top right, click on the flag icon and choose "
+"**Configure Active Directory Certificate Services on the destination "
+"server** from the post-deployment notifications. This will start the *AD "
+"CS Configuration* wizard."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:233
+#, fuzzy
+msgid "In the wizard, set the settings below according to the stage."
+msgstr ""
+"Stel de onderstaande instellingen in op de sjabloon, volgens het genoemde"
+" tabblad."
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:235
+#, fuzzy
+msgid "Role Services"
+msgstr "Referenties"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:237
+#, fuzzy
+msgid "Check the radio button next to **Certification Authority**."
+msgstr "Aanmaken van de root-certificaatautoriteit"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:238
+#, fuzzy
+msgid "Setup Type"
+msgstr "Type sleutel"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:240
+msgid ""
+"Select **Enterprise CA** or **Standalone CA** depending on your "
+"environment."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:241
+#, fuzzy
+msgid "CA Type"
+msgstr "Type"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:243
+msgid "Select **Root CA**"
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:244
+#, fuzzy
+msgid "Private Key"
+msgstr "Schrijf toetsen"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:246
+msgid ""
+"Check the radio button next to **Use existing private key**. Under this "
+"option, check the radio button next to **Select a certificate and use its"
+" associated private keys**."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:249
+#, fuzzy
+msgid "Existing Certificate"
+msgstr "Certificaat schrijven"
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:251
+msgid ""
+"In the list of **Certificates** select the certificate you want to use. "
+"Make sure the checkbox next to **Allow administrator interaction when the"
+" private key is accessed by the CA.** is not activated. This isn't "
+"necessary as the PKI Proxy KSP doesn't require any additional "
+"authentication for using the private key."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:255
+msgid ""
+"After the configuration wizard has finished, open the **Certification "
+"Authority** from the **Start menu** or by pressing **Windows Key + R** on"
+" your keyboard and entering ``certsrv.msc``. You can verify that the "
+"certificate authority service started correctly when you see a green dot "
+"with a white checkmark icon on the name of the certification authority."
+msgstr ""
+
+#: ../../source/components/nethsm/pkiproxy-windows-ca.rst:259
+msgid ""
+"The availability of the certification authority depends on the "
+"availability of the private key and certificate. If they aren't "
+"available, the certification authority service might fail to start or "
+"will stop unexpectedly. In case of an error, check the *Windows Event "
+"Log* for more information."
+msgstr ""
 
 #: ../../source/components/nethsm/system_recovery.rst:2
 msgid "System Recovery"
@@ -21929,10 +22501,6 @@ msgstr ""
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:20
 msgid "9a"
 msgstr "9a"
-
-#: ../../source/components/nitrokeys/features/piv/key_management.rst:20
-msgid "Authentication"
-msgstr "Authenticatie"
 
 #: ../../source/components/nitrokeys/features/piv/key_management.rst:20
 msgid ""
