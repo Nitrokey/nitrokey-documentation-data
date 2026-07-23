@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-22 10:10+0000\n"
+"POT-Creation-Date: 2026-07-23 12:26+0000\n"
 "PO-Revision-Date: 2026-07-16 14:12+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: zh_CN\n"
@@ -10919,6 +10919,7 @@ msgid ""
 msgstr "这些是将Nitrokey FIDO2注册为第二要素或设置Nextcloud账户无密码登录的基本步骤。"
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:2
+#: ../../source/components/nitrophone/index.rst:19
 msgid "FIDO2 on Android / NitroPhone"
 msgstr "安卓系统上的 FIDO2 / NitroPhone"
 
@@ -10932,83 +10933,57 @@ msgstr ""
 "和万能钥匙的更多信息，请查看我们的`博客文章<https://www.nitrokey.com/blog/2022/fido2-webauthn-"
 "passkeys-2022-and-2023>`_ 。"
 
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:7
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:8
 msgid ""
-"In order to use FIDO2 on GrapheneOS you need to install the Google Play "
-"services via GrapheneOS App Store."
-msgstr "要在 GrapheneOS 上使用 FIDO2，您需要通过 GrapheneOS 应用程序商店安装 Google Play 服务。"
+"In order to use passkeys being stored on a Nitrokey with your NitroPhone "
+"we recommend using the open source app `Authnkey  "
+"<https://f-droid.org/en/packages/pl.lebihan.authnkey/>`_. Alternatively "
+"you could use Google Play Services but these do not support PIN usage "
+"over NFC."
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:10
 msgid ""
-"You don't have to grant Play services the network permission in order for"
-" FIDO2 to work."
-msgstr "你不必为 FIDO2 授予 Play 服务网络权限。"
+"Once Authnkey is installed on your NitroPhone you will need to launch it "
+"and set it as the default passkey provider with the \"Enable\" button and"
+" switch Authnkey as your preferred service. When this is done your "
+"NitroPhone will be ready to use your Nitrokey and FIDO2. Both NFC and USB"
+" connectivity works. You can test this with `WebAuthn.io  "
+"<https://webauthn.io/>`_."
+msgstr ""
 
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:13
-msgid "Play services do not support PIN functionality over NFC."
-msgstr "Play 服务不支持 NFC 上的 PIN 功能。"
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:12
+msgid "Authnkey also comes with useful features such as:"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:14
+#, fuzzy
+msgid "Show the Nitrokey's information."
+msgstr "在指定地点触摸你的Nitrokey FIDO2。"
+
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:15
+#, fuzzy
+msgid "List saved credentials."
+msgstr "添加证书"
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:16
 #, fuzzy
-msgid "Multi-Factor Authentication With FIDO2, FIDO U2F"
-msgstr "谷歌的双因素认证"
+msgid "Change the FIDO2 PIN."
+msgstr "更改密码"
 
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:18
-msgid ""
-"Registration and sign-in works seamlessly with USB and NFC, in Vanadium "
-"and in apps. No further steps are required."
-msgstr "在 Vanadium 和应用程序中，注册和登录可与 USB 和 NFC 无缝连接。无需其他步骤。"
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:19
+msgid "Other apps can also be used, such as:"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:21
-#, fuzzy
-msgid "FIDO2 Passkeys"
-msgstr "密码钥匙"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:23
-msgid "**If no third-party autofill service is enabled:**"
-msgstr "**如果没有启用第三方自动填充服务：**"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:25
-msgid ""
-"Signing in with passkeys and Vanadium should work without having to "
-"change any settings."
-msgstr "使用密码钥匙和 Vanadium 登录应该可以正常工作，无需更改任何设置。"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:27
-msgid "**If a third-party autofill service is enabled:**"
-msgstr "**如果启用了第三方自动填充服务：**"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:29
-msgid ""
-"Disable Vanadium's support for passkeys with password managers by "
-"changing an experimental setting:"
-msgstr "通过更改一个试验性设置，禁用 Vanadium 对密码管理器万能钥匙的支持："
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:31
-msgid "In the address bar, type: ``chrome://flags`` and press enter."
-msgstr "在地址栏中输入`chrome://flags`` 并按回车键。"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:32
-msgid "In the search bar, type \"passkeys\"."
-msgstr "在搜索栏中输入 \"密码钥匙\"。"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:33
-msgid ""
-"A setting called \"Android Credential Management for passkeys\" will "
-"appear. Change this setting to \"Disabled\"."
-msgstr "此时会出现一个名为 \"Android 密码钥匙凭据管理 \"的设置。将此设置更改为 \"已禁用\"。"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:34
-msgid "Select \"Relaunch\"."
-msgstr "选择 \"重新启动\"。"
-
-#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:36
-msgid ""
-"In order to test if FIDO2 works on your Android / NitroPhone you can use "
-"`WebAuthn.io  <https://webauthn.io/>`_."
+msgid "`Passchain  <https://f-droid.org/packages/s1m.hwfido2provider/>`_"
 msgstr ""
-"为了测试 FIDO2 是否能在 Android / NitroPhone "
-"上运行，您可以使用`WebAuthn.io<https://webauthn.io/>`_ 。"
+
+#: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:22
+msgid ""
+"`Open Passkey Authenticator   "
+"<https://f-droid.org/packages/de.noisruker.openPasskeyAuth/>`_"
+msgstr ""
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:2
 msgid "Passwordless Authentication With Microsoft"
@@ -33489,4 +33464,74 @@ msgstr "标记裁剪的输出"
 #~ msgstr ""
 #~ "注意：`Aloaha Crypt <https://www.aloaha.com/aloaha-"
 #~ "crypt-disk/>`__是基于TrueCrypt/VeraCrypt但没有描述的安全限制。"
+
+#~ msgid ""
+#~ "In order to use FIDO2 on "
+#~ "GrapheneOS you need to install the "
+#~ "Google Play services via GrapheneOS App"
+#~ " Store."
+#~ msgstr "要在 GrapheneOS 上使用 FIDO2，您需要通过 GrapheneOS 应用程序商店安装 Google Play 服务。"
+
+#~ msgid ""
+#~ "You don't have to grant Play "
+#~ "services the network permission in order"
+#~ " for FIDO2 to work."
+#~ msgstr "你不必为 FIDO2 授予 Play 服务网络权限。"
+
+#~ msgid "Play services do not support PIN functionality over NFC."
+#~ msgstr "Play 服务不支持 NFC 上的 PIN 功能。"
+
+#~ msgid "Multi-Factor Authentication With FIDO2, FIDO U2F"
+#~ msgstr "谷歌的双因素认证"
+
+#~ msgid ""
+#~ "Registration and sign-in works "
+#~ "seamlessly with USB and NFC, in "
+#~ "Vanadium and in apps. No further "
+#~ "steps are required."
+#~ msgstr "在 Vanadium 和应用程序中，注册和登录可与 USB 和 NFC 无缝连接。无需其他步骤。"
+
+#~ msgid "FIDO2 Passkeys"
+#~ msgstr "密码钥匙"
+
+#~ msgid "**If no third-party autofill service is enabled:**"
+#~ msgstr "**如果没有启用第三方自动填充服务：**"
+
+#~ msgid ""
+#~ "Signing in with passkeys and Vanadium"
+#~ " should work without having to change"
+#~ " any settings."
+#~ msgstr "使用密码钥匙和 Vanadium 登录应该可以正常工作，无需更改任何设置。"
+
+#~ msgid "**If a third-party autofill service is enabled:**"
+#~ msgstr "**如果启用了第三方自动填充服务：**"
+
+#~ msgid ""
+#~ "Disable Vanadium's support for passkeys "
+#~ "with password managers by changing an"
+#~ " experimental setting:"
+#~ msgstr "通过更改一个试验性设置，禁用 Vanadium 对密码管理器万能钥匙的支持："
+
+#~ msgid "In the address bar, type: ``chrome://flags`` and press enter."
+#~ msgstr "在地址栏中输入`chrome://flags`` 并按回车键。"
+
+#~ msgid "In the search bar, type \"passkeys\"."
+#~ msgstr "在搜索栏中输入 \"密码钥匙\"。"
+
+#~ msgid ""
+#~ "A setting called \"Android Credential "
+#~ "Management for passkeys\" will appear. "
+#~ "Change this setting to \"Disabled\"."
+#~ msgstr "此时会出现一个名为 \"Android 密码钥匙凭据管理 \"的设置。将此设置更改为 \"已禁用\"。"
+
+#~ msgid "Select \"Relaunch\"."
+#~ msgstr "选择 \"重新启动\"。"
+
+#~ msgid ""
+#~ "In order to test if FIDO2 works"
+#~ " on your Android / NitroPhone you "
+#~ "can use `WebAuthn.io  <https://webauthn.io/>`_."
+#~ msgstr ""
+#~ "为了测试 FIDO2 是否能在 Android / NitroPhone "
+#~ "上运行，您可以使用`WebAuthn.io<https://webauthn.io/>`_ 。"
 
