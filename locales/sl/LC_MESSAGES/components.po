@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-23 12:26+0000\n"
+"POT-Creation-Date: 2026-07-28 14:56+0000\n"
 "PO-Revision-Date: 2026-07-23 12:32+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -291,8 +290,8 @@ msgstr "NetHSM se lahko uporablja v načinu *Attended Boot* in *Unattended Boot*
 #: ../../source/components/nethsm/administration.rst:1314
 #: ../../source/components/nethsm/administration.rst:1345
 #: ../../source/components/nethsm/administration.rst:1371
-#: ../../source/components/nethsm/container/production-image.rst:40
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:64
 #: ../../source/components/nethsm/container/test-image.rst:27
 #: ../../source/components/nethsm/getting-started.rst:135
 #: ../../source/components/nethsm/metrics.rst:7
@@ -4800,21 +4799,21 @@ msgstr "Uvod"
 
 #: ../../source/components/nethsm/container/production-image.rst:4
 msgid ""
-"The production image is provided for production environments with high "
-"security demands. It requires an external etcd key-value store which is "
-"connected through an encrypted connection. The NetHSM process can be "
-"executed with hardware-based separation (KVM) and device-specific "
-"encryption. The image is distributed as OCI image and can be run locally "
-"with a compatible executor such as Docker and Podman."
+"The production image is designed for environments with high security "
+"demands. Unlike the test container, the production image provides "
+"hardware-based separation (KVM) and device-specific encryption. "
+"Enterprise support plans are available exclusively for the production "
+"image."
 msgstr ""
-"Produkcijska slika je namenjena produkcijskim okoljem z visokimi "
-"varnostnimi zahtevami. Zahteva zunanjo shrambo ključev in vrednosti etcd,"
-" ki je povezana prek šifrirane povezave. Postopek NetHSM se lahko izvaja "
-"z ločitvijo na podlagi strojne opreme (KVM) in šifriranjem za posamezno "
-"napravo. Slika je distribuirana kot slika OCI in jo je mogoče zagnati "
-"lokalno z združljivim izvajalnikom, kot sta Docker in Podman."
 
-#: ../../source/components/nethsm/container/production-image.rst:9
+#: ../../source/components/nethsm/container/production-image.rst:8
+msgid ""
+"The image is distributed as an OCI image and can be run locally with a "
+"compatible executor such as Docker and Podman. It requires an external "
+"etcd key-value store, which is connected through an encrypted connection."
+msgstr ""
+
+#: ../../source/components/nethsm/container/production-image.rst:11
 #, fuzzy
 msgid ""
 "The NetHSM production container is a product for paying customers only "
@@ -4832,7 +4831,7 @@ msgstr ""
 "<https://registry.git.nitrokey.com/distribution/nethsm>`_ z uporabo "
 "poverilnic, ki jih dobite po nakupu."
 
-#: ../../source/components/nethsm/container/production-image.rst:14
+#: ../../source/components/nethsm/container/production-image.rst:16
 msgid ""
 "The security of the NetHSM software container strongly depends on the "
 "platform's security. A compromised platform could easily compromise a "
@@ -4846,12 +4845,12 @@ msgstr ""
 "entropija, ki jo uporablja in zagotavlja NetHSM, odvisna od entropije "
 "platforme."
 
-#: ../../source/components/nethsm/container/production-image.rst:19
+#: ../../source/components/nethsm/container/production-image.rst:21
 #: ../../source/components/nethsm/container/test-image.rst:16
 msgid "Tagging Policy"
 msgstr "Politika označevanja"
 
-#: ../../source/components/nethsm/container/production-image.rst:21
+#: ../../source/components/nethsm/container/production-image.rst:23
 msgid ""
 "The images in the repository are tagged with the Git commit hash and the "
 "version of the release. The latest image is tagged with ``latest``."
@@ -4859,12 +4858,12 @@ msgstr ""
 "Slike v skladišču so označene z hashem objave v sistemu Git in različico "
 "izdaje. Najnovejša slika je označena s ``latest``."
 
-#: ../../source/components/nethsm/container/production-image.rst:25
+#: ../../source/components/nethsm/container/production-image.rst:27
 #, fuzzy
 msgid "Modes of Operation"
 msgstr "Ključne operacije"
 
-#: ../../source/components/nethsm/container/production-image.rst:27
+#: ../../source/components/nethsm/container/production-image.rst:29
 msgid ""
 "The image can be run in two modes of operation, i.e. Unix process or "
 "unikernel."
@@ -4872,7 +4871,7 @@ msgstr ""
 "Sliko je mogoče zagnati v dveh načinih delovanja, in sicer kot proces "
 "Unix ali unikernel."
 
-#: ../../source/components/nethsm/container/production-image.rst:29
+#: ../../source/components/nethsm/container/production-image.rst:31
 msgid ""
 "The Unix process mode runs NetHSM as a process on top of the operating "
 "system."
@@ -4880,7 +4879,7 @@ msgstr ""
 "V Unixovem procesnem načinu se NetHSM izvaja kot proces na vrhu "
 "operacijskega sistema."
 
-#: ../../source/components/nethsm/container/production-image.rst:30
+#: ../../source/components/nethsm/container/production-image.rst:32
 #, fuzzy
 msgid ""
 "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine "
@@ -4895,7 +4894,7 @@ msgstr ""
 "zahteva dostop do vozlišč naprav ``/dev/tun`` in ``/dev/kvm`` ter "
 "zmogljivosti ``NET_ADMIN``."
 
-#: ../../source/components/nethsm/container/production-image.rst:32
+#: ../../source/components/nethsm/container/production-image.rst:34
 #, fuzzy
 msgid ""
 "The mode can be set with the environment variable ``MODE`` (see next "
@@ -4905,7 +4904,7 @@ msgstr ""
 " poglavje `Konfiguracija <container.html#production-image-"
 "configuration>`__)."
 
-#: ../../source/components/nethsm/container/production-image.rst:35
+#: ../../source/components/nethsm/container/production-image.rst:37
 #: ../../source/components/nethsm/container/test-image.rst:22
 #: ../../source/components/nethsm/pkcs11-setup.rst:25
 #: ../../source/components/nextbox/external-storage.rst:18
@@ -4916,70 +4915,70 @@ msgstr ""
 msgid "Configuration"
 msgstr "Konfiguracija"
 
-#: ../../source/components/nethsm/container/production-image.rst:37
+#: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
 msgid "The container can be configured with the following environment variables."
 msgstr "Posodo lahko izvedete na naslednji način."
 
-#: ../../source/components/nethsm/container/production-image.rst:40
+#: ../../source/components/nethsm/container/production-image.rst:42
 #: ../../source/components/nethsm/container/test-image.rst:27
 msgid "Environment variable"
 msgstr "Spremenljivka okolja"
 
-#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:29
 msgid "``DEBUG_LOG``"
 msgstr "``DEBUG_LOG``"
 
-#: ../../source/components/nethsm/container/production-image.rst:42
+#: ../../source/components/nethsm/container/production-image.rst:44
 #: ../../source/components/nethsm/container/test-image.rst:29
 msgid "Enables extended logging for NetHSM."
 msgstr "Omogoča razširjeno beleženje za NetHSM."
 
-#: ../../source/components/nethsm/container/production-image.rst:44
+#: ../../source/components/nethsm/container/production-image.rst:46
 #, fuzzy
 msgid "``UNLOCKPW``"
 msgstr "Odblokiranje kode PIN"
 
-#: ../../source/components/nethsm/container/production-image.rst:44
+#: ../../source/components/nethsm/container/production-image.rst:46
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr "Nastavljena geslo za odklepanje samodejno odklene vsebnik med zagonom."
 
-#: ../../source/components/nethsm/container/production-image.rst:46
+#: ../../source/components/nethsm/container/production-image.rst:48
 #, fuzzy
 msgid "``MODE``"
 msgstr "``time``"
 
-#: ../../source/components/nethsm/container/production-image.rst:46
+#: ../../source/components/nethsm/container/production-image.rst:48
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr ""
 "Način sprejema vrednosti `unix` ali `unikernel`, privzeta vrednost je "
 "`unix`."
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:50
 #, fuzzy
 msgid "``ETCD_HOST``"
 msgstr "``PKCS1``"
 
-#: ../../source/components/nethsm/container/production-image.rst:48
+#: ../../source/components/nethsm/container/production-image.rst:50
 msgid "The URL/IP address of the host running the etcd service."
 msgstr "Naslov URL/IP gostitelja, v katerem je nameščena storitev etcd."
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:52
 #, fuzzy
 msgid "``ETCD_PORT``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:50
+#: ../../source/components/nethsm/container/production-image.rst:52
 msgid "The port running the etcd service, defaults to `2379`."
 msgstr "Vrata, na katerih teče storitev etcd, privzeta vrednost je `2379`."
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1``"
 
-#: ../../source/components/nethsm/container/production-image.rst:52
+#: ../../source/components/nethsm/container/production-image.rst:54
 #, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
@@ -4988,27 +4987,27 @@ msgstr ""
 "Izberite ali ustvarite overitelja, ki naj izda potrdilo uporabnika v "
 "ključu Nitrokey."
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:54
+#: ../../source/components/nethsm/container/production-image.rst:56
 #, fuzzy
 msgid "The path to the certificate for the client authentication."
 msgstr "Nastavitev potrdila za vmesnik TLS NetHSM"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "``ETCD_CLIENT_KEY``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:56
+#: ../../source/components/nethsm/container/production-image.rst:58
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
 msgstr "Ta operacija ne zahteva avtentikacije."
 
-#: ../../source/components/nethsm/container/production-image.rst:59
+#: ../../source/components/nethsm/container/production-image.rst:61
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
@@ -5016,25 +5015,25 @@ msgstr ""
 "Skrivnosti za izvajanje vsebnika, kot so certifikati in zasebni ključi, "
 "je treba nastaviti s funkcijo skrivnosti v programu Docker ali Podman."
 
-#: ../../source/components/nethsm/container/production-image.rst:62
+#: ../../source/components/nethsm/container/production-image.rst:64
 msgid "Secret variable"
 msgstr "Skrivna spremenljivka"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:66
 #, fuzzy
 msgid "``ca_cert``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:64
+#: ../../source/components/nethsm/container/production-image.rst:66
 msgid "CA certificate which signed the client certificate and server certificate."
 msgstr "potrdilo CA, ki je podpisalo potrdilo odjemalca in strežnika."
 
-#: ../../source/components/nethsm/container/production-image.rst:66
+#: ../../source/components/nethsm/container/production-image.rst:68
 #, fuzzy
 msgid "``etcd_client_cert``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:66
+#: ../../source/components/nethsm/container/production-image.rst:68
 msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
@@ -5042,12 +5041,12 @@ msgstr ""
 "Potrdilo odjemalca za preverjanje pristnosti procesa NetHSM s shrambo "
 "vrednosti ključa."
 
-#: ../../source/components/nethsm/container/production-image.rst:68
+#: ../../source/components/nethsm/container/production-image.rst:70
 #, fuzzy
 msgid "``etcd_client_key``"
 msgstr "``EdDSA_Signature``"
 
-#: ../../source/components/nethsm/container/production-image.rst:68
+#: ../../source/components/nethsm/container/production-image.rst:70
 msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
@@ -5055,29 +5054,29 @@ msgstr ""
 "Odjemalčev ključ za preverjanje pristnosti procesa NetHSM s shrambo "
 "ključ-vrednost."
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:72
 #, fuzzy
 msgid "``etcd_server_cert``"
 msgstr "``USER_ID``"
 
-#: ../../source/components/nethsm/container/production-image.rst:70
+#: ../../source/components/nethsm/container/production-image.rst:72
 msgid "Server certificate for the API of the key-value store."
 msgstr "Strežniško potrdilo za API shrambe vrednosti ključa."
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:74
 #, fuzzy
 msgid "``etcd_server_key``"
 msgstr "Ključ strežnika"
 
-#: ../../source/components/nethsm/container/production-image.rst:72
+#: ../../source/components/nethsm/container/production-image.rst:74
 msgid "Server key for the API of the key-value store."
 msgstr "Strežniški ključ za API shrambe ključ-vrednost."
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid "``device_key``"
 msgstr "``device_key``"
 
-#: ../../source/components/nethsm/container/production-image.rst:74
+#: ../../source/components/nethsm/container/production-image.rst:76
 msgid ""
 "Device key of the NetHSM process. To learn more about the device key "
 "refer to chapter `Terminology and Conventions "
@@ -5089,7 +5088,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ v zasnovi sistema."
 
-#: ../../source/components/nethsm/container/production-image.rst:80
+#: ../../source/components/nethsm/container/production-image.rst:82
 msgid ""
 "The TLS certificates used for the *etcd* service, web API and the client "
 "authentication certificate, must both contain a valid Subject Alternative"
@@ -5100,13 +5099,13 @@ msgstr ""
 "alternativno ime subjekta (SAN). V nasprotnem primeru ju bo storitev "
 "*etcd* zavrnila kot neveljavna."
 
-#: ../../source/components/nethsm/container/production-image.rst:84
+#: ../../source/components/nethsm/container/production-image.rst:86
 #: ../../source/components/nethsm/container/test-image.rst:33
 #, fuzzy
 msgid "Data Storage"
 msgstr "Obnovitev"
 
-#: ../../source/components/nethsm/container/production-image.rst:86
+#: ../../source/components/nethsm/container/production-image.rst:88
 #: ../../source/components/nethsm/container/test-image.rst:35
 msgid ""
 "The system configuration, keys and certificates are stored in an etcd "
@@ -5118,7 +5117,7 @@ msgstr ""
 "zbirki etcd. Storitev etcd shrani podatkovno zbirko na poti ``/data`` "
 "zabojnika. Izvajalci zabojnikov omogočajo priklop na to pot."
 
-#: ../../source/components/nethsm/container/production-image.rst:91
+#: ../../source/components/nethsm/container/production-image.rst:93
 #: ../../source/components/nethsm/container/test-image.rst:40
 #: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:82
 #: ../../source/components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:113
@@ -5133,7 +5132,7 @@ msgstr ""
 msgid "Usage"
 msgstr "Uporaba"
 
-#: ../../source/components/nethsm/container/production-image.rst:93
+#: ../../source/components/nethsm/container/production-image.rst:95
 #, fuzzy
 msgid ""
 "The production container supports two `modes of operation <production-"
@@ -5145,12 +5144,12 @@ msgstr ""
 "of Operation>` __. V naslednjih poglavjih je opisano, kako zagnati "
 "vsebnik s priloženimi datotekami compose ali z ukazom _run_."
 
-#: ../../source/components/nethsm/container/production-image.rst:96
+#: ../../source/components/nethsm/container/production-image.rst:98
 #, fuzzy
 msgid "Unix Mode"
 msgstr "Metoda grafičnega vmesnika"
 
-#: ../../source/components/nethsm/container/production-image.rst:98
+#: ../../source/components/nethsm/container/production-image.rst:100
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -5162,8 +5161,8 @@ msgstr ""
 "/compose-unix.yaml>`__. Prepričajte se, da imate na voljo potrebne "
 "datoteke za skrivnosti, navedene v datoteki compose."
 
-#: ../../source/components/nethsm/container/production-image.rst:101
-#: ../../source/components/nethsm/container/production-image.rst:131
+#: ../../source/components/nethsm/container/production-image.rst:103
+#: ../../source/components/nethsm/container/production-image.rst:133
 #, fuzzy
 msgid ""
 "To run the container without the compose file you need to provide an "
@@ -5178,29 +5177,29 @@ msgstr ""
 "možnosti, kot je opisano v poglavju `Konfiguracija <container.html"
 "#production-image-configuration>`__."
 
-#: ../../source/components/nethsm/container/production-image.rst:105
-#: ../../source/components/nethsm/container/production-image.rst:135
+#: ../../source/components/nethsm/container/production-image.rst:107
+#: ../../source/components/nethsm/container/production-image.rst:137
 #: ../../source/components/nethsm/container/test-image.rst:42
 msgid "The container can be executed as follows."
 msgstr "Posodo lahko izvedete na naslednji način."
 
-#: ../../source/components/nethsm/container/production-image.rst:108
-#: ../../source/components/nethsm/container/production-image.rst:138
+#: ../../source/components/nethsm/container/production-image.rst:110
+#: ../../source/components/nethsm/container/production-image.rst:140
 #: ../../source/components/nethsm/container/test-image.rst:45
 #: ../../source/components/nethsm/integration.rst:45
 #: ../../source/components/nethsm/integration.rst:58
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../source/components/nethsm/container/production-image.rst:113
-#: ../../source/components/nethsm/container/production-image.rst:143
+#: ../../source/components/nethsm/container/production-image.rst:115
+#: ../../source/components/nethsm/container/production-image.rst:145
 #: ../../source/components/nethsm/container/test-image.rst:50
 #: ../../source/components/nethsm/integration.rst:50
 #: ../../source/components/nethsm/integration.rst:63
 msgid "Podman"
 msgstr "Podman"
 
-#: ../../source/components/nethsm/container/production-image.rst:118
+#: ../../source/components/nethsm/container/production-image.rst:120
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -5208,8 +5207,8 @@ msgstr ""
 "To bo zagnalo NetHSM kot proces Unix znotraj vsebnika in izpostavilo API "
 "REST na vratih `8443` prek protokola HTTPS."
 
-#: ../../source/components/nethsm/container/production-image.rst:121
-#: ../../source/components/nethsm/container/production-image.rst:152
+#: ../../source/components/nethsm/container/production-image.rst:123
+#: ../../source/components/nethsm/container/production-image.rst:154
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
@@ -5219,11 +5218,11 @@ msgstr ""
 "vzpostavitev povezave uporabili pravilne nastavitve povezave. Če želite "
 "izvedeti več, si oglejte poglavje `Uvod v NetHSM <index.html>`__."
 
-#: ../../source/components/nethsm/container/production-image.rst:126
+#: ../../source/components/nethsm/container/production-image.rst:128
 msgid "Unikernel Mode"
 msgstr "Način Unikernel"
 
-#: ../../source/components/nethsm/container/production-image.rst:128
+#: ../../source/components/nethsm/container/production-image.rst:130
 msgid ""
 "You can obtain a provided compose file `here "
 "<https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine"
@@ -5235,7 +5234,7 @@ msgstr ""
 "/compose-unikernel.yaml>`__. Prepričajte se, da imate na voljo potrebne "
 "datoteke za skrivnosti, navedene v datoteki compose."
 
-#: ../../source/components/nethsm/container/production-image.rst:148
+#: ../../source/components/nethsm/container/production-image.rst:150
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -5251,8 +5250,9 @@ msgid "Test Image"
 msgstr "Slika zabojnika"
 
 #: ../../source/components/nethsm/container/test-image.rst:4
+#, fuzzy
 msgid ""
-"The test image is provided for testing and development purposes. It does "
+"The test image is designed for testing and development purposes. It does "
 "not offer to run the NetHSM process with hardware-based separation (KVM),"
 " to encrypt the data store, or to use an external etcd. The connection "
 "between the NetHSM process and the integrated key-value store is "
@@ -5267,9 +5267,10 @@ msgstr ""
 " izvajalnikom, kot sta Docker in Podman."
 
 #: ../../source/components/nethsm/container/test-image.rst:9
+#, fuzzy
 msgid ""
 "The image can be obtained from `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_."
+"<https://hub.docker.com/r/nitrokey/nethsm>`__."
 msgstr ""
 "Sliko lahko dobite na spletnem mestu `Docker Hub "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_."
@@ -12669,9 +12670,9 @@ msgid ""
 msgstr ""
 "Če želite s svojim NitroPhoneom uporabljati passkeys, shranjena na "
 "Nitrokeyju, priporočamo uporabo odprtokodne aplikacije » `« (Authnkey) "
-"<https://f-droid.org/en/packages/pl.lebihan.authnkey/>`_. Alternativno lahko "
-"uporabite storitve Google Play, vendar te ne podpirajo uporabe PIN-kode prek "
-"NFC."
+"<https://f-droid.org/en/packages/pl.lebihan.authnkey/>`_. Alternativno "
+"lahko uporabite storitve Google Play, vendar te ne podpirajo uporabe PIN-"
+"kode prek NFC."
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:10
 msgid ""
@@ -12682,12 +12683,13 @@ msgid ""
 " connectivity works. You can test this with `WebAuthn.io  "
 "<https://webauthn.io/>`_."
 msgstr ""
-"Ko boste na svojem NitroPhonu namestili aplikacijo Authnkey, jo boste morali "
-"zagnati in jo s klikom na gumb »Omogoči« nastaviti kot privzetega ponudnika "
-"passkeys ter izbrati Authnkey kot svojo prednostno storitev. Ko boste to "
-"storili, bo vaš NitroPhone pripravljen za uporabo vašega Nitrokeya in FIDO2. "
-"Delujeta tako povezava NFC kot tudi USB. To lahko preizkusite na spletnih "
-"straneh WebAuthn.io ( `) in <https://webauthn.io/>`_."
+"Ko boste na svojem NitroPhonu namestili aplikacijo Authnkey, jo boste "
+"morali zagnati in jo s klikom na gumb »Omogoči« nastaviti kot privzetega "
+"ponudnika passkeys ter izbrati Authnkey kot svojo prednostno storitev. Ko"
+" boste to storili, bo vaš NitroPhone pripravljen za uporabo vašega "
+"Nitrokeya in FIDO2. Delujeta tako povezava NFC kot tudi USB. To lahko "
+"preizkusite na spletnih straneh WebAuthn.io ( `) in "
+"<https://webauthn.io/>`_."
 
 #: ../../source/components/nitrokeys/features/fido2/nitrophone.rst:12
 msgid "Authnkey also comes with useful features such as:"
@@ -12721,8 +12723,8 @@ msgid ""
 "`Open Passkey Authenticator   "
 "<https://f-droid.org/packages/de.noisruker.openPasskeyAuth/>`_"
 msgstr ""
-"`Odpri avtentifikator z geslom za Passkey  <https://f-droid.org/packages/de."
-"noisruker.openPasskeyAuth/>`_"
+"`Odpri avtentifikator z geslom za Passkey  "
+"<https://f-droid.org/packages/de.noisruker.openPasskeyAuth/>`_"
 
 #: ../../source/components/nitrokeys/features/fido2/passwordless-microsoft.rst:2
 msgid "Passwordless Authentication With Microsoft"
@@ -39264,3 +39266,29 @@ msgstr "Označite obrezano Izhod"
 #~ "Če želite preizkusiti, ali FIDO2 deluje"
 #~ " v telefonu Android/NitroPhone, lahko "
 #~ "uporabite `WebAuthn.io <https://webauthn.io/>`_."
+
+#~ msgid ""
+#~ "The production image is provided for "
+#~ "production environments with high security "
+#~ "demands. It requires an external etcd"
+#~ " key-value store which is connected"
+#~ " through an encrypted connection. The "
+#~ "NetHSM process can be executed with "
+#~ "hardware-based separation (KVM) and "
+#~ "device-specific encryption. The image is"
+#~ " distributed as OCI image and can "
+#~ "be run locally with a compatible "
+#~ "executor such as Docker and Podman."
+#~ msgstr ""
+#~ "Produkcijska slika je namenjena produkcijskim"
+#~ " okoljem z visokimi varnostnimi zahtevami."
+#~ " Zahteva zunanjo shrambo ključev in "
+#~ "vrednosti etcd, ki je povezana prek "
+#~ "šifrirane povezave. Postopek NetHSM se "
+#~ "lahko izvaja z ločitvijo na podlagi "
+#~ "strojne opreme (KVM) in šifriranjem za"
+#~ " posamezno napravo. Slika je distribuirana"
+#~ " kot slika OCI in jo je mogoče"
+#~ " zagnati lokalno z združljivim "
+#~ "izvajalnikom, kot sta Docker in Podman."
+
