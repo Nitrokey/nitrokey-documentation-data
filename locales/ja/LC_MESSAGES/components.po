@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-20 19:05+0000\n"
+"POT-Creation-Date: 2026-08-26 11:58+0000\n"
 "PO-Revision-Date: 2026-08-20 19:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -1301,7 +1300,7 @@ msgstr "D-sub メス*DE-9* ポート。"
 #: ../../source/components/nethsm/administration.rst:672
 #: ../../source/components/nethsm/getting-started.rst:82
 #: ../../source/components/nethsm/getting-started.rst:107
-#: ../../source/components/nethsm/system_recovery.rst:57
+#: ../../source/components/nethsm/system_recovery.rst:59
 #, fuzzy
 msgid "NetHSM 1"
 msgstr "NetHSM"
@@ -1487,9 +1486,10 @@ msgstr "NetHSMは、バックアップファイルから復元することがで
 #, fuzzy
 msgid ""
 "If the NetHSM is *Unprovisioned* it will restore all *User Data* "
-"including system configuration and reboot. Therefore the system may get "
-"different network settings, TLS certificate and *Unlock Passphrase* "
-"afterwards. The NetHSM ends in a *Locked* state."
+"including system configuration. After the restore the NetHSM is in a "
+"*Locked* state. The restored TLS certificate and *Unlock Passphrase* are "
+"immediately available. The network settings are only applied after a "
+"reboot."
 msgstr ""
 "NetHSM が*Unprovisioned* の場合、システム設定を含むすべての*ユーザーデータ* "
 "を復元し、再起動します。そのため、システムはその後、異なるネットワーク設定、TLS証明書、*Unlock Passphrase* "
@@ -2861,26 +2861,34 @@ msgstr ""
 "/POST_config-tls-csr-pem>`__ で見ることができます。"
 
 #: ../../source/components/nethsm/clustering.rst:164
+#, fuzzy
 msgid ""
 "To properly authenticate nodes, the clustering backend (etcd) expects "
 "that each node has a certificate with a properly filled Subject Alt Names"
-" (SAN) field. In particular, nodes expected to be reached only via their "
-"IP need to have a proper IP SAN in their certificate. IP SANs can be "
-"requested for the CSR by prefixing \"IP:\" to the names, as in "
-"``openssl``:"
+" (SAN) field. Nodes are expected to be reached only via their IP and need"
+" to have a proper IP SAN in their certificate. IP SANs can be requested "
+"for the CSR by prefixing \"IP:\" to the names, as in ``openssl``:"
 msgstr ""
 "ノードを適切に認証するために、クラスタリングバックエンド(etcd)は各ノードが適切にSAN(Subject Alt "
 "Names)フィールドが記入された証明書を持っていることを期待する。特に、IP経由でのみ到達することが期待されるノードは、証明書に適切なIP "
 "SANを持つ必要があります。IP SANは、``openssl``のように、名前の前に \"IP: \"を付けることでCSRに要求できる："
 
-#: ../../source/components/nethsm/clustering.rst:170
+#: ../../source/components/nethsm/clustering.rst:172
+msgid ""
+"If you want to use a public CA for signing your certificates your nodes "
+"must use public IP addresses. This is due to a security requirement which"
+" forbids a public CA to issue certificates with a private IP address in "
+"the IP SAN."
+msgstr ""
+
+#: ../../source/components/nethsm/clustering.rst:175
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr "取得したCSR（``nethsm.csr``と呼ぶことにする）があれば、証明書を生成し、インストールできるようにする。例えば、``openssl``とする："
 
-#: ../../source/components/nethsm/clustering.rst:177
+#: ../../source/components/nethsm/clustering.rst:182
 #, fuzzy
 msgid ""
 "Then install the obtained ``new_cert.pem`` with the "
@@ -2891,7 +2899,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "tls-cert-pem>`__ で見ることができます。"
 
-#: ../../source/components/nethsm/clustering.rst:179
+#: ../../source/components/nethsm/clustering.rst:184
 msgid ""
 "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls"
 "/cluster-ca.pem`` endpoint (refer to the `API documentation "
@@ -2904,15 +2912,15 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照)。これは、インストールされたTLS証明書がCAによって署名された場合にのみ可能です。そうでない場合、操作は拒否されます。"
 
-#: ../../source/components/nethsm/clustering.rst:182
+#: ../../source/components/nethsm/clustering.rst:187
 msgid "This process has to be repeated for every node."
 msgstr "このプロセスをノードごとに繰り返さなければならない。"
 
-#: ../../source/components/nethsm/clustering.rst:185
+#: ../../source/components/nethsm/clustering.rst:190
 msgid "Clock Sync"
 msgstr "クロック同期"
 
-#: ../../source/components/nethsm/clustering.rst:187
+#: ../../source/components/nethsm/clustering.rst:192
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
@@ -2920,31 +2928,31 @@ msgstr ""
 "各ノードが正確なシステム時刻でプロビジョニングされていることを確認する。そうでない場合は、``/config/time`` "
 "エンドポイントを使用してクロックを調整してください。"
 
-#: ../../source/components/nethsm/clustering.rst:190
+#: ../../source/components/nethsm/clustering.rst:195
 #, fuzzy
 msgid "Adding a New Node"
 msgstr "ADSKの追加"
 
-#: ../../source/components/nethsm/clustering.rst:192
+#: ../../source/components/nethsm/clustering.rst:197
 msgid "Adding a node to a cluster is done in two steps:"
 msgstr "クラスタへのノードの追加は2つのステップで行う："
 
-#: ../../source/components/nethsm/clustering.rst:194
+#: ../../source/components/nethsm/clustering.rst:199
 #, fuzzy
 msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "クラスタに追加を登録する(メンバーのいずれかを通して)"
 
-#: ../../source/components/nethsm/clustering.rst:195
+#: ../../source/components/nethsm/clustering.rst:200
 #, fuzzy
 msgid "Tell the new node to join"
 msgstr "新しいノードに参加するよう伝える"
 
-#: ../../source/components/nethsm/clustering.rst:198
+#: ../../source/components/nethsm/clustering.rst:203
 #, fuzzy
 msgid "Configure a Backup Passphrase"
 msgstr "新しいバックアップのパスフレーズ"
 
-#: ../../source/components/nethsm/clustering.rst:200
+#: ../../source/components/nethsm/clustering.rst:205
 msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
@@ -2953,11 +2961,11 @@ msgstr ""
 "まず、新しいジョイナーの登録に使用するノードでバックアップパスフレーズが設定されていることを確認する（``/config/backup-"
 "passphrase``エンドポイントのAPIドキュメントを参照）。"
 
-#: ../../source/components/nethsm/clustering.rst:203
+#: ../../source/components/nethsm/clustering.rst:208
 msgid "Registering a New Node"
 msgstr "新規ノードの登録"
 
-#: ../../source/components/nethsm/clustering.rst:206
+#: ../../source/components/nethsm/clustering.rst:211
 msgid ""
 "Registering a node immediately introduces a new node in the cluster, "
 "modifying the quorum threshold, even if the node has not actually joined "
@@ -2970,7 +2978,7 @@ msgstr ""
 " ドキュメント<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "および`Operational Redundancy`_ セクションを参照してください。"
 
-#: ../../source/components/nethsm/clustering.rst:208
+#: ../../source/components/nethsm/clustering.rst:213
 msgid ""
 "Have at hand the IP of the node that will join. The full *URL* (also "
 "called *peer URL* in ``etcd`` terminology) of that node will be "
@@ -2982,7 +2990,7 @@ msgstr ""
 "とも呼ばれる）は``https://<IP_of_node>:2380``（例：``https://192.168.1.1:2380``）となる。ポート****"
 " は2380でなければならないので、ノード間のファイアウォールがそのポートのTCPトラフィックを許可していることを確認してください。"
 
-#: ../../source/components/nethsm/clustering.rst:210
+#: ../../source/components/nethsm/clustering.rst:215
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
@@ -2991,7 +2999,7 @@ msgstr ""
 "URL が正しいかどうかは、``GET /cluster/members`` "
 "を参加予定のノードで呼び出すことで再確認できる。これによって1つのメンバーだけがリストアップされるはずです。"
 
-#: ../../source/components/nethsm/clustering.rst:212
+#: ../../source/components/nethsm/clustering.rst:217
 msgid ""
 "Then register that expected URL on any existing node of the cluster (if "
 "you don't have a cluster yet, do this on the NetHSM that will serve as "
@@ -3005,11 +3013,11 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照）を使用し、URLを含む JSON ボディを渡します。"
 
-#: ../../source/components/nethsm/clustering.rst:214
+#: ../../source/components/nethsm/clustering.rst:219
 msgid "If successful, this returns a JSON body of the form:"
 msgstr "成功すれば、フォームのJSONボディが返される："
 
-#: ../../source/components/nethsm/clustering.rst:236
+#: ../../source/components/nethsm/clustering.rst:241
 msgid ""
 "which contains information necessary for the new node to join the "
 "cluster. In particular, it lists all members of the cluster (where the "
@@ -3018,15 +3026,15 @@ msgid ""
 "passphrase must have been configured before."
 msgstr "には、新しいノードがクラスタに参加するために必要な情報が含まれています。特に、クラスタの全メンバーをリストします（名前が空のメンバーが新規参加者です）。また、アンロックパスフレーズとバックアップパスフレーズの両方によって暗号化されたドメインキーも含まれています。"
 
-#: ../../source/components/nethsm/clustering.rst:238
+#: ../../source/components/nethsm/clustering.rst:243
 msgid "Keep that response for the next step."
 msgstr "その返答は次のステップのためにとっておく。"
 
-#: ../../source/components/nethsm/clustering.rst:241
+#: ../../source/components/nethsm/clustering.rst:246
 msgid "Actually Joining the Cluster"
 msgstr "実際にクラスタに参加する"
 
-#: ../../source/components/nethsm/clustering.rst:243
+#: ../../source/components/nethsm/clustering.rst:248
 msgid ""
 "Take the response from the last step and append to it a "
 "``backupPassphrase`` field containing the backup passphrase of the node "
@@ -3040,14 +3048,14 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照)への呼び出しに渡す。"
 
-#: ../../source/components/nethsm/clustering.rst:245
+#: ../../source/components/nethsm/clustering.rst:250
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
 "enact the actual join, wiping the data on the new joiner to instead sync "
 "its state with that of the cluster."
 msgstr "クラスタとノードの両方が互いに到達できると仮定すると、これは実際の参加を実行し、新しい参加者のデータを消去して、代わりにその状態をクラスタの状態と同期させる。"
 
-#: ../../source/components/nethsm/clustering.rst:247
+#: ../../source/components/nethsm/clustering.rst:252
 msgid ""
 "Depending on the networking and cluster conditions, this operation may "
 "take a few dozen seconds. If this operation fails immediately (e.g. the "
@@ -3057,7 +3065,7 @@ msgid ""
 "reverted by a factory reset."
 msgstr "ネットワークやクラスタの状態によっては、この操作に数十秒かかることがあります。この操作がすぐに失敗した場合（クラスタに到達できなかった、認証に失敗したなど）、このノードの状態は消去されず、参加は元に戻ります。しかし、最初のジョインが成功するとすぐに、この操作は最終的なものとなり、ファクトリーリセットによってのみ元に戻すことができます。"
 
-#: ../../source/components/nethsm/clustering.rst:249
+#: ../../source/components/nethsm/clustering.rst:254
 msgid ""
 "If this join is successful, the node will end up in a ``Locked`` state, "
 "and has to be unlocked with the unlock passphrase of the node that was "
@@ -3068,7 +3076,7 @@ msgstr ""
 "このジョインが成功すると、ノードは``Locked`` "
 "状態になり、登録に使用したノードのアンロックパスフレーズを使ってアンロックする必要があります。その後、アンロックパスフレーズを変更することができます（アンロックパスフレーズはノード固有のままであり、ノード間で共有されません）。"
 
-#: ../../source/components/nethsm/clustering.rst:252
+#: ../../source/components/nethsm/clustering.rst:257
 msgid ""
 "Even after the join has succeeded, if the cluster's database is large or "
 "if the cluster is busy, it may take some time for the new joiner to "
@@ -3078,17 +3086,17 @@ msgid ""
 "unlock it for example. In that case, give it some time and try again."
 msgstr "ジョインが成功した後でも、クラスタのデータベースが大きい場合やクラスタがビジー状態の場合は、新しいジョインがその状態を完全に同期するまでに時間がかかることがあります。その間、すべてのノード（特に新しいジョイナーを含む）の応答性が低下したり、応答しなくなったりすることがあります。特に新しいジョイナーは、ロックを解除しようとすると、最初はエラーを返すかもしれない。その場合は、少し時間をおいてからもう一度試してください。"
 
-#: ../../source/components/nethsm/clustering.rst:255
+#: ../../source/components/nethsm/clustering.rst:260
 #, fuzzy
 msgid "Adding a Witness Node"
 msgstr "ADSKの追加"
 
-#: ../../source/components/nethsm/clustering.rst:258
+#: ../../source/components/nethsm/clustering.rst:263
 #, fuzzy
 msgid "Prepare a Witness"
 msgstr "準備"
 
-#: ../../source/components/nethsm/clustering.rst:260
+#: ../../source/components/nethsm/clustering.rst:265
 msgid ""
 "You will need an environment with ``etcd`` v3.6 available, with an IPv4 "
 "address (at least) reachable by the other members of your cluster. TCP "
@@ -3097,7 +3105,7 @@ msgstr ""
 "``etcd`` "
 "v3.6が利用可能で、クラスタの他のメンバーから到達可能なIPv4アドレス（少なくとも）を持つ環境が必要です。ポート2380を発着するTCPトラフィックが許可されている必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:262
+#: ../../source/components/nethsm/clustering.rst:267
 msgid ""
 "Create an empty directory where ``etcd`` will store its data, and write "
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
@@ -3106,7 +3114,7 @@ msgstr ""
 "``etcd`` がデータを格納する空のディレクトリを作成し、そのパスを書き込む（ここでは``/var/etcd/data`` "
 "とする）。プロセスを起動するユーザが、そのディレクトリに対する読み取りと書き込みの権限を持っていることを確認する。"
 
-#: ../../source/components/nethsm/clustering.rst:264
+#: ../../source/components/nethsm/clustering.rst:269
 msgid ""
 "Transfer to the machine the CA certificate that is being used to "
 "authenticate nodes in the cluster. You should have created one in the "
@@ -3116,7 +3124,7 @@ msgstr ""
 "クラスタ内のノードの認証に使用するCA証明書をマシンに転送します。`CAの作成とインストール`_セクションで作成したはずです。それを``/var/etcd/CA.pem``"
 " に保存します。"
 
-#: ../../source/components/nethsm/clustering.rst:266
+#: ../../source/components/nethsm/clustering.rst:271
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
@@ -3125,36 +3133,36 @@ msgstr ""
 "その後、ウィットネス用の証明書を作成し、CAで署名して、ウィットネスがピアと通信できるようにする必要があります。これは例えば``openssl``"
 " を使って行うことができる："
 
-#: ../../source/components/nethsm/clustering.rst:279
+#: ../../source/components/nethsm/clustering.rst:284
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr "出来上がった``witness.key`` と``witness.pem`` を``/var/etcd`` にも格納する。"
 
-#: ../../source/components/nethsm/clustering.rst:282
+#: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
 msgid "Register Witness to Cluster"
 msgstr "HMDMサーバーへのニトロフォンの登録"
 
-#: ../../source/components/nethsm/clustering.rst:284
+#: ../../source/components/nethsm/clustering.rst:289
 msgid ""
 "Follow the normal instructions from the `Registering a New Node`_ section"
 " to signal the existing cluster the addition of a new member with the "
 "given URL(s)."
 msgstr "`新しいノードの登録`_セクションの通常の手順に従って、指定されたURL(s)を持つ新しいメンバーが追加されたことを既存のクラスタに通知します。"
 
-#: ../../source/components/nethsm/clustering.rst:286
+#: ../../source/components/nethsm/clustering.rst:291
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr "クラスタからの応答を書き留めてください。クラスタメンバーのリストとジョイナーキットが含まれているはずです（この部分は必要ありません）。"
 
-#: ../../source/components/nethsm/clustering.rst:289
+#: ../../source/components/nethsm/clustering.rst:294
 #, fuzzy
 msgid "Configure etcd"
 msgstr "構成"
 
-#: ../../source/components/nethsm/clustering.rst:291
+#: ../../source/components/nethsm/clustering.rst:296
 msgid ""
 "Unlike NetHSMs which automatically choose a node name for themselves "
 "(using the device ID), you must choose a name for each witness you add, "
@@ -3165,13 +3173,13 @@ msgstr ""
 "とは異なり、追加する各証人の名前を選択する必要があります。*名前が一意であることを確認してください* "
 "。以下の例では「witness1」を使用します。"
 
-#: ../../source/components/nethsm/clustering.rst:293
+#: ../../source/components/nethsm/clustering.rst:298
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr "NetHSM の立会人登録への回答とともに、フォームの変数を用意する："
 
-#: ../../source/components/nethsm/clustering.rst:302
+#: ../../source/components/nethsm/clustering.rst:307
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
@@ -3180,13 +3188,13 @@ msgstr ""
 "NetHSM のレスポンスが``response.json`` ファイルに保存されていると仮定すると、以下の``jq`` "
 "式で最後の2つの変数を自動的に生成することができます："
 
-#: ../../source/components/nethsm/clustering.rst:309
+#: ../../source/components/nethsm/clustering.rst:314
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
 msgstr "例えば、`新しいノードを登録する`_セクションで提供されたレスポンスの例では、次のようになります："
 
-#: ../../source/components/nethsm/clustering.rst:318
+#: ../../source/components/nethsm/clustering.rst:323
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
@@ -3194,23 +3202,23 @@ msgstr ""
 "最後に、``docs/etcd_witness.conf.template`` "
 "で提供されているテンプレート・ファイルを使用して、``etcd.conf.yml`` ファイルを作成する："
 
-#: ../../source/components/nethsm/clustering.rst:325
+#: ../../source/components/nethsm/clustering.rst:330
 msgid "This should give you a file of the form:"
 msgstr "これでフォームのファイルができるはずだ："
 
-#: ../../source/components/nethsm/clustering.rst:350
+#: ../../source/components/nethsm/clustering.rst:355
 #, fuzzy
 msgid "Start etcd"
 msgstr "スタートメニュー"
 
-#: ../../source/components/nethsm/clustering.rst:352
+#: ../../source/components/nethsm/clustering.rst:357
 msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr "``etcd`` をお好みの方法（手動、``systemd`` サービス、コンテナなど）で起動し、前のステップで作成した設定ファイルを指定する："
 
-#: ../../source/components/nethsm/clustering.rst:359
+#: ../../source/components/nethsm/clustering.rst:364
 msgid ""
 "You should see it start, join the cluster and catch up with the data. "
 "After some time, you should be able to check that it is healthy with the "
@@ -3219,11 +3227,11 @@ msgstr ""
 "起動してクラスタに参加し、データに追いつくのを確認できるはずだ。しばらくすると、``etcdctl`` "
 "クライアントで正常であることを確認できるはずだ："
 
-#: ../../source/components/nethsm/clustering.rst:365
+#: ../../source/components/nethsm/clustering.rst:370
 msgid "This key should exist and contain \"1\"."
 msgstr "このキーは存在し、\"1 \"を含んでいなければならない。"
 
-#: ../../source/components/nethsm/clustering.rst:367
+#: ../../source/components/nethsm/clustering.rst:372
 msgid ""
 "Make sure this process keeps running, as it is now a proper member of "
 "your cluster. If you need to decommission it, first properly remove it "
@@ -3231,17 +3239,17 @@ msgid ""
 "changes, update its URL from the cluster."
 msgstr "クラスタの適切なメンバーになったので、このプロセスが実行され続けていることを確認してください。このプロセスを廃止する必要がある場合は、まずクラスタから適切に削除します（専用のセクションを参照）。到達可能なIPが変更された場合は、クラスタからそのURLを更新します。"
 
-#: ../../source/components/nethsm/clustering.rst:370
+#: ../../source/components/nethsm/clustering.rst:375
 #, fuzzy
 msgid "Operating a Cluster"
 msgstr "オプションステップ"
 
-#: ../../source/components/nethsm/clustering.rst:373
+#: ../../source/components/nethsm/clustering.rst:378
 #: ../../source/components/nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
 msgstr "バックアップとリストア"
 
-#: ../../source/components/nethsm/clustering.rst:375
+#: ../../source/components/nethsm/clustering.rst:380
 msgid ""
 "The backup operation works the same as without a cluster and can be "
 "requested from any node of the cluster. It will back up data for the "
@@ -3249,7 +3257,7 @@ msgid ""
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr "バックアップ操作はクラスタがない場合と同じように動作し、クラスタのどのノードからでも要求できます。ノード固有のフィールドを含むクラスタ全体のデータがバックアップされます（ただし、プロビジョニングされていないノードでバックアップをリストアしない限り、これらのフィールドは無視されます）。"
 
-#: ../../source/components/nethsm/clustering.rst:377
+#: ../../source/components/nethsm/clustering.rst:382
 msgid ""
 "A backup done on a cluster can be restored on the same cluster, even if "
 "some nodes have been added or removed since. Such restores done on "
@@ -3257,26 +3265,26 @@ msgid ""
 "users, namespaces), like any other partial restore."
 msgstr "クラスタ上で実行されたバックアップは、その後ノードが追加または削除された場合でも、同じクラスタ上でリストアできます。運用クラスタ上で行われたこのようなリストアは、他の部分リストアと同様に、設定値には影響しません（キー、ユーザ、ネームスペースのみ）。"
 
-#: ../../source/components/nethsm/clustering.rst:379
+#: ../../source/components/nethsm/clustering.rst:384
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr "プロビジョニングされていないノードにバックアップをリストアすると、バックアップの作成に使用されたノードのノード固有のフィールド（ネットワーク構成、証明書など）がリストアされます。"
 
-#: ../../source/components/nethsm/clustering.rst:381
+#: ../../source/components/nethsm/clustering.rst:386
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr "大きなバックアップをリストアすると、リストアを適用するノードが他のノードに変更を転送している間、しばらくの間クラスタに負荷がかかることがあります。"
 
-#: ../../source/components/nethsm/clustering.rst:383
+#: ../../source/components/nethsm/clustering.rst:388
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr "この操作は、旧バージョンの NetHSM で作成されたバックアップと互換性があります。"
 
-#: ../../source/components/nethsm/clustering.rst:386
+#: ../../source/components/nethsm/clustering.rst:391
 msgid ""
 "Restoring on a node A a backup made on another node Z with a different "
 "domain key will correctly rewrite A's domain key, as before. However if A"
@@ -3286,7 +3294,7 @@ msgstr ""
 "異なるドメイン鍵で別のノードZに作成されたバックアップをノードAにリストア "
 "すると、Aのドメイン鍵は以前と同様に正しく書き換えられる。しかし、AがノードBとクラスタ内にあった場合、ZのドメインキーがB上にリストアされないため、Bは操作不能になる。"
 
-#: ../../source/components/nethsm/clustering.rst:388
+#: ../../source/components/nethsm/clustering.rst:393
 msgid ""
 "In other words, only perform a restore in a cluster with backups done in "
 "the same cluster (though again nodes may have been removed or added "
@@ -3294,18 +3302,18 @@ msgid ""
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr "言い換えれば、同じクラスタでバックアップが行われたクラスタでのみリストアを実行してください（ただし、その後ノードが削除または追加されている可能性があります）。あるノードの外部バックアップをリストアしたい場合は、まずそのノードをクラスタから安全に削除し、ファクトリーリセットしてからバックアップをリストアします。"
 
-#: ../../source/components/nethsm/clustering.rst:391
+#: ../../source/components/nethsm/clustering.rst:396
 msgid "Removing a Node Cleanly"
 msgstr "ノードをきれいに削除する"
 
-#: ../../source/components/nethsm/clustering.rst:393
+#: ../../source/components/nethsm/clustering.rst:398
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr "クラスタのどこかがまだ定足数を満たしている限り、そのメンバーのいずれかを使って、他のノードをクラスタから取り除くことができる。"
 
-#: ../../source/components/nethsm/clustering.rst:395
+#: ../../source/components/nethsm/clustering.rst:400
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
@@ -3313,7 +3321,7 @@ msgstr ""
 "まず、削除したいノードのIDを知る必要がある。``GET /cluster/members`` "
 "を通してすべてのノードをリストアップし、適切なノードを探す。"
 
-#: ../../source/components/nethsm/clustering.rst:397
+#: ../../source/components/nethsm/clustering.rst:402
 msgid ""
 "Then it can be removed by calling ``DELETE /cluster/members/<id>``. If "
 "the node in question was still healthy, this will isolate it from the "
@@ -3322,18 +3330,18 @@ msgstr ""
 "その後、``DELETE /cluster/members/<id>`` "
 "を呼び出して削除することができる。問題のノードがまだ健全であれば、これでクラスタの他のノードから切り離され、操作不能になる。"
 
-#: ../../source/components/nethsm/clustering.rst:400
+#: ../../source/components/nethsm/clustering.rst:405
 #, fuzzy
 msgid "Software Updates in Clusters"
 msgstr "ソフトウェア・アップデート"
 
-#: ../../source/components/nethsm/clustering.rst:402
+#: ../../source/components/nethsm/clustering.rst:407
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr "今後のアップデートは、\"cluster-safe\"（これが大多数であるべきだ）または \"cluster-unsafe \"としてマークされる。"
 
-#: ../../source/components/nethsm/clustering.rst:404
+#: ../../source/components/nethsm/clustering.rst:409
 msgid ""
 "Cluster-safe updates can be applied to nodes that are part of a cluster "
 "without removing them from the cluster first. However as with all "
@@ -3342,7 +3350,7 @@ msgid ""
 "update fails)."
 msgstr "クラスタセーフ・アップデートは、クラスタの一部であるノードに対して、そのノードをクラスタから削除することなく適用できます。ただし、すべての操作と同様に、一度に1つのノードで、ノードを削除してもクォーラムを下回らないクラスタ内で（アップデートに失敗した場合など）、これを実行するようにしてください。"
 
-#: ../../source/components/nethsm/clustering.rst:406
+#: ../../source/components/nethsm/clustering.rst:411
 msgid ""
 "Cluster-unsafe updates must be applied to isolated nodes. You should "
 "dismantle the cluster (removing nodes one by one), factory reset all "
@@ -3350,20 +3358,20 @@ msgid ""
 "join the remaining node."
 msgstr "クラスタ安全でないアップデートは、分離されたノードに適用する必要があります。クラスタを解体し（ノードを1つずつ削除し）、1つのノードを除くすべてのノードをファクトリーリセットし、すべてのノードにアップデートを適用し、リセットしたすべてのノードを残りのノードに参加させる必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:408
+#: ../../source/components/nethsm/clustering.rst:413
 msgid "Make sure to back up before such operations."
 msgstr "このような操作の前には、必ずバックアップを取ってください。"
 
-#: ../../source/components/nethsm/clustering.rst:411
+#: ../../source/components/nethsm/clustering.rst:416
 msgid "Reconfiguring an Existing Cluster"
 msgstr "既存のクラスタの再構成"
 
-#: ../../source/components/nethsm/clustering.rst:414
+#: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
 msgid "Changing the Cluster CA"
 msgstr "デフォルトカーネルの変更"
 
-#: ../../source/components/nethsm/clustering.rst:416
+#: ../../source/components/nethsm/clustering.rst:421
 msgid ""
 "An existing cluster (with two or more nodes) **cannot** change its "
 "cluster CA while in operation. If you need to change this certificate: "
@@ -3373,12 +3381,12 @@ msgstr ""
 "** "
 "既存のクラスタ（2つ以上のノードを持つ）**、運用中にクラスタCAを変更することはできません。この証明書を変更する必要がある場合は、ノードを選択し、他のノードをすべて削除し、CAを更新してから、他のメンバーを再参加させます。"
 
-#: ../../source/components/nethsm/clustering.rst:419
+#: ../../source/components/nethsm/clustering.rst:424
 #, fuzzy
 msgid "Changing the Network Configuration of Nodes"
 msgstr "ネットワーク構成を問い合わせる"
 
-#: ../../source/components/nethsm/clustering.rst:421
+#: ../../source/components/nethsm/clustering.rst:426
 msgid ""
 "Modifying the network configuration of a node (e.g. changing its IP) will"
 " automatically inform the other nodes about the update. You should "
@@ -5085,7 +5093,7 @@ msgstr ""
 #: ../../source/components/nethsm/getting-started.rst:75
 #: ../../source/components/nethsm/getting-started.rst:84
 #: ../../source/components/nethsm/getting-started.rst:88
-#: ../../source/components/nethsm/system_recovery.rst:73
+#: ../../source/components/nethsm/system_recovery.rst:75
 msgid "Back side of the server"
 msgstr "サーバーの裏側"
 
@@ -8132,7 +8140,7 @@ msgstr ""
 "で終わるインストーラーイメージを、提供されたプライベートダウンロードページからダウンロードしてください。"
 
 #: ../../source/components/nethsm/system_recovery.rst:33
-#: ../../source/components/nethsm/system_recovery.rst:62
+#: ../../source/components/nethsm/system_recovery.rst:64
 msgid ""
 "Download the installer image of the same version which was installed at "
 "the time of corruption. A downgrade, or upgrade skipping versions, is not"
@@ -8155,35 +8163,40 @@ msgstr ""
 "を使うこともできます。パーティションテーブルがないという警告は無視してください。"
 
 #: ../../source/components/nethsm/system_recovery.rst:39
-#, fuzzy
-msgid "Connect the USB flash drive with any USB port of the NetHSM."
-msgstr "NetHSMのフロントパネルにあるUSBポートにUSBフラッシュドライブを接続します。"
+msgid ""
+"Connect the USB flash drive to a USB port on the NetHSM. NetHSM can boot "
+"from the USB ports on the front of the machine and the four vertical "
+"stacked ones on the back of the machine."
+msgstr ""
 
-#: ../../source/components/nethsm/system_recovery.rst:42
+#: ../../source/components/nethsm/system_recovery.rst:43
+#, fuzzy
 msgid ""
 "Some USB drives are incompatible with the NetHSM. This results in the "
 "NetHSM not recognizing them as a boot media. In case the NetHSM does not "
-"boot from the connected USB drive, try a different USB drive model."
+"boot from the connected USB drive, try a different USB drive model. Best "
+"results are achieved with drives that have samller capacities and USB 2.0"
+" interface."
 msgstr ""
 "一部の USB ドライブは NetHSM と互換性がありません。このため、NetHSM はこれらの USB "
 "ドライブをブートメディアとして認識しません。接続したUSBドライブからNetHSMが起動しない場合は、別のモデルのUSBドライブをお試しください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:46
+#: ../../source/components/nethsm/system_recovery.rst:48
 #, fuzzy
 msgid "Optionally: Connect a keyboard and monitor with the NetHSM."
 msgstr "キーペアを生成し、NetHSMに保存します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:47
+#: ../../source/components/nethsm/system_recovery.rst:49
 #, fuzzy
 msgid "Make sure the system is turned off, but connected to power."
 msgstr "システムの電源がオフになっていますが、電源に接続され、背面の電源ボタンがオンになっていることを確認してください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:48
+#: ../../source/components/nethsm/system_recovery.rst:50
 #, fuzzy
 msgid "Turn the NetHSM on by pressing the power button on the front."
 msgstr "前面の電源ボタンで NetHSM の電源を入れます。"
 
-#: ../../source/components/nethsm/system_recovery.rst:49
+#: ../../source/components/nethsm/system_recovery.rst:51
 #, fuzzy
 msgid ""
 "Now the software is going to be installed. Wait for ca. one minute until "
@@ -8195,8 +8208,8 @@ msgstr ""
 "モニターにブートメニューが表示されたら、最初のメニューで*NetHSM automatic boot (USB or primary "
 "system)* を選択し、2番目のメニューで*NetHSM Software Installer* を選択します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:54
-#: ../../source/components/nethsm/system_recovery.rst:151
+#: ../../source/components/nethsm/system_recovery.rst:56
+#: ../../source/components/nethsm/system_recovery.rst:153
 msgid ""
 "Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
 " This will unrecoverable wipe the data on the disk."
@@ -8204,7 +8217,7 @@ msgstr ""
 "メニューから``NetHSM Factory Reset - DELETES ALL DATA!`` "
 "を選択しないでください。これはディスク上のデータを回復不可能に消去します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:59
+#: ../../source/components/nethsm/system_recovery.rst:61
 #, fuzzy
 msgid ""
 "Download the installer image ending with ``installer.img.zip`` from the "
@@ -8213,21 +8226,21 @@ msgstr ""
 "*...installer.img.zip* "
 "で終わるインストーラーイメージを、提供されたプライベートダウンロードページからダウンロードしてください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:64
+#: ../../source/components/nethsm/system_recovery.rst:66
 msgid ""
 "Make sure the system is turned off, but connected to power, and the power"
 " button on the back turned on."
 msgstr "システムの電源がオフになっていますが、電源に接続され、背面の電源ボタンがオンになっていることを確認してください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:65
+#: ../../source/components/nethsm/system_recovery.rst:67
 msgid "Connect the BMC network port with a network cable."
 msgstr "BMC ネットワークポートをネットワークケーブルで接続します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:67
+#: ../../source/components/nethsm/system_recovery.rst:69
 msgid "See the image below to identify the BMC network port."
 msgstr "BMCネットワーク・ポートを確認するには、以下の画像を参照してください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:75
+#: ../../source/components/nethsm/system_recovery.rst:77
 msgid ""
 "Per default the BMC will wait for an address assignment with DHCP. If "
 "DHCP is not available the link-local address can be determined with Nmap."
@@ -8238,7 +8251,7 @@ msgstr ""
 "によるアドレス割り当てを待ちます。DHCPが利用できない場合、リンクローカルアドレスはNmapで決定できる。コマンド``nmap "
 "<network-in-cidr-notation> -p 80 --open`` は、ポート 80 を開いているホストのリストを返します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:78
+#: ../../source/components/nethsm/system_recovery.rst:80
 msgid ""
 "Open the BMC website in a web browser, using the determined IP address "
 "from the previous step. To login, the default credentials are username "
@@ -8247,17 +8260,17 @@ msgstr ""
 "前のステップで決定したIPアドレスを使用して、ウェブブラウザでBMCウェブサイトを開きます。ログインするには、デフォルトの認証情報はユーザー名``bmc_admin``、パスワード``8mCU$3r0nE``"
 " です。"
 
-#: ../../source/components/nethsm/system_recovery.rst:82
+#: ../../source/components/nethsm/system_recovery.rst:84
 msgid ""
 "In case you encounter an unauthorized login error on the BMC web "
 "interface it can be three of the following issues."
 msgstr "BMCウェブインターフェイスで不正ログインエラーが発生した場合、以下の3つの問題が考えられます。"
 
-#: ../../source/components/nethsm/system_recovery.rst:84
+#: ../../source/components/nethsm/system_recovery.rst:86
 msgid "Username or password wrong."
 msgstr "ユーザー名またはパスワードが間違っています。"
 
-#: ../../source/components/nethsm/system_recovery.rst:85
+#: ../../source/components/nethsm/system_recovery.rst:87
 msgid ""
 "During factory reset the BMC generates a new TLS certificate. Some web "
 "browsers fail with connection errors when the certificate changes while "
@@ -8267,14 +8280,14 @@ msgstr ""
 "工場出荷時のリセット時に、BMC が新しい TLS 証明書を生成します。同じウィンドウを開いたまま証明書が変更されると、一部の Web "
 "ブラウザは接続エラーで失敗します。Web ブラウザのウィンドウを閉じて、新しいウィンドウを開きます。"
 
-#: ../../source/components/nethsm/system_recovery.rst:88
+#: ../../source/components/nethsm/system_recovery.rst:90
 msgid ""
 "The BMC software sometimes shows the issue that it doesn't accept an "
 "older session cookie which are still in the cache of the web browser. "
 "Clear the web browsers cache and try again."
 msgstr "BMCソフトウェアは、ウェブブラウザのキャッシュに残っている古いセッションクッキーを受け入れないという問題を表示することがあります。ウェブブラウザのキャッシュをクリアして、再度お試しください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:91
+#: ../../source/components/nethsm/system_recovery.rst:93
 msgid ""
 "Mount the downloaded installer image by clicking in the menu on the left "
 "on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual "
@@ -8286,12 +8299,12 @@ msgstr ""
 "をクリックしてダウンロードしたインストーラーイメージをマウントします。中央のタブ*usb0* を開き、ボタン*Attach media* "
 "をクリックします。"
 
-#: ../../source/components/nethsm/system_recovery.rst:94
-#: ../../source/components/nethsm/system_recovery.rst:97
+#: ../../source/components/nethsm/system_recovery.rst:96
+#: ../../source/components/nethsm/system_recovery.rst:99
 msgid "BMC menu to attach USB device"
 msgstr "USBデバイスを接続するBMCメニュー"
 
-#: ../../source/components/nethsm/system_recovery.rst:99
+#: ../../source/components/nethsm/system_recovery.rst:101
 msgid ""
 "In the opening dialog choose *Stream local file via browser* as the "
 "*Transfer method*. Click the button *Browse...* and choose the downloaded"
@@ -8300,12 +8313,12 @@ msgstr ""
 "*開いているダイアログで、*転送方法として* ブラウザ経由でローカルファイルをストリームする* を選択します。*Browse...* "
 "ボタンをクリックし、ダウンロードしたインストーラーイメージを選択します。*Submit* ボタンで操作を確認します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:103
-#: ../../source/components/nethsm/system_recovery.rst:106
+#: ../../source/components/nethsm/system_recovery.rst:105
+#: ../../source/components/nethsm/system_recovery.rst:108
 msgid "BMC menu to select USB image"
 msgstr "USBイメージを選択するBMCメニュー"
 
-#: ../../source/components/nethsm/system_recovery.rst:108
+#: ../../source/components/nethsm/system_recovery.rst:110
 msgid ""
 "In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
 "Config*, and then *Remote KVM*."
@@ -8313,28 +8326,28 @@ msgstr ""
 "左側のメニューで、*FRU: Hermes CFL (with TPM) Nitrokey Config* を選択し、*Remote KVM* "
 "を選択します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:109
+#: ../../source/components/nethsm/system_recovery.rst:111
 msgid ""
 "In the middle click the *Open a floating Remote KVM window* button, in "
 "the top right corner of the VGA output box."
 msgstr "中央で、VGA 出力ボックスの右上隅にある*Open a floating Remote KVM window* ボタンをクリックします。"
 
-#: ../../source/components/nethsm/system_recovery.rst:111
-#: ../../source/components/nethsm/system_recovery.rst:114
+#: ../../source/components/nethsm/system_recovery.rst:113
+#: ../../source/components/nethsm/system_recovery.rst:116
 msgid "BMC KVM console view"
 msgstr "BMC KVMコンソールビュー"
 
-#: ../../source/components/nethsm/system_recovery.rst:116
+#: ../../source/components/nethsm/system_recovery.rst:118
 msgid ""
 "This window will show you the graphical output of the NetHSM installer. "
 "Keep this second window open together with the main window from the BMC."
 msgstr "このウィンドウには、NetHSMインストーラーのグラフィカルな出力が表示されます。この2番目のウィンドウは、BMCからのメインウィンドウと一緒に開いておいてください。"
 
-#: ../../source/components/nethsm/system_recovery.rst:118
+#: ../../source/components/nethsm/system_recovery.rst:120
 msgid "Change to the view *Overview* from the top of the menu on the left."
 msgstr "左のメニューの一番上から、*Overview* 。"
 
-#: ../../source/components/nethsm/system_recovery.rst:119
+#: ../../source/components/nethsm/system_recovery.rst:121
 msgid ""
 "In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
 "the drop-down next to *Select a Boot Device*."
@@ -8342,12 +8355,12 @@ msgstr ""
 "*Override Boot Device* のボックスで、*Select a Boot Device* の隣にあるドロップダウンから"
 "*USB_BMC-virtual_media* を選択します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:121
-#: ../../source/components/nethsm/system_recovery.rst:124
+#: ../../source/components/nethsm/system_recovery.rst:123
+#: ../../source/components/nethsm/system_recovery.rst:126
 msgid "BMC boot device setting"
 msgstr "BMCブートデバイス設定"
 
-#: ../../source/components/nethsm/system_recovery.rst:126
+#: ../../source/components/nethsm/system_recovery.rst:128
 msgid ""
 "In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, "
 "select *On* from the drop-down menu next to *Power*. Confirm with the "
@@ -8356,18 +8369,18 @@ msgstr ""
 "タイトル*FRU: Hermes CFL (with TPM) Nitrokey Config* のボックスで、*Power* "
 "の隣にあるドロップダウンメニューから*On* を選択します。*Apply* ボタンで確認します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:129
-#: ../../source/components/nethsm/system_recovery.rst:132
+#: ../../source/components/nethsm/system_recovery.rst:131
+#: ../../source/components/nethsm/system_recovery.rst:134
 msgid "BMC power up setting"
 msgstr "BMCパワーアップ設定"
 
-#: ../../source/components/nethsm/system_recovery.rst:134
+#: ../../source/components/nethsm/system_recovery.rst:136
 msgid ""
 "In the previously opened *Remote KVM* window you can now see the "
 "installation wizard."
 msgstr "先に開いた*リモート KVM* ウィンドウに、インストールウィザードが表示されます。"
 
-#: ../../source/components/nethsm/system_recovery.rst:135
+#: ../../source/components/nethsm/system_recovery.rst:137
 msgid ""
 "The KVM window now shows the boot dialog. Confirm the selection of "
 "``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
@@ -8375,23 +8388,23 @@ msgstr ""
 "KVMウィンドウにブートダイアログが表示されます。*Enter* キーで、``NetHSM automatic boot (USB or "
 "primary system)`` の選択を確認します。"
 
-#: ../../source/components/nethsm/system_recovery.rst:138
-#: ../../source/components/nethsm/system_recovery.rst:141
+#: ../../source/components/nethsm/system_recovery.rst:140
+#: ../../source/components/nethsm/system_recovery.rst:143
 msgid "NetHSM boot selection in the BMC KVM console"
 msgstr "BMC KVMコンソールでのNetHSMブート選択"
 
-#: ../../source/components/nethsm/system_recovery.rst:143
+#: ../../source/components/nethsm/system_recovery.rst:145
 msgid ""
 "In the following dialog confirm the selection of ``NetHSM Software "
 "Installer`` with the *Enter* key."
 msgstr "次のダイアログで、``NetHSM Software Installer`` の選択を、*Enter* キーで確認する。"
 
-#: ../../source/components/nethsm/system_recovery.rst:145
-#: ../../source/components/nethsm/system_recovery.rst:148
+#: ../../source/components/nethsm/system_recovery.rst:147
+#: ../../source/components/nethsm/system_recovery.rst:150
 msgid "NetHSM installer selection in the BMC KVM console"
 msgstr "BMC KVMコンソールでのNetHSMインストーラの選択"
 
-#: ../../source/components/nethsm/system_recovery.rst:153
+#: ../../source/components/nethsm/system_recovery.rst:155
 msgid "The NetHSM Installer will install the system software and shutdown."
 msgstr "NetHSM インストーラーがシステムソフトウェアをインストールし、シャットダウンします。"
 
@@ -30108,22 +30121,17 @@ msgstr "ユーザー向けタグ"
 msgid ""
 ":doc:`nk-app2/index`: graphical application for Nitrokey 3 and Nitrokey "
 "Passkey devices"
-msgstr ""
-":doc:`nk-app2/index`: Nitrokey 3 および Nitrokey Passkey "
-"デバイス用のグラフィカルアプリケーション"
+msgstr ":doc:`nk-app2/index`: Nitrokey 3 および Nitrokey Passkey デバイス用のグラフィカルアプリケーション"
 
 #: ../../source/components/software/index.rst:18
 msgid ""
 ":doc:`nk-app1/index`: graphical application for Nitrokey Pro and Nitrokey"
 " Storage devices"
-msgstr ""
-":doc:`nk-app1/index`: ニトロキー Pro および Nitrokey Storage "
-"デバイス用のグラフィカルアプリケーション"
+msgstr ":doc:`nk-app1/index`: ニトロキー Pro および Nitrokey Storage デバイス用のグラフィカルアプリケーション"
 
 #: ../../source/components/software/index.rst:19
 msgid ":doc:`nitropy/index`: command-line application for all Nitrokey devices"
-msgstr ":doc:`ニトロピ/index`: "
-"すべてのニトロキーデバイスに対応したコマンドラインアプリケーション"
+msgstr ":doc:`ニトロピ/index`: すべてのニトロキーデバイスに対応したコマンドラインアプリケーション"
 
 #: ../../source/components/software/index.rst:22
 msgid "For Developers"
@@ -34661,3 +34669,7 @@ msgstr "マーク クロップド出力"
 #~ "プロダクション・イメージは、高いセキュリティが要求されるプロダクション環境向けに提供される。暗号化された接続で接続される外部の "
 #~ "etcd "
 #~ "キー・バリュー・ストアが必要です。NetHSMプロセスは、ハードウェアベースの分離（KVM）とデバイス固有の暗号化で実行できます。イメージはOCIイメージとして配布され、DockerやPodmanのような互換性のあるエクゼキュータでローカルに実行できます。"
+
+#~ msgid "Connect the USB flash drive with any USB port of the NetHSM."
+#~ msgstr "NetHSMのフロントパネルにあるUSBポートにUSBフラッシュドライブを接続します。"
+

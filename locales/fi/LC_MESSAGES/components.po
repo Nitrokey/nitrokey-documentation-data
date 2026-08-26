@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-20 19:05+0000\n"
+"POT-Creation-Date: 2026-08-26 11:58+0000\n"
 "PO-Revision-Date: 2026-08-20 19:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/fi/>\n"
 "Language: fi\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/fi/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -1321,7 +1320,7 @@ msgstr "D-sub naaras *DE-9* portti."
 #: ../../source/components/nethsm/administration.rst:672
 #: ../../source/components/nethsm/getting-started.rst:82
 #: ../../source/components/nethsm/getting-started.rst:107
-#: ../../source/components/nethsm/system_recovery.rst:57
+#: ../../source/components/nethsm/system_recovery.rst:59
 #, fuzzy
 msgid "NetHSM 1"
 msgstr "NetHSM"
@@ -1524,9 +1523,10 @@ msgstr "NetHSM voidaan palauttaa varmuuskopiotiedostosta."
 #, fuzzy
 msgid ""
 "If the NetHSM is *Unprovisioned* it will restore all *User Data* "
-"including system configuration and reboot. Therefore the system may get "
-"different network settings, TLS certificate and *Unlock Passphrase* "
-"afterwards. The NetHSM ends in a *Locked* state."
+"including system configuration. After the restore the NetHSM is in a "
+"*Locked* state. The restored TLS certificate and *Unlock Passphrase* are "
+"immediately available. The network settings are only applied after a "
+"reboot."
 msgstr ""
 "Jos NetHSM on *Unprovisioned*, se palauttaa kaikki *Käyttäjätiedot* "
 "mukaan lukien järjestelmän kokoonpanon ja uudelleenkäynnistyksen. Tämän "
@@ -3096,13 +3096,13 @@ msgstr ""
 "/POST_config-tls-csr-pem>`__."
 
 #: ../../source/components/nethsm/clustering.rst:164
+#, fuzzy
 msgid ""
 "To properly authenticate nodes, the clustering backend (etcd) expects "
 "that each node has a certificate with a properly filled Subject Alt Names"
-" (SAN) field. In particular, nodes expected to be reached only via their "
-"IP need to have a proper IP SAN in their certificate. IP SANs can be "
-"requested for the CSR by prefixing \"IP:\" to the names, as in "
-"``openssl``:"
+" (SAN) field. Nodes are expected to be reached only via their IP and need"
+" to have a proper IP SAN in their certificate. IP SANs can be requested "
+"for the CSR by prefixing \"IP:\" to the names, as in ``openssl``:"
 msgstr ""
 "Jotta solmut voidaan todentaa asianmukaisesti, klusteroinnin "
 "taustajärjestelmä (etcd) odottaa, että jokaisella solmulla on varmenne, "
@@ -3112,7 +3112,15 @@ msgstr ""
 "voidaan pyytää CSR:ää varten lisäämällä nimiin \"IP:\", kuten osoitteessa"
 " ``openssl``:"
 
-#: ../../source/components/nethsm/clustering.rst:170
+#: ../../source/components/nethsm/clustering.rst:172
+msgid ""
+"If you want to use a public CA for signing your certificates your nodes "
+"must use public IP addresses. This is due to a security requirement which"
+" forbids a public CA to issue certificates with a private IP address in "
+"the IP SAN."
+msgstr ""
+
+#: ../../source/components/nethsm/clustering.rst:175
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
@@ -3121,7 +3129,7 @@ msgstr ""
 "Saadun CSR:n (kutsutaan sitä ``nethsm.csr``) perusteella voimme luoda "
 "sille varmenteen, joka on valmis asennettavaksi. Esimerkiksi ``openssl``:"
 
-#: ../../source/components/nethsm/clustering.rst:177
+#: ../../source/components/nethsm/clustering.rst:182
 #, fuzzy
 msgid ""
 "Then install the obtained ``new_cert.pem`` with the "
@@ -3132,7 +3140,7 @@ msgstr ""
 " <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/GET_config-tls-cert-pem>`__."
 
-#: ../../source/components/nethsm/clustering.rst:179
+#: ../../source/components/nethsm/clustering.rst:184
 msgid ""
 "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls"
 "/cluster-ca.pem`` endpoint (refer to the `API documentation "
@@ -3146,15 +3154,15 @@ msgstr ""
 "mahdollista vasta, kun asennettu TLS-varmenne on sen allekirjoittama. "
 "Muussa tapauksessa toimenpide hylätään."
 
-#: ../../source/components/nethsm/clustering.rst:182
+#: ../../source/components/nethsm/clustering.rst:187
 msgid "This process has to be repeated for every node."
 msgstr "Tämä prosessi on toistettava jokaisen solmun kohdalla."
 
-#: ../../source/components/nethsm/clustering.rst:185
+#: ../../source/components/nethsm/clustering.rst:190
 msgid "Clock Sync"
 msgstr "Kellon synkronointi"
 
-#: ../../source/components/nethsm/clustering.rst:187
+#: ../../source/components/nethsm/clustering.rst:192
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
@@ -3162,31 +3170,31 @@ msgstr ""
 "Varmista, että jokaiselle solmulle on määritetty tarkka järjestelmäaika. "
 "Jos näin ei ole, säädä niiden kelloja ``/config/time`` -päätteellä."
 
-#: ../../source/components/nethsm/clustering.rst:190
+#: ../../source/components/nethsm/clustering.rst:195
 #, fuzzy
 msgid "Adding a New Node"
 msgstr "ADSK:n lisääminen"
 
-#: ../../source/components/nethsm/clustering.rst:192
+#: ../../source/components/nethsm/clustering.rst:197
 msgid "Adding a node to a cluster is done in two steps:"
 msgstr "Solmun lisääminen klusteriin tapahtuu kahdessa vaiheessa:"
 
-#: ../../source/components/nethsm/clustering.rst:194
+#: ../../source/components/nethsm/clustering.rst:199
 #, fuzzy
 msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "rekisteröidä lisäys klusteriin (minkä tahansa sen jäsenen kautta)."
 
-#: ../../source/components/nethsm/clustering.rst:195
+#: ../../source/components/nethsm/clustering.rst:200
 #, fuzzy
 msgid "Tell the new node to join"
 msgstr "kerro uudelle solmulle liittymisestä"
 
-#: ../../source/components/nethsm/clustering.rst:198
+#: ../../source/components/nethsm/clustering.rst:203
 #, fuzzy
 msgid "Configure a Backup Passphrase"
 msgstr "Uusi varmuuskopiointisalasana"
 
-#: ../../source/components/nethsm/clustering.rst:200
+#: ../../source/components/nethsm/clustering.rst:205
 msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
@@ -3196,11 +3204,11 @@ msgstr ""
 "uuden liittyjän rekisteröintiin (katso ``/config/backup-passphrase`` "
 "-päätepisteen API-dokumentaatio)."
 
-#: ../../source/components/nethsm/clustering.rst:203
+#: ../../source/components/nethsm/clustering.rst:208
 msgid "Registering a New Node"
 msgstr "Uuden solmun rekisteröinti"
 
-#: ../../source/components/nethsm/clustering.rst:206
+#: ../../source/components/nethsm/clustering.rst:211
 msgid ""
 "Registering a node immediately introduces a new node in the cluster, "
 "modifying the quorum threshold, even if the node has not actually joined "
@@ -3216,7 +3224,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ ja `Operational "
 "Redundancy`_ tämän asiakirjan osassa."
 
-#: ../../source/components/nethsm/clustering.rst:208
+#: ../../source/components/nethsm/clustering.rst:213
 msgid ""
 "Have at hand the IP of the node that will join. The full *URL* (also "
 "called *peer URL* in ``etcd`` terminology) of that node will be "
@@ -3231,7 +3239,7 @@ msgstr ""
 " että solmujen välinen palomuuri sallii TCP-liikenteen kyseiseen "
 "porttiin."
 
-#: ../../source/components/nethsm/clustering.rst:210
+#: ../../source/components/nethsm/clustering.rst:215
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
@@ -3241,7 +3249,7 @@ msgstr ""
 "/cluster/members`` solmuun, johon odotetaan liittymistä. Tämän pitäisi "
 "listata vain yksi jäsen: itsensä."
 
-#: ../../source/components/nethsm/clustering.rst:212
+#: ../../source/components/nethsm/clustering.rst:217
 msgid ""
 "Then register that expected URL on any existing node of the cluster (if "
 "you don't have a cluster yet, do this on the NetHSM that will serve as "
@@ -3257,11 +3265,11 @@ msgstr ""
 "dokumentaatio <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) "
 "ja antamalla sille URL-osoitteen sisältävä JSON-runko."
 
-#: ../../source/components/nethsm/clustering.rst:214
+#: ../../source/components/nethsm/clustering.rst:219
 msgid "If successful, this returns a JSON body of the form:"
 msgstr "Jos tämä onnistuu, se palauttaa lomakkeen JSON-rungon:"
 
-#: ../../source/components/nethsm/clustering.rst:236
+#: ../../source/components/nethsm/clustering.rst:241
 msgid ""
 "which contains information necessary for the new node to join the "
 "cluster. In particular, it lists all members of the cluster (where the "
@@ -3275,15 +3283,15 @@ msgstr ""
 "avaimen, joka on salattu sekä avaus- että varmuuslausekkeella - joten "
 "varmuuslauseke on määritettävä aiemmin."
 
-#: ../../source/components/nethsm/clustering.rst:238
+#: ../../source/components/nethsm/clustering.rst:243
 msgid "Keep that response for the next step."
 msgstr "Säilytä vastaus seuraavaa vaihetta varten."
 
-#: ../../source/components/nethsm/clustering.rst:241
+#: ../../source/components/nethsm/clustering.rst:246
 msgid "Actually Joining the Cluster"
 msgstr "Varsinainen liittyminen klusteriin"
 
-#: ../../source/components/nethsm/clustering.rst:243
+#: ../../source/components/nethsm/clustering.rst:248
 msgid ""
 "Take the response from the last step and append to it a "
 "``backupPassphrase`` field containing the backup passphrase of the node "
@@ -3299,7 +3307,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) solmussa, johon"
 " liittyjän odotetaan liittyvän."
 
-#: ../../source/components/nethsm/clustering.rst:245
+#: ../../source/components/nethsm/clustering.rst:250
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
 "enact the actual join, wiping the data on the new joiner to instead sync "
@@ -3309,7 +3317,7 @@ msgstr ""
 "toteuttaa varsinaisen liittymisen, pyyhkii uuden liittyjän tiedot ja "
 "synkronoi sen sijaan sen tilan klusterin tilan kanssa."
 
-#: ../../source/components/nethsm/clustering.rst:247
+#: ../../source/components/nethsm/clustering.rst:252
 msgid ""
 "Depending on the networking and cluster conditions, this operation may "
 "take a few dozen seconds. If this operation fails immediately (e.g. the "
@@ -3325,7 +3333,7 @@ msgstr ""
 "liittyminen onnistuu, tämä operaatio on lopullinen, ja se voidaan "
 "peruuttaa vain tehdasasetusten palauttamisella."
 
-#: ../../source/components/nethsm/clustering.rst:249
+#: ../../source/components/nethsm/clustering.rst:254
 msgid ""
 "If this join is successful, the node will end up in a ``Locked`` state, "
 "and has to be unlocked with the unlock passphrase of the node that was "
@@ -3338,7 +3346,7 @@ msgstr ""
 "jälkeen avaussalasana voidaan vaihtaa (avaussalasanat ovat "
 "solmukohtaisia, eikä niitä jaeta solmujen kesken)."
 
-#: ../../source/components/nethsm/clustering.rst:252
+#: ../../source/components/nethsm/clustering.rst:257
 msgid ""
 "Even after the join has succeeded, if the cluster's database is large or "
 "if the cluster is busy, it may take some time for the new joiner to "
@@ -3354,17 +3362,17 @@ msgstr ""
 "Erityisesti uusi liittyjä voi aluksi palauttaa virheitä esimerkiksi "
 "yrittäessään avata lukitusta. Anna tällöin aikaa ja yritä uudelleen."
 
-#: ../../source/components/nethsm/clustering.rst:255
+#: ../../source/components/nethsm/clustering.rst:260
 #, fuzzy
 msgid "Adding a Witness Node"
 msgstr "ADSK:n lisääminen"
 
-#: ../../source/components/nethsm/clustering.rst:258
+#: ../../source/components/nethsm/clustering.rst:263
 #, fuzzy
 msgid "Prepare a Witness"
 msgstr "Valmistelu"
 
-#: ../../source/components/nethsm/clustering.rst:260
+#: ../../source/components/nethsm/clustering.rst:265
 msgid ""
 "You will need an environment with ``etcd`` v3.6 available, with an IPv4 "
 "address (at least) reachable by the other members of your cluster. TCP "
@@ -3374,7 +3382,7 @@ msgstr ""
 "IPv4-osoite (vähintään), johon klusterin muut jäsenet voivat päästä. TCP-"
 "liikenne porttiin 2380 ja portista 2380 on sallittava."
 
-#: ../../source/components/nethsm/clustering.rst:262
+#: ../../source/components/nethsm/clustering.rst:267
 msgid ""
 "Create an empty directory where ``etcd`` will store its data, and write "
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
@@ -3384,7 +3392,7 @@ msgstr ""
 "polku (me käytämme ``/var/etcd/data``). Varmista, että prosessin "
 "käynnistävällä käyttäjällä on oikeudet lukea ja kirjoittaa hakemistoon."
 
-#: ../../source/components/nethsm/clustering.rst:264
+#: ../../source/components/nethsm/clustering.rst:269
 msgid ""
 "Transfer to the machine the CA certificate that is being used to "
 "authenticate nodes in the cluster. You should have created one in the "
@@ -3395,7 +3403,7 @@ msgstr ""
 "todennukseen. Sinun olisi pitänyt luoda sellainen kohdassa `CA:n luominen"
 " ja asentaminen`_. Säilytämme sen osoitteessa ``/var/etcd/CA.pem``."
 
-#: ../../source/components/nethsm/clustering.rst:266
+#: ../../source/components/nethsm/clustering.rst:271
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
@@ -3406,7 +3414,7 @@ msgstr ""
 "vertaistensa kanssa. Tämä voidaan tehdä esimerkiksi osoitteessa "
 "``openssl``:"
 
-#: ../../source/components/nethsm/clustering.rst:279
+#: ../../source/components/nethsm/clustering.rst:284
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
@@ -3414,12 +3422,12 @@ msgstr ""
 "Tallenna tuloksena saadut ``witness.key`` ja ``witness.pem`` myös "
 "osoitteeseen ``/var/etcd``."
 
-#: ../../source/components/nethsm/clustering.rst:282
+#: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
 msgid "Register Witness to Cluster"
 msgstr "Rekisteröi NitroPhone HMDM-palvelimelle"
 
-#: ../../source/components/nethsm/clustering.rst:284
+#: ../../source/components/nethsm/clustering.rst:289
 msgid ""
 "Follow the normal instructions from the `Registering a New Node`_ section"
 " to signal the existing cluster the addition of a new member with the "
@@ -3429,7 +3437,7 @@ msgstr ""
 "solmun rekisteröinti) antaaksesi olemassa olevalle klusterille signaalin "
 "uuden jäsenen lisäämisestä annetulla URL-osoitteella (URL-osoitteilla)."
 
-#: ../../source/components/nethsm/clustering.rst:286
+#: ../../source/components/nethsm/clustering.rst:291
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
@@ -3437,12 +3445,12 @@ msgstr ""
 "Kirjoita klusterin vastaus muistiin: sen pitäisi sisältää luettelo "
 "klusterin jäsenistä ja liitännäispaketti (et tarvitse tätä osaa)."
 
-#: ../../source/components/nethsm/clustering.rst:289
+#: ../../source/components/nethsm/clustering.rst:294
 #, fuzzy
 msgid "Configure etcd"
 msgstr "Konfigurointi"
 
-#: ../../source/components/nethsm/clustering.rst:291
+#: ../../source/components/nethsm/clustering.rst:296
 msgid ""
 "Unlike NetHSMs which automatically choose a node name for themselves "
 "(using the device ID), you must choose a name for each witness you add, "
@@ -3454,7 +3462,7 @@ msgstr ""
 "jokaiselle lisäämäsi todistajalle, *varmistaen, että nimet ovat "
 "yksilöllisiä*. Käytämme seuraavissa esimerkeissä nimeä \"witness1\"."
 
-#: ../../source/components/nethsm/clustering.rst:293
+#: ../../source/components/nethsm/clustering.rst:298
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
@@ -3462,7 +3470,7 @@ msgstr ""
 "Valmistele NetHSM:n vastauksen kanssa todistajan rekisteröintiä varten "
 "lomakkeen muuttujat:"
 
-#: ../../source/components/nethsm/clustering.rst:302
+#: ../../source/components/nethsm/clustering.rst:307
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
@@ -3472,7 +3480,7 @@ msgstr ""
 "``response.json``, voit luoda nämä kaksi viimeistä muuttujaa "
 "automaattisesti seuraavilla ``jq`` lausekkeilla:"
 
-#: ../../source/components/nethsm/clustering.rst:309
+#: ../../source/components/nethsm/clustering.rst:314
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
@@ -3480,7 +3488,7 @@ msgstr ""
 "Esimerkiksi kohdassa `Registering a New Node`_ annetun "
 "esimerkkivastauksen avulla saat seuraavanlaisen vastauksen:"
 
-#: ../../source/components/nethsm/clustering.rst:318
+#: ../../source/components/nethsm/clustering.rst:323
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
@@ -3488,16 +3496,16 @@ msgstr ""
 "Luo lopuksi ``etcd.conf.yml``-tiedosto käyttämällä "
 "``docs/etcd_witness.conf.template``-tiedostossa annettua mallitiedostoa:"
 
-#: ../../source/components/nethsm/clustering.rst:325
+#: ../../source/components/nethsm/clustering.rst:330
 msgid "This should give you a file of the form:"
 msgstr "Tämän pitäisi antaa tiedosto lomakkeesta:"
 
-#: ../../source/components/nethsm/clustering.rst:350
+#: ../../source/components/nethsm/clustering.rst:355
 #, fuzzy
 msgid "Start etcd"
 msgstr "aloitusvalikko"
 
-#: ../../source/components/nethsm/clustering.rst:352
+#: ../../source/components/nethsm/clustering.rst:357
 msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
@@ -3507,7 +3515,7 @@ msgstr ""
 "palveluna, säiliönä jne.) osoittamalla se edellisessä vaiheessa luotuun "
 "konfiguraatiotiedostoon:"
 
-#: ../../source/components/nethsm/clustering.rst:359
+#: ../../source/components/nethsm/clustering.rst:364
 msgid ""
 "You should see it start, join the cluster and catch up with the data. "
 "After some time, you should be able to check that it is healthy with the "
@@ -3517,11 +3525,11 @@ msgstr ""
 " ajan kuluttua sinun pitäisi pystyä tarkistamaan, että se on kunnossa "
 "``etcdctl`` -asiakasohjelmalla:"
 
-#: ../../source/components/nethsm/clustering.rst:365
+#: ../../source/components/nethsm/clustering.rst:370
 msgid "This key should exist and contain \"1\"."
 msgstr "Tämän avaimen on oltava olemassa ja sen on sisällettävä \"1\"."
 
-#: ../../source/components/nethsm/clustering.rst:367
+#: ../../source/components/nethsm/clustering.rst:372
 msgid ""
 "Make sure this process keeps running, as it is now a proper member of "
 "your cluster. If you need to decommission it, first properly remove it "
@@ -3533,17 +3541,17 @@ msgstr ""
 "kunnolla klusterista (ks. oma osio). Jos sen tavoitettavissa oleva IP-"
 "osoite muuttuu, päivitä sen URL-osoite klusterista."
 
-#: ../../source/components/nethsm/clustering.rst:370
+#: ../../source/components/nethsm/clustering.rst:375
 #, fuzzy
 msgid "Operating a Cluster"
 msgstr "Valinnainen vaihe"
 
-#: ../../source/components/nethsm/clustering.rst:373
+#: ../../source/components/nethsm/clustering.rst:378
 #: ../../source/components/nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
 msgstr "Varmuuskopiointi ja palautus"
 
-#: ../../source/components/nethsm/clustering.rst:375
+#: ../../source/components/nethsm/clustering.rst:380
 msgid ""
 "The backup operation works the same as without a cluster and can be "
 "requested from any node of the cluster. It will back up data for the "
@@ -3556,7 +3564,7 @@ msgstr ""
 "oteta huomioon, ellei varmuuskopiointia palauteta varaamattomaan "
 "solmuun)."
 
-#: ../../source/components/nethsm/clustering.rst:377
+#: ../../source/components/nethsm/clustering.rst:382
 msgid ""
 "A backup done on a cluster can be restored on the same cluster, even if "
 "some nodes have been added or removed since. Such restores done on "
@@ -3569,7 +3577,7 @@ msgstr ""
 "vaikuta konfiguraatioarvoihin (vain avaimiin, käyttäjiin ja "
 "nimiavaruuksiin), kuten muutkaan osittaiset palautukset."
 
-#: ../../source/components/nethsm/clustering.rst:379
+#: ../../source/components/nethsm/clustering.rst:384
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
@@ -3579,7 +3587,7 @@ msgstr ""
 "solmun solmukohtaiset kentät (kuten verkkokokoonpanon, varmenteet jne.), "
 "jota käytettiin varmuuskopion luomiseen."
 
-#: ../../source/components/nethsm/clustering.rst:381
+#: ../../source/components/nethsm/clustering.rst:386
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
@@ -3587,7 +3595,7 @@ msgstr ""
 "Suuren varmuuskopion palauttaminen voi kuormittaa klusteria jonkin aikaa,"
 " kun palautusta suorittava solmu välittää muutoksia muille."
 
-#: ../../source/components/nethsm/clustering.rst:383
+#: ../../source/components/nethsm/clustering.rst:388
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
@@ -3595,7 +3603,7 @@ msgstr ""
 "Tämä toiminto on yhteensopiva aiemmilla NetHSM-versioilla tehtyjen "
 "varmuuskopioiden kanssa."
 
-#: ../../source/components/nethsm/clustering.rst:386
+#: ../../source/components/nethsm/clustering.rst:391
 msgid ""
 "Restoring on a node A a backup made on another node Z with a different "
 "domain key will correctly rewrite A's domain key, as before. However if A"
@@ -3607,7 +3615,7 @@ msgstr ""
 " kuten aiemmin. Jos A oli kuitenkin klusterissa solmun B kanssa, B:stä "
 "tulee toimintakyvytön, koska Z:n toimialueavainta ei palauteta B:hen."
 
-#: ../../source/components/nethsm/clustering.rst:388
+#: ../../source/components/nethsm/clustering.rst:393
 msgid ""
 "In other words, only perform a restore in a cluster with backups done in "
 "the same cluster (though again nodes may have been removed or added "
@@ -3620,11 +3628,11 @@ msgstr ""
 "ensin turvallisesti klusterista, palauta se sitten tehdasasetuksiin ja "
 "palauta varmuuskopio."
 
-#: ../../source/components/nethsm/clustering.rst:391
+#: ../../source/components/nethsm/clustering.rst:396
 msgid "Removing a Node Cleanly"
 msgstr "Solmun poistaminen siististi"
 
-#: ../../source/components/nethsm/clustering.rst:393
+#: ../../source/components/nethsm/clustering.rst:398
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
@@ -3634,7 +3642,7 @@ msgstr ""
 "tahansa sen jäsentä voidaan käyttää toisen solmun poistamiseen "
 "klusterista, olipa tämä solmu jo saavuttamattomissa tai odotettavissa."
 
-#: ../../source/components/nethsm/clustering.rst:395
+#: ../../source/components/nethsm/clustering.rst:400
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
@@ -3642,7 +3650,7 @@ msgstr ""
 "Sinun on ensin tiedettävä poistettavan solmun ID, listaamalla kaikki "
 "solmut osoitteessa ``GET /cluster/members`` ja etsimällä oikea solmu."
 
-#: ../../source/components/nethsm/clustering.rst:397
+#: ../../source/components/nethsm/clustering.rst:402
 msgid ""
 "Then it can be removed by calling ``DELETE /cluster/members/<id>``. If "
 "the node in question was still healthy, this will isolate it from the "
@@ -3652,12 +3660,12 @@ msgstr ""
 "/cluster/members/<id>``. Jos kyseinen solmu oli vielä terve, tämä eristää"
 " sen muusta klusterista ja tekee siitä toimintakelvottoman."
 
-#: ../../source/components/nethsm/clustering.rst:400
+#: ../../source/components/nethsm/clustering.rst:405
 #, fuzzy
 msgid "Software Updates in Clusters"
 msgstr "ohjelmistopäivitys"
 
-#: ../../source/components/nethsm/clustering.rst:402
+#: ../../source/components/nethsm/clustering.rst:407
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
@@ -3665,7 +3673,7 @@ msgstr ""
 "Tulevat päivitykset merkitään \"klusteriturvallisiksi\" (tämän pitäisi "
 "olla suurin osa) tai \"klusteriturvattomiksi\"."
 
-#: ../../source/components/nethsm/clustering.rst:404
+#: ../../source/components/nethsm/clustering.rst:409
 msgid ""
 "Cluster-safe updates can be applied to nodes that are part of a cluster "
 "without removing them from the cluster first. However as with all "
@@ -3679,7 +3687,7 @@ msgstr ""
 " yhdelle solmulle kerrallaan ja sellaisessa klusterissa, jossa solmun "
 "poistaminen ei alita päätösvaltaisuutta (esim. jos päivitys epäonnistuu)."
 
-#: ../../source/components/nethsm/clustering.rst:406
+#: ../../source/components/nethsm/clustering.rst:411
 msgid ""
 "Cluster-unsafe updates must be applied to isolated nodes. You should "
 "dismantle the cluster (removing nodes one by one), factory reset all "
@@ -3692,20 +3700,20 @@ msgstr ""
 "päivitystä jokaiseen solmuun ja saatettava kaikki palautetut solmut "
 "liittymään jäljelle jääneeseen solmuun."
 
-#: ../../source/components/nethsm/clustering.rst:408
+#: ../../source/components/nethsm/clustering.rst:413
 msgid "Make sure to back up before such operations."
 msgstr "Varmista varmuuskopiointi ennen tällaisia toimintoja."
 
-#: ../../source/components/nethsm/clustering.rst:411
+#: ../../source/components/nethsm/clustering.rst:416
 msgid "Reconfiguring an Existing Cluster"
 msgstr "Olemassa olevan klusterin uudelleenkonfigurointi"
 
-#: ../../source/components/nethsm/clustering.rst:414
+#: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
 msgid "Changing the Cluster CA"
 msgstr "Oletusytimen muuttaminen"
 
-#: ../../source/components/nethsm/clustering.rst:416
+#: ../../source/components/nethsm/clustering.rst:421
 msgid ""
 "An existing cluster (with two or more nodes) **cannot** change its "
 "cluster CA while in operation. If you need to change this certificate: "
@@ -3717,12 +3725,12 @@ msgstr ""
 "valitse yksi solmu, poista kaikki muut solmut, päivitä varmenteen "
 "varmentaja ja pyydä sitten muita jäseniä liittymään uudelleen."
 
-#: ../../source/components/nethsm/clustering.rst:419
+#: ../../source/components/nethsm/clustering.rst:424
 #, fuzzy
 msgid "Changing the Network Configuration of Nodes"
 msgstr "Verkon kokoonpanon kysely"
 
-#: ../../source/components/nethsm/clustering.rst:421
+#: ../../source/components/nethsm/clustering.rst:426
 msgid ""
 "Modifying the network configuration of a node (e.g. changing its IP) will"
 " automatically inform the other nodes about the update. You should "
@@ -5628,7 +5636,7 @@ msgstr ""
 #: ../../source/components/nethsm/getting-started.rst:75
 #: ../../source/components/nethsm/getting-started.rst:84
 #: ../../source/components/nethsm/getting-started.rst:88
-#: ../../source/components/nethsm/system_recovery.rst:73
+#: ../../source/components/nethsm/system_recovery.rst:75
 msgid "Back side of the server"
 msgstr "Palvelimen takapuoli"
 
@@ -8910,7 +8918,7 @@ msgstr ""
 "yksityiseltä lataussivulta."
 
 #: ../../source/components/nethsm/system_recovery.rst:33
-#: ../../source/components/nethsm/system_recovery.rst:62
+#: ../../source/components/nethsm/system_recovery.rst:64
 msgid ""
 "Download the installer image of the same version which was installed at "
 "the time of corruption. A downgrade, or upgrade skipping versions, is not"
@@ -8937,38 +8945,43 @@ msgstr ""
 " joiden mukaan osiotaulukko puuttuu."
 
 #: ../../source/components/nethsm/system_recovery.rst:39
-#, fuzzy
-msgid "Connect the USB flash drive with any USB port of the NetHSM."
-msgstr "Liitä USB-muistitikku NetHSM:n etupaneelin USB-porttiin."
+msgid ""
+"Connect the USB flash drive to a USB port on the NetHSM. NetHSM can boot "
+"from the USB ports on the front of the machine and the four vertical "
+"stacked ones on the back of the machine."
+msgstr ""
 
-#: ../../source/components/nethsm/system_recovery.rst:42
+#: ../../source/components/nethsm/system_recovery.rst:43
+#, fuzzy
 msgid ""
 "Some USB drives are incompatible with the NetHSM. This results in the "
 "NetHSM not recognizing them as a boot media. In case the NetHSM does not "
-"boot from the connected USB drive, try a different USB drive model."
+"boot from the connected USB drive, try a different USB drive model. Best "
+"results are achieved with drives that have samller capacities and USB 2.0"
+" interface."
 msgstr ""
 "Jotkin USB-asemat eivät ole yhteensopivia NetHSM:n kanssa. Tämä johtaa "
 "siihen, että NetHSM ei tunnista niitä käynnistysmediana. Jos NetHSM ei "
 "käynnisty liitetystä USB-asemasta, kokeile toista USB-asemamallia."
 
-#: ../../source/components/nethsm/system_recovery.rst:46
+#: ../../source/components/nethsm/system_recovery.rst:48
 #, fuzzy
 msgid "Optionally: Connect a keyboard and monitor with the NetHSM."
 msgstr "Luo avainparin ja tallenna se NetHSM:ään."
 
-#: ../../source/components/nethsm/system_recovery.rst:47
+#: ../../source/components/nethsm/system_recovery.rst:49
 #, fuzzy
 msgid "Make sure the system is turned off, but connected to power."
 msgstr ""
 "Varmista, että järjestelmä on sammutettu, mutta kytketty verkkovirtaan, "
 "ja että sen takaosan virtapainike on päällä."
 
-#: ../../source/components/nethsm/system_recovery.rst:48
+#: ../../source/components/nethsm/system_recovery.rst:50
 #, fuzzy
 msgid "Turn the NetHSM on by pressing the power button on the front."
 msgstr "Kytke NetHSM päälle etupuolella olevasta virtapainikkeesta."
 
-#: ../../source/components/nethsm/system_recovery.rst:49
+#: ../../source/components/nethsm/system_recovery.rst:51
 #, fuzzy
 msgid ""
 "Now the software is going to be installed. Wait for ca. one minute until "
@@ -8981,8 +8994,8 @@ msgstr ""
 "*NetHSM automaattinen käynnistys (USB tai ensisijainen järjestelmä)* ja "
 "toisessa valikossa *NetHSM Software Installer*."
 
-#: ../../source/components/nethsm/system_recovery.rst:54
-#: ../../source/components/nethsm/system_recovery.rst:151
+#: ../../source/components/nethsm/system_recovery.rst:56
+#: ../../source/components/nethsm/system_recovery.rst:153
 msgid ""
 "Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
 " This will unrecoverable wipe the data on the disk."
@@ -8990,7 +9003,7 @@ msgstr ""
 "ÄLÄ valitse valikosta ``NetHSM Factory Reset - DELETES ALL DATA!``. Tämä "
 "pyyhkii levyllä olevat tiedot peruuttamattomasti."
 
-#: ../../source/components/nethsm/system_recovery.rst:59
+#: ../../source/components/nethsm/system_recovery.rst:61
 #, fuzzy
 msgid ""
 "Download the installer image ending with ``installer.img.zip`` from the "
@@ -8999,7 +9012,7 @@ msgstr ""
 "Lataa asennusohjelman kuva, jonka pääte on *...installer.img.zip*, "
 "yksityiseltä lataussivulta."
 
-#: ../../source/components/nethsm/system_recovery.rst:64
+#: ../../source/components/nethsm/system_recovery.rst:66
 msgid ""
 "Make sure the system is turned off, but connected to power, and the power"
 " button on the back turned on."
@@ -9007,15 +9020,15 @@ msgstr ""
 "Varmista, että järjestelmä on sammutettu, mutta kytketty verkkovirtaan, "
 "ja että sen takaosan virtapainike on päällä."
 
-#: ../../source/components/nethsm/system_recovery.rst:65
+#: ../../source/components/nethsm/system_recovery.rst:67
 msgid "Connect the BMC network port with a network cable."
 msgstr "Liitä BMC-verkkoportti verkkokaapelilla."
 
-#: ../../source/components/nethsm/system_recovery.rst:67
+#: ../../source/components/nethsm/system_recovery.rst:69
 msgid "See the image below to identify the BMC network port."
 msgstr "Katso alla olevasta kuvasta BMC-verkkoportin tunnistaminen."
 
-#: ../../source/components/nethsm/system_recovery.rst:75
+#: ../../source/components/nethsm/system_recovery.rst:77
 msgid ""
 "Per default the BMC will wait for an address assignment with DHCP. If "
 "DHCP is not available the link-local address can be determined with Nmap."
@@ -9027,7 +9040,7 @@ msgstr ""
 "Nmapin avulla. Komento ``nmap <network-in-cidr-notation> -p 80 --open`` "
 "palauttaa luettelon isännistä, joilla on avoin portti 80."
 
-#: ../../source/components/nethsm/system_recovery.rst:78
+#: ../../source/components/nethsm/system_recovery.rst:80
 msgid ""
 "Open the BMC website in a web browser, using the determined IP address "
 "from the previous step. To login, the default credentials are username "
@@ -9038,7 +9051,7 @@ msgstr ""
 "tunnistetiedot ovat käyttäjänimi ``bmc_admin`` ja salasana "
 "``8mCU$3r0nE``."
 
-#: ../../source/components/nethsm/system_recovery.rst:82
+#: ../../source/components/nethsm/system_recovery.rst:84
 msgid ""
 "In case you encounter an unauthorized login error on the BMC web "
 "interface it can be three of the following issues."
@@ -9046,11 +9059,11 @@ msgstr ""
 "Jos BMC-verkkokäyttöliittymässä ilmenee luvattoman kirjautumisen virhe, "
 "syynä voi olla kolme seuraavista asioista."
 
-#: ../../source/components/nethsm/system_recovery.rst:84
+#: ../../source/components/nethsm/system_recovery.rst:86
 msgid "Username or password wrong."
 msgstr "Käyttäjätunnus tai salasana väärin."
 
-#: ../../source/components/nethsm/system_recovery.rst:85
+#: ../../source/components/nethsm/system_recovery.rst:87
 msgid ""
 "During factory reset the BMC generates a new TLS certificate. Some web "
 "browsers fail with connection errors when the certificate changes while "
@@ -9062,7 +9075,7 @@ msgstr ""
 " saman ikkunan pysyessä auki. Sulje verkkoselaimen ikkuna ja avaa uusi "
 "ikkuna."
 
-#: ../../source/components/nethsm/system_recovery.rst:88
+#: ../../source/components/nethsm/system_recovery.rst:90
 msgid ""
 "The BMC software sometimes shows the issue that it doesn't accept an "
 "older session cookie which are still in the cache of the web browser. "
@@ -9072,7 +9085,7 @@ msgstr ""
 "istuntoevästejä, jotka ovat edelleen selaimen välimuistissa. Tyhjennä "
 "verkkoselaimen välimuisti ja yritä uudelleen."
 
-#: ../../source/components/nethsm/system_recovery.rst:91
+#: ../../source/components/nethsm/system_recovery.rst:93
 msgid ""
 "Mount the downloaded installer image by clicking in the menu on the left "
 "on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual "
@@ -9084,12 +9097,12 @@ msgstr ""
 "media* alivalikossa. Avaa keskeltä välilehti *usb0* ja napsauta "
 "painiketta *Attach media*."
 
-#: ../../source/components/nethsm/system_recovery.rst:94
-#: ../../source/components/nethsm/system_recovery.rst:97
+#: ../../source/components/nethsm/system_recovery.rst:96
+#: ../../source/components/nethsm/system_recovery.rst:99
 msgid "BMC menu to attach USB device"
 msgstr "BMC-valikko USB-laitteen liittämistä varten"
 
-#: ../../source/components/nethsm/system_recovery.rst:99
+#: ../../source/components/nethsm/system_recovery.rst:101
 msgid ""
 "In the opening dialog choose *Stream local file via browser* as the "
 "*Transfer method*. Click the button *Browse...* and choose the downloaded"
@@ -9099,12 +9112,12 @@ msgstr ""
 "siirtomenetelmäksi *Transfer method*. Napsauta painiketta *Browse...* ja "
 "valitse ladattu asennuskuva. Vahvista toimenpide *Submit* -painikkeella."
 
-#: ../../source/components/nethsm/system_recovery.rst:103
-#: ../../source/components/nethsm/system_recovery.rst:106
+#: ../../source/components/nethsm/system_recovery.rst:105
+#: ../../source/components/nethsm/system_recovery.rst:108
 msgid "BMC menu to select USB image"
 msgstr "BMC-valikko USB-kuvan valitsemiseksi"
 
-#: ../../source/components/nethsm/system_recovery.rst:108
+#: ../../source/components/nethsm/system_recovery.rst:110
 msgid ""
 "In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
 "Config*, and then *Remote KVM*."
@@ -9112,7 +9125,7 @@ msgstr ""
 "Valitse vasemmalla olevasta valikosta *FRU: Hermes CFL (with TPM) "
 "Nitrokey Config* ja sitten *Remote KVM*."
 
-#: ../../source/components/nethsm/system_recovery.rst:109
+#: ../../source/components/nethsm/system_recovery.rst:111
 msgid ""
 "In the middle click the *Open a floating Remote KVM window* button, in "
 "the top right corner of the VGA output box."
@@ -9120,12 +9133,12 @@ msgstr ""
 "Napsauta keskellä VGA-ulostuloruudun oikeassa yläkulmassa olevaa *Avaa "
 "kelluva etä-KVM-ikkuna* -painiketta."
 
-#: ../../source/components/nethsm/system_recovery.rst:111
-#: ../../source/components/nethsm/system_recovery.rst:114
+#: ../../source/components/nethsm/system_recovery.rst:113
+#: ../../source/components/nethsm/system_recovery.rst:116
 msgid "BMC KVM console view"
 msgstr "BMC KVM -konsolinäkymä"
 
-#: ../../source/components/nethsm/system_recovery.rst:116
+#: ../../source/components/nethsm/system_recovery.rst:118
 msgid ""
 "This window will show you the graphical output of the NetHSM installer. "
 "Keep this second window open together with the main window from the BMC."
@@ -9133,11 +9146,11 @@ msgstr ""
 "Tämä ikkuna näyttää NetHSM-asennusohjelman graafisen tulosteen. Pidä tämä"
 " toinen ikkuna auki yhdessä BMC:n pääikkunan kanssa."
 
-#: ../../source/components/nethsm/system_recovery.rst:118
+#: ../../source/components/nethsm/system_recovery.rst:120
 msgid "Change to the view *Overview* from the top of the menu on the left."
 msgstr "Vaihda näkymään *Overview* vasemmanpuoleisen valikon yläosasta."
 
-#: ../../source/components/nethsm/system_recovery.rst:119
+#: ../../source/components/nethsm/system_recovery.rst:121
 msgid ""
 "In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
 "the drop-down next to *Select a Boot Device*."
@@ -9145,12 +9158,12 @@ msgstr ""
 "Valitse *Override Boot Device*-ruutuun *USB_BMC-virtual_media* * Select a"
 " Boot Device* vieressä olevasta pudotusvalikosta."
 
-#: ../../source/components/nethsm/system_recovery.rst:121
-#: ../../source/components/nethsm/system_recovery.rst:124
+#: ../../source/components/nethsm/system_recovery.rst:123
+#: ../../source/components/nethsm/system_recovery.rst:126
 msgid "BMC boot device setting"
 msgstr "BMC-käynnistyslaitteen asetus"
 
-#: ../../source/components/nethsm/system_recovery.rst:126
+#: ../../source/components/nethsm/system_recovery.rst:128
 msgid ""
 "In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, "
 "select *On* from the drop-down menu next to *Power*. Confirm with the "
@@ -9160,18 +9173,18 @@ msgstr ""
 "FRU: Hermes CFL (with TPM) Nitrokey Config , valitse *On* "
 "-pudotusvalikosta *Power* vieressä. Vahvista *Apply* -painikkeella."
 
-#: ../../source/components/nethsm/system_recovery.rst:129
-#: ../../source/components/nethsm/system_recovery.rst:132
+#: ../../source/components/nethsm/system_recovery.rst:131
+#: ../../source/components/nethsm/system_recovery.rst:134
 msgid "BMC power up setting"
 msgstr "BMC:n käynnistysasetus"
 
-#: ../../source/components/nethsm/system_recovery.rst:134
+#: ../../source/components/nethsm/system_recovery.rst:136
 msgid ""
 "In the previously opened *Remote KVM* window you can now see the "
 "installation wizard."
 msgstr "Aiemmin avatussa *Remote KVM* -ikkunassa näet nyt ohjatun asennuksen."
 
-#: ../../source/components/nethsm/system_recovery.rst:135
+#: ../../source/components/nethsm/system_recovery.rst:137
 msgid ""
 "The KVM window now shows the boot dialog. Confirm the selection of "
 "``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
@@ -9179,12 +9192,12 @@ msgstr ""
 "KVM-ikkunassa näkyy nyt käynnistysikkuna. Vahvista valinta ``NetHSM "
 "automatic boot (USB or primary system)`` näppäimellä *Enter*."
 
-#: ../../source/components/nethsm/system_recovery.rst:138
-#: ../../source/components/nethsm/system_recovery.rst:141
+#: ../../source/components/nethsm/system_recovery.rst:140
+#: ../../source/components/nethsm/system_recovery.rst:143
 msgid "NetHSM boot selection in the BMC KVM console"
 msgstr "NetHSM-käynnistysvalinta BMC KVM -konsolissa"
 
-#: ../../source/components/nethsm/system_recovery.rst:143
+#: ../../source/components/nethsm/system_recovery.rst:145
 msgid ""
 "In the following dialog confirm the selection of ``NetHSM Software "
 "Installer`` with the *Enter* key."
@@ -9192,12 +9205,12 @@ msgstr ""
 "Vahvista seuraavassa valintaikkunassa valinta ``NetHSM Software "
 "Installer`` näppäimellä *Enter*."
 
-#: ../../source/components/nethsm/system_recovery.rst:145
-#: ../../source/components/nethsm/system_recovery.rst:148
+#: ../../source/components/nethsm/system_recovery.rst:147
+#: ../../source/components/nethsm/system_recovery.rst:150
 msgid "NetHSM installer selection in the BMC KVM console"
 msgstr "NetHSM-asennusohjelman valinta BMC KVM -konsolissa"
 
-#: ../../source/components/nethsm/system_recovery.rst:153
+#: ../../source/components/nethsm/system_recovery.rst:155
 msgid "The NetHSM Installer will install the system software and shutdown."
 msgstr "NetHSM-asennusohjelma asentaa järjestelmäohjelmiston ja sammuttaa sen."
 
@@ -34271,8 +34284,8 @@ msgid ""
 ":doc:`nk-app1/index`: graphical application for Nitrokey Pro and Nitrokey"
 " Storage devices"
 msgstr ""
-":doc:`nk-app1/index`: graafinen sovelluksen versio Nitrokey Pro- ja Nitrokey "
-"Storage -laitteille"
+":doc:`nk-app1/index`: graafinen sovelluksen versio Nitrokey Pro- ja "
+"Nitrokey Storage -laitteille"
 
 #: ../../source/components/software/index.rst:19
 msgid ":doc:`nitropy/index`: command-line application for all Nitrokey devices"
@@ -39438,3 +39451,7 @@ msgstr "Merkitse rajattu tuotos"
 #~ "OCI-kuvana, ja sitä voidaan ajaa "
 #~ "paikallisesti yhteensopivalla toteuttajalla, kuten"
 #~ " Dockerilla ja Podmanilla."
+
+#~ msgid "Connect the USB flash drive with any USB port of the NetHSM."
+#~ msgstr "Liitä USB-muistitikku NetHSM:n etupaneelin USB-porttiin."
+

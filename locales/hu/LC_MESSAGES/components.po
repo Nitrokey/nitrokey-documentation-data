@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-08-20 19:05+0000\n"
+"POT-Creation-Date: 2026-08-26 11:58+0000\n"
 "PO-Revision-Date: 2026-08-20 19:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -1342,7 +1341,7 @@ msgstr "D-sub csatlakozó *DE-9* port."
 #: ../../source/components/nethsm/administration.rst:672
 #: ../../source/components/nethsm/getting-started.rst:82
 #: ../../source/components/nethsm/getting-started.rst:107
-#: ../../source/components/nethsm/system_recovery.rst:57
+#: ../../source/components/nethsm/system_recovery.rst:59
 #, fuzzy
 msgid "NetHSM 1"
 msgstr "NetHSM"
@@ -1545,9 +1544,10 @@ msgstr "A NetHSM visszaállítható biztonsági másolatból."
 #, fuzzy
 msgid ""
 "If the NetHSM is *Unprovisioned* it will restore all *User Data* "
-"including system configuration and reboot. Therefore the system may get "
-"different network settings, TLS certificate and *Unlock Passphrase* "
-"afterwards. The NetHSM ends in a *Locked* state."
+"including system configuration. After the restore the NetHSM is in a "
+"*Locked* state. The restored TLS certificate and *Unlock Passphrase* are "
+"immediately available. The network settings are only applied after a "
+"reboot."
 msgstr ""
 "Ha a NetHSM *Nem engedélyezett*, akkor visszaállítja az összes "
 "*felhasználói adatot* beleértve a rendszerkonfigurációt és az "
@@ -3133,13 +3133,13 @@ msgstr ""
 "/POST_config-tls-csr-pem>`__ találhatók."
 
 #: ../../source/components/nethsm/clustering.rst:164
+#, fuzzy
 msgid ""
 "To properly authenticate nodes, the clustering backend (etcd) expects "
 "that each node has a certificate with a properly filled Subject Alt Names"
-" (SAN) field. In particular, nodes expected to be reached only via their "
-"IP need to have a proper IP SAN in their certificate. IP SANs can be "
-"requested for the CSR by prefixing \"IP:\" to the names, as in "
-"``openssl``:"
+" (SAN) field. Nodes are expected to be reached only via their IP and need"
+" to have a proper IP SAN in their certificate. IP SANs can be requested "
+"for the CSR by prefixing \"IP:\" to the names, as in ``openssl``:"
 msgstr ""
 "A csomópontok megfelelő hitelesítéséhez a fürtözési háttértár (etcd) "
 "elvárja, hogy minden csomópont rendelkezzen egy tanúsítvánnyal, amelynek "
@@ -3149,7 +3149,15 @@ msgstr ""
 "tanúsítványukban. Az IP SAN-okat a CSR-hez úgy lehet kérni, hogy a "
 "nevekhez az \"IP:\" előtagot kell csatolni, mint a ``openssl``:"
 
-#: ../../source/components/nethsm/clustering.rst:170
+#: ../../source/components/nethsm/clustering.rst:172
+msgid ""
+"If you want to use a public CA for signing your certificates your nodes "
+"must use public IP addresses. This is due to a security requirement which"
+" forbids a public CA to issue certificates with a private IP address in "
+"the IP SAN."
+msgstr ""
+
+#: ../../source/components/nethsm/clustering.rst:175
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
@@ -3158,7 +3166,7 @@ msgstr ""
 "A kapott CSR (nevezzük ``nethsm.csr``) alapján létrehozhatunk egy "
 "tanúsítványt, amelyet telepíthetünk. Például a ``openssl`` segítségével:"
 
-#: ../../source/components/nethsm/clustering.rst:177
+#: ../../source/components/nethsm/clustering.rst:182
 #, fuzzy
 msgid ""
 "Then install the obtained ``new_cert.pem`` with the "
@@ -3170,7 +3178,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "tls-cert-pem>`__ találhatók."
 
-#: ../../source/components/nethsm/clustering.rst:179
+#: ../../source/components/nethsm/clustering.rst:184
 msgid ""
 "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls"
 "/cluster-ca.pem`` endpoint (refer to the `API documentation "
@@ -3184,15 +3192,15 @@ msgstr ""
 "lehetséges, ha a telepített TLS tanúsítványt aláírta. Ellenkező esetben a"
 " művelet elutasításra kerül."
 
-#: ../../source/components/nethsm/clustering.rst:182
+#: ../../source/components/nethsm/clustering.rst:187
 msgid "This process has to be repeated for every node."
 msgstr "Ezt a folyamatot minden csomópont esetében meg kell ismételni."
 
-#: ../../source/components/nethsm/clustering.rst:185
+#: ../../source/components/nethsm/clustering.rst:190
 msgid "Clock Sync"
 msgstr "Óra szinkronizálás"
 
-#: ../../source/components/nethsm/clustering.rst:187
+#: ../../source/components/nethsm/clustering.rst:192
 msgid ""
 "Make sure every node has been provisioned with an accurate system time. "
 "If not, adjust their clocks with the ``/config/time`` endpoint."
@@ -3200,31 +3208,31 @@ msgstr ""
 "Győződjön meg róla, hogy minden csomópontot pontos rendszeridővel láttak "
 "el. Ha nem, állítsa be az óráikat a ``/config/time`` végponttal."
 
-#: ../../source/components/nethsm/clustering.rst:190
+#: ../../source/components/nethsm/clustering.rst:195
 #, fuzzy
 msgid "Adding a New Node"
 msgstr "ADSK hozzáadása"
 
-#: ../../source/components/nethsm/clustering.rst:192
+#: ../../source/components/nethsm/clustering.rst:197
 msgid "Adding a node to a cluster is done in two steps:"
 msgstr "Egy csomópont hozzáadása egy fürthöz két lépésben történik:"
 
-#: ../../source/components/nethsm/clustering.rst:194
+#: ../../source/components/nethsm/clustering.rst:199
 #, fuzzy
 msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "regisztrálja a kiegészítést a fürtbe (bármelyik tagon keresztül)"
 
-#: ../../source/components/nethsm/clustering.rst:195
+#: ../../source/components/nethsm/clustering.rst:200
 #, fuzzy
 msgid "Tell the new node to join"
 msgstr "mondja meg az új csomópontnak, hogy csatlakozzon"
 
-#: ../../source/components/nethsm/clustering.rst:198
+#: ../../source/components/nethsm/clustering.rst:203
 #, fuzzy
 msgid "Configure a Backup Passphrase"
 msgstr "Az új biztonsági másolat jelszava"
 
-#: ../../source/components/nethsm/clustering.rst:200
+#: ../../source/components/nethsm/clustering.rst:205
 msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
@@ -3235,11 +3243,11 @@ msgstr ""
 "jelszó (lásd a ``/config/backup-passphrase`` végpont API "
 "dokumentációját)."
 
-#: ../../source/components/nethsm/clustering.rst:203
+#: ../../source/components/nethsm/clustering.rst:208
 msgid "Registering a New Node"
 msgstr "Új csomópont regisztrálása"
 
-#: ../../source/components/nethsm/clustering.rst:206
+#: ../../source/components/nethsm/clustering.rst:211
 msgid ""
 "Registering a node immediately introduces a new node in the cluster, "
 "modifying the quorum threshold, even if the node has not actually joined "
@@ -3255,7 +3263,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ és a "
 "`Operational Redundancy`_ szakaszát."
 
-#: ../../source/components/nethsm/clustering.rst:208
+#: ../../source/components/nethsm/clustering.rst:213
 msgid ""
 "Have at hand the IP of the node that will join. The full *URL* (also "
 "called *peer URL* in ``etcd`` terminology) of that node will be "
@@ -3269,7 +3277,7 @@ msgstr ""
 "**portnak** 2380-nak kell lennie, ezért a csomópontok közötti tűzfalnak "
 "engedélyeznie kell a TCP-forgalmat ezen a porton."
 
-#: ../../source/components/nethsm/clustering.rst:210
+#: ../../source/components/nethsm/clustering.rst:215
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
@@ -3279,7 +3287,7 @@ msgstr ""
 "ellenőrizheti a csatlakozni kívánt csomóponton. Ennek csak egy tagot kell"
 " felsorolnia: saját magát."
 
-#: ../../source/components/nethsm/clustering.rst:212
+#: ../../source/components/nethsm/clustering.rst:217
 msgid ""
 "Then register that expected URL on any existing node of the cluster (if "
 "you don't have a cluster yet, do this on the NetHSM that will serve as "
@@ -3295,11 +3303,11 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), átadva neki "
 "egy JSON testet, amely tartalmazza az URL-t."
 
-#: ../../source/components/nethsm/clustering.rst:214
+#: ../../source/components/nethsm/clustering.rst:219
 msgid "If successful, this returns a JSON body of the form:"
 msgstr "Siker esetén az űrlap JSON testét adja vissza:"
 
-#: ../../source/components/nethsm/clustering.rst:236
+#: ../../source/components/nethsm/clustering.rst:241
 msgid ""
 "which contains information necessary for the new node to join the "
 "cluster. In particular, it lists all members of the cluster (where the "
@@ -3313,15 +3321,15 @@ msgstr ""
 "és a biztonsági jelszavakkal titkosított tartománykulcsot is - tehát a "
 "biztonsági jelszót korábban be kell állítani."
 
-#: ../../source/components/nethsm/clustering.rst:238
+#: ../../source/components/nethsm/clustering.rst:243
 msgid "Keep that response for the next step."
 msgstr "Tartsa meg ezt a választ a következő lépésre."
 
-#: ../../source/components/nethsm/clustering.rst:241
+#: ../../source/components/nethsm/clustering.rst:246
 msgid "Actually Joining the Cluster"
 msgstr "A klaszterhez való tényleges csatlakozás"
 
-#: ../../source/components/nethsm/clustering.rst:243
+#: ../../source/components/nethsm/clustering.rst:248
 msgid ""
 "Take the response from the last step and append to it a "
 "``backupPassphrase`` field containing the backup passphrase of the node "
@@ -3337,7 +3345,7 @@ msgstr ""
 "dokumentációját <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__)"
 " azon a csomóponton, amelyhez várhatóan csatlakozni fog."
 
-#: ../../source/components/nethsm/clustering.rst:245
+#: ../../source/components/nethsm/clustering.rst:250
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
 "enact the actual join, wiping the data on the new joiner to instead sync "
@@ -3347,7 +3355,7 @@ msgstr ""
 "ez végrehajtja a tényleges csatlakozást, törölve az új csatlakozó "
 "adatait, hogy helyette szinkronizálja az állapotát a fürt állapotával."
 
-#: ../../source/components/nethsm/clustering.rst:247
+#: ../../source/components/nethsm/clustering.rst:252
 msgid ""
 "Depending on the networking and cluster conditions, this operation may "
 "take a few dozen seconds. If this operation fails immediately (e.g. the "
@@ -3363,7 +3371,7 @@ msgstr ""
 "csatlakozás sikeres, ez a művelet végleges, és csak gyári "
 "visszaállítással lehet visszaállítani."
 
-#: ../../source/components/nethsm/clustering.rst:249
+#: ../../source/components/nethsm/clustering.rst:254
 msgid ""
 "If this join is successful, the node will end up in a ``Locked`` state, "
 "and has to be unlocked with the unlock passphrase of the node that was "
@@ -3377,7 +3385,7 @@ msgstr ""
 "jelszavak csomópont-specifikusak maradnak, és nem oszthatók meg a "
 "csomópontok között)."
 
-#: ../../source/components/nethsm/clustering.rst:252
+#: ../../source/components/nethsm/clustering.rst:257
 msgid ""
 "Even after the join has succeeded, if the cluster's database is large or "
 "if the cluster is busy, it may take some time for the new joiner to "
@@ -3394,17 +3402,17 @@ msgstr ""
 "amikor például megpróbálja feloldani a feloldást. Ebben az esetben adjon "
 "egy kis időt, és próbálja meg újra."
 
-#: ../../source/components/nethsm/clustering.rst:255
+#: ../../source/components/nethsm/clustering.rst:260
 #, fuzzy
 msgid "Adding a Witness Node"
 msgstr "ADSK hozzáadása"
 
-#: ../../source/components/nethsm/clustering.rst:258
+#: ../../source/components/nethsm/clustering.rst:263
 #, fuzzy
 msgid "Prepare a Witness"
 msgstr "Előkészítés"
 
-#: ../../source/components/nethsm/clustering.rst:260
+#: ../../source/components/nethsm/clustering.rst:265
 msgid ""
 "You will need an environment with ``etcd`` v3.6 available, with an IPv4 "
 "address (at least) reachable by the other members of your cluster. TCP "
@@ -3414,7 +3422,7 @@ msgstr ""
 "amelynek IPv4 címe (legalább) elérhető a fürt többi tagja számára. A "
 "2380-as portra és portról induló TCP forgalmat engedélyezni kell."
 
-#: ../../source/components/nethsm/clustering.rst:262
+#: ../../source/components/nethsm/clustering.rst:267
 msgid ""
 "Create an empty directory where ``etcd`` will store its data, and write "
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
@@ -3425,7 +3433,7 @@ msgstr ""
 "fogjuk használni). Győződjünk meg arról, hogy a folyamatot indító "
 "felhasználónak olvasási és írási joga van a könyvtárba."
 
-#: ../../source/components/nethsm/clustering.rst:264
+#: ../../source/components/nethsm/clustering.rst:269
 msgid ""
 "Transfer to the machine the CA certificate that is being used to "
 "authenticate nodes in the cluster. You should have created one in the "
@@ -3437,7 +3445,7 @@ msgstr ""
 "telepítése`_ szakaszban kellett volna létrehoznia. Ezt a "
 "``/var/etcd/CA.pem`` helyen fogjuk tárolni."
 
-#: ../../source/components/nethsm/clustering.rst:266
+#: ../../source/components/nethsm/clustering.rst:271
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
@@ -3447,7 +3455,7 @@ msgstr ""
 "írnia a hitelesítésszolgáltatóval, hogy kommunikálni tudjon a társaival. "
 "Ezt például a ``openssl`` címen keresztül lehet megtenni:"
 
-#: ../../source/components/nethsm/clustering.rst:279
+#: ../../source/components/nethsm/clustering.rst:284
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
@@ -3455,12 +3463,12 @@ msgstr ""
 "Az így kapott ``witness.key`` és ``witness.pem`` adatokat tárolja a "
 "``/var/etcd`` oldalon is."
 
-#: ../../source/components/nethsm/clustering.rst:282
+#: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
 msgid "Register Witness to Cluster"
 msgstr "NitroPhone regisztrálása a HMDM szerveren"
 
-#: ../../source/components/nethsm/clustering.rst:284
+#: ../../source/components/nethsm/clustering.rst:289
 msgid ""
 "Follow the normal instructions from the `Registering a New Node`_ section"
 " to signal the existing cluster the addition of a new member with the "
@@ -3470,7 +3478,7 @@ msgstr ""
 "hogy jelezze a meglévő fürtnek, hogy a megadott URL-cím(ek)kel új tagot "
 "vett fel."
 
-#: ../../source/components/nethsm/clustering.rst:286
+#: ../../source/components/nethsm/clustering.rst:291
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
@@ -3478,12 +3486,12 @@ msgstr ""
 "Írja le a klaszter válaszát: ennek tartalmaznia kell a klasztertagok "
 "listáját és egy csatlakozó készletet (erre a részre nem lesz szüksége)."
 
-#: ../../source/components/nethsm/clustering.rst:289
+#: ../../source/components/nethsm/clustering.rst:294
 #, fuzzy
 msgid "Configure etcd"
 msgstr "Konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:291
+#: ../../source/components/nethsm/clustering.rst:296
 msgid ""
 "Unlike NetHSMs which automatically choose a node name for themselves "
 "(using the device ID), you must choose a name for each witness you add, "
@@ -3495,7 +3503,7 @@ msgstr ""
 "tanúnak nevet kell választania, *ügyelve arra, hogy a nevek egyediek "
 "legyenek*. A következő példákban a \"witness1\" nevet fogjuk használni."
 
-#: ../../source/components/nethsm/clustering.rst:293
+#: ../../source/components/nethsm/clustering.rst:298
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
@@ -3503,7 +3511,7 @@ msgstr ""
 "A NetHSM válaszával a tanú nyilvántartásba vételére, készítse el a "
 "nyomtatvány változásait:"
 
-#: ../../source/components/nethsm/clustering.rst:302
+#: ../../source/components/nethsm/clustering.rst:307
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
@@ -3513,7 +3521,7 @@ msgstr ""
 "tárolva, a két utolsó változót automatikusan generálhatja a következő "
 "``jq`` kifejezésekkel:"
 
-#: ../../source/components/nethsm/clustering.rst:309
+#: ../../source/components/nethsm/clustering.rst:314
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node`_ section, you will have:"
@@ -3521,7 +3529,7 @@ msgstr ""
 "Például a `Egy új csomópont regisztrálása`_ szakaszban megadott "
 "példaválasz esetén a következő lesz:"
 
-#: ../../source/components/nethsm/clustering.rst:318
+#: ../../source/components/nethsm/clustering.rst:323
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
@@ -3529,16 +3537,16 @@ msgstr ""
 "Végül hozzon létre egy ``etcd.conf.yml`` fájlt a "
 "``docs/etcd_witness.conf.template`` sablonfájl segítségével:"
 
-#: ../../source/components/nethsm/clustering.rst:325
+#: ../../source/components/nethsm/clustering.rst:330
 msgid "This should give you a file of the form:"
 msgstr "Ezáltal megkapja a formanyomtatvány fájlját:"
 
-#: ../../source/components/nethsm/clustering.rst:350
+#: ../../source/components/nethsm/clustering.rst:355
 #, fuzzy
 msgid "Start etcd"
 msgstr "Start menü"
 
-#: ../../source/components/nethsm/clustering.rst:352
+#: ../../source/components/nethsm/clustering.rst:357
 msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
@@ -3548,7 +3556,7 @@ msgstr ""
 "``systemd`` szolgáltatással, konténerrel stb.), és mutass rá az előző "
 "lépésben létrehozott konfigurációs fájlra:"
 
-#: ../../source/components/nethsm/clustering.rst:359
+#: ../../source/components/nethsm/clustering.rst:364
 msgid ""
 "You should see it start, join the cluster and catch up with the data. "
 "After some time, you should be able to check that it is healthy with the "
@@ -3558,11 +3566,11 @@ msgstr ""
 "adatokhoz. Egy idő után a ``etcdctl`` klienssel ellenőrizheted, hogy "
 "egészséges-e:"
 
-#: ../../source/components/nethsm/clustering.rst:365
+#: ../../source/components/nethsm/clustering.rst:370
 msgid "This key should exist and contain \"1\"."
 msgstr "Ennek a kulcsnak léteznie kell, és \"1\"-et kell tartalmaznia."
 
-#: ../../source/components/nethsm/clustering.rst:367
+#: ../../source/components/nethsm/clustering.rst:372
 msgid ""
 "Make sure this process keeps running, as it is now a proper member of "
 "your cluster. If you need to decommission it, first properly remove it "
@@ -3574,17 +3582,17 @@ msgstr ""
 " fürtből (lásd a dedikált részt). Ha az elérhető IP címe megváltozik, "
 "frissítse az URL-címét a fürtből."
 
-#: ../../source/components/nethsm/clustering.rst:370
+#: ../../source/components/nethsm/clustering.rst:375
 #, fuzzy
 msgid "Operating a Cluster"
 msgstr "Választható lépés"
 
-#: ../../source/components/nethsm/clustering.rst:373
+#: ../../source/components/nethsm/clustering.rst:378
 #: ../../source/components/nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
 msgstr "Biztonsági mentés és visszaállítás"
 
-#: ../../source/components/nethsm/clustering.rst:375
+#: ../../source/components/nethsm/clustering.rst:380
 msgid ""
 "The backup operation works the same as without a cluster and can be "
 "requested from any node of the cluster. It will back up data for the "
@@ -3597,7 +3605,7 @@ msgstr ""
 "(bár ezeket figyelmen kívül hagyja, kivéve, ha a biztonsági mentést egy "
 "nem rendelkezésre bocsátott csomóponton állítja vissza)."
 
-#: ../../source/components/nethsm/clustering.rst:377
+#: ../../source/components/nethsm/clustering.rst:382
 msgid ""
 "A backup done on a cluster can be restored on the same cluster, even if "
 "some nodes have been added or removed since. Such restores done on "
@@ -3610,7 +3618,7 @@ msgstr ""
 "érintik a konfigurációs értékeket (csak a kulcsokat, felhasználókat, "
 "névtereket), mint bármely más részleges visszaállítás."
 
-#: ../../source/components/nethsm/clustering.rst:379
+#: ../../source/components/nethsm/clustering.rst:384
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
@@ -3621,7 +3629,7 @@ msgstr ""
 "csomópont csomópont-specifikus mezőit (például a hálózati konfigurációt, "
 "tanúsítványokat stb.)."
 
-#: ../../source/components/nethsm/clustering.rst:381
+#: ../../source/components/nethsm/clustering.rst:386
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
@@ -3630,7 +3638,7 @@ msgstr ""
 " fürtöt, amíg a visszaállítást végző csomópont továbbítja a változásokat "
 "a többieknek."
 
-#: ../../source/components/nethsm/clustering.rst:383
+#: ../../source/components/nethsm/clustering.rst:388
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
@@ -3638,7 +3646,7 @@ msgstr ""
 "Ez a művelet továbbra is kompatibilis a NetHSM korábbi verzióival "
 "készített biztonsági mentésekkel."
 
-#: ../../source/components/nethsm/clustering.rst:386
+#: ../../source/components/nethsm/clustering.rst:391
 msgid ""
 "Restoring on a node A a backup made on another node Z with a different "
 "domain key will correctly rewrite A's domain key, as before. However if A"
@@ -3651,7 +3659,7 @@ msgstr ""
 "csomóponttal egy fürtben volt, a B csomópont működésképtelenné válik, "
 "mivel Z tartománykulcsa nem lesz visszaállítva a B csomóponton."
 
-#: ../../source/components/nethsm/clustering.rst:388
+#: ../../source/components/nethsm/clustering.rst:393
 msgid ""
 "In other words, only perform a restore in a cluster with backups done in "
 "the same cluster (though again nodes may have been removed or added "
@@ -3665,11 +3673,11 @@ msgstr ""
 " távolítsa el azt a fürtjéből, majd állítsa vissza gyári állapotba, és "
 "állítsa vissza a biztonsági másolatot."
 
-#: ../../source/components/nethsm/clustering.rst:391
+#: ../../source/components/nethsm/clustering.rst:396
 msgid "Removing a Node Cleanly"
 msgstr "Csomópontok tiszta eltávolítása"
 
-#: ../../source/components/nethsm/clustering.rst:393
+#: ../../source/components/nethsm/clustering.rst:398
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
@@ -3680,7 +3688,7 @@ msgstr ""
 "fürtből, függetlenül attól, hogy ez a csomópont már elérhetetlen vagy "
 "várhatóan az lesz."
 
-#: ../../source/components/nethsm/clustering.rst:395
+#: ../../source/components/nethsm/clustering.rst:400
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
@@ -3689,7 +3697,7 @@ msgstr ""
 " ehhez a ``GET /cluster/members`` oldalon keresztül listázd ki az összes "
 "csomópontot, és keresd meg a megfelelőt."
 
-#: ../../source/components/nethsm/clustering.rst:397
+#: ../../source/components/nethsm/clustering.rst:402
 msgid ""
 "Then it can be removed by calling ``DELETE /cluster/members/<id>``. If "
 "the node in question was still healthy, this will isolate it from the "
@@ -3699,12 +3707,12 @@ msgstr ""
 " a kérdéses csomópont még egészséges volt, ez elszigeteli a fürt többi "
 "részétől, és működésképtelenné teszi."
 
-#: ../../source/components/nethsm/clustering.rst:400
+#: ../../source/components/nethsm/clustering.rst:405
 #, fuzzy
 msgid "Software Updates in Clusters"
 msgstr "szoftverfrissítés"
 
-#: ../../source/components/nethsm/clustering.rst:402
+#: ../../source/components/nethsm/clustering.rst:407
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
@@ -3712,7 +3720,7 @@ msgstr ""
 "A jövőbeni frissítések \"cluster-safe\" (ez lesz a többség) vagy "
 "\"cluster-unsafe\" jelzéssel lesznek ellátva."
 
-#: ../../source/components/nethsm/clustering.rst:404
+#: ../../source/components/nethsm/clustering.rst:409
 msgid ""
 "Cluster-safe updates can be applied to nodes that are part of a cluster "
 "without removing them from the cluster first. However as with all "
@@ -3726,7 +3734,7 @@ msgstr ""
 "csomóponton végezze el, és olyan fürtben, ahol egy csomópont eltávolítása"
 " nem megy a kvórum alá (pl. ha a frissítés sikertelen)."
 
-#: ../../source/components/nethsm/clustering.rst:406
+#: ../../source/components/nethsm/clustering.rst:411
 msgid ""
 "Cluster-unsafe updates must be applied to isolated nodes. You should "
 "dismantle the cluster (removing nodes one by one), factory reset all "
@@ -3740,20 +3748,20 @@ msgstr ""
 " alaphelyzetbe állított csomópontot a megmaradt csomóponthoz kell "
 "csatlakoztatni."
 
-#: ../../source/components/nethsm/clustering.rst:408
+#: ../../source/components/nethsm/clustering.rst:413
 msgid "Make sure to back up before such operations."
 msgstr "Az ilyen műveletek előtt mindenképpen készítsen biztonsági mentést."
 
-#: ../../source/components/nethsm/clustering.rst:411
+#: ../../source/components/nethsm/clustering.rst:416
 msgid "Reconfiguring an Existing Cluster"
 msgstr "Meglévő klaszter átkonfigurálása"
 
-#: ../../source/components/nethsm/clustering.rst:414
+#: ../../source/components/nethsm/clustering.rst:419
 #, fuzzy
 msgid "Changing the Cluster CA"
 msgstr "Alapértelmezett rendszermag módosítása"
 
-#: ../../source/components/nethsm/clustering.rst:416
+#: ../../source/components/nethsm/clustering.rst:421
 msgid ""
 "An existing cluster (with two or more nodes) **cannot** change its "
 "cluster CA while in operation. If you need to change this certificate: "
@@ -3766,12 +3774,12 @@ msgstr ""
 " többi csomópontot, frissítse a hitelesítésszolgáltatót, majd a többi tag"
 " csatlakozzon újra."
 
-#: ../../source/components/nethsm/clustering.rst:419
+#: ../../source/components/nethsm/clustering.rst:424
 #, fuzzy
 msgid "Changing the Network Configuration of Nodes"
 msgstr "A hálózati konfiguráció lekérdezése"
 
-#: ../../source/components/nethsm/clustering.rst:421
+#: ../../source/components/nethsm/clustering.rst:426
 msgid ""
 "Modifying the network configuration of a node (e.g. changing its IP) will"
 " automatically inform the other nodes about the update. You should "
@@ -5701,7 +5709,7 @@ msgstr ""
 #: ../../source/components/nethsm/getting-started.rst:75
 #: ../../source/components/nethsm/getting-started.rst:84
 #: ../../source/components/nethsm/getting-started.rst:88
-#: ../../source/components/nethsm/system_recovery.rst:73
+#: ../../source/components/nethsm/system_recovery.rst:75
 msgid "Back side of the server"
 msgstr "A szerver hátsó oldala"
 
@@ -9065,7 +9073,7 @@ msgstr ""
 "megadott privát letöltési oldalról."
 
 #: ../../source/components/nethsm/system_recovery.rst:33
-#: ../../source/components/nethsm/system_recovery.rst:62
+#: ../../source/components/nethsm/system_recovery.rst:64
 msgid ""
 "Download the installer image of the same version which was installed at "
 "the time of corruption. A downgrade, or upgrade skipping versions, is not"
@@ -9092,41 +9100,44 @@ msgstr ""
 " hiányára vonatkozó figyelmeztetéssel."
 
 #: ../../source/components/nethsm/system_recovery.rst:39
-#, fuzzy
-msgid "Connect the USB flash drive with any USB port of the NetHSM."
+msgid ""
+"Connect the USB flash drive to a USB port on the NetHSM. NetHSM can boot "
+"from the USB ports on the front of the machine and the four vertical "
+"stacked ones on the back of the machine."
 msgstr ""
-"Csatlakoztassa az USB flash meghajtót a NetHSM előlapján található USB-"
-"porthoz."
 
-#: ../../source/components/nethsm/system_recovery.rst:42
+#: ../../source/components/nethsm/system_recovery.rst:43
+#, fuzzy
 msgid ""
 "Some USB drives are incompatible with the NetHSM. This results in the "
 "NetHSM not recognizing them as a boot media. In case the NetHSM does not "
-"boot from the connected USB drive, try a different USB drive model."
+"boot from the connected USB drive, try a different USB drive model. Best "
+"results are achieved with drives that have samller capacities and USB 2.0"
+" interface."
 msgstr ""
 "Egyes USB-meghajtók nem kompatibilisek a NetHSM-mel. Ez azt eredményezi, "
 "hogy a NetHSM nem ismeri fel őket indítómédiaként. Ha a NetHSM nem bootol"
 " a csatlakoztatott USB-meghajtóról, próbáljon ki egy másik USB-meghajtó "
 "modellt."
 
-#: ../../source/components/nethsm/system_recovery.rst:46
+#: ../../source/components/nethsm/system_recovery.rst:48
 #, fuzzy
 msgid "Optionally: Connect a keyboard and monitor with the NetHSM."
 msgstr "Generáljon egy kulcspárt, és tárolja azt a NetHSM-en."
 
-#: ../../source/components/nethsm/system_recovery.rst:47
+#: ../../source/components/nethsm/system_recovery.rst:49
 #, fuzzy
 msgid "Make sure the system is turned off, but connected to power."
 msgstr ""
 "Győződjön meg róla, hogy a rendszer ki van kapcsolva, de áramhoz van "
 "csatlakoztatva, és a hátoldalon lévő bekapcsológomb be van kapcsolva."
 
-#: ../../source/components/nethsm/system_recovery.rst:48
+#: ../../source/components/nethsm/system_recovery.rst:50
 #, fuzzy
 msgid "Turn the NetHSM on by pressing the power button on the front."
 msgstr "Kapcsolja be a NetHSM-et az elülső oldalon található bekapcsológombbal."
 
-#: ../../source/components/nethsm/system_recovery.rst:49
+#: ../../source/components/nethsm/system_recovery.rst:51
 #, fuzzy
 msgid ""
 "Now the software is going to be installed. Wait for ca. one minute until "
@@ -9140,8 +9151,8 @@ msgstr ""
 "rendszer)*, majd a második menüben a *NetHSM szoftvertelepítő* "
 "lehetőséget."
 
-#: ../../source/components/nethsm/system_recovery.rst:54
-#: ../../source/components/nethsm/system_recovery.rst:151
+#: ../../source/components/nethsm/system_recovery.rst:56
+#: ../../source/components/nethsm/system_recovery.rst:153
 msgid ""
 "Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
 " This will unrecoverable wipe the data on the disk."
@@ -9149,7 +9160,7 @@ msgstr ""
 "NE válassza a ``NetHSM Factory Reset - DELETES ALL DATA!`` menüpontot. Ez"
 " helyreállíthatatlanul törli a lemezen lévő adatokat."
 
-#: ../../source/components/nethsm/system_recovery.rst:59
+#: ../../source/components/nethsm/system_recovery.rst:61
 #, fuzzy
 msgid ""
 "Download the installer image ending with ``installer.img.zip`` from the "
@@ -9158,7 +9169,7 @@ msgstr ""
 "Töltse le a *...installer.img.zip* végződéssel végződő telepítő képet a "
 "megadott privát letöltési oldalról."
 
-#: ../../source/components/nethsm/system_recovery.rst:64
+#: ../../source/components/nethsm/system_recovery.rst:66
 msgid ""
 "Make sure the system is turned off, but connected to power, and the power"
 " button on the back turned on."
@@ -9166,15 +9177,15 @@ msgstr ""
 "Győződjön meg róla, hogy a rendszer ki van kapcsolva, de áramhoz van "
 "csatlakoztatva, és a hátoldalon lévő bekapcsológomb be van kapcsolva."
 
-#: ../../source/components/nethsm/system_recovery.rst:65
+#: ../../source/components/nethsm/system_recovery.rst:67
 msgid "Connect the BMC network port with a network cable."
 msgstr "Csatlakoztassa a BMC hálózati portját egy hálózati kábellel."
 
-#: ../../source/components/nethsm/system_recovery.rst:67
+#: ../../source/components/nethsm/system_recovery.rst:69
 msgid "See the image below to identify the BMC network port."
 msgstr "A BMC hálózati portjának azonosításához lásd az alábbi képet."
 
-#: ../../source/components/nethsm/system_recovery.rst:75
+#: ../../source/components/nethsm/system_recovery.rst:77
 msgid ""
 "Per default the BMC will wait for an address assignment with DHCP. If "
 "DHCP is not available the link-local address can be determined with Nmap."
@@ -9187,7 +9198,7 @@ msgstr ""
 "-p 80 --open`` parancs a 80-as porton nyitott hosztok listáját adja "
 "vissza."
 
-#: ../../source/components/nethsm/system_recovery.rst:78
+#: ../../source/components/nethsm/system_recovery.rst:80
 msgid ""
 "Open the BMC website in a web browser, using the determined IP address "
 "from the previous step. To login, the default credentials are username "
@@ -9198,7 +9209,7 @@ msgstr ""
 " adatok a következők: ``bmc_admin`` felhasználónév és ``8mCU$3r0nE`` "
 "jelszó."
 
-#: ../../source/components/nethsm/system_recovery.rst:82
+#: ../../source/components/nethsm/system_recovery.rst:84
 msgid ""
 "In case you encounter an unauthorized login error on the BMC web "
 "interface it can be three of the following issues."
@@ -9206,11 +9217,11 @@ msgstr ""
 "Ha a BMC webes felületén jogosulatlan bejelentkezési hibát észlel, az a "
 "következő három probléma lehet."
 
-#: ../../source/components/nethsm/system_recovery.rst:84
+#: ../../source/components/nethsm/system_recovery.rst:86
 msgid "Username or password wrong."
 msgstr "A felhasználónév vagy a jelszó rossz."
 
-#: ../../source/components/nethsm/system_recovery.rst:85
+#: ../../source/components/nethsm/system_recovery.rst:87
 msgid ""
 "During factory reset the BMC generates a new TLS certificate. Some web "
 "browsers fail with connection errors when the certificate changes while "
@@ -9222,7 +9233,7 @@ msgstr ""
 "megváltozik, miközben ugyanaz az ablak nyitva marad. Zárja be a "
 "webböngésző ablakát, és nyisson egy újat."
 
-#: ../../source/components/nethsm/system_recovery.rst:88
+#: ../../source/components/nethsm/system_recovery.rst:90
 msgid ""
 "The BMC software sometimes shows the issue that it doesn't accept an "
 "older session cookie which are still in the cache of the web browser. "
@@ -9233,7 +9244,7 @@ msgstr ""
 "gyorsítótárában vannak. Törölje a webböngésző gyorsítótárát, és próbálja "
 "meg újra."
 
-#: ../../source/components/nethsm/system_recovery.rst:91
+#: ../../source/components/nethsm/system_recovery.rst:93
 msgid ""
 "Mount the downloaded installer image by clicking in the menu on the left "
 "on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual "
@@ -9245,12 +9256,12 @@ msgstr ""
 " Virtual media gombra kattintva. Középen nyissa meg a *usb0* lapot, majd "
 "kattintson a *Attach media* gombra."
 
-#: ../../source/components/nethsm/system_recovery.rst:94
-#: ../../source/components/nethsm/system_recovery.rst:97
+#: ../../source/components/nethsm/system_recovery.rst:96
+#: ../../source/components/nethsm/system_recovery.rst:99
 msgid "BMC menu to attach USB device"
 msgstr "BMC menü az USB eszköz csatlakoztatásához"
 
-#: ../../source/components/nethsm/system_recovery.rst:99
+#: ../../source/components/nethsm/system_recovery.rst:101
 msgid ""
 "In the opening dialog choose *Stream local file via browser* as the "
 "*Transfer method*. Click the button *Browse...* and choose the downloaded"
@@ -9260,12 +9271,12 @@ msgstr ""
 "átviteli módként*. Kattintson a *Browse...* gombra, és válassza ki a "
 "letöltött telepítőképet. Erősítse meg a műveletet a *Submit* gombbal."
 
-#: ../../source/components/nethsm/system_recovery.rst:103
-#: ../../source/components/nethsm/system_recovery.rst:106
+#: ../../source/components/nethsm/system_recovery.rst:105
+#: ../../source/components/nethsm/system_recovery.rst:108
 msgid "BMC menu to select USB image"
 msgstr "BMC menü az USB-kép kiválasztásához"
 
-#: ../../source/components/nethsm/system_recovery.rst:108
+#: ../../source/components/nethsm/system_recovery.rst:110
 msgid ""
 "In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
 "Config*, and then *Remote KVM*."
@@ -9273,7 +9284,7 @@ msgstr ""
 "A bal oldali menüben válassza a *FRU: Hermes CFL (TPM-mel) Nitrokey "
 "Config*, majd a *Remote KVM* menüpontot."
 
-#: ../../source/components/nethsm/system_recovery.rst:109
+#: ../../source/components/nethsm/system_recovery.rst:111
 msgid ""
 "In the middle click the *Open a floating Remote KVM window* button, in "
 "the top right corner of the VGA output box."
@@ -9281,12 +9292,12 @@ msgstr ""
 "Középen kattintson a *Open a floating Remote KVM window* gombra, a VGA "
 "kimeneti doboz jobb felső sarkában."
 
-#: ../../source/components/nethsm/system_recovery.rst:111
-#: ../../source/components/nethsm/system_recovery.rst:114
+#: ../../source/components/nethsm/system_recovery.rst:113
+#: ../../source/components/nethsm/system_recovery.rst:116
 msgid "BMC KVM console view"
 msgstr "BMC KVM konzol nézet"
 
-#: ../../source/components/nethsm/system_recovery.rst:116
+#: ../../source/components/nethsm/system_recovery.rst:118
 msgid ""
 "This window will show you the graphical output of the NetHSM installer. "
 "Keep this second window open together with the main window from the BMC."
@@ -9294,11 +9305,11 @@ msgstr ""
 "Ez az ablak a NetHSM telepítő program grafikus kimenetét mutatja. Tartsa "
 "nyitva ezt a második ablakot a BMC főablakával együtt."
 
-#: ../../source/components/nethsm/system_recovery.rst:118
+#: ../../source/components/nethsm/system_recovery.rst:120
 msgid "Change to the view *Overview* from the top of the menu on the left."
 msgstr "Váltson a *Overview* nézetre a bal oldali menü tetején található menüből."
 
-#: ../../source/components/nethsm/system_recovery.rst:119
+#: ../../source/components/nethsm/system_recovery.rst:121
 msgid ""
 "In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
 "the drop-down next to *Select a Boot Device*."
@@ -9307,12 +9318,12 @@ msgstr ""
 "Select a Boot Device* melletti legördülő listából a Select a Boot Device "
 "lehetőséget."
 
-#: ../../source/components/nethsm/system_recovery.rst:121
-#: ../../source/components/nethsm/system_recovery.rst:124
+#: ../../source/components/nethsm/system_recovery.rst:123
+#: ../../source/components/nethsm/system_recovery.rst:126
 msgid "BMC boot device setting"
 msgstr "BMC indítóeszköz beállítása"
 
-#: ../../source/components/nethsm/system_recovery.rst:126
+#: ../../source/components/nethsm/system_recovery.rst:128
 msgid ""
 "In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, "
 "select *On* from the drop-down menu next to *Power*. Confirm with the "
@@ -9323,12 +9334,12 @@ msgstr ""
 "melletti legördülő menüből a On lehetőséget. Erősítse meg a *Apply* "
 "gombbal."
 
-#: ../../source/components/nethsm/system_recovery.rst:129
-#: ../../source/components/nethsm/system_recovery.rst:132
+#: ../../source/components/nethsm/system_recovery.rst:131
+#: ../../source/components/nethsm/system_recovery.rst:134
 msgid "BMC power up setting"
 msgstr "BMC bekapcsolási beállítása"
 
-#: ../../source/components/nethsm/system_recovery.rst:134
+#: ../../source/components/nethsm/system_recovery.rst:136
 msgid ""
 "In the previously opened *Remote KVM* window you can now see the "
 "installation wizard."
@@ -9336,7 +9347,7 @@ msgstr ""
 "A korábban megnyitott *Remote KVM* ablakban most már látható a telepítési"
 " varázsló."
 
-#: ../../source/components/nethsm/system_recovery.rst:135
+#: ../../source/components/nethsm/system_recovery.rst:137
 msgid ""
 "The KVM window now shows the boot dialog. Confirm the selection of "
 "``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
@@ -9345,12 +9356,12 @@ msgstr ""
 "Erősítse meg a ``NetHSM automatic boot (USB or primary system)`` "
 "kiválasztását a *Enter* billentyűvel."
 
-#: ../../source/components/nethsm/system_recovery.rst:138
-#: ../../source/components/nethsm/system_recovery.rst:141
+#: ../../source/components/nethsm/system_recovery.rst:140
+#: ../../source/components/nethsm/system_recovery.rst:143
 msgid "NetHSM boot selection in the BMC KVM console"
 msgstr "NetHSM rendszerindítás kiválasztása a BMC KVM konzolban"
 
-#: ../../source/components/nethsm/system_recovery.rst:143
+#: ../../source/components/nethsm/system_recovery.rst:145
 msgid ""
 "In the following dialog confirm the selection of ``NetHSM Software "
 "Installer`` with the *Enter* key."
@@ -9358,12 +9369,12 @@ msgstr ""
 "A következő párbeszédpanelen erősítse meg a ``NetHSM Software Installer``"
 " kiválasztását a *Enter* billentyűvel."
 
-#: ../../source/components/nethsm/system_recovery.rst:145
-#: ../../source/components/nethsm/system_recovery.rst:148
+#: ../../source/components/nethsm/system_recovery.rst:147
+#: ../../source/components/nethsm/system_recovery.rst:150
 msgid "NetHSM installer selection in the BMC KVM console"
 msgstr "NetHSM telepítő kiválasztása a BMC KVM konzolban"
 
-#: ../../source/components/nethsm/system_recovery.rst:153
+#: ../../source/components/nethsm/system_recovery.rst:155
 msgid "The NetHSM Installer will install the system software and shutdown."
 msgstr "A NetHSM telepítő telepíti a rendszerszoftvert és leállítja a rendszert."
 
@@ -34866,8 +34877,7 @@ msgstr ""
 
 #: ../../source/components/software/index.rst:19
 msgid ":doc:`nitropy/index`: command-line application for all Nitrokey devices"
-msgstr ""
-":doc:`nitropia/index`: parancssori alkalmazás az összes Nitrokey-eszközhöz"
+msgstr ":doc:`nitropia/index`: parancssori alkalmazás az összes Nitrokey-eszközhöz"
 
 #: ../../source/components/software/index.rst:22
 msgid "For Developers"
@@ -40144,3 +40154,9 @@ msgstr "Mark vágott kimenet"
 #~ "kerül terjesztésre, és lokálisan futtatható"
 #~ " egy kompatibilis futtatóval, például "
 #~ "Dockerrel és Podman-nal."
+
+#~ msgid "Connect the USB flash drive with any USB port of the NetHSM."
+#~ msgstr ""
+#~ "Csatlakoztassa az USB flash meghajtót a"
+#~ " NetHSM előlapján található USB-porthoz."
+
