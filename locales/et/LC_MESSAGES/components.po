@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-09-01 09:32+0000\n"
-"PO-Revision-Date: 2026-08-31 15:46+0000\n"
+"PO-Revision-Date: 2026-09-01 09:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/et/>\n"
 "Language: et\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/et/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -525,6 +526,8 @@ msgid ""
 "NetHSM with a currently unavailable database (see `Recovery "
 "<clustering.html#recovering-a-failed-node>`__)."
 msgstr ""
+"NetHSM, mille andmebaas ei ole hetkel kättesaadav (vt `Recovery <clustering."
+"html#recovering-a-failed-node>`__)."
 
 #: ../../source/components/nethsm/administration.rst:123
 #: ../../source/components/nethsm/administration.rst:127
@@ -1085,6 +1088,8 @@ msgid ""
 "System time of the NetHSM software can either be set manually or "
 "automatically by configuring an NTP or NTS server."
 msgstr ""
+"NetHSM-tarkvara süsteemiaega saab seadistada kas käsitsi või automaatselt, "
+"konfigureerides NTP- või NTS-serverit."
 
 #: ../../source/components/nethsm/administration.rst:466
 #, fuzzy
@@ -1117,6 +1122,10 @@ msgid ""
 "time, as it is set during provisioning. If NTP/NTS is configured, the "
 "manually set time will be eventually overriden by the server's time."
 msgstr ""
+"Süsteemi praegust aega saab käsitsi järgmiselt reguleerida. Pange tähele, et "
+"süsteemi aja seadistamiseks ei ole tavaliselt vaja kella käsitsi seadistada, "
+"kuna see määratakse kindlaks süsteemi esialgse seadistamise käigus. Kui NTP/"
+"NTS on konfigureeritud, asendab serveri aeg lõpuks käsitsi seadistatud aja."
 
 #: ../../source/components/nethsm/administration.rst:497
 msgid "Make sure to pass the time in UTC timezone."
@@ -1151,6 +1160,9 @@ msgid ""
 "An NTP server can be configured to automatically adjust NetHSM's system "
 "time. Optionally, NTS (Network Time Security) can be enabled."
 msgstr ""
+"NTP-serverit on võimalik seadistada nii, et see reguleeriks automaatselt "
+"NetHSM-i süsteemiaega. Soovi korral on võimalik aktiveerida NTS (Network "
+"Time Security)."
 
 #: ../../source/components/nethsm/administration.rst:527
 #, fuzzy
@@ -1185,12 +1197,16 @@ msgid ""
 "NTP/NTS can be configured as follows. It can be disabled by leaving empty"
 " fields."
 msgstr ""
+"NTP/NTS-i saab seadistada järgmiselt. Selle saab keelata, jättes väljad "
+"tühjaks."
 
 #: ../../source/components/nethsm/administration.rst:557
 msgid ""
 "The NTP server has to be provided by its IP (either v4 or v6), not "
 "hostname."
 msgstr ""
+"NTP-serverit tuleb määrata selle IP-aadressi (kas v4 või v6) järgi, mitte "
+"hostinime järgi."
 
 #: ../../source/components/nethsm/administration.rst:566
 #, fuzzy
@@ -1203,6 +1219,9 @@ msgid ""
 "configured. Hostname of the NTS server (enables Network Time Security). "
 "If absent, means NTS is not configured."
 msgstr ""
+"NTP-serveri IP-aadress (v4 või v6). Kui see puudub, tähendab see, et NTP ei "
+"ole konfigureeritud. NTS-serveri hostinimi (võimaldab Network Time Security "
+"kasutamist). Kui see puudub, tähendab see, et NTS ei ole konfigureeritud."
 
 #: ../../source/components/nethsm/administration.rst:583
 #: ../../source/components/nethsm/metrics.rst:4
@@ -2640,6 +2659,10 @@ msgid ""
 "each node becomes unable to perform reads and writes. This implies the "
 "following scenarios."
 msgstr ""
+"Klastris, mis langeb alla selle künnise (nt võrguprobleemi tõttu), ei ole "
+"võimalik valida liidrit ning iga sõlme kohalik instants ``etcd`` ei suuda "
+"enam lugemis- ega kirjutamistoiminguid teostada. See toob kaasa järgmised "
+"stsenaariumid."
 
 #: ../../source/components/nethsm/clustering.rst:25
 msgid "One Node Goes Down and Quorum is Still Reached"
@@ -2684,6 +2707,11 @@ msgid ""
 "will not be part of the cluster anymore), or be factory reset and go "
 "through the join process again from scratch."
 msgstr ""
+"Kui seade ei taastu kunagi, tuleb see `klastrist eemaldada <clustering."
+"html#removing-a-node-cleanly>`__ ning kas läbi viia `taastamine <clustering."
+"html#recovering-a-failed-node>`__, et pääseda ligi selle andmetele (kuid see "
+"ei kuulu enam klastrisse), või teha seadmel tehasevaikimisi taastamine ja "
+"läbida liitumisprotsess uuesti algusest peale."
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid "A Network Partition Happens and Quorum is Still Reached"
@@ -2731,6 +2759,9 @@ msgid ""
 "number of nodes) will leave the bigger half of the cluster healthy, and "
 "the smaller half inoperable until the partition is resolved."
 msgstr ""
+"Teisisõnu, halvimal juhul tekkiva võrgupartitsiooni korral (klastris, kus on "
+"paaritu arv sõlmi) jääb klastri suurem pool töökorras, kuid väiksem pool ei "
+"tööta, kuni partitsioon on lahendatud."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid "The Quorum is Durably Lost"
@@ -3237,6 +3268,10 @@ msgid ""
 "through `Time <administration.html#time>`__ and `NTS/NTP "
 "<administration.html#ntp-nts>`__ configuration."
 msgstr ""
+"Veenduge, et igale sõlme on määratud õige süsteemiaeg, soovitavalt NTP/NTS-i "
+"abil, mitte käsitsi seadistamise teel. Seda saab teha järgmiste seadistuste "
+"abil: `Time <administration.html#time>`__ ja `NTS/NTP <administration.html"
+"#ntp-nts>`__."
 
 #: ../../source/components/nethsm/clustering.rst:206
 #, fuzzy
@@ -3262,7 +3297,7 @@ msgstr "ütle uuele sõlmpunktile, et ta liituks"
 msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
-msgstr ""
+msgstr "Kui ta on teistele järele jõudnud, edutage sõlme õppijast täisliikmeks"
 
 #: ../../source/components/nethsm/clustering.rst:215
 #, fuzzy
@@ -3346,6 +3381,9 @@ msgid ""
 " now connect to the cluster and receive data from it, but cannot "
 "participate until it is promoted, which will be covered below."
 msgstr ""
+"Pange tähele, et eespool toodud vastuses on uus liituja „õppija”: see saab "
+"nüüd klastriga ühenduse luua ja sealt andmeid vastu võtta, kuid ei saa "
+"osaleda enne, kui ta on edutatud; seda käsitletakse allpool."
 
 #: ../../source/components/nethsm/clustering.rst:260
 msgid ""
@@ -3353,6 +3391,9 @@ msgid ""
 " allows for a safer operation of the cluster, as any issue with the new "
 "node cannot cause instability to the whole cluster before its promotion."
 msgstr ""
+"Kuigi see „õppija” kontseptsioon lisab ühe täiendava etapi (edutamine), "
+"võimaldab see klastri turvalisemat töötamist, kuna uue sõlme mis tahes "
+"probleem ei saa enne selle edutamist põhjustada kogu klastri ebastabiilsust."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid "Keep that response for the next step."
@@ -3384,6 +3425,9 @@ msgid ""
 "manually promoted (see below). This is normal. When the call returns "
 "successfully, it indicates that join and promotion have been successful."
 msgstr ""
+"Kutse aadressile ``POST /cluster/join`` jääb ootele, kuni uus sõlm käsitsi "
+"edutatakse (vt allpool). See on normaalne. Kui kutse lõpeb edukalt, tähendab "
+"see, et liitumine ja edutamine on õnnestunud."
 
 #: ../../source/components/nethsm/clustering.rst:276
 #, fuzzy
@@ -3410,12 +3454,18 @@ msgid ""
 "hand, any problem with the node at this stage will not cause issues to "
 "the cluster, making this operation safe."
 msgstr ""
+"Praeguses etapis on uus sõlm liitunud klastriga „ *“ õppiva sõlmena*: see "
+"sünkroniseerib end klastriga, kuid ei ole veel töökorras. Teisalt ei "
+"põhjusta sõlmega seotud mis tahes probleemid selles etapis klastrile "
+"raskusi, mistõttu on see toiming ohutu."
 
 #: ../../source/components/nethsm/clustering.rst:283
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
 msgstr ""
+"Liitumise lõpetamiseks tuleb viimase sammuna uus sõlm tõsta täisliikme "
+"staatusesse."
 
 #: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
@@ -3428,6 +3478,8 @@ msgid ""
 "for the new member to catch up with the cluster. Once this is done, it "
 "can be promoted from learner to full member."
 msgstr ""
+"Sõltuvalt võrgu- ja klastrioludest võib uue liikme klastriga ühinemine võtta "
+"veidi aega. Kui see on toimunud, saab ta edutada õppijast täisliikmeks."
 
 #: ../../source/components/nethsm/clustering.rst:294
 msgid ""
@@ -3438,6 +3490,11 @@ msgid ""
 "section of this document). Ensure this new node has a stable connection "
 "to the cluster before promoting it."
 msgstr ""
+"Sõlme edutamine suurendab klastri kvoorumi künnist (vt `API dokumentatsiooni "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ ja käesoleva "
+"dokumendi jaotist „ `i operatiivne redundantsus” <clustering.html"
+"#operational-redundancy>`__). Enne sõlme edutamist veenduge, et sellel on "
+"klastriga stabiilne ühendus."
 
 #: ../../source/components/nethsm/clustering.rst:296
 msgid ""
@@ -3447,6 +3504,10 @@ msgid ""
 " hasn't caught up yet, then this will fail with HTTP code 412 and "
 "promotion should be attempted again later."
 msgstr ""
+"Võite proovida uut liiget edutada, kasutades kutset ``POST /cluster/members/"
+"{MemberID}/promote`` (vt `API dokumentatsiooni <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>`__). Kui õppija pole veel järele jõudnud, siis "
+"lõpeb see HTTP-veakoodiga 412 ja edutamist tuleks hiljem uuesti proovida."
 
 #: ../../source/components/nethsm/clustering.rst:300
 #, fuzzy
@@ -3620,6 +3681,8 @@ msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
 msgstr ""
+"Sa peaksid nägema, kuidas see käivitub, liituma klastriga õppijana ja jõudma "
+"andmetega sammu."
 
 #: ../../source/components/nethsm/clustering.rst:417
 #, fuzzy
@@ -3632,6 +3695,9 @@ msgid ""
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
 " section to promote the witness. If this fails, try again later."
 msgstr ""
+"Lõpuks, mõne aja möödudes, järgige tunnistaja edutamiseks tavalisi juhiseid, "
+"mis on toodud veebilehel `jaotises „Uue õppija edutamine“ <clustering.html"
+"#promoting-the-new-learner>`__. Kui see ei õnnestu, proovige hiljem uuesti."
 
 #: ../../source/components/nethsm/clustering.rst:423
 #, fuzzy
@@ -3781,6 +3847,8 @@ msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
 msgstr ""
+"Ka klastriga ühinenud, kuid veel edutamata sõlme saab sel viisil ohutult "
+"eemaldada."
 
 #: ../../source/components/nethsm/clustering.rst:469
 #, fuzzy
@@ -3793,6 +3861,9 @@ msgid ""
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
 "*isolated*."
 msgstr ""
+"Sõlm, mis teatab seisundist „ *Failed“ ( ebaõnnestus)*, keeldub vastamast "
+"enamikule tavapärastele operatsioonidele. Seda on siiski võimalik sulgeda, "
+"taaskäivitada, lähtestada *, diagnoosida* või *isoleerida*."
 
 #: ../../source/components/nethsm/clustering.rst:475
 msgid ""
@@ -3801,32 +3872,45 @@ msgid ""
 " with a lost quorum will stop responding to *all* requests. It *must* be "
 "factory-reset."
 msgstr ""
+"Operatsioonid „ *”, „Failed* ”, „ ` ”, „diagnose` ”, „ ` ” ja „force-new` ” "
+"kehtivad ainult versioonist 5.0 alates. Versioonis 4.0 lõpetab kvoorumi "
+"kaotanud sõlm vastamise kõikidele *ja* päringutele. See *peab* taastama "
+"tehase seaded."
 
 #: ../../source/components/nethsm/clustering.rst:479
 msgid "Common causes for a node to be in the *Failed* state include:"
 msgstr ""
+"Tavapärased põhjused, miks sõlm võib olla seisundis „ *Failed“ (* ), on "
+"järgmised:"
 
 #: ../../source/components/nethsm/clustering.rst:481
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
 msgstr ""
+"Püsivalt `kadunud kvoorum <clustering.html#the-quorum-is-durably-lost>`__."
 
 #: ../../source/components/nethsm/clustering.rst:482
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
 msgstr ""
+"Ajutine kvoorumi kaotus (nt kui klastrisse lisatakse teine sõlm, kuid see "
+"teine sõlm pole veel klastriga ühinenud)."
 
 #: ../../source/components/nethsm/clustering.rst:484
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
 msgstr ""
+"``etcd`` on hetkel taaskäivitumas (nt seetõttu, et sertifikaadid on muutunud "
+"või võrk on ümber konfigureeritud)."
 
 #: ../../source/components/nethsm/clustering.rst:486
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
 msgstr ""
+"Klaster on väga suure koormuse all (nt väga suure varukoopia taastamise "
+"ajal)."
 
 #: ../../source/components/nethsm/clustering.rst:489
 msgid ""
@@ -3835,6 +3919,10 @@ msgid ""
 "interact with its database. This is to avoid spurious transitions caused "
 "by very short instabilities."
 msgstr ""
+"Sõltumata põhjusest läheb NetHSM üle seisundisse „ *Failed“* alles siis, kui "
+"andmebaasiga suhtlemise katsed on ebaõnnestunud vähemalt terve minuti "
+"jooksul. Selle eesmärk on vältida väga lühiajaliste ebastabiilsuste "
+"põhjustatud valesid üleminekuid."
 
 #: ../../source/components/nethsm/clustering.rst:494
 msgid ""
@@ -3843,6 +3931,10 @@ msgid ""
 "about the current status of ``etcd`` and its database, including logs "
 "(refer to the API documentation)."
 msgstr ""
+"Et aidata teil aru saada, millises olukorras teie sõlm parasjagu on, on "
+"endpunkt ``GET /health/diagnose`` endiselt kättesaadav ning annab teavet "
+"``etcd`` ja selle andmebaasi hetkeolukorra kohta, sealhulgas logid (vt API "
+"dokumentatsiooni)."
 
 #: ../../source/components/nethsm/clustering.rst:499
 msgid ""
@@ -3854,18 +3946,28 @@ msgid ""
 " been resolved for the cluster to stabilize, the HSM to detect the "
 "resolution and to change state."
 msgstr ""
+"Kui andmebaas muutub taas kättesaadavaks (nt kui kvoorum taastub "
+"võrguprobleemi lahendamise tõttu), läheb NetHSM automaatselt seisundist „ "
+"*Failed”* üle varasemasse seisundisse (või jätkab tavapärast "
+"käivitumisjärjekorda, kui ta oli just käivitumas), ilma et oleks vaja "
+"mingeid käsitsi toiminguid. Pärast probleemi lahendamist kulub kuni minut, "
+"enne kui klaster stabiliseerub, HSM tuvastab probleemi lahendamise ja "
+"vahetab seisundit."
 
 #: ../../source/components/nethsm/clustering.rst:506
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
 msgstr ""
+"Kui jõuate järeldusele, et tõrge on püsiv (nt kvoorumi kaotus, mille "
+"põhjustanud olukorra lahendamine ei ole võimalik), võite kas:"
 
 #: ../../source/components/nethsm/clustering.rst:509
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
 msgstr ""
+"**Taasta seadme tehasevaikimisi seaded (** ) ja seejärel taasta varukoopia."
 
 #: ../../source/components/nethsm/clustering.rst:510
 msgid ""
@@ -3876,6 +3978,12 @@ msgid ""
 "either the *Locked* or *Operational* state depending on the unattended "
 "boot setting."
 msgstr ""
+"**Isolatsioon** sõlme, millel on ``POST /cluster/force-new`` lõpppunkt, mis "
+"unustab pöördumatult kõik teised klastri liikmed, taastab kettal olevad "
+"``etcd`` andmed ja taaskäivitab süsteemi. Kui algne rike oli seotud "
+"klastriga, järgib sõlm tavapärast käivitamisjärjekorda ja jõuab sõltuvalt "
+"automaatse käivitamise seadistusest kas *Locked* või *Operational* "
+"seisundisse."
 
 #: ../../source/components/nethsm/clustering.rst:517
 msgid ""
@@ -3884,6 +3992,10 @@ msgid ""
 "reconciled. The node can still re-join the cluster, but will lose all its"
 " local modifications."
 msgstr ""
+"Kui sõlm on eraldatud käsuga ` `force-new` `, kaob selle sünkroniseeritus "
+"klastriga: selle sõlme või klastri uusi kirjutusi ei ole võimalik ühitada. "
+"Sõlm saab küll klastriga uuesti ühineda, kuid kaotab kõik oma kohalikud "
+"muudatused."
 
 #: ../../source/components/nethsm/clustering.rst:522
 msgid ""
@@ -3893,6 +4005,12 @@ msgid ""
 "endpoint expects HTTPS clients to always authenticate with the ``unlock``"
 " fake user, and the latest known unlock passphrase as the password."
 msgstr ""
+"Lõpppunkt „ ` “ `POST /cluster/force-new``, mis on kättesaadav ainult "
+"seisundis „ *Failed“*, nõuab autentimist, kuna see võib põhjustada andmete "
+"kaotust. Kuna aga selles seisundis ei ole HSM-kasutajad ega rollid "
+"kättesaadavad, eeldab lõpppunkt, et HTTPS-kliendid autentivad end alati "
+"võltskasutaja ``unlock`` nimel ning kasutavad paroolina viimast teadaolevat "
+"lukust vabastamise salasõna."
 
 #: ../../source/components/nethsm/clustering.rst:529
 msgid ""
@@ -3900,6 +4018,9 @@ msgid ""
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
 "is changed at least once."
 msgstr ""
+"Pärast versioonist < 5.0 uuendamist on ``force-new`` lõpppunkt alati "
+"„Unauthorized” (autoriseerimata), kuni HSM on avatud või avamissalasanat on "
+"vähemalt üks kord muudetud."
 
 #: ../../source/components/nethsm/clustering.rst:534
 #, fuzzy
@@ -39814,4 +39935,3 @@ msgstr "Märgi kärbitud väljund"
 #~ "vigu, kui ta näiteks üritab seda "
 #~ "lahti lukustada. Sellisel juhul andke "
 #~ "sellele veidi aega ja proovige uuesti."
-

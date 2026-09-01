@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-09-01 09:32+0000\n"
-"PO-Revision-Date: 2026-08-31 15:46+0000\n"
+"PO-Revision-Date: 2026-09-01 09:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/bg/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -531,6 +532,8 @@ msgid ""
 "NetHSM with a currently unavailable database (see `Recovery "
 "<clustering.html#recovering-a-failed-node>`__)."
 msgstr ""
+"NetHSM с база данни, която в момента е недостъпна (вижте `Recovery "
+"<clustering.html#recovering-a-failed-node>`__)."
 
 #: ../../source/components/nethsm/administration.rst:123
 #: ../../source/components/nethsm/administration.rst:127
@@ -1103,6 +1106,8 @@ msgid ""
 "System time of the NetHSM software can either be set manually or "
 "automatically by configuring an NTP or NTS server."
 msgstr ""
+"Системното време на софтуера NetHSM може да се настрои ръчно или автоматично "
+"чрез конфигуриране на NTP- или NTS-сървър."
 
 #: ../../source/components/nethsm/administration.rst:466
 #, fuzzy
@@ -1136,6 +1141,11 @@ msgid ""
 "time, as it is set during provisioning. If NTP/NTS is configured, the "
 "manually set time will be eventually overriden by the server's time."
 msgstr ""
+"Текущото системно време може да се настрои ръчно, както следва. Имайте "
+"предвид, че ръчното настройване на часовника обикновено не е необходимо за "
+"задаване на системното време, тъй като то се задава по време на "
+"първоначалната настройка. Ако е конфигуриран NTP/NTS, ръчно зададеното време "
+"в крайна сметка ще бъде заменено от времето на сървъра."
 
 #: ../../source/components/nethsm/administration.rst:497
 msgid "Make sure to pass the time in UTC timezone."
@@ -1171,6 +1181,9 @@ msgid ""
 "An NTP server can be configured to automatically adjust NetHSM's system "
 "time. Optionally, NTS (Network Time Security) can be enabled."
 msgstr ""
+"NTP сървърът може да бъде настроен така, че автоматично да синхронизира "
+"системното време на NetHSM. По желание може да се активира NTS (Network Time "
+"Security)."
 
 #: ../../source/components/nethsm/administration.rst:527
 #, fuzzy
@@ -1206,12 +1219,16 @@ msgid ""
 "NTP/NTS can be configured as follows. It can be disabled by leaving empty"
 " fields."
 msgstr ""
+"NTP/NTS може да се конфигурира по следния начин. Може да се деактивира, като "
+"полетата се оставят празни."
 
 #: ../../source/components/nethsm/administration.rst:557
 msgid ""
 "The NTP server has to be provided by its IP (either v4 or v6), not "
 "hostname."
 msgstr ""
+"NTP сървърът трябва да бъде посочен чрез IP адреса му (v4 или v6), а не чрез "
+"името на хоста."
 
 #: ../../source/components/nethsm/administration.rst:566
 #, fuzzy
@@ -1224,6 +1241,9 @@ msgid ""
 "configured. Hostname of the NTS server (enables Network Time Security). "
 "If absent, means NTS is not configured."
 msgstr ""
+"IP адрес (v4 или v6) на NTP сървъра. Ако липсва, това означава, че NTP не е "
+"конфигуриран. Име на хоста на NTS сървъра (активира Network Time Security). "
+"Ако липсва, това означава, че NTS не е конфигуриран."
 
 #: ../../source/components/nethsm/administration.rst:583
 #: ../../source/components/nethsm/metrics.rst:4
@@ -2700,6 +2720,10 @@ msgid ""
 "each node becomes unable to perform reads and writes. This implies the "
 "following scenarios."
 msgstr ""
+"В клъстер, който падне под този праг (например поради проблем с мрежата), не "
+"може да бъде избран лидер и локалният екземпляр на ``etcd`` на всеки възел "
+"става неспособен да извършва операции за четене и запис. Това води до "
+"следните сценарии."
 
 #: ../../source/components/nethsm/clustering.rst:25
 msgid "One Node Goes Down and Quorum is Still Reached"
@@ -2744,6 +2768,12 @@ msgid ""
 "will not be part of the cluster anymore), or be factory reset and go "
 "through the join process again from scratch."
 msgstr ""
+"Ако устройството никога не се възстанови, то трябва да бъде премахнато ` "
+"<clustering.html#removing-a-node-cleanly>` __ от клъстера и или да премине "
+"през `възстановяване <clustering.html#recovering-a-failed-node>`__, за да се "
+"получи достъп до данните му (но то вече няма да бъде част от клъстера), или "
+"да бъде върнато към фабричните настройки и да премине отново през процеса на "
+"присъединяване от самото начало."
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid "A Network Partition Happens and Quorum is Still Reached"
@@ -2791,6 +2821,10 @@ msgid ""
 "number of nodes) will leave the bigger half of the cluster healthy, and "
 "the smaller half inoperable until the partition is resolved."
 msgstr ""
+"С други думи, при най-лошия възможен сценарий на разделяне на мрежата (в "
+"клъстер с нечетен брой възли) по-голямата половина от клъстера ще остане в "
+"изправно състояние, а по-малката половина ще бъде извън строя, докато "
+"разделянето не бъде отстранено."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid "The Quorum is Durably Lost"
@@ -3306,6 +3340,10 @@ msgid ""
 "through `Time <administration.html#time>`__ and `NTS/NTP "
 "<administration.html#ntp-nts>`__ configuration."
 msgstr ""
+"Уверете се, че на всеки възел е зададено точно системно време – в идеалния "
+"случай чрез NTP/NTS, а не чрез ръчна настройка. Това може да се направи чрез "
+"конфигурацията на `Time <administration.html#time>`__ и `NTS/NTP "
+"<administration.html#ntp-nts>`__."
 
 #: ../../source/components/nethsm/clustering.rst:206
 #, fuzzy
@@ -3332,6 +3370,8 @@ msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
 msgstr ""
+"След като навакса, повишете статуса на възла от „ученик“ до „пълноправен "
+"член“"
 
 #: ../../source/components/nethsm/clustering.rst:215
 #, fuzzy
@@ -3418,6 +3458,10 @@ msgid ""
 " now connect to the cluster and receive data from it, but cannot "
 "participate until it is promoted, which will be covered below."
 msgstr ""
+"Обърнете внимание, че в отговора по-горе новоприсъединилият се възел е "
+"„ученик“: той вече може да се свърже с клъстера и да получава данни от него, "
+"но не може да участва, докато не бъде повишен в ранг, което ще бъде "
+"разгледано по-долу."
 
 #: ../../source/components/nethsm/clustering.rst:260
 msgid ""
@@ -3425,6 +3469,10 @@ msgid ""
 " allows for a safer operation of the cluster, as any issue with the new "
 "node cannot cause instability to the whole cluster before its promotion."
 msgstr ""
+"Макар че тази концепция за „ученик“ добавя допълнителна стъпка (повишаване), "
+"тя осигурява по-безопасна работа на клъстера, тъй като евентуален проблем с "
+"новия възел не може да доведе до нестабилност в целия клъстер преди "
+"повишаването му."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid "Keep that response for the next step."
@@ -3457,6 +3505,10 @@ msgid ""
 "manually promoted (see below). This is normal. When the call returns "
 "successfully, it indicates that join and promotion have been successful."
 msgstr ""
+"Извикването на ``POST /cluster/join`` ще остане в очакване, докато новият "
+"възел не бъде ръчно повишен (виж по-долу). Това е нормално. Когато "
+"извикването се върне успешно, това означава, че присъединяването и "
+"повишаването са преминали успешно."
 
 #: ../../source/components/nethsm/clustering.rst:276
 #, fuzzy
@@ -3484,12 +3536,18 @@ msgid ""
 "hand, any problem with the node at this stage will not cause issues to "
 "the cluster, making this operation safe."
 msgstr ""
+"На този етап новият възел се е присъединил като възел от типа „ *“ (* ): той "
+"се синхронизира с клъстера, но все още не е готов за работа. От друга "
+"страна, евентуален проблем с възела на този етап няма да доведе до проблеми "
+"за клъстера, което прави тази операция безопасна."
 
 #: ../../source/components/nethsm/clustering.rst:283
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
 msgstr ""
+"Последната стъпка за завършване на присъединяването е новият възел да бъде "
+"повишен в пълноправен член."
 
 #: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
@@ -3502,6 +3560,9 @@ msgid ""
 "for the new member to catch up with the cluster. Once this is done, it "
 "can be promoted from learner to full member."
 msgstr ""
+"В зависимост от състоянието на мрежата и клъстера, може да отнеме известно "
+"време, докато новият член се синхронизира с клъстера. След като това стане, "
+"той може да бъде повишен от статут на „ученик“ до пълноправен член."
 
 #: ../../source/components/nethsm/clustering.rst:294
 msgid ""
@@ -3512,6 +3573,12 @@ msgid ""
 "section of this document). Ensure this new node has a stable connection "
 "to the cluster before promoting it."
 msgstr ""
+"Повишаването на статуса на даден възел увеличава прага на кворума на "
+"клъстера (вижте документацията за API на „ `“ <https://nethsmdemo.nitrokey."
+"com/api_docs/index.html>`__, както и раздела „ `“ (Оперативна излишност) "
+"<clustering.html#operational-redundancy>`__ в настоящия документ). Уверете "
+"се, че новият възел има стабилна връзка с клъстера, преди да повишите "
+"статуса му."
 
 #: ../../source/components/nethsm/clustering.rst:296
 msgid ""
@@ -3521,6 +3588,11 @@ msgid ""
 " hasn't caught up yet, then this will fail with HTTP code 412 and "
 "promotion should be attempted again later."
 msgstr ""
+"Можете да опитате да повишите статуса на новия член чрез извикване на ``POST "
+"/cluster/members/{MemberID}/promote`` (вижте документацията за API-то на ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). Ако обучаващият "
+"се все още не е наваксал, операцията ще се провали с HTTP код 412 и трябва "
+"да се опитате да го повишите отново по-късно."
 
 #: ../../source/components/nethsm/clustering.rst:300
 #, fuzzy
@@ -3702,6 +3774,8 @@ msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
 msgstr ""
+"Трябва да видите как започва, да се присъедините към клъстера като „ученик“ "
+"и да се синхронизирате с данните."
 
 #: ../../source/components/nethsm/clustering.rst:417
 #, fuzzy
@@ -3714,6 +3788,10 @@ msgid ""
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
 " section to promote the witness. If this fails, try again later."
 msgstr ""
+"Накрая, след като измине известно време, следвайте обичайните инструкции от "
+"раздела „Насърчаване на новия обучаем“ <clustering.html#promoting-the-new-"
+"learner>` __ на сайта `, за да насърчите свидетеля. Ако това не даде "
+"резултат, опитайте отново по-късно."
 
 #: ../../source/components/nethsm/clustering.rst:423
 #, fuzzy
@@ -3871,6 +3949,8 @@ msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
 msgstr ""
+"Възел, който се е присъединил към клъстера, но все още не е бил повишен в "
+"ранг, също може безопасно да бъде премахнат по този начин."
 
 #: ../../source/components/nethsm/clustering.rst:469
 #, fuzzy
@@ -3883,6 +3963,9 @@ msgid ""
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
 "*isolated*."
 msgstr ""
+"Възел, който съобщава състоянието „ *Failed“ ( се провали)*, ще откаже да "
+"отговори на повечето обичайни операции. Все пак той може да бъде изключен, "
+"рестартиран, нулиран, *диагностициран* или *изолиран*."
 
 #: ../../source/components/nethsm/clustering.rst:475
 msgid ""
@@ -3891,32 +3974,45 @@ msgid ""
 " with a lost quorum will stop responding to *all* requests. It *must* be "
 "factory-reset."
 msgstr ""
+"Наличието на състоянието „ *“ (Неуспешен* ), както и операциите ``diagnose`` "
+"и ``force-new``, важи само за версия 5.0 и по-новите версии. В версия 4.0 "
+"възел с изгубено кворум ще спре да отговаря на всички заявки *all*. Той "
+"*трябва* да бъде възстановен към фабричните настройки."
 
 #: ../../source/components/nethsm/clustering.rst:479
 msgid "Common causes for a node to be in the *Failed* state include:"
 msgstr ""
+"Честите причини, поради които даден възел може да се намира в състоянието „ "
+"*“ с грешка „* “, включват:"
 
 #: ../../source/components/nethsm/clustering.rst:481
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
 msgstr ""
+"Трайно `загуба на кворум <clustering.html#the-quorum-is-durably-lost>`__."
 
 #: ../../source/components/nethsm/clustering.rst:482
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
 msgstr ""
+"Временно загубено кворум (например, когато се добавя втори възел към "
+"клъстера, а вторият възел все още не се е присъединил)."
 
 #: ../../source/components/nethsm/clustering.rst:484
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
 msgstr ""
+"``etcd`` в момента се рестартира (например защото сертификатите са се "
+"променили или мрежата е била преконфигурирана)."
 
 #: ../../source/components/nethsm/clustering.rst:486
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
 msgstr ""
+"Клъстерът е подложен на изключително голямо натоварване (например по време "
+"на възстановяване на много голям архив)."
 
 #: ../../source/components/nethsm/clustering.rst:489
 msgid ""
@@ -3925,6 +4021,10 @@ msgid ""
 "interact with its database. This is to avoid spurious transitions caused "
 "by very short instabilities."
 msgstr ""
+"Независимо от причината, NetHSM ще премине в състоянието „ *Failed“ (* ) "
+"едва след не по-малко от една пълна минута неуспешни опити за взаимодействие "
+"с базата данни. Това се прави, за да се избегнат неоснователни преходи, "
+"причинени от много кратки периоди на нестабилност."
 
 #: ../../source/components/nethsm/clustering.rst:494
 msgid ""
@@ -3933,6 +4033,10 @@ msgid ""
 "about the current status of ``etcd`` and its database, including logs "
 "(refer to the API documentation)."
 msgstr ""
+"За да ви помогнем да разберете в какъв статус се намира вашият възел, "
+"крайната точка ``GET /health/diagnose`` продължава да е достъпна и "
+"предоставя информация за текущото състояние на ``etcd`` и неговата база "
+"данни, включително логовете (вижте документацията за API)."
 
 #: ../../source/components/nethsm/clustering.rst:499
 msgid ""
@@ -3944,18 +4048,30 @@ msgid ""
 " been resolved for the cluster to stabilize, the HSM to detect the "
 "resolution and to change state."
 msgstr ""
+"Ако и когато базата данни отново стане достъпна (например, кворумът бъде "
+"възстановен, защото проблемът с мрежата е решен), NetHSM автоматично ще "
+"премине от състоянието „ *Failed“* към състоянието, в което се е намирал "
+"преди това (или ще възобнови нормалната последователност на зареждане, ако е "
+"бил в процес на зареждане), без да е необходимо каквото и да е ръчно "
+"действие. След като проблемът бъде отстранен, ще отнеме до една минута, "
+"докато клъстерът се стабилизира, HSM засече, че проблемът е отстранен, и "
+"промени състоянието си."
 
 #: ../../source/components/nethsm/clustering.rst:506
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
 msgstr ""
+"Ако стигнете до заключението, че неизправността е трайна (например загуба на "
+"кворум, без надежда за разрешаване на основния проблем), можете да:"
 
 #: ../../source/components/nethsm/clustering.rst:509
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
 msgstr ""
+"**Възстановете фабричните настройки на устройството**, което ще изтрие "
+"всички данни, и възстановете резервно копие."
 
 #: ../../source/components/nethsm/clustering.rst:510
 msgid ""
@@ -3966,6 +4082,12 @@ msgid ""
 "either the *Locked* or *Operational* state depending on the unattended "
 "boot setting."
 msgstr ""
+"**Изолирайте** възела с крайната точка ``POST /cluster/force-new``, което ще "
+"доведе до необратимо забравяне на всички останали членове на клъстера, "
+"възстановяване на данните ``etcd``, налични на диска, и рестартиране. Ако "
+"основната повреда е свързана с клъстера, възелът ще следва нормалната "
+"последователност на зареждане и ще премине в състояние *„Locked“* или "
+"*„Operational“* в зависимост от настройката за автоматично зареждане."
 
 #: ../../source/components/nethsm/clustering.rst:517
 msgid ""
@@ -3974,6 +4096,10 @@ msgid ""
 "reconciled. The node can still re-join the cluster, but will lose all its"
 " local modifications."
 msgstr ""
+"Ако даден възел бъде изолиран с командата „ ` “ `force-new``, той вече ще "
+"бъде десинхронизиран с клъстера: нови записи, направени на него или в "
+"клъстера, няма да могат да бъдат съгласувани. Възелът все още може да се "
+"присъедини отново към клъстера, но ще загуби всички свои локални промени."
 
 #: ../../source/components/nethsm/clustering.rst:522
 msgid ""
@@ -3983,6 +4109,12 @@ msgid ""
 "endpoint expects HTTPS clients to always authenticate with the ``unlock``"
 " fake user, and the latest known unlock passphrase as the password."
 msgstr ""
+"Крайната точка „ ` “ `POST /cluster/force-new``, която е достъпна само в "
+"състоянието „ *Failed“*, изисква удостоверяване на автентичност, тъй като "
+"може да доведе до загуба на данни. Тъй като обаче потребителите и ролите на "
+"HSM не са достъпни в това състояние, крайната точка очаква HTTPS клиентите "
+"винаги да се удостоверяват с фалшивия потребител „ ` “ `unlock`` и с най-"
+"новата известна парола за отключване като парола."
 
 #: ../../source/components/nethsm/clustering.rst:529
 msgid ""
@@ -3990,6 +4122,9 @@ msgid ""
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
 "is changed at least once."
 msgstr ""
+"След актуализация от версия < 5.0 крайната точка „ ` “ `force-new`` винаги "
+"ще показва състоянието „Unauthorized“, докато HSM не бъде отключен или "
+"паролата за отключване не бъде променена поне веднъж."
 
 #: ../../source/components/nethsm/clustering.rst:534
 #, fuzzy
@@ -40823,4 +40958,3 @@ msgstr "Маркирайте изрязаното Изход"
 #~ " опит за отключване например. В такъв"
 #~ " случай дайте му известно време и "
 #~ "опитайте отново."
-
