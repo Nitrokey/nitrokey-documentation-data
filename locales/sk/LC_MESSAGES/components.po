@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-09-01 09:32+0000\n"
-"PO-Revision-Date: 2026-08-31 15:46+0000\n"
+"PO-Revision-Date: 2026-09-01 09:49+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -524,6 +525,8 @@ msgid ""
 "NetHSM with a currently unavailable database (see `Recovery "
 "<clustering.html#recovering-a-failed-node>`__)."
 msgstr ""
+"NetHSM s databázou, ktorá je momentálne nedostupná (pozri `Recovery "
+"<clustering.html#recovering-a-failed-node>`__)."
 
 #: ../../source/components/nethsm/administration.rst:123
 #: ../../source/components/nethsm/administration.rst:127
@@ -1079,6 +1082,8 @@ msgid ""
 "System time of the NetHSM software can either be set manually or "
 "automatically by configuring an NTP or NTS server."
 msgstr ""
+"Systémový čas softvéru NetHSM je možné nastaviť buď ručne, alebo automaticky "
+"prostredníctvom konfigurácie servera NTP alebo NTS."
 
 #: ../../source/components/nethsm/administration.rst:466
 #, fuzzy
@@ -1111,6 +1116,11 @@ msgid ""
 "time, as it is set during provisioning. If NTP/NTS is configured, the "
 "manually set time will be eventually overriden by the server's time."
 msgstr ""
+"Aktuálny systémový čas je možné ručne nastaviť nasledovným spôsobom. "
+"Upozorňujeme, že ručné nastavenie hodín zvyčajne nie je potrebné na "
+"nastavenie systémového času, keďže ten sa nastavuje počas inicializácie. Ak "
+"je nakonfigurovaný protokol NTP/NTS, ručne nastavený čas bude nakoniec "
+"prepisovaný časom servera."
 
 #: ../../source/components/nethsm/administration.rst:497
 msgid "Make sure to pass the time in UTC timezone."
@@ -1145,6 +1155,9 @@ msgid ""
 "An NTP server can be configured to automatically adjust NetHSM's system "
 "time. Optionally, NTS (Network Time Security) can be enabled."
 msgstr ""
+"NTP server je možné nakonfigurovať tak, aby automaticky upravoval systémový "
+"čas zariadenia NetHSM. Voliteľne je možné aktivovať funkciu NTS (Network "
+"Time Security)."
 
 #: ../../source/components/nethsm/administration.rst:527
 #, fuzzy
@@ -1179,12 +1192,16 @@ msgid ""
 "NTP/NTS can be configured as follows. It can be disabled by leaving empty"
 " fields."
 msgstr ""
+"NTP/NTS je možné nakonfigurovať nasledovne. Funkciu je možné deaktivovať "
+"tak, že príslušné polia zostanú prázdne."
 
 #: ../../source/components/nethsm/administration.rst:557
 msgid ""
 "The NTP server has to be provided by its IP (either v4 or v6), not "
 "hostname."
 msgstr ""
+"NTP server je potrebné určiť pomocou jeho IP adresy (buď IPv4, alebo IPv6), "
+"nie pomocou názvu hostiteľa."
 
 #: ../../source/components/nethsm/administration.rst:566
 #, fuzzy
@@ -1197,6 +1214,9 @@ msgid ""
 "configured. Hostname of the NTS server (enables Network Time Security). "
 "If absent, means NTS is not configured."
 msgstr ""
+"IP adresa (v4 alebo v6) servera NTP. Ak chýba, znamená to, že NTP nie je "
+"nakonfigurované. Názov hostiteľa servera NTS (umožňuje Network Time Security)"
+". Ak chýba, znamená to, že NTS nie je nakonfigurované."
 
 #: ../../source/components/nethsm/administration.rst:583
 #: ../../source/components/nethsm/metrics.rst:4
@@ -2641,6 +2661,10 @@ msgid ""
 "each node becomes unable to perform reads and writes. This implies the "
 "following scenarios."
 msgstr ""
+"V klastri, ktorý klesne pod túto hranicu (napr. kvôli sieťovému problému), "
+"nie je možné zvoliť žiadneho lídra a lokálna inštancia ``etcd`` na každom "
+"uzle nebude schopná vykonávať operácie čítania a zápisu. Z toho vyplývajú "
+"nasledujúce scenáre."
 
 #: ../../source/components/nethsm/clustering.rst:25
 msgid "One Node Goes Down and Quorum is Still Reached"
@@ -2684,6 +2708,11 @@ msgid ""
 "will not be part of the cluster anymore), or be factory reset and go "
 "through the join process again from scratch."
 msgstr ""
+"Ak sa už nikdy neobnoví, musí byť `odstránené <clustering.html#removing-a"
+"-node-cleanly>`__ z klastra a buď prejsť `obnovou <clustering."
+"html#recovering-a-failed-node>`__, aby bolo možné získať prístup k jeho "
+"dátam (v tom prípade však už nebude súčasťou klastra), alebo musí byť "
+"obnovené na továrenské nastavenia a prejsť procesom pripojenia od začiatku."
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid "A Network Partition Happens and Quorum is Still Reached"
@@ -2731,6 +2760,9 @@ msgid ""
 "number of nodes) will leave the bigger half of the cluster healthy, and "
 "the smaller half inoperable until the partition is resolved."
 msgstr ""
+"Inými slovami, v najhoršom prípade sieťového rozdelenia (v klastri s "
+"nepárnym počtom uzlov) zostane väčšia polovica klastra funkčná, zatiaľ čo "
+"menšia polovica bude nefunkčná, kým sa rozdelenie nevyrieši."
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid "The Quorum is Durably Lost"
@@ -3235,6 +3267,10 @@ msgid ""
 "through `Time <administration.html#time>`__ and `NTS/NTP "
 "<administration.html#ntp-nts>`__ configuration."
 msgstr ""
+"Uistite sa, že na každom uzle je nastavený správny systémový čas, v ideálnom "
+"prípade pomocou protokolu NTP/NTS, a nie ručným nastavením času. To je možné "
+"vykonať prostredníctvom konfigurácie `Time <administration.html#time>`__ a `"
+"NTS/NTP <administration.html#ntp-nts>`__."
 
 #: ../../source/components/nethsm/clustering.rst:206
 #, fuzzy
@@ -3263,6 +3299,8 @@ msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
 msgstr ""
+"Akonáhle dobehne ostatných, povýšte uzol zo statusu „učiaceho sa“ na "
+"plnoprávneho člena"
 
 #: ../../source/components/nethsm/clustering.rst:215
 #, fuzzy
@@ -3347,6 +3385,9 @@ msgid ""
 " now connect to the cluster and receive data from it, but cannot "
 "participate until it is promoted, which will be covered below."
 msgstr ""
+"Všimnite si v uvedenej odpovedi, že nový člen je „učniak“: teraz sa síce "
+"môže pripojiť ku klastru a prijímať z neho údaje, ale nemôže sa aktívne "
+"podieľať na činnosti, kým nebude povýšený, čo si rozoberieme nižšie."
 
 #: ../../source/components/nethsm/clustering.rst:260
 msgid ""
@@ -3354,6 +3395,9 @@ msgid ""
 " allows for a safer operation of the cluster, as any issue with the new "
 "node cannot cause instability to the whole cluster before its promotion."
 msgstr ""
+"Hoci tento pojem „učiaci sa uzol“ pridáva ďalší krok (povýšenie), umožňuje "
+"bezpečnejšiu prevádzku klastra, keďže akýkoľvek problém s novým uzlom nemôže "
+"spôsobiť nestabilitu celého klastra pred jeho povýšením."
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid "Keep that response for the next step."
@@ -3386,6 +3430,9 @@ msgid ""
 "manually promoted (see below). This is normal. When the call returns "
 "successfully, it indicates that join and promotion have been successful."
 msgstr ""
+"Volanie funkcie ``POST /cluster/join`` zostane zavesené, kým nebude nový "
+"uzol ručne povýšený (pozri nižšie). Ide o normálny jav. Ak sa volanie "
+"úspešne vráti, znamená to, že pripojenie a povýšenie prebehli úspešne."
 
 #: ../../source/components/nethsm/clustering.rst:276
 #, fuzzy
@@ -3412,12 +3459,18 @@ msgid ""
 "hand, any problem with the node at this stage will not cause issues to "
 "the cluster, making this operation safe."
 msgstr ""
+"V tejto fáze sa nový uzol pripojil ako uzol typu „ *“ (* ): synchronizuje sa "
+"s klastrom, ale zatiaľ nie je v prevádzke. Na druhej strane, akýkoľvek "
+"problém s uzlom v tejto fáze nespôsobí žiadne ťažkosti klastru, čím je táto "
+"operácia bezpečná."
 
 #: ../../source/components/nethsm/clustering.rst:283
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
 msgstr ""
+"Posledným krokom na dokončenie pripojenia je povýšenie nového uzla na "
+"riadneho člena."
 
 #: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
@@ -3430,6 +3483,9 @@ msgid ""
 "for the new member to catch up with the cluster. Once this is done, it "
 "can be promoted from learner to full member."
 msgstr ""
+"V závislosti od podmienok siete a klastra môže chvíľu trvať, kým sa nový "
+"člen synchronizuje s klastrom. Akonáhle sa tak stane, môže byť povýšený z "
+"pozície „učiaceho sa“ na riadneho člena."
 
 #: ../../source/components/nethsm/clustering.rst:294
 msgid ""
@@ -3440,6 +3496,11 @@ msgid ""
 "section of this document). Ensure this new node has a stable connection "
 "to the cluster before promoting it."
 msgstr ""
+"Povýšením uzla sa zvýši prah kvorum v klastri (pozri dokumentáciu k "
+"rozhraniu API „ `“ <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
+"a časť „ `Operational Redundancy“ <clustering.html#operational-redundancy>`"
+"__ v tomto dokumente). Pred povýšením nového uzla sa uistite, že má stabilné "
+"pripojenie ku klastru."
 
 #: ../../source/components/nethsm/clustering.rst:296
 msgid ""
@@ -3449,6 +3510,11 @@ msgid ""
 " hasn't caught up yet, then this will fail with HTTP code 412 and "
 "promotion should be attempted again later."
 msgstr ""
+"Môžete sa pokúsiť povýšiť nového člena pomocou volania na ``POST /cluster/"
+"members/{MemberID}/promote`` (pozrite si dokumentáciu k API ` "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html>` __). Ak sa študent "
+"ešte nedostal na požadovanú úroveň, operácia zlyhá s HTTP kódom 412 a "
+"povýšenie by sa malo neskôr zopakovať."
 
 #: ../../source/components/nethsm/clustering.rst:300
 #, fuzzy
@@ -3624,6 +3690,8 @@ msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
 msgstr ""
+"Mali by ste vidieť, ako sa spustí, pripojiť sa ku klastru ako „učiaci sa“ "
+"uzol a dobehnúť zameškané údaje."
 
 #: ../../source/components/nethsm/clustering.rst:417
 #, fuzzy
@@ -3636,6 +3704,11 @@ msgid ""
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
 " section to promote the witness. If this fails, try again later."
 msgstr ""
+"Nakoniec, po uplynutí určitého času, postupujte podľa bežných pokynov "
+"uvedených v časti „ `“ (Odosielanie žiadostí o povýšenie) v sekcii „"
+"Promoting the New Learner“ (Povýšenie nového študenta) <clustering.html"
+"#promoting-the-new-learner>`__, aby ste požiadali o povýšenie svedka. Ak sa "
+"to nepodarí, skúste to neskôr."
 
 #: ../../source/components/nethsm/clustering.rst:423
 #, fuzzy
@@ -3788,6 +3861,8 @@ msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
 msgstr ""
+"Uzol, ktorý sa pripojil ku klastru, ale ešte nebol povýšený, možno týmto "
+"spôsobom tiež bezpečne odstrániť."
 
 #: ../../source/components/nethsm/clustering.rst:469
 #, fuzzy
@@ -3800,6 +3875,9 @@ msgid ""
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
 "*isolated*."
 msgstr ""
+"Uzol, ktorý hlási stav „ *Failed“ ( zlyhal)*, nebude reagovať na väčšinu "
+"bežných operácií. Stále je však možné ho vypnúť, reštartovať, vynulovať *, "
+"diagnostikovať* alebo *izolovať*."
 
 #: ../../source/components/nethsm/clustering.rst:475
 msgid ""
@@ -3808,32 +3886,44 @@ msgid ""
 " with a lost quorum will stop responding to *all* requests. It *must* be "
 "factory-reset."
 msgstr ""
+"Existencia stavov „ *“ (Zlyhanie), „* “ (Zlyhanie), „ ` “ (`diagnose``) a „ `"
+" “ (`force-new``) sa vzťahuje iba na verziu 5.0 a novšie. Vo verzii 4.0 "
+"uzol, ktorý stratil kvorum, prestane reagovať na všetky požiadavky typu „ *“ "
+"a „* “. Musí byť obnovený do továrenských nastavení („ *“ a „* “)."
 
 #: ../../source/components/nethsm/clustering.rst:479
 msgid "Common causes for a node to be in the *Failed* state include:"
 msgstr ""
+"Medzi bežné príčiny, prečo sa uzol nachádza v stave „ *“ (Zlyhanie "
+"pripojenia)*, patria:"
 
 #: ../../source/components/nethsm/clustering.rst:481
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
-msgstr ""
+msgstr "Trvalá strata kvóra ` <clustering.html#the-quorum-is-durably-lost>` __."
 
 #: ../../source/components/nethsm/clustering.rst:482
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
 msgstr ""
+"Dočasná strata kvorum (napr. pri pridávaní druhého uzla do klastra, keď sa "
+"tento druhý uzol ešte nepripojil)."
 
 #: ../../source/components/nethsm/clustering.rst:484
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
 msgstr ""
+"``etcd`` sa práve reštartuje (napr. kvôli zmene certifikátov alebo "
+"prekonfigurácii siete)."
 
 #: ../../source/components/nethsm/clustering.rst:486
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
 msgstr ""
+"Cluster je vystavený veľmi vysokému zaťaženiu (napr. počas obnovy veľmi "
+"rozsiahlej zálohy)."
 
 #: ../../source/components/nethsm/clustering.rst:489
 msgid ""
@@ -3842,6 +3932,9 @@ msgid ""
 "interact with its database. This is to avoid spurious transitions caused "
 "by very short instabilities."
 msgstr ""
+"Bez ohľadu na príčinu prejde NetHSM do stavu „ *Failed“ (* ) až po uplynutí "
+"najmenej jednej plnej minúty neúspešných pokusov o komunikáciu s databázou. "
+"Cieľom je zabrániť falošným prechodom spôsobeným veľmi krátkodobými výkyvmi."
 
 #: ../../source/components/nethsm/clustering.rst:494
 msgid ""
@@ -3850,6 +3943,10 @@ msgid ""
 "about the current status of ``etcd`` and its database, including logs "
 "(refer to the API documentation)."
 msgstr ""
+"Aby ste mohli zistiť, v akom stave sa váš uzol nachádza, je naďalej k "
+"dispozícii koncový bod ``GET /health/diagnose``, ktorý poskytuje informácie "
+"o aktuálnom stave ``etcd`` a jeho databázy, vrátane protokolov (pozrite si "
+"dokumentáciu k API)."
 
 #: ../../source/components/nethsm/clustering.rst:499
 msgid ""
@@ -3861,18 +3958,28 @@ msgid ""
 " been resolved for the cluster to stabilize, the HSM to detect the "
 "resolution and to change state."
 msgstr ""
+"Ak a keď bude databáza opäť dostupná (napr. keď sa obnoví kvorum v dôsledku "
+"vyriešenia sieťového problému), NetHSM automaticky prejde zo stavu „ *Failed“"
+" (* ) do stavu, v ktorom sa nachádzal predtým (alebo obnoví bežnú sekvenciu "
+"spúšťania, ak sa práve spúšťal), bez toho, aby bolo potrebné akékoľvek ručné "
+"zásah. Stabilizácia klastra, detekcia vyriešenia problému zo strany HSM a "
+"zmena stavu potrvá až jednu minútu po vyriešení problému."
 
 #: ../../source/components/nethsm/clustering.rst:506
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
 msgstr ""
+"Ak dospejete k záveru, že porucha je trvalá (napr. strata kvorum bez nádeje "
+"na vyriešenie základnej príčiny), môžete buď:"
 
 #: ../../source/components/nethsm/clustering.rst:509
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
 msgstr ""
+"**Obnovte továrenské nastavenia uzla**, čím sa vymažú všetky údaje, a "
+"obnovte zálohu."
 
 #: ../../source/components/nethsm/clustering.rst:510
 msgid ""
@@ -3883,6 +3990,12 @@ msgid ""
 "either the *Locked* or *Operational* state depending on the unattended "
 "boot setting."
 msgstr ""
+"**Izolujte** uzol s koncovým bodom ``POST /cluster/force-new``, ktorý "
+"nezvratne zabudne na všetkých ostatných členov klastra, obnoví ``etcd`` "
+"údaje nachádzajúce sa na disku a reštartuje sa. Ak bola príčinou zlyhania "
+"porucha súvisiaca s klastrom, uzol bude postupovať podľa bežného postupu "
+"spúšťania a v závislosti od nastavenia automatického spúšťania sa dostane "
+"buď do stavu *Locked*, alebo *Operational*."
 
 #: ../../source/components/nethsm/clustering.rst:517
 msgid ""
@@ -3891,6 +4004,10 @@ msgid ""
 "reconciled. The node can still re-join the cluster, but will lose all its"
 " local modifications."
 msgstr ""
+"Ak je uzol izolovaný pomocou príkazu „ ` “ `force-new``, dôjde k jeho "
+"desynchronizácii s klastrom: akékoľvek nové zápisy na ňom alebo v klastri "
+"nebude možné zosúladiť. Uzol sa môže naďalej pripojiť ku klastru, avšak "
+"stratí všetky svoje lokálne úpravy."
 
 #: ../../source/components/nethsm/clustering.rst:522
 msgid ""
@@ -3900,6 +4017,12 @@ msgid ""
 "endpoint expects HTTPS clients to always authenticate with the ``unlock``"
 " fake user, and the latest known unlock passphrase as the password."
 msgstr ""
+"Koncový bod ``POST /cluster/force-new``, ktorý je k dispozícii iba v stave „ "
+"*Failed“ ( zlyhal)*, vyžaduje overenie, pretože môže spôsobiť poškodenie. "
+"Keďže však v tomto stave nie sú k dispozícii používatelia ani role HSM, "
+"koncový bod očakáva, že klienti HTTPS sa budú vždy overovať pomocou "
+"fiktívneho používateľa ``unlock`` a ako heslo uvedú najnovšiu známu "
+"odomykaciu frázu."
 
 #: ../../source/components/nethsm/clustering.rst:529
 msgid ""
@@ -3907,6 +4030,9 @@ msgid ""
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
 "is changed at least once."
 msgstr ""
+"Po aktualizácii z verzie < 5.0 bude koncový bod ``force-new`` vždy vykazovať "
+"stav „Unauthorized“, kým sa HSM neodomkne alebo kým sa heslo na odomknutie "
+"aspoň raz nezmení."
 
 #: ../../source/components/nethsm/clustering.rst:534
 #, fuzzy
@@ -40175,4 +40301,3 @@ msgstr "Označiť orezaný výstup"
 #~ "pri pokuse o odomknutie. V takom "
 #~ "prípade mu dajte nejaký čas a "
 #~ "skúste to znova."
-
