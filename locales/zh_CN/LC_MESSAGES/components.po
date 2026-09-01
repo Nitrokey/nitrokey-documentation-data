@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-09-01 09:32+0000\n"
-"PO-Revision-Date: 2026-08-31 15:46+0000\n"
+"PO-Revision-Date: 2026-09-01 09:49+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -496,6 +496,8 @@ msgid ""
 "NetHSM with a currently unavailable database (see `Recovery "
 "<clustering.html#recovering-a-failed-node>`__)."
 msgstr ""
+"NetHSM 当前数据库不可用（参见`Recovery<clustering.html#recovering-a-failed-"
+"node>`__）。"
 
 #: ../../source/components/nethsm/administration.rst:123
 #: ../../source/components/nethsm/administration.rst:127
@@ -1028,7 +1030,8 @@ msgstr "时间"
 msgid ""
 "System time of the NetHSM software can either be set manually or "
 "automatically by configuring an NTP or NTS server."
-msgstr ""
+msgstr "NetHSM 软件的系统时间既可以手动设置，也可以通过配置 NTP 或 NTS "
+"服务器自动设置。"
 
 #: ../../source/components/nethsm/administration.rst:466
 #, fuzzy
@@ -1060,6 +1063,9 @@ msgid ""
 "time, as it is set during provisioning. If NTP/NTS is configured, the "
 "manually set time will be eventually overriden by the server's time."
 msgstr ""
+"可以按照以下步骤手动调整当前系统时间。请注意，通常无需手动设置时钟来设定系统"
+"时间，因为系统时间已在配置过程中设定完毕。如果配置了 NTP/"
+"NTS，则手动设置的时间最终将被服务器的时间覆盖。"
 
 #: ../../source/components/nethsm/administration.rst:497
 msgid "Make sure to pass the time in UTC timezone."
@@ -1092,7 +1098,8 @@ msgstr "评论"
 msgid ""
 "An NTP server can be configured to automatically adjust NetHSM's system "
 "time. Optionally, NTS (Network Time Security) can be enabled."
-msgstr ""
+msgstr "可以配置 NTP 服务器，使其自动调整 NetHSM 的系统时间。此外，还可以选择启用 "
+"NTS（网络时间安全）。"
 
 #: ../../source/components/nethsm/administration.rst:527
 #, fuzzy
@@ -1125,13 +1132,14 @@ msgstr ""
 msgid ""
 "NTP/NTS can be configured as follows. It can be disabled by leaving empty"
 " fields."
-msgstr ""
+msgstr "NTP/NTS 可按以下方式进行配置。若将相关字段留空，即可将其禁用。"
 
 #: ../../source/components/nethsm/administration.rst:557
 msgid ""
 "The NTP server has to be provided by its IP (either v4 or v6), not "
 "hostname."
-msgstr ""
+msgstr "NTP 服务器必须通过其 IP 地址（无论是 IPv4 还是 "
+"IPv6）来指定，而不是通过主机名。"
 
 #: ../../source/components/nethsm/administration.rst:566
 #, fuzzy
@@ -1144,6 +1152,8 @@ msgid ""
 "configured. Hostname of the NTS server (enables Network Time Security). "
 "If absent, means NTS is not configured."
 msgstr ""
+"NTP 服务器的 IP 地址（v4 或 v6）。如果未指定，则表示未配置 NTP。NTS "
+"服务器的主机名（启用网络时间安全）。如果未指定，则表示未配置 NTS。"
 
 #: ../../source/components/nethsm/administration.rst:583
 #: ../../source/components/nethsm/metrics.rst:4
@@ -2417,7 +2427,8 @@ msgid ""
 "issue), no leader can be elected and the local instance of ``etcd`` on "
 "each node becomes unable to perform reads and writes. This implies the "
 "following scenarios."
-msgstr ""
+msgstr "在低于此阈值的集群中（例如由于网络问题），无法选出领导者，且每个节点上的``etc"
+"d``本地实例将无法执行读写操作。这意味着会出现以下情况。"
 
 #: ../../source/components/nethsm/clustering.rst:25
 msgid "One Node Goes Down and Quorum is Still Reached"
@@ -2454,6 +2465,10 @@ msgid ""
 "will not be part of the cluster anymore), or be factory reset and go "
 "through the join process again from scratch."
 msgstr ""
+"如果它无法恢复，就必须将其从集群中移除` <clustering.html#removing-a-node-"
+"cleanly>` __，并要么进行`恢复<clustering.html#recovering-a-failed-node>`__ 以"
+"访问其数据（但它将不再是集群的一部分），要么恢复出厂设置并从头开始重新加入集"
+"群。"
 
 #: ../../source/components/nethsm/clustering.rst:39
 msgid "A Network Partition Happens and Quorum is Still Reached"
@@ -2492,6 +2507,8 @@ msgid ""
 "number of nodes) will leave the bigger half of the cluster healthy, and "
 "the smaller half inoperable until the partition is resolved."
 msgstr ""
+"换句话说，在最坏情况下的网络分区（在节点数量为奇数的集群中），集群中较大的那"
+"半部分将保持正常运行，而较小的那半部分则无法运行，直到分区问题得到解决为止。"
 
 #: ../../source/components/nethsm/clustering.rst:52
 msgid "The Quorum is Durably Lost"
@@ -2925,6 +2942,9 @@ msgid ""
 "through `Time <administration.html#time>`__ and `NTS/NTP "
 "<administration.html#ntp-nts>`__ configuration."
 msgstr ""
+"请确保每个节点都已配置了准确的系统时间，最好使用 NTP/NTS "
+"而不是手动设置时间。这可以通过`Time<administration.html#time>`__ 和`NTS/"
+"NTP<administration.html#ntp-nts>`__ 配置来实现。"
 
 #: ../../source/components/nethsm/clustering.rst:206
 #, fuzzy
@@ -2950,7 +2970,7 @@ msgstr "告诉新节点加入"
 msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
-msgstr ""
+msgstr "一旦该节点赶上进度，就将其从“学习者”晋升为“正式成员”"
 
 #: ../../source/components/nethsm/clustering.rst:215
 #, fuzzy
@@ -3020,13 +3040,16 @@ msgid ""
 " now connect to the cluster and receive data from it, but cannot "
 "participate until it is promoted, which will be covered below."
 msgstr ""
+"请注意，在上方的响应中，新加入的节点是一个“学习者”：它现在可以连接到集群并从"
+"集群接收数据，但在被晋升之前无法参与集群活动，相关内容将在下文中介绍。"
 
 #: ../../source/components/nethsm/clustering.rst:260
 msgid ""
 "While this concept of \"learner\" adds an additional step (promotion), it"
 " allows for a safer operation of the cluster, as any issue with the new "
 "node cannot cause instability to the whole cluster before its promotion."
-msgstr ""
+msgstr "虽然“学习节点”这一概念增加了一个额外步骤（晋升），但它能确保集群更安全地运行"
+"，因为新节点在晋升之前，其任何问题都不会导致整个集群不稳定。"
 
 #: ../../source/components/nethsm/clustering.rst:264
 msgid "Keep that response for the next step."
@@ -3056,6 +3079,8 @@ msgid ""
 "manually promoted (see below). This is normal. When the call returns "
 "successfully, it indicates that join and promotion have been successful."
 msgstr ""
+"对``POST /cluster/join`` 的调用将处于挂起状态，直到新节点被手动提升（见下文）"
+"。这是正常现象。当调用成功返回时，表明加入和提升均已成功。"
 
 #: ../../source/components/nethsm/clustering.rst:276
 #, fuzzy
@@ -3076,12 +3101,15 @@ msgid ""
 "hand, any problem with the node at this stage will not cause issues to "
 "the cluster, making this operation safe."
 msgstr ""
+"在此阶段，新节点已作为*学习节点* 加入集群：它正在与集群同步，但尚未投入运行。"
+"另一方面，此阶段该节点出现的任何问题都不会对集群造成影响，因此此操作是安全的"
+"。"
 
 #: ../../source/components/nethsm/clustering.rst:283
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
-msgstr ""
+msgstr "完成加入流程的最后一步是将新节点提升为正式成员。"
 
 #: ../../source/components/nethsm/clustering.rst:287
 #, fuzzy
@@ -3093,7 +3121,8 @@ msgid ""
 "Depending on the networking and cluster conditions, it may take a while "
 "for the new member to catch up with the cluster. Once this is done, it "
 "can be promoted from learner to full member."
-msgstr ""
+msgstr "根据网络和集群状况的不同，新成员可能需要一段时间才能跟上集群的进度。一旦完成"
+"同步，它就可以从学习者晋升为正式成员。"
 
 #: ../../source/components/nethsm/clustering.rst:294
 msgid ""
@@ -3104,6 +3133,10 @@ msgid ""
 "section of this document). Ensure this new node has a stable connection "
 "to the cluster before promoting it."
 msgstr ""
+"提升节点的级别会提高集群的法定人数阈值（请参阅`API 文档<https://nethsmdemo."
+"nitrokey.com/api_docs/index.html>`__ 以及本文档中`部分“运行冗余”<clustering."
+"html#operational-redundancy>`__）。在提升该节点级别之前，请确保该新节点与集群"
+"之间具有稳定的连接。"
 
 #: ../../source/components/nethsm/clustering.rst:296
 msgid ""
@@ -3113,6 +3146,10 @@ msgid ""
 " hasn't caught up yet, then this will fail with HTTP code 412 and "
 "promotion should be attempted again later."
 msgstr ""
+"您可以尝试通过调用``POST /cluster/members/{MemberID}/promote`` "
+"来提升新成员的权限（请参阅`API 文档<https://nethsmdemo.nitrokey.com/api_docs/"
+"index.html>`__）。如果学习者尚未跟上进度，则该操作将返回 HTTP 状态码 412 "
+"并失败，此时应稍后再尝试提升权限。"
 
 #: ../../source/components/nethsm/clustering.rst:300
 #, fuzzy
@@ -3259,7 +3296,7 @@ msgstr "以您喜欢的方式（手动、``systemd`` 服务、容器等）启动
 msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
-msgstr ""
+msgstr "你应该能看到它启动，以学习者身份加入集群，并跟上数据进度。"
 
 #: ../../source/components/nethsm/clustering.rst:417
 #, fuzzy
@@ -3272,6 +3309,9 @@ msgid ""
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
 " section to promote the witness. If this fails, try again later."
 msgstr ""
+"最后，过一段时间后，请按照`网站中“晋升新学员”<clustering.html#promoting-the-"
+"new-learner>`__ "
+"部分的常规说明，为该见证人办理晋升手续。如果操作失败，请稍后再试。"
 
 #: ../../source/components/nethsm/clustering.rst:423
 #, fuzzy
@@ -3389,7 +3429,7 @@ msgstr ""
 msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
-msgstr ""
+msgstr "已经加入集群但尚未被提升为领导节点的节点，也可以通过这种方式安全地移除。"
 
 #: ../../source/components/nethsm/clustering.rst:469
 #, fuzzy
@@ -3401,7 +3441,8 @@ msgid ""
 "A node reporting a *Failed* state will refuse to answer most normal "
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
 "*isolated*."
-msgstr ""
+msgstr "报告“*Failed”状态（* ）的节点将拒绝响应大多数常规操作。该节点仍可被关闭、重启"
+"、重置、进行故障诊断（*，* ）或隔离（*，* ）。"
 
 #: ../../source/components/nethsm/clustering.rst:475
 msgid ""
@@ -3410,32 +3451,35 @@ msgid ""
 " with a lost quorum will stop responding to *all* requests. It *must* be "
 "factory-reset."
 msgstr ""
+"*Failed* 状态以及``diagnose`` 和``force-new`` 操作仅适用于 5.0 及更高版本。"
+"在 4.0 版本中，失去定额的节点将停止响应*所有* 请求。该节点*必须* "
+"进行出厂重置。"
 
 #: ../../source/components/nethsm/clustering.rst:479
 msgid "Common causes for a node to be in the *Failed* state include:"
-msgstr ""
+msgstr "节点处于“*失败”* 状态的常见原因包括："
 
 #: ../../source/components/nethsm/clustering.rst:481
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
-msgstr ""
+msgstr "一个持久的`丢失了多数票<clustering.html#the-quorum-is-durably-lost>`__。"
 
 #: ../../source/components/nethsm/clustering.rst:482
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
-msgstr ""
+msgstr "暂时失去法定人数（例如：在向集群添加第二个节点时，该节点尚未加入）。"
 
 #: ../../source/components/nethsm/clustering.rst:484
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
-msgstr ""
+msgstr "``etcd`` 目前正在重启（例如，由于证书已更改，或网络已重新配置）。"
 
 #: ../../source/components/nethsm/clustering.rst:486
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
-msgstr ""
+msgstr "该集群正承受着非常高的负载（例如，在恢复一个非常大的备份时）。"
 
 #: ../../source/components/nethsm/clustering.rst:489
 msgid ""
@@ -3444,6 +3488,8 @@ msgid ""
 "interact with its database. This is to avoid spurious transitions caused "
 "by very short instabilities."
 msgstr ""
+"无论原因如何，NetHSM只有在尝试与数据库交互未果且持续时间不少于一分钟后，才会"
+"转入“*失败”状态（* ）。此举旨在避免因极短暂的不稳定状态而导致的错误状态转换。"
 
 #: ../../source/components/nethsm/clustering.rst:494
 msgid ""
@@ -3452,6 +3498,9 @@ msgid ""
 "about the current status of ``etcd`` and its database, including logs "
 "(refer to the API documentation)."
 msgstr ""
+"为了帮助您了解您的节点处于哪种情况，``GET /health/diagnose` "
+"端点仍然可用，并会返回有关``etcd` 及其数据库的当前状态信息，包括日志（请参阅 "
+"API 文档）。"
 
 #: ../../source/components/nethsm/clustering.rst:499
 msgid ""
@@ -3463,18 +3512,22 @@ msgid ""
 " been resolved for the cluster to stabilize, the HSM to detect the "
 "resolution and to change state."
 msgstr ""
+"如果且当数据库再次可用时（例如，由于网络问题已解决，定额（quorum）得以恢复）"
+"，NetHSM将自动从“*失败”* 状态恢复到之前的状态（或者，如果当时正在启动，则恢复"
+"正常的启动序列），无需任何手动操作。 在问题解决后，集群稳定下来、HSM检测到问"
+"题已解决并完成状态切换，最多需要一分钟时间。"
 
 #: ../../source/components/nethsm/clustering.rst:506
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
-msgstr ""
+msgstr "如果您认定该故障是持久的（例如，丢失了法定人数且无法解决根本原因），您可以："
 
 #: ../../source/components/nethsm/clustering.rst:509
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
-msgstr ""
+msgstr "**将节点恢复出厂设置（** ），这将清除所有数据，并恢复备份。"
 
 #: ../../source/components/nethsm/clustering.rst:510
 msgid ""
@@ -3485,6 +3538,10 @@ msgid ""
 "either the *Locked* or *Operational* state depending on the unattended "
 "boot setting."
 msgstr ""
+"**将具有``POST /cluster/force-new`` 端点的节点** "
+"隔离，该节点将不可逆地忘记所有其他集群成员，恢复磁盘上的``etcd`` 数据，并重新"
+"启动。如果底层故障与集群相关，该节点将遵循正常的启动序列，并根据无人值守启动"
+"设置，最终进入*锁定状态* 或*运行状态* 。"
 
 #: ../../source/components/nethsm/clustering.rst:517
 msgid ""
@@ -3493,6 +3550,9 @@ msgid ""
 "reconciled. The node can still re-join the cluster, but will lose all its"
 " local modifications."
 msgstr ""
+"如果某个节点因``force-new``而处于孤立状态，则该节点将与集群失去同步：该节点或"
+"集群上的任何新写入操作都无法进行同步。该节点仍可重新加入集群，但会丢失其所有"
+"本地修改。"
 
 #: ../../source/components/nethsm/clustering.rst:522
 msgid ""
@@ -3502,13 +3562,19 @@ msgid ""
 "endpoint expects HTTPS clients to always authenticate with the ``unlock``"
 " fake user, and the latest known unlock passphrase as the password."
 msgstr ""
+"``POST /cluster/force-new`` 该端点仅在“*Failed* "
+"”状态下可用，由于其操作可能导致数据丢失，因此需要进行身份验证。但是，"
+"鉴于该状态下无法访问 HSM 用户和角色，该端点要求 HTTPS "
+"客户端始终使用``unlock`` "
+"该假用户进行身份验证，并使用已知的最新解锁密码作为密码。"
 
 #: ../../source/components/nethsm/clustering.rst:529
 msgid ""
 "After an update from a version < 5.0, the ``force-new`` endpoint will be "
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
 "is changed at least once."
-msgstr ""
+msgstr "从低于 5.0 的版本升级后，在 HSM 解锁或解锁密码短语至少更改一次之前，`` 中的 "
+"`force-new`` 端点将始终显示“未授权”。"
 
 #: ../../source/components/nethsm/clustering.rst:534
 #, fuzzy
@@ -34297,4 +34363,3 @@ msgstr "标记裁剪的输出"
 #~ "example. In that case, give it "
 #~ "some time and try again."
 #~ msgstr "即使在加入成功后，如果集群的数据库很大或集群很忙，新加入者也可能需要一些时间才能完全同步其状态。在这段时间内，所有节点（尤其包括新加入的节点）的响应速度可能会降低或无响应。例如，在尝试解锁时，新加入的节点最初可能会返回错误。在这种情况下，请给它一些时间，然后再试一次。"
-
