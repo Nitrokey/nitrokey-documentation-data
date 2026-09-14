@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-07 16:39+0000\n"
+"POT-Creation-Date: 2026-09-14 11:28+0000\n"
 "PO-Revision-Date: 2026-09-07 16:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5170,6 +5169,77 @@ msgid ""
 msgstr ""
 "Za seznam ključev NetHSM v formatu SSH ``authorized_keys`` uporabite "
 "naslednji ukaz:"
+
+#: ../../source/components/nethsm/compatible/vault.rst:2
+msgid "Hashicorp Vault"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:5
+msgid ""
+"Using a HSM with Hashicorp Vault requires an enterprise license for "
+"Vault! If your main use case is (automatic) unsealing with NetHSM, "
+"`OpenBao also supports that "
+"<https://openbao.org/docs/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:8
+msgid "HSM support"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:10
+msgid ""
+"NetHSM can be used to protect your Vault secrets. It supports all "
+"features outlined in the `Vault HSM overview "
+"<https://developer.hashicorp.com/vault/docs/enterprise/hsm>`_ through the"
+" `NetHSM PKCS#11 module <https://github.com/Nitrokey/nethsm-pkcs11>`_. "
+"This includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:14
+msgid "Root key Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:15
+#, fuzzy
+msgid "Automatic Unsealing"
+msgstr "Samodejni način"
+
+#: ../../source/components/nethsm/compatible/vault.rst:16
+msgid "Seal Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:17
+#, fuzzy
+msgid "Entropy Augmentation"
+msgstr "Nitropy Dokumentacija za Linux"
+
+#: ../../source/components/nethsm/compatible/vault.rst:19
+msgid ""
+"Please refer to the `example setup and documentation for using Vault with"
+" NetHSM <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/vault>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:22
+#, fuzzy
+msgid "Managed Keys"
+msgstr "Ključ za upravljanje (MGM)"
+
+#: ../../source/components/nethsm/compatible/vault.rst:24
+msgid ""
+"Vault can also be configured to use NetHSM for `3rd party key management "
+"<https://developer.hashicorp.com/vault/docs/enterprise/managed-keys>`_. "
+"This feature is also provided through PKCS#11 and is enabled by setting "
+"up NetHSM as `kms_library in Vault "
+"<https://developer.hashicorp.com/vault/docs/configuration/kms-library>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:28
+msgid ""
+"Utilizing managed keys though NetHSM has not been extensively tested. For"
+" a basic example, please refer to `the setup documentation "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/vault>`_."
+msgstr ""
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -36508,8 +36578,8 @@ msgid ""
 "The Nitrokey Passkey does not support the password manager, so the "
 "\"Passwords\" tab is not shown for these devices."
 msgstr ""
-"Nitrokey Passkey ne podpira upravitelja gesel, zato se za te naprave zavihka "
-"»Gesla« ne prikaže."
+"Nitrokey Passkey ne podpira upravitelja gesel, zato se za te naprave "
+"zavihka »Gesla« ne prikaže."
 
 #: ../../source/components/software/nk-app2/index.rst:16
 #, fuzzy
@@ -37414,8 +37484,8 @@ msgid ""
 "Reverse HOTP is used to verify the authenticity of the device instead of "
 "authenticating you to a service."
 msgstr ""
-"Reversni HOTP se uporablja za preverjanje pristnosti naprave, ne pa za vašo "
-"avtentifikacijo pri storitvi."
+"Reversni HOTP se uporablja za preverjanje pristnosti naprave, ne pa za "
+"vašo avtentifikacijo pri storitvi."
 
 #: ../../source/components/software/nk-app2/passwords.rst:72
 msgid ""
@@ -37424,10 +37494,11 @@ msgid ""
 "The algorithm selection when adding a credential offers \"Password "
 "only\", \"TOTP\", \"HOTP\" and \"HMAC\" only."
 msgstr ""
-"Pristopne podatke tipa Reverse HOTP so navedeni v zavihku »Gesla«, kjer jih "
-"je mogoče tudi izbrisati, vendar jih ni mogoče ustvariti z aplikacijo "
-"Nitrokey App 2. Pri dodajanju pristopnih podatkov so na voljo le naslednje "
-"možnosti izbire algoritma: »Samo geslo«, »TOTP«, »HOTP« in »HMAC«."
+"Pristopne podatke tipa Reverse HOTP so navedeni v zavihku »Gesla«, kjer "
+"jih je mogoče tudi izbrisati, vendar jih ni mogoče ustvariti z aplikacijo"
+" Nitrokey App 2. Pri dodajanju pristopnih podatkov so na voljo le "
+"naslednje možnosti izbire algoritma: »Samo geslo«, »TOTP«, »HOTP« in "
+"»HMAC«."
 
 #: ../../source/components/software/nk-app2/passwords.rst:76
 #, fuzzy
@@ -37502,9 +37573,9 @@ msgid ""
 "keep it in a safe place. It is generated automatically and is required to"
 " import the file later."
 msgstr ""
-"Prepišite geslo, prikazano v pogovornem oknu z gumbom zraven, in ga shranite "
-"na varno mesto. Geslo se ustvari samodejno in je potrebno za kasnejši uvoz "
-"datoteke."
+"Prepišite geslo, prikazano v pogovornem oknu z gumbom zraven, in ga "
+"shranite na varno mesto. Geslo se ustvari samodejno in je potrebno za "
+"kasnejši uvoz datoteke."
 
 #: ../../source/components/software/nk-app2/passwords.rst:95
 #: ../../source/components/software/nk-app2/passwords.rst:113
@@ -37520,8 +37591,8 @@ msgid ""
 "**Not passwords** - credentials without a password (for example OTP "
 "only), which cannot be extracted from the device"
 msgstr ""
-"**Ne gre za gesla** – gre za avtentifikacijske podatke brez gesla (na primer "
-"samo OTP), ki jih ni mogoče pridobiti iz naprave"
+"**Ne gre za gesla** – gre za avtentifikacijske podatke brez gesla (na "
+"primer samo OTP), ki jih ni mogoče pridobiti iz naprave"
 
 #: ../../source/components/software/nk-app2/passwords.rst:99
 msgid "**Skipped** - credentials that are PIN protected while no PIN was supplied"
@@ -37535,9 +37606,9 @@ msgid ""
 " encryption and stores all credentials unprotected in the file. Only use "
 "it for compatibility with other password managers."
 msgstr ""
-"Izvoz je privzeto šifriran. Možnost »Cleartext« onemogoči šifriranje in vse "
-"poverilnice shrani v datoteko brez zaščite. Uporabljajte jo le zaradi "
-"združljivosti z drugimi upravitelji gesel."
+"Izvoz je privzeto šifriran. Možnost »Cleartext« onemogoči šifriranje in "
+"vse poverilnice shrani v datoteko brez zaščite. Uporabljajte jo le zaradi"
+" združljivosti z drugimi upravitelji gesel."
 
 #: ../../source/components/software/nk-app2/passwords.rst:106
 #, fuzzy
@@ -37553,8 +37624,8 @@ msgid ""
 "Enter the passphrase of the file (This is not needed for a file that was "
 "exported with the \"Cleartext\" option)"
 msgstr ""
-"Vnesite geslo datoteke (to ni potrebno za datoteko, ki je bila izvožena z "
-"možnostjo »Cleartext«)"
+"Vnesite geslo datoteke (to ni potrebno za datoteko, ki je bila izvožena z"
+" možnostjo »Cleartext«)"
 
 #: ../../source/components/software/nk-app2/passwords.rst:111
 msgid ""
@@ -37564,8 +37635,8 @@ msgid ""
 "blinks.\""
 msgstr ""
 "Kliknite na »Začni«. Sistem vas bo zaprosil za PIN naprave, razen če ga "
-"niste že vnesli prej v tej seji. Med izvajanjem postopka se v stanju prikaže "
-"»Deluje... Pritisnite Nitrokey, če utripa.«"
+"niste že vnesli prej v tej seji. Med izvajanjem postopka se v stanju "
+"prikaže »Deluje... Pritisnite Nitrokey, če utripa.«"
 
 #: ../../source/components/software/nk-app2/passwords.rst:115
 msgid "**Successful** - credentials that have been imported"
@@ -40418,3 +40489,4 @@ msgstr "Označite obrezano Izhod"
 
 #~ msgid "PIN Managment"
 #~ msgstr "Upravljanje kode PIN"
+

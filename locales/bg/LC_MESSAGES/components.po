@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-07 16:39+0000\n"
+"POT-Creation-Date: 2026-09-14 11:28+0000\n"
 "PO-Revision-Date: 2026-09-07 16:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5263,6 +5262,77 @@ msgid ""
 msgstr ""
 "За да направите списък на ключовете на NetHSM във формат SSH "
 "``authorized_keys``, използвайте следната команда:"
+
+#: ../../source/components/nethsm/compatible/vault.rst:2
+msgid "Hashicorp Vault"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:5
+msgid ""
+"Using a HSM with Hashicorp Vault requires an enterprise license for "
+"Vault! If your main use case is (automatic) unsealing with NetHSM, "
+"`OpenBao also supports that "
+"<https://openbao.org/docs/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:8
+msgid "HSM support"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:10
+msgid ""
+"NetHSM can be used to protect your Vault secrets. It supports all "
+"features outlined in the `Vault HSM overview "
+"<https://developer.hashicorp.com/vault/docs/enterprise/hsm>`_ through the"
+" `NetHSM PKCS#11 module <https://github.com/Nitrokey/nethsm-pkcs11>`_. "
+"This includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:14
+msgid "Root key Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:15
+#, fuzzy
+msgid "Automatic Unsealing"
+msgstr "Автоматичен режим"
+
+#: ../../source/components/nethsm/compatible/vault.rst:16
+msgid "Seal Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:17
+#, fuzzy
+msgid "Entropy Augmentation"
+msgstr "Документация за Nitropy за Linux"
+
+#: ../../source/components/nethsm/compatible/vault.rst:19
+msgid ""
+"Please refer to the `example setup and documentation for using Vault with"
+" NetHSM <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/vault>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:22
+#, fuzzy
+msgid "Managed Keys"
+msgstr "Ключ за управление (MGM)"
+
+#: ../../source/components/nethsm/compatible/vault.rst:24
+msgid ""
+"Vault can also be configured to use NetHSM for `3rd party key management "
+"<https://developer.hashicorp.com/vault/docs/enterprise/managed-keys>`_. "
+"This feature is also provided through PKCS#11 and is enabled by setting "
+"up NetHSM as `kms_library in Vault "
+"<https://developer.hashicorp.com/vault/docs/configuration/kms-library>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:28
+msgid ""
+"Utilizing managed keys though NetHSM has not been extensively tested. For"
+" a basic example, please refer to `the setup documentation "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/vault>`_."
+msgstr ""
 
 #: ../../source/components/nethsm/container/index.rst:2
 #, fuzzy
@@ -38061,8 +38131,8 @@ msgid ""
 "Reverse HOTP is used to verify the authenticity of the device instead of "
 "authenticating you to a service."
 msgstr ""
-"Reverse HOTP се използва за проверка на автентичността на устройството, а не "
-"за вашата автентификация в дадена услуга."
+"Reverse HOTP се използва за проверка на автентичността на устройството, а"
+" не за вашата автентификация в дадена услуга."
 
 #: ../../source/components/software/nk-app2/passwords.rst:72
 msgid ""
@@ -38071,10 +38141,10 @@ msgid ""
 "The algorithm selection when adding a credential offers \"Password "
 "only\", \"TOTP\", \"HOTP\" and \"HMAC\" only."
 msgstr ""
-"Удостоверенията от типа „Reverse HOTP“ се изброяват и могат да бъдат изтрити "
-"в раздела „Пароли“, но не могат да бъдат създадени с Nitrokey App 2. При "
-"добавянето на удостоверение изборът на алгоритъм предлага само „Само парола“"
-", „TOTP“, „HOTP“ и „HMAC“."
+"Удостоверенията от типа „Reverse HOTP“ се изброяват и могат да бъдат "
+"изтрити в раздела „Пароли“, но не могат да бъдат създадени с Nitrokey App"
+" 2. При добавянето на удостоверение изборът на алгоритъм предлага само "
+"„Само парола“, „TOTP“, „HOTP“ и „HMAC“."
 
 #: ../../source/components/software/nk-app2/passwords.rst:76
 #, fuzzy
@@ -38105,8 +38175,9 @@ msgid ""
 " \"Passwords\" tab: \"Export\" and \"Import\"."
 msgstr ""
 "Запазените данни за достъп могат да бъдат експортирани във файл и "
-"импортирани отново, например за да ги прехвърлите на друг Nitrokey. И двата "
-"бутона се намират в раздела „Пароли“: „Експортиране“ и „Импортиране“."
+"импортирани отново, например за да ги прехвърлите на друг Nitrokey. И "
+"двата бутона се намират в раздела „Пароли“: „Експортиране“ и "
+"„Импортиране“."
 
 #: ../../source/components/software/nk-app2/passwords.rst:87
 #, fuzzy
@@ -38131,10 +38202,10 @@ msgid ""
 "operation is running, the status shows \"Working... Press your Nitrokey "
 "if it blinks.\""
 msgstr ""
-"В диалоговия прозорец кликнете върху „Започни“. Ще ви бъде поискан ПИН-кодът "
-"на устройството, освен ако вече не е бил въведен по-рано през тази сесия. "
-"Докато операцията се изпълнява, състоянието показва „Работи... Натиснете "
-"Nitrokey, ако мига.“"
+"В диалоговия прозорец кликнете върху „Започни“. Ще ви бъде поискан "
+"ПИН-кодът на устройството, освен ако вече не е бил въведен по-рано през "
+"тази сесия. Докато операцията се изпълнява, състоянието показва "
+"„Работи... Натиснете Nitrokey, ако мига.“"
 
 #: ../../source/components/software/nk-app2/passwords.rst:92
 msgid ""
@@ -38150,9 +38221,9 @@ msgid ""
 "keep it in a safe place. It is generated automatically and is required to"
 " import the file later."
 msgstr ""
-"Копирайте паролата, показана в диалоговия прозорец, като използвате бутона "
-"до нея, и я съхранете на сигурно място. Тя се генерира автоматично и е "
-"необходима за импортирането на файла по-късно."
+"Копирайте паролата, показана в диалоговия прозорец, като използвате "
+"бутона до нея, и я съхранете на сигурно място. Тя се генерира автоматично"
+" и е необходима за импортирането на файла по-късно."
 
 #: ../../source/components/software/nk-app2/passwords.rst:95
 #: ../../source/components/software/nk-app2/passwords.rst:113
@@ -38168,14 +38239,14 @@ msgid ""
 "**Not passwords** - credentials without a password (for example OTP "
 "only), which cannot be extracted from the device"
 msgstr ""
-"**Не са пароли** – идентификационни данни без парола (например само OTP), "
-"които не могат да бъдат извлечени от устройството"
+"**Не са пароли** – идентификационни данни без парола (например само OTP),"
+" които не могат да бъдат извлечени от устройството"
 
 #: ../../source/components/software/nk-app2/passwords.rst:99
 msgid "**Skipped** - credentials that are PIN protected while no PIN was supplied"
 msgstr ""
-"**Пропуснато „** “ – удостоверения, защитени с ПИН код, при липса на въведен "
-"ПИН код"
+"**Пропуснато „** “ – удостоверения, защитени с ПИН код, при липса на "
+"въведен ПИН код"
 
 #: ../../source/components/software/nk-app2/passwords.rst:103
 msgid ""
@@ -38195,8 +38266,8 @@ msgstr "Ключов внос"
 #: ../../source/components/software/nk-app2/passwords.rst:109
 msgid "Click on the \"Import\" button and select the previously exported file."
 msgstr ""
-"Кликнете върху бутона „Импортиране“ и изберете предварително експортирания "
-"файл."
+"Кликнете върху бутона „Импортиране“ и изберете предварително "
+"експортирания файл."
 
 #: ../../source/components/software/nk-app2/passwords.rst:110
 msgid ""
@@ -38214,8 +38285,9 @@ msgid ""
 "blinks.\""
 msgstr ""
 "Кликнете върху „Започни“. Ще ви бъде поискан PIN кодът на устройството, "
-"освен ако вече не е бил въведен по-рано през тази сесия. Докато операцията "
-"се изпълнява, състоянието показва „Работи... Натиснете Nitrokey, ако мига.“"
+"освен ако вече не е бил въведен по-рано през тази сесия. Докато "
+"операцията се изпълнява, състоянието показва „Работи... Натиснете "
+"Nitrokey, ако мига.“"
 
 #: ../../source/components/software/nk-app2/passwords.rst:115
 msgid "**Successful** - credentials that have been imported"
@@ -38226,14 +38298,15 @@ msgid ""
 "**Already exists** - credentials that were not imported because a "
 "credential with the same label already exists on the device"
 msgstr ""
-"**Вече съществува** – идентификационни данни, които не са били импортирани, "
-"тъй като на устройството вече съществуват идентификационни данни със същия "
-"етикет"
+"**Вече съществува** – идентификационни данни, които не са били "
+"импортирани, тъй като на устройството вече съществуват идентификационни "
+"данни със същия етикет"
 
 #: ../../source/components/software/nk-app2/passwords.rst:117
 msgid "**Skipped** - credentials that were skipped during the import"
 msgstr ""
-"**Пропуснати** – удостоверения, които са били пропуснати по време на импорта"
+"**Пропуснати** – удостоверения, които са били пропуснати по време на "
+"импорта"
 
 #: ../../source/components/software/nk-app2/pin.rst:2
 #: ../../source/components/software/nk-app2/pin.rst:15
@@ -41148,3 +41221,4 @@ msgstr "Маркирайте изрязаното Изход"
 
 #~ msgid "PIN Managment"
 #~ msgstr "Управление на ПИН"
+

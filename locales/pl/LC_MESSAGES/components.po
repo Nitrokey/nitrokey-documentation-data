@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-07 16:39+0000\n"
+"POT-Creation-Date: 2026-09-14 11:28+0000\n"
 "PO-Revision-Date: 2026-09-07 16:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -5238,6 +5237,77 @@ msgid ""
 msgstr ""
 "Aby wyświetlić listę kluczy NetHSM w formacie SSH ``authorized_keys``, "
 "należy użyć następującego polecenia:"
+
+#: ../../source/components/nethsm/compatible/vault.rst:2
+msgid "Hashicorp Vault"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:5
+msgid ""
+"Using a HSM with Hashicorp Vault requires an enterprise license for "
+"Vault! If your main use case is (automatic) unsealing with NetHSM, "
+"`OpenBao also supports that "
+"<https://openbao.org/docs/guides/unseal/pkcs11/nitrokey/>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:8
+msgid "HSM support"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:10
+msgid ""
+"NetHSM can be used to protect your Vault secrets. It supports all "
+"features outlined in the `Vault HSM overview "
+"<https://developer.hashicorp.com/vault/docs/enterprise/hsm>`_ through the"
+" `NetHSM PKCS#11 module <https://github.com/Nitrokey/nethsm-pkcs11>`_. "
+"This includes:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:14
+msgid "Root key Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:15
+#, fuzzy
+msgid "Automatic Unsealing"
+msgstr "Tryb automatyczny"
+
+#: ../../source/components/nethsm/compatible/vault.rst:16
+msgid "Seal Wrapping"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:17
+#, fuzzy
+msgid "Entropy Augmentation"
+msgstr "nitropy Dokumentacja dla systemu Linux"
+
+#: ../../source/components/nethsm/compatible/vault.rst:19
+msgid ""
+"Please refer to the `example setup and documentation for using Vault with"
+" NetHSM <https://github.com/Nitrokey/nethsm-"
+"pkcs11/tree/main/container/vault>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:22
+#, fuzzy
+msgid "Managed Keys"
+msgstr "Klucz zarządzania (MGM)"
+
+#: ../../source/components/nethsm/compatible/vault.rst:24
+msgid ""
+"Vault can also be configured to use NetHSM for `3rd party key management "
+"<https://developer.hashicorp.com/vault/docs/enterprise/managed-keys>`_. "
+"This feature is also provided through PKCS#11 and is enabled by setting "
+"up NetHSM as `kms_library in Vault "
+"<https://developer.hashicorp.com/vault/docs/configuration/kms-library>`_."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/vault.rst:28
+msgid ""
+"Utilizing managed keys though NetHSM has not been extensively tested. For"
+" a basic example, please refer to `the setup documentation "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/vault>`_."
+msgstr ""
 
 #: ../../source/components/nethsm/container/index.rst:2
 msgid "Container"
@@ -36852,8 +36922,8 @@ msgid ""
 "The Nitrokey Passkey does not support the password manager, so the "
 "\"Passwords\" tab is not shown for these devices."
 msgstr ""
-"Urządzenie Klucz dostępu Nitrokey nie obsługuje menedżera haseł, dlatego w "
-"przypadku tych urządzeń zakładka „Hasła” nie jest wyświetlana."
+"Urządzenie Klucz dostępu Nitrokey nie obsługuje menedżera haseł, dlatego "
+"w przypadku tych urządzeń zakładka „Hasła” nie jest wyświetlana."
 
 #: ../../source/components/software/nk-app2/index.rst:16
 #, fuzzy
@@ -37764,8 +37834,8 @@ msgid ""
 "Reverse HOTP is used to verify the authenticity of the device instead of "
 "authenticating you to a service."
 msgstr ""
-"Metoda Reverse HOTP służy do weryfikacji autentyczności urządzenia, a nie do "
-"uwierzytelniania użytkownika w serwisie."
+"Metoda Reverse HOTP służy do weryfikacji autentyczności urządzenia, a nie"
+" do uwierzytelniania użytkownika w serwisie."
 
 #: ../../source/components/software/nk-app2/passwords.rst:72
 msgid ""
@@ -37774,10 +37844,11 @@ msgid ""
 "The algorithm selection when adding a credential offers \"Password "
 "only\", \"TOTP\", \"HOTP\" and \"HMAC\" only."
 msgstr ""
-"Dane uwierzytelniające typu Reverse HOTP są wyświetlane w zakładce „Hasła” i "
-"można je tam usunąć, ale nie można ich utworzyć za pomocą aplikacji Nitrokey "
-"App 2. Podczas dodawania danych uwierzytelniających do wyboru są wyłącznie "
-"następujące algorytmy: „Tylko hasło”, „TOTP”, „HOTP” i „HMAC”."
+"Dane uwierzytelniające typu Reverse HOTP są wyświetlane w zakładce "
+"„Hasła” i można je tam usunąć, ale nie można ich utworzyć za pomocą "
+"aplikacji Nitrokey App 2. Podczas dodawania danych uwierzytelniających do"
+" wyboru są wyłącznie następujące algorytmy: „Tylko hasło”, „TOTP”, „HOTP”"
+" i „HMAC”."
 
 #: ../../source/components/software/nk-app2/passwords.rst:76
 #, fuzzy
@@ -37834,18 +37905,19 @@ msgid ""
 "operation is running, the status shows \"Working... Press your Nitrokey "
 "if it blinks.\""
 msgstr ""
-"W oknie dialogowym kliknij przycisk „Rozpocznij”. Zostaniesz poproszony o "
-"podanie kodu PIN urządzenia, o ile nie został on już wprowadzony wcześniej "
-"podczas tej sesji. Podczas wykonywania operacji wyświetla się komunikat: „"
-"Trwa przetwarzanie... Naciśnij przycisk Nitrokey, jeśli miga”."
+"W oknie dialogowym kliknij przycisk „Rozpocznij”. Zostaniesz poproszony o"
+" podanie kodu PIN urządzenia, o ile nie został on już wprowadzony "
+"wcześniej podczas tej sesji. Podczas wykonywania operacji wyświetla się "
+"komunikat: „Trwa przetwarzanie... Naciśnij przycisk Nitrokey, jeśli "
+"miga”."
 
 #: ../../source/components/software/nk-app2/passwords.rst:92
 msgid ""
 "Choose where to save the file. It is stored in JSON format and named "
 "``credential_export.json`` by default."
 msgstr ""
-"Wybierz miejsce, w którym chcesz zapisać plik. Jest on zapisywany w formacie "
-"JSON, a domyślnie nosi nazwę ``credential_export.json``."
+"Wybierz miejsce, w którym chcesz zapisać plik. Jest on zapisywany w "
+"formacie JSON, a domyślnie nosi nazwę ``credential_export.json``."
 
 #: ../../source/components/software/nk-app2/passwords.rst:93
 msgid ""
@@ -37854,8 +37926,8 @@ msgid ""
 " import the file later."
 msgstr ""
 "Skopiuj hasło wyświetlone w oknie dialogowym za pomocą przycisku "
-"znajdującego się obok niego i przechowuj je w bezpiecznym miejscu. Hasło to "
-"jest generowane automatycznie i będzie potrzebne do późniejszego "
+"znajdującego się obok niego i przechowuj je w bezpiecznym miejscu. Hasło "
+"to jest generowane automatycznie i będzie potrzebne do późniejszego "
 "zaimportowania pliku."
 
 #: ../../source/components/software/nk-app2/passwords.rst:95
@@ -37872,14 +37944,14 @@ msgid ""
 "**Not passwords** - credentials without a password (for example OTP "
 "only), which cannot be extracted from the device"
 msgstr ""
-"**Nie hasła** – dane uwierzytelniające bez hasła (na przykład wyłącznie OTP)"
-", których nie można wyodrębnić z urządzenia"
+"**Nie hasła** – dane uwierzytelniające bez hasła (na przykład wyłącznie "
+"OTP), których nie można wyodrębnić z urządzenia"
 
 #: ../../source/components/software/nk-app2/passwords.rst:99
 msgid "**Skipped** - credentials that are PIN protected while no PIN was supplied"
 msgstr ""
-"**Pominięto „** ” – dane uwierzytelniające chronione kodem PIN, mimo że nie "
-"podano kodu PIN"
+"**Pominięto „** ” – dane uwierzytelniające chronione kodem PIN, mimo że "
+"nie podano kodu PIN"
 
 #: ../../source/components/software/nk-app2/passwords.rst:103
 msgid ""
@@ -37887,8 +37959,8 @@ msgid ""
 " encryption and stores all credentials unprotected in the file. Only use "
 "it for compatibility with other password managers."
 msgstr ""
-"Eksport jest domyślnie szyfrowany. Opcja „Cleartext” wyłącza szyfrowanie i "
-"powoduje zapisanie wszystkich danych uwierzytelniających w pliku bez "
+"Eksport jest domyślnie szyfrowany. Opcja „Cleartext” wyłącza szyfrowanie "
+"i powoduje zapisanie wszystkich danych uwierzytelniających w pliku bez "
 "zabezpieczenia. Należy z niej korzystać wyłącznie w celu zapewnienia "
 "zgodności z innymi menedżerami haseł."
 
@@ -37916,23 +37988,24 @@ msgid ""
 "running, the status shows \"Working... Press your Nitrokey if it "
 "blinks.\""
 msgstr ""
-"Kliknij „Rozpocznij”. Zostaniesz poproszony o podanie kodu PIN urządzenia, o "
-"ile nie został on już wprowadzony wcześniej podczas tej sesji. Podczas "
-"wykonywania operacji wyświetla się komunikat „Trwa... Naciśnij Nitrokey, "
-"jeśli miga”."
+"Kliknij „Rozpocznij”. Zostaniesz poproszony o podanie kodu PIN "
+"urządzenia, o ile nie został on już wprowadzony wcześniej podczas tej "
+"sesji. Podczas wykonywania operacji wyświetla się komunikat „Trwa... "
+"Naciśnij Nitrokey, jeśli miga”."
 
 #: ../../source/components/software/nk-app2/passwords.rst:115
 msgid "**Successful** - credentials that have been imported"
 msgstr ""
-"**Pomyślne zakończenie operacji „** ” — zaimportowane dane uwierzytelniające"
+"**Pomyślne zakończenie operacji „** ” — zaimportowane dane "
+"uwierzytelniające"
 
 #: ../../source/components/software/nk-app2/passwords.rst:116
 msgid ""
 "**Already exists** - credentials that were not imported because a "
 "credential with the same label already exists on the device"
 msgstr ""
-"**Istnieje już** — poświadczenia, które nie zostały zaimportowane, ponieważ "
-"na urządzeniu istnieje już poświadczenie o tej samej etykiecie"
+"**Istnieje już** — poświadczenia, które nie zostały zaimportowane, "
+"ponieważ na urządzeniu istnieje już poświadczenie o tej samej etykiecie"
 
 #: ../../source/components/software/nk-app2/passwords.rst:117
 msgid "**Skipped** - credentials that were skipped during the import"
@@ -40796,3 +40869,4 @@ msgstr "Zaznacz przycięte Wyjście"
 
 #~ msgid "PIN Managment"
 #~ msgstr "Zarządzanie PIN-em"
+
