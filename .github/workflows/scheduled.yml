@@ -28,6 +28,11 @@ jobs:
           repository: nitrokey/nitrokey-documentation
           path: source.git
 
+      - name: Install required packages
+        run: |
+          apt update
+          apt install -y libenchant-2-2
+
       - name: Install additional python packages
         run: |
           make -C source.git venv
