@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-24 22:17+0000\n"
+"POT-Creation-Date: 2026-09-29 10:10+0000\n"
 "PO-Revision-Date: 2026-09-24 11:55+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: ja\n"
@@ -2212,7 +2212,7 @@ msgstr ""
 "UserID-passphrase>`__ で見ることができます。"
 
 #: ../../source/components/nethsm/administration.rst:1283
-#: ../../source/components/nethsm/clustering.rst:126
+#: ../../source/components/nethsm/clustering.rst:127
 msgid "Namespaces"
 msgstr "名前空間"
 
@@ -2479,7 +2479,13 @@ msgid ""
 "<clustering.html#witness>`__ node instead."
 msgstr "etcd LearnerまたはMirrorを利用した、2ノードクラスタをサポートするアクティブ/パッシブセットアップはまだ利用できない。"
 
-#: ../../source/components/nethsm/clustering.rst:10
+#: ../../source/components/nethsm/clustering.rst:9
+msgid ""
+"It has not yet been proven in a sufficient number of production "
+"deployments, and there may be bugs."
+msgstr ""
+
+#: ../../source/components/nethsm/clustering.rst:11
 msgid ""
 "NetHSM 4.0 onwards supports clustering to synchronize data between "
 "several NetHSMs directly. This supports high frequency of key "
@@ -2494,7 +2500,7 @@ msgstr ""
 " に基づいています。このクラスタは、`Raftコンセンサス・アルゴリズム<https://raft.github.io/>`__ "
 "を使用して強力な一貫性を実現しています。これにより、すべてのNetHSMでデータ（鍵など）が常に正しいことが保証される。"
 
-#: ../../source/components/nethsm/clustering.rst:12
+#: ../../source/components/nethsm/clustering.rst:13
 msgid ""
 "Before setting up a NetHSM cluster make yourself familiar with this "
 "technology and its constraints to avoid accidental outage and data loss. "
@@ -2505,12 +2511,12 @@ msgstr ""
 "クラスタをセットアップする前に、このテクノロジーとその制約についてよく理解し、偶発的な停止やデータ損失を避けるようにしてください。このドキュメントに加えて、`etcd"
 " のドキュメント<https://etcd.io/docs/latest/learning/>`__ も参照してください。"
 
-#: ../../source/components/nethsm/clustering.rst:15
+#: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
 msgid "Operational Redundancy"
 msgstr "*動作確認済み"
 
-#: ../../source/components/nethsm/clustering.rst:17
+#: ../../source/components/nethsm/clustering.rst:18
 msgid ""
 "We will call \"node\" a NetHSM that is expected to be part of a cluster. "
 "**A cluster of** ``N`` **nodes will continue to operate as long as at "
@@ -2520,7 +2526,7 @@ msgstr ""
 "クラスタの一部であることが期待される NetHSM を「ノード」と呼ぶことにする。**** ``N``**ノードからなるクラスタは、少なくとも**"
 " ``(N/2)+1``**ノードが健康で到達可能である限り運用を継続する。** 健康で到達可能なノードの最小数を**クォーラム** と呼びます。"
 
-#: ../../source/components/nethsm/clustering.rst:20
+#: ../../source/components/nethsm/clustering.rst:21
 msgid ""
 "On a cluster that goes below this threshold (e.g. because of a network "
 "issue), no leader can be elected and the local instance of ``etcd`` on "
@@ -2528,18 +2534,18 @@ msgid ""
 "following scenarios."
 msgstr "この閾値を下回ったクラスタ（例えば、ネットワークの問題などが原因で）では、リーダーが選出されなくなり、各ノード上の``etcd``のローカルインスタンスは、読み取りおよび書き込みを実行できなくなります。これにより、次のようなシナリオが生じます。"
 
-#: ../../source/components/nethsm/clustering.rst:25
+#: ../../source/components/nethsm/clustering.rst:26
 msgid "One Node Goes Down and Quorum is Still Reached"
 msgstr "1つのノードがダウンしても定足数に達する"
 
-#: ../../source/components/nethsm/clustering.rst:27
+#: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "In a 3-node cluster, if one node fails (crashes or becomes unreachable "
 "due to network conditions), the two other nodes will continue to work and"
 " serve requests."
 msgstr "3ノードクラスタでは、1つのノードに障害が発生しても（クラッシュしたり、ネットワーク状況により到達できなくなったりしても）、他の2つのノードは動作を継続し、リクエストに対応する。"
 
-#: ../../source/components/nethsm/clustering.rst:29
+#: ../../source/components/nethsm/clustering.rst:30
 #, fuzzy
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
@@ -2547,7 +2553,7 @@ msgid ""
 "operations (not even read-only)."
 msgstr "障害が発生したノードがまだ健全である場合（例えば、単なるネットワークの問題であった場合）、隔離されている間は操作不能となる（読み取り専用にもならない）。"
 
-#: ../../source/components/nethsm/clustering.rst:31
+#: ../../source/components/nethsm/clustering.rst:32
 #, fuzzy
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
@@ -2555,7 +2561,7 @@ msgid ""
 "without losing data."
 msgstr "しかし、ノードが回復すれば、データを失うことなく、クラスタの残りの部分ときれいに再同期し、再び操作可能になる。"
 
-#: ../../source/components/nethsm/clustering.rst:33
+#: ../../source/components/nethsm/clustering.rst:34
 msgid ""
 "If it never recovers, it has to be `removed <clustering.html#removing-a"
 "-node-cleanly>`__ from the cluster and either undergo `recovery "
@@ -2567,11 +2573,11 @@ msgstr ""
 "する必要があり、データにアクセスするために`復旧<clustering.html#recovering-a-failed-node>`__ "
 "を行うか（ただし、その場合はクラスタの一部ではなくなります）、あるいは工場出荷時設定にリセットして、最初から再度クラスタへの参加プロセスを経る必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:39
+#: ../../source/components/nethsm/clustering.rst:40
 msgid "A Network Partition Happens and Quorum is Still Reached"
 msgstr "ネットワーク・パーティションが発生しても定足数に達する"
 
-#: ../../source/components/nethsm/clustering.rst:41
+#: ../../source/components/nethsm/clustering.rst:42
 msgid ""
 "This is just a generalization of the previous scenario. In a 5-node "
 "cluster where e.g. 3 nodes are in one physical location A and 2 nodes are"
@@ -2579,37 +2585,37 @@ msgid ""
 "the following:"
 msgstr "これは前のシナリオの一般化である。例えば3ノードがある物理的な場所Aにあり、2ノードが別の場所Bにある5ノードのクラスタでは、AとBを分離するネットワーク問題は次のようになります："
 
-#: ../../source/components/nethsm/clustering.rst:43
+#: ../../source/components/nethsm/clustering.rst:44
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
 msgstr "ロケーションAの3ノードは定足数（この場合は3）を満たしているので、運用を継続する。"
 
-#: ../../source/components/nethsm/clustering.rst:44
+#: ../../source/components/nethsm/clustering.rst:45
 #, fuzzy
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
 "they will enter the *Failed* state and stop operating (even read-only)."
 msgstr "** ロケーションBの2ノードは、**、定足数（まだ3）を満たしていないため、（読み取り専用でも）動作を停止する。"
 
-#: ../../source/components/nethsm/clustering.rst:45
+#: ../../source/components/nethsm/clustering.rst:46
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
 msgstr "ネットワークの問題が解決すれば、2つのノードは他の3つのノードときれいに結合する。"
 
-#: ../../source/components/nethsm/clustering.rst:47
+#: ../../source/components/nethsm/clustering.rst:48
 msgid ""
 "In other words, a worst-case network partition (in a cluster with an odd "
 "number of nodes) will leave the bigger half of the cluster healthy, and "
 "the smaller half inoperable until the partition is resolved."
 msgstr "つまり、（ノード数が奇数のクラスタにおいて）最悪の場合のネットワークパーティションが発生しても、クラスタのより大きな半分は正常に動作し続け、パーティションが解消されるまで、より小さな半分は動作不能な状態のままとなる。"
 
-#: ../../source/components/nethsm/clustering.rst:52
+#: ../../source/components/nethsm/clustering.rst:53
 msgid "The Quorum is Durably Lost"
 msgstr "定足数は確実に失われる"
 
-#: ../../source/components/nethsm/clustering.rst:54
+#: ../../source/components/nethsm/clustering.rst:55
 #, fuzzy
 msgid ""
 "A failure causing all subsets of the cluster to lose quorum will render "
@@ -2618,7 +2624,7 @@ msgid ""
 "`recovery <clustering.html#recovering-a-failed-node>` must be performed."
 msgstr "クラスタのすべてのサブセットがクォーラムを失うような障害が発生すると、障害が解決されない限り、クラスタとそのデータは完全に失われます。この場合、ノードを工場出荷時にリセットし、バックアップを復元する必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:56
+#: ../../source/components/nethsm/clustering.rst:57
 msgid ""
 "This can happen for example if a single node fails in a 2-node cluster "
 "(where the quorum is 2). In this situation, the failed node cannot be "
@@ -2626,13 +2632,13 @@ msgid ""
 "healthy node is already inoperable since it has lost quorum."
 msgstr "これは例えば、2ノードクラスタ（クォーラムが2）で1つのノードが故障した場合に起こり得ます。このような状況では、障害が発生したノードを事後的にクラスタからきれいに削除することはできません。なぜなら、残っている健全なノードはクォーラムを失っているため、すでに操作不能になっているからです。"
 
-#: ../../source/components/nethsm/clustering.rst:58
+#: ../../source/components/nethsm/clustering.rst:59
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
 msgstr "したがって、クラスタ内のノード数は常に奇数にし、頻繁にバックアップを取ることをお勧めする。"
 
-#: ../../source/components/nethsm/clustering.rst:60
+#: ../../source/components/nethsm/clustering.rst:61
 msgid ""
 "To be clear, *temporarily* losing quorum (for example, if you are "
 "restarting all nodes of a cluster together, or a temporary network "
@@ -2645,7 +2651,7 @@ msgstr ""
 "はっきりさせておくと、*一時的に* "
 "クォーラムを失っても（例えば、クラスタの全ノードをまとめて再起動する場合や、一時的なネットワーク障害でノードが孤立した場合など）問題はありません。クォーラムに達するだけのノードが（手動で再接続しなくても）再接続されれば、クラスタは通常の動作を再開します。ネットワーク・パーティション、ネットワークの誤設定、認証の問題、ハードウェアの故障などの恒久的な障害に限り、手動での対処が必要になります。"
 
-#: ../../source/components/nethsm/clustering.rst:62
+#: ../../source/components/nethsm/clustering.rst:63
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
@@ -2653,11 +2659,11 @@ msgstr ""
 "詳しくは、`etcdのよくあるご質問<https://etcd.io/docs/v3.6/faq/#why-an-odd-number-of-"
 "cluster-members>`__を参照のこと。"
 
-#: ../../source/components/nethsm/clustering.rst:65
+#: ../../source/components/nethsm/clustering.rst:66
 msgid "2-Node Cluster"
 msgstr "2ノードクラスタ"
 
-#: ../../source/components/nethsm/clustering.rst:67
+#: ../../source/components/nethsm/clustering.rst:68
 msgid ""
 "A two-node active/passive cluster is not supported yet and will be added "
 "in a future version. We recommend introducing a 3rd node, either a 3rd "
@@ -2667,11 +2673,11 @@ msgstr ""
 "2ノードのアクティブ/パッシブクラスターはまだサポートされておらず、将来のバージョンで追加される予定です。3台目のNetHSMかetcdの "
 "\"ウィットネス \"を導入することをお勧めします。次のセクション「ウィットネス」を参照してください。"
 
-#: ../../source/components/nethsm/clustering.rst:70
+#: ../../source/components/nethsm/clustering.rst:71
 msgid "Witness"
 msgstr "証人"
 
-#: ../../source/components/nethsm/clustering.rst:72
+#: ../../source/components/nethsm/clustering.rst:73
 msgid ""
 "The nature of clustering with ``etcd`` makes it more reliable the more "
 "nodes there are in the cluster. As explained in the `Operational "
@@ -2682,7 +2688,7 @@ msgstr ""
 "``etcd``によるクラスタリングの性質上、クラスタ内のノード数が多いほど信頼性が高くなります。`Operational "
 "Redundancy`_のセクションで説明したように、クラスターは理想的には少なくとも3つのノードが故障する余地を持つべきです。"
 
-#: ../../source/components/nethsm/clustering.rst:74
+#: ../../source/components/nethsm/clustering.rst:75
 msgid ""
 "However the design of the feature is such that you don't need to add a "
 "full, real NetHSM device to your cluster to reach a stable number of "
@@ -2698,12 +2704,12 @@ msgstr ""
 "のインスタンスを任意のマシン上（またはコンテナ内）で実行し、クラスタに接続しただけのものです。このノードはクラスタ内の実際のデバイスから通常のノードとして認識され、デバイスからすべてのデータとアップデートを受け取ります（ただし、もちろんこのノードでHSM操作を実行することはできません"
 " - ノードはデータを保存するだけです）。"
 
-#: ../../source/components/nethsm/clustering.rst:77
+#: ../../source/components/nethsm/clustering.rst:78
 #, fuzzy
 msgid "Security Considerations"
 msgstr "セキュリティへの配慮"
 
-#: ../../source/components/nethsm/clustering.rst:79
+#: ../../source/components/nethsm/clustering.rst:80
 msgid ""
 "The witness node (or anyone with access to it) has direct access to the "
 "storage backend of all nodes in the cluster (e.g. you can dump all "
@@ -2712,7 +2718,7 @@ msgstr ""
 "証人ノード（またはそれにアクセスできる人）は、クラスタ内の全ノードのストレージ・バックエンドに直接アクセスできる（例えば、``etcdctl "
 "get \"/\" \"0\"``で全エントリーと対応する値をダンプできる）。"
 
-#: ../../source/components/nethsm/clustering.rst:81
+#: ../../source/components/nethsm/clustering.rst:82
 msgid ""
 "However, with the exception of the config version (``/config/version``, "
 "which should always be \"1\"), strictly all of the values are encrypted "
@@ -2722,11 +2728,11 @@ msgstr ""
 "しかし、コンフィグ・バージョン（``/config/version``、これは常に \"1 "
 "\"であるべき）を除いて、厳密にすべての値は暗号化されており（ノード固有の値についてはデバイス・キーで、その他の値についてはドメイン・キーで）、機密データの機密性を確保している。"
 
-#: ../../source/components/nethsm/clustering.rst:83
+#: ../../source/components/nethsm/clustering.rst:84
 msgid "Note however that a malicious node can:"
 msgstr "しかし、悪意のあるノードは可能であることに注意してほしい："
 
-#: ../../source/components/nethsm/clustering.rst:85
+#: ../../source/components/nethsm/clustering.rst:86
 #, fuzzy
 msgid ""
 "Write garbage as the value for any entry in the store, which will cause "
@@ -2734,18 +2740,18 @@ msgid ""
 "entries)."
 msgstr "をストアの任意のエントリの値として書き込むと、ノードはその復号化に失敗する（システム・エントリによってはクラッシュにつながる可能性がある）。"
 
-#: ../../source/components/nethsm/clustering.rst:86
+#: ../../source/components/nethsm/clustering.rst:87
 #, fuzzy
 msgid ""
 "List entry names such as users, namespaces and keys, which you may "
 "consider sensitive."
 msgstr "ユーザー、ネームスペース、キーなど、機密性が高いと思われる項目名をリストする。"
 
-#: ../../source/components/nethsm/clustering.rst:89
+#: ../../source/components/nethsm/clustering.rst:90
 msgid "What is Shared Between Nodes"
 msgstr "ノード間で共有されるもの"
 
-#: ../../source/components/nethsm/clustering.rst:91
+#: ../../source/components/nethsm/clustering.rst:92
 msgid ""
 "Having a cluster of NetHSMs means that most of the data is shared between"
 " them. Any addition, modification or deletion of keys, users, or "
@@ -2759,7 +2765,7 @@ msgstr ""
 "的に他のすべてのノードに反映されます。一般に、状態を変更する操作はすべてのノードの状態を変更します。これには、通常どおり動作するバックアップ**リストア**"
 " 操作も含まれます。"
 
-#: ../../source/components/nethsm/clustering.rst:93
+#: ../../source/components/nethsm/clustering.rst:94
 msgid ""
 "The following sections detail what data is fully local, what data is "
 "stored in the shared ``etcd`` store but remains node-specific, and what "
@@ -2768,21 +2774,21 @@ msgstr ""
 "以下のセクションでは、どのデータが完全にローカルなのか、どのデータが共有の``etcd`` "
 "ストアに保存されるがノード固有のままなのか、そしてどのデータがノード間で完全に共有されるのかについて詳しく説明する。"
 
-#: ../../source/components/nethsm/clustering.rst:96
+#: ../../source/components/nethsm/clustering.rst:97
 msgid "Not Stored in etcd"
 msgstr "etcdに保存されない"
 
-#: ../../source/components/nethsm/clustering.rst:98
+#: ../../source/components/nethsm/clustering.rst:99
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
 msgstr "各ノードの**デバイス・キー** はローカルにのみ保存され、ノード間で共有されることはない。"
 
-#: ../../source/components/nethsm/clustering.rst:101
+#: ../../source/components/nethsm/clustering.rst:102
 msgid "Stored in etcd but Node-Specific"
 msgstr "etcdに保存されるがノード固有"
 
-#: ../../source/components/nethsm/clustering.rst:103
+#: ../../source/components/nethsm/clustering.rst:104
 msgid ""
 "The following data is stored in ``etcd`` in different scopes for each "
 "node. It is hence *accessible* to every node but not *uniform* across "
@@ -2791,49 +2797,49 @@ msgstr ""
 "以下のデータは``etcd`` に各ノードごとに異なるスコープで格納されている。そのため、すべてのノードから** "
 "にアクセス可能ですが、*ノード間で一様な* ではありません（各ノードはこのデータに対して異なる値を持つことができます）。"
 
-#: ../../source/components/nethsm/clustering.rst:105
-#: ../../source/components/nethsm/clustering.rst:128
+#: ../../source/components/nethsm/clustering.rst:106
+#: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
 msgid "Configuration:"
 msgstr "構成"
 
-#: ../../source/components/nethsm/clustering.rst:107
+#: ../../source/components/nethsm/clustering.rst:108
 #, fuzzy
 msgid "TLS certificates"
 msgstr "TLS証明書"
 
-#: ../../source/components/nethsm/clustering.rst:108
+#: ../../source/components/nethsm/clustering.rst:109
 #, fuzzy
 msgid "Clock configuration"
 msgstr "構成"
 
-#: ../../source/components/nethsm/clustering.rst:109
+#: ../../source/components/nethsm/clustering.rst:110
 #: ../../source/components/nethsm/container/index.rst:6
 #, fuzzy
 msgid "Network configuration"
 msgstr "ネットワーク構成"
 
-#: ../../source/components/nethsm/clustering.rst:110
+#: ../../source/components/nethsm/clustering.rst:111
 #, fuzzy
 msgid "Logging configuration"
 msgstr "Nginxの設定"
 
-#: ../../source/components/nethsm/clustering.rst:111
+#: ../../source/components/nethsm/clustering.rst:112
 #, fuzzy
 msgid "Unattended boot configuration"
 msgstr "Httpdの設定"
 
-#: ../../source/components/nethsm/clustering.rst:112
+#: ../../source/components/nethsm/clustering.rst:113
 #, fuzzy
 msgid "Unlock salt (so each node has its own unlock passphrase)"
 msgstr "アンロック・ソルト（各ノードが独自のアンロック・パスフレーズを持つようにする）"
 
-#: ../../source/components/nethsm/clustering.rst:113
+#: ../../source/components/nethsm/clustering.rst:114
 #, fuzzy
 msgid "Locked domain key"
 msgstr "ロックされたドメインキー"
 
-#: ../../source/components/nethsm/clustering.rst:115
+#: ../../source/components/nethsm/clustering.rst:116
 msgid ""
 "Note that while each node has its own version of the locked domain key "
 "(because each node locks it with its own device key or unlock "
@@ -2843,46 +2849,46 @@ msgstr ""
 "各ノードはロックされたドメイン・キーの独自のバージョンを持つが（各ノードが独自のデバイス・キーまたはロック解除パスフレーズでロックするため）、基盤となるドメイン・キーはノード間で共有される（キーなどの共有HSMデータにアクセスするため）****"
 " 。"
 
-#: ../../source/components/nethsm/clustering.rst:118
+#: ../../source/components/nethsm/clustering.rst:119
 msgid "Stored in etcd and Shared"
 msgstr "etcdに保存され、共有される"
 
-#: ../../source/components/nethsm/clustering.rst:120
+#: ../../source/components/nethsm/clustering.rst:121
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
 msgstr "以下のデータはすべてグローバル・スコープの``etcd`` に格納されているので、クラスタの全ノードで統一されている："
 
-#: ../../source/components/nethsm/clustering.rst:122
+#: ../../source/components/nethsm/clustering.rst:123
 msgid "HSM data:"
 msgstr "HSMのデータ："
 
-#: ../../source/components/nethsm/clustering.rst:124
+#: ../../source/components/nethsm/clustering.rst:125
 #, fuzzy
 msgid "Keys"
 msgstr "キーID"
 
-#: ../../source/components/nethsm/clustering.rst:125
+#: ../../source/components/nethsm/clustering.rst:126
 #: ../../source/components/nethsm/pkcs11-setup.rst:183
 msgid "Users"
 msgstr "ユーザー"
 
-#: ../../source/components/nethsm/clustering.rst:130
+#: ../../source/components/nethsm/clustering.rst:131
 #, fuzzy
 msgid "Config/domain store version"
 msgstr "設定/ドメインストア・バージョン"
 
-#: ../../source/components/nethsm/clustering.rst:131
+#: ../../source/components/nethsm/clustering.rst:132
 #, fuzzy
 msgid "Cluster CA (used to authenticate nodes across cluster)"
 msgstr "クラスタCA（クラスタ間のノード認証に使用）"
 
-#: ../../source/components/nethsm/clustering.rst:132
+#: ../../source/components/nethsm/clustering.rst:133
 #, fuzzy
 msgid "Backup passphrase and backup salt"
 msgstr "バックアップパスフレーズは、以下のように設定できます。"
 
-#: ../../source/components/nethsm/clustering.rst:134
+#: ../../source/components/nethsm/clustering.rst:135
 msgid ""
 "Note that for now the config/domain store version can only be version 1 "
 "(if your software version supports clustering, then that is what you "
@@ -2892,47 +2898,47 @@ msgstr ""
 "今のところ、コンフィグ/ドメインストアのバージョンはバージョン1のみであることに注意してください（ソフトウェアのバージョンがクラスタリングをサポートしている場合、それがあなたのものです）。クラスタ内でソフトウェアアップデートをインストールする際の安全性についての詳細は、`Software"
 " Updates in Clusters`_ セクションを参照してください。"
 
-#: ../../source/components/nethsm/clustering.rst:137
+#: ../../source/components/nethsm/clustering.rst:138
 #, fuzzy
 msgid "Creating a Cluster"
 msgstr "スタートの準備"
 
-#: ../../source/components/nethsm/clustering.rst:139
+#: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
 msgstr "どのクラスターも最初は1つのノードから始まります。新しいノードは1つずつクラスタに参加します。"
 
-#: ../../source/components/nethsm/clustering.rst:142
+#: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
 msgid "Preparing Nodes"
 msgstr "スタートの準備"
 
-#: ../../source/components/nethsm/clustering.rst:144
+#: ../../source/components/nethsm/clustering.rst:145
 msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
 msgstr "ノード間のネットワーク・トラフィックは暗号化され、TLS証明書を使用して認証される。"
 
-#: ../../source/components/nethsm/clustering.rst:146
+#: ../../source/components/nethsm/clustering.rst:147
 msgid ""
 "All nodes that are expected to be part of the same cluster must first "
 "install a common Certificate Authority (CA) that will allow them to "
 "verify that other nodes are legitimate."
 msgstr "同じクラスタに属すると予想されるすべてのノードは、まず、他のノードが正当であることを確認できる共通の認証局（CA）をインストールする必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:148
+#: ../../source/components/nethsm/clustering.rst:149
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
 msgstr "以下では、すべてのノードが新たにプロビジョニングされ、稼働していると仮定する。"
 
-#: ../../source/components/nethsm/clustering.rst:151
+#: ../../source/components/nethsm/clustering.rst:152
 #, fuzzy
 msgid "Networking"
 msgstr "ネットワーク"
 
-#: ../../source/components/nethsm/clustering.rst:153
+#: ../../source/components/nethsm/clustering.rst:154
 #, fuzzy
 msgid ""
 "Nodes must first be reconfigured with their expected final network "
@@ -2943,26 +2949,26 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "network>`__ で見ることができます。"
 
-#: ../../source/components/nethsm/clustering.rst:156
+#: ../../source/components/nethsm/clustering.rst:157
 msgid "Creating and Installing a CA"
 msgstr "CAの作成とインストール"
 
-#: ../../source/components/nethsm/clustering.rst:158
+#: ../../source/components/nethsm/clustering.rst:159
 msgid ""
 "Users should create a CA by their own means and according to their own "
 "operational constraints, making sure it allows at least the "
 "``keyCertSign`` key usage."
 msgstr "利用者は、少なくとも``keyCertSign``鍵の使用を許可することを確認した上で、自らの手段で、自らの運用上の制約に従ってCAを作成すべきである。"
 
-#: ../../source/components/nethsm/clustering.rst:160
+#: ../../source/components/nethsm/clustering.rst:161
 msgid "For example, a minimal CA can be created with ``openssl``:"
 msgstr "例えば、最小のCAは``openssl`` で作成できる："
 
-#: ../../source/components/nethsm/clustering.rst:167
+#: ../../source/components/nethsm/clustering.rst:168
 msgid "This CA now has to be installed on every node."
 msgstr "このCAを各ノードにインストールする必要がある。"
 
-#: ../../source/components/nethsm/clustering.rst:169
+#: ../../source/components/nethsm/clustering.rst:170
 #, fuzzy
 msgid ""
 "To do this, first generate a Certificate Signing Request (CSR) from the "
@@ -2973,7 +2979,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/POST_config-tls-csr-pem>`__ で見ることができます。"
 
-#: ../../source/components/nethsm/clustering.rst:172
+#: ../../source/components/nethsm/clustering.rst:173
 #, fuzzy
 msgid ""
 "To properly authenticate nodes, the clustering backend (etcd) expects "
@@ -2986,7 +2992,7 @@ msgstr ""
 "Names)フィールドが記入された証明書を持っていることを期待する。特に、IP経由でのみ到達することが期待されるノードは、証明書に適切なIP "
 "SANを持つ必要があります。IP SANは、``openssl``のように、名前の前に \"IP: \"を付けることでCSRに要求できる："
 
-#: ../../source/components/nethsm/clustering.rst:180
+#: ../../source/components/nethsm/clustering.rst:181
 msgid ""
 "If you want to use a public CA for signing your certificates your nodes "
 "must use public IP addresses. This is due to a security requirement which"
@@ -2996,14 +3002,14 @@ msgstr ""
 "証明書の署名にパブリックCAを使用する場合は、ノードでパブリックIPアドレスを使用する必要があります。これは、パブリックCAが、IP "
 "SANにプライベートIPアドレスを含む証明書を発行することを禁じているセキュリティ要件によるものです。"
 
-#: ../../source/components/nethsm/clustering.rst:183
+#: ../../source/components/nethsm/clustering.rst:184
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
 "``openssl``:"
 msgstr "取得したCSR（``nethsm.csr``と呼ぶことにする）があれば、証明書を生成し、インストールできるようにする。例えば、``openssl``とする："
 
-#: ../../source/components/nethsm/clustering.rst:190
+#: ../../source/components/nethsm/clustering.rst:191
 #, fuzzy
 msgid ""
 "Then install the obtained ``new_cert.pem`` with the "
@@ -3014,7 +3020,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "tls-cert-pem>`__ で見ることができます。"
 
-#: ../../source/components/nethsm/clustering.rst:192
+#: ../../source/components/nethsm/clustering.rst:193
 msgid ""
 "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls"
 "/cluster-ca.pem`` endpoint (refer to the `API documentation "
@@ -3027,15 +3033,15 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照)。これは、インストールされたTLS証明書がCAによって署名された場合にのみ可能です。そうでない場合、操作は拒否されます。"
 
-#: ../../source/components/nethsm/clustering.rst:195
+#: ../../source/components/nethsm/clustering.rst:196
 msgid "This process has to be repeated for every node."
 msgstr "このプロセスをノードごとに繰り返さなければならない。"
 
-#: ../../source/components/nethsm/clustering.rst:198
+#: ../../source/components/nethsm/clustering.rst:199
 msgid "Clock Sync"
 msgstr "クロック同期"
 
-#: ../../source/components/nethsm/clustering.rst:200
+#: ../../source/components/nethsm/clustering.rst:201
 msgid ""
 "Make sure every node has been provisioned with an accurate system time, "
 "ideally using NTP/NTS rather than manual time setting. This can be done "
@@ -3046,38 +3052,38 @@ msgstr ""
 "を使用するのが理想的です。これは、`（時刻）<administration.html#time>`__ "
 "および`（NTS/NTP）<administration.html#ntp-nts>`__ の設定を行うことで実現できます。"
 
-#: ../../source/components/nethsm/clustering.rst:206
+#: ../../source/components/nethsm/clustering.rst:207
 #, fuzzy
 msgid "Adding a New Node"
 msgstr "ADSKの追加"
 
-#: ../../source/components/nethsm/clustering.rst:208
+#: ../../source/components/nethsm/clustering.rst:209
 #, fuzzy
 msgid "Adding a node to a cluster is done in three steps:"
 msgstr "クラスタへのノードの追加は2つのステップで行う："
 
-#: ../../source/components/nethsm/clustering.rst:210
+#: ../../source/components/nethsm/clustering.rst:211
 #, fuzzy
 msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "クラスタに追加を登録する(メンバーのいずれかを通して)"
 
-#: ../../source/components/nethsm/clustering.rst:211
+#: ../../source/components/nethsm/clustering.rst:212
 #, fuzzy
 msgid "Tell the new node to join"
 msgstr "新しいノードに参加するよう伝える"
 
-#: ../../source/components/nethsm/clustering.rst:212
+#: ../../source/components/nethsm/clustering.rst:213
 msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
 msgstr "追いついたら、そのノードを「学習者」から「正式メンバー」に昇格させる"
 
-#: ../../source/components/nethsm/clustering.rst:215
+#: ../../source/components/nethsm/clustering.rst:216
 #, fuzzy
 msgid "Configure a Backup Passphrase"
 msgstr "新しいバックアップのパスフレーズ"
 
-#: ../../source/components/nethsm/clustering.rst:217
+#: ../../source/components/nethsm/clustering.rst:218
 msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
@@ -3086,11 +3092,11 @@ msgstr ""
 "まず、新しいジョイナーの登録に使用するノードでバックアップパスフレーズが設定されていることを確認する（``/config/backup-"
 "passphrase``エンドポイントのAPIドキュメントを参照）。"
 
-#: ../../source/components/nethsm/clustering.rst:220
+#: ../../source/components/nethsm/clustering.rst:221
 msgid "Registering a New Node"
 msgstr "新規ノードの登録"
 
-#: ../../source/components/nethsm/clustering.rst:223
+#: ../../source/components/nethsm/clustering.rst:224
 msgid ""
 "Have at hand the IP of the node that will join. The full *URL* (also "
 "called *peer URL* in ``etcd`` terminology) of that node will be "
@@ -3102,7 +3108,7 @@ msgstr ""
 "とも呼ばれる）は``https://<IP_of_node>:2380``（例：``https://192.168.1.1:2380``）となる。ポート****"
 " は2380でなければならないので、ノード間のファイアウォールがそのポートのTCPトラフィックを許可していることを確認してください。"
 
-#: ../../source/components/nethsm/clustering.rst:225
+#: ../../source/components/nethsm/clustering.rst:226
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
@@ -3111,7 +3117,7 @@ msgstr ""
 "URL が正しいかどうかは、``GET /cluster/members`` "
 "を参加予定のノードで呼び出すことで再確認できる。これによって1つのメンバーだけがリストアップされるはずです。"
 
-#: ../../source/components/nethsm/clustering.rst:227
+#: ../../source/components/nethsm/clustering.rst:228
 msgid ""
 "Then register that expected URL on any existing node of the cluster (if "
 "you don't have a cluster yet, do this on the NetHSM that will serve as "
@@ -3125,11 +3131,11 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照）を使用し、URLを含む JSON ボディを渡します。"
 
-#: ../../source/components/nethsm/clustering.rst:229
+#: ../../source/components/nethsm/clustering.rst:230
 msgid "If successful, this returns a JSON body of the form:"
 msgstr "成功すれば、フォームのJSONボディが返される："
 
-#: ../../source/components/nethsm/clustering.rst:253
+#: ../../source/components/nethsm/clustering.rst:254
 msgid ""
 "which contains information necessary for the new node to join the "
 "cluster. In particular, it lists all members of the cluster (where the "
@@ -3138,30 +3144,30 @@ msgid ""
 "passphrase must have been configured before."
 msgstr "には、新しいノードがクラスタに参加するために必要な情報が含まれています。特に、クラスタの全メンバーをリストします（名前が空のメンバーが新規参加者です）。また、アンロックパスフレーズとバックアップパスフレーズの両方によって暗号化されたドメインキーも含まれています。"
 
-#: ../../source/components/nethsm/clustering.rst:256
+#: ../../source/components/nethsm/clustering.rst:257
 msgid ""
 "Notice in the response above that the new joiner is a \"learner\": it can"
 " now connect to the cluster and receive data from it, but cannot "
 "participate until it is promoted, which will be covered below."
 msgstr "上記の応答で、新しく参加したノードが「学習者（learner）」であることに注目してください。このノードは、クラスタへの接続やクラスタからのデータ受信は可能ですが、昇格されるまではクラスタに参加することはできません。これについては後述します。"
 
-#: ../../source/components/nethsm/clustering.rst:260
+#: ../../source/components/nethsm/clustering.rst:261
 msgid ""
 "While this concept of \"learner\" adds an additional step (promotion), it"
 " allows for a safer operation of the cluster, as any issue with the new "
 "node cannot cause instability to the whole cluster before its promotion."
 msgstr "この「ラーナー」という概念は、追加の手順（昇格）を必要としますが、新しいノードに問題が発生しても、昇格されるまではクラスタ全体に不安定さをもたらすことがないため、クラスタの運用をより安全に行うことができます。"
 
-#: ../../source/components/nethsm/clustering.rst:264
+#: ../../source/components/nethsm/clustering.rst:265
 msgid "Keep that response for the next step."
 msgstr "その返答は次のステップのためにとっておく。"
 
-#: ../../source/components/nethsm/clustering.rst:267
+#: ../../source/components/nethsm/clustering.rst:268
 #, fuzzy
 msgid "Joining the Cluster as a Learner"
 msgstr "デフォルトカーネルの変更"
 
-#: ../../source/components/nethsm/clustering.rst:269
+#: ../../source/components/nethsm/clustering.rst:270
 msgid ""
 "Take the response from the last step and append to it a "
 "``backupPassphrase`` field containing the backup passphrase of the node "
@@ -3175,7 +3181,7 @@ msgstr ""
 "documentation<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ "
 "を参照)への呼び出しに渡す。"
 
-#: ../../source/components/nethsm/clustering.rst:272
+#: ../../source/components/nethsm/clustering.rst:273
 msgid ""
 "The call to ``POST /cluster/join`` will hang until the new node is "
 "manually promoted (see below). This is normal. When the call returns "
@@ -3185,7 +3191,7 @@ msgstr ""
 "への呼び出しは、新しいノードが手動で昇格されるまで（後述参照）応答しなくなります。これは正常な動作です。呼び出しが正常に返された場合は、join "
 "および昇格が成功したことを示します。"
 
-#: ../../source/components/nethsm/clustering.rst:276
+#: ../../source/components/nethsm/clustering.rst:277
 #, fuzzy
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
@@ -3197,7 +3203,7 @@ msgid ""
 "is final and can only be reverted by a factory reset."
 msgstr "ネットワークやクラスタの状態によっては、この操作に数十秒かかることがあります。この操作がすぐに失敗した場合（クラスタに到達できなかった、認証に失敗したなど）、このノードの状態は消去されず、参加は元に戻ります。しかし、最初のジョインが成功するとすぐに、この操作は最終的なものとなり、ファクトリーリセットによってのみ元に戻すことができます。"
 
-#: ../../source/components/nethsm/clustering.rst:278
+#: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "At this stage the new node has joined as a *learner* node: it is "
 "synchronizing with the cluster but is not yet operable. On the other "
@@ -3207,25 +3213,25 @@ msgstr ""
 "この段階では、新しいノードは「*」の学習中ノード（* "
 "）として参加しています。クラスタとの同期は行われていますが、まだ稼働可能な状態ではありません。一方、この段階でノードに何らかの問題が発生しても、クラスタに支障をきたすことはなく、この操作は安全です。"
 
-#: ../../source/components/nethsm/clustering.rst:283
+#: ../../source/components/nethsm/clustering.rst:284
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
 msgstr "結合を完了するための最後のステップは、新しいノードを正式なメンバーに昇格させることです。"
 
-#: ../../source/components/nethsm/clustering.rst:287
+#: ../../source/components/nethsm/clustering.rst:288
 #, fuzzy
 msgid "Promoting the New Learner"
 msgstr "新規ユーザーのユーザーID"
 
-#: ../../source/components/nethsm/clustering.rst:289
+#: ../../source/components/nethsm/clustering.rst:290
 msgid ""
 "Depending on the networking and cluster conditions, it may take a while "
 "for the new member to catch up with the cluster. Once this is done, it "
 "can be promoted from learner to full member."
 msgstr "ネットワークやクラスタの状況によっては、新しいメンバーがクラスタに追いつくまでに時間がかかる場合があります。追いついた時点で、そのメンバーは「学習者」から「正会員」へと昇格させることができます。"
 
-#: ../../source/components/nethsm/clustering.rst:294
+#: ../../source/components/nethsm/clustering.rst:295
 #, fuzzy
 msgid ""
 "Promoting a node increases the cluster's quorum threshold (refer to the "
@@ -3240,7 +3246,7 @@ msgstr ""
 "および、本書の「`運用上の冗長性」<clustering.html#operational-redundancy>`__ "
 "のセクションを参照してください）。昇格を行う前に、この新しいノードがクラスタと安定した接続を確立していることを確認してください。"
 
-#: ../../source/components/nethsm/clustering.rst:296
+#: ../../source/components/nethsm/clustering.rst:297
 msgid ""
 "You can attempt to promote the new member with a call to ``POST "
 "/cluster/members/{MemberID}/promote`` (refer to the `API documentation "
@@ -3254,7 +3260,7 @@ msgstr ""
 "を参照してください）。学習者がまだ追いついていない場合、この操作は HTTP ステータスコード 412 "
 "で失敗するため、後で再度昇格を試みる必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:300
+#: ../../source/components/nethsm/clustering.rst:301
 #, fuzzy
 msgid ""
 "If this promotion is successful, the node will now have fully joined the "
@@ -3267,17 +3273,17 @@ msgstr ""
 "このジョインが成功すると、ノードは``Locked`` "
 "状態になり、登録に使用したノードのアンロックパスフレーズを使ってアンロックする必要があります。その後、アンロックパスフレーズを変更することができます（アンロックパスフレーズはノード固有のままであり、ノード間で共有されません）。"
 
-#: ../../source/components/nethsm/clustering.rst:303
+#: ../../source/components/nethsm/clustering.rst:304
 #, fuzzy
 msgid "Adding a Witness Node"
 msgstr "ADSKの追加"
 
-#: ../../source/components/nethsm/clustering.rst:306
+#: ../../source/components/nethsm/clustering.rst:307
 #, fuzzy
 msgid "Prepare a Witness"
 msgstr "準備"
 
-#: ../../source/components/nethsm/clustering.rst:308
+#: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "You will need an environment with ``etcd`` v3.6 available, with an IPv4 "
 "address (at least) reachable by the other members of your cluster. TCP "
@@ -3286,7 +3292,7 @@ msgstr ""
 "``etcd`` "
 "v3.6が利用可能で、クラスタの他のメンバーから到達可能なIPv4アドレス（少なくとも）を持つ環境が必要です。ポート2380を発着するTCPトラフィックが許可されている必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:310
+#: ../../source/components/nethsm/clustering.rst:311
 msgid ""
 "Create an empty directory where ``etcd`` will store its data, and write "
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
@@ -3295,7 +3301,7 @@ msgstr ""
 "``etcd`` がデータを格納する空のディレクトリを作成し、そのパスを書き込む（ここでは``/var/etcd/data`` "
 "とする）。プロセスを起動するユーザが、そのディレクトリに対する読み取りと書き込みの権限を持っていることを確認する。"
 
-#: ../../source/components/nethsm/clustering.rst:312
+#: ../../source/components/nethsm/clustering.rst:313
 #, fuzzy
 msgid ""
 "Transfer to the machine the CA certificate that is being used to "
@@ -3306,7 +3312,7 @@ msgstr ""
 "クラスタ内のノードの認証に使用するCA証明書をマシンに転送します。`CAの作成とインストール`_セクションで作成したはずです。それを``/var/etcd/CA.pem``"
 " に保存します。"
 
-#: ../../source/components/nethsm/clustering.rst:317
+#: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
@@ -3315,18 +3321,18 @@ msgstr ""
 "その後、ウィットネス用の証明書を作成し、CAで署名して、ウィットネスがピアと通信できるようにする必要があります。これは例えば``openssl``"
 " を使って行うことができる："
 
-#: ../../source/components/nethsm/clustering.rst:330
+#: ../../source/components/nethsm/clustering.rst:331
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
 msgstr "出来上がった``witness.key`` と``witness.pem`` を``/var/etcd`` にも格納する。"
 
-#: ../../source/components/nethsm/clustering.rst:333
+#: ../../source/components/nethsm/clustering.rst:334
 #, fuzzy
 msgid "Register Witness to Cluster"
 msgstr "HMDMサーバーへのニトロフォンの登録"
 
-#: ../../source/components/nethsm/clustering.rst:335
+#: ../../source/components/nethsm/clustering.rst:336
 #, fuzzy
 msgid ""
 "Follow the normal instructions from the `Registering a New Node "
@@ -3334,18 +3340,18 @@ msgid ""
 "existing cluster the addition of a new member with the given URL(s)."
 msgstr "`新しいノードの登録`_セクションの通常の手順に従って、指定されたURL(s)を持つ新しいメンバーが追加されたことを既存のクラスタに通知します。"
 
-#: ../../source/components/nethsm/clustering.rst:339
+#: ../../source/components/nethsm/clustering.rst:340
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
 msgstr "クラスタからの応答を書き留めてください。クラスタメンバーのリストとジョイナーキットが含まれているはずです（この部分は必要ありません）。"
 
-#: ../../source/components/nethsm/clustering.rst:342
+#: ../../source/components/nethsm/clustering.rst:343
 #, fuzzy
 msgid "Configure etcd"
 msgstr "構成"
 
-#: ../../source/components/nethsm/clustering.rst:344
+#: ../../source/components/nethsm/clustering.rst:345
 msgid ""
 "Unlike NetHSMs which automatically choose a node name for themselves "
 "(using the device ID), you must choose a name for each witness you add, "
@@ -3356,13 +3362,13 @@ msgstr ""
 "とは異なり、追加する各証人の名前を選択する必要があります。*名前が一意であることを確認してください* "
 "。以下の例では「witness1」を使用します。"
 
-#: ../../source/components/nethsm/clustering.rst:346
+#: ../../source/components/nethsm/clustering.rst:347
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
 msgstr "NetHSM の立会人登録への回答とともに、フォームの変数を用意する："
 
-#: ../../source/components/nethsm/clustering.rst:355
+#: ../../source/components/nethsm/clustering.rst:356
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
@@ -3371,14 +3377,14 @@ msgstr ""
 "NetHSM のレスポンスが``response.json`` ファイルに保存されていると仮定すると、以下の``jq`` "
 "式で最後の2つの変数を自動的に生成することができます："
 
-#: ../../source/components/nethsm/clustering.rst:362
+#: ../../source/components/nethsm/clustering.rst:363
 #, fuzzy
 msgid ""
 "For example with the example response provided in the `Registering a New "
 "Node <clustering.html#registering-a-new-node>`__ section, you will have:"
 msgstr "例えば、`新しいノードを登録する`_セクションで提供されたレスポンスの例では、次のようになります："
 
-#: ../../source/components/nethsm/clustering.rst:373
+#: ../../source/components/nethsm/clustering.rst:374
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
@@ -3386,34 +3392,34 @@ msgstr ""
 "最後に、``docs/etcd_witness.conf.template`` "
 "で提供されているテンプレート・ファイルを使用して、``etcd.conf.yml`` ファイルを作成する："
 
-#: ../../source/components/nethsm/clustering.rst:380
+#: ../../source/components/nethsm/clustering.rst:381
 msgid "This should give you a file of the form:"
 msgstr "これでフォームのファイルができるはずだ："
 
-#: ../../source/components/nethsm/clustering.rst:405
+#: ../../source/components/nethsm/clustering.rst:406
 #, fuzzy
 msgid "Start etcd"
 msgstr "スタートメニュー"
 
-#: ../../source/components/nethsm/clustering.rst:407
+#: ../../source/components/nethsm/clustering.rst:408
 msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
 "previous step:"
 msgstr "``etcd`` をお好みの方法（手動、``systemd`` サービス、コンテナなど）で起動し、前のステップで作成した設定ファイルを指定する："
 
-#: ../../source/components/nethsm/clustering.rst:414
+#: ../../source/components/nethsm/clustering.rst:415
 msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
 msgstr "起動が始まるのが確認できたら、学習者としてクラスターに参加し、データを追いつくはずです。"
 
-#: ../../source/components/nethsm/clustering.rst:417
+#: ../../source/components/nethsm/clustering.rst:418
 #, fuzzy
 msgid "Promote the Witness"
 msgstr "準備"
 
-#: ../../source/components/nethsm/clustering.rst:419
+#: ../../source/components/nethsm/clustering.rst:420
 msgid ""
 "Finally and after some time, follow the normal instructions from the "
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
@@ -3422,7 +3428,7 @@ msgstr ""
 "最後に、しばらく待ってから、「`」の「新学習者の昇格」<clustering.html#promoting-the-new-learner>`__"
 " セクションに記載されている通常の指示に従って、その証人を昇格させてください。これがうまくいかない場合は、後で再度試してみてください。"
 
-#: ../../source/components/nethsm/clustering.rst:423
+#: ../../source/components/nethsm/clustering.rst:424
 #, fuzzy
 msgid ""
 "After a successful promotion, you should be able to check that it is "
@@ -3431,11 +3437,11 @@ msgstr ""
 "起動してクラスタに参加し、データに追いつくのを確認できるはずだ。しばらくすると、``etcdctl`` "
 "クライアントで正常であることを確認できるはずだ："
 
-#: ../../source/components/nethsm/clustering.rst:429
+#: ../../source/components/nethsm/clustering.rst:430
 msgid "This key should exist and contain \"1\"."
 msgstr "このキーは存在し、\"1 \"を含んでいなければならない。"
 
-#: ../../source/components/nethsm/clustering.rst:431
+#: ../../source/components/nethsm/clustering.rst:432
 #, fuzzy
 msgid ""
 "Make sure this process keeps running, as it is now a proper member of "
@@ -3444,17 +3450,17 @@ msgid ""
 "reachable IP changes, update its URL from the cluster."
 msgstr "クラスタの適切なメンバーになったので、このプロセスが実行され続けていることを確認してください。このプロセスを廃止する必要がある場合は、まずクラスタから適切に削除します（専用のセクションを参照）。到達可能なIPが変更された場合は、クラスタからそのURLを更新します。"
 
-#: ../../source/components/nethsm/clustering.rst:435
+#: ../../source/components/nethsm/clustering.rst:436
 #, fuzzy
 msgid "Operating a Cluster"
 msgstr "オプションステップ"
 
-#: ../../source/components/nethsm/clustering.rst:438
+#: ../../source/components/nethsm/clustering.rst:439
 #: ../../source/components/nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
 msgstr "バックアップとリストア"
 
-#: ../../source/components/nethsm/clustering.rst:440
+#: ../../source/components/nethsm/clustering.rst:441
 msgid ""
 "The backup operation works the same as without a cluster and can be "
 "requested from any node of the cluster. It will back up data for the "
@@ -3462,7 +3468,7 @@ msgid ""
 "ignored unless restoring the backup on an unprovisioned node)."
 msgstr "バックアップ操作はクラスタがない場合と同じように動作し、クラスタのどのノードからでも要求できます。ノード固有のフィールドを含むクラスタ全体のデータがバックアップされます（ただし、プロビジョニングされていないノードでバックアップをリストアしない限り、これらのフィールドは無視されます）。"
 
-#: ../../source/components/nethsm/clustering.rst:442
+#: ../../source/components/nethsm/clustering.rst:443
 msgid ""
 "A backup done on a cluster can be restored on the same cluster, even if "
 "some nodes have been added or removed since. Such restores done on "
@@ -3470,26 +3476,26 @@ msgid ""
 "users, namespaces), like any other partial restore."
 msgstr "クラスタ上で実行されたバックアップは、その後ノードが追加または削除された場合でも、同じクラスタ上でリストアできます。運用クラスタ上で行われたこのようなリストアは、他の部分リストアと同様に、設定値には影響しません（キー、ユーザ、ネームスペースのみ）。"
 
-#: ../../source/components/nethsm/clustering.rst:444
+#: ../../source/components/nethsm/clustering.rst:445
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
 "node that was used to create the backup."
 msgstr "プロビジョニングされていないノードにバックアップをリストアすると、バックアップの作成に使用されたノードのノード固有のフィールド（ネットワーク構成、証明書など）がリストアされます。"
 
-#: ../../source/components/nethsm/clustering.rst:446
+#: ../../source/components/nethsm/clustering.rst:447
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
 msgstr "大きなバックアップをリストアすると、リストアを適用するノードが他のノードに変更を転送している間、しばらくの間クラスタに負荷がかかることがあります。"
 
-#: ../../source/components/nethsm/clustering.rst:448
+#: ../../source/components/nethsm/clustering.rst:449
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
 msgstr "この操作は、旧バージョンの NetHSM で作成されたバックアップと互換性があります。"
 
-#: ../../source/components/nethsm/clustering.rst:451
+#: ../../source/components/nethsm/clustering.rst:452
 msgid ""
 "Restoring on a node A a backup made on another node Z with a different "
 "domain key will correctly rewrite A's domain key, as before. However if A"
@@ -3499,7 +3505,7 @@ msgstr ""
 "異なるドメイン鍵で別のノードZに作成されたバックアップをノードAにリストア "
 "すると、Aのドメイン鍵は以前と同様に正しく書き換えられる。しかし、AがノードBとクラスタ内にあった場合、ZのドメインキーがB上にリストアされないため、Bは操作不能になる。"
 
-#: ../../source/components/nethsm/clustering.rst:453
+#: ../../source/components/nethsm/clustering.rst:454
 msgid ""
 "In other words, only perform a restore in a cluster with backups done in "
 "the same cluster (though again nodes may have been removed or added "
@@ -3507,18 +3513,18 @@ msgid ""
 "remove it from its cluster, then factory reset it and restore the backup."
 msgstr "言い換えれば、同じクラスタでバックアップが行われたクラスタでのみリストアを実行してください（ただし、その後ノードが削除または追加されている可能性があります）。あるノードの外部バックアップをリストアしたい場合は、まずそのノードをクラスタから安全に削除し、ファクトリーリセットしてからバックアップをリストアします。"
 
-#: ../../source/components/nethsm/clustering.rst:456
+#: ../../source/components/nethsm/clustering.rst:457
 msgid "Removing a Node Cleanly"
 msgstr "ノードをきれいに削除する"
 
-#: ../../source/components/nethsm/clustering.rst:458
+#: ../../source/components/nethsm/clustering.rst:459
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
 " node is already unreachable or is expected to be."
 msgstr "クラスタのどこかがまだ定足数を満たしている限り、そのメンバーのいずれかを使って、他のノードをクラスタから取り除くことができる。"
 
-#: ../../source/components/nethsm/clustering.rst:460
+#: ../../source/components/nethsm/clustering.rst:461
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
@@ -3526,7 +3532,7 @@ msgstr ""
 "まず、削除したいノードのIDを知る必要がある。``GET /cluster/members`` "
 "を通してすべてのノードをリストアップし、適切なノードを探す。"
 
-#: ../../source/components/nethsm/clustering.rst:462
+#: ../../source/components/nethsm/clustering.rst:463
 #, fuzzy
 msgid ""
 "Then it can be removed by calling ``DELETE /cluster/members/<id>``. If "
@@ -3536,18 +3542,18 @@ msgstr ""
 "その後、``DELETE /cluster/members/<id>`` "
 "を呼び出して削除することができる。問題のノードがまだ健全であれば、これでクラスタの他のノードから切り離され、操作不能になる。"
 
-#: ../../source/components/nethsm/clustering.rst:465
+#: ../../source/components/nethsm/clustering.rst:466
 msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
 msgstr "クラスタに参加しているが、まだ昇格されていないノードも、この方法で安全に削除することができます。"
 
-#: ../../source/components/nethsm/clustering.rst:469
+#: ../../source/components/nethsm/clustering.rst:470
 #, fuzzy
 msgid "Recovering a Failed Node"
 msgstr "新規ノードの登録"
 
-#: ../../source/components/nethsm/clustering.rst:471
+#: ../../source/components/nethsm/clustering.rst:472
 msgid ""
 "A node reporting a *Failed* state will refuse to answer most normal "
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
@@ -3557,7 +3563,7 @@ msgstr ""
 "という状態を報告しているノードは、通常の操作のほとんどに応答しなくなります。ただし、シャットダウン、再起動、リセット*、診断* 、または隔離** "
 "を行うことは可能です。"
 
-#: ../../source/components/nethsm/clustering.rst:475
+#: ../../source/components/nethsm/clustering.rst:476
 msgid ""
 "The existence of the *Failed* state, ``diagnose`` and ``force-new`` "
 "operations only applies to version 5.0 and onward. In version 4.0, a node"
@@ -3568,33 +3574,33 @@ msgstr ""
 "以降にのみ適用されます。バージョン 4.0 では、クォーラムを失ったノードは、*すべての* リクエストへの応答を停止します。このノードは*必ず* "
 "工場出荷時設定にリセットする必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:479
+#: ../../source/components/nethsm/clustering.rst:480
 msgid "Common causes for a node to be in the *Failed* state include:"
 msgstr "ノードが「*」の「Failed* 」状態になる一般的な原因には、次のようなものがあります。"
 
-#: ../../source/components/nethsm/clustering.rst:481
+#: ../../source/components/nethsm/clustering.rst:482
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
 msgstr "`がクオラムを失った状態が長期間続いた<clustering.html#the-quorum-is-durably-lost>`__。"
 
-#: ../../source/components/nethsm/clustering.rst:482
+#: ../../source/components/nethsm/clustering.rst:483
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
 msgstr "一時的に定足数を満たさなくなった状態（例：クラスタに 2 番目のノードを追加する際、そのノードがまだクラスタに参加していない場合など）。"
 
-#: ../../source/components/nethsm/clustering.rst:484
+#: ../../source/components/nethsm/clustering.rst:485
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
 msgstr "``etcd`` は現在、再起動中です（例：証明書が変更された、またはネットワーク設定が再構成されたためなど）。"
 
-#: ../../source/components/nethsm/clustering.rst:486
+#: ../../source/components/nethsm/clustering.rst:487
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
 msgstr "クラスタは非常に高い負荷がかかっています（例：非常に大規模なバックアップの復元中など）。"
 
-#: ../../source/components/nethsm/clustering.rst:489
+#: ../../source/components/nethsm/clustering.rst:490
 msgid ""
 "No matter the cause, the NetHSM will only transition to the *Failed* "
 "state after no less than a full minute of unsuccessful attempts to "
@@ -3604,7 +3610,7 @@ msgstr ""
 "原因が何であれ、NetHSMは、データベースとの通信が1分以上連続して失敗した場合にのみ、「*Failed* "
 "」状態に移行します。これは、ごく短時間の不安定状態によって引き起こされる誤った状態遷移を防ぐためです。"
 
-#: ../../source/components/nethsm/clustering.rst:494
+#: ../../source/components/nethsm/clustering.rst:495
 msgid ""
 "To help you understand which case your node is in, the ``GET "
 "/health/diagnose`` endpoint remains available and returns information "
@@ -3615,7 +3621,7 @@ msgstr ""
 "エンドポイントは引き続き利用可能であり、``etcd`` "
 "およびそのデータベースの現在のステータスに関する情報（ログを含む）を返します（APIドキュメントを参照してください）。"
 
-#: ../../source/components/nethsm/clustering.rst:499
+#: ../../source/components/nethsm/clustering.rst:500
 msgid ""
 "If and when the database becomes available again (e.g. the quorum is "
 "restored because the network issue has been solved), the NetHSM will "
@@ -3629,19 +3635,19 @@ msgstr ""
 " 」状態から、以前の状態へ自動的に移行します（または、起動中であった場合は通常の起動シーケンスを再開します）。 "
 "問題が解決してから、クラスタが安定し、HSMが問題の解決を検知して状態を変更するまで、最大1分程度かかります。"
 
-#: ../../source/components/nethsm/clustering.rst:506
+#: ../../source/components/nethsm/clustering.rst:507
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
 msgstr "その障害が永続的であると判断した場合（例：クォーラムが失われ、根本的な原因を解決する見込みがない場合など）、以下のいずれかの対応をとることができます："
 
-#: ../../source/components/nethsm/clustering.rst:509
+#: ../../source/components/nethsm/clustering.rst:510
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
 msgstr "**ノードを工場出荷時設定にリセット（** ）して、すべてのデータを消去し、バックアップを復元します。"
 
-#: ../../source/components/nethsm/clustering.rst:510
+#: ../../source/components/nethsm/clustering.rst:511
 msgid ""
 "**Isolate** the node with the ``POST /cluster/force-new`` endpoint, which"
 " will irreversibly forget all other cluster members, recover the ``etcd``"
@@ -3656,7 +3662,7 @@ msgstr ""
 "Locked または Operational のいずれかの状態になります。POST /cluster/force-new`** `etcd` **"
 " **"
 
-#: ../../source/components/nethsm/clustering.rst:517
+#: ../../source/components/nethsm/clustering.rst:518
 #, fuzzy
 msgid ""
 "If a node is isolated with ``force-new``, it will desynchronized with the"
@@ -3667,7 +3673,7 @@ msgstr ""
 "ノードが ``` および `force-new`` "
 "によって隔離された場合、そのノードはクラスタとの同期が失われます。つまり、そのノードまたはクラスタに対する新しい書き込みは、調整できなくなります。このノードは引き続きクラスタに再参加することは可能ですが、ローカルでの変更内容はすべて失われます。"
 
-#: ../../source/components/nethsm/clustering.rst:522
+#: ../../source/components/nethsm/clustering.rst:523
 msgid ""
 "The ``POST /cluster/force-new`` endpoint, which is only available in the "
 "*Failed* state, requires authentication as it is potentially destructive."
@@ -3680,7 +3686,7 @@ msgstr ""
 "ユーザーおよびロールが利用できないため、このエンドポイントは、HTTPS クライアントが常に``unlock`` "
 "の偽ユーザーと、パスワードとして最新の既知のロック解除パスフレーズを使用して認証することを想定しています。"
 
-#: ../../source/components/nethsm/clustering.rst:529
+#: ../../source/components/nethsm/clustering.rst:530
 msgid ""
 "After an update from a version < 5.0, the ``force-new`` endpoint will be "
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
@@ -3689,18 +3695,18 @@ msgstr ""
 "バージョン 5.0 未満からアップデートした後、HSM のロックが解除されるか、ロック解除パスフレーズが少なくとも 1 回変更されるまでは、`` "
 "の `force-new`` エンドポイントへのアクセスは常に「Unauthorized」となります。"
 
-#: ../../source/components/nethsm/clustering.rst:534
+#: ../../source/components/nethsm/clustering.rst:535
 #, fuzzy
 msgid "Software Updates in Clusters"
 msgstr "ソフトウェア・アップデート"
 
-#: ../../source/components/nethsm/clustering.rst:536
+#: ../../source/components/nethsm/clustering.rst:537
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
 msgstr "今後のアップデートは、\"cluster-safe\"（これが大多数であるべきだ）または \"cluster-unsafe \"としてマークされる。"
 
-#: ../../source/components/nethsm/clustering.rst:538
+#: ../../source/components/nethsm/clustering.rst:539
 msgid ""
 "Cluster-safe updates can be applied to nodes that are part of a cluster "
 "without removing them from the cluster first. However as with all "
@@ -3709,7 +3715,7 @@ msgid ""
 "update fails)."
 msgstr "クラスタセーフ・アップデートは、クラスタの一部であるノードに対して、そのノードをクラスタから削除することなく適用できます。ただし、すべての操作と同様に、一度に1つのノードで、ノードを削除してもクォーラムを下回らないクラスタ内で（アップデートに失敗した場合など）、これを実行するようにしてください。"
 
-#: ../../source/components/nethsm/clustering.rst:540
+#: ../../source/components/nethsm/clustering.rst:541
 msgid ""
 "Cluster-unsafe updates must be applied to isolated nodes. You should "
 "dismantle the cluster (removing nodes one by one), factory reset all "
@@ -3717,20 +3723,20 @@ msgid ""
 "join the remaining node."
 msgstr "クラスタ安全でないアップデートは、分離されたノードに適用する必要があります。クラスタを解体し（ノードを1つずつ削除し）、1つのノードを除くすべてのノードをファクトリーリセットし、すべてのノードにアップデートを適用し、リセットしたすべてのノードを残りのノードに参加させる必要があります。"
 
-#: ../../source/components/nethsm/clustering.rst:542
+#: ../../source/components/nethsm/clustering.rst:543
 msgid "Make sure to back up before such operations."
 msgstr "このような操作の前には、必ずバックアップを取ってください。"
 
-#: ../../source/components/nethsm/clustering.rst:545
+#: ../../source/components/nethsm/clustering.rst:546
 msgid "Reconfiguring an Existing Cluster"
 msgstr "既存のクラスタの再構成"
 
-#: ../../source/components/nethsm/clustering.rst:548
+#: ../../source/components/nethsm/clustering.rst:549
 #, fuzzy
 msgid "Changing the Cluster CA"
 msgstr "デフォルトカーネルの変更"
 
-#: ../../source/components/nethsm/clustering.rst:550
+#: ../../source/components/nethsm/clustering.rst:551
 msgid ""
 "An existing cluster (with two or more nodes) **cannot** change its "
 "cluster CA while in operation. If you need to change this certificate: "
@@ -3740,12 +3746,12 @@ msgstr ""
 "** "
 "既存のクラスタ（2つ以上のノードを持つ）**、運用中にクラスタCAを変更することはできません。この証明書を変更する必要がある場合は、ノードを選択し、他のノードをすべて削除し、CAを更新してから、他のメンバーを再参加させます。"
 
-#: ../../source/components/nethsm/clustering.rst:553
+#: ../../source/components/nethsm/clustering.rst:554
 #, fuzzy
 msgid "Changing the Network Configuration of Nodes"
 msgstr "ネットワーク構成を問い合わせる"
 
-#: ../../source/components/nethsm/clustering.rst:555
+#: ../../source/components/nethsm/clustering.rst:556
 msgid ""
 "Modifying the network configuration of a node (e.g. changing its IP) will"
 " automatically inform the other nodes about the update. You should "

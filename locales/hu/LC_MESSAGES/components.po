@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-24 22:17+0000\n"
+"POT-Creation-Date: 2026-09-29 10:10+0000\n"
 "PO-Revision-Date: 2026-09-24 11:55+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: hu\n"
@@ -2357,7 +2357,7 @@ msgstr ""
 "UserID-passphrase><x>`__ találhatók."
 
 #: ../../source/components/nethsm/administration.rst:1283
-#: ../../source/components/nethsm/clustering.rst:126
+#: ../../source/components/nethsm/clustering.rst:127
 msgid "Namespaces"
 msgstr "Névterek"
 
@@ -2655,7 +2655,13 @@ msgstr ""
 "A két csomópontos fürtök támogatására szolgáló aktív/passzív beállítás, "
 "akár az etcd Learner, akár a Mirror használatával, még nem érhető el."
 
-#: ../../source/components/nethsm/clustering.rst:10
+#: ../../source/components/nethsm/clustering.rst:9
+msgid ""
+"It has not yet been proven in a sufficient number of production "
+"deployments, and there may be bugs."
+msgstr ""
+
+#: ../../source/components/nethsm/clustering.rst:11
 msgid ""
 "NetHSM 4.0 onwards supports clustering to synchronize data between "
 "several NetHSMs directly. This supports high frequency of key "
@@ -2674,7 +2680,7 @@ msgstr ""
 "Ez biztosítja, hogy az adatok (pl. kulcsok) minden NetHSM-ben mindig "
 "helyesek legyenek."
 
-#: ../../source/components/nethsm/clustering.rst:12
+#: ../../source/components/nethsm/clustering.rst:13
 msgid ""
 "Before setting up a NetHSM cluster make yourself familiar with this "
 "technology and its constraints to avoid accidental outage and data loss. "
@@ -2686,12 +2692,12 @@ msgstr ""
 " Ezen a dokumentumon kívül érdemes a `etcd dokumentációját is megnézni: "
 "<https://etcd.io/docs/latest/learning/>`__."
 
-#: ../../source/components/nethsm/clustering.rst:15
+#: ../../source/components/nethsm/clustering.rst:16
 #, fuzzy
 msgid "Operational Redundancy"
 msgstr "*Operational*"
 
-#: ../../source/components/nethsm/clustering.rst:17
+#: ../../source/components/nethsm/clustering.rst:18
 msgid ""
 "We will call \"node\" a NetHSM that is expected to be part of a cluster. "
 "**A cluster of** ``N`` **nodes will continue to operate as long as at "
@@ -2703,7 +2709,7 @@ msgstr ""
 "legalább a** ``(N/2)+1`` **csomópontok egészségesek és elérhetőek.** Az "
 "egészséges, elérhető csomópontok minimális számát **kvórumnak nevezzük**."
 
-#: ../../source/components/nethsm/clustering.rst:20
+#: ../../source/components/nethsm/clustering.rst:21
 msgid ""
 "On a cluster that goes below this threshold (e.g. because of a network "
 "issue), no leader can be elected and the local instance of ``etcd`` on "
@@ -2715,11 +2721,11 @@ msgstr ""
 "található ``etcd`` helyi példánya nem képes többé olvasási és írási "
 "műveleteket végrehajtani. Ez a következő eseteket vonja maga után."
 
-#: ../../source/components/nethsm/clustering.rst:25
+#: ../../source/components/nethsm/clustering.rst:26
 msgid "One Node Goes Down and Quorum is Still Reached"
 msgstr "Egy csomópont leáll, de a kvórum még mindig elérhető"
 
-#: ../../source/components/nethsm/clustering.rst:27
+#: ../../source/components/nethsm/clustering.rst:28
 msgid ""
 "In a 3-node cluster, if one node fails (crashes or becomes unreachable "
 "due to network conditions), the two other nodes will continue to work and"
@@ -2729,7 +2735,7 @@ msgstr ""
 " vagy hálózati körülmények miatt elérhetetlenné válik), a másik két "
 "csomópont tovább működik és kiszolgálja a kéréseket."
 
-#: ../../source/components/nethsm/clustering.rst:29
+#: ../../source/components/nethsm/clustering.rst:30
 #, fuzzy
 msgid ""
 "If the failed node is still healthy (e.g. it was just a network problem),"
@@ -2740,7 +2746,7 @@ msgstr ""
 "probléma volt), akkor az izolált állapotában működésképtelen lesz (még "
 "olvasásra sem)."
 
-#: ../../source/components/nethsm/clustering.rst:31
+#: ../../source/components/nethsm/clustering.rst:32
 #, fuzzy
 msgid ""
 "However if the node recovers, it will cleanly resynchronize with the rest"
@@ -2750,7 +2756,7 @@ msgstr ""
 "Ha azonban a csomópont helyreáll, tisztán újraszinkronizálódik a fürt "
 "többi részével, és újra működőképessé válik, adatvesztés nélkül."
 
-#: ../../source/components/nethsm/clustering.rst:33
+#: ../../source/components/nethsm/clustering.rst:34
 msgid ""
 "If it never recovers, it has to be `removed <clustering.html#removing-a"
 "-node-cleanly>`__ from the cluster and either undergo `recovery "
@@ -2765,11 +2771,11 @@ msgstr ""
 "része), vagy gyári beállításokra kell visszaállítani, és a csatlakozási "
 "folyamatot elölről kell végigcsinálni."
 
-#: ../../source/components/nethsm/clustering.rst:39
+#: ../../source/components/nethsm/clustering.rst:40
 msgid "A Network Partition Happens and Quorum is Still Reached"
 msgstr "Hálózati felosztás történik, de a kvórum még mindig elérhető"
 
-#: ../../source/components/nethsm/clustering.rst:41
+#: ../../source/components/nethsm/clustering.rst:42
 msgid ""
 "This is just a generalization of the previous scenario. In a 5-node "
 "cluster where e.g. 3 nodes are in one physical location A and 2 nodes are"
@@ -2781,7 +2787,7 @@ msgstr ""
 "másik B helyen van, az A és B elszigetelésével kapcsolatos hálózati "
 "probléma a következőket jelentené:"
 
-#: ../../source/components/nethsm/clustering.rst:43
+#: ../../source/components/nethsm/clustering.rst:44
 msgid ""
 "The 3 nodes in location A are meeting the quorum (3 in this case), so "
 "they continue to operate."
@@ -2789,7 +2795,7 @@ msgstr ""
 "Az A helyen lévő 3 csomópont megfelel a határozatképességnek (ebben az "
 "esetben 3), így továbbra is működnek."
 
-#: ../../source/components/nethsm/clustering.rst:44
+#: ../../source/components/nethsm/clustering.rst:45
 #, fuzzy
 msgid ""
 "The 2 nodes in location B are **not** meeting the quorum (still 3), so "
@@ -2798,7 +2804,7 @@ msgstr ""
 "A B helyen lévő 2 csomópont **nem** a határozatképességnek (még mindig "
 "3), így leállnak (még olvasásra is)."
 
-#: ../../source/components/nethsm/clustering.rst:45
+#: ../../source/components/nethsm/clustering.rst:46
 msgid ""
 "If the network issue is resolved, the 2 nodes will cleanly join back the "
 "3 others."
@@ -2806,7 +2812,7 @@ msgstr ""
 "Ha a hálózati probléma megoldódik, a 2 csomópont tisztán "
 "visszacsatlakozik a 3 másikhoz."
 
-#: ../../source/components/nethsm/clustering.rst:47
+#: ../../source/components/nethsm/clustering.rst:48
 msgid ""
 "In other words, a worst-case network partition (in a cluster with an odd "
 "number of nodes) will leave the bigger half of the cluster healthy, and "
@@ -2817,11 +2823,11 @@ msgstr ""
 "fele továbbra is működőképes marad, míg a kisebb fele a probléma "
 "megoldásáig nem lesz üzemképes."
 
-#: ../../source/components/nethsm/clustering.rst:52
+#: ../../source/components/nethsm/clustering.rst:53
 msgid "The Quorum is Durably Lost"
 msgstr "A határozatképesség tartósan elveszett"
 
-#: ../../source/components/nethsm/clustering.rst:54
+#: ../../source/components/nethsm/clustering.rst:55
 #, fuzzy
 msgid ""
 "A failure causing all subsets of the cluster to lose quorum will render "
@@ -2834,7 +2840,7 @@ msgstr ""
 " a csomópontokat gyárilag vissza kell állítani, és vissza kell állítani a"
 " biztonsági másolatot."
 
-#: ../../source/components/nethsm/clustering.rst:56
+#: ../../source/components/nethsm/clustering.rst:57
 msgid ""
 "This can happen for example if a single node fails in a 2-node cluster "
 "(where the quorum is 2). In this situation, the failed node cannot be "
@@ -2847,7 +2853,7 @@ msgstr ""
 "fürtből, mivel a megmaradt egészséges csomópont már működésképtelen, "
 "mivel elvesztette a kvórumot."
 
-#: ../../source/components/nethsm/clustering.rst:58
+#: ../../source/components/nethsm/clustering.rst:59
 msgid ""
 "Hence it is advised to always have an odd number of nodes in a cluster, "
 "and to back up often."
@@ -2855,7 +2861,7 @@ msgstr ""
 "Ezért ajánlatos, hogy mindig páratlan számú csomópont legyen a fürtben, "
 "és gyakran készítsen biztonsági mentést."
 
-#: ../../source/components/nethsm/clustering.rst:60
+#: ../../source/components/nethsm/clustering.rst:61
 msgid ""
 "To be clear, *temporarily* losing quorum (for example, if you are "
 "restarting all nodes of a cluster together, or a temporary network "
@@ -2874,7 +2880,7 @@ msgstr ""
 "félrekonfigurációk, a hitelesítési problémák vagy a hardverhibák "
 "igényelnek manuális beavatkozást."
 
-#: ../../source/components/nethsm/clustering.rst:62
+#: ../../source/components/nethsm/clustering.rst:63
 msgid ""
 "For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
@@ -2882,11 +2888,11 @@ msgstr ""
 "További információért lásd `etcd's GYIK <https://etcd.io/docs/v3.6/faq"
 "/#why-an-odd-number-of-cluster-members>`__."
 
-#: ../../source/components/nethsm/clustering.rst:65
+#: ../../source/components/nethsm/clustering.rst:66
 msgid "2-Node Cluster"
 msgstr "2 csomópontos klaszter"
 
-#: ../../source/components/nethsm/clustering.rst:67
+#: ../../source/components/nethsm/clustering.rst:68
 msgid ""
 "A two-node active/passive cluster is not supported yet and will be added "
 "in a future version. We recommend introducing a 3rd node, either a 3rd "
@@ -2898,11 +2904,11 @@ msgstr ""
 "3. NetHSM-et, akár egy etcd \"tanút\", amely bármelyik hoston "
 "üzemeltethető. Lásd a következő, \"Tanú\" című szakaszt."
 
-#: ../../source/components/nethsm/clustering.rst:70
+#: ../../source/components/nethsm/clustering.rst:71
 msgid "Witness"
 msgstr "Tanú:"
 
-#: ../../source/components/nethsm/clustering.rst:72
+#: ../../source/components/nethsm/clustering.rst:73
 msgid ""
 "The nature of clustering with ``etcd`` makes it more reliable the more "
 "nodes there are in the cluster. As explained in the `Operational "
@@ -2917,7 +2923,7 @@ msgstr ""
 "egy 2 csomópontos fürt teljesen meghibásodik, ha csak az egyik "
 "meghibásodik."
 
-#: ../../source/components/nethsm/clustering.rst:74
+#: ../../source/components/nethsm/clustering.rst:75
 msgid ""
 "However the design of the feature is such that you don't need to add a "
 "full, real NetHSM device to your cluster to reach a stable number of "
@@ -2938,12 +2944,12 @@ msgstr ""
 "természetesen semmilyen HSM műveletet nem fog tudni végrehajtani vele - "
 "csak adatokat tárol)."
 
-#: ../../source/components/nethsm/clustering.rst:77
+#: ../../source/components/nethsm/clustering.rst:78
 #, fuzzy
 msgid "Security Considerations"
 msgstr "Biztonsági megfontolások"
 
-#: ../../source/components/nethsm/clustering.rst:79
+#: ../../source/components/nethsm/clustering.rst:80
 msgid ""
 "The witness node (or anyone with access to it) has direct access to the "
 "storage backend of all nodes in the cluster (e.g. you can dump all "
@@ -2954,7 +2960,7 @@ msgstr ""
 "háttértárához (pl. a ``etcdctl get \"/\" \"0\"`` segítségével ki tudja "
 "tölteni az összes bejegyzést és a hozzájuk tartozó értékeket)."
 
-#: ../../source/components/nethsm/clustering.rst:81
+#: ../../source/components/nethsm/clustering.rst:82
 msgid ""
 "However, with the exception of the config version (``/config/version``, "
 "which should always be \"1\"), strictly all of the values are encrypted "
@@ -2967,11 +2973,11 @@ msgstr ""
 "tartománykulcsokkal a többi érték esetében), biztosítva az érzékeny "
 "adatok titkosságát."
 
-#: ../../source/components/nethsm/clustering.rst:83
+#: ../../source/components/nethsm/clustering.rst:84
 msgid "Note however that a malicious node can:"
 msgstr "Megjegyzendő azonban, hogy egy rosszindulatú csomópont:"
 
-#: ../../source/components/nethsm/clustering.rst:85
+#: ../../source/components/nethsm/clustering.rst:86
 #, fuzzy
 msgid ""
 "Write garbage as the value for any entry in the store, which will cause "
@@ -2982,7 +2988,7 @@ msgstr ""
 "csomópontok számára sikertelen lesz a dekódolás (ami egyes "
 "rendszerbejegyzések esetében összeomláshoz vezethet)."
 
-#: ../../source/components/nethsm/clustering.rst:86
+#: ../../source/components/nethsm/clustering.rst:87
 #, fuzzy
 msgid ""
 "List entry names such as users, namespaces and keys, which you may "
@@ -2991,11 +2997,11 @@ msgstr ""
 "listázza az olyan bejegyzések neveit, mint például a felhasználók, "
 "névterek és kulcsok, amelyeket érzékenynek tekinthet."
 
-#: ../../source/components/nethsm/clustering.rst:89
+#: ../../source/components/nethsm/clustering.rst:90
 msgid "What is Shared Between Nodes"
 msgstr "Mit osztanak meg a csomópontok között"
 
-#: ../../source/components/nethsm/clustering.rst:91
+#: ../../source/components/nethsm/clustering.rst:92
 msgid ""
 "Having a cluster of NetHSMs means that most of the data is shared between"
 " them. Any addition, modification or deletion of keys, users, or "
@@ -3012,7 +3018,7 @@ msgstr ""
 "módosítja. Ez magában foglalja a **visszaállítás** műveletet is, amely a "
 "szokásos módon működik."
 
-#: ../../source/components/nethsm/clustering.rst:93
+#: ../../source/components/nethsm/clustering.rst:94
 msgid ""
 "The following sections detail what data is fully local, what data is "
 "stored in the shared ``etcd`` store but remains node-specific, and what "
@@ -3023,11 +3029,11 @@ msgstr ""
 "csomópont-specifikusak maradnak, és mely adatok vannak teljesen megosztva"
 " a csomópontok között."
 
-#: ../../source/components/nethsm/clustering.rst:96
+#: ../../source/components/nethsm/clustering.rst:97
 msgid "Not Stored in etcd"
 msgstr "Nem az etcd-ben tárolt"
 
-#: ../../source/components/nethsm/clustering.rst:98
+#: ../../source/components/nethsm/clustering.rst:99
 msgid ""
 "The **device key** of each node remains only stored locally and is never "
 "shared across nodes."
@@ -3035,11 +3041,11 @@ msgstr ""
 "Az egyes csomópontok **eszközkulcsa** csak helyben tárolódik, és soha nem"
 " kerül megosztásra a csomópontok között."
 
-#: ../../source/components/nethsm/clustering.rst:101
+#: ../../source/components/nethsm/clustering.rst:102
 msgid "Stored in etcd but Node-Specific"
 msgstr "Az etcd-ben tárolva, de csomópontspecifikusan"
 
-#: ../../source/components/nethsm/clustering.rst:103
+#: ../../source/components/nethsm/clustering.rst:104
 msgid ""
 "The following data is stored in ``etcd`` in different scopes for each "
 "node. It is hence *accessible* to every node but not *uniform* across "
@@ -3050,49 +3056,49 @@ msgstr ""
 "*egységes* a csomópontok között (minden csomópontnak más-más értéke lehet"
 " ezeknek az adatoknak)."
 
-#: ../../source/components/nethsm/clustering.rst:105
-#: ../../source/components/nethsm/clustering.rst:128
+#: ../../source/components/nethsm/clustering.rst:106
+#: ../../source/components/nethsm/clustering.rst:129
 #, fuzzy
 msgid "Configuration:"
 msgstr "Konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:107
+#: ../../source/components/nethsm/clustering.rst:108
 #, fuzzy
 msgid "TLS certificates"
 msgstr "TLS tanúsítvány"
 
-#: ../../source/components/nethsm/clustering.rst:108
+#: ../../source/components/nethsm/clustering.rst:109
 #, fuzzy
 msgid "Clock configuration"
 msgstr "Konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:109
+#: ../../source/components/nethsm/clustering.rst:110
 #: ../../source/components/nethsm/container/index.rst:6
 #, fuzzy
 msgid "Network configuration"
 msgstr "hálózati konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:110
+#: ../../source/components/nethsm/clustering.rst:111
 #, fuzzy
 msgid "Logging configuration"
 msgstr "Nginx konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:111
+#: ../../source/components/nethsm/clustering.rst:112
 #, fuzzy
 msgid "Unattended boot configuration"
 msgstr "Httpd konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:112
+#: ../../source/components/nethsm/clustering.rst:113
 #, fuzzy
 msgid "Unlock salt (so each node has its own unlock passphrase)"
 msgstr "feloldó só (így minden csomópontnak saját feloldó jelszava van)"
 
-#: ../../source/components/nethsm/clustering.rst:113
+#: ../../source/components/nethsm/clustering.rst:114
 #, fuzzy
 msgid "Locked domain key"
 msgstr "zárolt domain kulcs"
 
-#: ../../source/components/nethsm/clustering.rst:115
+#: ../../source/components/nethsm/clustering.rst:116
 msgid ""
 "Note that while each node has its own version of the locked domain key "
 "(because each node locks it with its own device key or unlock "
@@ -3105,11 +3111,11 @@ msgstr ""
 "szolgáló tartományi kulcs a **címen érhető el, amelyet a csomópontok a** "
 "címen osztanak meg (a közös HSM-adatok, például a kulcsok eléréséhez)."
 
-#: ../../source/components/nethsm/clustering.rst:118
+#: ../../source/components/nethsm/clustering.rst:119
 msgid "Stored in etcd and Shared"
 msgstr "etcd-ben tárolva és megosztva"
 
-#: ../../source/components/nethsm/clustering.rst:120
+#: ../../source/components/nethsm/clustering.rst:121
 msgid ""
 "All the following data is stored in ``etcd`` in the global scope, so it "
 "is uniform across all nodes of a cluster:"
@@ -3117,36 +3123,36 @@ msgstr ""
 "Az összes alábbi adat a ``etcd`` címen tárolódik a globális hatókörben, "
 "így a fürt minden csomópontjában egységes:"
 
-#: ../../source/components/nethsm/clustering.rst:122
+#: ../../source/components/nethsm/clustering.rst:123
 msgid "HSM data:"
 msgstr "HSM adatok:"
 
-#: ../../source/components/nethsm/clustering.rst:124
+#: ../../source/components/nethsm/clustering.rst:125
 #, fuzzy
 msgid "Keys"
 msgstr "Kulcs azonosítók"
 
-#: ../../source/components/nethsm/clustering.rst:125
+#: ../../source/components/nethsm/clustering.rst:126
 #: ../../source/components/nethsm/pkcs11-setup.rst:183
 msgid "Users"
 msgstr "Felhasználók"
 
-#: ../../source/components/nethsm/clustering.rst:130
+#: ../../source/components/nethsm/clustering.rst:131
 #, fuzzy
 msgid "Config/domain store version"
 msgstr "config/domain store verzió"
 
-#: ../../source/components/nethsm/clustering.rst:131
+#: ../../source/components/nethsm/clustering.rst:132
 #, fuzzy
 msgid "Cluster CA (used to authenticate nodes across cluster)"
 msgstr "klaszter CA (a csomópontok hitelesítésére használják a klaszterben)"
 
-#: ../../source/components/nethsm/clustering.rst:132
+#: ../../source/components/nethsm/clustering.rst:133
 #, fuzzy
 msgid "Backup passphrase and backup salt"
 msgstr "A biztonsági másolat jelszava a következőképpen állítható be."
 
-#: ../../source/components/nethsm/clustering.rst:134
+#: ../../source/components/nethsm/clustering.rst:135
 msgid ""
 "Note that for now the config/domain store version can only be version 1 "
 "(if your software version supports clustering, then that is what you "
@@ -3159,12 +3165,12 @@ msgstr ""
 "szakaszban további részleteket olvashat a szoftverfrissítések fürtön "
 "belüli telepítésének biztonságáról."
 
-#: ../../source/components/nethsm/clustering.rst:137
+#: ../../source/components/nethsm/clustering.rst:138
 #, fuzzy
 msgid "Creating a Cluster"
 msgstr "Felkészülés az indításra"
 
-#: ../../source/components/nethsm/clustering.rst:139
+#: ../../source/components/nethsm/clustering.rst:140
 msgid ""
 "Any cluster will initially start from a single node. New nodes will join "
 "the cluster one by one."
@@ -3172,12 +3178,12 @@ msgstr ""
 "Minden fürt kezdetben egyetlen csomóponttal indul. Az új csomópontok "
 "egyesével csatlakoznak a fürthöz."
 
-#: ../../source/components/nethsm/clustering.rst:142
+#: ../../source/components/nethsm/clustering.rst:143
 #, fuzzy
 msgid "Preparing Nodes"
 msgstr "Felkészülés az indításra"
 
-#: ../../source/components/nethsm/clustering.rst:144
+#: ../../source/components/nethsm/clustering.rst:145
 msgid ""
 "Network traffic between nodes is encrypted and authenticated using their "
 "TLS certificate."
@@ -3185,7 +3191,7 @@ msgstr ""
 "A csomópontok közötti hálózati forgalom titkosított és hitelesített a "
 "TLS-tanúsítványuk segítségével."
 
-#: ../../source/components/nethsm/clustering.rst:146
+#: ../../source/components/nethsm/clustering.rst:147
 msgid ""
 "All nodes that are expected to be part of the same cluster must first "
 "install a common Certificate Authority (CA) that will allow them to "
@@ -3196,7 +3202,7 @@ msgstr ""
 "amely lehetővé teszi számukra, hogy ellenőrizzék a többi csomópont "
 "legitimitását."
 
-#: ../../source/components/nethsm/clustering.rst:148
+#: ../../source/components/nethsm/clustering.rst:149
 msgid ""
 "In the following, we assume all nodes are freshly provisioned and "
 "operational."
@@ -3204,12 +3210,12 @@ msgstr ""
 "A következőkben feltételezzük, hogy minden csomópont frissen telepített "
 "és működőképes."
 
-#: ../../source/components/nethsm/clustering.rst:151
+#: ../../source/components/nethsm/clustering.rst:152
 #, fuzzy
 msgid "Networking"
 msgstr "Hálózat"
 
-#: ../../source/components/nethsm/clustering.rst:153
+#: ../../source/components/nethsm/clustering.rst:154
 #, fuzzy
 msgid ""
 "Nodes must first be reconfigured with their expected final network "
@@ -3221,11 +3227,11 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "network><x>`__ találhatók."
 
-#: ../../source/components/nethsm/clustering.rst:156
+#: ../../source/components/nethsm/clustering.rst:157
 msgid "Creating and Installing a CA"
 msgstr "CA létrehozása és telepítése"
 
-#: ../../source/components/nethsm/clustering.rst:158
+#: ../../source/components/nethsm/clustering.rst:159
 msgid ""
 "Users should create a CA by their own means and according to their own "
 "operational constraints, making sure it allows at least the "
@@ -3235,19 +3241,19 @@ msgstr ""
 "megfelelően kell létrehozniuk a hitelesítésszolgáltatót, ügyelve arra, "
 "hogy az legalább a ``keyCertSign`` kulcs használatát lehetővé tegye."
 
-#: ../../source/components/nethsm/clustering.rst:160
+#: ../../source/components/nethsm/clustering.rst:161
 msgid "For example, a minimal CA can be created with ``openssl``:"
 msgstr ""
 "Például egy minimális hitelesítésszolgáltató létrehozható a ``openssl`` "
 "címmel:"
 
-#: ../../source/components/nethsm/clustering.rst:167
+#: ../../source/components/nethsm/clustering.rst:168
 msgid "This CA now has to be installed on every node."
 msgstr ""
 "Ezt a hitelesítésszolgáltatót mostantól minden csomópontra telepíteni "
 "kell."
 
-#: ../../source/components/nethsm/clustering.rst:169
+#: ../../source/components/nethsm/clustering.rst:170
 #, fuzzy
 msgid ""
 "To do this, first generate a Certificate Signing Request (CSR) from the "
@@ -3259,7 +3265,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/POST_config-tls-csr-pem>`__ találhatók."
 
-#: ../../source/components/nethsm/clustering.rst:172
+#: ../../source/components/nethsm/clustering.rst:173
 #, fuzzy
 msgid ""
 "To properly authenticate nodes, the clustering backend (etcd) expects "
@@ -3276,7 +3282,7 @@ msgstr ""
 "tanúsítványukban. Az IP SAN-okat a CSR-hez úgy lehet kérni, hogy a "
 "nevekhez az \"IP:\" előtagot kell csatolni, mint a ``openssl``:"
 
-#: ../../source/components/nethsm/clustering.rst:180
+#: ../../source/components/nethsm/clustering.rst:181
 msgid ""
 "If you want to use a public CA for signing your certificates your nodes "
 "must use public IP addresses. This is due to a security requirement which"
@@ -3289,7 +3295,7 @@ msgstr ""
 "nyilvános tanúsítóhatóságoknak, hogy olyan tanúsítványokat állítsanak ki,"
 " amelyek IP SAN-jében magán IP-cím szerepel."
 
-#: ../../source/components/nethsm/clustering.rst:183
+#: ../../source/components/nethsm/clustering.rst:184
 msgid ""
 "Given the obtained CSR (let's call it ``nethsm.csr``), we can then "
 "generate a certificate for it, ready to be installed. For example with "
@@ -3298,7 +3304,7 @@ msgstr ""
 "A kapott CSR (nevezzük ``nethsm.csr``) alapján létrehozhatunk egy "
 "tanúsítványt, amelyet telepíthetünk. Például a ``openssl`` segítségével:"
 
-#: ../../source/components/nethsm/clustering.rst:190
+#: ../../source/components/nethsm/clustering.rst:191
 #, fuzzy
 msgid ""
 "Then install the obtained ``new_cert.pem`` with the "
@@ -3310,7 +3316,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-"
 "tls-cert-pem>`__ találhatók."
 
-#: ../../source/components/nethsm/clustering.rst:192
+#: ../../source/components/nethsm/clustering.rst:193
 msgid ""
 "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls"
 "/cluster-ca.pem`` endpoint (refer to the `API documentation "
@@ -3324,15 +3330,15 @@ msgstr ""
 "lehetséges, ha a telepített TLS tanúsítványt aláírta. Ellenkező esetben a"
 " művelet elutasításra kerül."
 
-#: ../../source/components/nethsm/clustering.rst:195
+#: ../../source/components/nethsm/clustering.rst:196
 msgid "This process has to be repeated for every node."
 msgstr "Ezt a folyamatot minden csomópont esetében meg kell ismételni."
 
-#: ../../source/components/nethsm/clustering.rst:198
+#: ../../source/components/nethsm/clustering.rst:199
 msgid "Clock Sync"
 msgstr "Óra szinkronizálás"
 
-#: ../../source/components/nethsm/clustering.rst:200
+#: ../../source/components/nethsm/clustering.rst:201
 msgid ""
 "Make sure every node has been provisioned with an accurate system time, "
 "ideally using NTP/NTS rather than manual time setting. This can be done "
@@ -3345,27 +3351,27 @@ msgstr ""
 "`NTS/NTP <administration.html#ntp-nts>`__ konfigurációk segítségével "
 "valósítható meg."
 
-#: ../../source/components/nethsm/clustering.rst:206
+#: ../../source/components/nethsm/clustering.rst:207
 #, fuzzy
 msgid "Adding a New Node"
 msgstr "ADSK hozzáadása"
 
-#: ../../source/components/nethsm/clustering.rst:208
+#: ../../source/components/nethsm/clustering.rst:209
 #, fuzzy
 msgid "Adding a node to a cluster is done in three steps:"
 msgstr "Egy csomópont hozzáadása egy fürthöz két lépésben történik:"
 
-#: ../../source/components/nethsm/clustering.rst:210
+#: ../../source/components/nethsm/clustering.rst:211
 #, fuzzy
 msgid "Register the addition to the cluster (through any one of its members)"
 msgstr "regisztrálja a kiegészítést a fürtbe (bármelyik tagon keresztül)"
 
-#: ../../source/components/nethsm/clustering.rst:211
+#: ../../source/components/nethsm/clustering.rst:212
 #, fuzzy
 msgid "Tell the new node to join"
 msgstr "mondja meg az új csomópontnak, hogy csatlakozzon"
 
-#: ../../source/components/nethsm/clustering.rst:212
+#: ../../source/components/nethsm/clustering.rst:213
 msgid ""
 "Once it has caught up, promote the node from learner to full-fledged "
 "member"
@@ -3373,12 +3379,12 @@ msgstr ""
 "Miután felzárkózott, emelje a csomópontot tanuló státuszból teljes jogú "
 "taggá"
 
-#: ../../source/components/nethsm/clustering.rst:215
+#: ../../source/components/nethsm/clustering.rst:216
 #, fuzzy
 msgid "Configure a Backup Passphrase"
 msgstr "Az új biztonsági másolat jelszava"
 
-#: ../../source/components/nethsm/clustering.rst:217
+#: ../../source/components/nethsm/clustering.rst:218
 msgid ""
 "First make sure a backup passphrase is configured on the node that will "
 "be used to register a new joiner (see the API documentation of the "
@@ -3389,11 +3395,11 @@ msgstr ""
 "jelszó (lásd a ``/config/backup-passphrase`` végpont API "
 "dokumentációját)."
 
-#: ../../source/components/nethsm/clustering.rst:220
+#: ../../source/components/nethsm/clustering.rst:221
 msgid "Registering a New Node"
 msgstr "Új csomópont regisztrálása"
 
-#: ../../source/components/nethsm/clustering.rst:223
+#: ../../source/components/nethsm/clustering.rst:224
 msgid ""
 "Have at hand the IP of the node that will join. The full *URL* (also "
 "called *peer URL* in ``etcd`` terminology) of that node will be "
@@ -3407,7 +3413,7 @@ msgstr ""
 "**portnak** 2380-nak kell lennie, ezért a csomópontok közötti tűzfalnak "
 "engedélyeznie kell a TCP-forgalmat ezen a porton."
 
-#: ../../source/components/nethsm/clustering.rst:225
+#: ../../source/components/nethsm/clustering.rst:226
 msgid ""
 "You can double-check the URL is correct by calling ``GET "
 "/cluster/members`` on the node that is expected to join. This should list"
@@ -3417,7 +3423,7 @@ msgstr ""
 "ellenőrizheti a csatlakozni kívánt csomóponton. Ennek csak egy tagot kell"
 " felsorolnia: saját magát."
 
-#: ../../source/components/nethsm/clustering.rst:227
+#: ../../source/components/nethsm/clustering.rst:228
 msgid ""
 "Then register that expected URL on any existing node of the cluster (if "
 "you don't have a cluster yet, do this on the NetHSM that will serve as "
@@ -3433,11 +3439,11 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), átadva neki "
 "egy JSON testet, amely tartalmazza az URL-t."
 
-#: ../../source/components/nethsm/clustering.rst:229
+#: ../../source/components/nethsm/clustering.rst:230
 msgid "If successful, this returns a JSON body of the form:"
 msgstr "Siker esetén az űrlap JSON testét adja vissza:"
 
-#: ../../source/components/nethsm/clustering.rst:253
+#: ../../source/components/nethsm/clustering.rst:254
 msgid ""
 "which contains information necessary for the new node to join the "
 "cluster. In particular, it lists all members of the cluster (where the "
@@ -3451,7 +3457,7 @@ msgstr ""
 "és a biztonsági jelszavakkal titkosított tartománykulcsot is - tehát a "
 "biztonsági jelszót korábban be kell állítani."
 
-#: ../../source/components/nethsm/clustering.rst:256
+#: ../../source/components/nethsm/clustering.rst:257
 msgid ""
 "Notice in the response above that the new joiner is a \"learner\": it can"
 " now connect to the cluster and receive data from it, but cannot "
@@ -3462,7 +3468,7 @@ msgstr ""
 " tőle, de addig nem vehet részt a működésben, amíg el nem éri a magasabb "
 "státuszt; erről az alábbiakban lesz szó."
 
-#: ../../source/components/nethsm/clustering.rst:260
+#: ../../source/components/nethsm/clustering.rst:261
 msgid ""
 "While this concept of \"learner\" adds an additional step (promotion), it"
 " allows for a safer operation of the cluster, as any issue with the new "
@@ -3473,16 +3479,16 @@ msgstr ""
 "csomóponttal kapcsolatos bármilyen probléma nem okozhat instabilitást az "
 "egész klaszterben az előléptetése előtt."
 
-#: ../../source/components/nethsm/clustering.rst:264
+#: ../../source/components/nethsm/clustering.rst:265
 msgid "Keep that response for the next step."
 msgstr "Tartsa meg ezt a választ a következő lépésre."
 
-#: ../../source/components/nethsm/clustering.rst:267
+#: ../../source/components/nethsm/clustering.rst:268
 #, fuzzy
 msgid "Joining the Cluster as a Learner"
 msgstr "Alapértelmezett rendszermag módosítása"
 
-#: ../../source/components/nethsm/clustering.rst:269
+#: ../../source/components/nethsm/clustering.rst:270
 msgid ""
 "Take the response from the last step and append to it a "
 "``backupPassphrase`` field containing the backup passphrase of the node "
@@ -3498,7 +3504,7 @@ msgstr ""
 "dokumentációját <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__)"
 " azon a csomóponton, amelyhez várhatóan csatlakozni fog."
 
-#: ../../source/components/nethsm/clustering.rst:272
+#: ../../source/components/nethsm/clustering.rst:273
 msgid ""
 "The call to ``POST /cluster/join`` will hang until the new node is "
 "manually promoted (see below). This is normal. When the call returns "
@@ -3509,7 +3515,7 @@ msgstr ""
 "normális jelenség. Ha a hívás sikeresen visszatér, az azt jelzi, hogy a "
 "csatlakozás és az előléptetés sikeresen lezajlott."
 
-#: ../../source/components/nethsm/clustering.rst:276
+#: ../../source/components/nethsm/clustering.rst:277
 #, fuzzy
 msgid ""
 "Assuming both the cluster and the node can reach each other, this will "
@@ -3527,7 +3533,7 @@ msgstr ""
 "csatlakozás sikeres, ez a művelet végleges, és csak gyári "
 "visszaállítással lehet visszaállítani."
 
-#: ../../source/components/nethsm/clustering.rst:278
+#: ../../source/components/nethsm/clustering.rst:279
 msgid ""
 "At this stage the new node has joined as a *learner* node: it is "
 "synchronizing with the cluster but is not yet operable. On the other "
@@ -3539,7 +3545,7 @@ msgstr ""
 "ebben a szakaszban bármilyen probléma merül fel a csomóponttal, az nem "
 "okoz gondot a klaszter számára, így ez a művelet biztonságos."
 
-#: ../../source/components/nethsm/clustering.rst:283
+#: ../../source/components/nethsm/clustering.rst:284
 msgid ""
 "The final step to complete the join is to promote the new node to a full-"
 "fledged member."
@@ -3547,12 +3553,12 @@ msgstr ""
 "Az összevonás befejezésének utolsó lépése az, hogy az új csomópontot "
 "teljes jogú taggá emeljék."
 
-#: ../../source/components/nethsm/clustering.rst:287
+#: ../../source/components/nethsm/clustering.rst:288
 #, fuzzy
 msgid "Promoting the New Learner"
 msgstr "Az új felhasználó felhasználói azonosítója"
 
-#: ../../source/components/nethsm/clustering.rst:289
+#: ../../source/components/nethsm/clustering.rst:290
 msgid ""
 "Depending on the networking and cluster conditions, it may take a while "
 "for the new member to catch up with the cluster. Once this is done, it "
@@ -3562,7 +3568,7 @@ msgstr ""
 "amíg az új tag felzárkózik a klaszterhez. Amint ez megtörténik, a tag "
 "„tanuló” státuszából „teljes jogú tag” státuszba léphet."
 
-#: ../../source/components/nethsm/clustering.rst:294
+#: ../../source/components/nethsm/clustering.rst:295
 #, fuzzy
 msgid ""
 "Promoting a node increases the cluster's quorum threshold (refer to the "
@@ -3579,7 +3585,7 @@ msgstr ""
 "redundancy>`__ című szakaszát). A feljogosítás előtt győződjön meg arról,"
 " hogy az új csomópont stabil kapcsolattal rendelkezik a klaszterhez."
 
-#: ../../source/components/nethsm/clustering.rst:296
+#: ../../source/components/nethsm/clustering.rst:297
 msgid ""
 "You can attempt to promote the new member with a call to ``POST "
 "/cluster/members/{MemberID}/promote`` (refer to the `API documentation "
@@ -3594,7 +3600,7 @@ msgstr ""
 "még nem érte utol a többieket, akkor a művelet 412-es HTTP-hibakóddal fog"
 " végződni, és az előléptetést később újra kell próbálni."
 
-#: ../../source/components/nethsm/clustering.rst:300
+#: ../../source/components/nethsm/clustering.rst:301
 #, fuzzy
 msgid ""
 "If this promotion is successful, the node will now have fully joined the "
@@ -3610,17 +3616,17 @@ msgstr ""
 "jelszavak csomópont-specifikusak maradnak, és nem oszthatók meg a "
 "csomópontok között)."
 
-#: ../../source/components/nethsm/clustering.rst:303
+#: ../../source/components/nethsm/clustering.rst:304
 #, fuzzy
 msgid "Adding a Witness Node"
 msgstr "ADSK hozzáadása"
 
-#: ../../source/components/nethsm/clustering.rst:306
+#: ../../source/components/nethsm/clustering.rst:307
 #, fuzzy
 msgid "Prepare a Witness"
 msgstr "Előkészítés"
 
-#: ../../source/components/nethsm/clustering.rst:308
+#: ../../source/components/nethsm/clustering.rst:309
 msgid ""
 "You will need an environment with ``etcd`` v3.6 available, with an IPv4 "
 "address (at least) reachable by the other members of your cluster. TCP "
@@ -3630,7 +3636,7 @@ msgstr ""
 "amelynek IPv4 címe (legalább) elérhető a fürt többi tagja számára. A "
 "2380-as portra és portról induló TCP forgalmat engedélyezni kell."
 
-#: ../../source/components/nethsm/clustering.rst:310
+#: ../../source/components/nethsm/clustering.rst:311
 msgid ""
 "Create an empty directory where ``etcd`` will store its data, and write "
 "down its path (we will use ``/var/etcd/data``). Ensure the user that will"
@@ -3641,7 +3647,7 @@ msgstr ""
 "fogjuk használni). Győződjünk meg arról, hogy a folyamatot indító "
 "felhasználónak olvasási és írási joga van a könyvtárba."
 
-#: ../../source/components/nethsm/clustering.rst:312
+#: ../../source/components/nethsm/clustering.rst:313
 #, fuzzy
 msgid ""
 "Transfer to the machine the CA certificate that is being used to "
@@ -3654,7 +3660,7 @@ msgstr ""
 "telepítése`_ szakaszban kellett volna létrehoznia. Ezt a "
 "``/var/etcd/CA.pem`` helyen fogjuk tárolni."
 
-#: ../../source/components/nethsm/clustering.rst:317
+#: ../../source/components/nethsm/clustering.rst:318
 msgid ""
 "You will then need to create a certificate for the witness, and sign it "
 "with the CA so it can communicate with its peers. This can be done for "
@@ -3664,7 +3670,7 @@ msgstr ""
 "írnia a hitelesítésszolgáltatóval, hogy kommunikálni tudjon a társaival. "
 "Ezt például a ``openssl`` címen keresztül lehet megtenni:"
 
-#: ../../source/components/nethsm/clustering.rst:330
+#: ../../source/components/nethsm/clustering.rst:331
 msgid ""
 "Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` "
 "as well."
@@ -3672,12 +3678,12 @@ msgstr ""
 "Az így kapott ``witness.key`` és ``witness.pem`` adatokat tárolja a "
 "``/var/etcd`` oldalon is."
 
-#: ../../source/components/nethsm/clustering.rst:333
+#: ../../source/components/nethsm/clustering.rst:334
 #, fuzzy
 msgid "Register Witness to Cluster"
 msgstr "NitroPhone regisztrálása a HMDM szerveren"
 
-#: ../../source/components/nethsm/clustering.rst:335
+#: ../../source/components/nethsm/clustering.rst:336
 #, fuzzy
 msgid ""
 "Follow the normal instructions from the `Registering a New Node "
@@ -3688,7 +3694,7 @@ msgstr ""
 "hogy jelezze a meglévő fürtnek, hogy a megadott URL-cím(ek)kel új tagot "
 "vett fel."
 
-#: ../../source/components/nethsm/clustering.rst:339
+#: ../../source/components/nethsm/clustering.rst:340
 msgid ""
 "Write down the response from the cluster: it should contain the list of "
 "cluster members and a joiner kit (you won't need this part)."
@@ -3696,12 +3702,12 @@ msgstr ""
 "Írja le a klaszter válaszát: ennek tartalmaznia kell a klasztertagok "
 "listáját és egy csatlakozó készletet (erre a részre nem lesz szüksége)."
 
-#: ../../source/components/nethsm/clustering.rst:342
+#: ../../source/components/nethsm/clustering.rst:343
 #, fuzzy
 msgid "Configure etcd"
 msgstr "Konfiguráció"
 
-#: ../../source/components/nethsm/clustering.rst:344
+#: ../../source/components/nethsm/clustering.rst:345
 msgid ""
 "Unlike NetHSMs which automatically choose a node name for themselves "
 "(using the device ID), you must choose a name for each witness you add, "
@@ -3713,7 +3719,7 @@ msgstr ""
 "tanúnak nevet kell választania, *ügyelve arra, hogy a nevek egyediek "
 "legyenek*. A következő példákban a \"witness1\" nevet fogjuk használni."
 
-#: ../../source/components/nethsm/clustering.rst:346
+#: ../../source/components/nethsm/clustering.rst:347
 msgid ""
 "With the NetHSM's response to registering the witness, prepare variables "
 "of the form:"
@@ -3721,7 +3727,7 @@ msgstr ""
 "A NetHSM válaszával a tanú nyilvántartásba vételére, készítse el a "
 "nyomtatvány változásait:"
 
-#: ../../source/components/nethsm/clustering.rst:355
+#: ../../source/components/nethsm/clustering.rst:356
 msgid ""
 "Assuming the NetHSM response is stored in a ``response.json`` file, you "
 "can generate these last two variables automatically with the following "
@@ -3731,7 +3737,7 @@ msgstr ""
 "tárolva, a két utolsó változót automatikusan generálhatja a következő "
 "``jq`` kifejezésekkel:"
 
-#: ../../source/components/nethsm/clustering.rst:362
+#: ../../source/components/nethsm/clustering.rst:363
 #, fuzzy
 msgid ""
 "For example with the example response provided in the `Registering a New "
@@ -3740,7 +3746,7 @@ msgstr ""
 "Például a `Egy új csomópont regisztrálása`_ szakaszban megadott "
 "példaválasz esetén a következő lesz:"
 
-#: ../../source/components/nethsm/clustering.rst:373
+#: ../../source/components/nethsm/clustering.rst:374
 msgid ""
 "Finally, create an ``etcd.conf.yml`` file by using the template file "
 "provided in ``docs/etcd_witness.conf.template``:"
@@ -3748,16 +3754,16 @@ msgstr ""
 "Végül hozzon létre egy ``etcd.conf.yml`` fájlt a "
 "``docs/etcd_witness.conf.template`` sablonfájl segítségével:"
 
-#: ../../source/components/nethsm/clustering.rst:380
+#: ../../source/components/nethsm/clustering.rst:381
 msgid "This should give you a file of the form:"
 msgstr "Ezáltal megkapja a formanyomtatvány fájlját:"
 
-#: ../../source/components/nethsm/clustering.rst:405
+#: ../../source/components/nethsm/clustering.rst:406
 #, fuzzy
 msgid "Start etcd"
 msgstr "Start menü"
 
-#: ../../source/components/nethsm/clustering.rst:407
+#: ../../source/components/nethsm/clustering.rst:408
 msgid ""
 "Start ``etcd`` in your preferred way (manually, ``systemd`` service, "
 "container, etc.), pointing it to the configuration file created in the "
@@ -3767,7 +3773,7 @@ msgstr ""
 "``systemd`` szolgáltatással, konténerrel stb.), és mutass rá az előző "
 "lépésben létrehozott konfigurációs fájlra:"
 
-#: ../../source/components/nethsm/clustering.rst:414
+#: ../../source/components/nethsm/clustering.rst:415
 msgid ""
 "You should see it start, join the cluster as a learner and catch up with "
 "the data."
@@ -3775,12 +3781,12 @@ msgstr ""
 "Látnod kellene, ahogy elindul, csatlakozik a klaszterhez tanulóként, és "
 "felzárkózik az adatokhoz."
 
-#: ../../source/components/nethsm/clustering.rst:417
+#: ../../source/components/nethsm/clustering.rst:418
 #, fuzzy
 msgid "Promote the Witness"
 msgstr "Előkészítés"
 
-#: ../../source/components/nethsm/clustering.rst:419
+#: ../../source/components/nethsm/clustering.rst:420
 msgid ""
 "Finally and after some time, follow the normal instructions from the "
 "`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__"
@@ -3791,7 +3797,7 @@ msgstr ""
 "tanuló előléptetése) című szakaszában található szokásos utasításokat a "
 "tanú előléptetéséhez. Ha ez nem sikerül, próbálja meg később újra."
 
-#: ../../source/components/nethsm/clustering.rst:423
+#: ../../source/components/nethsm/clustering.rst:424
 #, fuzzy
 msgid ""
 "After a successful promotion, you should be able to check that it is "
@@ -3801,11 +3807,11 @@ msgstr ""
 "adatokhoz. Egy idő után a ``etcdctl`` klienssel ellenőrizheted, hogy "
 "egészséges-e:"
 
-#: ../../source/components/nethsm/clustering.rst:429
+#: ../../source/components/nethsm/clustering.rst:430
 msgid "This key should exist and contain \"1\"."
 msgstr "Ennek a kulcsnak léteznie kell, és \"1\"-et kell tartalmaznia."
 
-#: ../../source/components/nethsm/clustering.rst:431
+#: ../../source/components/nethsm/clustering.rst:432
 #, fuzzy
 msgid ""
 "Make sure this process keeps running, as it is now a proper member of "
@@ -3818,17 +3824,17 @@ msgstr ""
 " fürtből (lásd a dedikált részt). Ha az elérhető IP címe megváltozik, "
 "frissítse az URL-címét a fürtből."
 
-#: ../../source/components/nethsm/clustering.rst:435
+#: ../../source/components/nethsm/clustering.rst:436
 #, fuzzy
 msgid "Operating a Cluster"
 msgstr "Választható lépés"
 
-#: ../../source/components/nethsm/clustering.rst:438
+#: ../../source/components/nethsm/clustering.rst:439
 #: ../../source/components/nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
 msgstr "Biztonsági mentés és visszaállítás"
 
-#: ../../source/components/nethsm/clustering.rst:440
+#: ../../source/components/nethsm/clustering.rst:441
 msgid ""
 "The backup operation works the same as without a cluster and can be "
 "requested from any node of the cluster. It will back up data for the "
@@ -3841,7 +3847,7 @@ msgstr ""
 "(bár ezeket figyelmen kívül hagyja, kivéve, ha a biztonsági mentést egy "
 "nem rendelkezésre bocsátott csomóponton állítja vissza)."
 
-#: ../../source/components/nethsm/clustering.rst:442
+#: ../../source/components/nethsm/clustering.rst:443
 msgid ""
 "A backup done on a cluster can be restored on the same cluster, even if "
 "some nodes have been added or removed since. Such restores done on "
@@ -3854,7 +3860,7 @@ msgstr ""
 "érintik a konfigurációs értékeket (csak a kulcsokat, felhasználókat, "
 "névtereket), mint bármely más részleges visszaállítás."
 
-#: ../../source/components/nethsm/clustering.rst:444
+#: ../../source/components/nethsm/clustering.rst:445
 msgid ""
 "Restoring a backup on an unprovisioned node will restore the node-"
 "specific fields (like network configuration, certificates, etc.) of the "
@@ -3865,7 +3871,7 @@ msgstr ""
 "csomópont csomópont-specifikus mezőit (például a hálózati konfigurációt, "
 "tanúsítványokat stb.)."
 
-#: ../../source/components/nethsm/clustering.rst:446
+#: ../../source/components/nethsm/clustering.rst:447
 msgid ""
 "Restoring a large backup may overwhelm the cluster for some time, while "
 "the node applying the restore forwards changes to the others."
@@ -3874,7 +3880,7 @@ msgstr ""
 " fürtöt, amíg a visszaállítást végző csomópont továbbítja a változásokat "
 "a többieknek."
 
-#: ../../source/components/nethsm/clustering.rst:448
+#: ../../source/components/nethsm/clustering.rst:449
 msgid ""
 "This operation remains compatible with backups made on previous versions "
 "of the NetHSM."
@@ -3882,7 +3888,7 @@ msgstr ""
 "Ez a művelet továbbra is kompatibilis a NetHSM korábbi verzióival "
 "készített biztonsági mentésekkel."
 
-#: ../../source/components/nethsm/clustering.rst:451
+#: ../../source/components/nethsm/clustering.rst:452
 msgid ""
 "Restoring on a node A a backup made on another node Z with a different "
 "domain key will correctly rewrite A's domain key, as before. However if A"
@@ -3895,7 +3901,7 @@ msgstr ""
 "csomóponttal egy fürtben volt, a B csomópont működésképtelenné válik, "
 "mivel Z tartománykulcsa nem lesz visszaállítva a B csomóponton."
 
-#: ../../source/components/nethsm/clustering.rst:453
+#: ../../source/components/nethsm/clustering.rst:454
 msgid ""
 "In other words, only perform a restore in a cluster with backups done in "
 "the same cluster (though again nodes may have been removed or added "
@@ -3909,11 +3915,11 @@ msgstr ""
 " távolítsa el azt a fürtjéből, majd állítsa vissza gyári állapotba, és "
 "állítsa vissza a biztonsági másolatot."
 
-#: ../../source/components/nethsm/clustering.rst:456
+#: ../../source/components/nethsm/clustering.rst:457
 msgid "Removing a Node Cleanly"
 msgstr "Csomópontok tiszta eltávolítása"
 
-#: ../../source/components/nethsm/clustering.rst:458
+#: ../../source/components/nethsm/clustering.rst:459
 msgid ""
 "As long as some part of the cluster is still meeting quorum, any of its "
 "members can be used to remove another node from the cluster, whether this"
@@ -3924,7 +3930,7 @@ msgstr ""
 "fürtből, függetlenül attól, hogy ez a csomópont már elérhetetlen vagy "
 "várhatóan az lesz."
 
-#: ../../source/components/nethsm/clustering.rst:460
+#: ../../source/components/nethsm/clustering.rst:461
 msgid ""
 "You first have to know the ID of the node you want to remove, by listing "
 "all nodes through ``GET /cluster/members`` and looking for the right one."
@@ -3933,7 +3939,7 @@ msgstr ""
 " ehhez a ``GET /cluster/members`` oldalon keresztül listázd ki az összes "
 "csomópontot, és keresd meg a megfelelőt."
 
-#: ../../source/components/nethsm/clustering.rst:462
+#: ../../source/components/nethsm/clustering.rst:463
 #, fuzzy
 msgid ""
 "Then it can be removed by calling ``DELETE /cluster/members/<id>``. If "
@@ -3944,7 +3950,7 @@ msgstr ""
 " a kérdéses csomópont még egészséges volt, ez elszigeteli a fürt többi "
 "részétől, és működésképtelenné teszi."
 
-#: ../../source/components/nethsm/clustering.rst:465
+#: ../../source/components/nethsm/clustering.rst:466
 msgid ""
 "A node that has joined the cluster but not yet been promoted can also be "
 "safely removed this way."
@@ -3952,12 +3958,12 @@ msgstr ""
 "Az a csomópont, amely csatlakozott a klaszterhez, de még nem lett "
 "előléptetve, szintén biztonságosan eltávolítható ezzel a módszerrel."
 
-#: ../../source/components/nethsm/clustering.rst:469
+#: ../../source/components/nethsm/clustering.rst:470
 #, fuzzy
 msgid "Recovering a Failed Node"
 msgstr "Új csomópont regisztrálása"
 
-#: ../../source/components/nethsm/clustering.rst:471
+#: ../../source/components/nethsm/clustering.rst:472
 msgid ""
 "A node reporting a *Failed* state will refuse to answer most normal "
 "operations. It can still be shut-down, rebooted, reset, *diagnosed* or "
@@ -3968,7 +3974,7 @@ msgstr ""
 "továbbra is le lehet állítani, újraindítani, visszaállítani, "
 "*diagnosztizálni* vagy *elszigetelni*."
 
-#: ../../source/components/nethsm/clustering.rst:475
+#: ../../source/components/nethsm/clustering.rst:476
 msgid ""
 "The existence of the *Failed* state, ``diagnose`` and ``force-new`` "
 "operations only applies to version 5.0 and onward. In version 4.0, a node"
@@ -3981,17 +3987,17 @@ msgstr ""
 "*all* kérésekre. Ezt a csomópontot *gyári beállításokra kell* "
 "visszaállítani."
 
-#: ../../source/components/nethsm/clustering.rst:479
+#: ../../source/components/nethsm/clustering.rst:480
 msgid "Common causes for a node to be in the *Failed* state include:"
 msgstr "A „ *Failed”* állapotba kerülő csomópontok leggyakoribb okai a következők:"
 
-#: ../../source/components/nethsm/clustering.rst:481
+#: ../../source/components/nethsm/clustering.rst:482
 msgid "A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__."
 msgstr ""
 "A tartósan `elvesztett határozatképesség <clustering.html#the-quorum-is-"
 "durably-lost>`__."
 
-#: ../../source/components/nethsm/clustering.rst:482
+#: ../../source/components/nethsm/clustering.rst:483
 msgid ""
 "A temporarily lost quorum (e.g. when adding a second node to the cluster,"
 " and the second node has not joined yet)."
@@ -4000,7 +4006,7 @@ msgstr ""
 "csomópontot adnak hozzá a klaszterhez, és a második csomópont még nem "
 "csatlakozott)."
 
-#: ../../source/components/nethsm/clustering.rst:484
+#: ../../source/components/nethsm/clustering.rst:485
 msgid ""
 "``etcd`` is currently restarting (e.g. because the certificates have "
 "changed, or the network has been re-configured)."
@@ -4008,7 +4014,7 @@ msgstr ""
 "`A `etcd`` jelenleg újraindul (például azért, mert megváltoztak a "
 "tanúsítványok, vagy újrakonfigurálták a hálózatot)."
 
-#: ../../source/components/nethsm/clustering.rst:486
+#: ../../source/components/nethsm/clustering.rst:487
 msgid ""
 "The cluster is under a very high load (e.g. during the restoration of a "
 "very large backup)."
@@ -4016,7 +4022,7 @@ msgstr ""
 "A klaszter rendkívül nagy terhelés alatt áll (pl. egy nagyon nagy "
 "biztonsági másolat visszaállítása közben)."
 
-#: ../../source/components/nethsm/clustering.rst:489
+#: ../../source/components/nethsm/clustering.rst:490
 msgid ""
 "No matter the cause, the NetHSM will only transition to the *Failed* "
 "state after no less than a full minute of unsuccessful attempts to "
@@ -4028,7 +4034,7 @@ msgstr ""
 "az adatbázisát. Ezzel elkerülhetők a nagyon rövid ideig tartó "
 "instabilitások által okozott téves állapotváltások."
 
-#: ../../source/components/nethsm/clustering.rst:494
+#: ../../source/components/nethsm/clustering.rst:495
 msgid ""
 "To help you understand which case your node is in, the ``GET "
 "/health/diagnose`` endpoint remains available and returns information "
@@ -4041,7 +4047,7 @@ msgstr ""
 "valamint az ahhoz tartozó adatbázisról, beleértve a naplókat is (lásd az "
 "API-dokumentációt)."
 
-#: ../../source/components/nethsm/clustering.rst:499
+#: ../../source/components/nethsm/clustering.rst:500
 msgid ""
 "If and when the database becomes available again (e.g. the quorum is "
 "restored because the network issue has been solved), the NetHSM will "
@@ -4059,7 +4065,7 @@ msgstr ""
 "követően legfeljebb egy percbe telik, amíg a klaszter stabilizálódik, a "
 "HSM észleli a hiba elhárítását, és állapotot vált."
 
-#: ../../source/components/nethsm/clustering.rst:506
+#: ../../source/components/nethsm/clustering.rst:507
 msgid ""
 "If you conclude that the failure is durable (e.g. lost quorum with no "
 "hope of resolving the underlying condition), you can either:"
@@ -4068,7 +4074,7 @@ msgstr ""
 "elvesztése, és nincs remény az alapvető probléma megoldására), akkor a "
 "következőket teheted:"
 
-#: ../../source/components/nethsm/clustering.rst:509
+#: ../../source/components/nethsm/clustering.rst:510
 msgid ""
 "**Factory-reset** the node, which will erase all data, and restore a "
 "backup."
@@ -4076,7 +4082,7 @@ msgstr ""
 "**Állítsa vissza a csomópontot gyári beállításokra (** ), ami az összes "
 "adat törlését jelenti, majd állítsa vissza a biztonsági másolatot."
 
-#: ../../source/components/nethsm/clustering.rst:510
+#: ../../source/components/nethsm/clustering.rst:511
 msgid ""
 "**Isolate** the node with the ``POST /cluster/force-new`` endpoint, which"
 " will irreversibly forget all other cluster members, recover the ``etcd``"
@@ -4094,7 +4100,7 @@ msgstr ""
 "függően vagy a Locked , vagy a Operational állapotba kerül. `POST "
 "/cluster/force-new` `etcd` ** **"
 
-#: ../../source/components/nethsm/clustering.rst:517
+#: ../../source/components/nethsm/clustering.rst:518
 #, fuzzy
 msgid ""
 "If a node is isolated with ``force-new``, it will desynchronized with the"
@@ -4108,7 +4114,7 @@ msgstr ""
 "csomópont továbbra is visszacsatlakozhat a klaszterhez, de minden helyi "
 "módosítását elveszíti."
 
-#: ../../source/components/nethsm/clustering.rst:522
+#: ../../source/components/nethsm/clustering.rst:523
 msgid ""
 "The ``POST /cluster/force-new`` endpoint, which is only available in the "
 "*Failed* state, requires authentication as it is potentially destructive."
@@ -4123,7 +4129,7 @@ msgstr ""
 "a HTTPS-ügyfelek mindig a ``unlock`` álfelhasználóval, valamint a "
 "legutóbb ismert feloldási jelszóval hitelesítsék magukat."
 
-#: ../../source/components/nethsm/clustering.rst:529
+#: ../../source/components/nethsm/clustering.rst:530
 msgid ""
 "After an update from a version < 5.0, the ``force-new`` endpoint will be "
 "always Unauthorized before the HSM is unlocked or the unlock passphrase "
@@ -4134,12 +4140,12 @@ msgstr ""
 " amíg a HSM-et fel nem oldják, vagy a feloldási jelszót legalább egyszer "
 "meg nem változtatják."
 
-#: ../../source/components/nethsm/clustering.rst:534
+#: ../../source/components/nethsm/clustering.rst:535
 #, fuzzy
 msgid "Software Updates in Clusters"
 msgstr "szoftverfrissítés"
 
-#: ../../source/components/nethsm/clustering.rst:536
+#: ../../source/components/nethsm/clustering.rst:537
 msgid ""
 "Future updates will be marked as \"cluster-safe\" (this should be the "
 "majority) or \"cluster-unsafe\"."
@@ -4147,7 +4153,7 @@ msgstr ""
 "A jövőbeni frissítések \"cluster-safe\" (ez lesz a többség) vagy "
 "\"cluster-unsafe\" jelzéssel lesznek ellátva."
 
-#: ../../source/components/nethsm/clustering.rst:538
+#: ../../source/components/nethsm/clustering.rst:539
 msgid ""
 "Cluster-safe updates can be applied to nodes that are part of a cluster "
 "without removing them from the cluster first. However as with all "
@@ -4161,7 +4167,7 @@ msgstr ""
 "csomóponton végezze el, és olyan fürtben, ahol egy csomópont eltávolítása"
 " nem megy a kvórum alá (pl. ha a frissítés sikertelen)."
 
-#: ../../source/components/nethsm/clustering.rst:540
+#: ../../source/components/nethsm/clustering.rst:541
 msgid ""
 "Cluster-unsafe updates must be applied to isolated nodes. You should "
 "dismantle the cluster (removing nodes one by one), factory reset all "
@@ -4175,20 +4181,20 @@ msgstr ""
 " alaphelyzetbe állított csomópontot a megmaradt csomóponthoz kell "
 "csatlakoztatni."
 
-#: ../../source/components/nethsm/clustering.rst:542
+#: ../../source/components/nethsm/clustering.rst:543
 msgid "Make sure to back up before such operations."
 msgstr "Az ilyen műveletek előtt mindenképpen készítsen biztonsági mentést."
 
-#: ../../source/components/nethsm/clustering.rst:545
+#: ../../source/components/nethsm/clustering.rst:546
 msgid "Reconfiguring an Existing Cluster"
 msgstr "Meglévő klaszter átkonfigurálása"
 
-#: ../../source/components/nethsm/clustering.rst:548
+#: ../../source/components/nethsm/clustering.rst:549
 #, fuzzy
 msgid "Changing the Cluster CA"
 msgstr "Alapértelmezett rendszermag módosítása"
 
-#: ../../source/components/nethsm/clustering.rst:550
+#: ../../source/components/nethsm/clustering.rst:551
 msgid ""
 "An existing cluster (with two or more nodes) **cannot** change its "
 "cluster CA while in operation. If you need to change this certificate: "
@@ -4201,12 +4207,12 @@ msgstr ""
 " többi csomópontot, frissítse a hitelesítésszolgáltatót, majd a többi tag"
 " csatlakozzon újra."
 
-#: ../../source/components/nethsm/clustering.rst:553
+#: ../../source/components/nethsm/clustering.rst:554
 #, fuzzy
 msgid "Changing the Network Configuration of Nodes"
 msgstr "A hálózati konfiguráció lekérdezése"
 
-#: ../../source/components/nethsm/clustering.rst:555
+#: ../../source/components/nethsm/clustering.rst:556
 msgid ""
 "Modifying the network configuration of a node (e.g. changing its IP) will"
 " automatically inform the other nodes about the update. You should "
