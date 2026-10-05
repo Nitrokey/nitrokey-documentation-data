@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-05 14:56+0000\n"
+"POT-Creation-Date: 2026-10-05 15:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -914,7 +914,6 @@ msgid "Query the NTP configuration"
 msgstr ""
 
 #: ../../source/components/nethsm/administration.rst:551
-#: ../../source/components/nethsm/administration.rst:580
 msgid "Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__."
 msgstr ""
 
@@ -932,6 +931,10 @@ msgstr ""
 
 #: ../../source/components/nethsm/administration.rst:566
 msgid "IP address (v4 or v6) of the NTP server. If absent, means NTP is not configured. Hostname of the NTS server (enables Network Time Security). If absent, means NTS is not configured."
+msgstr ""
+
+#: ../../source/components/nethsm/administration.rst:580
+msgid "Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-ntp>`__."
 msgstr ""
 
 #: ../../source/components/nethsm/administration.rst:583
@@ -2037,7 +2040,7 @@ msgid "Networking"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:154
-msgid "Nodes must first be reconfigured with their expected final network configuration using the ``/config/network`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__)."
+msgid "Nodes must first be reconfigured with their expected final network configuration using the ``/config/network`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__)."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:157
@@ -2057,7 +2060,7 @@ msgid "This CA now has to be installed on every node."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:170
-msgid "To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__)."
+msgid "To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__)."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:173
@@ -2073,11 +2076,11 @@ msgid "Given the obtained CSR (let's call it ``nethsm.csr``), we can then genera
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:191
-msgid "Then install the obtained ``new_cert.pem`` with the ``/config/tls/cert.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__)."
+msgid "Then install the obtained ``new_cert.pem`` with the ``/config/tls/cert.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__)."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:193
-msgid "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster-ca.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected."
+msgid "Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster-ca.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cluster-ca-pem>`__). This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:196
@@ -2133,7 +2136,7 @@ msgid "You can double-check the URL is correct by calling ``GET /cluster/members
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:228
-msgid "Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster). This is done using the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a JSON body containing the URL."
+msgid "Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster). This is done using the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members>`__), passing it a JSON body containing the URL."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:230
@@ -2161,7 +2164,7 @@ msgid "Joining the Cluster as a Learner"
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:270
-msgid "Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node that is expected to join."
+msgid "Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__) on the node that is expected to join."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:273
@@ -2189,11 +2192,11 @@ msgid "Depending on the networking and cluster conditions, it may take a while f
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:295
-msgid "Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it."
+msgid "Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:297
-msgid "You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later."
+msgid "You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__). If the learner hasn't caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later."
 msgstr ""
 
 #: ../../source/components/nethsm/clustering.rst:301
