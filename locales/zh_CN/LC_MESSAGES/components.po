@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-15 13:32+0000\n"
-"PO-Revision-Date: 2026-10-15 11:29+0000\n"
+"PO-Revision-Date: 2026-10-15 13:50+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -26994,13 +26994,16 @@ msgid ""
 "already runs Heads. It also applies when an OEM factory reset has been "
 "performed but the TPM counter still needs to be reset."
 msgstr ""
+"请参考本指南，为已运行Heads系统的NitroPad更新硝基 "
+"Heads固件。当已执行OEM出厂重置，但TPM计数器仍需重置时，本指南同样适用。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:31
 msgid ""
 "Connect the original power adapter and charge the battery above 70%. Keep"
 " both the adapter and battery connected throughout flashing and the first"
 " restart."
-msgstr ""
+msgstr "连接原装电源适配器，并将电池电量充至70%以上。在刷机及首次重启过程中，请确保适"
+"配器和电池始终保持连接状态。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:36
 msgid ""
@@ -27009,6 +27012,9 @@ msgid ""
 "not rely on USB-C charging alone: an EC update can reset the USB Power "
 "Delivery controller before the adapter check, causing the update to fail."
 msgstr ""
+"在 NitroPad NV41、V54 和 V56 上，请使用**中的直流圆柱形插头电源适配器** "
+"进行更新，以同步嵌入式控制器（EC）固件。请勿仅依赖 USB-C 充电：EC "
+"更新可能会在适配器检测之前重置 USB 电源传输（PD）控制器，导致更新失败。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:41
 msgid ""
@@ -27017,6 +27023,9 @@ msgid ""
 "requirements and model-specific issues. Download the ZIP archive for your"
 " exact model:"
 msgstr ""
+"请阅读`Nitrokey Heads 版本说明<https://github.com/Nitrokey/heads/releases/"
+"latest>`__，了解升级要求及特定型号的问题。请下载与您具体型号对应的 ZIP "
+"压缩包："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:45
 #, fuzzy
@@ -27055,13 +27064,17 @@ msgid ""
 "to give it a ZIP extension.** Select this archive in the Heads update "
 "menu."
 msgstr ""
+"请按照以下说明验证该压缩包，然后将其复制到U盘中。**请保持ZIP压缩包的完整性；"
+"请勿解压该压缩包，也不要将其他文件重命名为ZIP格式。** "
+"在“Heads”更新菜单中选择此压缩包。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:56
 msgid ""
 "Back up important data. If disk encryption is enabled, make sure you have"
 " the disk recovery passphrase before updating; it may be needed if TPM-"
 "based disk unlocking must be reconfigured."
-msgstr ""
+msgstr "请备份重要数据。如果启用了磁盘加密，请在更新前确保已获取磁盘恢复密码；"
+"如果需要重新配置基于 TPM 的磁盘解锁功能，可能需要使用该密码。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:62
 msgid ""
@@ -27073,6 +27086,12 @@ msgid ""
 "BIOS and EC versions are compatible before proceeding. Upstream version "
 "numbers do not necessarily match Nitrokey release numbers."
 msgstr ""
+"ZIP 更新需要已安装支持该格式的 Heads 版本。如果压缩包无法被接受，或者您是从非"
+"常旧的固件版本进行升级，请查阅发行说明并联系`Nitrokey 支持<https://www."
+"nitrokey.com/"
+"contact>`__，而不是盲目猜测升级路径。如果固件是手动安装或修改的，"
+"请在继续操作前确认 BIOS 和 EC 版本是否兼容。 "
+"上游版本号不一定与硝基的发布版本号一致。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:71
 msgid "Firmware Signature Check"
@@ -27084,6 +27103,8 @@ msgid ""
 "Nitrokey release as the firmware. Place these files and the ZIP archive "
 "in one directory on the computer used to download them."
 msgstr ""
+"从与固件相同的硝基版本中下载**、** ` 、sha256sum` 、` 以及sha256sum.sig` "
+"。将这些文件和ZIP压缩包放在用于下载它们的计算机上的同一个目录中。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:77
 #, python-format
@@ -27094,20 +27115,24 @@ msgid ""
 "<https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__."
 " Check the key fingerprint against the release's signing information."
 msgstr ""
+"导入硝基发行说明中指定的签名密钥。由 Markus Meissner "
+"签名的发行版使用的是`密钥服务器条目<https://keyserver.ubuntu.com/pks/"
+"lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ "
+"中提供的密钥。请将该密钥的指纹与发行版的签名信息进行核对。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:82
 msgid "From that directory, verify the checksum manifest's signature:"
-msgstr ""
+msgstr "在此目录下，验证校验和清单的签名："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:88
 msgid ""
 "The signature must be valid and belong to the expected signing key. Stop "
 "if verification fails."
-msgstr ""
+msgstr "签名必须有效，且必须属于预期的签名密钥。如果验证失败，则停止。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:91
 msgid "Verify the downloaded archive against the authenticated manifest:"
-msgstr ""
+msgstr "根据经过验证的清单，对下载的压缩包进行验证："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:97
 msgid ""
@@ -27116,6 +27141,9 @@ msgid ""
 "downloaded ZIP. Do not flash a file with a failed or missing checksum "
 "verification."
 msgstr ""
+"请确认输出中包含**以及您特定型号的 ZIP 压缩包** ，且其校验和为``OK``。"
+"仅凭有效的清单签名无法验证下载的 ZIP "
+"文件。如果校验和验证失败或缺失，请勿刷写该文件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:103
 #, fuzzy
@@ -27132,6 +27160,11 @@ msgid ""
 " a maximum waiting time. Later starts should be faster once the memory "
 "training results are cached."
 msgstr ""
+"首次重启可能比平时耗时更长。在此重启过程中，EC固件可能会进行更新，且在“Heads”"
+"出现之前，系统会重新校准其内存。**屏幕可能会完全保持黑色约一分钟或更长时间。*"
+"* 安装的内存越多，延迟可能越大；配备 96 GB 内存的系统可能需要**超过两分钟** "
+"。这些时间仅为示例，并非最大等待时间。一旦内存训练结果被缓存，后续启动速度应"
+"会加快。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:114
 msgid ""
@@ -27142,6 +27175,10 @@ msgid ""
 "can leave the NitroPad unable to start and require external hardware "
 "recovery."
 msgstr ""
+"**请勿因屏幕变黑而中断刷写过程或首次重启。** 在更新可能仍在进行时，请勿长按电"
+"源键、拔下适配器、断开任一电池连接，或执行重置操作。中断固件写入（"
+"包括重启期间的 EC 更新）可能会导致 NitroPad "
+"无法启动，并需要通过外部硬件进行恢复。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:120
 msgid ""
@@ -27151,6 +27188,9 @@ msgid ""
 "the update is still running, contact Nitrokey support before forcing a "
 "shutdown."
 msgstr ""
+"闪存更新成功并不意味着随后的EC更新已经完成。请保持电源连接，并耐心等待“Heads”"
+"出现。如果等待较长时间后仍无进展，且您不确定更新是否仍在进行，请在强制关机前"
+"联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:128
 msgid ""
@@ -27158,6 +27198,9 @@ msgid ""
 "step 3. The screenshots illustrate the menu flow; filenames and screen "
 "details may differ in newer releases. Follow the ZIP instructions above."
 msgstr ""
+"下面的前两个屏幕是可选的。如果它们不存在，请从第 3 步开始。这些屏幕截图展示了"
+"菜单流程；在新版本中，文件名和屏幕细节可能会有所不同。请按照上方的 ZIP "
+"文件说明操作。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:132
 #, fuzzy
@@ -27168,7 +27211,7 @@ msgstr "(可选屏幕）选择 \"忽略错误，继续使用默认启动菜单\"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:135
 msgid "First optional Heads error screen before entering the boot menu."
-msgstr ""
+msgstr "进入启动菜单前显示的首个可选Heads错误屏幕。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:138
 #, fuzzy
@@ -27179,7 +27222,7 @@ msgstr "(可选屏幕）选择 \"忽略错误，继续使用默认启动菜单\"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:141
 msgid "Second optional Heads error screen before entering the boot menu."
-msgstr ""
+msgstr "进入启动菜单前的第二个可选Heads错误屏幕。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:144
 #, fuzzy
@@ -27188,7 +27231,7 @@ msgstr "转到 \"选项\"。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:146
 msgid "Heads boot menu with Options selected."
-msgstr ""
+msgstr "在“选项”被选中的情况下进入启动菜单。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:149
 #, fuzzy
@@ -27197,7 +27240,7 @@ msgstr "选择 \"Flash/Update BIOS\"。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:151
 msgid "Heads Options menu with the firmware update entry selected."
-msgstr ""
+msgstr "“选项”菜单，其中已选中“固件更新”选项。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:154
 #, fuzzy
@@ -27221,21 +27264,22 @@ msgstr "更改密码前不要要求确认"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:164
 msgid "Select the verified, intact ``.zip`` archive for your NitroPad model."
-msgstr ""
+msgstr "请为您的 NitroPad 模型选择经过验证且完整的``.zip`` 存档文件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:166
 msgid "Heads firmware file selection screen; select the model-specific ZIP."
-msgstr ""
+msgstr "进入固件文件选择界面；选择对应机型的 ZIP 文件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:169
 msgid ""
 "Confirm with Enter and allow flashing to finish. If an error is reported,"
 " record its exact text and contact Nitrokey support."
-msgstr ""
+msgstr "按 Enter 键确认，并等待刷写完成。如果出现错误提示，请记录其确切内容，并联系硝"
+"基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:172
 msgid "Heads firmware flashing confirmation."
-msgstr ""
+msgstr "打印头固件刷写确认。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:175
 msgid ""
@@ -27244,14 +27288,18 @@ msgid ""
 "stays black.** Follow `Boot Time After Update <firmware-update.html#boot-"
 "time-after-update>`__; do not force a power off."
 msgstr ""
+"出现提示时，按 Enter "
+"键重新启动。**请保持电源适配器和电池连接，即使屏幕保持黑色，也请等待 Heads "
+"重新出现。** 请按照`中的说明操作。更新后的启动时间<firmware-update.html#boot-"
+"time-after-update>`__；请勿强制关机。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:179
 msgid "Heads prompt to restart after flashing."
-msgstr ""
+msgstr "打印头在闪烁后会提示重新启动。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:182
 msgid "Once Heads has returned, complete the following steps as prompted."
-msgstr ""
+msgstr "Heads 返回后，请按照提示完成以下步骤。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:185
 #, fuzzy
@@ -27267,6 +27315,11 @@ msgid ""
 " version. A TPM factory reset changes the security configuration; it is "
 "not a repair for a NitroPad that cannot power on."
 msgstr ""
+"请按照 Heads 的提示重新封装密钥，并更新 TPM "
+"磁盘解锁密钥的密码（如果已配置）。如果出现``ERROR: TOTP Generation "
+"Failed!``，请参阅 :doc:`factory-reset-heads2`；如果是旧版固件，请参阅 :doc"
+":`factory-reset`。请使用与您的 Heads 版本相匹配的操作流程。 TPM "
+"出厂重置会更改安全配置；这并非针对无法开机的 NitroPad 的修复方案。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:196
 msgid ""
@@ -27276,6 +27329,10 @@ msgid ""
 "forced restarts to a black screen during an EC update or memory training,"
 " particularly on NitroPad V54 and V56."
 msgstr ""
+"有用户反映，NitroPad NV41在显示Heads启动画面时会出现持续卡死的情况。如果更新"
+"完成后该问题仍然存在，请联系硝基技术支持以获取针对该机型的具体指导。在EC更新"
+"或内存训练过程中，请勿对黑屏状态下的设备进行反复强制重启，尤其是在NitroPad "
+"V54和V56机型上。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:205
 msgid ""
@@ -27285,6 +27342,9 @@ msgid ""
 " layouts differ between models; use the correct model's disassembly "
 "instructions."
 msgstr ""
+"首先确定故障症状：无电源或充电指示灯、通电但屏幕黑屏，或者Heads启动但操作系统"
+"无法启动。以下检查步骤适用于运行Nitrokey "
+"Heads的NitroPad。不同型号的硬件布局各不相同；请使用对应型号的拆解说明。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:212
 msgid ""
@@ -27294,17 +27354,21 @@ msgid ""
 "device whose update has finished or which support has confirmed is no "
 "longer updating."
 msgstr ""
+"在更新后的首次重启时，请先参阅`Boot Time After Update<firmware-update.html"
+"#boot-time-after-update>`__，然后再尝试进行故障排除。下文所述的重置和硬件检查"
+"仅适用于已完成更新或经支持部门确认不再进行更新的设备。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:218
 msgid "No Power or Charging Indicators"
-msgstr ""
+msgstr "无电源或充电指示灯"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:220
 msgid ""
 "Check the wall outlet, adapter, cable and DC plug. Inspect the cable and "
 "charging socket for damage, debris or a loose connection. Disconnect "
 "power before inspecting the socket; do not insert metal objects."
-msgstr ""
+msgstr "检查墙壁插座、适配器、充电线和直流插头。检查充电线和充电插座是否有损坏、异物"
+"或连接松动。检查插座前请先断开电源；切勿将金属物体插入插座。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:224
 msgid ""
@@ -27313,6 +27377,9 @@ msgid ""
 "laptop adapter. Use the original DC barrel-jack adapter for NV41, V54 and"
 " V56 firmware updates, as described in Preparation."
 msgstr ""
+"如果有的话，请尝试使用已知可正常工作且兼容的适配器。确保电压、极性、连接器及"
+"额定功率均与要求匹配；切勿使用任意笔记本电脑适配器。如“准备工作”部分所述，"
+"进行 NV41、V54 和 V56 固件更新时，请使用原装直流圆柱插头适配器。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:229
 msgid ""
@@ -27321,6 +27388,9 @@ msgid ""
 " system's battery status to distinguish a missing adapter from a detected"
 " adapter that is not charging."
 msgstr ""
+"如果电池可能已没电，请先充电至少 30 分钟，然后再尝试重新启动 NitroPad。如果能"
+"启动，请检查操作系统的电池状态，以区分是适配器未连接，还是已检测到适配器但未"
+"充电。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:234
 msgid ""
@@ -27329,29 +27399,34 @@ msgid ""
 "button for 30 seconds, release it, reconnect the adapter and try starting"
 " once."
 msgstr ""
+"如果更新停止后，请尝试进行电源重置：关闭 NitroPad 电源，拔下电源适配器，"
+"并移除外接 USB 设备。长按电源键 30 "
+"秒，松开按键，重新连接电源适配器，然后尝试启动一次。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:238
 msgid ""
 "If the problem persists, use the CMOS reset below if you can safely "
 "access the connectors, or contact Nitrokey support."
-msgstr ""
+msgstr "如果问题仍然存在，请在能够安全接触连接器的情况下，按照下文所述进行 CMOS "
+"重置，或者联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:241
 msgid ""
 "Missing LEDs alone do not establish whether the firmware or hardware is "
 "faulty, and do not prove that the SSDs have been damaged. Support may "
 "need to check the power circuitry as well as the BIOS and EC firmware."
-msgstr ""
+msgstr "仅凭LED指示灯未亮，无法确定是固件还是硬件出现故障，也无法证明固态硬盘已损坏。"
+"技术支持人员可能需要检查电源电路以及BIOS和EC固件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:246
 msgid "Power Is Present but the Screen Stays Black"
-msgstr ""
+msgstr "有电但屏幕仍为黑色"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:248
 msgid ""
 "Exclude the normal first-start delay described above and confirm that "
 "power and the battery are available."
-msgstr ""
+msgstr "排除上述所述的正常首次启动延迟，并确认电源和电池均已就绪。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:251
 msgid ""
@@ -27361,10 +27436,13 @@ msgid ""
 "supported by the model and firmware. No external picture alone does not "
 "prove that the motherboard is faulty."
 msgstr ""
+"一旦更新停止运行，请通过HDMI测试外接显示器。如果外接显示器正常工作，问题可能"
+"出在内置显示屏或其连接上。如果机型和固件支持，使用兼容的USB-C显示器或扩展坞也"
+"可能有所帮助。仅凭无法显示外部画面，并不能证明主板存在故障。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:257
 msgid "Try the CMOS reset below."
-msgstr ""
+msgstr "请尝试执行以下 CMOS 重置操作。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:259
 msgid ""
@@ -27376,12 +27454,17 @@ msgid ""
 "about 30 minutes for a single-module trial before changing the "
 "configuration again."
 msgstr ""
+"如果您可以在 NitroPad 内部安全操作，请在重新插入内存条之前先断开适配器和主电"
+"池的连接。如果有两个内存条，请一次只测试一个，每次启动时都要重新连接电池和适"
+"配器。 若仅安装一个内存条，请测试另一个插槽。每次更换后，请预留时间让内存完成"
+"初始化；硬件故障排除指南建议，在单条内存条测试完成后，应等待约30分钟，再更改"
+"配置。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:266
 msgid ""
 "If there is still no progress, contact Nitrokey support before attempting"
 " external firmware recovery or replacing hardware."
-msgstr ""
+msgstr "如果问题仍未解决，请在尝试外部固件恢复或更换硬件之前，联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:270
 #, fuzzy
@@ -27395,6 +27478,9 @@ msgid ""
 " guide. Check that the SSD is detected and use :doc:`default-boot` to "
 "select the appropriate operating system boot option."
 msgstr ""
+"如果“Heads”菜单可见，请先根据“Heads”的提示和相应的硝基指南，处理任何报告的 "
+"TPM、签名或磁盘解锁错误。确认 SSD 已被检测到，并使用 :doc:`default-boot` "
+"选择相应的操作系统启动选项。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:277
 msgid ""
@@ -27403,6 +27489,9 @@ msgid ""
 " it can erase the drive. Reinstalling an operating system cannot repair a"
 " NitroPad that does not power on or cannot reach Heads."
 msgstr ""
+"如果操作系统或其引导加载程序损坏，请使用其恢复工具。重新安装是备份可恢复数据"
+"后的最后手段；此操作可能会擦除硬盘。重新安装操作系统无法修复无法开机或无法连"
+"接到Heads的NitroPad。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:284
 #, fuzzy
@@ -27414,43 +27503,48 @@ msgid ""
 "A CMOS reset clears stored firmware settings. It does **not** rewrite "
 "corrupted BIOS or EC firmware, and is different from a Heads TPM factory "
 "reset."
-msgstr ""
+msgstr "CMOS 重置会清除存储的固件设置。它不会**也不会** 重写受损的 BIOS 或 EC 固件，"
+"且与 Heads TPM 出厂重置不同。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:289
 msgid ""
 "Ensure that no firmware update is running. Turn off the NitroPad, unplug "
 "the power adapter and disconnect external devices."
-msgstr ""
+msgstr "请确保当前没有正在进行的固件更新。关闭 "
+"NitroPad，拔下电源适配器，并断开外部设备的连接。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:292
 msgid ""
 "Open the device according to its model-specific instructions and "
 "disconnect the main battery. If you cannot safely identify or access the "
 "connectors, ask Nitrokey support to perform the reset."
-msgstr ""
+msgstr "请按照该设备的型号说明打开设备，并断开主电池的连接。如果您无法安全地识别或接"
+"触到连接器，请联系硝基技术支持进行重置。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:296
 msgid ""
 "Disconnect the CMOS battery and leave the adapter, main battery and CMOS "
 "battery disconnected for **30 minutes**."
-msgstr ""
+msgstr "断开CMOS电池的连接，并将适配器、主电池和CMOS电池保持断开状态**30分钟** 。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:299
 msgid ""
 "Reconnect the CMOS battery and main battery, close the device, then "
 "reconnect the adapter. **Wait another five minutes** before attempting to"
 " power on."
-msgstr ""
+msgstr "重新连接 CMOS 电池和主电池，合上设备，然后重新连接适配器。**再等待五分钟** "
+"，然后再尝试开机。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:302
 msgid ""
 "Try starting once and allow time for memory training. If the problem "
 "remains, stop repeating resets and contact Nitrokey support."
-msgstr ""
+msgstr "请先尝试重启一次，并留出时间进行内存训练。如果问题仍然存在，请停止反复重置，"
+"并联系 Nitrokey 技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:306
 msgid "External Firmware Recovery and Support"
-msgstr ""
+msgstr "外部固件恢复与支持"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:308
 msgid ""
@@ -27459,6 +27553,8 @@ msgid ""
 "compatible versions. A CMOS reset or reinstalling the operating system "
 "cannot substitute for repairing corrupted firmware."
 msgstr ""
+"如果上述检查均未成功，则可能需要通过外部编程来修复BIOS和/或EC。它们是独立的固"
+"件组件，且版本必须兼容。重置CMOS或重新安装操作系统无法替代对损坏固件的修复。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:313
 msgid ""
@@ -27471,6 +27567,11 @@ msgid ""
 " for the appropriate recovery or repair process before flashing. A "
 "hardware fault may instead require component or motherboard repair."
 msgstr ""
+"外部BIOS编程（例如使用合适的CH341A设置）是一项高级维修操作，"
+"需要针对该机型使用正确的硝基 Heads镜像、芯片电压和连接器。 在进行外部BIOS编程"
+"之前，请按照该机型的恢复流程断开适配器、主电池和CMOS电池的连接。EC恢复有其特"
+"定的连接和供电要求；请勿将其与BIOS操作流程混用。在刷写之前，请向硝基技术支持"
+"咨询相应的恢复或维修流程。若为硬件故障，则可能需要对元器件或主板进行维修。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:322
 #, fuzzy
@@ -27481,27 +27582,28 @@ msgstr "下载并启动`Nitrokey App <https://www.nitrokey.com/download>`__。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:324
 msgid "The NitroPad model, serial number and order reference."
-msgstr ""
+msgstr "NitroPad 的型号、序列号和订单编号。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:325
 msgid ""
 "The previously installed firmware version, if known, and the selected ZIP"
 " filename and release version."
-msgstr ""
+msgstr "如果已知，请提供先前安装的固件版本，以及所选的ZIP文件名和发布版本。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:327
 msgid ""
 "Any error message, whether flashing reported success, and what happened "
 "during the first restart, including how long you waited."
-msgstr ""
+msgstr "是否有任何错误信息，是否闪现“操作成功”的提示，以及首次重启时发生了什么，包括"
+"您等待了多长时间。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:329
 msgid "The power adapter used, battery condition, LEDs and fan behaviour."
-msgstr ""
+msgstr "所使用的电源适配器、电池状态、LED 指示灯以及风扇的工作状态。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:330
 msgid "The troubleshooting steps already attempted."
-msgstr ""
+msgstr "已尝试过的故障排除步骤。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:333
 #, fuzzy
@@ -27517,6 +27619,11 @@ msgid ""
 "Firmware downloads for this procedure come from the Nitrokey releases "
 "linked in Preparation."
 msgstr ""
+"上述关于 Heads 的更新及首次启动指南基于`中的上游 Heads "
+"更新指南<https://osresearch.net/Updating>`__ 以及`中的平台专用 Heads "
+"更新说明<https://docs.dasharo.com/unified/novacustom/firmware-update/"
+">`__。本操作所需的固件下载链接请参见“准备工作”部分中提供的 Nitrokey "
+"发布版本。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:342
 msgid ""
@@ -27524,40 +27631,49 @@ msgid ""
 "these guides. Use the Heads-specific instructions on this page for boot "
 "selection, security prompts and firmware recovery:"
 msgstr ""
+"这些指南中的硬件检查步骤已针对配备硝基 Heads 的 NitroPad 进行了调整。"
+"请参考本页面中针对 Heads 的具体说明，以进行启动选择、安全提示和固件恢复："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:346
 msgid ""
 "`Charging checks <https://novacustom.com/knowledge-base/laptop-not-"
 "charging/>`__."
-msgstr ""
+msgstr "`充电检查<https://novacustom.com/knowledge-base/laptop-not-charging/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:347
 msgid ""
 "`Boot failure checks <https://novacustom.com/knowledge-base/laptop-is-"
 "not-booting-what-can-i-do/>`__."
 msgstr ""
+"`启动故障检查<https://novacustom.com/knowledge-base/"
+"laptop-is-not-booting-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:348
 msgid ""
 "`CMOS reset <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
 "reset/>`__."
 msgstr ""
+"`CMOS 重置<https://novacustom.com/knowledge-base/how-to-perform-a-cmos-reset/"
+">`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:349
 msgid ""
 "`Power and black-screen checks <https://novacustom.com/knowledge-base"
 "/laptop-not-turning-on-what-can-i-do/>`__."
 msgstr ""
+"`电源和黑屏检查<https://novacustom.com/knowledge-base/"
+"laptop-not-turning-on-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:350
 msgid "`Heads disk recovery keys <https://osresearch.net/Keys/>`__."
-msgstr ""
+msgstr "`磁头磁盘恢复密钥<https://osresearch.net/Keys/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:351
 msgid ""
 "`Platform-specific hardware recovery notes "
 "<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
-msgstr ""
+msgstr "`特定平台的硬件恢复说明<https://docs.dasharo.com/unified/novacustom/recovery/"
+">`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update-1.4.rst:2
 #: ../../source/components/nitropad-nitropc/heads/index.rst:6
@@ -35674,4 +35790,3 @@ msgstr "标记裁剪的输出"
 #~ msgstr ""
 #~ "如果出现``ERROR: TOTP Generation Failed!`` 屏幕，请按照"
 #~ " \"出厂重置\"（在左侧菜单中）的说明从以下步骤开始操作"
-
