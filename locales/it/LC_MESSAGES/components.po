@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-15 13:32+0000\n"
-"PO-Revision-Date: 2026-10-15 11:28+0000\n"
+"PO-Revision-Date: 2026-10-15 13:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Italian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/it/>\n"
 "Language: it\n"
-"Language-Team: Italian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/it/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -32053,6 +32054,10 @@ msgid ""
 "already runs Heads. It also applies when an OEM factory reset has been "
 "performed but the TPM counter still needs to be reset."
 msgstr ""
+"Utilizza questa guida per aggiornare il firmware di Nitrokey Heads su un "
+"NitroPad su cui Heads è già in esecuzione. È valida anche nel caso in cui "
+"sia stato eseguito un ripristino delle impostazioni di fabbrica OEM, ma sia "
+"ancora necessario azzerare il contatore TPM."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:31
 msgid ""
@@ -32060,6 +32065,9 @@ msgid ""
 " both the adapter and battery connected throughout flashing and the first"
 " restart."
 msgstr ""
+"Collegare l'alimentatore originale e caricare la batteria fino a oltre il "
+"70%. Tenere collegati sia l'alimentatore che la batteria per tutta la durata "
+"dell'aggiornamento e del primo riavvio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:36
 msgid ""
@@ -32068,6 +32076,12 @@ msgid ""
 "not rely on USB-C charging alone: an EC update can reset the USB Power "
 "Delivery controller before the adapter check, causing the update to fail."
 msgstr ""
+"Sui modelli NitroPad NV41, V54 e V56, utilizzare l'adattatore di "
+"alimentazione DC con connettore cilindrico **** per gli aggiornamenti che "
+"sincronizzano il firmware del controller integrato (EC). Non affidarsi "
+"esclusivamente alla ricarica tramite USB-C: un aggiornamento dell'EC può "
+"resettare il controller USB Power Delivery prima del controllo "
+"dell'adattatore, causando il fallimento dell'aggiornamento."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:41
 msgid ""
@@ -32076,6 +32090,10 @@ msgid ""
 "requirements and model-specific issues. Download the ZIP archive for your"
 " exact model:"
 msgstr ""
+"Leggi le note di rilascio di Nitrokey Heads su ` <https://github.com/"
+"Nitrokey/heads/releases/latest>` __ per conoscere i requisiti di "
+"aggiornamento e le problematiche specifiche di ciascun modello. Scarica "
+"l'archivio ZIP relativo al tuo modello specifico:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:45
 #, fuzzy
@@ -32114,6 +32132,10 @@ msgid ""
 "to give it a ZIP extension.** Select this archive in the Heads update "
 "menu."
 msgstr ""
+"Verifica l'archivio come descritto di seguito, quindi copialo su una "
+"chiavetta USB. **Mantieni intatto l'archivio ZIP; non estrarlo né rinominare "
+"un altro file assegnandogli l'estensione ZIP.** Seleziona questo archivio "
+"nel menu di aggiornamento di Heads."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:56
 msgid ""
@@ -32121,6 +32143,10 @@ msgid ""
 " the disk recovery passphrase before updating; it may be needed if TPM-"
 "based disk unlocking must be reconfigured."
 msgstr ""
+"Eseguire il backup dei dati importanti. Se la crittografia del disco è "
+"abilitata, assicurarsi di disporre della passphrase di ripristino del disco "
+"prima di procedere all'aggiornamento; potrebbe essere necessaria qualora "
+"fosse necessario riconfigurare lo sblocco del disco basato su TPM."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:62
 msgid ""
@@ -32132,6 +32158,15 @@ msgid ""
 "BIOS and EC versions are compatible before proceeding. Upstream version "
 "numbers do not necessarily match Nitrokey release numbers."
 msgstr ""
+"Gli aggiornamenti ZIP richiedono l'installazione di una versione di Heads "
+"che li supporti. Se l'archivio non viene accettato, o se si sta effettuando "
+"l'aggiornamento da un firmware molto vecchio, consultare le note di rilascio "
+"e contattare l'assistenza Nitrokey all'indirizzo ` <https://www.nitrokey.com/"
+"contact>` __ invece di cercare di indovinare il percorso di aggiornamento. "
+"Se il firmware è stato installato o modificato manualmente, verificare che "
+"le versioni del BIOS e dell'EC siano compatibili prima di procedere. I "
+"numeri di versione dell’upstream non corrispondono necessariamente ai numeri "
+"di versione di Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:71
 msgid "Firmware Signature Check"
@@ -32143,6 +32178,9 @@ msgid ""
 "Nitrokey release as the firmware. Place these files and the ZIP archive "
 "in one directory on the computer used to download them."
 msgstr ""
+"Scaricare i file **,** ``sha256sum`` e ``sha256sum.sig`` dalla stessa "
+"versione di Nitrokey del firmware. Copiare questi file e l'archivio ZIP in "
+"un'unica cartella sul computer utilizzato per scaricarli."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:77
 #, python-format
@@ -32153,20 +32191,29 @@ msgid ""
 "<https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__."
 " Check the key fingerprint against the release's signing information."
 msgstr ""
+"Importa la chiave di firma indicata nelle note di rilascio di Nitrokey. Le "
+"versioni firmate da Markus Meissner utilizzano la chiave disponibile su "
+"questo server di chiavi `alla voce <https://keyserver.ubuntu.com/pks/"
+"lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__. Verifica "
+"l'impronta digitale della chiave confrontandola con le informazioni di firma "
+"della versione."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:82
 msgid "From that directory, verify the checksum manifest's signature:"
-msgstr ""
+msgstr "Da quella directory, verificare la firma del manifesto del checksum:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:88
 msgid ""
 "The signature must be valid and belong to the expected signing key. Stop "
 "if verification fails."
 msgstr ""
+"La firma deve essere valida e corrispondere alla chiave di firma prevista. "
+"Interrompere l'operazione se la verifica non va a buon fine."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:91
 msgid "Verify the downloaded archive against the authenticated manifest:"
 msgstr ""
+"Verificare che l'archivio scaricato corrisponda al manifesto autenticato:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:97
 msgid ""
@@ -32175,6 +32222,11 @@ msgid ""
 "downloaded ZIP. Do not flash a file with a failed or missing checksum "
 "verification."
 msgstr ""
+"Verifica che **l'archivio ZIP specifico per il tuo modello** compaia "
+"nell'output con ``OK``. Una firma del manifesto valida da sola non "
+"garantisce la correttezza dell'archivio ZIP scaricato. Non eseguire il "
+"flashing di un file la cui verifica del checksum abbia dato esito negativo o "
+"risulti mancante."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:103
 #, fuzzy
@@ -32191,6 +32243,15 @@ msgid ""
 " a maximum waiting time. Later starts should be faster once the memory "
 "training results are cached."
 msgstr ""
+"Il primo riavvio potrebbe richiedere molto più tempo del normale. Durante "
+"questo riavvio, il firmware EC potrebbe essere aggiornato e il sistema "
+"esegue un ricalibrazione della memoria prima che compaia Heads. **Lo schermo "
+"potrebbe rimanere completamente nero per circa un minuto o anche più a "
+"lungo.** Una maggiore quantità di RAM installata può aumentare il ritardo; "
+"un sistema con 96 GB potrebbe impiegare **oltre due minuti**. Questi tempi "
+"sono esemplificativi, non rappresentano il tempo massimo di attesa. Gli "
+"avvii successivi dovrebbero essere più rapidi una volta che i risultati del "
+"riorganizzazione della memoria saranno stati memorizzati nella cache."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:114
 msgid ""
@@ -32201,6 +32262,13 @@ msgid ""
 "can leave the NitroPad unable to start and require external hardware "
 "recovery."
 msgstr ""
+"**Non interrompere il processo di flashing né il primo riavvio solo perché "
+"lo schermo è nero.** Non tenere premuto il pulsante di accensione, non "
+"scollegare l'alimentatore, non scollegare la batteria e non eseguire un "
+"reset mentre l'aggiornamento potrebbe essere ancora in corso. L'interruzione "
+"della scrittura del firmware, compreso un aggiornamento EC durante il "
+"riavvio, può rendere il NitroPad incapace di avviarsi e richiedere un "
+"intervento di ripristino tramite hardware esterno."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:120
 msgid ""
@@ -32210,6 +32278,12 @@ msgid ""
 "the update is still running, contact Nitrokey support before forcing a "
 "shutdown."
 msgstr ""
+"Il messaggio di flash completato con successo non significa che "
+"l'aggiornamento EC successivo sia terminato. Lascia il dispositivo collegato "
+"all'alimentazione e attendi pazientemente che compaiano le icone \"Heads\". "
+"Se dopo un'attesa prolungata non si registrano progressi e non sei sicuro "
+"che l'aggiornamento sia ancora in corso, contatta l'assistenza Nitrokey "
+"prima di forzare lo spegnimento."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:128
 msgid ""
@@ -32217,6 +32291,11 @@ msgid ""
 "step 3. The screenshots illustrate the menu flow; filenames and screen "
 "details may differ in newer releases. Follow the ZIP instructions above."
 msgstr ""
+"Le prime due schermate riportate di seguito sono facoltative. Se non sono "
+"presenti, iniziare dal punto 3. Le schermate illustrano il percorso di "
+"navigazione nei menu; i nomi dei file e i dettagli delle schermate "
+"potrebbero variare nelle versioni più recenti. Seguire le istruzioni "
+"relative al file ZIP riportate sopra."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:132
 #, fuzzy
@@ -32230,6 +32309,8 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:135
 msgid "First optional Heads error screen before entering the boot menu."
 msgstr ""
+"Prima schermata di errore opzionale di Heads prima di accedere al menu di "
+"avvio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:138
 #, fuzzy
@@ -32243,6 +32324,8 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:141
 msgid "Second optional Heads error screen before entering the boot menu."
 msgstr ""
+"Seconda schermata di errore \"Heads\" opzionale prima di accedere al menu di "
+"avvio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:144
 #, fuzzy
@@ -32251,7 +32334,7 @@ msgstr "Vai a \"Opzioni\"."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:146
 msgid "Heads boot menu with Options selected."
-msgstr ""
+msgstr "Menu di avvio con l'opzione \"Opzioni\" selezionata."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:149
 #, fuzzy
@@ -32260,7 +32343,7 @@ msgstr "Selezionate \"Flash/Update the BIOS\"."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:151
 msgid "Heads Options menu with the firmware update entry selected."
-msgstr ""
+msgstr "Menu \"Opzioni\" con la voce \"Aggiornamento firmware\" selezionata."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:154
 #, fuzzy
@@ -32285,20 +32368,27 @@ msgstr "Non chiedere conferma prima di modificare la passphrase."
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:164
 msgid "Select the verified, intact ``.zip`` archive for your NitroPad model."
 msgstr ""
+"Seleziona l'archivio verificato e integro ``.zip`` corrispondente al tuo "
+"modello NitroPad."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:166
 msgid "Heads firmware file selection screen; select the model-specific ZIP."
 msgstr ""
+"Nella schermata di selezione dei file del firmware, selezionare il file ZIP "
+"specifico per il modello."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:169
 msgid ""
 "Confirm with Enter and allow flashing to finish. If an error is reported,"
 " record its exact text and contact Nitrokey support."
 msgstr ""
+"Conferma premendo Invio e attendi il completamento del processo di flashing. "
+"Se viene segnalato un errore, prendi nota del testo esatto e contatta "
+"l'assistenza Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:172
 msgid "Heads firmware flashing confirmation."
-msgstr ""
+msgstr "Conferma dell'aggiornamento del firmware delle testine."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:175
 msgid ""
@@ -32307,14 +32397,21 @@ msgid ""
 "stays black.** Follow `Boot Time After Update <firmware-update.html#boot-"
 "time-after-update>`__; do not force a power off."
 msgstr ""
+"Quando richiesto, premere Invio per riavviare. **Lasciare collegati "
+"l'alimentatore e la batteria e attendere che Heads ricompaia, anche se lo "
+"schermo rimane nero.** Seguire `Tempo di avvio dopo l'aggiornamento "
+"<firmware-update.html#boot-time-after-update>`__; non spegnere forzatamente "
+"il dispositivo."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:179
 msgid "Heads prompt to restart after flashing."
-msgstr ""
+msgstr "Dopo il flashing, i dispositivi richiedono il riavvio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:182
 msgid "Once Heads has returned, complete the following steps as prompted."
 msgstr ""
+"Una volta che Heads è tornato, segui le istruzioni che ti verranno fornite "
+"per completare i passaggi seguenti."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:185
 #, fuzzy
@@ -32330,6 +32427,14 @@ msgid ""
 " version. A TPM factory reset changes the security configuration; it is "
 "not a repair for a NitroPad that cannot power on."
 msgstr ""
+"Seguire le istruzioni di Heads per ricodificare i segreti e aggiornare la "
+"passphrase della chiave di sblocco del disco TPM, se configurata. Se viene "
+"visualizzato il messaggio ``ERROR: TOTP Generation Failed!``, consultare :doc"
+":`factory-reset-heads2` oppure, per i firmware meno recenti, :doc:`factory-"
+"reset`. Utilizzare la procedura corrispondente alla propria versione di "
+"Heads. Un ripristino delle impostazioni di fabbrica del TPM modifica la "
+"configurazione di sicurezza; non costituisce una soluzione per un NitroPad "
+"che non si accende."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:196
 msgid ""
@@ -32339,6 +32444,12 @@ msgid ""
 "forced restarts to a black screen during an EC update or memory training,"
 " particularly on NitroPad V54 and V56."
 msgstr ""
+"È stato segnalato un blocco persistente alla schermata di avvio \"Heads\" "
+"per il NitroPad NV41. Se il problema persiste al termine dell'aggiornamento, "
+"contattare l'assistenza Nitrokey per ricevere indicazioni specifiche "
+"relative al modello. Non effettuare ripetuti riavvii forzati quando lo "
+"schermo è nero durante un aggiornamento EC o un processo di ottimizzazione "
+"della memoria, in particolare sui modelli NitroPad V54 e V56."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:205
 msgid ""
@@ -32348,6 +32459,12 @@ msgid ""
 " layouts differ between models; use the correct model's disassembly "
 "instructions."
 msgstr ""
+"Per prima cosa, identifica il sintomo: assenza di indicatori di "
+"alimentazione o di ricarica, dispositivo acceso ma con schermo nero, oppure "
+"Heads che si avvia ma il sistema operativo non si avvia. Le verifiche "
+"riportate di seguito si applicano ai NitroPad che utilizzano Nitrokey Heads. "
+"La disposizione hardware varia a seconda del modello; segui le istruzioni di "
+"smontaggio relative al modello corretto."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:212
 msgid ""
@@ -32357,10 +32474,16 @@ msgid ""
 "device whose update has finished or which support has confirmed is no "
 "longer updating."
 msgstr ""
+"Al primo riavvio dopo un aggiornamento, seguire le istruzioni riportate "
+"all'indirizzo `Boot Time After Update <firmware-update.html#boot-time-after-"
+"update>`__ prima di procedere con la risoluzione dei problemi. Il ripristino "
+"e i controlli hardware descritti di seguito sono destinati esclusivamente a "
+"dispositivi per i quali l'aggiornamento è stato completato o per i quali il "
+"supporto tecnico ha confermato che l'aggiornamento non è più in corso."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:218
 msgid "No Power or Charging Indicators"
-msgstr ""
+msgstr "Assenza di indicatori di alimentazione o di ricarica"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:220
 msgid ""
@@ -32368,6 +32491,10 @@ msgid ""
 "charging socket for damage, debris or a loose connection. Disconnect "
 "power before inspecting the socket; do not insert metal objects."
 msgstr ""
+"Controllare la presa a muro, l'adattatore, il cavo e la spina CC. Verificare "
+"che il cavo e la presa di ricarica non presentino danni, residui o "
+"collegamenti allentati. Scollegare l'alimentazione prima di ispezionare la "
+"presa; non inserire oggetti metallici."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:224
 msgid ""
@@ -32376,6 +32503,12 @@ msgid ""
 "laptop adapter. Use the original DC barrel-jack adapter for NV41, V54 and"
 " V56 firmware updates, as described in Preparation."
 msgstr ""
+"Se disponibile, provare un adattatore compatibile e di cui si è certi che "
+"funzioni. Assicurarsi che la tensione, la polarità, il connettore e la "
+"potenza nominale corrispondano a quelli richiesti; non utilizzare un "
+"adattatore per laptop a caso. Per gli aggiornamenti del firmware dei modelli "
+"NV41, V54 e V56, utilizzare l'adattatore originale con connettore cilindrico "
+"CC, come descritto nella sezione \"Preparazione\"."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:229
 msgid ""
@@ -32384,6 +32517,11 @@ msgid ""
 " system's battery status to distinguish a missing adapter from a detected"
 " adapter that is not charging."
 msgstr ""
+"Se la batteria dovesse essere scarica, lasciare in carica il dispositivo per "
+"almeno 30 minuti prima di provare a riavviare il NitroPad. Se il dispositivo "
+"si avvia, controllare lo stato della batteria nel sistema operativo per "
+"distinguere tra un alimentatore mancante e un alimentatore rilevato ma che "
+"non sta effettuando la ricarica."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:234
 msgid ""
@@ -32392,12 +32530,20 @@ msgid ""
 "button for 30 seconds, release it, reconnect the adapter and try starting"
 " once."
 msgstr ""
+"Per provare a eseguire un reset di alimentazione dopo che l'aggiornamento si "
+"è interrotto: spegnere il NitroPad, scollegare l'alimentatore e rimuovere i "
+"dispositivi USB esterni. Tenere premuto il pulsante di accensione per 30 "
+"secondi, rilasciarlo, ricollegare l'alimentatore e provare ad avviare il "
+"dispositivo una volta."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:238
 msgid ""
 "If the problem persists, use the CMOS reset below if you can safely "
 "access the connectors, or contact Nitrokey support."
 msgstr ""
+"Se il problema persiste, eseguire il reset del CMOS descritto di seguito, se "
+"è possibile accedere in sicurezza ai connettori, oppure contattare "
+"l'assistenza Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:241
 msgid ""
@@ -32405,16 +32551,22 @@ msgid ""
 "faulty, and do not prove that the SSDs have been damaged. Support may "
 "need to check the power circuitry as well as the BIOS and EC firmware."
 msgstr ""
+"La sola assenza di LED non è sufficiente a stabilire se il problema sia "
+"dovuto a un difetto del firmware o dell'hardware, né dimostra che gli SSD "
+"siano stati danneggiati. Il servizio di assistenza potrebbe dover verificare "
+"i circuiti di alimentazione, oltre al BIOS e al firmware EC."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:246
 msgid "Power Is Present but the Screen Stays Black"
-msgstr ""
+msgstr "C'è corrente, ma lo schermo rimane nero"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:248
 msgid ""
 "Exclude the normal first-start delay described above and confirm that "
 "power and the battery are available."
 msgstr ""
+"Escludere il normale ritardo all'avvio descritto sopra e verificare che "
+"l'alimentazione e la batteria siano disponibili."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:251
 msgid ""
@@ -32424,10 +32576,16 @@ msgid ""
 "supported by the model and firmware. No external picture alone does not "
 "prove that the motherboard is faulty."
 msgstr ""
+"Una volta terminato l'aggiornamento, prova a collegare un monitor esterno "
+"tramite HDMI. Se lo schermo esterno funziona, il problema potrebbe essere il "
+"display interno o il suo collegamento. Anche un monitor o una docking "
+"station USB-C compatibili possono essere d'aiuto, purché supportati dal "
+"modello e dal firmware. La sola assenza di immagine sul display esterno non "
+"dimostra che la scheda madre sia difettosa."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:257
 msgid "Try the CMOS reset below."
-msgstr ""
+msgstr "Prova a eseguire il reset del CMOS come indicato di seguito."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:259
 msgid ""
@@ -32439,12 +32597,23 @@ msgid ""
 "about 30 minutes for a single-module trial before changing the "
 "configuration again."
 msgstr ""
+"Se è possibile intervenire in sicurezza all’interno del NitroPad, scollegare "
+"l’adattatore e la batteria principale prima di reinserire la RAM. In "
+"presenza di due moduli, testarne uno alla volta, ricollegando la batteria e "
+"l’adattatore ad ogni avvio. Se è presente un solo modulo, prova l'altro "
+"slot. Lascia che la memoria si stabilizzi dopo ogni modifica; la guida alla "
+"risoluzione dei problemi hardware consiglia di attendere circa 30 minuti per "
+"una prova con un singolo modulo prima di modificare nuovamente la "
+"configurazione."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:266
 msgid ""
 "If there is still no progress, contact Nitrokey support before attempting"
 " external firmware recovery or replacing hardware."
 msgstr ""
+"Se la situazione non dovesse migliorare, contattare l'assistenza Nitrokey "
+"prima di tentare il ripristino esterno del firmware o la sostituzione "
+"dell'hardware."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:270
 #, fuzzy
@@ -32458,6 +32627,11 @@ msgid ""
 " guide. Check that the SSD is detected and use :doc:`default-boot` to "
 "select the appropriate operating system boot option."
 msgstr ""
+"Se il menu di Heads è visibile, risolvere innanzitutto eventuali errori "
+"segnalati relativi al TPM, alla firma o allo sblocco del disco seguendo le "
+"istruzioni di Heads e la guida Nitrokey corrispondente. Verificare che l'SSD "
+"venga rilevato e utilizzare :doc:`default-boot` per selezionare l'opzione di "
+"avvio del sistema operativo appropriata."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:277
 msgid ""
@@ -32466,6 +32640,12 @@ msgid ""
 " it can erase the drive. Reinstalling an operating system cannot repair a"
 " NitroPad that does not power on or cannot reach Heads."
 msgstr ""
+"Se il sistema operativo o il suo bootloader sono danneggiati, utilizzare gli "
+"strumenti di ripristino previsti. La reinstallazione è l'ultima risorsa, da "
+"utilizzare solo dopo aver eseguito il backup dei dati recuperabili; tale "
+"operazione può cancellare il contenuto dell'unità. La reinstallazione del "
+"sistema operativo non consente di riparare un NitroPad che non si accende o "
+"che non riesce a rilevare le testine."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:284
 #, fuzzy
@@ -32478,12 +32658,17 @@ msgid ""
 "corrupted BIOS or EC firmware, and is different from a Heads TPM factory "
 "reset."
 msgstr ""
+"Un reset CMOS cancella le impostazioni del firmware memorizzate. Non "
+"comporta **né** la riscrittura del BIOS o del firmware EC danneggiati, ed è "
+"diverso dal reset di fabbrica del TPM Heads."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:289
 msgid ""
 "Ensure that no firmware update is running. Turn off the NitroPad, unplug "
 "the power adapter and disconnect external devices."
 msgstr ""
+"Assicurarsi che non sia in corso alcun aggiornamento del firmware. Spegnere "
+"il NitroPad, scollegare l'alimentatore e disconnettere i dispositivi esterni."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:292
 msgid ""
@@ -32491,12 +32676,18 @@ msgid ""
 "disconnect the main battery. If you cannot safely identify or access the "
 "connectors, ask Nitrokey support to perform the reset."
 msgstr ""
+"Aprire il dispositivo seguendo le istruzioni specifiche del modello e "
+"scollegare la batteria principale. Se non è possibile identificare o "
+"raggiungere i connettori in tutta sicurezza, rivolgersi all’assistenza "
+"Nitrokey per eseguire il ripristino."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:296
 msgid ""
 "Disconnect the CMOS battery and leave the adapter, main battery and CMOS "
 "battery disconnected for **30 minutes**."
 msgstr ""
+"Scollegare la batteria CMOS e lasciare scollegati l'adattatore, la batteria "
+"principale e la batteria CMOS per **30 minuti**."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:299
 msgid ""
@@ -32504,16 +32695,22 @@ msgid ""
 "reconnect the adapter. **Wait another five minutes** before attempting to"
 " power on."
 msgstr ""
+"Ricollegare la batteria CMOS e quella principale, chiudere il dispositivo, "
+"quindi ricollegare l'adattatore. **Attendere altri cinque minuti** prima di "
+"provare ad accendere il dispositivo."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:302
 msgid ""
 "Try starting once and allow time for memory training. If the problem "
 "remains, stop repeating resets and contact Nitrokey support."
 msgstr ""
+"Prova a riavviare una volta e dedica un po’ di tempo all’allenamento della "
+"memoria. Se il problema persiste, smetti di ripetere i reset e contatta l’"
+"assistenza Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:306
 msgid "External Firmware Recovery and Support"
-msgstr ""
+msgstr "Recupero e assistenza per firmware esterno"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:308
 msgid ""
@@ -32522,6 +32719,11 @@ msgid ""
 "compatible versions. A CMOS reset or reinstalling the operating system "
 "cannot substitute for repairing corrupted firmware."
 msgstr ""
+"Se i controlli sopra indicati non danno esito positivo, il ripristino "
+"potrebbe richiedere la programmazione esterna del BIOS e/o dell'EC. Si "
+"tratta di componenti firmware distinti che devono avere versioni "
+"compatibili. Il reset del CMOS o la reinstallazione del sistema operativo "
+"non possono sostituire la riparazione del firmware danneggiato."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:313
 msgid ""
@@ -32534,6 +32736,17 @@ msgid ""
 " for the appropriate recovery or repair process before flashing. A "
 "hardware fault may instead require component or motherboard repair."
 msgstr ""
+"La programmazione esterna del BIOS, ad esempio con una configurazione CH341A "
+"adeguata, è un intervento di riparazione avanzato che richiede l’immagine "
+"corretta di Nitrokey Heads, la tensione del chip e il connettore specifici "
+"per il modello. Prima di procedere alla programmazione esterna del BIOS, "
+"scollegare l’adattatore, la batteria principale e la batteria CMOS secondo "
+"la procedura di ripristino prevista per il modello. Il ripristino EC ha "
+"requisiti di collegamento e alimentazione specifici; non applicare ad esso "
+"la procedura del BIOS. Prima di eseguire il flashing, rivolgersi all’"
+"assistenza Nitrokey per conoscere la procedura di ripristino o riparazione "
+"appropriata. Un guasto hardware potrebbe invece richiedere la riparazione di "
+"un componente o della scheda madre."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:322
 #, fuzzy
@@ -32546,27 +32759,34 @@ msgstr ""
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:324
 msgid "The NitroPad model, serial number and order reference."
-msgstr ""
+msgstr "Il modello NitroPad, il numero di serie e il codice ordine."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:325
 msgid ""
 "The previously installed firmware version, if known, and the selected ZIP"
 " filename and release version."
 msgstr ""
+"La versione del firmware precedentemente installata, se nota, nonché il nome "
+"del file ZIP selezionato e la versione di rilascio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:327
 msgid ""
 "Any error message, whether flashing reported success, and what happened "
 "during the first restart, including how long you waited."
 msgstr ""
+"Qualsiasi messaggio di errore, se è apparso un messaggio lampeggiante che "
+"indicava che l'operazione era andata a buon fine e cosa è successo durante "
+"il primo riavvio, compreso quanto tempo hai aspettato."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:329
 msgid "The power adapter used, battery condition, LEDs and fan behaviour."
 msgstr ""
+"L'alimentatore utilizzato, lo stato della batteria, i LED e il funzionamento "
+"della ventola."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:330
 msgid "The troubleshooting steps already attempted."
-msgstr ""
+msgstr "Le procedure di risoluzione dei problemi già provate."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:333
 #, fuzzy
@@ -32582,6 +32802,13 @@ msgid ""
 "Firmware downloads for this procedure come from the Nitrokey releases "
 "linked in Preparation."
 msgstr ""
+"Le istruzioni riportate sopra relative all'aggiornamento di Heads e alla "
+"prima avvio si basano sulla guida all'aggiornamento di Heads a monte dell'`, "
+"disponibile all'indirizzo <https://osresearch.net/Updating>`__, e sulle note "
+"di aggiornamento di Heads specifiche per la piattaforma `, disponibili "
+"all'indirizzo <https://docs.dasharo.com/unified/novacustom/firmware-update/>`"
+"__. I file del firmware necessari per questa procedura possono essere "
+"scaricati dalle versioni di Nitrokey indicate nella sezione \"Preparazione\"."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:342
 msgid ""
@@ -32589,40 +32816,54 @@ msgid ""
 "these guides. Use the Heads-specific instructions on this page for boot "
 "selection, security prompts and firmware recovery:"
 msgstr ""
+"Le verifiche hardware sono state adattate per NitroPad con le testine "
+"Nitrokey, come indicato in queste guide. Segui le istruzioni specifiche per "
+"le testine riportate in questa pagina per la selezione dell'avvio, le "
+"richieste di sicurezza e il ripristino del firmware:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:346
 msgid ""
 "`Charging checks <https://novacustom.com/knowledge-base/laptop-not-"
 "charging/>`__."
 msgstr ""
+"`Controlli di ricarica <https://novacustom.com/knowledge-base/"
+"laptop-not-charging/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:347
 msgid ""
 "`Boot failure checks <https://novacustom.com/knowledge-base/laptop-is-"
 "not-booting-what-can-i-do/>`__."
 msgstr ""
+"`Controlli di avvio non riusciti <https://novacustom.com/knowledge-base/"
+"laptop-is-not-booting-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:348
 msgid ""
 "`CMOS reset <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
 "reset/>`__."
 msgstr ""
+"`Reset CMOS <https://novacustom.com/knowledge-base/"
+"how-to-perform-a-cmos-reset/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:349
 msgid ""
 "`Power and black-screen checks <https://novacustom.com/knowledge-base"
 "/laptop-not-turning-on-what-can-i-do/>`__."
 msgstr ""
+"`Controlli dell'alimentazione e dello schermo nero <https://novacustom.com/"
+"knowledge-base/laptop-not-turning-on-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:350
 msgid "`Heads disk recovery keys <https://osresearch.net/Keys/>`__."
-msgstr ""
+msgstr "`Chiavi di recupero del disco Heads <https://osresearch.net/Keys/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:351
 msgid ""
 "`Platform-specific hardware recovery notes "
 "<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
 msgstr ""
+"`Note sul ripristino dell'hardware specifiche per piattaforma <https://docs."
+"dasharo.com/unified/novacustom/recovery/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update-1.4.rst:2
 #: ../../source/components/nitropad-nitropc/heads/index.rst:6
@@ -42487,4 +42728,3 @@ msgstr "Contrassegnare l'uscita ritagliata"
 #~ "istruzioni per il Factory Reset (nel "
 #~ "menu a sinistra), partendo dal passo "
 #~ "11."
-
