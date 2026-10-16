@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-15 13:32+0000\n"
+"POT-Creation-Date: 2026-10-16 10:44+0000\n"
 "PO-Revision-Date: 2026-10-15 13:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/fi/>\n"
 "Language: fi\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/fi/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -17287,6 +17286,7 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/index.rst:17
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:2
 #: ../../source/components/software/nitropy/all-platforms/installation.rst:112
+#: ../../source/components/software/nitropy/linux/udev.rst:35
 msgid "Troubleshooting"
 msgstr "Vianmääritys"
 
@@ -22738,8 +22738,8 @@ msgstr "Ota muutos käyttöön napsauttamalla **OK**."
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:152
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:221
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:45
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid "PowerShell"
 msgstr "PowerShell"
 
@@ -25408,7 +25408,6 @@ msgstr ""
 "vilkkumisella (ns. WINK-komento)."
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:182
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid "If the Nitrokey is not detected, proceed the following:"
 msgstr "Jos Nitrokey-avainta ei havaita, toimi seuraavasti:"
 
@@ -25430,8 +25429,6 @@ msgstr ""
 " tästä tiedostosta."
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:190
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:41
 msgid ""
 "Restart udev via ``sudo service udev restart`` or ``udevadm control "
 "--reload-rules && udevadm trigger`` if you are using Fedora."
@@ -27989,25 +27986,17 @@ msgid "Nitrokey is Not Detected on Linux"
 msgstr "Nitrokeyta ei havaita Linuxissa"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:17
-msgid "If the Nitrokey is not detected, proceed as follows:"
-msgstr "Jos Nitrokey-avainta ei havaita, toimi seuraavasti:"
-
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:19
-#, fuzzy
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
-"rules/main/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``."
+"If the Nitrokey is not detected, make sure that you have installed the "
+"Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
-"Kopioi tämä tiedosto `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ "
-"osoitteeseen ``/etc/udev/rules.d/``."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr "Nitrokey-kortinlukijaohjainta ei voi asentaa Windows-käyttöjärjestelmään"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:27
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
 msgid ""
 "On Windows the initialization of the generic smartcard reader driver "
 "fails. The reported device status is ``This device is not working "
@@ -28019,7 +28008,7 @@ msgstr ""
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
 msgid ""
 "This problem exists on Windows 10 and Windows Server 2022 and older. From"
 " Windows 11 and Windows Server 2025 on the behavior is correct and the "
@@ -28029,7 +28018,7 @@ msgstr ""
 "vanhemmissa. Windows 11:stä ja Windows Server 2025:stä alkaen "
 "käyttäytyminen on oikein, eikä alla olevaa ratkaisua tarvita."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:33
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:28
 msgid ""
 "Windows has two generic smartcard reader drivers (WUDF and UMDF2). By "
 "default Windows uses UMDF2, which fails to initialize and therefore is "
@@ -28039,7 +28028,7 @@ msgstr ""
 "Windows käyttää oletusarvoisesti UMDF2:ta, joka ei alustu eikä sitä siksi"
 " ladata Nitrokey-ohjaimeen."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:36
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:31
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
@@ -28047,8 +28036,8 @@ msgstr ""
 "Varmistaaksesi ohjaimen alustuksen onnistumisen, lisää laitteen "
 "alustuksen uusintayritys. Lisää rekisteriin seuraava rekisteriavain."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:57
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:52
 #, fuzzy
 msgid "Regedit"
 msgstr "Nollaa"
@@ -28074,7 +28063,7 @@ msgstr "Tyyppi: ``DWORD (32-bit)``"
 msgid "Data: ``1``"
 msgstr "Tiedot: ``1``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:46
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
@@ -28082,7 +28071,7 @@ msgstr ""
 "Rekisteröintiavain on saatavilla Windows 10:lle (versio 1903 (19H1) ja "
 "uudempi) ja Windows 11:lle."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:53
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:48
 msgid ""
 "If the smartcard reader was before already installed with a failed "
 "initialization you may have to remove them from the registry. In the "
@@ -28103,7 +28092,7 @@ msgstr ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:60
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:55
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
@@ -28111,7 +28100,7 @@ msgstr ""
 "Jos älykortinlukija on asennettu useita kertoja aiemmin, polkuja voi olla"
 " useampi kuin yksi, ja niiden lopussa voi olla korotettu numero."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
@@ -28119,11 +28108,11 @@ msgstr ""
 "Uudelleenkäynnistyksen jälkeen Nitrokey tunnistetaan *Microsoft Usbccid "
 "Smartcard Reader (WUDF)*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:64
 msgid "Nitrokey 3 is Recognized as \"Unknown Smart Card\" on Windows"
 msgstr "Nitrokey 3 tunnistetaan \"Tuntemattomaksi älykortiksi\" Windowsissa."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
 msgid ""
 "On Windows Server 2025, the initialization of the generic smart card "
 "driver fails. The device is recognized as \"Unknown Smart Card\" and no "
@@ -28133,17 +28122,17 @@ msgstr ""
 "epäonnistuu. Laite tunnistetaan \"Tuntemattomaksi älykortiksi\", eikä "
 "ohjainta asenneta."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
 msgid ""
 "To install the correct smart card driver, install the correct driver as "
 "follows."
 msgstr "Asenna oikea älykorttiohjain seuraavasti."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:76
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
 msgid "Open the Windows *Device Manager* (``devmgmt.msc``)."
 msgstr "Avaa Windowsin *Laitehallinta* (``devmgmt.msc``)."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:77
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:72
 msgid ""
 "Open the group *Smart cards* from the device tree. If the group doesn't "
 "exist, make sure the Nitrokey is properly connected."
@@ -28151,13 +28140,13 @@ msgstr ""
 "Avaa ryhmä *Smart cards* laitepuusta. Jos ryhmää ei ole olemassa, "
 "varmista, että Nitrokey on liitetty oikein."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
 msgid "Right-click on *Unknown Smart Card* and select *Update driver*."
 msgstr ""
 "Napsauta hiiren kakkospainikkeella *Tuntematon älykortti* ja valitse "
 "*Päivitä ohjain*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:80
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:75
 msgid ""
 "In the driver update assistant, first select *Browse my computer for "
 "drivers* and then *Let me pick from a list of available drivers on my "
@@ -28175,7 +28164,7 @@ msgstr ""
 "vahvista ohjaimen varoitusikkuna *Kyllä*. Kun ajuri on asennettu, sulje "
 "ajuripäivitysassistentti napsauttamalla *Close* -painiketta."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
 msgid ""
 "The Nitrokey is now recognized in the *Smart cards* group as *Identity "
 "Device (NIST SP 800-73 [PIV])*."
@@ -28183,7 +28172,7 @@ msgstr ""
 "Nitrokey on nyt tunnustettu *älykortit* ryhmässä *Identity Device (NIST "
 "SP 800-73 [PIV])*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:81
 msgid ""
 "Connecting the Nitrokey to a different USB port can require this process "
 "to be repeated."
@@ -28191,11 +28180,11 @@ msgstr ""
 "Nitrokeyn liittäminen toiseen USB-porttiin voi vaatia tämän prosessin "
 "toistamista."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
 msgid "Google and Microsoft Services"
 msgstr "Googlen ja Microsoftin palvelut"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
 msgid ""
 "Currently there seems to be a bug we hope to fix soon which affects the "
 "Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
@@ -28204,34 +28193,34 @@ msgstr ""
 "joka vaikuttaa Nitrokey 3:n toimintaan joidenkin Googlen ja Microsoftin "
 "FIDO2-palvelujen kanssa."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
 msgid "Timeout Bug"
 msgstr "Aikakatkaisuvika"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:96
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
 msgid ""
 "There is a bug with the Nitrokey being recognized by the system, where a "
 "timeout occurs before the connection succeeds."
 msgstr "Järjestelmä tunnistaa Nitrokey-avaimen, jolloin yhteys ei onnistu."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
 msgid "NFC is Not Working"
 msgstr "NFC ei toimi"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:100
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:95
 msgid ""
 "Please make sure FIDO2 is working correctly. Otherwise NFC won't work "
 "either."
 msgstr "Varmista, että FIDO2 toimii oikein. Muuten NFC ei myöskään toimi."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:102
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:97
 #, fuzzy
 msgid "Also check if you are using the right spot on your smartphone."
 msgstr ""
 "Tarkista myös, käytätkö oikeaa kohtaa älypuhelimessasi. Etsi oikea paikka"
 " käyttämällä: `nfc.fail`_."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:104
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
 msgid ""
 "The backside of the Nitrokey has to be held against the smartphone. For "
 "the USB-A version it might be helpful to lift the side with the USB "
@@ -28241,7 +28230,7 @@ msgstr ""
 "USB-A-version kohdalla voi olla hyödyllistä nostaa hieman sitä puolta, "
 "jossa on USB-liitin, jotta tikun päädyn etäisyys pienenee."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:101
 msgid ""
 "If you have a phone cover, try to find the right spot first without it. "
 "Retry afterwards with the cover."
@@ -28249,7 +28238,7 @@ msgstr ""
 "Jos sinulla on puhelimen suojus, yritä ensin löytää oikea paikka ilman "
 "sitä. Yritä sen jälkeen uudelleen suojan kanssa."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:103
 msgid ""
 "The search of the optimal spot sometimes took up to 20-30 sec. In our "
 "experience holding the Nitrokey in an horizontal orientation yields "
@@ -28263,15 +28252,15 @@ msgstr ""
 "asiakaspalveluumme. Optimaalisen avun saamiseksi liitä mukaan "
 "lähetys-/tilausnumero ja älypuhelimesi malli."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
 msgid "OpenPGP Troubleshooting"
 msgstr "OpenPGP:n vianmääritys"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:114
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:109
 msgid "GnuPG: OpenPGP Card Not Available"
 msgstr "GnuPG: OpenPGP-korttia ei ole saatavilla"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:116
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
@@ -28279,7 +28268,7 @@ msgstr ""
 "**Ongelma:** GnuPG ei pääse käsiksi Nitrokey 3:een ja näyttää seuraavan "
 "virheilmoituksen::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:123
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:118
 #, fuzzy
 msgid ""
 "**Solution:** There are two common smartcard services on Linux systems: "
@@ -28294,7 +28283,7 @@ msgstr ""
 "Sen integroitu ``ccid`` -ajuri yrittää käyttää älykorttia suoraan. ` "
 "`pcsc`` -ajurit käyttävät sen sijaan ``pcscd`` -demonia."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:129
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:124
 msgid ""
 "A smartcard can only be accessed directly by one daemon. This means that "
 "depending on the startup order, ``pcscd`` might lock the card before "
@@ -28314,7 +28303,7 @@ msgstr ""
 "``scdaemon`` esimerkiksi ``gpg-connect-agent \"SCD KILLSCD\" /bye``. Jos "
 "tämä ei korjaa ongelmaa, katso lisätietoja seuraavasta osiosta."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:130
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
@@ -28322,24 +28311,24 @@ msgstr ""
 "Vaihtoehtoisesti voit poistaa käytöstä tai asentaa ``pcscd``, jotta "
 "vältät tämän ristiriidan."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:133
 #: ../../source/components/software/nk-app2/keepassxc.rst:104
 msgid "pcscd: Card Not Found"
 msgstr "pcscd: Korttia ei löydy"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:140
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
 #: ../../source/components/software/nk-app2/keepassxc.rst:106
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr "**Ongelma:** Sovellus, jossa käytetään ``pcscd``, ei näytä Nitrokey 3:a."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
 #: ../../source/components/software/nk-app2/keepassxc.rst:109
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr "**Ratkaisu:** ` `scdaemon`` ei ole käynnissä (katso edellinen kohta)::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:148
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
 #: ../../source/components/software/nk-app2/keepassxc.rst:114
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
@@ -28348,7 +28337,7 @@ msgstr ""
 "Luettele nyt älykortit, jotka ``pcscd`` tunnistaa ``pcsc_scan -r`` "
 "kanssa. Sinun pitäisi nähdä tällainen merkintä::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:151
 #: ../../source/components/software/nk-app2/keepassxc.rst:122
 msgid ""
 "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and "
@@ -28361,12 +28350,12 @@ msgstr ""
 " että ``libccid`` versio on ajan tasalla. Tuki Nitrokey 3:lle lisättiin "
 "``libccid`` 1.5.0:ssa."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 #: ../../source/components/software/nk-app2/keepassxc.rst:127
 msgid "Updating The Device Database"
 msgstr "Laitetietokannan päivittäminen"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 #: ../../source/components/software/nk-app2/keepassxc.rst:129
 msgid ""
 "If you cannot update ``libccid`` to a supported version, you have to "
@@ -28376,12 +28365,12 @@ msgstr ""
 "Jos et voi päivittää ``libccid`` tuettuun versioon, sinun on päivitettävä"
 " laitetietokanta manuaalisesti. Tietokannan polku riippuu jakelustasi:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:166
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
 #: ../../source/components/software/nk-app2/keepassxc.rst:132
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:168
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 #: ../../source/components/software/nk-app2/keepassxc.rst:134
 msgid ""
 "Make sure to backup the file before overwriting it. You can download an "
@@ -28398,11 +28387,11 @@ msgstr ""
 "tiedoston, käynnistä uudelleen ``pcscd`` ja suorita ``pcsc_scan -r`` "
 "uudelleen. Nitrokey 3:n pitäisi nyt näkyä."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:169
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr "Päivitys sivuston update.nitrokey.com kautta ei toimi"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:176
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:171
 msgid ""
 "Currently the web updater doesn't support the Nitrokey 3. However you can"
 " get the latest firmware using these `instructions <firmware-"
@@ -28412,17 +28401,17 @@ msgstr ""
 "hankkia uusimman laiteohjelmiston käyttämällä näitä `ohjeita <firmware-"
 "update.html>`_."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
 #, fuzzy
 msgid "PIV Troubleshooting"
 msgstr "Vianmääritys"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:182
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:177
 #, fuzzy
 msgid "pyscard is not available"
 msgstr "GnuPG: OpenPGP-korttia ei ole saatavilla"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:184
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
 #, fuzzy
 msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
@@ -28431,7 +28420,7 @@ msgstr ""
 "Jos pyscard ei ole nitropyn käytettävissä, saatat saada seuraavan "
 "virheilmoituksen, kun yrität käyttää PIV-toimintoa:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:183
 #, fuzzy
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
@@ -28440,7 +28429,7 @@ msgstr ""
 "Voit korjata tämän virheen asentamalla nitropyn ja "
 "`pcsc`-lisäriippuvuudet:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:193
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
 #, fuzzy
 msgid ""
 "If you install pynitrokey through another distribution channel, please "
@@ -28942,23 +28931,6 @@ msgid ""
 msgstr ""
 "Voit tarkistaa, että Nitrokey Passkey on tunnistettu oikein, "
 "tarkistamalla, näkyykö se `lsusb`-koodilla."
-
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:35
-#, fuzzy
-msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to "
-"``/etc/udev/rules.d/``. In very rare cases, the system will need the "
-"`older version "
-"<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
-" of this file."
-msgstr ""
-"Kopioi tämä tiedosto `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ "
-"osoitteeseen ``/etc/udev/rules.d/``. Hyvin harvinaisissa tapauksissa "
-"järjestelmä tarvitsee `vanhemman version "
-"<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
-" tästä tiedostosta."
 
 #: ../../source/components/nitrokeys/pro/factory-reset.rst:6
 msgid "There are two types of factory resets for Nitrokey Pro devices:"
@@ -30101,6 +30073,7 @@ msgstr ""
 "<https://github.com/Nitrokey/pynitrokey#installation>`__."
 
 #: ../../source/components/nitrokeys/start/multiple-identities.rst:43
+#: ../../source/components/software/nitropy/linux/udev.rst:29
 msgid "Limitations"
 msgstr "Rajoitukset"
 
@@ -31545,10 +31518,10 @@ msgid ""
 "already runs Heads. It also applies when an OEM factory reset has been "
 "performed but the TPM counter still needs to be reset."
 msgstr ""
-"Käytä tätä ohjetta Nitrokey Heads -laiteohjelmiston päivittämiseen NitroPad-"
-"laitteessa, jossa Heads on jo käytössä. Ohje koskee myös tilanteita, joissa "
-"laite on palautettu tehdasasetuksiin (OEM-palautus), mutta TPM-laskuri on "
-"vielä nollattava."
+"Käytä tätä ohjetta Nitrokey Heads -laiteohjelmiston päivittämiseen "
+"NitroPad-laitteessa, jossa Heads on jo käytössä. Ohje koskee myös "
+"tilanteita, joissa laite on palautettu tehdasasetuksiin (OEM-palautus), "
+"mutta TPM-laskuri on vielä nollattava."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:31
 msgid ""
@@ -31556,9 +31529,9 @@ msgid ""
 " both the adapter and battery connected throughout flashing and the first"
 " restart."
 msgstr ""
-"Liitä alkuperäinen virtalähde ja lataa akku yli 70 %:n täyttöasteeseen. Pidä "
-"sekä virtalähde että akku kytkettyinä koko ohjelmiston päivittämisen ajan ja "
-"ensimmäisen uudelleenkäynnistyksen aikana."
+"Liitä alkuperäinen virtalähde ja lataa akku yli 70 %:n täyttöasteeseen. "
+"Pidä sekä virtalähde että akku kytkettyinä koko ohjelmiston päivittämisen"
+" ajan ja ensimmäisen uudelleenkäynnistyksen aikana."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:36
 msgid ""
@@ -31567,11 +31540,11 @@ msgid ""
 "not rely on USB-C charging alone: an EC update can reset the USB Power "
 "Delivery controller before the adapter check, causing the update to fail."
 msgstr ""
-"NitroPad NV41-, V54- ja V56-malleissa käytä **DC-tyyppistä laturia**, kun "
-"suoritat päivityksiä, jotka synkronoivat Embedded Controller (EC) -"
-"laiteohjelmiston. Älä luota pelkästään USB-C-lataukseen: EC-päivitys voi "
-"nollata USB Power Delivery -ohjaimen ennen laturin tarkistusta, mikä voi "
-"aiheuttaa päivityksen epäonnistumisen."
+"NitroPad NV41-, V54- ja V56-malleissa käytä **DC-tyyppistä laturia**, kun"
+" suoritat päivityksiä, jotka synkronoivat Embedded Controller (EC) "
+"-laiteohjelmiston. Älä luota pelkästään USB-C-lataukseen: EC-päivitys voi"
+" nollata USB Power Delivery -ohjaimen ennen laturin tarkistusta, mikä voi"
+" aiheuttaa päivityksen epäonnistumisen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:41
 msgid ""
@@ -31580,9 +31553,10 @@ msgid ""
 "requirements and model-specific issues. Download the ZIP archive for your"
 " exact model:"
 msgstr ""
-"Lue `Nitrokey Heads -julkaisutiedot <https://github.com/Nitrokey/heads/"
-"releases/latest>`__, josta löydät päivitysvaatimukset ja mallikohtaiset "
-"tiedot. Lataa juuri omaa malliasi vastaava ZIP-arkisto:"
+"Lue `Nitrokey Heads -julkaisutiedot "
+"<https://github.com/Nitrokey/heads/releases/latest>`__, josta löydät "
+"päivitysvaatimukset ja mallikohtaiset tiedot. Lataa juuri omaa malliasi "
+"vastaava ZIP-arkisto:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:45
 #, fuzzy
@@ -31622,8 +31596,8 @@ msgid ""
 "menu."
 msgstr ""
 "Tarkista arkisto alla kuvatulla tavalla ja kopioi se sitten USB-"
-"muistitikulle. **Älä muokkaa ZIP-arkistoa; älä pura sitä tai nimeä toista "
-"tiedostoa uudelleen niin, että sille annetaan ZIP-tiedostotunniste.** "
+"muistitikulle. **Älä muokkaa ZIP-arkistoa; älä pura sitä tai nimeä toista"
+" tiedostoa uudelleen niin, että sille annetaan ZIP-tiedostotunniste.** "
 "Valitse tämä arkisto Heads-päivitysvalikosta."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:56
@@ -31632,9 +31606,10 @@ msgid ""
 " the disk recovery passphrase before updating; it may be needed if TPM-"
 "based disk unlocking must be reconfigured."
 msgstr ""
-"Varmuuskopioi tärkeät tiedot. Jos levyn salaus on käytössä, varmista ennen "
-"päivitystä, että sinulla on levyn palautussalasana; sitä saatetaan tarvita, "
-"jos TPM-pohjainen levyn lukituksen avaaminen on määritettävä uudelleen."
+"Varmuuskopioi tärkeät tiedot. Jos levyn salaus on käytössä, varmista "
+"ennen päivitystä, että sinulla on levyn palautussalasana; sitä saatetaan "
+"tarvita, jos TPM-pohjainen levyn lukituksen avaaminen on määritettävä "
+"uudelleen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:62
 msgid ""
@@ -31646,14 +31621,14 @@ msgid ""
 "BIOS and EC versions are compatible before proceeding. Upstream version "
 "numbers do not necessarily match Nitrokey release numbers."
 msgstr ""
-"ZIP-päivitykset edellyttävät, että laitteessa on asennettuna niitä tukeva "
-"Heads-versio. Jos arkistoa ei hyväksytä tai jos olet päivittämässä erittäin "
-"vanhaa laiteohjelmistoa, tarkista julkaisutiedot ja ota yhteyttä Nitrokey-"
-"tukeen osoitteessa ` <https://www.nitrokey.com/contact>` __ sen sijaan, että "
-"yrittäisit arvata päivityspolkua. Jos laiteohjelmisto on asennettu tai "
-"muutettu manuaalisesti, varmista ennen jatkamista, että BIOS- ja EC-versiot "
-"ovat yhteensopivia. Ylävirran versionumerot eivät välttämättä vastaa "
-"Nitrokey-julkaisunumeroita."
+"ZIP-päivitykset edellyttävät, että laitteessa on asennettuna niitä tukeva"
+" Heads-versio. Jos arkistoa ei hyväksytä tai jos olet päivittämässä "
+"erittäin vanhaa laiteohjelmistoa, tarkista julkaisutiedot ja ota yhteyttä"
+" Nitrokey-tukeen osoitteessa ` <https://www.nitrokey.com/contact>` __ sen"
+" sijaan, että yrittäisit arvata päivityspolkua. Jos laiteohjelmisto on "
+"asennettu tai muutettu manuaalisesti, varmista ennen jatkamista, että "
+"BIOS- ja EC-versiot ovat yhteensopivia. Ylävirran versionumerot eivät "
+"välttämättä vastaa Nitrokey-julkaisunumeroita."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:71
 msgid "Firmware Signature Check"
@@ -31665,9 +31640,9 @@ msgid ""
 "Nitrokey release as the firmware. Place these files and the ZIP archive "
 "in one directory on the computer used to download them."
 msgstr ""
-"**** ` `` ` että ` ` samasta Nitrokey-julkaisusta kuin laiteohjelmistokin. "
-"Sijoita nämä tiedostot ja ZIP-arkisto yhteen kansioon tietokoneelle, jolla "
-"ne ladattiin.sha256sum`sha256sum.sig`"
+"**** ` `` ` että ` ` samasta Nitrokey-julkaisusta kuin "
+"laiteohjelmistokin. Sijoita nämä tiedostot ja ZIP-arkisto yhteen kansioon"
+" tietokoneelle, jolla ne ladattiin.sha256sum`sha256sum.sig`"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:77
 #, python-format
@@ -31679,15 +31654,14 @@ msgid ""
 " Check the key fingerprint against the release's signing information."
 msgstr ""
 "Tuo Nitrokey-julkaisutiedoissa mainittu allekirjoitusavain. Markus "
-"Meissnerin allekirjoittamissa julkaisuissa käytetään avainta, joka löytyy "
-"tältä `-avainpalvelimen merkinnältä: <https://keyserver.ubuntu.com/pks/"
-"lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__. Vertaa "
-"avaimen sormenjälkeä julkaisun allekirjoitustietoihin."
+"Meissnerin allekirjoittamissa julkaisuissa käytetään avainta, joka löytyy"
+" tältä `-avainpalvelimen merkinnältä: "
+"<https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__."
+" Vertaa avaimen sormenjälkeä julkaisun allekirjoitustietoihin."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:82
 msgid "From that directory, verify the checksum manifest's signature:"
-msgstr ""
-"Tarkista kyseisestä hakemistosta tarkistussumman manifestin allekirjoitus:"
+msgstr "Tarkista kyseisestä hakemistosta tarkistussumman manifestin allekirjoitus:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:88
 msgid ""
@@ -31700,7 +31674,8 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:91
 msgid "Verify the downloaded archive against the authenticated manifest:"
 msgstr ""
-"Tarkista ladatun arkiston sisältö vertaamalla sitä varmennettuun manifestiin:"
+"Tarkista ladatun arkiston sisältö vertaamalla sitä varmennettuun "
+"manifestiin:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:97
 msgid ""
@@ -31710,9 +31685,9 @@ msgid ""
 "verification."
 msgstr ""
 "Varmista, että **mallikohtainen ZIP-arkistosi** näkyy tulosteessa "
-"seuraavalla rivillä: ``OK``. Pelkkä kelvollinen manifestin allekirjoitus ei "
-"riitä ladatun ZIP-tiedoston tarkistamiseen. Älä asenna tiedostoa, jonka "
-"tarkistussumman tarkistus on epäonnistunut tai puuttuu."
+"seuraavalla rivillä: ``OK``. Pelkkä kelvollinen manifestin allekirjoitus "
+"ei riitä ladatun ZIP-tiedoston tarkistamiseen. Älä asenna tiedostoa, "
+"jonka tarkistussumman tarkistus on epäonnistunut tai puuttuu."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:103
 #, fuzzy
@@ -31732,12 +31707,13 @@ msgstr ""
 "Ensimmäinen uudelleenkäynnistys voi kestää huomattavasti tavallista "
 "kauemmin. EC-laiteohjelmisto saatetaan päivittää tämän "
 "uudelleenkäynnistyksen aikana, ja järjestelmä suorittaa muistin "
-"uudelleenkoulutuksen ennen kuin Heads-näyttö tulee näkyviin. **Näyttö voi "
-"pysyä täysin mustana noin minuutin ajan tai pidempään.** Lisätty RAM-muisti "
-"voi pidentää viivettä; järjestelmässä, jossa on 96 GB muistia, käynnistys "
-"voi kestää **yli kaksi minuuttia**. Nämä ajat ovat esimerkkejä, eivätkä ne "
-"edusta enimmäisodotusaikaa. Myöhemmät käynnistykset pitäisi olla nopeampia, "
-"kun muistin uudelleenkoulutuksen tulokset on tallennettu välimuistiin."
+"uudelleenkoulutuksen ennen kuin Heads-näyttö tulee näkyviin. **Näyttö voi"
+" pysyä täysin mustana noin minuutin ajan tai pidempään.** Lisätty RAM-"
+"muisti voi pidentää viivettä; järjestelmässä, jossa on 96 GB muistia, "
+"käynnistys voi kestää **yli kaksi minuuttia**. Nämä ajat ovat "
+"esimerkkejä, eivätkä ne edusta enimmäisodotusaikaa. Myöhemmät "
+"käynnistykset pitäisi olla nopeampia, kun muistin uudelleenkoulutuksen "
+"tulokset on tallennettu välimuistiin."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:114
 msgid ""
@@ -31750,11 +31726,11 @@ msgid ""
 msgstr ""
 "**Älä keskeytä päivitystä tai ensimmäistä uudelleenkäynnistystä, vaikka "
 "näyttö olisi musta.** Älä pidä virtapainiketta painettuna, irrota "
-"virtalähdettä, irrota kumpaakaan akkua tai suorita nollausta, kun päivitys "
-"saattaa vielä olla käynnissä. Laiteohjelmiston kirjoituksen keskeyttäminen, "
-"mukaan lukien EC-päivityksen keskeyttäminen uudelleenkäynnistyksen aikana, "
-"voi johtaa siihen, että NitroPad ei käynnisty, jolloin tarvitaan ulkoista "
-"laitteiston palautusta."
+"virtalähdettä, irrota kumpaakaan akkua tai suorita nollausta, kun "
+"päivitys saattaa vielä olla käynnissä. Laiteohjelmiston kirjoituksen "
+"keskeyttäminen, mukaan lukien EC-päivityksen keskeyttäminen "
+"uudelleenkäynnistyksen aikana, voi johtaa siihen, että NitroPad ei "
+"käynnisty, jolloin tarvitaan ulkoista laitteiston palautusta."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:120
 msgid ""
@@ -31764,11 +31740,11 @@ msgid ""
 "the update is still running, contact Nitrokey support before forcing a "
 "shutdown."
 msgstr ""
-"Flash-päivityksen onnistuminen ei tarkoita, että sitä seuraava EC-päivitys "
-"olisi päättynyt. Jätä laite virtaan ja odota kärsivällisesti, kunnes Heads-"
-"kuvake tulee näkyviin. Jos tilanne ei etene pitkän odottelun jälkeen etkä "
-"ole varma, onko päivitys vielä käynnissä, ota yhteyttä Nitrokey-tukeen ennen "
-"kuin sammutat laitteen väkisin."
+"Flash-päivityksen onnistuminen ei tarkoita, että sitä seuraava EC-"
+"päivitys olisi päättynyt. Jätä laite virtaan ja odota kärsivällisesti, "
+"kunnes Heads-kuvake tulee näkyviin. Jos tilanne ei etene pitkän odottelun"
+" jälkeen etkä ole varma, onko päivitys vielä käynnissä, ota yhteyttä "
+"Nitrokey-tukeen ennen kuin sammutat laitteen väkisin."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:128
 msgid ""
@@ -31778,8 +31754,8 @@ msgid ""
 msgstr ""
 "Alla olevat kaksi ensimmäistä näyttökuvaa ovat valinnaisia. Jos niitä ei "
 "näy, aloita vaiheesta 3. Näyttökuvat havainnollistavat valikkopolkua; "
-"tiedostonimet ja näytön yksityiskohdat voivat poiketa uusimmissa versioissa. "
-"Noudata yllä olevia ZIP-ohjeita."
+"tiedostonimet ja näytön yksityiskohdat voivat poiketa uusimmissa "
+"versioissa. Noudata yllä olevia ZIP-ohjeita."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:132
 #, fuzzy
@@ -31808,7 +31784,8 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:141
 msgid "Second optional Heads error screen before entering the boot menu."
 msgstr ""
-"Toinen valinnainen Heads-virheilmoitus ennen käynnistysvalikkoon siirtymistä."
+"Toinen valinnainen Heads-virheilmoitus ennen käynnistysvalikkoon "
+"siirtymistä."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:144
 #, fuzzy
@@ -31851,22 +31828,23 @@ msgstr "Älä pyydä vahvistusta ennen salasanan muuttamista."
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:164
 msgid "Select the verified, intact ``.zip`` archive for your NitroPad model."
 msgstr ""
-"Valitse NitroPad-mallillesi tarkistettu ja ehjä arkisto osoitteesta ``.zip``."
+"Valitse NitroPad-mallillesi tarkistettu ja ehjä arkisto osoitteesta "
+"``.zip``."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:166
 msgid "Heads firmware file selection screen; select the model-specific ZIP."
 msgstr ""
-"Siirry laiteohjelmiston tiedoston valintanäyttöön; valitse mallikohtainen "
-"ZIP-tiedosto."
+"Siirry laiteohjelmiston tiedoston valintanäyttöön; valitse mallikohtainen"
+" ZIP-tiedosto."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:169
 msgid ""
 "Confirm with Enter and allow flashing to finish. If an error is reported,"
 " record its exact text and contact Nitrokey support."
 msgstr ""
-"Vahvista painamalla Enter-näppäintä ja odota, kunnes vilkkuminen päättyy. "
-"Jos järjestelmä ilmoittaa virheestä, kirjoita virheilmoituksen tarkka teksti "
-"muistiin ja ota yhteyttä Nitrokey-tukeen."
+"Vahvista painamalla Enter-näppäintä ja odota, kunnes vilkkuminen päättyy."
+" Jos järjestelmä ilmoittaa virheestä, kirjoita virheilmoituksen tarkka "
+"teksti muistiin ja ota yhteyttä Nitrokey-tukeen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:172
 msgid "Heads firmware flashing confirmation."
@@ -31882,8 +31860,8 @@ msgstr ""
 "Kun sinua pyydetään, paina Enter-näppäintä käynnistääksesi laitteen "
 "uudelleen. **Jätä virtalähde ja akku kytkettyinä ja odota, kunnes Heads-"
 "kuvake ilmestyy uudelleen, vaikka näyttö pysyisikin mustana.** Noudata "
-"ohjeita osoitteessa `Käynnistysaika päivityksen jälkeen <firmware-update.html"
-"#boot-time-after-update>`__; älä sammuta laitetta väkisin."
+"ohjeita osoitteessa `Käynnistysaika päivityksen jälkeen <firmware-"
+"update.html#boot-time-after-update>`__; älä sammuta laitetta väkisin."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:179
 msgid "Heads prompt to restart after flashing."
@@ -31907,13 +31885,14 @@ msgid ""
 " version. A TPM factory reset changes the security configuration; it is "
 "not a repair for a NitroPad that cannot power on."
 msgstr ""
-"Noudata Heads-ohjelmiston ohjeita salaisuuksien uudelleensalauksessa ja TPM-"
-"levyn avausavaimen salasanan päivittämisessä, jos sellainen on määritetty. "
-"Jos näyttöön ilmestyy viesti ``ERROR: TOTP Generation Failed!``, katso "
-"ohjeet kohdasta :doc:`factory-reset-heads2` tai, vanhemman laiteohjelmiston "
-"tapauksessa, kohdasta :doc:`factory-reset`. Käytä Heads-versiotasi vastaavaa "
-"menettelytapaa. TPM:n tehdasasetusten palautus muuttaa tietoturvamäärityksiä;"
-" se ei korjaa NitroPadia, jota ei voi käynnistää."
+"Noudata Heads-ohjelmiston ohjeita salaisuuksien uudelleensalauksessa ja "
+"TPM-levyn avausavaimen salasanan päivittämisessä, jos sellainen on "
+"määritetty. Jos näyttöön ilmestyy viesti ``ERROR: TOTP Generation "
+"Failed!``, katso ohjeet kohdasta :doc:`factory-reset-heads2` tai, "
+"vanhemman laiteohjelmiston tapauksessa, kohdasta :doc:`factory-reset`. "
+"Käytä Heads-versiotasi vastaavaa menettelytapaa. TPM:n tehdasasetusten "
+"palautus muuttaa tietoturvamäärityksiä; se ei korjaa NitroPadia, jota ei "
+"voi käynnistää."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:196
 msgid ""
@@ -31924,10 +31903,11 @@ msgid ""
 " particularly on NitroPad V54 and V56."
 msgstr ""
 "NitroPad NV41 -mallissa on raportoitu toistuvia jumittumisia Heads-"
-"käynnistysnäytössä. Jos ongelma jatkuu päivityksen päätyttyä, ota yhteyttä "
-"Nitrokey-tukeen saadaksesi mallikohtaisia ohjeita. Älä tee toistuvia "
-"pakotettuja uudelleenkäynnistyksiä, kun näyttö on musta EC-päivityksen tai "
-"muistiharjoituksen aikana, etenkin NitroPad V54- ja V56-malleissa."
+"käynnistysnäytössä. Jos ongelma jatkuu päivityksen päätyttyä, ota "
+"yhteyttä Nitrokey-tukeen saadaksesi mallikohtaisia ohjeita. Älä tee "
+"toistuvia pakotettuja uudelleenkäynnistyksiä, kun näyttö on musta EC-"
+"päivityksen tai muistiharjoituksen aikana, etenkin NitroPad V54- ja "
+"V56-malleissa."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:205
 msgid ""
@@ -31937,11 +31917,12 @@ msgid ""
 " layouts differ between models; use the correct model's disassembly "
 "instructions."
 msgstr ""
-"Määritä ensin oire: virta- tai latausmerkkivalot eivät syty, laite on päällä "
-"mutta näyttö on musta, tai Heads käynnistyy mutta käyttöjärjestelmä ei "
-"käynnisty. Seuraavat tarkistusohjeet koskevat NitroPad-laitteita, joissa on "
-"Nitrokey Heads -ohjelmisto. Laitteiden rakenne vaihtelee mallikohtaisesti; "
-"käytä juuri kyseisen mallin purkuohjeita."
+"Määritä ensin oire: virta- tai latausmerkkivalot eivät syty, laite on "
+"päällä mutta näyttö on musta, tai Heads käynnistyy mutta "
+"käyttöjärjestelmä ei käynnisty. Seuraavat tarkistusohjeet koskevat "
+"NitroPad-laitteita, joissa on Nitrokey Heads -ohjelmisto. Laitteiden "
+"rakenne vaihtelee mallikohtaisesti; käytä juuri kyseisen mallin "
+"purkuohjeita."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:212
 msgid ""
@@ -31952,11 +31933,11 @@ msgid ""
 "longer updating."
 msgstr ""
 "Kun laite käynnistetään ensimmäisen kerran päivityksen jälkeen, noudata "
-"ohjeita osoitteessa `Boot Time After Update <firmware-update.html#boot-time-"
-"after-update>`__ ennen vianmäärityksen aloittamista. Seuraavassa esitetyt "
-"nollaukset ja laitteistotarkistukset koskevat vain laitteita, joiden "
-"päivitys on päättynyt tai joiden osalta tuki on vahvistanut, että päivitys "
-"ei ole enää käynnissä."
+"ohjeita osoitteessa `Boot Time After Update <firmware-update.html#boot-"
+"time-after-update>`__ ennen vianmäärityksen aloittamista. Seuraavassa "
+"esitetyt nollaukset ja laitteistotarkistukset koskevat vain laitteita, "
+"joiden päivitys on päättynyt tai joiden osalta tuki on vahvistanut, että "
+"päivitys ei ole enää käynnissä."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:218
 msgid "No Power or Charging Indicators"
@@ -31968,8 +31949,8 @@ msgid ""
 "charging socket for damage, debris or a loose connection. Disconnect "
 "power before inspecting the socket; do not insert metal objects."
 msgstr ""
-"Tarkista pistorasia, sovitin, kaapeli ja tasavirtapistoke. Tarkista, ettei "
-"kaapelissa tai latauspistokkeessa ole vaurioita, roskia tai löysiä "
+"Tarkista pistorasia, sovitin, kaapeli ja tasavirtapistoke. Tarkista, "
+"ettei kaapelissa tai latauspistokkeessa ole vaurioita, roskia tai löysiä "
 "liitoksia. Irrota virta ennen pistorasian tarkastamista; älä työnnä "
 "metalliesineitä pistorasiaan."
 
@@ -31981,10 +31962,10 @@ msgid ""
 " V56 firmware updates, as described in Preparation."
 msgstr ""
 "Jos mahdollista, kokeile toimivaksi todettua, yhteensopivaa laturia. "
-"Varmista, että jännite, napaisuus, liitin ja teho vastaavat vaatimuksia; älä "
-"käytä mitä tahansa kannettavan tietokoneen laturia. Käytä NV41-, V54- ja V56-"
-"laiteohjelmistopäivityksiin alkuperäistä DC-tynnyri-liitinlaturia, kuten "
-"kohdassa ”Valmistelut” on kuvattu."
+"Varmista, että jännite, napaisuus, liitin ja teho vastaavat vaatimuksia; "
+"älä käytä mitä tahansa kannettavan tietokoneen laturia. Käytä NV41-, V54-"
+" ja V56-laiteohjelmistopäivityksiin alkuperäistä DC-tynnyri-"
+"liitinlaturia, kuten kohdassa ”Valmistelut” on kuvattu."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:229
 msgid ""
@@ -31993,10 +31974,10 @@ msgid ""
 " system's battery status to distinguish a missing adapter from a detected"
 " adapter that is not charging."
 msgstr ""
-"Jos akku on mahdollisesti tyhjä, anna sen latautua vähintään 30 minuuttia "
-"ennen kuin yrität käynnistää NitroPadin uudelleen. Jos laite käynnistyy, "
-"tarkista käyttöjärjestelmän akkutila selvittääksesi, onko laturi kadonnut "
-"vai onko se kyllä paikallaan, mutta ei lataa."
+"Jos akku on mahdollisesti tyhjä, anna sen latautua vähintään 30 minuuttia"
+" ennen kuin yrität käynnistää NitroPadin uudelleen. Jos laite käynnistyy,"
+" tarkista käyttöjärjestelmän akkutila selvittääksesi, onko laturi "
+"kadonnut vai onko se kyllä paikallaan, mutta ei lataa."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:234
 msgid ""
@@ -32005,10 +31986,10 @@ msgid ""
 "button for 30 seconds, release it, reconnect the adapter and try starting"
 " once."
 msgstr ""
-"Voit kokeilla virran nollausta päivityksen keskeytyttyä seuraavasti: sammuta "
-"NitroPad, irrota virtalähde pistorasiasta ja irrota ulkoiset USB-laitteet. "
-"Pidä virtapainiketta painettuna 30 sekuntia, vapauta se, kytke virtalähde "
-"takaisin pistorasiaan ja yritä käynnistää laite kerran."
+"Voit kokeilla virran nollausta päivityksen keskeytyttyä seuraavasti: "
+"sammuta NitroPad, irrota virtalähde pistorasiasta ja irrota ulkoiset USB-"
+"laitteet. Pidä virtapainiketta painettuna 30 sekuntia, vapauta se, kytke "
+"virtalähde takaisin pistorasiaan ja yritä käynnistää laite kerran."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:238
 msgid ""
@@ -32025,9 +32006,9 @@ msgid ""
 "need to check the power circuitry as well as the BIOS and EC firmware."
 msgstr ""
 "Pelkästään puuttuvat LED-valot eivät riitä osoittamaan, onko vika "
-"laiteohjelmistossa vai laitteistossa, eivätkä ne todista, että SSD-asemat "
-"olisivat vaurioituneet. Tukipalvelun on ehkä tarkistettava virransyöttöpiiri "
-"sekä BIOS- ja EC-laiteohjelmistot."
+"laiteohjelmistossa vai laitteistossa, eivätkä ne todista, että SSD-asemat"
+" olisivat vaurioituneet. Tukipalvelun on ehkä tarkistettava "
+"virransyöttöpiiri sekä BIOS- ja EC-laiteohjelmistot."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:246
 msgid "Power Is Present but the Screen Stays Black"
@@ -32038,8 +32019,8 @@ msgid ""
 "Exclude the normal first-start delay described above and confirm that "
 "power and the battery are available."
 msgstr ""
-"Jätä edellä kuvattu normaali ensimmäisen käynnistyksen viive huomiotta ja "
-"varmista, että virta ja akku ovat käytettävissä."
+"Jätä edellä kuvattu normaali ensimmäisen käynnistyksen viive huomiotta ja"
+" varmista, että virta ja akku ovat käytettävissä."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:251
 msgid ""
@@ -32049,11 +32030,11 @@ msgid ""
 "supported by the model and firmware. No external picture alone does not "
 "prove that the motherboard is faulty."
 msgstr ""
-"Kun päivitys on päättynyt, kokeile ulkoista näyttöä HDMI-liitännän kautta. "
-"Jos ulkoinen näyttö toimii, vika saattaa olla sisäisessä näytössä tai sen "
-"liitännässä. Yhteensopiva USB-C-näyttö tai -telakka voi myös auttaa, jos "
-"malli ja laiteohjelmisto tukevat niitä. Pelkkä ulkoisen kuvan puuttuminen ei "
-"riitä todisteeksi siitä, että emolevy olisi viallinen."
+"Kun päivitys on päättynyt, kokeile ulkoista näyttöä HDMI-liitännän "
+"kautta. Jos ulkoinen näyttö toimii, vika saattaa olla sisäisessä näytössä"
+" tai sen liitännässä. Yhteensopiva USB-C-näyttö tai -telakka voi myös "
+"auttaa, jos malli ja laiteohjelmisto tukevat niitä. Pelkkä ulkoisen kuvan"
+" puuttuminen ei riitä todisteeksi siitä, että emolevy olisi viallinen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:257
 msgid "Try the CMOS reset below."
@@ -32069,14 +32050,14 @@ msgid ""
 "about 30 minutes for a single-module trial before changing the "
 "configuration again."
 msgstr ""
-"Jos voit työskennellä turvallisesti NitroPadin sisällä, irrota virtalähde ja "
-"pääakku ennen RAM-muistin asettamista takaisin paikalleen. Jos moduuleja on "
-"kaksi, testaa yksi moduuli kerrallaan ja kytke akku ja virtalähde takaisin "
-"paikalleen jokaisen käynnistyksen yhteydessä. Jos moduuleja on yksi, testaa "
-"toinen korttipaikka. Anna muistille aikaa sopeutua jokaisen muutoksen "
-"jälkeen; laitteiston vianmääritysoppaassa suositellaan, että odotat noin 30 "
-"minuuttia yhden moduulin kokeilun jälkeen, ennen kuin muutat kokoonpanoa "
-"uudelleen."
+"Jos voit työskennellä turvallisesti NitroPadin sisällä, irrota virtalähde"
+" ja pääakku ennen RAM-muistin asettamista takaisin paikalleen. Jos "
+"moduuleja on kaksi, testaa yksi moduuli kerrallaan ja kytke akku ja "
+"virtalähde takaisin paikalleen jokaisen käynnistyksen yhteydessä. Jos "
+"moduuleja on yksi, testaa toinen korttipaikka. Anna muistille aikaa "
+"sopeutua jokaisen muutoksen jälkeen; laitteiston vianmääritysoppaassa "
+"suositellaan, että odotat noin 30 minuuttia yhden moduulin kokeilun "
+"jälkeen, ennen kuin muutat kokoonpanoa uudelleen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:266
 msgid ""
@@ -32098,8 +32079,8 @@ msgid ""
 " guide. Check that the SSD is detected and use :doc:`default-boot` to "
 "select the appropriate operating system boot option."
 msgstr ""
-"Jos Heads-valikko on näkyvissä, korjaa ensin mahdolliset ilmoitetut TPM-, "
-"allekirjoitus- tai levyn lukituksen avaamiseen liittyvät virheet Heads-"
+"Jos Heads-valikko on näkyvissä, korjaa ensin mahdolliset ilmoitetut TPM-,"
+" allekirjoitus- tai levyn lukituksen avaamiseen liittyvät virheet Heads-"
 "ohjeiden ja vastaavan Nitrokey-oppaan avulla. Tarkista, että SSD "
 "tunnistetaan, ja valitse sopiva käyttöjärjestelmän käynnistysvaihtoehto "
 "komennolla :doc:`default-boot`."
@@ -32111,10 +32092,10 @@ msgid ""
 " it can erase the drive. Reinstalling an operating system cannot repair a"
 " NitroPad that does not power on or cannot reach Heads."
 msgstr ""
-"Jos käyttöjärjestelmä tai sen käynnistyslataaja on vaurioitunut, käytä sen "
-"palautustyökaluja. Uudelleenasennus on viimeinen keino, ja se tulisi tehdä "
-"vasta sen jälkeen, kun palautettavat tiedot on varmuuskopioitu; se voi "
-"tyhjentää kiintolevyn. Käyttöjärjestelmän uudelleenasennus ei korjaa "
+"Jos käyttöjärjestelmä tai sen käynnistyslataaja on vaurioitunut, käytä "
+"sen palautustyökaluja. Uudelleenasennus on viimeinen keino, ja se tulisi "
+"tehdä vasta sen jälkeen, kun palautettavat tiedot on varmuuskopioitu; se "
+"voi tyhjentää kiintolevyn. Käyttöjärjestelmän uudelleenasennus ei korjaa "
 "NitroPad-laitetta, joka ei käynnisty tai joka ei saa yhteyttä Heads-"
 "sovellukseen."
 
@@ -32129,17 +32110,18 @@ msgid ""
 "corrupted BIOS or EC firmware, and is different from a Heads TPM factory "
 "reset."
 msgstr ""
-"CMOS-nollaus tyhjentää tallennetut laiteohjelmistoasetukset. Se ei **eikä** "
-"korjaa vioittunutta BIOS- tai EC-laiteohjelmistoa, eikä se ole sama asia "
-"kuin Heads TPM:n tehdasasetusten palautus."
+"CMOS-nollaus tyhjentää tallennetut laiteohjelmistoasetukset. Se ei "
+"**eikä** korjaa vioittunutta BIOS- tai EC-laiteohjelmistoa, eikä se ole "
+"sama asia kuin Heads TPM:n tehdasasetusten palautus."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:289
 msgid ""
 "Ensure that no firmware update is running. Turn off the NitroPad, unplug "
 "the power adapter and disconnect external devices."
 msgstr ""
-"Varmista, ettei laitteessa ole käynnissä laiteohjelmistopäivitystä. Sammuta "
-"NitroPad, irrota virtalähde pistorasiasta ja irrota ulkoiset laitteet."
+"Varmista, ettei laitteessa ole käynnissä laiteohjelmistopäivitystä. "
+"Sammuta NitroPad, irrota virtalähde pistorasiasta ja irrota ulkoiset "
+"laitteet."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:292
 msgid ""
@@ -32156,8 +32138,8 @@ msgid ""
 "Disconnect the CMOS battery and leave the adapter, main battery and CMOS "
 "battery disconnected for **30 minutes**."
 msgstr ""
-"Irrota CMOS-akku ja jätä virtalähde, pääakku ja CMOS-akku irti **30 minuutin "
-"ajaksi**."
+"Irrota CMOS-akku ja jätä virtalähde, pääakku ja CMOS-akku irti **30 "
+"minuutin ajaksi**."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:299
 msgid ""
@@ -32165,17 +32147,18 @@ msgid ""
 "reconnect the adapter. **Wait another five minutes** before attempting to"
 " power on."
 msgstr ""
-"Liitä CMOS-akku ja pääakku takaisin paikoilleen, sulje laite ja liitä sitten "
-"virtalähde uudelleen. **Odota vielä viisi minuuttia** ennen kuin yrität "
-"käynnistää laitteen."
+"Liitä CMOS-akku ja pääakku takaisin paikoilleen, sulje laite ja liitä "
+"sitten virtalähde uudelleen. **Odota vielä viisi minuuttia** ennen kuin "
+"yrität käynnistää laitteen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:302
 msgid ""
 "Try starting once and allow time for memory training. If the problem "
 "remains, stop repeating resets and contact Nitrokey support."
 msgstr ""
-"Kokeile käynnistää laite kerran ja anna muistille aikaa tottua. Jos ongelma "
-"jatkuu, lopeta nollausten toistaminen ja ota yhteyttä Nitrokey-tukeen."
+"Kokeile käynnistää laite kerran ja anna muistille aikaa tottua. Jos "
+"ongelma jatkuu, lopeta nollausten toistaminen ja ota yhteyttä Nitrokey-"
+"tukeen."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:306
 msgid "External Firmware Recovery and Support"
@@ -32189,10 +32172,10 @@ msgid ""
 "cannot substitute for repairing corrupted firmware."
 msgstr ""
 "Jos edellä mainitut tarkistukset eivät tuota tulosta, korjaus saattaa "
-"edellyttää BIOS:n ja/tai EC:n ohjelmointia ulkoisesti. Nämä ovat erillisiä "
-"laiteohjelmistokomponentteja, joiden versioiden on oltava yhteensopivia. "
-"CMOS:n nollaus tai käyttöjärjestelmän uudelleenasennus eivät korvaa "
-"vioittuneen laiteohjelmiston korjaamista."
+"edellyttää BIOS:n ja/tai EC:n ohjelmointia ulkoisesti. Nämä ovat "
+"erillisiä laiteohjelmistokomponentteja, joiden versioiden on oltava "
+"yhteensopivia. CMOS:n nollaus tai käyttöjärjestelmän uudelleenasennus "
+"eivät korvaa vioittuneen laiteohjelmiston korjaamista."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:313
 msgid ""
@@ -32205,14 +32188,15 @@ msgid ""
 " for the appropriate recovery or repair process before flashing. A "
 "hardware fault may instead require component or motherboard repair."
 msgstr ""
-"Ulkoinen BIOS-ohjelmointi, esimerkiksi sopivalla CH341A-kokoonpanolla, on "
-"edistynyt korjausmenettely, joka edellyttää mallille sopivaa Nitrokey Heads -"
-"kuvaa, sirun jännitettä ja liitintä. Ennen ulkoista BIOS-ohjelmointia irrota "
-"sovitin, pääakku ja CMOS-akku laitemallin palautusohjeiden mukaisesti. EC-"
-"palautuksella on omat liitäntä- ja virransyöttövaatimuksensa; älä sovella "
-"siihen BIOS-menettelyä. Kysy Nitrokey-tukipalvelusta sopivaa palautus- tai "
-"korjausmenettelyä ennen ohjelmiston päivittämistä. Laitteistovika saattaa "
-"sen sijaan vaatia komponenttien tai emolevyn korjausta."
+"Ulkoinen BIOS-ohjelmointi, esimerkiksi sopivalla CH341A-kokoonpanolla, on"
+" edistynyt korjausmenettely, joka edellyttää mallille sopivaa Nitrokey "
+"Heads -kuvaa, sirun jännitettä ja liitintä. Ennen ulkoista BIOS-"
+"ohjelmointia irrota sovitin, pääakku ja CMOS-akku laitemallin "
+"palautusohjeiden mukaisesti. EC-palautuksella on omat liitäntä- ja "
+"virransyöttövaatimuksensa; älä sovella siihen BIOS-menettelyä. Kysy "
+"Nitrokey-tukipalvelusta sopivaa palautus- tai korjausmenettelyä ennen "
+"ohjelmiston päivittämistä. Laitteistovika saattaa sen sijaan vaatia "
+"komponenttien tai emolevyn korjausta."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:322
 #, fuzzy
@@ -32230,8 +32214,8 @@ msgid ""
 "The previously installed firmware version, if known, and the selected ZIP"
 " filename and release version."
 msgstr ""
-"Aiemmin asennetun laiteohjelmistoversion numero, jos se on tiedossa, sekä "
-"valitun ZIP-tiedoston nimi ja julkaisun versio."
+"Aiemmin asennetun laiteohjelmistoversion numero, jos se on tiedossa, sekä"
+" valitun ZIP-tiedoston nimi ja julkaisun versio."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:327
 msgid ""
@@ -32239,7 +32223,8 @@ msgid ""
 "during the first restart, including how long you waited."
 msgstr ""
 "Kaikki virheilmoitukset, vilkkasiko onnistumisilmoitus ja mitä tapahtui "
-"ensimmäisen uudelleenkäynnistyksen aikana, mukaan lukien kuinka kauan odotit."
+"ensimmäisen uudelleenkäynnistyksen aikana, mukaan lukien kuinka kauan "
+"odotit."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:329
 msgid "The power adapter used, battery condition, LEDs and fan behaviour."
@@ -32264,11 +32249,12 @@ msgid ""
 "linked in Preparation."
 msgstr ""
 "Yllä olevat Heads-päivitysohjeet ja ensimmäisen käynnistyksen ohjeet "
-"perustuvat `-sivuston ylävirran Heads-päivitysohjeisiin <https://osresearch."
-"net/Updating>`__ sekä `-sivuston alustakohtaisiin Heads-päivitysohjeisiin "
-"<https://docs.dasharo.com/unified/novacustom/firmware-update/>`__. Tähän "
-"menettelyyn tarvittavat laiteohjelmistotiedostot löytyvät ”Valmistelu”-"
-"osiossa linkitetyistä Nitrokey-julkaisuista."
+"perustuvat `-sivuston ylävirran Heads-päivitysohjeisiin "
+"<https://osresearch.net/Updating>`__ sekä `-sivuston alustakohtaisiin "
+"Heads-päivitysohjeisiin <https://docs.dasharo.com/unified/novacustom"
+"/firmware-update/>`__. Tähän menettelyyn tarvittavat "
+"laiteohjelmistotiedostot löytyvät ”Valmistelu”-osiossa linkitetyistä "
+"Nitrokey-julkaisuista."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:342
 msgid ""
@@ -32276,9 +32262,9 @@ msgid ""
 "these guides. Use the Heads-specific instructions on this page for boot "
 "selection, security prompts and firmware recovery:"
 msgstr ""
-"Laitteistotarkistukset on mukautettu NitroPad-laitteelle, jossa on Nitrokey "
-"Heads -laitteet, näiden ohjeiden mukaisesti. Käytä tällä sivulla olevia "
-"Heads-laitteille tarkoitettuja ohjeita käynnistysvalintaan, "
+"Laitteistotarkistukset on mukautettu NitroPad-laitteelle, jossa on "
+"Nitrokey Heads -laitteet, näiden ohjeiden mukaisesti. Käytä tällä sivulla"
+" olevia Heads-laitteille tarkoitettuja ohjeita käynnistysvalintaan, "
 "turvallisuuskehotteisiin ja laiteohjelmiston palautukseen:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:346
@@ -32286,32 +32272,32 @@ msgid ""
 "`Charging checks <https://novacustom.com/knowledge-base/laptop-not-"
 "charging/>`__."
 msgstr ""
-"`Latausvalvonta <https://novacustom.com/knowledge-base/laptop-not-charging/"
-">`__."
+"`Latausvalvonta <https://novacustom.com/knowledge-base/laptop-not-"
+"charging/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:347
 msgid ""
 "`Boot failure checks <https://novacustom.com/knowledge-base/laptop-is-"
 "not-booting-what-can-i-do/>`__."
 msgstr ""
-"`Käynnistysvirheiden tarkistukset <https://novacustom.com/knowledge-base/"
-"laptop-is-not-booting-what-can-i-do/>`__."
+"`Käynnistysvirheiden tarkistukset <https://novacustom.com/knowledge-base"
+"/laptop-is-not-booting-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:348
 msgid ""
 "`CMOS reset <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
 "reset/>`__."
 msgstr ""
-"`CMOS-nollaus <https://novacustom.com/knowledge-base/"
-"how-to-perform-a-cmos-reset/>`__."
+"`CMOS-nollaus <https://novacustom.com/knowledge-base/how-to-perform-a"
+"-cmos-reset/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:349
 msgid ""
 "`Power and black-screen checks <https://novacustom.com/knowledge-base"
 "/laptop-not-turning-on-what-can-i-do/>`__."
 msgstr ""
-"`Virran ja mustan näytön tarkistukset <https://novacustom.com/knowledge-base/"
-"laptop-not-turning-on-what-can-i-do/>`__."
+"`Virran ja mustan näytön tarkistukset <https://novacustom.com/knowledge-"
+"base/laptop-not-turning-on-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:350
 msgid "`Heads disk recovery keys <https://osresearch.net/Keys/>`__."
@@ -32322,8 +32308,8 @@ msgid ""
 "`Platform-specific hardware recovery notes "
 "<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
 msgstr ""
-"`Alustakohtaiset laitteiston palautusohjeet <https://docs.dasharo.com/"
-"unified/novacustom/recovery/>`__."
+"`Alustakohtaiset laitteiston palautusohjeet "
+"<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update-1.4.rst:2
 #: ../../source/components/nitropad-nitropc/heads/index.rst:6
@@ -37245,52 +37231,120 @@ msgid "nitropy Documentation For Linux"
 msgstr "nitropy-dokumentaatio Linuxille"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:2
-msgid "Setting up The udev Rules"
+#, fuzzy
+msgid "Setting up the udev Rules"
 msgstr "udev-sääntöjen määrittäminen"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:4
+#, fuzzy
 msgid ""
 "To be able to access your devices without root privileges, nitropy "
-"requires the Nitrokey udev rules. If they are not shipped with your "
-"distribution, you can install the rules manually::"
+"requires the Nitrokey udev rules. On many distributions, they can be "
+"installed from a package:"
 msgstr ""
 "Jotta voit käyttää laitteitasi ilman pääkäyttäjän oikeuksia, nitropy "
 "vaatii Nitrokey udev-säännöt. Jos niitä ei toimiteta jakelusi mukana, "
 "voit asentaa säännöt manuaalisesti::"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:11
+#: ../../source/components/software/nitropy/linux/udev.rst:7
 msgid ""
-"The legacy rules are also shipped with `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`__."
+"Arch Linux: `nitrokey-udev-rules "
+"<https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
 msgstr ""
-"Vanhat säännöt toimitetaan myös yhdessä `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`__ kanssa."
 
-#: ../../source/components/software/nitropy/linux/udev.rst:14
+#: ../../source/components/software/nitropy/linux/udev.rst:8
 msgid ""
-"You most likely want to change the owner and the permissions of this "
-"file::"
+"Debian: `nitrokey-udev <https://packages.debian.org/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Debian 14 Forky)"
 msgstr ""
-"Todennäköisesti haluat muuttaa tämän tiedoston omistajan ja "
-"käyttöoikeudet::"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:19
+#: ../../source/components/software/nitropy/linux/udev.rst:9
+msgid ""
+"NixOS: `nitrokey-udev-rules "
+"<https://search.nixos.org/packages?channel=unstable&query=nitrokey-udev-"
+"rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to "
+"``true``)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:10
+msgid ""
+"Ubuntu: `nitrokey-udev <https://packages.ubuntu.com/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Ubuntu 26.10 Stonking Stingray)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:15
+msgid ""
+"If the rules are not provided by your distribution, you can install the "
+"rules manually::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
 msgstr "Kun olet asentanut säännöt, sinun on ladattava ne uudelleen::"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:23
-#, fuzzy
+#: ../../source/components/software/nitropy/linux/udev.rst:26
 msgid ""
 "If you still cannot access your device, try again after rebooting your "
-"system. If you encounter issues, look at this `github comment "
-"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" for some debugging hints."
+"system."
 msgstr ""
-"Jos et vieläkään pääse laitteeseen, yritä uudelleen järjestelmän "
-"uudelleenkäynnistyksen jälkeen. Jos havaitset ongelmia, katso tästä "
-"`github-kommentista "
-"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" vinkkejä vianmääritykseen."
+
+#: ../../source/components/software/nitropy/linux/udev.rst:31
+msgid ""
+"The recommended udev rules use the ``uaccess`` mechanism to dynamically "
+"assign the correct permissions. This mechanism requires ``systemd`` and "
+"only works with users that are logged in locally (this means no SSH "
+"logins or similar)."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:37
+msgid ""
+"If installing the udev rules did not fix the issue, you can perform the "
+"following steps to investigate the problem:"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:39
+#, fuzzy
+msgid "Unplug the Nitrokey."
+msgstr "Valitse Nitrokey 3"
+
+#: ../../source/components/software/nitropy/linux/udev.rst:40
+msgid "Reboot the computer to ensure that the udev rules are activated."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:41
+msgid ""
+"Execute the command ``sudo dmesg --follow`` and connect the Nitrokey. "
+"Observe the log messages that appear afterwards. You should see a line "
+"similar to::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:47
+msgid ""
+"Determine the hidraw device name from the log message. In this case, it "
+"is ``hidraw3``."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:49
+msgid ""
+"Check the permissions for the hidraw device by running ``getfacl "
+"/dev/$name`` where ``$name`` is the hidraw device name. You should see "
+"your user with ``rw`` permissions. For example for the user ``myuser``::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:64
+msgid ""
+"If your user does not have the correct permissions, execute the command "
+"``loginctl list-sessions``. You should see one session for your user with"
+" a seat, for example::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:74
+msgid ""
+"Additional steps for debugging the udev rules are described `here "
+"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
+msgstr ""
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
 msgid "nitropy Documentation For Windows"
@@ -41946,3 +42000,66 @@ msgstr "Merkitse rajattu tuotos"
 #~ "tehdasasetusten palauttamiseksi (vasemmanpuoleisessa "
 #~ "valikossa) alkaen vaiheesta \"Tehdasasetusten "
 #~ "palauttaminen\"."
+
+#~ msgid "If the Nitrokey is not detected, proceed as follows:"
+#~ msgstr "Jos Nitrokey-avainta ei havaita, toimi seuraavasti:"
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
+#~ "rules/main/41-nitrokey.rules>`__ to "
+#~ "``/etc/udev/rules.d/``."
+#~ msgstr ""
+#~ "Kopioi tämä tiedosto `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " osoitteeseen ``/etc/udev/rules.d/``."
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " to ``/etc/udev/rules.d/``. In very rare"
+#~ " cases, the system will need the "
+#~ "`older version "
+#~ "<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
+#~ " of this file."
+#~ msgstr ""
+#~ "Kopioi tämä tiedosto `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " osoitteeseen ``/etc/udev/rules.d/``. Hyvin "
+#~ "harvinaisissa tapauksissa järjestelmä tarvitsee "
+#~ "`vanhemman version "
+#~ "<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
+#~ " tästä tiedostosta."
+
+#~ msgid ""
+#~ "The legacy rules are also shipped "
+#~ "with `libnitrokey "
+#~ "<https://github.com/Nitrokey/libnitrokey>`__."
+#~ msgstr ""
+#~ "Vanhat säännöt toimitetaan myös yhdessä "
+#~ "`libnitrokey <https://github.com/Nitrokey/libnitrokey>`__ "
+#~ "kanssa."
+
+#~ msgid ""
+#~ "You most likely want to change the"
+#~ " owner and the permissions of this"
+#~ " file::"
+#~ msgstr ""
+#~ "Todennäköisesti haluat muuttaa tämän tiedoston"
+#~ " omistajan ja käyttöoikeudet::"
+
+#~ msgid ""
+#~ "If you still cannot access your "
+#~ "device, try again after rebooting your"
+#~ " system. If you encounter issues, "
+#~ "look at this `github comment "
+#~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " for some debugging hints."
+#~ msgstr ""
+#~ "Jos et vieläkään pääse laitteeseen, "
+#~ "yritä uudelleen järjestelmän uudelleenkäynnistyksen"
+#~ " jälkeen. Jos havaitset ongelmia, katso "
+#~ "tästä `github-kommentista "
+#~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " vinkkejä vianmääritykseen."
+

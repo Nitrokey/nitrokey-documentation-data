@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-15 13:32+0000\n"
+"POT-Creation-Date: 2026-10-16 10:44+0000\n"
 "PO-Revision-Date: 2026-10-15 13:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -17513,6 +17512,7 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/index.rst:17
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:2
 #: ../../source/components/software/nitropy/all-platforms/installation.rst:112
+#: ../../source/components/software/nitropy/linux/udev.rst:35
 msgid "Troubleshooting"
 msgstr "Отстраняване на неизправности"
 
@@ -23069,8 +23069,8 @@ msgstr "Приложете промяната с кликване върху **O
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:152
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:221
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:45
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid "PowerShell"
 msgstr "PowerShell"
 
@@ -25770,7 +25770,6 @@ msgstr ""
 "избраното устройство (т.нар. команда WINK)."
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:182
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid "If the Nitrokey is not detected, proceed the following:"
 msgstr "Ако Nitrokey не бъде открит, процедирайте по следния начин:"
 
@@ -25792,8 +25791,6 @@ msgstr ""
 " на този файл."
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:190
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:41
 msgid ""
 "Restart udev via ``sudo service udev restart`` or ``udevadm control "
 "--reload-rules && udevadm trigger`` if you are using Fedora."
@@ -28377,25 +28374,17 @@ msgid "Nitrokey is Not Detected on Linux"
 msgstr "Nitrokey не е открит в Linux"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:17
-msgid "If the Nitrokey is not detected, proceed as follows:"
-msgstr "Ако Nitrokey не бъде открит, процедирайте по следния начин:"
-
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:19
-#, fuzzy
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
-"rules/main/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``."
+"If the Nitrokey is not detected, make sure that you have installed the "
+"Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
-"Копирайте този файл `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ в "
-"``/etc/udev/rules.d/``."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr "Драйверът за четец на карти Nitrokey не може да бъде инсталиран на Windows"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:27
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
 msgid ""
 "On Windows the initialization of the generic smartcard reader driver "
 "fails. The reported device status is ``This device is not working "
@@ -28407,7 +28396,7 @@ msgstr ""
 "working properly because Windows cannot load the drivers required for "
 "this device. (Code 31)``."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
 msgid ""
 "This problem exists on Windows 10 and Windows Server 2022 and older. From"
 " Windows 11 and Windows Server 2025 on the behavior is correct and the "
@@ -28417,7 +28406,7 @@ msgstr ""
 "версии. От Windows 11 и Windows Server 2025 нататък поведението е "
 "правилно и решението по-долу не е необходимо."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:33
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:28
 msgid ""
 "Windows has two generic smartcard reader drivers (WUDF and UMDF2). By "
 "default Windows uses UMDF2, which fails to initialize and therefore is "
@@ -28427,7 +28416,7 @@ msgstr ""
 "UMDF2). По подразбиране Windows използва UMDF2, който не успява да се "
 "инициализира и поради това не се зарежда за Nitrokey."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:36
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:31
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
@@ -28436,8 +28425,8 @@ msgstr ""
 "опит за инициализиране на устройството. В регистъра добавете следния ключ"
 " на регистъра."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:57
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:52
 #, fuzzy
 msgid "Regedit"
 msgstr "Нулиране на"
@@ -28463,7 +28452,7 @@ msgstr "<x id=\"0\"></x>U2F`_"
 msgid "Data: ``1``"
 msgstr "Път: ``1<x id=\"73\"></x>`"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:46
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
@@ -28471,7 +28460,7 @@ msgstr ""
 "Ключът от регистъра е наличен за Windows 10 (версия 1903 (19H1) и "
 "по-нова) и Windows 11."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:53
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:48
 msgid ""
 "If the smartcard reader was before already installed with a failed "
 "initialization you may have to remove them from the registry. In the "
@@ -28492,7 +28481,7 @@ msgstr ""
 "``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:60
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:55
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
@@ -28500,7 +28489,7 @@ msgstr ""
 "Ако четецът на смарткарти е бил инсталиран няколко пъти преди това, може "
 "да има повече от един път с увеличен номер в края."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
@@ -28508,11 +28497,11 @@ msgstr ""
 "След рестартиране на компютъра Nitrokey се разпознава като *Microsoft "
 "Usbccid Smartcard Reader (WUDF)*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:64
 msgid "Nitrokey 3 is Recognized as \"Unknown Smart Card\" on Windows"
 msgstr "Nitrokey 3 се разпознава като \"Неизвестна смарт карта\" в Windows"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
 msgid ""
 "On Windows Server 2025, the initialization of the generic smart card "
 "driver fails. The device is recognized as \"Unknown Smart Card\" and no "
@@ -28522,7 +28511,7 @@ msgstr ""
 "неуспешна. Устройството се разпознава като \"Неизвестна смарт карта\" и "
 "не се инсталира драйвер."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
 msgid ""
 "To install the correct smart card driver, install the correct driver as "
 "follows."
@@ -28530,11 +28519,11 @@ msgstr ""
 "За да инсталирате правилния драйвер за смарт карта, инсталирайте "
 "правилния драйвер, както следва."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:76
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
 msgid "Open the Windows *Device Manager* (``devmgmt.msc``)."
 msgstr "Отворете мениджъра на устройствата на Windows ** (``devmgmt.msc``)."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:77
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:72
 msgid ""
 "Open the group *Smart cards* from the device tree. If the group doesn't "
 "exist, make sure the Nitrokey is properly connected."
@@ -28542,13 +28531,13 @@ msgstr ""
 "Отворете групата *Smart cards* от дървото на устройствата. Ако групата не"
 " съществува, уверете се, че Nitrokey е правилно свързан."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
 msgid "Right-click on *Unknown Smart Card* and select *Update driver*."
 msgstr ""
 "Щракнете с десния бутон на мишката върху *Unknown Smart Card* и изберете "
 "*Update driver*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:80
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:75
 msgid ""
 "In the driver update assistant, first select *Browse my computer for "
 "drivers* and then *Let me pick from a list of available drivers on my "
@@ -28569,7 +28558,7 @@ msgstr ""
 " драйверът бъде инсталиран, затворете помощника за актуализиране на "
 "драйвери с щракване върху бутона *Close (Затвори)*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
 msgid ""
 "The Nitrokey is now recognized in the *Smart cards* group as *Identity "
 "Device (NIST SP 800-73 [PIV])*."
@@ -28577,7 +28566,7 @@ msgstr ""
 "Nitrokey вече е разпознат в групата *Smart cards* като *Identity Device "
 "(NIST SP 800-73 [PIV])*."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:81
 msgid ""
 "Connecting the Nitrokey to a different USB port can require this process "
 "to be repeated."
@@ -28585,11 +28574,11 @@ msgstr ""
 "Свързването на Nitrokey към друг USB порт може да наложи повторение на "
 "този процес."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
 msgid "Google and Microsoft Services"
 msgstr "Услуги на Google и Microsoft"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
 msgid ""
 "Currently there seems to be a bug we hope to fix soon which affects the "
 "Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
@@ -28598,11 +28587,11 @@ msgstr ""
 "която засяга работата на Nitrokey 3 с някои услуги на Google и Microsoft "
 "по FIDO2."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
 msgid "Timeout Bug"
 msgstr "Грешка с изтичане на времето"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:96
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
 msgid ""
 "There is a bug with the Nitrokey being recognized by the system, where a "
 "timeout occurs before the connection succeeds."
@@ -28610,11 +28599,11 @@ msgstr ""
 "Съществува грешка при разпознаването на Nitrokey от системата, при която "
 "се появява прекъсване на времето, преди връзката да бъде успешна."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
 msgid "NFC is Not Working"
 msgstr "NFC не работи"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:100
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:95
 msgid ""
 "Please make sure FIDO2 is working correctly. Otherwise NFC won't work "
 "either."
@@ -28622,14 +28611,14 @@ msgstr ""
 "Уверете се, че FIDO2 работи правилно. В противен случай NFC също няма да "
 "работи."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:102
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:97
 #, fuzzy
 msgid "Also check if you are using the right spot on your smartphone."
 msgstr ""
 "Проверете също дали използвате правилното място на смартфона си. Намерете"
 " правилното място, като използвате: `nfc.fail`_."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:104
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
 msgid ""
 "The backside of the Nitrokey has to be held against the smartphone. For "
 "the USB-A version it might be helpful to lift the side with the USB "
@@ -28639,7 +28628,7 @@ msgstr ""
 "версията с USB-A може да е полезно да повдигнете леко страната с USB "
 "конектора, за да намалите разстоянието до крайната част на флашката."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:101
 msgid ""
 "If you have a phone cover, try to find the right spot first without it. "
 "Retry afterwards with the cover."
@@ -28647,7 +28636,7 @@ msgstr ""
 "Ако разполагате с капак за телефона, първо се опитайте да намерите "
 "подходящото място без него. След това опитайте отново с капака."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:103
 msgid ""
 "The search of the optimal spot sometimes took up to 20-30 sec. In our "
 "experience holding the Nitrokey in an horizontal orientation yields "
@@ -28661,15 +28650,15 @@ msgstr ""
 "имейл до нашата поддръжка. За да получите оптимална помощ, моля, посочете"
 " номера на доставката/поръчката и модела на вашия смартфон."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
 msgid "OpenPGP Troubleshooting"
 msgstr "Отстраняване на проблеми с OpenPGP"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:114
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:109
 msgid "GnuPG: OpenPGP Card Not Available"
 msgstr "GnuPG: Картата OpenPGP не е налична"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:116
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
@@ -28677,7 +28666,7 @@ msgstr ""
 "**Проблем:** GnuPG не може да получи достъп до Nitrokey 3 и показва "
 "съобщение за грешка като това::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:123
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:118
 #, fuzzy
 msgid ""
 "**Solution:** There are two common smartcard services on Linux systems: "
@@ -28693,7 +28682,7 @@ msgstr ""
 "директен достъп до смарт картата. Вместо това драйверите ``pcsc`` "
 "използват демона ``pcscd``."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:129
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:124
 msgid ""
 "A smartcard can only be accessed directly by one daemon. This means that "
 "depending on the startup order, ``pcscd`` might lock the card before "
@@ -28714,7 +28703,7 @@ msgstr ""
 "connect-agent \"SCD KILLSCD\" /bye``. Ако това не отстрани проблема, "
 "вижте следващия раздел за повече информация."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:130
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
@@ -28722,17 +28711,17 @@ msgstr ""
 "Като алтернатива можете да деактивирате или деинсталирате ``pcscd``, за "
 "да избегнете този конфликт."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:133
 #: ../../source/components/software/nk-app2/keepassxc.rst:104
 msgid "pcscd: Card Not Found"
 msgstr "pcscd: Картата не е намерена"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:140
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
 #: ../../source/components/software/nk-app2/keepassxc.rst:106
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr "**Проблем:** Приложение, използващо ``pcscd``, не показва Nitrokey 3."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
 #: ../../source/components/software/nk-app2/keepassxc.rst:109
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
@@ -28741,7 +28730,7 @@ msgstr ""
 "**Решение:** Първо се уверете, че ``scdaemon`` не е стартиран (вижте "
 "предишния раздел)::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:148
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
 #: ../../source/components/software/nk-app2/keepassxc.rst:114
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
@@ -28750,7 +28739,7 @@ msgstr ""
 "Сега направете списък на смарткартите, разпознати от ``pcscd`` с "
 "``pcsc_scan -r``. Трябва да видите запис като този::"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:151
 #: ../../source/components/software/nk-app2/keepassxc.rst:122
 msgid ""
 "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and "
@@ -28763,12 +28752,12 @@ msgstr ""
 "Ако не се покаже, уверете се, че версията на вашия ``libccid`` е "
 "актуална. Поддръжката на Nitrokey 3 беше добавена в ``libccid`` 1.5.0."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 #: ../../source/components/software/nk-app2/keepassxc.rst:127
 msgid "Updating The Device Database"
 msgstr "Актуализиране на базата данни на устройството"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 #: ../../source/components/software/nk-app2/keepassxc.rst:129
 msgid ""
 "If you cannot update ``libccid`` to a supported version, you have to "
@@ -28779,12 +28768,12 @@ msgstr ""
 "ръчно да актуализирате базата данни на устройството. Пътят до базата "
 "данни зависи от вашата дистрибуция:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:166
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
 #: ../../source/components/software/nk-app2/keepassxc.rst:132
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:168
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 #: ../../source/components/software/nk-app2/keepassxc.rst:134
 msgid ""
 "Make sure to backup the file before overwriting it. You can download an "
@@ -28802,11 +28791,11 @@ msgstr ""
 "рестартирайте ``pcscd`` и стартирайте ``pcsc_scan -r`` отново. Nitrokey 3"
 " вече трябва да се появи."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:169
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr "Актуализация чрез update.nitrokey.com Не работи"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:176
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:171
 msgid ""
 "Currently the web updater doesn't support the Nitrokey 3. However you can"
 " get the latest firmware using these `instructions <firmware-"
@@ -28816,17 +28805,17 @@ msgstr ""
 "получите най-новия фърмуер, като използвате тези инструкции на ` "
 "<firmware-update.html>`_ ."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
 #, fuzzy
 msgid "PIV Troubleshooting"
 msgstr "Отстраняване на неизправности"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:182
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:177
 #, fuzzy
 msgid "pyscard is not available"
 msgstr "GnuPG: Картата OpenPGP не е налична"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:184
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
 #, fuzzy
 msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
@@ -28835,7 +28824,7 @@ msgstr ""
 "Ако pyscard не е налична за nitropy, може да получите следната грешка при"
 " опит да използвате функционалността PIV:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:183
 #, fuzzy
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
@@ -28844,7 +28833,7 @@ msgstr ""
 "За да поправите тази грешка, моля, инсталирайте nitropy с допълнителните "
 "зависимости `pcsc`:"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:193
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
 #, fuzzy
 msgid ""
 "If you install pynitrokey through another distribution channel, please "
@@ -29350,23 +29339,6 @@ msgid ""
 msgstr ""
 "За да проверите дали Nitrokey Passkey е правилно разпознат, проверете "
 "дали е показан с `lsusb`."
-
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:35
-#, fuzzy
-msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to "
-"``/etc/udev/rules.d/``. In very rare cases, the system will need the "
-"`older version "
-"<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
-" of this file."
-msgstr ""
-"Копирайте този файл `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`_ в "
-"``/etc/udev/rules.d/``. В много редки случаи системата ще се нуждае от "
-"`старата версия "
-"<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`_"
-" на този файл."
 
 #: ../../source/components/nitrokeys/pro/factory-reset.rst:6
 msgid "There are two types of factory resets for Nitrokey Pro devices:"
@@ -30535,6 +30507,7 @@ msgstr ""
 "<https://github.com/Nitrokey/pynitrokey#installation>`_."
 
 #: ../../source/components/nitrokeys/start/multiple-identities.rst:43
+#: ../../source/components/software/nitropy/linux/udev.rst:29
 msgid "Limitations"
 msgstr "Ограничения"
 
@@ -32010,10 +31983,10 @@ msgid ""
 "already runs Heads. It also applies when an OEM factory reset has been "
 "performed but the TPM counter still needs to be reset."
 msgstr ""
-"Използвайте това ръководство, за да актуализирате фърмуера на Nitrokey Heads "
-"на NitroPad, на който вече работи Heads. То важи и в случаите, когато е "
-"извършено фабрично възстановяване от производителя (OEM), но броячът на TPM "
-"все още трябва да бъде нулиран."
+"Използвайте това ръководство, за да актуализирате фърмуера на Nitrokey "
+"Heads на NitroPad, на който вече работи Heads. То важи и в случаите, "
+"когато е извършено фабрично възстановяване от производителя (OEM), но "
+"броячът на TPM все още трябва да бъде нулиран."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:31
 msgid ""
@@ -32022,8 +31995,8 @@ msgid ""
 " restart."
 msgstr ""
 "Свържете оригиналния захранващ адаптер и заредете батерията до над 70%. "
-"Оставете както адаптера, така и батерията свързани по време на процеса на "
-"флашване и при първото рестартиране."
+"Оставете както адаптера, така и батерията свързани по време на процеса на"
+" флашване и при първото рестартиране."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:36
 msgid ""
@@ -32032,11 +32005,12 @@ msgid ""
 "not rely on USB-C charging alone: an EC update can reset the USB Power "
 "Delivery controller before the adapter check, causing the update to fail."
 msgstr ""
-"При моделите NitroPad NV41, V54 и V56 използвайте адаптера за захранване с "
-"DC-барел жак „ **“** за актуализации, които синхронизират фърмуера на "
+"При моделите NitroPad NV41, V54 и V56 използвайте адаптера за захранване "
+"с DC-барел жак „ **“** за актуализации, които синхронизират фърмуера на "
 "вградения контролер (EC). Не разчитайте само на зареждането през USB-C: "
-"актуализацията на EC може да нулира контролера за USB Power Delivery преди "
-"проверката на адаптера, което да доведе до неуспех на актуализацията."
+"актуализацията на EC може да нулира контролера за USB Power Delivery "
+"преди проверката на адаптера, което да доведе до неуспех на "
+"актуализацията."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:41
 msgid ""
@@ -32045,10 +32019,10 @@ msgid ""
 "requirements and model-specific issues. Download the ZIP archive for your"
 " exact model:"
 msgstr ""
-"Прочетете бележките към версията на Nitrokey Heads от ` <https://github.com/"
-"Nitrokey/heads/releases/latest>` __ за изискванията за ъпгрейд и "
-"специфичните за отделните модели проблеми. Изтеглете ZIP-архива за вашия "
-"конкретен модел:"
+"Прочетете бележките към версията на Nitrokey Heads от ` "
+"<https://github.com/Nitrokey/heads/releases/latest>` __ за изискванията "
+"за ъпгрейд и специфичните за отделните модели проблеми. Изтеглете "
+"ZIP-архива за вашия конкретен модел:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:45
 #, fuzzy
@@ -32087,10 +32061,10 @@ msgid ""
 "to give it a ZIP extension.** Select this archive in the Heads update "
 "menu."
 msgstr ""
-"Проверете архива, както е описано по-долу, след което го копирайте на USB "
-"устройство. **Запазете ZIP архива в първоначалния му вид; не го разпаковайте "
-"и не преименувайте друг файл, за да му придадете разширение ZIP.** Изберете "
-"този архив от менюто за актуализация на Heads."
+"Проверете архива, както е описано по-долу, след което го копирайте на USB"
+" устройство. **Запазете ZIP архива в първоначалния му вид; не го "
+"разпаковайте и не преименувайте друг файл, за да му придадете разширение "
+"ZIP.** Изберете този архив от менюто за актуализация на Heads."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:56
 msgid ""
@@ -32099,8 +32073,8 @@ msgid ""
 "based disk unlocking must be reconfigured."
 msgstr ""
 "Направете резервно копие на важните данни. Ако криптирането на диска е "
-"активирано, преди актуализацията се уверете, че разполагате с паролата за "
-"възстановяване на диска; тя може да се наложи, ако се наложи "
+"активирано, преди актуализацията се уверете, че разполагате с паролата за"
+" възстановяване на диска; тя може да се наложи, ако се наложи "
 "преконфигуриране на отключването на диска чрез TPM."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:62
@@ -32113,14 +32087,15 @@ msgid ""
 "BIOS and EC versions are compatible before proceeding. Upstream version "
 "numbers do not necessarily match Nitrokey release numbers."
 msgstr ""
-"Актуализациите в ZIP формат изискват инсталирана версия на Heads, която ги "
-"поддържа. Ако архивът не се приема или ако извършвате актуализация от много "
-"стар фърмуер, проверете бележките към версията и се свържете с поддръжката "
-"на Nitrokey на ` <https://www.nitrokey.com/contact>` __, вместо да се "
-"опитвате да предположите как да извършите актуализацията. Ако фърмуерът е "
-"бил инсталиран или променен ръчно, уверете се, че версиите на BIOS и EC са "
-"съвместими, преди да продължите. Номерата на версиите на Upstream не "
-"съвпадат задължително с номерата на версиите на Nitrokey."
+"Актуализациите в ZIP формат изискват инсталирана версия на Heads, която "
+"ги поддържа. Ако архивът не се приема или ако извършвате актуализация от "
+"много стар фърмуер, проверете бележките към версията и се свържете с "
+"поддръжката на Nitrokey на ` <https://www.nitrokey.com/contact>` __, "
+"вместо да се опитвате да предположите как да извършите актуализацията. "
+"Ако фърмуерът е бил инсталиран или променен ръчно, уверете се, че "
+"версиите на BIOS и EC са съвместими, преди да продължите. Номерата на "
+"версиите на Upstream не съвпадат задължително с номерата на версиите на "
+"Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:71
 msgid "Firmware Signature Check"
@@ -32132,9 +32107,10 @@ msgid ""
 "Nitrokey release as the firmware. Place these files and the ZIP archive "
 "in one directory on the computer used to download them."
 msgstr ""
-"Изтеглете файловете „ **“, „** ` “, „sha256sum` “ и „ ` “, „sha256sum.sig` “ "
-"от същата версия на Nitrokey, от която е и фърмуерът. Поставете тези файлове "
-"и ZIP-архива в една папка на компютъра, използван за изтеглянето им."
+"Изтеглете файловете „ **“, „** ` “, „sha256sum` “ и „ ` “, "
+"„sha256sum.sig` “ от същата версия на Nitrokey, от която е и фърмуерът. "
+"Поставете тези файлове и ZIP-архива в една папка на компютъра, използван "
+"за изтеглянето им."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:77
 #, python-format
@@ -32146,10 +32122,10 @@ msgid ""
 " Check the key fingerprint against the release's signing information."
 msgstr ""
 "Импортирайте ключа за подписване, посочен в бележките към версията на "
-"Nitrokey. Версиите, подписани от Маркус Майснер, използват ключа, достъпен "
-"от този запис в сървъра за ключове `: <https://keyserver.ubuntu.com/pks/"
-"lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__. Сравнете "
-"отпечатъка на ключа с информацията за подписването на версията."
+"Nitrokey. Версиите, подписани от Маркус Майснер, използват ключа, "
+"достъпен от този запис в сървъра за ключове `: "
+"<https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__."
+" Сравнете отпечатъка на ключа с информацията за подписването на версията."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:82
 msgid "From that directory, verify the checksum manifest's signature:"
@@ -32176,8 +32152,8 @@ msgid ""
 msgstr ""
 "Уверете се, че **вашият ZIP-архив, специфичен за модела**, се появява в "
 "изхода с ``OK``. Сама по себе си валидната подписка на манифеста не "
-"проверява изтегления ZIP-архив. Не инсталирайте файл, при който проверката "
-"на контролната сума е неуспешна или липсва."
+"проверява изтегления ZIP-архив. Не инсталирайте файл, при който "
+"проверката на контролната сума е неуспешна или липсва."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:103
 #, fuzzy
@@ -32196,13 +32172,13 @@ msgid ""
 msgstr ""
 "Първото рестартиране може да отнеме много повече време от обикновено. По "
 "време на това рестартиране може да се актуализира фърмуерът на EC, а "
-"системата преконфигурира паметта си, преди да се появи Heads. **Екранът може "
-"да остане напълно черен за около минута или повече.** По-голям обем "
-"инсталирана RAM памет може да увеличи закъснението; система с 96 GB може да "
-"отнеме **над две минути**. Тези времена са примерни, а не представляват "
-"максимално време на изчакване. Последващите стартирания би трябвало да бъдат "
-"по-бързи, след като резултатите от преструктурирането на паметта бъдат "
-"запазени в кеша."
+"системата преконфигурира паметта си, преди да се появи Heads. **Екранът "
+"може да остане напълно черен за около минута или повече.** По-голям обем "
+"инсталирана RAM памет може да увеличи закъснението; система с 96 GB може "
+"да отнеме **над две минути**. Тези времена са примерни, а не "
+"представляват максимално време на изчакване. Последващите стартирания би "
+"трябвало да бъдат по-бързи, след като резултатите от преструктурирането "
+"на паметта бъдат запазени в кеша."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:114
 msgid ""
@@ -32217,9 +32193,9 @@ msgstr ""
 "екранът е черен.** Не задържайте бутона за включване, не изключвайте "
 "адаптера, не изваждайте нито една от батериите и не извършвайте ресет, "
 "докато актуализацията все още е в ход. Прекъсването на записването на "
-"фърмуера, включително актуализация на EC по време на рестартиране, може да "
-"доведе до невъзможност за стартиране на NitroPad и да наложи възстановяване "
-"чрез външен хардуер."
+"фърмуера, включително актуализация на EC по време на рестартиране, може "
+"да доведе до невъзможност за стартиране на NitroPad и да наложи "
+"възстановяване чрез външен хардуер."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:120
 msgid ""
@@ -32229,12 +32205,12 @@ msgid ""
 "the update is still running, contact Nitrokey support before forcing a "
 "shutdown."
 msgstr ""
-"Успешното извеждане на съобщение за флашване не означава, че последващата "
-"актуализация на EC е приключила. Оставете устройството включено и изчакайте "
-"търпеливо, докато се появят иконите „Heads“. Ако след продължително "
-"изчакване няма напредък и не сте сигурни дали актуализацията все още тече, "
-"свържете се с отдела за поддръжка на Nitrokey, преди да принудите "
-"изключването на устройството."
+"Успешното извеждане на съобщение за флашване не означава, че последващата"
+" актуализация на EC е приключила. Оставете устройството включено и "
+"изчакайте търпеливо, докато се появят иконите „Heads“. Ако след "
+"продължително изчакване няма напредък и не сте сигурни дали "
+"актуализацията все още тече, свържете се с отдела за поддръжка на "
+"Nitrokey, преди да принудите изключването на устройството."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:128
 msgid ""
@@ -32242,9 +32218,9 @@ msgid ""
 "step 3. The screenshots illustrate the menu flow; filenames and screen "
 "details may differ in newer releases. Follow the ZIP instructions above."
 msgstr ""
-"Първите два екрана по-долу са по избор. Ако ги няма, започнете от стъпка 3. "
-"Снимките на екрана илюстрират последователността на менюто; имената на "
-"файловете и подробностите на екраните може да се различават в по-новите "
+"Първите два екрана по-долу са по избор. Ако ги няма, започнете от стъпка "
+"3. Снимките на екрана илюстрират последователността на менюто; имената на"
+" файловете и подробностите на екраните може да се различават в по-новите "
 "версии. Следвайте инструкциите за ZIP файла, посочени по-горе."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:132
@@ -32320,22 +32296,23 @@ msgstr "Не искайте потвърждение, преди да проме
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:164
 msgid "Select the verified, intact ``.zip`` archive for your NitroPad model."
 msgstr ""
-"Изберете проверения и непокътнат архив „ ` “ `.zip`` за вашия модел NitroPad."
+"Изберете проверения и непокътнат архив „ ` “ `.zip`` за вашия модел "
+"NitroPad."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:166
 msgid "Heads firmware file selection screen; select the model-specific ZIP."
 msgstr ""
-"Екран за избор на файл с фърмуер за глави; изберете ZIP файла, съответстващ "
-"на конкретния модел."
+"Екран за избор на файл с фърмуер за глави; изберете ZIP файла, "
+"съответстващ на конкретния модел."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:169
 msgid ""
 "Confirm with Enter and allow flashing to finish. If an error is reported,"
 " record its exact text and contact Nitrokey support."
 msgstr ""
-"Потвърдете с Enter и изчакайте да приключи процеса на флашване. Ако се появи "
-"съобщение за грешка, запишете точния му текст и се свържете с отдела за "
-"поддръжка на Nitrokey."
+"Потвърдете с Enter и изчакайте да приключи процеса на флашване. Ако се "
+"появи съобщение за грешка, запишете точния му текст и се свържете с "
+"отдела за поддръжка на Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:172
 msgid "Heads firmware flashing confirmation."
@@ -32350,8 +32327,8 @@ msgid ""
 msgstr ""
 "Когато се появи подкана, натиснете Enter, за да рестартирате. **Оставете "
 "захранващия адаптер и батерията свързани и изчакайте да се появи отново "
-"Heads, дори ако екранът остане черен.** Следвайте `Време за стартиране след "
-"актуализация <firmware-update.html#boot-time-after-update>`__; не "
+"Heads, дори ако екранът остане черен.** Следвайте `Време за стартиране "
+"след актуализация <firmware-update.html#boot-time-after-update>`__; не "
 "изключвайте насилствено устройството."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:179
@@ -32361,7 +32338,8 @@ msgstr "След препрограмирането се появява съоб
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:182
 msgid "Once Heads has returned, complete the following steps as prompted."
 msgstr ""
-"След като Heads се върне, изпълнете следните стъпки, както ви се подсказва."
+"След като Heads се върне, изпълнете следните стъпки, както ви се "
+"подсказва."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:185
 #, fuzzy
@@ -32378,13 +32356,13 @@ msgid ""
 "not a repair for a NitroPad that cannot power on."
 msgstr ""
 "Следвайте указанията на Heads, за да запечатате отново тайните и да "
-"актуализирате паролата за ключа за отключване на диска на TPM, ако такава е "
-"конфигурирана. Ако се появи съобщението „ ` “ `ERROR: TOTP Generation "
+"актуализирате паролата за ключа за отключване на диска на TPM, ако такава"
+" е конфигурирана. Ако се появи съобщението „ ` “ `ERROR: TOTP Generation "
 "Failed!``, вижте :doc:`factory-reset-heads2` или, за по-стари версии на "
-"фърмуера, :doc:`factory-reset`. Използвайте процедурата, която съответства "
-"на вашата версия на Heads. Възстановяването на фабричните настройки на TPM "
-"променя конфигурацията за сигурност; това не е решение за NitroPad, който не "
-"може да се включи."
+"фърмуера, :doc:`factory-reset`. Използвайте процедурата, която "
+"съответства на вашата версия на Heads. Възстановяването на фабричните "
+"настройки на TPM променя конфигурацията за сигурност; това не е решение "
+"за NitroPad, който не може да се включи."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:196
 msgid ""
@@ -32394,12 +32372,12 @@ msgid ""
 "forced restarts to a black screen during an EC update or memory training,"
 " particularly on NitroPad V54 and V56."
 msgstr ""
-"За NitroPad NV41 е съобщено за продължително забиване на екрана с логото на "
-"Heads при стартиране. Ако проблемът продължава след приключване на "
-"актуализацията, свържете се с отдела за поддръжка на Nitrokey за указания, "
-"специфични за вашия модел. Не извършвайте многократни принудителни рестарти "
-"при черен екран по време на актуализация на EC или обучение на паметта, "
-"особено при моделите NitroPad V54 и V56."
+"За NitroPad NV41 е съобщено за продължително забиване на екрана с логото "
+"на Heads при стартиране. Ако проблемът продължава след приключване на "
+"актуализацията, свържете се с отдела за поддръжка на Nitrokey за "
+"указания, специфични за вашия модел. Не извършвайте многократни "
+"принудителни рестарти при черен екран по време на актуализация на EC или "
+"обучение на паметта, особено при моделите NitroPad V54 и V56."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:205
 msgid ""
@@ -32409,11 +32387,12 @@ msgid ""
 " layouts differ between models; use the correct model's disassembly "
 "instructions."
 msgstr ""
-"Първо определете симптома: липса на индикатори за захранване или зареждане, "
-"устройството се включва, но екранът остава черен, или Heads стартира, но "
-"операционната система не се зарежда. Проверките по-долу важат за NitroPad с "
-"Nitrokey Heads. Хардуерната конфигурация варира в зависимост от модела; "
-"използвайте инструкциите за разглобяване, съответстващи на вашия модел."
+"Първо определете симптома: липса на индикатори за захранване или "
+"зареждане, устройството се включва, но екранът остава черен, или Heads "
+"стартира, но операционната система не се зарежда. Проверките по-долу "
+"важат за NitroPad с Nitrokey Heads. Хардуерната конфигурация варира в "
+"зависимост от модела; използвайте инструкциите за разглобяване, "
+"съответстващи на вашия модел."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:212
 msgid ""
@@ -32423,12 +32402,12 @@ msgid ""
 "device whose update has finished or which support has confirmed is no "
 "longer updating."
 msgstr ""
-"При първото рестартиране след актуализация, следвайте инструкциите от `Boot "
-"Time After Update <firmware-update.html#boot-time-after-update>`__, преди да "
-"пристъпите към отстраняване на неизправности. Описаните по-долу процедури за "
-"нулиране и проверка на хардуера са предназначени само за устройства, чиято "
-"актуализация е приключила или за които от отдела за поддръжка е потвърдено, "
-"че вече не се актуализират."
+"При първото рестартиране след актуализация, следвайте инструкциите от "
+"`Boot Time After Update <firmware-update.html#boot-time-after-update>`__,"
+" преди да пристъпите към отстраняване на неизправности. Описаните по-долу"
+" процедури за нулиране и проверка на хардуера са предназначени само за "
+"устройства, чиято актуализация е приключила или за които от отдела за "
+"поддръжка е потвърдено, че вече не се актуализират."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:218
 msgid "No Power or Charging Indicators"
@@ -32454,10 +32433,10 @@ msgid ""
 msgstr ""
 "Ако имате такъв, опитайте с адаптер, за който е известно, че работи и е "
 "съвместим. Уверете се, че напрежението, полярността, конекторът и "
-"номиналната мощност съответстват на изискванията; не използвайте произволен "
-"адаптер за лаптоп. Използвайте оригиналния адаптер с цилиндричен конектор за "
-"постоянен ток за актуализации на фърмуера на NV41, V54 и V56, както е "
-"описано в раздела „Подготовка“."
+"номиналната мощност съответстват на изискванията; не използвайте "
+"произволен адаптер за лаптоп. Използвайте оригиналния адаптер с "
+"цилиндричен конектор за постоянен ток за актуализации на фърмуера на "
+"NV41, V54 и V56, както е описано в раздела „Подготовка“."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:229
 msgid ""
@@ -32466,10 +32445,11 @@ msgid ""
 " system's battery status to distinguish a missing adapter from a detected"
 " adapter that is not charging."
 msgstr ""
-"Ако батерията е изтощена, изчакайте поне 30 минути, докато се зареди, преди "
-"да опитате отново да стартирате Често задавани въпроси за NitroPad. Ако "
-"устройството стартира, проверете състоянието на батерията в операционната "
-"система, за да различите дали адаптерът липсва или е свързан, но не зарежда."
+"Ако батерията е изтощена, изчакайте поне 30 минути, докато се зареди, "
+"преди да опитате отново да стартирате Често задавани въпроси за NitroPad."
+" Ако устройството стартира, проверете състоянието на батерията в "
+"операционната система, за да различите дали адаптерът липсва или е "
+"свързан, но не зарежда."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:234
 msgid ""
@@ -32481,8 +32461,8 @@ msgstr ""
 "За да опитате рестартиране чрез изключване и включване след спиране на "
 "актуализацията: изключете NitroPad, извадете адаптера от контакта и "
 "отстранете външните USB устройства. Задръжте бутона за включване за 30 "
-"секунди, отпуснете го, свържете отново адаптера и опитайте да го стартирате "
-"веднъж."
+"секунди, отпуснете го, свържете отново адаптера и опитайте да го "
+"стартирате веднъж."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:238
 msgid ""
@@ -32490,8 +32470,8 @@ msgid ""
 "access the connectors, or contact Nitrokey support."
 msgstr ""
 "Ако проблемът продължава, използвайте описаната по-долу процедура за "
-"нулиране на CMOS, ако имате безопасен достъп до конекторите, или се свържете "
-"с отдела за поддръжка на Nitrokey."
+"нулиране на CMOS, ако имате безопасен достъп до конекторите, или се "
+"свържете с отдела за поддръжка на Nitrokey."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:241
 msgid ""
@@ -32499,9 +32479,9 @@ msgid ""
 "faulty, and do not prove that the SSDs have been damaged. Support may "
 "need to check the power circuitry as well as the BIOS and EC firmware."
 msgstr ""
-"Само липсващите светодиоди не позволяват да се установи дали проблемът е във "
-"фърмуера или в хардуера и не доказват, че SSD дисковете са повредени. "
-"Възможно е от отдела за поддръжка да се наложи да провери захранващата "
+"Само липсващите светодиоди не позволяват да се установи дали проблемът е "
+"във фърмуера или в хардуера и не доказват, че SSD дисковете са повредени."
+" Възможно е от отдела за поддръжка да се наложи да провери захранващата "
 "верига, както и BIOS и EC фърмуера."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:246
@@ -32513,8 +32493,8 @@ msgid ""
 "Exclude the normal first-start delay described above and confirm that "
 "power and the battery are available."
 msgstr ""
-"Изключете обичайното закъснение при първото стартиране, описано по-горе, и "
-"се уверете, че има захранване и че акумулаторът е зареден."
+"Изключете обичайното закъснение при първото стартиране, описано по-горе, "
+"и се уверете, че има захранване и че акумулаторът е зареден."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:251
 msgid ""
@@ -32524,11 +32504,12 @@ msgid ""
 "supported by the model and firmware. No external picture alone does not "
 "prove that the motherboard is faulty."
 msgstr ""
-"След като актуализацията приключи, проверете дали външният дисплей работи "
-"чрез HDMI. Ако външният екран работи, проблемът може да е във вътрешния "
-"дисплей или в неговото свързване. Съвместим дисплей или док станция с USB-C "
-"също могат да помогнат, ако моделът и фърмуерът ги поддържат. Липсата на "
-"външна картина сама по себе си не доказва, че дънната платка е дефектна."
+"След като актуализацията приключи, проверете дали външният дисплей работи"
+" чрез HDMI. Ако външният екран работи, проблемът може да е във вътрешния "
+"дисплей или в неговото свързване. Съвместим дисплей или док станция с "
+"USB-C също могат да помогнат, ако моделът и фърмуерът ги поддържат. "
+"Липсата на външна картина сама по себе си не доказва, че дънната платка е"
+" дефектна."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:257
 msgid "Try the CMOS reset below."
@@ -32544,23 +32525,23 @@ msgid ""
 "about 30 minutes for a single-module trial before changing the "
 "configuration again."
 msgstr ""
-"Ако можете безопасно да работите вътре в Често задавани въпроси за NitroPad, "
-"изключете адаптера и основната батерия, преди да поставите отново RAM "
-"паметта. При наличие на два модула тествайте по един модул наведнъж, като "
-"при всяко стартиране свързвате отново батерията и адаптера. Ако имате само "
-"един модул, тествайте другия слот. Оставете време за „обучение“ на паметта "
-"след всяка промяна; ръководството за отстраняване на хардуерни проблеми "
-"препоръчва да изчакате около 30 минути при тестване с един модул, преди да "
-"промените отново конфигурацията."
+"Ако можете безопасно да работите вътре в Често задавани въпроси за "
+"NitroPad, изключете адаптера и основната батерия, преди да поставите "
+"отново RAM паметта. При наличие на два модула тествайте по един модул "
+"наведнъж, като при всяко стартиране свързвате отново батерията и "
+"адаптера. Ако имате само един модул, тествайте другия слот. Оставете "
+"време за „обучение“ на паметта след всяка промяна; ръководството за "
+"отстраняване на хардуерни проблеми препоръчва да изчакате около 30 минути"
+" при тестване с един модул, преди да промените отново конфигурацията."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:266
 msgid ""
 "If there is still no progress, contact Nitrokey support before attempting"
 " external firmware recovery or replacing hardware."
 msgstr ""
-"Ако все още няма напредък, свържете се с отдела за поддръжка на Nitrokey, "
-"преди да се опитате да възстановите фърмуера чрез външни средства или да "
-"замените хардуера."
+"Ако все още няма напредък, свържете се с отдела за поддръжка на Nitrokey,"
+" преди да се опитате да възстановите фърмуера чрез външни средства или да"
+" замените хардуера."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:270
 #, fuzzy
@@ -32575,10 +32556,10 @@ msgid ""
 "select the appropriate operating system boot option."
 msgstr ""
 "Ако менюто „Heads“ е видимо, първо отстранете всички съобщени грешки, "
-"свързани с TPM, подписа или отключването на диска, като следвате указанията "
-"в „Heads“ и съответното ръководство за Nitrokey. Уверете се, че SSD дискът "
-"се разпознава, и използвайте :doc:`default-boot`, за да изберете подходящата "
-"опция за стартиране на операционната система."
+"свързани с TPM, подписа или отключването на диска, като следвате "
+"указанията в „Heads“ и съответното ръководство за Nitrokey. Уверете се, "
+"че SSD дискът се разпознава, и използвайте :doc:`default-boot`, за да "
+"изберете подходящата опция за стартиране на операционната система."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:277
 msgid ""
@@ -32587,12 +32568,12 @@ msgid ""
 " it can erase the drive. Reinstalling an operating system cannot repair a"
 " NitroPad that does not power on or cannot reach Heads."
 msgstr ""
-"Ако операционната система или нейният буутлоудър са повредени, използвайте "
-"инструментите ѝ за възстановяване. Преинсталирането е крайна мярка, която се "
-"предприема след създаване на резервно копие на възстановимите данни; то може "
-"да изтрие съдържанието на диска. Преинсталирането на операционната система "
-"не може да поправи NitroPad, който не се включва или не установява връзка с "
-"Heads."
+"Ако операционната система или нейният буутлоудър са повредени, "
+"използвайте инструментите ѝ за възстановяване. Преинсталирането е крайна "
+"мярка, която се предприема след създаване на резервно копие на "
+"възстановимите данни; то може да изтрие съдържанието на диска. "
+"Преинсталирането на операционната система не може да поправи NitroPad, "
+"който не се включва или не установява връзка с Heads."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:284
 #, fuzzy
@@ -32614,8 +32595,9 @@ msgid ""
 "Ensure that no firmware update is running. Turn off the NitroPad, unplug "
 "the power adapter and disconnect external devices."
 msgstr ""
-"Уверете се, че не се изпълнява актуализация на фърмуера. Изключете NitroPad, "
-"извадете захранващия адаптер от контакта и откачете външните устройства."
+"Уверете се, че не се изпълнява актуализация на фърмуера. Изключете "
+"NitroPad, извадете захранващия адаптер от контакта и откачете външните "
+"устройства."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:292
 msgid ""
@@ -32623,10 +32605,10 @@ msgid ""
 "disconnect the main battery. If you cannot safely identify or access the "
 "connectors, ask Nitrokey support to perform the reset."
 msgstr ""
-"Отворете устройството, като следвате инструкциите, специфични за съответния "
-"модел, и изключете основната батерия. Ако не можете безопасно да "
-"идентифицирате или да достигнете до конекторите, помолете екипа за поддръжка "
-"на Nitrokey да извърши нулирането."
+"Отворете устройството, като следвате инструкциите, специфични за "
+"съответния модел, и изключете основната батерия. Ако не можете безопасно "
+"да идентифицирате или да достигнете до конекторите, помолете екипа за "
+"поддръжка на Nitrokey да извърши нулирането."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:296
 msgid ""
@@ -32642,9 +32624,9 @@ msgid ""
 "reconnect the adapter. **Wait another five minutes** before attempting to"
 " power on."
 msgstr ""
-"Свържете отново CMOS батерията и основната батерия, затворете устройството, "
-"след което свържете отново адаптера. **Изчакайте още пет минути**, преди да "
-"опитате да включите устройството."
+"Свържете отново CMOS батерията и основната батерия, затворете "
+"устройството, след което свържете отново адаптера. **Изчакайте още пет "
+"минути**, преди да опитате да включите устройството."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:302
 msgid ""
@@ -32666,11 +32648,11 @@ msgid ""
 "compatible versions. A CMOS reset or reinstalling the operating system "
 "cannot substitute for repairing corrupted firmware."
 msgstr ""
-"Ако горните проверки се окажат неуспешни, възстановяването може да наложи "
-"външно програмиране на BIOS и/или EC. Това са отделни компоненти на фърмуера "
-"и версиите им трябва да са съвместими. Рестартирането на CMOS или "
-"преинсталирането на операционната система не могат да заменят поправката на "
-"повреден фърмуер."
+"Ако горните проверки се окажат неуспешни, възстановяването може да наложи"
+" външно програмиране на BIOS и/или EC. Това са отделни компоненти на "
+"фърмуера и версиите им трябва да са съвместими. Рестартирането на CMOS "
+"или преинсталирането на операционната система не могат да заменят "
+"поправката на повреден фърмуер."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:313
 msgid ""
@@ -32683,16 +32665,16 @@ msgid ""
 " for the appropriate recovery or repair process before flashing. A "
 "hardware fault may instead require component or motherboard repair."
 msgstr ""
-"Външното програмиране на BIOS, например с подходяща конфигурация на CH341A, "
-"е сложна ремонтна операция, която изисква подходящ образ на Nitrokey Heads, "
-"напрежение на чипа и съответния конектор за конкретния модел. Преди външното "
-"програмиране на BIOS изключете адаптера, основната батерия и CMOS батерията "
-"съгласно процедурата за възстановяване на модела. Възстановяването на EC има "
-"свои собствени изисквания за свързване и захранване; не прилагайте "
-"процедурата за BIOS към него. Преди флашването се обърнете към поддръжката "
-"на Nitrokey за подходящия процес на възстановяване или ремонт. Хардуерна "
-"повреда може вместо това да изисква ремонт на компонент или на дънната "
-"платка."
+"Външното програмиране на BIOS, например с подходяща конфигурация на "
+"CH341A, е сложна ремонтна операция, която изисква подходящ образ на "
+"Nitrokey Heads, напрежение на чипа и съответния конектор за конкретния "
+"модел. Преди външното програмиране на BIOS изключете адаптера, основната "
+"батерия и CMOS батерията съгласно процедурата за възстановяване на "
+"модела. Възстановяването на EC има свои собствени изисквания за свързване"
+" и захранване; не прилагайте процедурата за BIOS към него. Преди "
+"флашването се обърнете към поддръжката на Nitrokey за подходящия процес "
+"на възстановяване или ремонт. Хардуерна повреда може вместо това да "
+"изисква ремонт на компонент или на дънната платка."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:322
 #, fuzzy
@@ -32706,25 +32688,25 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:324
 msgid "The NitroPad model, serial number and order reference."
 msgstr ""
-"Моделът, серийният номер и номерът на поръчката за Често задавани въпроси за "
-"NitroPad."
+"Моделът, серийният номер и номерът на поръчката за Често задавани въпроси"
+" за NitroPad."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:325
 msgid ""
 "The previously installed firmware version, if known, and the selected ZIP"
 " filename and release version."
 msgstr ""
-"Версията на предишно инсталирания фърмуер, ако е известна, както и избраното "
-"име на ZIP файла и версията на изданието."
+"Версията на предишно инсталирания фърмуер, ако е известна, както и "
+"избраното име на ZIP файла и версията на изданието."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:327
 msgid ""
 "Any error message, whether flashing reported success, and what happened "
 "during the first restart, including how long you waited."
 msgstr ""
-"Всяко съобщение за грешка, дали е мигало съобщение за успешно изпълнение и "
-"какво се е случило по време на първото рестартиране, включително колко време "
-"сте чакали."
+"Всяко съобщение за грешка, дали е мигало съобщение за успешно изпълнение "
+"и какво се е случило по време на първото рестартиране, включително колко "
+"време сте чакали."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:329
 msgid "The power adapter used, battery condition, LEDs and fan behaviour."
@@ -32750,13 +32732,13 @@ msgid ""
 "Firmware downloads for this procedure come from the Nitrokey releases "
 "linked in Preparation."
 msgstr ""
-"Инструкциите за актуализация на Heads и първоначално стартиране, посочени по-"
-"горе, се основават на ръководството за актуализация на Heads от „ `“ "
+"Инструкциите за актуализация на Heads и първоначално стартиране, посочени"
+" по-горе, се основават на ръководството за актуализация на Heads от „ `“ "
 "<https://osresearch.net/Updating>`__ и на бележките за актуализация на "
-"Heads, специфични за платформата „ `“ <https://docs.dasharo.com/unified/"
-"novacustom/firmware-update/>`__. Файловете с фърмуера, необходими за тази "
-"процедура, се изтеглят от версиите на Nitrokey, към които има линкове в "
-"раздела „Подготовка“."
+"Heads, специфични за платформата „ `“ "
+"<https://docs.dasharo.com/unified/novacustom/firmware-update/>`__. "
+"Файловете с фърмуера, необходими за тази процедура, се изтеглят от "
+"версиите на Nitrokey, към които има линкове в раздела „Подготовка“."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:342
 msgid ""
@@ -32764,9 +32746,9 @@ msgid ""
 "these guides. Use the Heads-specific instructions on this page for boot "
 "selection, security prompts and firmware recovery:"
 msgstr ""
-"Проверките на хардуера са адаптирани за NitroPad с Nitrokey Heads съгласно "
-"тези ръководства. Използвайте специфичните за Heads инструкции на тази "
-"страница за избор на режим на зареждане, подкани за сигурност и "
+"Проверките на хардуера са адаптирани за NitroPad с Nitrokey Heads "
+"съгласно тези ръководства. Използвайте специфичните за Heads инструкции "
+"на тази страница за избор на режим на зареждане, подкани за сигурност и "
 "възстановяване на фърмуера:"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:346
@@ -32774,38 +32756,38 @@ msgid ""
 "`Charging checks <https://novacustom.com/knowledge-base/laptop-not-"
 "charging/>`__."
 msgstr ""
-"`Проверки на зареждането <https://novacustom.com/knowledge-base/"
-"laptop-not-charging/>`__."
+"`Проверки на зареждането <https://novacustom.com/knowledge-base/laptop-"
+"not-charging/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:347
 msgid ""
 "`Boot failure checks <https://novacustom.com/knowledge-base/laptop-is-"
 "not-booting-what-can-i-do/>`__."
 msgstr ""
-"`Проверки за грешки при стартиране <https://novacustom.com/knowledge-base/"
-"laptop-is-not-booting-what-can-i-do/>`__."
+"`Проверки за грешки при стартиране <https://novacustom.com/knowledge-base"
+"/laptop-is-not-booting-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:348
 msgid ""
 "`CMOS reset <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
 "reset/>`__."
 msgstr ""
-"`CMOS ресет <https://novacustom.com/knowledge-base/"
-"how-to-perform-a-cmos-reset/>`__."
+"`CMOS ресет <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
+"reset/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:349
 msgid ""
 "`Power and black-screen checks <https://novacustom.com/knowledge-base"
 "/laptop-not-turning-on-what-can-i-do/>`__."
 msgstr ""
-"`Проверка на захранването и на черния екран <https://novacustom.com/"
-"knowledge-base/laptop-not-turning-on-what-can-i-do/>`__."
+"`Проверка на захранването и на черния екран <https://novacustom.com"
+"/knowledge-base/laptop-not-turning-on-what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:350
 msgid "`Heads disk recovery keys <https://osresearch.net/Keys/>`__."
 msgstr ""
-"`Ключове за възстановяване на дискове „Heads“ <https://osresearch.net/Keys/"
-">`__."
+"`Ключове за възстановяване на дискове „Heads“ "
+"<https://osresearch.net/Keys/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:351
 msgid ""
@@ -37826,50 +37808,120 @@ msgid "nitropy Documentation For Linux"
 msgstr "Документация за Nitropy за Linux"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:2
-msgid "Setting up The udev Rules"
+#, fuzzy
+msgid "Setting up the udev Rules"
 msgstr "Създаване на правилата на udev"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:4
+#, fuzzy
 msgid ""
 "To be able to access your devices without root privileges, nitropy "
-"requires the Nitrokey udev rules. If they are not shipped with your "
-"distribution, you can install the rules manually::"
+"requires the Nitrokey udev rules. On many distributions, they can be "
+"installed from a package:"
 msgstr ""
 "За да имате достъп до устройствата си без права на root, nitropy изисква "
 "правилата Nitrokey udev. Ако те не са доставени с вашата дистрибуция, "
 "можете да инсталирате правилата ръчно::"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:11
+#: ../../source/components/software/nitropy/linux/udev.rst:7
 msgid ""
-"The legacy rules are also shipped with `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`__."
+"Arch Linux: `nitrokey-udev-rules "
+"<https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
 msgstr ""
-"Наследствените правила също се доставят с `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`__."
 
-#: ../../source/components/software/nitropy/linux/udev.rst:14
+#: ../../source/components/software/nitropy/linux/udev.rst:8
 msgid ""
-"You most likely want to change the owner and the permissions of this "
-"file::"
-msgstr "Най-вероятно искате да промените собственика и разрешенията на този файл::"
+"Debian: `nitrokey-udev <https://packages.debian.org/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Debian 14 Forky)"
+msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:19
+#: ../../source/components/software/nitropy/linux/udev.rst:9
+msgid ""
+"NixOS: `nitrokey-udev-rules "
+"<https://search.nixos.org/packages?channel=unstable&query=nitrokey-udev-"
+"rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to "
+"``true``)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:10
+msgid ""
+"Ubuntu: `nitrokey-udev <https://packages.ubuntu.com/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Ubuntu 26.10 Stonking Stingray)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:15
+msgid ""
+"If the rules are not provided by your distribution, you can install the "
+"rules manually::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
 msgstr "След като инсталирате правилата, трябва да ги презаредите::"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:23
-#, fuzzy
+#: ../../source/components/software/nitropy/linux/udev.rst:26
 msgid ""
 "If you still cannot access your device, try again after rebooting your "
-"system. If you encounter issues, look at this `github comment "
-"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" for some debugging hints."
+"system."
 msgstr ""
-"Ако все още нямате достъп до устройството, опитайте отново след "
-"рестартиране на системата. Ако срещнете проблеми, погледнете този "
-"коментар в `github "
-"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" за някои съвети за отстраняване на грешки."
+
+#: ../../source/components/software/nitropy/linux/udev.rst:31
+msgid ""
+"The recommended udev rules use the ``uaccess`` mechanism to dynamically "
+"assign the correct permissions. This mechanism requires ``systemd`` and "
+"only works with users that are logged in locally (this means no SSH "
+"logins or similar)."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:37
+msgid ""
+"If installing the udev rules did not fix the issue, you can perform the "
+"following steps to investigate the problem:"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:39
+#, fuzzy
+msgid "Unplug the Nitrokey."
+msgstr "Изберете ключа Nitrokey 3"
+
+#: ../../source/components/software/nitropy/linux/udev.rst:40
+msgid "Reboot the computer to ensure that the udev rules are activated."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:41
+msgid ""
+"Execute the command ``sudo dmesg --follow`` and connect the Nitrokey. "
+"Observe the log messages that appear afterwards. You should see a line "
+"similar to::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:47
+msgid ""
+"Determine the hidraw device name from the log message. In this case, it "
+"is ``hidraw3``."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:49
+msgid ""
+"Check the permissions for the hidraw device by running ``getfacl "
+"/dev/$name`` where ``$name`` is the hidraw device name. You should see "
+"your user with ``rw`` permissions. For example for the user ``myuser``::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:64
+msgid ""
+"If your user does not have the correct permissions, execute the command "
+"``loginctl list-sessions``. You should see one session for your user with"
+" a seat, for example::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:74
+msgid ""
+"Additional steps for debugging the udev rules are described `here "
+"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
+msgstr ""
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
 msgid "nitropy Documentation For Windows"
@@ -42665,3 +42717,68 @@ msgstr "Маркирайте изрязаното Изход"
 #~ " инструкциите за нулиране на фабричните "
 #~ "настройки (в менюто от лявата страна),"
 #~ " като започнете от стъпка 11."
+
+#~ msgid "If the Nitrokey is not detected, proceed as follows:"
+#~ msgstr "Ако Nitrokey не бъде открит, процедирайте по следния начин:"
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
+#~ "rules/main/41-nitrokey.rules>`__ to "
+#~ "``/etc/udev/rules.d/``."
+#~ msgstr ""
+#~ "Копирайте този файл `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " в ``/etc/udev/rules.d/``."
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " to ``/etc/udev/rules.d/``. In very rare"
+#~ " cases, the system will need the "
+#~ "`older version "
+#~ "<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
+#~ " of this file."
+#~ msgstr ""
+#~ "Копирайте този файл `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`_ "
+#~ "в ``/etc/udev/rules.d/``. В много редки "
+#~ "случаи системата ще се нуждае от "
+#~ "`старата версия "
+#~ "<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`_"
+#~ " на този файл."
+
+#~ msgid ""
+#~ "The legacy rules are also shipped "
+#~ "with `libnitrokey "
+#~ "<https://github.com/Nitrokey/libnitrokey>`__."
+#~ msgstr ""
+#~ "Наследствените правила също се доставят "
+#~ "с `libnitrokey "
+#~ "<https://github.com/Nitrokey/libnitrokey>`__."
+
+#~ msgid ""
+#~ "You most likely want to change the"
+#~ " owner and the permissions of this"
+#~ " file::"
+#~ msgstr ""
+#~ "Най-вероятно искате да промените собственика"
+#~ " и разрешенията на този файл::"
+
+#~ msgid ""
+#~ "If you still cannot access your "
+#~ "device, try again after rebooting your"
+#~ " system. If you encounter issues, "
+#~ "look at this `github comment "
+#~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " for some debugging hints."
+#~ msgstr ""
+#~ "Ако все още нямате достъп до "
+#~ "устройството, опитайте отново след "
+#~ "рестартиране на системата. Ако срещнете "
+#~ "проблеми, погледнете този коментар в "
+#~ "`github "
+#~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " за някои съвети за отстраняване на"
+#~ " грешки."
+

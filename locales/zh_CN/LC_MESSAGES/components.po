@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-15 13:32+0000\n"
+"POT-Creation-Date: 2026-10-16 10:44+0000\n"
 "PO-Revision-Date: 2026-10-15 13:50+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
-"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified Han script) "
+"<https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -14875,6 +14875,7 @@ msgstr "在这里你可以找到`进一步的说明<https://wiki.ubuntuusers.de/
 #: ../../source/components/nitropad-nitropc/index.rst:17
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:2
 #: ../../source/components/software/nitropy/all-platforms/installation.rst:112
+#: ../../source/components/software/nitropy/linux/udev.rst:35
 msgid "Troubleshooting"
 msgstr "故障排除"
 
@@ -19485,8 +19486,8 @@ msgstr "点击**OK** 应用更改。"
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:152
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:221
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:45
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid "PowerShell"
 msgstr "PowerShell"
 
@@ -21738,7 +21739,6 @@ msgid ""
 msgstr "注意：白色LED灯的闪烁也是用来表示所选设备的信号（所谓的WINK命令）。"
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:182
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid "If the Nitrokey is not detected, proceed the following:"
 msgstr "如果没有检测到硝基钥匙，请进行以下操作。"
 
@@ -21756,8 +21756,6 @@ msgstr ""
 "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__复制到``/etc/udev/rules.d/``。在非常罕见的情况下，系统将需要这个文件的`较旧的版本<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__。"
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:190
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:41
 msgid ""
 "Restart udev via ``sudo service udev restart`` or ``udevadm control "
 "--reload-rules && udevadm trigger`` if you are using Fedora."
@@ -23990,24 +23988,17 @@ msgid "Nitrokey is Not Detected on Linux"
 msgstr "Nitrokey在Linux上未被检测到"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:17
-msgid "If the Nitrokey is not detected, proceed as follows:"
-msgstr "如果没有检测到硝基钥匙，请按以下步骤操作。"
-
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:19
-#, fuzzy
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
-"rules/main/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``."
+"If the Nitrokey is not detected, make sure that you have installed the "
+"Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
-"把这个文件`41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__复制到``/etc/udev/rules.d/``。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr "无法在 Windows 上安装硝基读卡器驱动程序"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:27
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
 msgid ""
 "On Windows the initialization of the generic smartcard reader driver "
 "fails. The reported device status is ``This device is not working "
@@ -24018,7 +24009,7 @@ msgstr ""
 "properly because Windows cannot load the drivers required for this "
 "device. (Code 31)``。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
 msgid ""
 "This problem exists on Windows 10 and Windows Server 2022 and older. From"
 " Windows 11 and Windows Server 2025 on the behavior is correct and the "
@@ -24027,7 +24018,7 @@ msgstr ""
 "此问题存在于 Windows 10 和 Windows Server 2022 及更早版本。从 Windows 11 和 Windows "
 "Server 2025 开始，行为是正确的，不需要下面的解决方案。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:33
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:28
 msgid ""
 "Windows has two generic smartcard reader drivers (WUDF and UMDF2). By "
 "default Windows uses UMDF2, which fails to initialize and therefore is "
@@ -24036,14 +24027,14 @@ msgstr ""
 "Windows 有两种通用的智能卡读写器驱动程序（WUDF 和 UMDF2）。默认情况下，Windows 使用 UMDF2，但 UMDF2 "
 "无法初始化，因此无法为 ®硝基加载。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:36
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:31
 msgid ""
 "To ensure a successful driver initialization, add a retry for the device "
 "initialization. In the registry add the following registry key."
 msgstr "为确保驱动程序初始化成功，请为设备初始化添加重试功能。在注册表中添加以下注册表键值。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:57
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:52
 #, fuzzy
 msgid "Regedit"
 msgstr "复位"
@@ -24067,13 +24058,13 @@ msgstr "类型：`DWORD (32-bit)``"
 msgid "Data: ``1``"
 msgstr "数据：`1``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:46
 msgid ""
 "The registry key is available for Windows 10 (version 1903 (19H1) and "
 "later) and Windows 11."
 msgstr "注册表密钥适用于 Windows 10（1903 (19H1) 及更高版本）和 Windows 11。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:53
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:48
 msgid ""
 "If the smartcard reader was before already installed with a failed "
 "initialization you may have to remove them from the registry. In the "
@@ -24090,50 +24081,50 @@ msgstr ""
 "路径：``HKEY_LOCAL_MACHINE/bs/SOFTWARE/bs/Microsoft/bs/Cryptography/bs/Calais/bs/Readers/bs/Nitrokey"
 " CCID/ICCD Interface 0``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:60
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:55
 msgid ""
 "If the smartcard reader was installed multiple times before there may be "
 "more than one path with an incremented number at the end."
 msgstr "如果智能卡读卡器安装过多次，可能会有多个路径，路径末尾的数字会递增。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
 msgid ""
 "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard"
 " Reader (WUDF)*."
 msgstr "重启后，硝基被识别为*Microsoft Usbccid Smartcard Reader (WUDF)* 。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:64
 msgid "Nitrokey 3 is Recognized as \"Unknown Smart Card\" on Windows"
 msgstr "Nitrokey 3 在 Windows 上被识别为 \"未知智能卡"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
 msgid ""
 "On Windows Server 2025, the initialization of the generic smart card "
 "driver fails. The device is recognized as \"Unknown Smart Card\" and no "
 "driver is installed."
 msgstr "在 Windows Server 2025 上，通用智能卡驱动程序的初始化失败。设备被识别为 \"未知智能卡\"，且未安装驱动程序。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
 msgid ""
 "To install the correct smart card driver, install the correct driver as "
 "follows."
 msgstr "要安装正确的智能卡驱动程序，请按以下步骤安装。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:76
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
 msgid "Open the Windows *Device Manager* (``devmgmt.msc``)."
 msgstr "打开 Windows*设备管理器* (``devmgmt.msc``)。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:77
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:72
 msgid ""
 "Open the group *Smart cards* from the device tree. If the group doesn't "
 "exist, make sure the Nitrokey is properly connected."
 msgstr "从设备树中打开组*Smart cards* 。如果该组不存在，请确保正确连接了 ®硝基。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
 msgid "Right-click on *Unknown Smart Card* and select *Update driver*."
 msgstr "右键单击*未知智能卡* ，然后选择*更新驱动程序* 。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:80
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:75
 msgid ""
 "In the driver update assistant, first select *Browse my computer for "
 "drivers* and then *Let me pick from a list of available drivers on my "
@@ -24148,67 +24139,67 @@ msgstr ""
 "复选框，并从列表中选择*Identity Device (NIST SP 800-73 [PIV])* 。单击*下一步* 按钮确认选择，并用*是*"
 " 确认驱动程序警告对话框。安装驱动程序后，点击*Close* 按钮关闭驱动程序更新助手。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
 msgid ""
 "The Nitrokey is now recognized in the *Smart cards* group as *Identity "
 "Device (NIST SP 800-73 [PIV])*."
 msgstr "现在，*智能卡* 组中承认硝基为*Identity Device (NIST SP 800-73 [PIV])* 。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:81
 msgid ""
 "Connecting the Nitrokey to a different USB port can require this process "
 "to be repeated."
 msgstr "将硝基连接到不同的 USB 端口可能需要重复此过程。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
 msgid "Google and Microsoft Services"
 msgstr "谷歌和微软服务"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
 msgid ""
 "Currently there seems to be a bug we hope to fix soon which affects the "
 "Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
 msgstr "目前，似乎有一个错误，我们希望能尽快修复，它影响了Nitrokey 3与一些谷歌和微软服务的FIDO2的工作。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
 msgid "Timeout Bug"
 msgstr "超时错误"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:96
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
 msgid ""
 "There is a bug with the Nitrokey being recognized by the system, where a "
 "timeout occurs before the connection succeeds."
 msgstr "系统在识别Nitrokey时有一个错误，在连接成功之前会出现超时。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
 msgid "NFC is Not Working"
 msgstr "NFC不工作"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:100
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:95
 msgid ""
 "Please make sure FIDO2 is working correctly. Otherwise NFC won't work "
 "either."
 msgstr "请确保FIDO2工作正常。否则NFC也不会工作。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:102
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:97
 #, fuzzy
 msgid "Also check if you are using the right spot on your smartphone."
 msgstr "还要检查你是否在你的智能手机上使用正确的位置。找到正确的位置，使用。`nfc.fail`_."
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:104
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
 msgid ""
 "The backside of the Nitrokey has to be held against the smartphone. For "
 "the USB-A version it might be helpful to lift the side with the USB "
 "connector slightly to reduce the distance to the end part of the stick."
 msgstr "Nitrokey的背面必须靠着智能手机。对于USB-A版本，稍微抬起带有USB接口的一侧，以减少与棒子末端的距离，可能会有帮助。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:101
 msgid ""
 "If you have a phone cover, try to find the right spot first without it. "
 "Retry afterwards with the cover."
 msgstr "如果你有手机套，先试着在没有手机套的情况下找到正确的位置。之后再带着盖子重试。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:103
 msgid ""
 "The search of the optimal spot sometimes took up to 20-30 sec. In our "
 "experience holding the Nitrokey in an horizontal orientation yields "
@@ -24217,21 +24208,21 @@ msgid ""
 "your smartphone model."
 msgstr "寻找最佳位置有时需要20-30秒。根据我们的经验，将Nitrokey水平放置会产生更好的效果。如果你仍然遇到问题，请写信给我们的支持。如果您仍然遇到问题，请给我们的支持部门写信，为了获得最佳帮助，请注明发货/订单号和您的智能手机型号。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
 msgid "OpenPGP Troubleshooting"
 msgstr "OpenPGP的故障排除"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:114
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:109
 msgid "GnuPG: OpenPGP Card Not Available"
 msgstr "GnuPG：OpenPGP卡不可用"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:116
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
 msgstr "**问题：** GnuPG无法访问Nitrokey 3，并显示这样的错误信息：："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:123
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:118
 #, fuzzy
 msgid ""
 "**Solution:** There are two common smartcard services on Linux systems: "
@@ -24244,7 +24235,7 @@ msgstr ""
 "在Linux系统上有两种常见的智能卡服务：``scdaemon``，GnuPG的智能卡守护程序，以及``pcscd``，一个通用的智能卡守护程序。``scdaemon``有两个驱动用于访问智能卡：其集成的``ccid``驱动程序试图直接访问智能卡。``pcsc``"
 " 驱动程序使用``pcscd`` 守护程序代替。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:129
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:124
 msgid ""
 "A smartcard can only be accessed directly by one daemon. This means that "
 "depending on the startup order, ``pcscd`` might lock the card before "
@@ -24260,37 +24251,37 @@ msgstr ""
 "ccid``添加到``~/.gnupg/scdaemon.conf``配置文件中，并重新启动``scdaemon``，例如用``gpg-"
 "connect-agent \"SCD KILLSCD\" /bye``来激活它。如果这样还不能解决问题，请看下一节，了解更多信息。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:130
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
 msgstr "另外，你可以停用或卸载``pcscd``以避免这种冲突。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:133
 #: ../../source/components/software/nk-app2/keepassxc.rst:104
 msgid "pcscd: Card Not Found"
 msgstr "pcscd：未找到卡片"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:140
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
 #: ../../source/components/software/nk-app2/keepassxc.rst:106
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr "**问题：** 一个使用``pcscd``的应用程序不显示Nitrokey 3。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
 #: ../../source/components/software/nk-app2/keepassxc.rst:109
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr "**解决方案：** 首先，确保``scdaemon``没有运行（见上一节）：："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:148
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
 #: ../../source/components/software/nk-app2/keepassxc.rst:114
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr "现在列出由``pcscd``与``pcsc_scan -r``识别的智能卡。你应该看到一个像这样的条目：："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:151
 #: ../../source/components/software/nk-app2/keepassxc.rst:122
 msgid ""
 "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and "
@@ -24302,12 +24293,12 @@ msgstr ""
 "3显示出来，说明它被``pcscd``正确识别，试图访问它的应用程序可能有问题。如果它没有出现，请确保你的``libccid``版本是最新的。对Nitrokey"
 " 3的支持在``libccid`` 1.5.0中添加。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 #: ../../source/components/software/nk-app2/keepassxc.rst:127
 msgid "Updating The Device Database"
 msgstr "更新设备数据库"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 #: ../../source/components/software/nk-app2/keepassxc.rst:129
 msgid ""
 "If you cannot update ``libccid`` to a supported version, you have to "
@@ -24315,12 +24306,12 @@ msgid ""
 "your distribution:"
 msgstr "如果你不能将``libccid``更新到一个支持的版本，你必须手动更新设备数据库。数据库的路径取决于你的发行版："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:166
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
 #: ../../source/components/software/nk-app2/keepassxc.rst:132
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr "Arch, Debian, Ubuntu：``/etc/libccid_Info.plist``"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:168
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 #: ../../source/components/software/nk-app2/keepassxc.rst:134
 msgid ""
 "Make sure to backup the file before overwriting it. You can download an "
@@ -24334,42 +24325,42 @@ msgstr ""
 "资源库下载一个`更新的设备数据库文件<https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__。更新文件后，重新启动``pcscd``并再次运行``pcsc_scan"
 " -r``。Nitrokey 3现在应该出现了。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:169
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr "通过update.nitrokey.com进行的更新不起作用"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:176
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:171
 msgid ""
 "Currently the web updater doesn't support the Nitrokey 3. However you can"
 " get the latest firmware using these `instructions <firmware-"
 "update.html>`_."
 msgstr "目前网络更新程序不支持Nitrokey 3。然而，你可以使用这些`说明获得最新的固件<firmware-update.html>`_ 。"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
 #, fuzzy
 msgid "PIV Troubleshooting"
 msgstr "故障排除"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:182
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:177
 #, fuzzy
 msgid "pyscard is not available"
 msgstr "GnuPG：OpenPGP卡不可用"
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:184
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
 #, fuzzy
 msgid ""
 "If pyscard is not available to nitropy, you might get the following error"
 " when trying to use the PIV functionality::"
 msgstr "如果 pyscard 不可用于硝酸盐，则在尝试使用 PIV 功能时可能会出现以下错误："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:183
 #, fuzzy
 msgid ""
 "To fix this error, please install nitropy with the `pcsc` extra "
 "dependencies::"
 msgstr "要修复此错误，请安装带有 `pcsc` 额外依赖项的硝酸盐："
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:193
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
 #, fuzzy
 msgid ""
 "If you install pynitrokey through another distribution channel, please "
@@ -24799,19 +24790,6 @@ msgid ""
 "To check whether the Nitrokey Passkey is correctly recognized, check if "
 "it is shown with ``lsusb``."
 msgstr "要检查是否正确识别了 Nitrokey Passkey，请检查它是否与 `lsusb` 一起显示。"
-
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:35
-#, fuzzy
-msgid ""
-"Copy this file `41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to "
-"``/etc/udev/rules.d/``. In very rare cases, the system will need the "
-"`older version "
-"<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
-" of this file."
-msgstr ""
-"把这个文件`41-nitrokey.rules "
-"<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__复制到``/etc/udev/rules.d/``。在非常罕见的情况下，系统将需要这个文件的`较旧的版本<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__。"
 
 #: ../../source/components/nitrokeys/pro/factory-reset.rst:6
 msgid "There are two types of factory resets for Nitrokey Pro devices:"
@@ -25778,6 +25756,7 @@ msgid ""
 msgstr "`安装pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>`__。"
 
 #: ../../source/components/nitrokeys/start/multiple-identities.rst:43
+#: ../../source/components/software/nitropy/linux/udev.rst:29
 msgid "Limitations"
 msgstr "限制条件"
 
@@ -26993,17 +26972,14 @@ msgid ""
 "Use this guide to update the Nitrokey Heads firmware on a NitroPad that "
 "already runs Heads. It also applies when an OEM factory reset has been "
 "performed but the TPM counter still needs to be reset."
-msgstr ""
-"请参考本指南，为已运行Heads系统的NitroPad更新硝基 "
-"Heads固件。当已执行OEM出厂重置，但TPM计数器仍需重置时，本指南同样适用。"
+msgstr "请参考本指南，为已运行Heads系统的NitroPad更新硝基 Heads固件。当已执行OEM出厂重置，但TPM计数器仍需重置时，本指南同样适用。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:31
 msgid ""
 "Connect the original power adapter and charge the battery above 70%. Keep"
 " both the adapter and battery connected throughout flashing and the first"
 " restart."
-msgstr "连接原装电源适配器，并将电池电量充至70%以上。在刷机及首次重启过程中，请确保适"
-"配器和电池始终保持连接状态。"
+msgstr "连接原装电源适配器，并将电池电量充至70%以上。在刷机及首次重启过程中，请确保适配器和电池始终保持连接状态。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:36
 msgid ""
@@ -27013,8 +26989,8 @@ msgid ""
 "Delivery controller before the adapter check, causing the update to fail."
 msgstr ""
 "在 NitroPad NV41、V54 和 V56 上，请使用**中的直流圆柱形插头电源适配器** "
-"进行更新，以同步嵌入式控制器（EC）固件。请勿仅依赖 USB-C 充电：EC "
-"更新可能会在适配器检测之前重置 USB 电源传输（PD）控制器，导致更新失败。"
+"进行更新，以同步嵌入式控制器（EC）固件。请勿仅依赖 USB-C 充电：EC 更新可能会在适配器检测之前重置 USB "
+"电源传输（PD）控制器，导致更新失败。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:41
 msgid ""
@@ -27023,9 +26999,9 @@ msgid ""
 "requirements and model-specific issues. Download the ZIP archive for your"
 " exact model:"
 msgstr ""
-"请阅读`Nitrokey Heads 版本说明<https://github.com/Nitrokey/heads/releases/"
-"latest>`__，了解升级要求及特定型号的问题。请下载与您具体型号对应的 ZIP "
-"压缩包："
+"请阅读`Nitrokey Heads "
+"版本说明<https://github.com/Nitrokey/heads/releases/latest>`__，了解升级要求及特定型号的问题。请下载与您具体型号对应的"
+" ZIP 压缩包："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:45
 #, fuzzy
@@ -27064,8 +27040,7 @@ msgid ""
 "to give it a ZIP extension.** Select this archive in the Heads update "
 "menu."
 msgstr ""
-"请按照以下说明验证该压缩包，然后将其复制到U盘中。**请保持ZIP压缩包的完整性；"
-"请勿解压该压缩包，也不要将其他文件重命名为ZIP格式。** "
+"请按照以下说明验证该压缩包，然后将其复制到U盘中。**请保持ZIP压缩包的完整性；请勿解压该压缩包，也不要将其他文件重命名为ZIP格式。** "
 "在“Heads”更新菜单中选择此压缩包。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:56
@@ -27073,8 +27048,7 @@ msgid ""
 "Back up important data. If disk encryption is enabled, make sure you have"
 " the disk recovery passphrase before updating; it may be needed if TPM-"
 "based disk unlocking must be reconfigured."
-msgstr "请备份重要数据。如果启用了磁盘加密，请在更新前确保已获取磁盘恢复密码；"
-"如果需要重新配置基于 TPM 的磁盘解锁功能，可能需要使用该密码。"
+msgstr "请备份重要数据。如果启用了磁盘加密，请在更新前确保已获取磁盘恢复密码；如果需要重新配置基于 TPM 的磁盘解锁功能，可能需要使用该密码。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:62
 msgid ""
@@ -27086,12 +27060,10 @@ msgid ""
 "BIOS and EC versions are compatible before proceeding. Upstream version "
 "numbers do not necessarily match Nitrokey release numbers."
 msgstr ""
-"ZIP 更新需要已安装支持该格式的 Heads 版本。如果压缩包无法被接受，或者您是从非"
-"常旧的固件版本进行升级，请查阅发行说明并联系`Nitrokey 支持<https://www."
-"nitrokey.com/"
-"contact>`__，而不是盲目猜测升级路径。如果固件是手动安装或修改的，"
-"请在继续操作前确认 BIOS 和 EC 版本是否兼容。 "
-"上游版本号不一定与硝基的发布版本号一致。"
+"ZIP 更新需要已安装支持该格式的 Heads "
+"版本。如果压缩包无法被接受，或者您是从非常旧的固件版本进行升级，请查阅发行说明并联系`Nitrokey "
+"支持<https://www.nitrokey.com/contact>`__，而不是盲目猜测升级路径。如果固件是手动安装或修改的，请在继续操作前确认"
+" BIOS 和 EC 版本是否兼容。 上游版本号不一定与硝基的发布版本号一致。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:71
 msgid "Firmware Signature Check"
@@ -27116,9 +27088,8 @@ msgid ""
 " Check the key fingerprint against the release's signing information."
 msgstr ""
 "导入硝基发行说明中指定的签名密钥。由 Markus Meissner "
-"签名的发行版使用的是`密钥服务器条目<https://keyserver.ubuntu.com/pks/"
-"lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ "
-"中提供的密钥。请将该密钥的指纹与发行版的签名信息进行核对。"
+"签名的发行版使用的是`密钥服务器条目<https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__"
+" 中提供的密钥。请将该密钥的指纹与发行版的签名信息进行核对。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:82
 msgid "From that directory, verify the checksum manifest's signature:"
@@ -27141,8 +27112,7 @@ msgid ""
 "downloaded ZIP. Do not flash a file with a failed or missing checksum "
 "verification."
 msgstr ""
-"请确认输出中包含**以及您特定型号的 ZIP 压缩包** ，且其校验和为``OK``。"
-"仅凭有效的清单签名无法验证下载的 ZIP "
+"请确认输出中包含**以及您特定型号的 ZIP 压缩包** ，且其校验和为``OK``。仅凭有效的清单签名无法验证下载的 ZIP "
 "文件。如果校验和验证失败或缺失，请勿刷写该文件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:103
@@ -27160,11 +27130,9 @@ msgid ""
 " a maximum waiting time. Later starts should be faster once the memory "
 "training results are cached."
 msgstr ""
-"首次重启可能比平时耗时更长。在此重启过程中，EC固件可能会进行更新，且在“Heads”"
-"出现之前，系统会重新校准其内存。**屏幕可能会完全保持黑色约一分钟或更长时间。*"
-"* 安装的内存越多，延迟可能越大；配备 96 GB 内存的系统可能需要**超过两分钟** "
-"。这些时间仅为示例，并非最大等待时间。一旦内存训练结果被缓存，后续启动速度应"
-"会加快。"
+"首次重启可能比平时耗时更长。在此重启过程中，EC固件可能会进行更新，且在“Heads”出现之前，系统会重新校准其内存。**屏幕可能会完全保持黑色约一分钟或更长时间。**"
+" 安装的内存越多，延迟可能越大；配备 96 GB 内存的系统可能需要**超过两分钟** "
+"。这些时间仅为示例，并非最大等待时间。一旦内存训练结果被缓存，后续启动速度应会加快。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:114
 msgid ""
@@ -27175,10 +27143,9 @@ msgid ""
 "can leave the NitroPad unable to start and require external hardware "
 "recovery."
 msgstr ""
-"**请勿因屏幕变黑而中断刷写过程或首次重启。** 在更新可能仍在进行时，请勿长按电"
-"源键、拔下适配器、断开任一电池连接，或执行重置操作。中断固件写入（"
-"包括重启期间的 EC 更新）可能会导致 NitroPad "
-"无法启动，并需要通过外部硬件进行恢复。"
+"**请勿因屏幕变黑而中断刷写过程或首次重启。** "
+"在更新可能仍在进行时，请勿长按电源键、拔下适配器、断开任一电池连接，或执行重置操作。中断固件写入（包括重启期间的 EC 更新）可能会导致 "
+"NitroPad 无法启动，并需要通过外部硬件进行恢复。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:120
 msgid ""
@@ -27187,10 +27154,7 @@ msgid ""
 " there is no progress after an extended wait and you are unsure whether "
 "the update is still running, contact Nitrokey support before forcing a "
 "shutdown."
-msgstr ""
-"闪存更新成功并不意味着随后的EC更新已经完成。请保持电源连接，并耐心等待“Heads”"
-"出现。如果等待较长时间后仍无进展，且您不确定更新是否仍在进行，请在强制关机前"
-"联系硝基技术支持。"
+msgstr "闪存更新成功并不意味着随后的EC更新已经完成。请保持电源连接，并耐心等待“Heads”出现。如果等待较长时间后仍无进展，且您不确定更新是否仍在进行，请在强制关机前联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:128
 msgid ""
@@ -27198,9 +27162,8 @@ msgid ""
 "step 3. The screenshots illustrate the menu flow; filenames and screen "
 "details may differ in newer releases. Follow the ZIP instructions above."
 msgstr ""
-"下面的前两个屏幕是可选的。如果它们不存在，请从第 3 步开始。这些屏幕截图展示了"
-"菜单流程；在新版本中，文件名和屏幕细节可能会有所不同。请按照上方的 ZIP "
-"文件说明操作。"
+"下面的前两个屏幕是可选的。如果它们不存在，请从第 3 步开始。这些屏幕截图展示了菜单流程；在新版本中，文件名和屏幕细节可能会有所不同。请按照上方的"
+" ZIP 文件说明操作。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:132
 #, fuzzy
@@ -27274,8 +27237,7 @@ msgstr "进入固件文件选择界面；选择对应机型的 ZIP 文件。"
 msgid ""
 "Confirm with Enter and allow flashing to finish. If an error is reported,"
 " record its exact text and contact Nitrokey support."
-msgstr "按 Enter 键确认，并等待刷写完成。如果出现错误提示，请记录其确切内容，并联系硝"
-"基技术支持。"
+msgstr "按 Enter 键确认，并等待刷写完成。如果出现错误提示，请记录其确切内容，并联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:172
 msgid "Heads firmware flashing confirmation."
@@ -27288,10 +27250,9 @@ msgid ""
 "stays black.** Follow `Boot Time After Update <firmware-update.html#boot-"
 "time-after-update>`__; do not force a power off."
 msgstr ""
-"出现提示时，按 Enter "
-"键重新启动。**请保持电源适配器和电池连接，即使屏幕保持黑色，也请等待 Heads "
-"重新出现。** 请按照`中的说明操作。更新后的启动时间<firmware-update.html#boot-"
-"time-after-update>`__；请勿强制关机。"
+"出现提示时，按 Enter 键重新启动。**请保持电源适配器和电池连接，即使屏幕保持黑色，也请等待 Heads 重新出现。** "
+"请按照`中的说明操作。更新后的启动时间<firmware-update.html#boot-time-after-"
+"update>`__；请勿强制关机。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:179
 msgid "Heads prompt to restart after flashing."
@@ -27315,11 +27276,10 @@ msgid ""
 " version. A TPM factory reset changes the security configuration; it is "
 "not a repair for a NitroPad that cannot power on."
 msgstr ""
-"请按照 Heads 的提示重新封装密钥，并更新 TPM "
-"磁盘解锁密钥的密码（如果已配置）。如果出现``ERROR: TOTP Generation "
-"Failed!``，请参阅 :doc:`factory-reset-heads2`；如果是旧版固件，请参阅 :doc"
-":`factory-reset`。请使用与您的 Heads 版本相匹配的操作流程。 TPM "
-"出厂重置会更改安全配置；这并非针对无法开机的 NitroPad 的修复方案。"
+"请按照 Heads 的提示重新封装密钥，并更新 TPM 磁盘解锁密钥的密码（如果已配置）。如果出现``ERROR: TOTP Generation"
+" Failed!``，请参阅 :doc:`factory-reset-heads2`；如果是旧版固件，请参阅 :doc:`factory-"
+"reset`。请使用与您的 Heads 版本相匹配的操作流程。 TPM 出厂重置会更改安全配置；这并非针对无法开机的 NitroPad "
+"的修复方案。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:196
 msgid ""
@@ -27329,10 +27289,9 @@ msgid ""
 "forced restarts to a black screen during an EC update or memory training,"
 " particularly on NitroPad V54 and V56."
 msgstr ""
-"有用户反映，NitroPad NV41在显示Heads启动画面时会出现持续卡死的情况。如果更新"
-"完成后该问题仍然存在，请联系硝基技术支持以获取针对该机型的具体指导。在EC更新"
-"或内存训练过程中，请勿对黑屏状态下的设备进行反复强制重启，尤其是在NitroPad "
-"V54和V56机型上。"
+"有用户反映，NitroPad "
+"NV41在显示Heads启动画面时会出现持续卡死的情况。如果更新完成后该问题仍然存在，请联系硝基技术支持以获取针对该机型的具体指导。在EC更新或内存训练过程中，请勿对黑屏状态下的设备进行反复强制重启，尤其是在NitroPad"
+" V54和V56机型上。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:205
 msgid ""
@@ -27342,8 +27301,7 @@ msgid ""
 " layouts differ between models; use the correct model's disassembly "
 "instructions."
 msgstr ""
-"首先确定故障症状：无电源或充电指示灯、通电但屏幕黑屏，或者Heads启动但操作系统"
-"无法启动。以下检查步骤适用于运行Nitrokey "
+"首先确定故障症状：无电源或充电指示灯、通电但屏幕黑屏，或者Heads启动但操作系统无法启动。以下检查步骤适用于运行Nitrokey "
 "Heads的NitroPad。不同型号的硬件布局各不相同；请使用对应型号的拆解说明。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:212
@@ -27354,9 +27312,8 @@ msgid ""
 "device whose update has finished or which support has confirmed is no "
 "longer updating."
 msgstr ""
-"在更新后的首次重启时，请先参阅`Boot Time After Update<firmware-update.html"
-"#boot-time-after-update>`__，然后再尝试进行故障排除。下文所述的重置和硬件检查"
-"仅适用于已完成更新或经支持部门确认不再进行更新的设备。"
+"在更新后的首次重启时，请先参阅`Boot Time After Update<firmware-update.html#boot-time-"
+"after-update>`__，然后再尝试进行故障排除。下文所述的重置和硬件检查仅适用于已完成更新或经支持部门确认不再进行更新的设备。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:218
 msgid "No Power or Charging Indicators"
@@ -27367,8 +27324,7 @@ msgid ""
 "Check the wall outlet, adapter, cable and DC plug. Inspect the cable and "
 "charging socket for damage, debris or a loose connection. Disconnect "
 "power before inspecting the socket; do not insert metal objects."
-msgstr "检查墙壁插座、适配器、充电线和直流插头。检查充电线和充电插座是否有损坏、异物"
-"或连接松动。检查插座前请先断开电源；切勿将金属物体插入插座。"
+msgstr "检查墙壁插座、适配器、充电线和直流插头。检查充电线和充电插座是否有损坏、异物或连接松动。检查插座前请先断开电源；切勿将金属物体插入插座。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:224
 msgid ""
@@ -27377,9 +27333,8 @@ msgid ""
 "laptop adapter. Use the original DC barrel-jack adapter for NV41, V54 and"
 " V56 firmware updates, as described in Preparation."
 msgstr ""
-"如果有的话，请尝试使用已知可正常工作且兼容的适配器。确保电压、极性、连接器及"
-"额定功率均与要求匹配；切勿使用任意笔记本电脑适配器。如“准备工作”部分所述，"
-"进行 NV41、V54 和 V56 固件更新时，请使用原装直流圆柱插头适配器。"
+"如果有的话，请尝试使用已知可正常工作且兼容的适配器。确保电压、极性、连接器及额定功率均与要求匹配；切勿使用任意笔记本电脑适配器。如“准备工作”部分所述，进行"
+" NV41、V54 和 V56 固件更新时，请使用原装直流圆柱插头适配器。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:229
 msgid ""
@@ -27388,9 +27343,8 @@ msgid ""
 " system's battery status to distinguish a missing adapter from a detected"
 " adapter that is not charging."
 msgstr ""
-"如果电池可能已没电，请先充电至少 30 分钟，然后再尝试重新启动 NitroPad。如果能"
-"启动，请检查操作系统的电池状态，以区分是适配器未连接，还是已检测到适配器但未"
-"充电。"
+"如果电池可能已没电，请先充电至少 30 分钟，然后再尝试重新启动 "
+"NitroPad。如果能启动，请检查操作系统的电池状态，以区分是适配器未连接，还是已检测到适配器但未充电。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:234
 msgid ""
@@ -27399,24 +27353,21 @@ msgid ""
 "button for 30 seconds, release it, reconnect the adapter and try starting"
 " once."
 msgstr ""
-"如果更新停止后，请尝试进行电源重置：关闭 NitroPad 电源，拔下电源适配器，"
-"并移除外接 USB 设备。长按电源键 30 "
+"如果更新停止后，请尝试进行电源重置：关闭 NitroPad 电源，拔下电源适配器，并移除外接 USB 设备。长按电源键 30 "
 "秒，松开按键，重新连接电源适配器，然后尝试启动一次。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:238
 msgid ""
 "If the problem persists, use the CMOS reset below if you can safely "
 "access the connectors, or contact Nitrokey support."
-msgstr "如果问题仍然存在，请在能够安全接触连接器的情况下，按照下文所述进行 CMOS "
-"重置，或者联系硝基技术支持。"
+msgstr "如果问题仍然存在，请在能够安全接触连接器的情况下，按照下文所述进行 CMOS 重置，或者联系硝基技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:241
 msgid ""
 "Missing LEDs alone do not establish whether the firmware or hardware is "
 "faulty, and do not prove that the SSDs have been damaged. Support may "
 "need to check the power circuitry as well as the BIOS and EC firmware."
-msgstr "仅凭LED指示灯未亮，无法确定是固件还是硬件出现故障，也无法证明固态硬盘已损坏。"
-"技术支持人员可能需要检查电源电路以及BIOS和EC固件。"
+msgstr "仅凭LED指示灯未亮，无法确定是固件还是硬件出现故障，也无法证明固态硬盘已损坏。技术支持人员可能需要检查电源电路以及BIOS和EC固件。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:246
 msgid "Power Is Present but the Screen Stays Black"
@@ -27435,10 +27386,7 @@ msgid ""
 " be the problem. A compatible USB-C display or dock can also help, where "
 "supported by the model and firmware. No external picture alone does not "
 "prove that the motherboard is faulty."
-msgstr ""
-"一旦更新停止运行，请通过HDMI测试外接显示器。如果外接显示器正常工作，问题可能"
-"出在内置显示屏或其连接上。如果机型和固件支持，使用兼容的USB-C显示器或扩展坞也"
-"可能有所帮助。仅凭无法显示外部画面，并不能证明主板存在故障。"
+msgstr "一旦更新停止运行，请通过HDMI测试外接显示器。如果外接显示器正常工作，问题可能出在内置显示屏或其连接上。如果机型和固件支持，使用兼容的USB-C显示器或扩展坞也可能有所帮助。仅凭无法显示外部画面，并不能证明主板存在故障。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:257
 msgid "Try the CMOS reset below."
@@ -27454,11 +27402,9 @@ msgid ""
 "about 30 minutes for a single-module trial before changing the "
 "configuration again."
 msgstr ""
-"如果您可以在 NitroPad 内部安全操作，请在重新插入内存条之前先断开适配器和主电"
-"池的连接。如果有两个内存条，请一次只测试一个，每次启动时都要重新连接电池和适"
-"配器。 若仅安装一个内存条，请测试另一个插槽。每次更换后，请预留时间让内存完成"
-"初始化；硬件故障排除指南建议，在单条内存条测试完成后，应等待约30分钟，再更改"
-"配置。"
+"如果您可以在 NitroPad "
+"内部安全操作，请在重新插入内存条之前先断开适配器和主电池的连接。如果有两个内存条，请一次只测试一个，每次启动时都要重新连接电池和适配器。 "
+"若仅安装一个内存条，请测试另一个插槽。每次更换后，请预留时间让内存完成初始化；硬件故障排除指南建议，在单条内存条测试完成后，应等待约30分钟，再更改配置。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:266
 msgid ""
@@ -27478,9 +27424,8 @@ msgid ""
 " guide. Check that the SSD is detected and use :doc:`default-boot` to "
 "select the appropriate operating system boot option."
 msgstr ""
-"如果“Heads”菜单可见，请先根据“Heads”的提示和相应的硝基指南，处理任何报告的 "
-"TPM、签名或磁盘解锁错误。确认 SSD 已被检测到，并使用 :doc:`default-boot` "
-"选择相应的操作系统启动选项。"
+"如果“Heads”菜单可见，请先根据“Heads”的提示和相应的硝基指南，处理任何报告的 TPM、签名或磁盘解锁错误。确认 SSD "
+"已被检测到，并使用 :doc:`default-boot` 选择相应的操作系统启动选项。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:277
 msgid ""
@@ -27488,10 +27433,7 @@ msgid ""
 "tools. Reinstallation is a last resort after backing up recoverable data;"
 " it can erase the drive. Reinstalling an operating system cannot repair a"
 " NitroPad that does not power on or cannot reach Heads."
-msgstr ""
-"如果操作系统或其引导加载程序损坏，请使用其恢复工具。重新安装是备份可恢复数据"
-"后的最后手段；此操作可能会擦除硬盘。重新安装操作系统无法修复无法开机或无法连"
-"接到Heads的NitroPad。"
+msgstr "如果操作系统或其引导加载程序损坏，请使用其恢复工具。重新安装是备份可恢复数据后的最后手段；此操作可能会擦除硬盘。重新安装操作系统无法修复无法开机或无法连接到Heads的NitroPad。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:284
 #, fuzzy
@@ -27503,23 +27445,20 @@ msgid ""
 "A CMOS reset clears stored firmware settings. It does **not** rewrite "
 "corrupted BIOS or EC firmware, and is different from a Heads TPM factory "
 "reset."
-msgstr "CMOS 重置会清除存储的固件设置。它不会**也不会** 重写受损的 BIOS 或 EC 固件，"
-"且与 Heads TPM 出厂重置不同。"
+msgstr "CMOS 重置会清除存储的固件设置。它不会**也不会** 重写受损的 BIOS 或 EC 固件，且与 Heads TPM 出厂重置不同。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:289
 msgid ""
 "Ensure that no firmware update is running. Turn off the NitroPad, unplug "
 "the power adapter and disconnect external devices."
-msgstr "请确保当前没有正在进行的固件更新。关闭 "
-"NitroPad，拔下电源适配器，并断开外部设备的连接。"
+msgstr "请确保当前没有正在进行的固件更新。关闭 NitroPad，拔下电源适配器，并断开外部设备的连接。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:292
 msgid ""
 "Open the device according to its model-specific instructions and "
 "disconnect the main battery. If you cannot safely identify or access the "
 "connectors, ask Nitrokey support to perform the reset."
-msgstr "请按照该设备的型号说明打开设备，并断开主电池的连接。如果您无法安全地识别或接"
-"触到连接器，请联系硝基技术支持进行重置。"
+msgstr "请按照该设备的型号说明打开设备，并断开主电池的连接。如果您无法安全地识别或接触到连接器，请联系硝基技术支持进行重置。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:296
 msgid ""
@@ -27532,15 +27471,13 @@ msgid ""
 "Reconnect the CMOS battery and main battery, close the device, then "
 "reconnect the adapter. **Wait another five minutes** before attempting to"
 " power on."
-msgstr "重新连接 CMOS 电池和主电池，合上设备，然后重新连接适配器。**再等待五分钟** "
-"，然后再尝试开机。"
+msgstr "重新连接 CMOS 电池和主电池，合上设备，然后重新连接适配器。**再等待五分钟** ，然后再尝试开机。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:302
 msgid ""
 "Try starting once and allow time for memory training. If the problem "
 "remains, stop repeating resets and contact Nitrokey support."
-msgstr "请先尝试重启一次，并留出时间进行内存训练。如果问题仍然存在，请停止反复重置，"
-"并联系 Nitrokey 技术支持。"
+msgstr "请先尝试重启一次，并留出时间进行内存训练。如果问题仍然存在，请停止反复重置，并联系 Nitrokey 技术支持。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:306
 msgid "External Firmware Recovery and Support"
@@ -27552,9 +27489,7 @@ msgid ""
 " BIOS and/or EC. These are separate firmware components and must have "
 "compatible versions. A CMOS reset or reinstalling the operating system "
 "cannot substitute for repairing corrupted firmware."
-msgstr ""
-"如果上述检查均未成功，则可能需要通过外部编程来修复BIOS和/或EC。它们是独立的固"
-"件组件，且版本必须兼容。重置CMOS或重新安装操作系统无法替代对损坏固件的修复。"
+msgstr "如果上述检查均未成功，则可能需要通过外部编程来修复BIOS和/或EC。它们是独立的固件组件，且版本必须兼容。重置CMOS或重新安装操作系统无法替代对损坏固件的修复。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:313
 msgid ""
@@ -27567,11 +27502,8 @@ msgid ""
 " for the appropriate recovery or repair process before flashing. A "
 "hardware fault may instead require component or motherboard repair."
 msgstr ""
-"外部BIOS编程（例如使用合适的CH341A设置）是一项高级维修操作，"
-"需要针对该机型使用正确的硝基 Heads镜像、芯片电压和连接器。 在进行外部BIOS编程"
-"之前，请按照该机型的恢复流程断开适配器、主电池和CMOS电池的连接。EC恢复有其特"
-"定的连接和供电要求；请勿将其与BIOS操作流程混用。在刷写之前，请向硝基技术支持"
-"咨询相应的恢复或维修流程。若为硬件故障，则可能需要对元器件或主板进行维修。"
+"外部BIOS编程（例如使用合适的CH341A设置）是一项高级维修操作，需要针对该机型使用正确的硝基 Heads镜像、芯片电压和连接器。 "
+"在进行外部BIOS编程之前，请按照该机型的恢复流程断开适配器、主电池和CMOS电池的连接。EC恢复有其特定的连接和供电要求；请勿将其与BIOS操作流程混用。在刷写之前，请向硝基技术支持咨询相应的恢复或维修流程。若为硬件故障，则可能需要对元器件或主板进行维修。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:322
 #, fuzzy
@@ -27594,8 +27526,7 @@ msgstr "如果已知，请提供先前安装的固件版本，以及所选的ZIP
 msgid ""
 "Any error message, whether flashing reported success, and what happened "
 "during the first restart, including how long you waited."
-msgstr "是否有任何错误信息，是否闪现“操作成功”的提示，以及首次重启时发生了什么，包括"
-"您等待了多长时间。"
+msgstr "是否有任何错误信息，是否闪现“操作成功”的提示，以及首次重启时发生了什么，包括您等待了多长时间。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:329
 msgid "The power adapter used, battery condition, LEDs and fan behaviour."
@@ -27621,9 +27552,8 @@ msgid ""
 msgstr ""
 "上述关于 Heads 的更新及首次启动指南基于`中的上游 Heads "
 "更新指南<https://osresearch.net/Updating>`__ 以及`中的平台专用 Heads "
-"更新说明<https://docs.dasharo.com/unified/novacustom/firmware-update/"
-">`__。本操作所需的固件下载链接请参见“准备工作”部分中提供的 Nitrokey "
-"发布版本。"
+"更新说明<https://docs.dasharo.com/unified/novacustom/firmware-"
+"update/>`__。本操作所需的固件下载链接请参见“准备工作”部分中提供的 Nitrokey 发布版本。"
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:342
 msgid ""
@@ -27631,8 +27561,8 @@ msgid ""
 "these guides. Use the Heads-specific instructions on this page for boot "
 "selection, security prompts and firmware recovery:"
 msgstr ""
-"这些指南中的硬件检查步骤已针对配备硝基 Heads 的 NitroPad 进行了调整。"
-"请参考本页面中针对 Heads 的具体说明，以进行启动选择、安全提示和固件恢复："
+"这些指南中的硬件检查步骤已针对配备硝基 Heads 的 NitroPad 进行了调整。请参考本页面中针对 Heads "
+"的具体说明，以进行启动选择、安全提示和固件恢复："
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:346
 msgid ""
@@ -27645,24 +27575,24 @@ msgid ""
 "`Boot failure checks <https://novacustom.com/knowledge-base/laptop-is-"
 "not-booting-what-can-i-do/>`__."
 msgstr ""
-"`启动故障检查<https://novacustom.com/knowledge-base/"
-"laptop-is-not-booting-what-can-i-do/>`__."
+"`启动故障检查<https://novacustom.com/knowledge-base/laptop-is-not-booting-what-"
+"can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:348
 msgid ""
 "`CMOS reset <https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
 "reset/>`__."
 msgstr ""
-"`CMOS 重置<https://novacustom.com/knowledge-base/how-to-perform-a-cmos-reset/"
-">`__."
+"`CMOS 重置<https://novacustom.com/knowledge-base/how-to-perform-a-cmos-"
+"reset/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:349
 msgid ""
 "`Power and black-screen checks <https://novacustom.com/knowledge-base"
 "/laptop-not-turning-on-what-can-i-do/>`__."
 msgstr ""
-"`电源和黑屏检查<https://novacustom.com/knowledge-base/"
-"laptop-not-turning-on-what-can-i-do/>`__."
+"`电源和黑屏检查<https://novacustom.com/knowledge-base/laptop-not-turning-on-"
+"what-can-i-do/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update.rst:350
 msgid "`Heads disk recovery keys <https://osresearch.net/Keys/>`__."
@@ -27672,8 +27602,7 @@ msgstr "`磁头磁盘恢复密钥<https://osresearch.net/Keys/>`__."
 msgid ""
 "`Platform-specific hardware recovery notes "
 "<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
-msgstr "`特定平台的硬件恢复说明<https://docs.dasharo.com/unified/novacustom/recovery/"
-">`__."
+msgstr "`特定平台的硬件恢复说明<https://docs.dasharo.com/unified/novacustom/recovery/>`__."
 
 #: ../../source/components/nitropad-nitropc/heads/firmware-update-1.4.rst:2
 #: ../../source/components/nitropad-nitropc/heads/index.rst:6
@@ -31895,43 +31824,117 @@ msgid "nitropy Documentation For Linux"
 msgstr "nitropy的Linux文档"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:2
-msgid "Setting up The udev Rules"
+#, fuzzy
+msgid "Setting up the udev Rules"
 msgstr "设置 udev 规则"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:4
+#, fuzzy
 msgid ""
 "To be able to access your devices without root privileges, nitropy "
-"requires the Nitrokey udev rules. If they are not shipped with your "
-"distribution, you can install the rules manually::"
+"requires the Nitrokey udev rules. On many distributions, they can be "
+"installed from a package:"
 msgstr "要在没有 root 权限的情况下访问设备，nitropy 需要 Nitrokey udev 规则。如果您的发行版中没有这些规则，可以手动安装：："
 
-#: ../../source/components/software/nitropy/linux/udev.rst:11
+#: ../../source/components/software/nitropy/linux/udev.rst:7
 msgid ""
-"The legacy rules are also shipped with `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`__."
-msgstr "传统规则也随`libnitrokey<https://github.com/Nitrokey/libnitrokey>`__一起发布。"
+"Arch Linux: `nitrokey-udev-rules "
+"<https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
+msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:14
+#: ../../source/components/software/nitropy/linux/udev.rst:8
 msgid ""
-"You most likely want to change the owner and the permissions of this "
-"file::"
-msgstr "您很可能需要更改该文件的所有者和权限：："
+"Debian: `nitrokey-udev <https://packages.debian.org/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Debian 14 Forky)"
+msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:19
+#: ../../source/components/software/nitropy/linux/udev.rst:9
+msgid ""
+"NixOS: `nitrokey-udev-rules "
+"<https://search.nixos.org/packages?channel=unstable&query=nitrokey-udev-"
+"rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to "
+"``true``)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:10
+msgid ""
+"Ubuntu: `nitrokey-udev <https://packages.ubuntu.com/search?keywords"
+"=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
+"Ubuntu 26.10 Stonking Stingray)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:15
+msgid ""
+"If the rules are not provided by your distribution, you can install the "
+"rules manually::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
 msgstr "安装完规则后，你需要重新加载它们：。"
 
-#: ../../source/components/software/nitropy/linux/udev.rst:23
-#, fuzzy
+#: ../../source/components/software/nitropy/linux/udev.rst:26
 msgid ""
 "If you still cannot access your device, try again after rebooting your "
-"system. If you encounter issues, look at this `github comment "
-"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" for some debugging hints."
+"system."
 msgstr ""
-"如果仍无法访问设备，请重启系统后再试一次。如果遇到问题，请查看`github "
-"评论<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
-" 以获得一些调试提示。"
+
+#: ../../source/components/software/nitropy/linux/udev.rst:31
+msgid ""
+"The recommended udev rules use the ``uaccess`` mechanism to dynamically "
+"assign the correct permissions. This mechanism requires ``systemd`` and "
+"only works with users that are logged in locally (this means no SSH "
+"logins or similar)."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:37
+msgid ""
+"If installing the udev rules did not fix the issue, you can perform the "
+"following steps to investigate the problem:"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:39
+#, fuzzy
+msgid "Unplug the Nitrokey."
+msgstr "选择 Nitrokey 3"
+
+#: ../../source/components/software/nitropy/linux/udev.rst:40
+msgid "Reboot the computer to ensure that the udev rules are activated."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:41
+msgid ""
+"Execute the command ``sudo dmesg --follow`` and connect the Nitrokey. "
+"Observe the log messages that appear afterwards. You should see a line "
+"similar to::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:47
+msgid ""
+"Determine the hidraw device name from the log message. In this case, it "
+"is ``hidraw3``."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:49
+msgid ""
+"Check the permissions for the hidraw device by running ``getfacl "
+"/dev/$name`` where ``$name`` is the hidraw device name. You should see "
+"your user with ``rw`` permissions. For example for the user ``myuser``::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:64
+msgid ""
+"If your user does not have the correct permissions, execute the command "
+"``loginctl list-sessions``. You should see one session for your user with"
+" a seat, for example::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:74
+msgid ""
+"Additional steps for debugging the udev rules are described `here "
+"<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
+msgstr ""
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
 msgid "nitropy Documentation For Windows"
@@ -35790,3 +35793,52 @@ msgstr "标记裁剪的输出"
 #~ msgstr ""
 #~ "如果出现``ERROR: TOTP Generation Failed!`` 屏幕，请按照"
 #~ " \"出厂重置\"（在左侧菜单中）的说明从以下步骤开始操作"
+
+#~ msgid "If the Nitrokey is not detected, proceed as follows:"
+#~ msgstr "如果没有检测到硝基钥匙，请按以下步骤操作。"
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-"
+#~ "rules/main/41-nitrokey.rules>`__ to "
+#~ "``/etc/udev/rules.d/``."
+#~ msgstr ""
+#~ "把这个文件`41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__复制到``/etc/udev/rules.d/``。"
+
+#~ msgid ""
+#~ "Copy this file `41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__"
+#~ " to ``/etc/udev/rules.d/``. In very rare"
+#~ " cases, the system will need the "
+#~ "`older version "
+#~ "<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__"
+#~ " of this file."
+#~ msgstr ""
+#~ "把这个文件`41-nitrokey.rules "
+#~ "<https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__复制到``/etc/udev/rules.d/``。在非常罕见的情况下，系统将需要这个文件的`较旧的版本<https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__。"
+
+#~ msgid ""
+#~ "The legacy rules are also shipped "
+#~ "with `libnitrokey "
+#~ "<https://github.com/Nitrokey/libnitrokey>`__."
+#~ msgstr "传统规则也随`libnitrokey<https://github.com/Nitrokey/libnitrokey>`__一起发布。"
+
+#~ msgid ""
+#~ "You most likely want to change the"
+#~ " owner and the permissions of this"
+#~ " file::"
+#~ msgstr "您很可能需要更改该文件的所有者和权限：："
+
+#~ msgid ""
+#~ "If you still cannot access your "
+#~ "device, try again after rebooting your"
+#~ " system. If you encounter issues, "
+#~ "look at this `github comment "
+#~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " for some debugging hints."
+#~ msgstr ""
+#~ "如果仍无法访问设备，请重启系统后再试一次。如果遇到问题，请查看`github "
+#~ "评论<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
+#~ " 以获得一些调试提示。"
+

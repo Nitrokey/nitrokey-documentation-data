@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-15 13:32+0000\n"
+"POT-Creation-Date: 2026-10-16 10:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10183,6 +10183,7 @@ msgstr ""
 #: ../../source/components/nitropad-nitropc/index.rst:17
 #: ../../source/components/nitropad-nitropc/troubleshooting.rst:2
 #: ../../source/components/software/nitropy/all-platforms/installation.rst:112
+#: ../../source/components/software/nitropy/linux/udev.rst:35
 msgid "Troubleshooting"
 msgstr ""
 
@@ -13086,8 +13087,8 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:152
 #: ../../source/components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:221
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:45
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:56
 msgid "PowerShell"
 msgstr ""
 
@@ -14583,7 +14584,6 @@ msgid "Note: white LED blinking is used as well to signalize the selected device
 msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:182
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
 msgid "If the Nitrokey is not detected, proceed the following:"
 msgstr ""
 
@@ -14592,8 +14592,6 @@ msgid "Copy this file `41-nitrokey.rules <https://raw.githubusercontent.com/Nitr
 msgstr ""
 
 #: ../../source/components/nitrokeys/fido2/getting-started.rst:190
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:41
 msgid "Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora."
 msgstr ""
 
@@ -16183,35 +16181,32 @@ msgid "Nitrokey is Not Detected on Linux"
 msgstr ""
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:17
-msgid "If the Nitrokey is not detected, proceed as follows:"
+#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:33
+msgid "If the Nitrokey is not detected, make sure that you have installed the Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:19
-msgid "Copy this file `41-nitrokey.rules <https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``."
-msgstr ""
-
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:27
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:22
 msgid "On Windows the initialization of the generic smartcard reader driver fails. The reported device status is ``This device is not working properly because Windows cannot load the drivers required for this device. (Code 31)``."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:30
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:25
 msgid "This problem exists on Windows 10 and Windows Server 2022 and older. From Windows 11 and Windows Server 2025 on the behavior is correct and the solution below isn't needed."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:33
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:28
 msgid "Windows has two generic smartcard reader drivers (WUDF and UMDF2). By default Windows uses UMDF2, which fails to initialize and therefore is not loaded for the Nitrokey."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:36
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:31
 msgid "To ensure a successful driver initialization, add a retry for the device initialization. In the registry add the following registry key."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:40
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:57
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:52
 msgid "Regedit"
 msgstr ""
 
@@ -16231,11 +16226,11 @@ msgstr ""
 msgid "Data: ``1``"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:51
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:46
 msgid "The registry key is available for Windows 10 (version 1903 (19H1) and later) and Windows 11."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:53
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:48
 msgid "If the smartcard reader was before already installed with a failed initialization you may have to remove them from the registry. In the registry delete the following registry path."
 msgstr ""
 
@@ -16243,184 +16238,184 @@ msgstr ""
 msgid "Path: ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Calais\\Readers\\Nitrokey CCID/ICCD Interface 0``"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:60
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:55
 msgid "If the smartcard reader was installed multiple times before there may be more than one path with an incremented number at the end."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:61
 msgid "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard Reader (WUDF)*."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:64
 msgid "Nitrokey 3 is Recognized as \"Unknown Smart Card\" on Windows"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:66
 msgid "On Windows Server 2025, the initialization of the generic smart card driver fails. The device is recognized as \"Unknown Smart Card\" and no driver is installed."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:69
 msgid "To install the correct smart card driver, install the correct driver as follows."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:76
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:71
 msgid "Open the Windows *Device Manager* (``devmgmt.msc``)."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:77
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:72
 msgid "Open the group *Smart cards* from the device tree. If the group doesn't exist, make sure the Nitrokey is properly connected."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:74
 msgid "Right-click on *Unknown Smart Card* and select *Update driver*."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:80
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:75
 msgid "In the driver update assistant, first select *Browse my computer for drivers* and then *Let me pick from a list of available drivers on my computer*. Deactivate the check box *Show compatible hardware* and select *Identity Device (NIST SP 800-73 [PIV])* from the list. Confirm the selection with a click on the *Next* button and confirm the driver warning dialog with *Yes*. After the driver has been installed, close the driver update assistant with a click on the *Close* button."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:79
 msgid "The Nitrokey is now recognized in the *Smart cards* group as *Identity Device (NIST SP 800-73 [PIV])*."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:81
 msgid "Connecting the Nitrokey to a different USB port can require this process to be repeated."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:84
 msgid "Google and Microsoft Services"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:86
 msgid "Currently there seems to be a bug we hope to fix soon which affects the Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:89
 msgid "Timeout Bug"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:96
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:91
 msgid "There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:94
 msgid "NFC is Not Working"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:100
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:95
 msgid "Please make sure FIDO2 is working correctly. Otherwise NFC won't work either."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:102
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:97
 msgid "Also check if you are using the right spot on your smartphone."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:104
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:99
 msgid "The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:101
 msgid "If you have a phone cover, try to find the right spot first without it. Retry afterwards with the cover."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:103
 msgid "The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:106
 msgid "OpenPGP Troubleshooting"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:114
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:109
 msgid "GnuPG: OpenPGP Card Not Available"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:116
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:111
 msgid "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error message like this::"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:123
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:118
 msgid "**Solution:** There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG's smartcard daemon, and ``pcscd``, a generic smartcard daemon. ``scdaemon`` has two drivers for accessing smartcards: Its integrated ``ccid`` driver tries to directly access the smartcard. The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:129
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:124
 msgid "A smartcard can only be accessed directly by one daemon. This means that depending on the startup order, ``pcscd`` might lock the card before ``scdaemon`` tries to access it using the internal ``ccid`` driver. Therefore we recommend to use the ``pcscd`` driver for ``scdaemon``. You can activate it by adding ``disable-ccid`` to the ``~/.gnupg/scdaemon.conf`` config file and restarting ``scdaemon``, for example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not fix the problem, see the next section for more information."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:130
 msgid "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this conflict."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:133
 #: ../../source/components/software/nk-app2/keepassxc.rst:104
 msgid "pcscd: Card Not Found"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:140
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:135
 #: ../../source/components/software/nk-app2/keepassxc.rst:106
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:138
 #: ../../source/components/software/nk-app2/keepassxc.rst:109
 msgid "**Solution:** First, make sure that ``scdaemon`` is not running (see the previous section)::"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:148
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:143
 #: ../../source/components/software/nk-app2/keepassxc.rst:114
 msgid "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. You should see an entry like this one::"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:151
 #: ../../source/components/software/nk-app2/keepassxc.rst:122
 msgid "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it. If it does not show up, make sure that your ``libccid`` version is up to date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:156
 #: ../../source/components/software/nk-app2/keepassxc.rst:127
 msgid "Updating The Device Database"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:158
 #: ../../source/components/software/nk-app2/keepassxc.rst:129
 msgid "If you cannot update ``libccid`` to a supported version, you have to manually update the device database. The path of the database depends on your distribution:"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:166
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:161
 #: ../../source/components/software/nk-app2/keepassxc.rst:132
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:168
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:163
 #: ../../source/components/software/nk-app2/keepassxc.rst:134
 msgid "Make sure to backup the file before overwriting it. You can download an `updated device database file <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ from the ``nitrokey-3-firmware`` repository. After updating the file, restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should now show up."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:169
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:176
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:171
 msgid "Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_."
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:174
 msgid "PIV Troubleshooting"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:182
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:177
 msgid "pyscard is not available"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:184
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:179
 msgid "If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality::"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:183
 msgid "To fix this error, please install nitropy with the `pcsc` extra dependencies::"
 msgstr ""
 
-#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:193
+#: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:188
 msgid "If you install pynitrokey through another distribution channel, please install all optional dependencies for this channel."
 msgstr ""
 
@@ -16670,10 +16665,6 @@ msgstr ""
 
 #: ../../source/components/nitrokeys/passkey/troubleshooting.rst:31
 msgid "To check whether the Nitrokey Passkey is correctly recognized, check if it is shown with ``lsusb``."
-msgstr ""
-
-#: ../../source/components/nitrokeys/passkey/troubleshooting.rst:35
-msgid "Copy this file `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``. In very rare cases, the system will need the `older version <https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__ of this file."
 msgstr ""
 
 #: ../../source/components/nitrokeys/pro/factory-reset.rst:6
@@ -17320,6 +17311,7 @@ msgid "`Install pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>
 msgstr ""
 
 #: ../../source/components/nitrokeys/start/multiple-identities.rst:43
+#: ../../source/components/software/nitropy/linux/udev.rst:29
 msgid "Limitations"
 msgstr ""
 
@@ -21322,27 +21314,75 @@ msgid "nitropy Documentation For Linux"
 msgstr ""
 
 #: ../../source/components/software/nitropy/linux/udev.rst:2
-msgid "Setting up The udev Rules"
+msgid "Setting up the udev Rules"
 msgstr ""
 
 #: ../../source/components/software/nitropy/linux/udev.rst:4
-msgid "To be able to access your devices without root privileges, nitropy requires the Nitrokey udev rules. If they are not shipped with your distribution, you can install the rules manually::"
+msgid "To be able to access your devices without root privileges, nitropy requires the Nitrokey udev rules. On many distributions, they can be installed from a package:"
 msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:11
-msgid "The legacy rules are also shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__."
+#: ../../source/components/software/nitropy/linux/udev.rst:7
+msgid "Arch Linux: `nitrokey-udev-rules <https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
 msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:14
-msgid "You most likely want to change the owner and the permissions of this file::"
+#: ../../source/components/software/nitropy/linux/udev.rst:8
+msgid "Debian: `nitrokey-udev <https://packages.debian.org/search?keywords=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since Debian 14 Forky)"
 msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:19
+#: ../../source/components/software/nitropy/linux/udev.rst:9
+msgid "NixOS: `nitrokey-udev-rules <https://search.nixos.org/packages?channel=unstable&query=nitrokey-udev-rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to ``true``)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:10
+msgid "Ubuntu: `nitrokey-udev <https://packages.ubuntu.com/search?keywords=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since Ubuntu 26.10 Stonking Stingray)"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:15
+msgid "If the rules are not provided by your distribution, you can install the rules manually::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
 msgstr ""
 
-#: ../../source/components/software/nitropy/linux/udev.rst:23
-msgid "If you still cannot access your device, try again after rebooting your system. If you encounter issues, look at this `github comment <https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__ for some debugging hints."
+#: ../../source/components/software/nitropy/linux/udev.rst:26
+msgid "If you still cannot access your device, try again after rebooting your system."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:31
+msgid "The recommended udev rules use the ``uaccess`` mechanism to dynamically assign the correct permissions. This mechanism requires ``systemd`` and only works with users that are logged in locally (this means no SSH logins or similar)."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:37
+msgid "If installing the udev rules did not fix the issue, you can perform the following steps to investigate the problem:"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:39
+msgid "Unplug the Nitrokey."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:40
+msgid "Reboot the computer to ensure that the udev rules are activated."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:41
+msgid "Execute the command ``sudo dmesg --follow`` and connect the Nitrokey. Observe the log messages that appear afterwards. You should see a line similar to::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:47
+msgid "Determine the hidraw device name from the log message. In this case, it is ``hidraw3``."
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:49
+msgid "Check the permissions for the hidraw device by running ``getfacl /dev/$name`` where ``$name`` is the hidraw device name. You should see your user with ``rw`` permissions. For example for the user ``myuser``::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:64
+msgid "If your user does not have the correct permissions, execute the command ``loginctl list-sessions``. You should see one session for your user with a seat, for example::"
+msgstr ""
+
+#: ../../source/components/software/nitropy/linux/udev.rst:74
+msgid "Additional steps for debugging the udev rules are described `here <https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
 msgstr ""
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
