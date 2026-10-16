@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-16 10:44+0000\n"
-"PO-Revision-Date: 2026-10-15 13:48+0000\n"
+"PO-Revision-Date: 2026-10-16 10:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -24733,6 +24734,9 @@ msgid ""
 "If the Nitrokey is not detected, make sure that you have installed the "
 "Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
+"ニトロキーが検出されない場合は、ニトロキーの udev "
+"ルールがインストールされていることを確認してください。詳細は :doc:`../../"
+"software/ニトロピ/linux/udev` を参照してください。"
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
@@ -32777,6 +32781,8 @@ msgid ""
 "Arch Linux: `nitrokey-udev-rules "
 "<https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
 msgstr ""
+"アーチ・リナックス:`nitrokey-udev-rules<https://archlinux.org/packages/extra/"
+"any/nitrokey-udev-rules/>`__"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:8
 msgid ""
@@ -32784,6 +32790,8 @@ msgid ""
 "=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
 "Debian 14 Forky)"
 msgstr ""
+"Debian:`ニトロキー-udev<https://packages.debian.org/search?keywords=nitrokey-"
+"udev&searchon=names&exact=1&suite=all&section=all>`__ (Debian 14 Forky 以降)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:9
 msgid ""
@@ -32792,6 +32800,9 @@ msgid ""
 "rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to "
 "``true``)"
 msgstr ""
+"NixOS:`nitrokey-udev-rules<https://search.nixos.org/"
+"packages?channel=unstable&query=nitrokey-udev-rules#show=nitrokey-udev-"
+"rules>`__ (set |hardware.nitrokey.enable|_ to``true``)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:10
 msgid ""
@@ -32799,12 +32810,16 @@ msgid ""
 "=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
 "Ubuntu 26.10 Stonking Stingray)"
 msgstr ""
+"Ubuntu:`ニトロキー-udev<https://packages.ubuntu.com/search?keywords=nitrokey-"
+"udev&searchon=names&exact=1&suite=all&section=all>`__ (Ubuntu 26.10 Stonking "
+"Stingray 以降)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:15
 msgid ""
 "If the rules are not provided by your distribution, you can install the "
 "rules manually::"
-msgstr ""
+msgstr "お使いのディストリビューションにルールが同梱されていない場合は、手動でルール"
+"をインストールすることができます::"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
@@ -32814,7 +32829,8 @@ msgstr "ルールをインストールした後は、次のように再読み込
 msgid ""
 "If you still cannot access your device, try again after rebooting your "
 "system."
-msgstr ""
+msgstr "それでもデバイスにアクセスできない場合は、システムを再起動してからもう一度お"
+"試しください。"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:31
 msgid ""
@@ -32823,12 +32839,17 @@ msgid ""
 "only works with users that are logged in locally (this means no SSH "
 "logins or similar)."
 msgstr ""
+"推奨されるudevルールでは、``uaccess`` "
+"の仕組みを使用して、適切な権限を動的に割り当てます。この仕組みには``systemd``"
+" が必要であり、ローカルでログインしているユーザーに対してのみ機能します（つま"
+"り、SSHログインなどは対象外です）。"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:37
 msgid ""
 "If installing the udev rules did not fix the issue, you can perform the "
 "following steps to investigate the problem:"
-msgstr ""
+msgstr "udev ルールをインストールしても問題が解決しない場合は、以下の手順に従って原因"
+"を調査してください："
 
 #: ../../source/components/software/nitropy/linux/udev.rst:39
 #, fuzzy
@@ -32837,7 +32858,7 @@ msgstr "ニトロキー3を選択"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:40
 msgid "Reboot the computer to ensure that the udev rules are activated."
-msgstr ""
+msgstr "udev ルールが有効になるよう、コンピュータを再起動してください。"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:41
 msgid ""
@@ -32845,12 +32866,16 @@ msgid ""
 "Observe the log messages that appear afterwards. You should see a line "
 "similar to::"
 msgstr ""
+"``sudo dmesg --follow``というコマンドを実行し、ニトロキーを接続してください。"
+"その後表示されるログメッセージを確認してください。次のような行が表示されるは"
+"ずです::"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:47
 msgid ""
 "Determine the hidraw device name from the log message. In this case, it "
 "is ``hidraw3``."
-msgstr ""
+msgstr "ログメッセージからhidrawデバイスの名前を特定します。この場合は、``hidraw3``と"
+"なります。"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:49
 msgid ""
@@ -32858,6 +32883,10 @@ msgid ""
 "/dev/$name`` where ``$name`` is the hidraw device name. You should see "
 "your user with ``rw`` permissions. For example for the user ``myuser``::"
 msgstr ""
+"`` を実行して、hidrawデバイスの権限を確認してください。getfacl /dev/$name`` "
+"ここで、``$name`` はhidrawデバイスの名前です。``rw`` "
+"の権限を持つユーザーが表示されるはずです。たとえば、ユーザー``myuser`` "
+"の場合::"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:64
 msgid ""
@@ -32865,12 +32894,19 @@ msgid ""
 "``loginctl list-sessions``. You should see one session for your user with"
 " a seat, for example::"
 msgstr ""
+"ユーザーに適切な権限がない場合は、``loginctl list-sessions`` コマンドを実行し"
+"てください。たとえば、ライセンスが割り当てられたそのユーザーのセッションが1つ"
+"表示されるはずです。例："
 
 #: ../../source/components/software/nitropy/linux/udev.rst:74
 msgid ""
 "Additional steps for debugging the udev rules are described `here "
 "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
 msgstr ""
+"udev "
+"ルールに関するデバッグの追加手順については、`こちらのページ<https://github."
+"com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__ "
+"に記載されています。"
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
 msgid "nitropy Documentation For Windows"
@@ -36902,4 +36938,3 @@ msgstr "マーク クロップド出力"
 #~ "それでもデバイスにアクセスできない場合は、システムを再起動してからもう一度試してください。問題が発生した場合は、`github "
 #~ "comment<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
 #~ " にデバッグのヒントがあります。"
-

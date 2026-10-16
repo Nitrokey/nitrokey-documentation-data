@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-10-16 10:44+0000\n"
-"PO-Revision-Date: 2026-10-15 13:49+0000\n"
+"PO-Revision-Date: 2026-10-16 10:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sl/>\n"
 "Language: sl\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/sl/>\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
-"|| n%100==4 ? 2 : 3;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -27903,6 +27904,8 @@ msgid ""
 "If the Nitrokey is not detected, make sure that you have installed the "
 "Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`."
 msgstr ""
+"Če se Nitrokey ne zazna, preverite, ali ste namestili pravila udev za "
+"Nitrokey; glejte :doc:`../../software/nitropija/linux/udev`."
 
 #: ../../source/components/nitrokeys/nitrokey3/troubleshooting.rst:20
 msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
@@ -37164,6 +37167,8 @@ msgid ""
 "Arch Linux: `nitrokey-udev-rules "
 "<https://archlinux.org/packages/extra/any/nitrokey-udev-rules/>`__"
 msgstr ""
+"Arch Linux: `Nitrokey-udev-rules <https://archlinux.org/packages/extra/any/"
+"nitrokey-udev-rules/>`__"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:8
 msgid ""
@@ -37171,6 +37176,8 @@ msgid ""
 "=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
 "Debian 14 Forky)"
 msgstr ""
+"Debian: `Nitrokey-udev <https://packages.debian.org/search?keywords=nitrokey-"
+"udev&searchon=names&exact=1&suite=all&section=all>`__ (od Debiana 14 Forky)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:9
 msgid ""
@@ -37179,6 +37186,9 @@ msgid ""
 "rules#show=nitrokey-udev-rules>`__ (set |hardware.nitrokey.enable|_ to "
 "``true``)"
 msgstr ""
+"NixOS: `Nitrokey-udev-rules <https://search.nixos.org/"
+"packages?channel=unstable&query=nitrokey-udev-rules#show=nitrokey-udev-"
+"rules>`__ (nastavi |hardware.nitrokey.enable|_ na ``true``)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:10
 msgid ""
@@ -37186,12 +37196,15 @@ msgid ""
 "=nitrokey-udev&searchon=names&exact=1&suite=all&section=all>`__ (since "
 "Ubuntu 26.10 Stonking Stingray)"
 msgstr ""
+"Ubuntu: `Nitrokey-udev <https://packages.ubuntu.com/search?keywords=nitrokey-"
+"udev&searchon=names&exact=1&suite=all&section=all>`__ (od Ubuntu 26.10 "
+"Stonking Stingray naprej)"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:15
 msgid ""
 "If the rules are not provided by your distribution, you can install the "
 "rules manually::"
-msgstr ""
+msgstr "Če vaša distribucija teh pravil ne vsebuje, jih lahko namestite ročno::"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:22
 msgid "After installing the rules, you need to reload them::"
@@ -37202,6 +37215,8 @@ msgid ""
 "If you still cannot access your device, try again after rebooting your "
 "system."
 msgstr ""
+"Če še vedno ne morete dostopati do naprave, poskusite ponovno po ponovnem "
+"zagonu sistema."
 
 #: ../../source/components/software/nitropy/linux/udev.rst:31
 msgid ""
@@ -37210,12 +37225,18 @@ msgid ""
 "only works with users that are logged in locally (this means no SSH "
 "logins or similar)."
 msgstr ""
+"Priporočena pravila udev uporabljajo mehanizem ``uaccess`` za dinamično "
+"dodeljevanje ustreznih dovoljenj. Ta mehanizem zahteva ``systemd`` in deluje "
+"le pri uporabnikih, ki so prijavljeni lokalno (kar pomeni, da ni mogoče "
+"uporabljati SSH-prijav ali podobnih načinov)."
 
 #: ../../source/components/software/nitropy/linux/udev.rst:37
 msgid ""
 "If installing the udev rules did not fix the issue, you can perform the "
 "following steps to investigate the problem:"
 msgstr ""
+"Če namestitev pravil udev ni odpravila težave, lahko za preiskavo težave "
+"izvedete naslednje korake:"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:39
 #, fuzzy
@@ -37225,6 +37246,7 @@ msgstr "Izberite tipko Nitrokey 3"
 #: ../../source/components/software/nitropy/linux/udev.rst:40
 msgid "Reboot the computer to ensure that the udev rules are activated."
 msgstr ""
+"Ponovno zaženite računalnik, da se prepričate, da so pravila udev aktivirana."
 
 #: ../../source/components/software/nitropy/linux/udev.rst:41
 msgid ""
@@ -37232,12 +37254,17 @@ msgid ""
 "Observe the log messages that appear afterwards. You should see a line "
 "similar to::"
 msgstr ""
+"Izvedite ukaz ``sudo dmesg --follow`` in priključite Nitrokey. Opazujte "
+"sporočila v dnevniku, ki se nato prikažejo. Videti bi morali vrstico, "
+"podobno tej:"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:47
 msgid ""
 "Determine the hidraw device name from the log message. In this case, it "
 "is ``hidraw3``."
 msgstr ""
+"Iz sporočila v dnevniku ugotovite ime naprave hidraw. V tem primeru je to "
+"``hidraw3``."
 
 #: ../../source/components/software/nitropy/linux/udev.rst:49
 msgid ""
@@ -37245,6 +37272,9 @@ msgid ""
 "/dev/$name`` where ``$name`` is the hidraw device name. You should see "
 "your user with ``rw`` permissions. For example for the user ``myuser``::"
 msgstr ""
+"Preverite dovoljenja za napravo hidraw tako, da zaženete ukaz ` `` `getfacl /"
+"dev/$name``, pri čemer je ` `` `$name`` ime naprave hidraw. Vaš uporabnik "
+"naj bi imel dovoljenja ` `` `rw``. Na primer za uporabnika ` `` `myuser``:"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:64
 msgid ""
@@ -37252,12 +37282,18 @@ msgid ""
 "``loginctl list-sessions``. You should see one session for your user with"
 " a seat, for example::"
 msgstr ""
+"Če vaš uporabnik nima ustreznih dovoljenj, izvedite ukaz ``loginctl list-"
+"sessions``. Prikazala se bo ena seja za vašega uporabnika z licenco, na "
+"primer:"
 
 #: ../../source/components/software/nitropy/linux/udev.rst:74
 msgid ""
 "Additional steps for debugging the udev rules are described `here "
 "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__."
 msgstr ""
+"Dodatni koraki za odpravljanje napak v pravilih udev so opisani na `tukaj "
+"<https://github.com/Nitrokey/pynitrokey/issues/"
+"167#issuecomment-1024921046>`__."
 
 #: ../../source/components/software/nitropy/windows/index.rst:2
 msgid "nitropy Documentation For Windows"
@@ -42017,4 +42053,3 @@ msgstr "Označite obrezano Izhod"
 #~ "<https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__"
 #~ " za nekaj napotkov za odpravljanje "
 #~ "napak."
-
