@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-26 11:56+0000\n"
+"POT-Creation-Date: 2026-11-03 16:50+0000\n"
 "PO-Revision-Date: 2026-10-16 10:51+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: bg\n"
@@ -4894,6 +4894,453 @@ msgstr ""
 " в почти всеки софтуер чрез API `или модула PKCS#11. "
 "<../integration.html>`__"
 
+#: ../../source/components/nethsm/compatible/keycloak.rst:2
+msgid "Keycloak"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:8
+msgid ""
+"In order to use `Keycloak <https://www.keycloak.org/>`__ with NetHSM to "
+"securely store private keys in NetHSM while enabling Keycloak to sign "
+"access tokens and decrypt JWE, you need to install and configure `this "
+"key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:11
+msgid "AI Disclosure"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:13
+msgid ""
+"**This provider was developed and reviewed with substantial AI "
+"assistance.**"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:16
+#, fuzzy
+msgid "Prepare the NetHSM"
+msgstr "Подготовка на ключовете"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:18
+msgid ""
+"Prepare the NetHSM as follows. Refer to section `administration "
+"<../administration.html>`__ for detailed instructions."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:20
+msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:27
+msgid ""
+"`Create an Operator user <../administration.html#user-management>`__ "
+"dedicated for Keycloak."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:28
+msgid ""
+"The Keycloak extension *discovers* keys but doesn't create them. `Create "
+"the desired keys <../operation.html#key-management>`__ manually:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:30
+msgid ""
+"**The key ID** must begin with the prefix the realm will claim. Choose an"
+" appropriate naming scheme such as ``kc-<realm>-<purpose>-<year>`` (for "
+"example ``kc-staff-sig-rs256-2026``, ``kc-partners-sig-es256-2026``, "
+"``kc-customers-enc-oaep-2026``). The ID becomes the ``kid`` that Keycloak"
+" publishes. Future key rotation is performed by adding new IDs which is "
+"why we suggest to use the year as part of the key ID."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:37
+msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:43
+#, fuzzy
+msgid "NetHSM key type and mechanism"
+msgstr "Основни видове и механизми"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:44
+#, fuzzy
+msgid "JOSE algorithms served"
+msgstr "Алгоритми"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:45
+#, fuzzy
+msgid "``RSA`` + ``RSA_Signature_PKCS1``"
+msgstr "``EdDSA_Signature``"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:46
+msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:47
+msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:48
+msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:49
+msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:50
+msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:51
+#, fuzzy
+msgid "``Curve25519`` + ``EdDSA_Signature``"
+msgstr "``EdDSA_Signature``"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:52
+#, fuzzy
+msgid "EdDSA"
+msgstr "ECDSA"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:53
+msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:54
+msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:58
+#: ../../source/components/nethsm/pkcs11-setup.rst:6
+#: ../../source/components/nethsm/pkiproxy.rst:51
+#: ../../source/components/nethsm/pkiproxy.rst:125
+#: ../../source/components/nitrokeys/features/hsm/pkiproxy.rst:48
+#: ../../source/components/nitrokeys/features/hsm/pkiproxy.rst:119
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-thunderbird.rst:28
+#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:27
+#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:25
+#: ../../source/components/nitrokeys/hsm/getting-started.rst:9
+#: ../../source/components/nitrokeys/nitrokey3/nitropy.rst:9
+#: ../../source/components/software/nitropy/all-platforms/installation.rst:93
+#: ../../source/components/software/nk-app1/index.rst:14
+#: ../../source/components/software/nk-app2/index.rst:15
+msgid "Installation"
+msgstr "Инсталиране на приложението Nitrokey"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:60
+msgid ""
+"Download the Keycloak NetHSM provider `JAR file "
+"<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
+"Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:62
+msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:66
+#: ../../source/components/nethsm/container/production-image.rst:37
+#: ../../source/components/nethsm/container/test-image.rst:22
+#: ../../source/components/nethsm/pkcs11-setup.rst:25
+#: ../../source/components/nextbox/external-storage.rst:18
+#: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:19
+#: ../../source/components/nitrokeys/features/openpgp-card/uif.rst:20
+#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:39
+#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:37
+msgid "Configuration"
+msgstr "Статична конфигурация на DNS"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:68
+msgid ""
+"Settings may be given either in ``conf/keycloak.conf`` or as environment "
+"variables. The two forms are the same settings; environment variables "
+"take precedence, so non-secret values can live in the file with only the "
+"passphrase injected at runtime."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:73
+msgid "Using ``conf/keycloak.conf``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:83
+#, fuzzy
+msgid "Using environment variables"
+msgstr "Променлива на средата"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:85
+msgid ""
+"Preferred in container deployments, because the passphrase can be "
+"supplied from a Docker or Kubernetes secret instead of being written to a"
+" file."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:97
+msgid ""
+"The environment variable name is derived mechanically from the "
+"configuration key: prefix it with ``KC_``, convert to upper case, and "
+"replace every ``-`` with ``_``. The doubled underscores follow from the "
+"key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
+"this extension is SPI ``keys``, provider ``nethsm``, and the option name."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:103
+#, fuzzy
+msgid ""
+"See also `all available configuration options "
+"<https://github.com/Nitrokey/nethsm-keycloak>`__."
+msgstr "`Пълен изходен код <https://github.com/Nitrokey/nethsm/>`_"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:107
+#, fuzzy
+msgid "Restart Keycloak"
+msgstr "стартово меню"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:109
+msgid ""
+"The connection profile is only read when the provider factory is "
+"initialized. Restart Keycloak."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:114
+#, fuzzy
+msgid "Confirm the server configuration"
+msgstr "Конфигурация за съхранение"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:116
+msgid ""
+"Check the startup log before configuring any realm. This separates a "
+"connection or credential problem from a realm configuration problem."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:119
+msgid "On success:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:126
+#, fuzzy
+msgid "Otherwise:"
+msgstr "Следователно:"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:132
+#, fuzzy
+msgid "Log message"
+msgstr "**Функции**"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:133
+#, fuzzy
+msgid "Cause"
+msgstr "Потребители"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:134
+msgid "No message, or a debug line stating the provider is inactive"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:135
+#, fuzzy
+msgid "``url`` is not set"
+msgstr "``--country`` ``TEXT``"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:136
+msgid "``NetHSM is not reachable or not Operational at startup``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:137
+msgid ""
+"Wrong address, blocked by a firewall, certificate pin mismatch, or the "
+"NetHSM is Locked or unprovisioned"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:139
+msgid "``NetHSM rejected the configured credential with HTTP 401``"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:140
+#, fuzzy
+msgid "Wrong username or passphrase"
+msgstr "Потребителска парола"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:144
+msgid "Add the provider to a realm"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:146
+msgid ""
+"In the admin console, go to *Realm Settings → Keys → Providers*, choose "
+"**Add provider**, and select ``nethsm``."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:153
+#, fuzzy
+msgid "Field"
+msgstr "*Заключено*"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:154
+msgid "Meaning"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:155
+#, fuzzy
+msgid "Key use"
+msgstr "Идентификатори на ключове"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:156
+msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:157
+#, fuzzy
+msgid "Key ID prefix"
+msgstr "Ключов внос"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:158
+msgid ""
+"Every NetHSM key whose ID begins with this string is published by this "
+"realm"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:159
+#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
+#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:47
+#, fuzzy
+msgid "Algorithm"
+msgstr "Алгоритми"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:160
+msgid "The algorithm these keys are published under"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:161
+#, fuzzy
+msgid "Priority"
+msgstr "Имоти"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:162
+msgid "See `Set the priority above 100`_"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:163
+#, fuzzy
+msgid "Enabled / Active"
+msgstr "Активиране на TLS"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:164
+msgid "Both must be on for a key that should sign"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:166
+msgid ""
+"One component publishes one algorithm, mirroring Keycloak's built-in key "
+"providers. A realm that needs both RS256 and ES256 therefore has two "
+"components. Keys under the prefix that cannot serve the chosen algorithm "
+"are skipped, so a prefix may safely match a mixed set of keys."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:173
+msgid ""
+"Do not point two components at the same key with different algorithms. "
+"Both would publish a JWKS entry under the same ``kid``."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:178
+msgid "Set the priority above 100"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:182
+msgid ""
+"A newly created realm contains four generated key providers — ``rsa-"
+"generated``, ``rsa-enc-generated``, ``hmac-generated`` and ``aes-"
+"generated`` — all with priority **100**. The NetHSM component must have a"
+" higher priority, otherwise Keycloak continues signing with a generated "
+"software key and the configuration appears to work."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:187
+msgid "A value of ``200`` for NetHSM is a reasonable default."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:191
+msgid "Select the algorithm for the realm"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:193
+msgid ""
+"Set *Realm Settings → Tokens → Default Signature Algorithm* to the "
+"algorithm configured on the component. If the realm requests an algorithm"
+" the component does not publish, Keycloak falls back to a generated key "
+"without reporting an error."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:199
+msgid "Verify"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:201
+#, fuzzy
+msgid "List the published keys:"
+msgstr "Качване на публичния ключ"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:207
+msgid "The ``kid`` values should be the NetHSM key IDs."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:209
+msgid ""
+"The conclusive check is an issued token. Request one and decode its "
+"header:"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:222
+msgid ""
+"If ``kid`` is the NetHSM key ID, the signature was produced inside the "
+"HSM. You could also watch NetHSM's log in parallel which should show an "
+"appropriate call."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:227
+msgid "Plan for NetHSM being unavailable"
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:229
+msgid ""
+"If NetHSM cannot be reached and no key metadata is cached, the realm has "
+"no usable keys and token issuance fails, rather than falling back to a "
+"generated software key."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:235
+msgid ""
+"If a realm's default signature algorithm is served by NetHSM keys and the"
+" NetHSM becomes unreachable, administrative tokens for that realm cannot "
+"be issued either. The admin API is then unavailable for fixing the "
+"problem."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:239
+msgid ""
+"Recovery is through server configuration rather than the admin console: "
+"set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
+"the component."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:242
+msgid ""
+"For this reason, configure a test realm first and leave the ``master`` "
+"realm on Keycloak's own generated keys, so that the admin console remains"
+" reachable."
+msgstr ""
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:247
+#, fuzzy
+msgid "Further Details"
+msgstr "Допълнителни съвети"
+
+#: ../../source/components/nethsm/compatible/keycloak.rst:249
+#, fuzzy
+msgid ""
+"You find further details `here <https://github.com/Nitrokey/nethsm-"
+"keycloak>`__."
+msgstr "`Пълен изходен код <https://github.com/Nitrokey/nethsm/>`_"
+
 #: ../../source/components/nethsm/compatible/knotdns.rst:2
 msgid "Knot DNS"
 msgstr "Възел DNS"
@@ -5739,17 +6186,6 @@ msgid ""
 msgstr ""
 "От съображения за сигурност изберете да стартирате контейнера в режим на "
 "едно ядро."
-
-#: ../../source/components/nethsm/container/production-image.rst:37
-#: ../../source/components/nethsm/container/test-image.rst:22
-#: ../../source/components/nethsm/pkcs11-setup.rst:25
-#: ../../source/components/nextbox/external-storage.rst:18
-#: ../../source/components/nitrokeys/features/misc/automatic-screen-lock.rst:19
-#: ../../source/components/nitrokeys/features/openpgp-card/uif.rst:20
-#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:39
-#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:37
-msgid "Configuration"
-msgstr "Статична конфигурация на DNS"
 
 #: ../../source/components/nethsm/container/production-image.rst:39
 #, fuzzy
@@ -8037,22 +8473,6 @@ msgstr ""
 #: ../../source/components/nethsm/pkcs11-setup.rst:2
 msgid "PKCS#11 Setup"
 msgstr "Настройка на PKCS#11"
-
-#: ../../source/components/nethsm/pkcs11-setup.rst:6
-#: ../../source/components/nethsm/pkiproxy.rst:51
-#: ../../source/components/nethsm/pkiproxy.rst:125
-#: ../../source/components/nitrokeys/features/hsm/pkiproxy.rst:48
-#: ../../source/components/nitrokeys/features/hsm/pkiproxy.rst:119
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-thunderbird.rst:28
-#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services-and-active-directory.rst:27
-#: ../../source/components/nitrokeys/features/piv/guides/tls-client-authentication-with-internet-information-services.rst:25
-#: ../../source/components/nitrokeys/hsm/getting-started.rst:9
-#: ../../source/components/nitrokeys/nitrokey3/nitropy.rst:9
-#: ../../source/components/software/nitropy/all-platforms/installation.rst:93
-#: ../../source/components/software/nk-app1/index.rst:14
-#: ../../source/components/software/nk-app2/index.rst:15
-msgid "Installation"
-msgstr "Инсталиране на приложението Nitrokey"
 
 #: ../../source/components/nethsm/pkcs11-setup.rst:8
 msgid ""
@@ -19537,12 +19957,6 @@ msgstr ""
 #, fuzzy
 msgid "Supported algorithms per device"
 msgstr "Поддържани алгоритми със симетричен ключ:"
-
-#: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
-#: ../../source/components/nitrokeys/nitrokey3/secure-element.rst:47
-#, fuzzy
-msgid "Algorithm"
-msgstr "Алгоритми"
 
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
 #: ../../source/components/nitrokeys/start/faq.rst:77
