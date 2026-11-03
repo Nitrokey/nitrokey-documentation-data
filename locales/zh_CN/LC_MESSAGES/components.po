@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 18:20+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.nitrokey."
+"com/projects/nitrokey-documentation/root/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified Han script) "
-"<https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4218,7 +4218,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4227,16 +4227,20 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"若要使用`Keycloak<https://www.keycloak.org/>`__ 配合 NetHSM，既能在 NetHSM "
+"中安全地存储私钥，又能让 Keycloak 签署访问令牌并解密 "
+"JWE，您需要按照以下步骤安装并配置`此密钥提供程序<https://github.com/Nitrokey/"
+"nethsm-keycloak>`__："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "AI 披露"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
-msgstr ""
+msgstr "**该服务提供商是在人工智能的大力协助下开发和审核的。**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4247,23 +4251,28 @@ msgstr "准备钥匙"
 msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
-msgstr ""
+msgstr "请按以下步骤准备 NetHSM。有关详细说明，请参阅`管理部分<../administration."
+"html>`__。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
-msgstr ""
+msgstr "如果 NetHSM 使用的是自签名证书，请记录其指纹："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
-msgstr ""
+msgstr "`创建一个专门用于 Keycloak 的“操作员”用户<../administration.html#user-"
+"management>`__。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"Keycloak 扩展*会发现* "
+"中的密钥，但不会创建这些密钥。`请手动创建所需的密钥<../operation.html#key-"
+"management>`__："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4274,10 +4283,15 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**密钥 ID** 必须以该领域将声明的前缀开头。请选择合适的命名方案，例如``kc-<rea"
+"lm>-<purpose>-<year>``（例如``kc-staff-sig-rs256-2026``、``kc-partners-sig-"
+"es256-2026``、``kc-customers-enc-oaep-2026``）。该 ID 将作为``kid`` 由 "
+"Keycloak 发布。未来的密钥轮换是通过添加新 ID 来实现的，"
+"因此我们建议将年份作为密钥 ID 的一部分。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
-msgstr ""
+msgstr "**机制** 决定了该密钥可用于哪些 JOSE 算法："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4296,23 +4310,23 @@ msgstr "``EdDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
-msgstr ""
+msgstr "RS256、RS384、RS512——不依赖哈希算法，因此一个密钥即可覆盖这三种算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` +``RSA_Signature_PSS_SHA256`` /``_SHA384`` /``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
-msgstr ""
+msgstr "PS256 / PS384 / PS512 —— 这些名称仅指算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` /``EC_P384`` /``EC_P521`` +``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — 曲线决定了算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -4326,11 +4340,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` +``RSA_Decryption_OAEP_SHA1`` /``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256，用于解密传入的 JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -4355,10 +4369,13 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"下载 Keycloak NetHSM 提供程序`的 JAR 文件<https://github.com/Nitrokey/"
+"nethsm-keycloak/releases>`__，将其保存到 Keycloak 的提供程序文件夹中，例如``/"
+"opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
-msgstr ""
+msgstr "重建提供商注册表：``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -4379,10 +4396,13 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"设置既可以通过``conf/keycloak.conf`` 指定，也可以通过环境变量指定。这两种形式"
+"表示相同的设置；环境变量具有优先级，因此非机密值可以保存在文件中，仅在运行时"
+"注入密码短语。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "使用``conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -4394,7 +4414,8 @@ msgid ""
 "Preferred in container deployments, because the passphrase can be "
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
-msgstr ""
+msgstr "在容器部署中更推荐这种方式，因为密码短语可以从 Docker 或 Kubernetes "
+"密钥中获取，而无需写入文件。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -4404,6 +4425,10 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"环境变量名称是根据配置键机械生成的：在键名前添加`KC_` "
+"，转换为大写，并将所有`-` 替换为`_` 。双下划线源自键的结构`spi-<spi-name"
+">--<provider-id>--<option>` ，其中对于此扩展而言，SPI为`keys` "
+"，提供者为`nethsm` ，以及选项名称。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -4421,7 +4446,7 @@ msgstr "开始菜单"
 msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
-msgstr ""
+msgstr "连接配置文件仅在提供商工厂初始化时被读取。请重启 Keycloak。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -4432,11 +4457,12 @@ msgstr "存储配置"
 msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
-msgstr ""
+msgstr "在配置任何领域之前，请检查启动日志。这样可以区分连接或凭据问题与领域配置问题"
+"。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "成功时："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -4455,7 +4481,7 @@ msgstr "用户"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
-msgstr ""
+msgstr "没有提示信息，或者出现一条调试信息，指出提供程序处于非活动状态"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -4464,17 +4490,17 @@ msgstr "``--country`````TEXT```"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
-msgstr ""
+msgstr "地址错误、被防火墙阻止、证书 PIN 不匹配，或者 NetHSM 处于锁定状态或未配置状态"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -4483,13 +4509,14 @@ msgstr "用户密码"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "将提供商添加到领域中"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
-msgstr ""
+msgstr "在管理控制台中，进入*领域设置 → 密钥 → 提供商* ，选择**添加提供商** "
+"，并选择``nethsm``。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -4498,7 +4525,7 @@ msgstr "*被锁住*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "含义"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -4507,7 +4534,7 @@ msgstr "关键 ID"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
-msgstr ""
+msgstr "``sig`` 用于签名令牌，``enc`` 用于解密传入的 JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -4518,7 +4545,7 @@ msgstr "关键进口"
 msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
-msgstr ""
+msgstr "ID 以该字符串开头的每个 NetHSM 密钥均由该领域发布"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -4529,7 +4556,7 @@ msgstr "算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "发布这些密钥所依据的算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -4538,7 +4565,7 @@ msgstr "财产"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "参见`将优先级设置为大于 100`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -4547,7 +4574,7 @@ msgstr "启用TLS"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "若要使密钥生效，这两项都必须开启"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -4556,16 +4583,20 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"一个组件发布一种算法，这与 Keycloak 的内置密钥提供程序相类似。因此，"
+"需要同时支持 RS256 和 ES256 的领域将包含两个组件。对于前缀下无法支持所选算法"
+"的密钥，系统会将其跳过，因此一个前缀可以安全地匹配一组混合的密钥。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
-msgstr ""
+msgstr "请勿将两个组件使用不同的算法指向同一个密钥。否则，两者都会在相同的``kid`` "
+"下发布一个 JWKS 条目。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "将优先级设置为大于 100"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -4575,14 +4606,18 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"一个新创建的域包含四个生成的密钥提供者——``rsa-generated``、``rsa-enc-"
+"generated``、``hmac-generated`` 以及``aes-"
+"generated``——它们的优先级均为**100** 。NetHSM 组件的优先级必须更高，否则 "
+"Keycloak 将继续使用生成的软件密钥进行签名，且配置看似正常。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
-msgstr ""
+msgstr "NetHSM 的默认值为``200``，这是一个合理的设置。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "为该领域选择算法"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -4591,10 +4626,13 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"将*中的“领域设置”→“令牌”→“默认签名算法”* "
+"设置为组件上配置的算法。如果领域请求的算法是组件未发布的，Keycloak "
+"将回退到使用生成的密钥，且不会报告错误。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "验证"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -4603,13 +4641,13 @@ msgstr "上传公钥"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
-msgstr ""
+msgstr "``kid`` 的值应为 NetHSM 密钥 ID。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
-msgstr ""
+msgstr "最终的验证依据是生成的令牌。请求一个令牌并解析其头部信息："
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -4617,17 +4655,20 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"如果``kid`` 是 NetHSM 的密钥 ID，则该签名是在 HSM 内部生成的。"
+"您还可以同时查看 NetHSM 的日志，其中应会显示相应的调用记录。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "NetHSM 无法使用时的应对方案"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
 "If NetHSM cannot be reached and no key metadata is cached, the realm has "
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
-msgstr ""
+msgstr "如果无法连接到 NetHSM 且未缓存任何密钥元数据，则该域中将没有可用的密钥，令牌"
+"签发将失败，而非回退到使用生成的软件密钥。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -4636,6 +4677,8 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"如果某个域的默认签名算法由 NetHSM 密钥提供，而 NetHSM "
+"无法访问，则也无法为该域签发管理令牌。此时，无法使用管理 API 来解决该问题。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -4643,13 +4686,16 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"恢复操作需通过服务器配置而非管理控制台进行：将`` 设置为 `spi-keys--nethsm"
+"--on-unavailable=degrade`` 并重启，或者禁用该组件。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
 "For this reason, configure a test realm first and leave the ``master`` "
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
-msgstr ""
+msgstr "因此，请先配置一个测试域，并将``master`` 域保留为 Keycloak "
+"自身生成的密钥，以确保管理控制台仍可访问。"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -36274,4 +36320,3 @@ msgstr "标记裁剪的输出"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Windows 安装"
-
