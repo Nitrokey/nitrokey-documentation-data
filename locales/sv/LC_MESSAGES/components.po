@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 17:00+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Swedish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/sv/>\n"
 "Language: sv\n"
-"Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/sv/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4812,7 +4813,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4821,16 +4822,22 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"För att kunna använda `Keycloak <https://www.keycloak.org/>`__ tillsammans "
+"med NetHSM för att på ett säkert sätt lagra privata nycklar i NetHSM och "
+"samtidigt göra det möjligt för Keycloak att signera åtkomsttoken och "
+"dekryptera JWE, måste du installera och konfigurera `denna nyckelleverantör "
+"<https://github.com/Nitrokey/nethsm-keycloak>`__ enligt följande:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "Information om AI"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
+"**Denna tjänst har utvecklats och granskats med omfattande hjälp av AI.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4842,22 +4849,30 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
+"Förbered NetHSM enligt följande. Se avsnittet `administration "
+"<../administration.html>`__ för detaljerade anvisningar."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
+"Om NetHSM använder ett självsignerat certifikat ska du notera dess "
+"fingeravtryck:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
 msgstr ""
+"`Skapa en operatörsanvändare <../administration.html#user-management>`__ som "
+"är avsedd enbart för Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"Keycloak-tillägget *upptäcker* nycklar men skapar dem inte. `Skapa önskade "
+"nycklar <../operation.html#key-management>`__ manuellt:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4868,10 +4883,17 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**Nyckel-ID:t** måste inledas med det prefix som realm-instansen ska "
+"använda. Välj ett lämpligt namngivningsschema, till exempel "
+"``kc-<realm>-<purpose>-<year>`` (till exempel ``kc-staff-sig-rs256-2026``, "
+"``kc-partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). ID:t blir "
+"``kid`` som Keycloak publicerar. Framtida nyckelrotation sker genom att "
+"lägga till nya ID:n, vilket är anledningen till att vi rekommenderar att man "
+"använder året som en del av nyckel-ID:t."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
-msgstr ""
+msgstr "**Mekanismerna** avgör vilka JOSE-algoritmer nyckeln kan användas för:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4891,22 +4913,24 @@ msgstr "``EdDSA_Signature``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
+"RS256, RS384, RS512 – oberoende av hash-algoritm, så en nyckel täcker alla "
+"tre"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
-msgstr ""
+msgstr "PS256 / PS384 / PS512 — endast algoritmen som mekanismen benämns efter"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — kurvan avgör vilken algoritm som används"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -4920,11 +4944,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256, för dekryptering av inkommande JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -4949,10 +4973,13 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"Ladda ner JAR-filen för Keycloak NetHSM-leverantören ` <https://github.com/"
+"Nitrokey/nethsm-keycloak/releases>` __ och spara den i Keycloaks "
+"leverantörsmapp, t.ex. ``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
-msgstr ""
+msgstr "Återställ leverantörsregistret: ``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -4973,10 +5000,14 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"Inställningarna kan anges antingen i ``conf/keycloak.conf`` eller som "
+"miljövariabler. De två formerna motsvarar samma inställningar; "
+"miljövariablerna har företräde, vilket innebär att värden som inte är "
+"hemliga kan lagras i filen, medan endast lösenfrasen läggs till vid körning."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "Med hjälp av ``conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -4989,6 +5020,9 @@ msgid ""
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
 msgstr ""
+"Detta är att föredra vid containerbaserade installationer, eftersom "
+"lösenfrasen kan hämtas från en Docker- eller Kubernetes-hemlighet istället "
+"för att skrivas till en fil."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -4998,6 +5032,11 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"Namnet på miljövariabeln härleds automatiskt från konfigurationsnyckeln: "
+"lägg till prefixet ``KC_``, konvertera till versaler och ersätt varje ``-`` "
+"med ``_``. De dubbla understrecken följer av nyckelns struktur, ``spi-<spi-"
+"name>--<provider-id>--<option>``, som för denna tilläggsfunktion består av "
+"SPI ``keys``, leverantör ``nethsm`` och alternativnamnet."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -5016,6 +5055,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
+"Anslutningsprofilen läses endast in när leverantörsfabriken initialiseras. "
+"Starta om Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5027,10 +5068,13 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
+"Kontrollera startloggen innan du konfigurerar någon realm. På så sätt kan du "
+"skilja mellan problem med anslutningen eller inloggningsuppgifterna och "
+"problem med realmkonfigurationen."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "Vid framgång:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -5050,6 +5094,8 @@ msgstr "Användare"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
+"Inget meddelande, eller en felsökningsrad som anger att leverantören är "
+"inaktiv"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -5058,17 +5104,19 @@ msgstr "``--country`` ``TEXT``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
+"Felaktig adress, blockerad av en brandvägg, certifikat-PIN-kod stämmer inte "
+"överens, eller så är NetHSM låst eller inte konfigurerad"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -5077,13 +5125,15 @@ msgstr "Användarens lösenfras"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "Lägg till leverantören i en realm"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
+"I administratörskonsolen går du till *Realm-inställningar → Nycklar → "
+"Leverantörer*, väljer **Lägg till leverantör** och väljer ``nethsm``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5092,7 +5142,7 @@ msgstr "*Lockad*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "Betydelse"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -5102,6 +5152,7 @@ msgstr "Nyckel-ID"
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
 msgstr ""
+"``sig`` för att signera token, ``enc`` för att dekryptera inkommande JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -5113,6 +5164,7 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
+"Varje NetHSM-nyckel vars ID inleds med denna sträng publiceras av denna realm"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5123,7 +5175,7 @@ msgstr "Algoritmer"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "Den algoritm som dessa nycklar publiceras enligt"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -5132,7 +5184,7 @@ msgstr "Fastighet"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "Se `Ställ in prioriteten till ett värde över 100`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -5141,7 +5193,7 @@ msgstr "Aktivera TLS"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "Båda måste vara aktiverade för att en nyckel ska kunna signeras"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -5150,16 +5202,23 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"En komponent publicerar en algoritm, vilket motsvarar Keycloaks inbyggda "
+"nyckelleverantörer. En realm som behöver både RS256 och ES256 har därför två "
+"komponenter. Nycklar under prefixet som inte stöder den valda algoritmen "
+"hoppas över, vilket innebär att ett prefix utan problem kan matcha en "
+"blandad uppsättning nycklar."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
 msgstr ""
+"Rikta inte in två komponenter mot samma nyckel med olika algoritmer. Båda "
+"skulle då publicera en JWKS-post under samma ``kid``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "Ställ in prioriteten till ett värde över 100"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -5169,14 +5228,19 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"Ett nyskapat domänområde innehåller fyra genererade nyckelleverantörer — "
+"``rsa-generated``, ``rsa-enc-generated``, ``hmac-generated`` och ``aes-"
+"generated`` — alla med prioriteten **100**. NetHSM-komponenten måste ha en "
+"högre prioritet, annars fortsätter Keycloak att signera med en genererad "
+"programvarunyckel och konfigurationen verkar fungera."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
-msgstr ""
+msgstr "Värdet ``200`` för NetHSM är ett rimligt standardvärde."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "Välj algoritm för området"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -5185,10 +5249,14 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"Ställ in ” *” under Realm-inställningar → Tokens → Standardalgoritm för "
+"signatur* till den algoritm som är konfigurerad på komponenten. Om realmen "
+"begär en algoritm som komponenten inte publicerar, använder Keycloak "
+"istället en genererad nyckel utan att rapportera något fel."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "Kontrollera"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -5197,13 +5265,15 @@ msgstr "Ladda upp den offentliga nyckeln"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
-msgstr ""
+msgstr "Värdena för ” ` ” `kid`` ska vara NetHSM-nyckel-ID:n."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
 msgstr ""
+"Det slutgiltiga verifieringsbeviset är en utfärdad token. Begär en sådan och "
+"avkoda dess rubrik:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -5211,10 +5281,13 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"Om ``kid`` är NetHSM-nyckel-ID:t, har signaturen genererats inuti HSM:en. Du "
+"kan också övervaka NetHSM:s logg parallellt, där ett motsvarande anrop bör "
+"visas."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "Plan för fall där NetHSM inte är tillgängligt"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
@@ -5222,6 +5295,9 @@ msgid ""
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
 msgstr ""
+"Om NetHSM inte kan nås och inga nyckelmetadata finns i cachen, har domänen "
+"inga användbara nycklar och utfärdandet av token misslyckas, istället för "
+"att systemet faller tillbaka på en genererad programvarunyckel."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5230,6 +5306,10 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"Om en realms standardalgoritm för signering hanteras av NetHSM-nycklar och "
+"NetHSM inte längre går att nå, kan inte heller administrativa token för den "
+"realmen utfärdas. Admin-API:et är då inte tillgängligt för att åtgärda "
+"problemet."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5237,6 +5317,9 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"Återställningen sker via serverkonfigurationen istället för via "
+"administratörskonsolen: ställ in ``spi-keys--nethsm--on-unavailable=degrade``"
+" och starta om, eller inaktivera komponenten."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
@@ -5244,6 +5327,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
+"Av denna anledning bör du först konfigurera en testrealm och låta realmen "
+"``master`` använda de nycklar som Keycloak själv genererat, så att "
+"administratörskonsolen förblir tillgänglig."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -42506,4 +42592,3 @@ msgstr "Mark cropped Output"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Installera Windows"
-
