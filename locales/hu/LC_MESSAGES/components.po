@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 16:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/hu/>\n"
 "Language: hu\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/hu/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4901,7 +4902,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4910,16 +4911,24 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"Ahhoz, hogy a `Keycloak <https://www.keycloak.org/>`__ szolgáltatást a "
+"NetHSM-mel együtt használhassa – így a titkos kulcsokat biztonságosan "
+"tárolhassa a NetHSM-ben, miközben a Keycloak aláírhatja a hozzáférési "
+"tokeneket és visszafejtheti a JWE-ket –, telepítenie és konfigurálnia kell `"
+"ezt a kulcsszolgáltatót <https://github.com/Nitrokey/nethsm-keycloak>`__ az "
+"alábbiak szerint:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "Mesterséges intelligencia – közzétételi kötelezettség"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
+"**Ezt a szolgáltatót jelentős mértékű mesterséges intelligencia segítségével "
+"fejlesztették ki és vizsgálták át.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4931,22 +4940,30 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
+"A NetHSM-et az alábbiak szerint állítsa be. A részletes utasításokat a „ "
+"`-kezelés” című szakaszban találja: <../administration.html>`__."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
+"Ha a NetHSM önaláírt tanúsítványt használ, jegyezze fel annak ujjlenyomatát:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
 msgstr ""
+"`Hozzon létre egy „Operator” felhasználót <../administration.html#user-"
+"management>`__, amely kizárólag a Keycloak számára van fenntartva."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"A Keycloak-bővítmény ( *) felismeri a* kulcsokat, de nem hozza létre őket. `"
+"A kívánt kulcsokat <../operation.html#key-management>`__ kézzel kell "
+"létrehozni:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4957,10 +4974,19 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**A kulcsazonosítónak (** ) a tartomány által igényelt előtaggal kell "
+"kezdődnie. Válasszon megfelelő névadási sémát, például "
+"``kc-<realm>-<purpose>-<year>`` (például ``kc-staff-sig-rs256-2026``, ``kc-"
+"partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). Az azonosító "
+"lesz az a ``kid``, amelyet a Keycloak közzétesz. A jövőbeli kulcsváltás új "
+"azonosítók hozzáadásával történik, ezért javasoljuk, hogy az azonosító "
+"részeként az évet is használja."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
 msgstr ""
+"**A** oldalon található mechanizmusok határozzák meg, hogy a kulcs mely JOSE-"
+"algoritmusokhoz használható:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4980,22 +5006,24 @@ msgstr "``EdDSA_Signature<x>``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
+"RS256, RS384, RS512 — hash-független, így egy kulcs mindháromra érvényes"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
 msgstr ""
+"PS256 / PS384 / PS512 — a mechanizmus nevei kizárólag az algoritmusra utalnak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — a görbe határozza meg az algoritmust"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -5009,11 +5037,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256, a bejövő JWE-k visszafejtéséhez"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -5038,10 +5066,14 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"Töltsd le a Keycloak NetHSM szolgáltató „ `” JAR-fájlját <https://github.com/"
+"Nitrokey/nethsm-keycloak/releases>`__, és mentsd el a Keycloak szolgáltatói "
+"mappájába, pl. ``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
 msgstr ""
+"A szolgáltatói nyilvántartás újjáépítése: ``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -5062,10 +5094,14 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"A beállításokat megadhatjuk akár a ` `` `conf/keycloak.conf`` fájlban, akár "
+"környezeti változókként. A két forma ugyanazt a beállítást jelenti; a "
+"környezeti változók élveznek elsőbbséget, így a nem titkos értékek a fájlban "
+"maradhatnak, és csak a jelszót kell futásidőben beilleszteni."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "` használata `conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -5078,6 +5114,8 @@ msgid ""
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
 msgstr ""
+"Konténeres telepítések esetén előnyösebb, mivel a jelszót fájlba írás "
+"helyett egy Docker- vagy Kubernetes-titokból lehet megadni."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -5087,6 +5125,12 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"A környezeti változó neve automatikusan a konfigurációs kulcsból származik: "
+"előtte a „ ` ” `KC_`` előtagot kell hozzáadni, nagybetűvé kell alakítani, "
+"majd minden „ ` ” `-`` kifejezést „ ` ” `_``-re kell cserélni. A kettős "
+"aláhúzójelek a kulcs szerkezetéből adódnak: „ ` ” `spi-<spi-name>--<provider-"
+"id>--<option>``, amely ebben a kiterjesztésben az SPI-t jelenti: „ ` ” "
+"`keys``, a szolgáltatót: „ ` ” `nethsm``, valamint az opció nevét."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -5105,6 +5149,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
+"A kapcsolati profil csak a szolgáltatói gyár inicializálásakor kerül "
+"beolvasásra. Indítsa újra a Keycloakot."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5116,10 +5162,13 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
+"Mielőtt bármelyik tartományt konfigurálná, ellenőrizze az indítási naplót. "
+"Ezzel megkülönböztetheti a kapcsolati vagy hitelesítési problémákat a "
+"tartománykonfigurációs problémáktól."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "Siker esetén:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -5139,6 +5188,8 @@ msgstr "Felhasználók"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
+"Nincs üzenet, vagy egy hibakeresési sor, amely jelzi, hogy a szolgáltató "
+"inaktív"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -5147,17 +5198,19 @@ msgstr "``--country`` ``TEXT``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
+"Helytelen cím, tűzfal általi blokkolás, tanúsítvány PIN-kódjának eltérése, "
+"vagy a NetHSM zárolva van, illetve nincs beállítva"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -5166,13 +5219,16 @@ msgstr "Felhasználói jelszó"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "A szolgáltató hozzáadása egy tartományhoz"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
+"Az adminisztrációs konzolban lépjen a következő menüpontra: *Realm Settings →"
+" Keys → Providers*, válassza ki a „ **” lehetőséget, majd kattintson az „Add "
+"provider” gombra**, és válassza ki a „ ``nethsm``” elemet."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5181,7 +5237,7 @@ msgstr "*Locked*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "Jelentés"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -5191,6 +5247,7 @@ msgstr "Kulcs azonosítók"
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
 msgstr ""
+"``sig`` a tokenek aláírásához, ``enc`` a beérkező JWE-k visszafejtéséhez"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -5202,6 +5259,8 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
+"Minden olyan NetHSM-kulcsot, amelynek azonosítója ezzel a karakterlánccal "
+"kezdődik, ez a tartomány teszi közzé"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5212,7 +5271,7 @@ msgstr "Algoritmusok"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "Az algoritmus, amely alapján ezeket a kulcsokat közzétették"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -5221,7 +5280,7 @@ msgstr "Ingatlan"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "Lásd: `Állítsd a prioritást 100 fölé`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -5230,7 +5289,7 @@ msgstr "TLS engedélyezése"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "Mindkettőnek be kell lennie kapcsolva ahhoz, hogy egy kulcs aláírhasson"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -5239,16 +5298,24 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"Egy komponens egy algoritmust támogat, ami a Keycloak beépített "
+"kulcsszolgáltatóit tükrözi. Egy olyan tartománynak, amelynek mind az RS256-"
+"ra, mind az ES256-ra szüksége van, ezért két komponense van. Az előtag alatt "
+"található kulcsok közül azokat, amelyek nem támogatják a kiválasztott "
+"algoritmust, a rendszer kihagyja, így egy előtag nyugodtan illeszkedhet "
+"vegyes kulcskészlethez is."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
 msgstr ""
+"Ne rendeljen két komponenst ugyanahhoz a kulcshoz különböző algoritmusokkal. "
+"Mindkettő ugyanazon a ``kid`` alatt tenné közzé a JWKS-bejegyzést."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "Állítsa a prioritást 100 fölé"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -5258,14 +5325,21 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"Egy újonnan létrehozott tartomány négy generált kulcsszolgáltatót tartalmaz —"
+" ``rsa-generated``, ``rsa-enc-generated``, ``hmac-generated`` és ``aes-"
+"generated`` — mindegyik prioritása **100**. A NetHSM-komponensnek magasabb "
+"prioritással kell rendelkeznie, ellenkező esetben a Keycloak továbbra is a "
+"generált szoftverkulccsal ír alá, és úgy tűnik, hogy a konfiguráció működik."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
 msgstr ""
+"A NetHSM esetében a ` `` `200`` értékek ésszerű alapértelmezett beállításnak "
+"számítanak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "Válassza ki a birodalom algoritmusát"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -5274,10 +5348,15 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"Állítsa be a „ *” ( ) menüpont alatt a Realm Settings → Tokens → Default "
+"Signature Algorithm (Realm beállítások → Tokenek → Alapértelmezett aláírási "
+"algoritmus) mezőt* értékre, amely megegyezik a komponensen konfigurált "
+"algoritmussal. Ha a realm olyan algoritmust kér, amelyet a komponens nem "
+"tesz közzé, a Keycloak hibaüzenet nélkül egy generált kulcsra vált át."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "Ellenőrizze"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -5286,13 +5365,15 @@ msgstr "A nyilvános kulcs feltöltése"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
-msgstr ""
+msgstr "A „ ` ” `kid`` értékeknek a NetHSM kulcsazonosítóknak kell lenniük."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
 msgstr ""
+"A végleges ellenőrzés egy kiadott token. Kérjen egyet, és dekódolja a "
+"fejlécét:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -5300,10 +5381,13 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"Ha ``kid`` a NetHSM kulcsazonosítója, akkor az aláírás a HSM-en belül "
+"készült. Ezzel párhuzamosan megnézheted a NetHSM naplófájlját is, amelyben "
+"egy megfelelő hívásnak kell szerepelnie."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "Terv NetHSM elérhetetlenségére vonatkozóan"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
@@ -5311,6 +5395,9 @@ msgid ""
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
 msgstr ""
+"Ha NetHSM nem érhető el, és nincs kulcsmetadatok a gyorsítótárban, akkor a "
+"tartománynak nincs használható kulcsa, és a token-kibocsátás meghiúsul, "
+"ahelyett, hogy generált szoftverkulcsra váltana."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5319,6 +5406,10 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"Ha egy tartomány alapértelmezett aláírási algoritmusát NetHSM-kulcsok "
+"biztosítják, és a NetHSM elérhetetlenné válik, akkor az adott tartományhoz "
+"tartozó rendszergazdai tokenek sem állíthatók ki. Ilyenkor az "
+"adminisztrációs API sem áll rendelkezésre a probléma kijavításához."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5326,6 +5417,10 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"A helyreállítás nem az adminisztrációs konzolon, hanem a szerver "
+"beállításain keresztül történik: állítsa be a ``spi-keys--nethsm--on-"
+"unavailable=degrade`` értéket, majd indítsa újra a rendszert, vagy tiltsa le "
+"a komponenst."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
@@ -5333,6 +5428,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
+"Ezért először állítson be egy teszt-realmot, és hagyja a ``master`` realmot "
+"a Keycloak által generált kulcsokkal, hogy az adminisztrációs konzol "
+"továbbra is elérhető maradjon."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -43302,4 +43400,3 @@ msgstr "Mark vágott kimenet"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Windows telepítése"
-

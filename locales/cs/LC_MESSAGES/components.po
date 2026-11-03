@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 16:59+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/root/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4785,7 +4786,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4794,16 +4795,23 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"Chcete-li používat `Keycloak <https://www.keycloak.org/>`__ s NetHSM k "
+"bezpečnému ukládání soukromých klíčů v NetHSM a zároveň umožnit Keycloaku "
+"podepisovat přístupové tokeny a dešifrovat JWE, musíte nainstalovat a "
+"nakonfigurovat `tohoto poskytovatele klíčů <https://github.com/Nitrokey/"
+"nethsm-keycloak>`__ následujícím způsobem:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "Informace o umělé inteligenci"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
+"**Tento poskytovatel byl vyvinut a zkontrolován s významnou podporou umělé "
+"inteligence.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4815,22 +4823,29 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
+"Připravte zařízení NetHSM následujícím způsobem. Podrobné pokyny najdete v "
+"části `administration <../administration.html>`__."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
+"Pokud NetHSM používá certifikát s vlastním podpisem, zaznamenejte jeho otisk:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
 msgstr ""
+"`Vytvořte uživatele typu „Operator“ <../administration.html#user-management>`"
+"__ určeného výhradně pro Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"Rozšíření Keycloak *vyhledává klíče*, ale nevytváří je. `Požadované klíče "
+"<../operation.html#key-management>`__ vytvořte ručně:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4841,10 +4856,16 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**ID klíče** musí začínat předponou, kterou si daná doména vyhradí. Zvolte "
+"vhodné schéma pojmenování, například ``kc-<realm>-<purpose>-<year>`` ("
+"například ``kc-staff-sig-rs256-2026``, ``kc-partners-sig-es256-2026``, ``kc-"
+"customers-enc-oaep-2026``). Toto ID se stane ``kid``, které Keycloak "
+"zveřejní. Budoucí obměna klíčů se provádí přidáním nových ID, proto "
+"doporučujeme použít rok jako součást ID klíče."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
-msgstr ""
+msgstr "**Mechanismy** určují, pro které algoritmy JOSE lze daný klíč použít:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4864,22 +4885,24 @@ msgstr "``EdDSA_Signature``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
+"RS256, RS384, RS512 – nezávislé na typu hash, takže jeden klíč pokrývá "
+"všechny tři"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
-msgstr ""
+msgstr "PS256 / PS384 / PS512 — názvy mechanismů odkazují pouze na algoritmus"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — křivka určuje algoritmus"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -4893,11 +4916,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256, pro dešifrování příchozích JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -4922,10 +4945,13 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"Stáhněte si soubor JAR s poskytovatelem Keycloak NetHSM ` <https://github."
+"com/Nitrokey/nethsm-keycloak/releases>` __ a uložte jej do složky "
+"poskytovatelů Keycloaku, např. ``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
-msgstr ""
+msgstr "Obnovit registr poskytovatelů: ``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -4946,10 +4972,14 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"Nastavení lze zadat buď v souboru ``conf/keycloak.conf``, nebo jako proměnné "
+"prostředí. Obě formy představují stejná nastavení; proměnné prostředí mají "
+"přednost, takže hodnoty, které nejsou důvěrné, mohou být uloženy v souboru a "
+"při spuštění se doplní pouze heslo."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "Použití ``conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -4962,6 +4992,9 @@ msgid ""
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
 msgstr ""
+"Toto řešení se upřednostňuje při nasazení v kontejnerech, protože "
+"přístupovou frázi lze získat z tajného klíče Dockeru nebo Kubernetes, místo "
+"aby byla zapsána do souboru."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -4971,6 +5004,11 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"Název proměnné prostředí se odvozuje automaticky z konfiguračního klíče: "
+"před klíče se přidá předpona ``KC_``, převede se na velká písmena a každý "
+"výskyt ``-`` se nahradí ``_``. Dvojité podtržítko vyplývá ze struktury "
+"klíče, ``spi-<spi-name>--<provider-id>--<option>``, která pro toto rozšíření "
+"zahrnuje SPI ``keys``, poskytovatele ``nethsm`` a název volby."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -4989,6 +5027,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
+"Profil připojení se načte pouze při inicializaci továrny poskytovatelů. "
+"Restartujte Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5000,10 +5040,13 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
+"Před konfigurací jakékoli oblasti zkontrolujte protokol spouštění. Tímto "
+"způsobem lze odlišit problém s připojením nebo přihlašovacími údaji od "
+"problému s konfigurací oblasti."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "V případě úspěchu:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -5023,6 +5066,7 @@ msgstr "Uživatelé"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
+"Žádná zpráva nebo ladicí řádek s informací, že poskytovatel je neaktivní"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -5031,17 +5075,19 @@ msgstr "``--country`` ``TEXT``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
+"Nesprávná adresa, blokování firewallem, neshoda PIN kódu certifikátu nebo je "
+"zařízení NetHSM uzamčeno či není nakonfigurováno"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -5050,13 +5096,16 @@ msgstr "Uživatelská přístupová fráze"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "Přidat poskytovatele do sféry"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
+"V administrační konzoli přejděte na *Nastavení realmů → Klíče → "
+"Poskytovatelé*, vyberte možnost „ **“ (Přidat poskytovatele)** a vyberte "
+"``nethsm``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5065,7 +5114,7 @@ msgstr "*Zamčeno*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "Význam"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -5074,7 +5123,7 @@ msgstr "ID klíčů"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
-msgstr ""
+msgstr "``sig`` pro podepisování tokenů, ``enc`` pro dešifrování příchozích JWE"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -5086,6 +5135,7 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
+"Každý klíč NetHSM, jehož ID začíná tímto řetězcem, je zveřejněn touto doménou"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5096,7 +5146,7 @@ msgstr "Algoritmy"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "Algoritmus, na jehož základě jsou tyto klíče zveřejňovány"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -5105,7 +5155,7 @@ msgstr "Majetek"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "Viz `Nastavte prioritu na hodnotu vyšší než 100`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -5114,7 +5164,7 @@ msgstr "Povolení protokolu TLS"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "Aby klíč mohl podepsat, musí být zapnuty obě funkce"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -5123,16 +5173,23 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"Jedna komponenta podporuje jeden algoritmus, což odpovídá vestavěným "
+"poskytovatelům klíčů v Keycloaku. Realm, který vyžaduje jak RS256, tak "
+"ES256, má proto dvě komponenty. Klíče pod daným prefixem, které nepodporují "
+"zvolený algoritmus, jsou přeskočeny, takže prefix může bez obav odpovídat "
+"smíšené sadě klíčů."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
 msgstr ""
+"Nenastavujte dvě komponenty tak, aby používaly stejný klíč s různými "
+"algoritmy. Obě by totiž zveřejnily záznam JWKS pod stejným ``kid``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "Nastavte prioritu na hodnotu vyšší než 100"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -5142,14 +5199,19 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"Nově vytvořená doména obsahuje čtyři vygenerované poskytovatele klíčů — "
+"``rsa-generated``, ``rsa-enc-generated``, ``hmac-generated`` a ``aes-"
+"generated`` — všechny s prioritou **100**. Komponenta NetHSM musí mít vyšší "
+"prioritu, jinak Keycloak pokračuje v podepisování pomocí vygenerovaného "
+"softwarového klíče a konfigurace se jeví jako funkční."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
-msgstr ""
+msgstr "Pro NetHSM je jako rozumné výchozí nastavení hodnota ``200``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "Vyberte algoritmus pro danou oblast"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -5158,10 +5220,15 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"V nastavení „ *“ (Nastavení domény) → „Tokens“ (Tokeny) → „Default Signature "
+"Algorithm“ (Výchozí algoritmus podpisu)* nastavte algoritmus nakonfigurovaný "
+"v dané komponentě. Pokud doména požaduje algoritmus, který komponenta "
+"nezveřejňuje, Keycloak použije generovaný klíč, aniž by vygeneroval chybovou "
+"zprávu."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "Ověřit"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -5171,12 +5238,16 @@ msgstr "Nahrání veřejného klíče"
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
 msgstr ""
+"Hodnoty v souboru „ ` “ `kid`` by měly odpovídat identifikátorům klíčů "
+"NetHSM."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
 msgstr ""
+"Rozhodujícím důkazem je vydaný token. Požádejte o něj a dekódujte jeho "
+"hlavičku:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -5184,10 +5255,13 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"Pokud je ``kid`` identifikátorem klíče NetHSM, byl podpis vygenerován uvnitř "
+"HSM. Můžete také souběžně sledovat protokol NetHSM, kde by se mělo objevit "
+"příslušné volání."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "Plán pro případ, že služba NetHSM nebude k dispozici"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
@@ -5195,6 +5269,9 @@ msgid ""
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
 msgstr ""
+"Pokud není možné se připojit k NetHSM a v mezipaměti nejsou uložena žádná "
+"metadata klíčů, nemá doména k dispozici žádné použitelné klíče a vydávání "
+"tokenů selže, místo aby se systém přepnul na generovaný softwarový klíč."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5203,6 +5280,9 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"Pokud je výchozí podpisový algoritmus dané sféry zajišťován klíči NetHSM a "
+"NetHSM se stane nedostupným, nelze vydat ani správcovské tokeny pro tuto "
+"sféru. Správcovské API pak není k dispozici pro vyřešení tohoto problému."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5210,6 +5290,9 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"Obnovení se provádí prostřednictvím konfigurace serveru, nikoli přes "
+"administrační konzoli: nastavte ``spi-keys--nethsm--on-unavailable=degrade`` "
+"a restartujte server, případně deaktivujte danou komponentu."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
@@ -5217,6 +5300,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
+"Z tohoto důvodu nejprve nakonfigurujte testovací realm a v realmu ``master`` "
+"ponechte klíče vygenerované samotným Keycloakem, aby zůstala přístupná "
+"administrátorská konzole."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -42348,4 +42434,3 @@ msgstr "Označit oříznutý výstup"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Instalace systému Windows"
-
