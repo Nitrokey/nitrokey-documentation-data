@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 17:00+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/ro/>\n"
 "Language: ro\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/ro/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
-"< 20)) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4916,7 +4917,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4925,16 +4926,23 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"Pentru a utiliza `Keycloak <https://www.keycloak.org/>`__ împreună cu "
+"NetHSM, în vederea stocării în siguranță a cheilor private în NetHSM, "
+"permițând în același timp Keycloak să semneze token-urile de acces și să "
+"decripteze JWE, trebuie să instalați și să configurați `acest furnizor de "
+"chei <https://github.com/Nitrokey/nethsm-keycloak>`__ după cum urmează:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "Declarație privind IA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
+"**Acest furnizor a fost dezvoltat și revizuit cu ajutorul substanțial al "
+"inteligenței artificiale.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4946,22 +4954,29 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
+"Pregătiți NetHSM după cum urmează. Pentru instrucțiuni detaliate, consultați "
+"secțiunea `administration <../administration.html>`__."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
+"Dacă NetHSM utilizează un certificat autosemnat, notați-i amprenta digitală:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
 msgstr ""
+"`Creați un utilizator de tip „Operator” <../administration.html#user-"
+"management>`__ dedicat pentru Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"Extensia Keycloak *detectează cheile*, dar nu le creează. `Creați manual "
+"cheile dorite <../operation.html#key-management>`__:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4972,10 +4987,18 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**ID-ul cheii** trebuie să înceapă cu prefixul pe care îl va revendica "
+"domeniul. Alegeți o schemă de denumire adecvată, cum ar fi "
+"``kc-<realm>-<purpose>-<year>`` (de exemplu, ``kc-staff-sig-rs256-2026``, "
+"``kc-partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). ID-ul "
+"devine ``kid``, pe care Keycloak îl publică. Rotirea viitoare a cheilor se "
+"realizează prin adăugarea de ID-uri noi, motiv pentru care vă sugerăm să "
+"folosiți anul ca parte a ID-ului cheii."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
 msgstr ""
+"**Mecanismele** determină pentru ce algoritmi JOSE poate fi utilizată cheia:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4995,22 +5018,26 @@ msgstr "``EdDSA_Signature```"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
+"RS256, RS384, RS512 — independent de algoritmul hash, astfel încât o singură "
+"cheie acoperă toate cele trei"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
 msgstr ""
+"PS256 / PS384 / PS512 — denumirile se referă doar la algoritmul pe care îl "
+"utilizează mecanismul"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — curba determină algoritmul"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -5024,11 +5051,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256, pentru decriptarea fișierelor JWE primite"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -5053,10 +5080,13 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"Descărcați fișierul JAR al furnizorului Keycloak NetHSM de la adresa ` "
+"<https://github.com/Nitrokey/nethsm-keycloak/releases>` __, salvați-l în "
+"folderul furnizorilor din Keycloak, de exemplu ``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
-msgstr ""
+msgstr "Reconstruiți registrul furnizorilor: ``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -5077,10 +5107,15 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"Setările pot fi specificate fie în fișierul `` `conf/keycloak.conf``, fie "
+"sub formă de variabile de mediu. Cele două forme corespund acelorași setări; "
+"variabilele de mediu au prioritate, astfel încât valorile care nu sunt "
+"confidențiale pot fi stocate în fișier, iar fraza de acces să fie introdusă "
+"doar în timpul rulării."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "Folosind ``conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -5093,6 +5128,9 @@ msgid ""
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
 msgstr ""
+"Este preferată în implementările în containere, deoarece fraza de acces "
+"poate fi furnizată dintr-un secret Docker sau Kubernetes, în loc să fie "
+"scrisă într-un fișier."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -5102,6 +5140,11 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"Numele variabilei de mediu se obține automat din cheia de configurare: se "
+"adaugă prefixul ``KC_``, se transformă în majuscule și se înlocuiesc toate "
+"``-`` cu ``_``. Cele două linii de subliniere duble decurg din structura "
+"cheii, ``spi-<spi-name>--<provider-id>--<option>``, care, pentru această "
+"extensie, este SPI ``keys``, furnizor ``nethsm`` și numele opțiunii."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -5120,6 +5163,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
+"Profilul de conectare este citit doar la inițializarea fabricii de "
+"furnizori. Reporniți Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5131,10 +5176,13 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
+"Verificați jurnalul de pornire înainte de a configura orice domeniu. Astfel, "
+"se poate face distincția între o problemă legată de conexiune sau de datele "
+"de autentificare și o problemă legată de configurarea domeniului."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "În cazul reușitei:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -5154,6 +5202,8 @@ msgstr "Utilizatori"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
+"Nu apare niciun mesaj sau apare o linie de depanare care indică faptul că "
+"furnizorul este inactiv"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -5162,17 +5212,19 @@ msgstr "``--country``` ``TEXT```"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
+"Adresă incorectă, blocat de un firewall, neconcordanță între codul PIN al "
+"certificatului, sau NetHSM-ul este blocat sau neconfigurat"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -5181,13 +5233,15 @@ msgstr "Fraza de acces a utilizatorului"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "Adăugați furnizorul într-un domeniu"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
+"În consola de administrare, accesați *Setări realm → Chei → Furnizori*, "
+"alegeți **Adăugați furnizor** și selectați ``nethsm``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5196,7 +5250,7 @@ msgstr "*Blocat*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "Înțeles"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -5206,6 +5260,8 @@ msgstr "ID-uri cheie"
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
 msgstr ""
+"``sig`` pentru semnarea tokenurilor, ``enc`` pentru decriptarea JWE-urilor "
+"primite"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -5217,6 +5273,8 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
+"Fiecare cheie NetHSM al cărei ID începe cu acest șir este publicată de acest "
+"domeniu"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5227,7 +5285,7 @@ msgstr "Algoritmi"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "Algoritmul în baza căruia sunt publicate aceste chei"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -5236,7 +5294,7 @@ msgstr "Proprietate"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "Vezi `Setează prioritatea la o valoare mai mare de 100`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -5245,7 +5303,7 @@ msgstr "Activați TLS"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "Ambele trebuie să fie activate pentru ca o cheie să poată semna"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -5254,16 +5312,23 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"O componentă publică un singur algoritm, urmând modelul furnizorilor de chei "
+"integrați în Keycloak. Prin urmare, un realm care necesită atât RS256, cât "
+"și ES256 are două componente. Cheile aflate sub prefixul respectiv care nu "
+"pot fi utilizate cu algoritmul ales sunt omise, astfel încât un prefix poate "
+"corespunde în siguranță unui set mixt de chei."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
 msgstr ""
+"Nu indicați două componente către aceeași cheie folosind algoritmi diferiți. "
+"Ambele ar publica o intrare JWKS sub același ``kid``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "Setați prioritatea la o valoare mai mare de 100"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -5273,14 +5338,19 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"Un domeniu nou creat conține patru furnizori de chei generați — ``rsa-"
+"generated``, ``rsa-enc-generated``, ``hmac-generated`` și ``aes-generated`` —"
+" toți având prioritatea **100**. Componenta NetHSM trebuie să aibă o "
+"prioritate mai mare; în caz contrar, Keycloak continuă să semneze folosind o "
+"cheie software generată, iar configurația pare să funcționeze."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
-msgstr ""
+msgstr "O valoare de ``200`` pentru NetHSM este o valoare implicită rezonabilă."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "Selectați algoritmul pentru tărâm"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -5289,10 +5359,14 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"Setați în „ *” (Setări domeniu) → „Tokens” (Jetoane) → „Default Signature "
+"Algorithm” (Algoritm de semnătură implicit)* la algoritmul configurat pe "
+"componentă. Dacă domeniul solicită un algoritm pe care componenta nu îl "
+"publică, Keycloak va recurge la o cheie generată fără a raporta o eroare."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "Verificați"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -5301,13 +5375,15 @@ msgstr "Încărcarea cheii publice"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
-msgstr ""
+msgstr "Valorile „ ` ” `kid`` ar trebui să fie ID-urile cheilor NetHSM."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
 msgstr ""
+"Verificarea definitivă se face prin intermediul unui token emis. Solicitați "
+"unul și decodați antetul acestuia:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -5315,10 +5391,13 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"Dacă ``kid`` este ID-ul cheii NetHSM, semnătura a fost generată în "
+"interiorul HSM-ului. De asemenea, puteți verifica în paralel jurnalul "
+"NetHSM, care ar trebui să afișeze o apelare corespunzătoare."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "Plan în cazul în care NetHSM nu este disponibil"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
@@ -5326,6 +5405,9 @@ msgid ""
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
 msgstr ""
+"Dacă nu se poate stabili conexiunea cu NetHSM și nu există metadate ale "
+"cheilor stocate în cache, domeniul nu dispune de chei utilizabile, iar "
+"emiterea tokenului eșuează, fără a se recurge la o cheie software generată."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5334,6 +5416,10 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"Dacă algoritmul de semnătură implicit al unui domeniu este asigurat de "
+"cheile NetHSM, iar NetHSM devine inaccesibil, nu se pot emite nici token-uri "
+"administrative pentru domeniul respectiv. În acest caz, API-ul de "
+"administrare nu este disponibil pentru remedierea problemei."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5341,6 +5427,9 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"Recuperarea se realizează prin configurarea serverului, nu prin consola de "
+"administrare: setați ``spi-keys--nethsm--on-unavailable=degrade`` și "
+"reporniți serverul sau dezactivați componenta."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
@@ -5348,6 +5437,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
+"Din acest motiv, configurați mai întâi un domeniu de testare și lăsați "
+"domeniul ``master`` să utilizeze cheile generate automat de Keycloak, astfel "
+"încât consola de administrare să rămână accesibilă."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -43416,4 +43508,3 @@ msgstr "Marcaj decupat Ieșire"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Instalare Windows"
-
