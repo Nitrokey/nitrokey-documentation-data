@@ -9,17 +9,18 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-03 16:50+0000\n"
-"PO-Revision-Date: 2026-10-16 10:51+0000\n"
+"PO-Revision-Date: 2026-11-03 17:00+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/root/lt/>\n"
 "Language: lt\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/root/lt/>\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100"
-" > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > "
-"19)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -4853,7 +4854,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:2
 msgid "Keycloak"
-msgstr ""
+msgstr "Keycloak"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:8
 msgid ""
@@ -4862,16 +4863,23 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
+"Norint naudoti „ `“ „Keycloak“ <https://www.keycloak.org/>`__ kartu su "
+"„NetHSM“, kad privatūs raktai būtų saugiai saugomi „NetHSM“, o „Keycloak“ "
+"galėtų pasirašyti prieigos žetonus ir iššifruoti JWE, reikia įdiegti ir "
+"sukonfigūruoti `šį raktų teikėją <https://github.com/Nitrokey/nethsm-"
+"keycloak>`__ taip, kaip nurodyta toliau:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
-msgstr ""
+msgstr "Informacija apie dirbtinį intelektą"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:13
 msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
+"**Šis paslaugų teikėjas buvo sukurtas ir įvertintas pasitelkiant didelę "
+"dirbtinio intelekto pagalbą.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4883,22 +4891,30 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
+"Paruoškite „NetHSM“ taip, kaip nurodyta toliau. Išsamias instrukcijas rasite "
+"skyriuje „ `“ administravimas <../administration.html>`__."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
+"Jei „NetHSM“ naudoja savarankiškai pasirašytą sertifikatą, užrašykite jo "
+"pirštų atspaudą:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
 "`Create an Operator user <../administration.html#user-management>`__ "
 "dedicated for Keycloak."
 msgstr ""
+"`Sukurkite „Operator“ vartotoją <../administration.html#user-management>`__, "
+"skirtą „Keycloak“ sistemai."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:28
 msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
+"„Keycloak“ plėtinys *aptinka* raktus, tačiau jų nesukuria. `Norimus raktus "
+"<../operation.html#key-management>`__ sukurkite rankiniu būdu:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4909,10 +4925,18 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
+"**Raktų ID** turi prasidėti nuo priešdėlio, kurį pasisavins sritis. "
+"Pasirinkite tinkamą pavadinimo schemą, pavyzdžiui, "
+"``kc-<realm>-<purpose>-<year>`` (pavyzdžiui, ``kc-staff-sig-rs256-2026``, "
+"``kc-partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). Šis ID "
+"tampa ``kid``, kurį skelbia „Keycloak“. Ateityje raktų keitimas atliekamas "
+"pridedant naujus ID, todėl rekomenduojame raktų ID sudėtyje naudoti metus."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
 msgstr ""
+"**Mechanizmai** nustato, kokiems JOSE algoritmams raktas gali būti "
+"naudojamas:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4932,22 +4956,25 @@ msgstr "``EdDSA_Signature``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
+"RS256, RS384, RS512 — nepriklauso nuo naudojamo maišos algoritmo, taigi "
+"vienas raktas tinka visiems trims"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:48
 msgid "PS256 / PS384 / PS512 — only the algorithm the mechanism names"
 msgstr ""
+"PS256 / PS384 / PS512 — tik algoritmas, kurį nurodo mechanizmo pavadinimai"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:49
 msgid "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
-msgstr ""
+msgstr "``EC_P256`` / ``EC_P384`` / ``EC_P521`` + ``ECDSA_Signature``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:50
 msgid "ES256 / ES384 / ES512 — the curve determines the algorithm"
-msgstr ""
+msgstr "ES256 / ES384 / ES512 — kreivė nulemia algoritmą"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:51
 #, fuzzy
@@ -4961,11 +4988,11 @@ msgstr "ECDSA"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:53
 msgid "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
-msgstr ""
+msgstr "``RSA`` + ``RSA_Decryption_OAEP_SHA1`` / ``_SHA256``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:54
 msgid "RSA-OAEP / RSA-OAEP-256, for decrypting inbound JWE"
-msgstr ""
+msgstr "RSA-OAEP / RSA-OAEP-256, skirtas gaunamų JWE iššifravimui"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:58
 #: ../../source/components/nethsm/pkcs11-setup.rst:6
@@ -4990,10 +5017,13 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
+"Atsisiųskite „Keycloak NetHSM“ teikėjo „ `“ JAR failą <https://github.com/"
+"Nitrokey/nethsm-keycloak/releases>`__, išsaugokite jį „Keycloak“ teikėjų "
+"aplanke, pvz., ``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
-msgstr ""
+msgstr "Atkurti paslaugų teikėjų registrą: ``/opt/keycloak/bin/kc.sh build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -5014,10 +5044,14 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
+"Nustatymai gali būti nurodyti faile „ ` “ `conf/keycloak.conf`` arba kaip "
+"aplinkos kintamieji. Abiem atvejais nustatymai yra vienodi; aplinkos "
+"kintamieji turi pirmenybę, todėl nekonfidencialios reikšmės gali būti "
+"saugomos faile, o slaptažodis įterpiamas tik vykdymo metu."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
-msgstr ""
+msgstr "Naudojant „ ` “ `conf/keycloak.conf``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:83
 #, fuzzy
@@ -5030,6 +5064,9 @@ msgid ""
 "supplied from a Docker or Kubernetes secret instead of being written to a"
 " file."
 msgstr ""
+"Tai yra pageidaujamas variantas diegiant konteineriuose, nes slaptažodį "
+"galima gauti iš \"Docker\" arba \"Kubernetes\" paslapties, o ne įrašyti į "
+"failą."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -5039,6 +5076,12 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
+"Aplinkos kintamojo pavadinimas automatiškai sudaromas iš konfigūracijos "
+"rakto: prieš jį pridedamas priešdėlis ``KC_``, pavadinimas paverčiamas "
+"didžiosiomis raidėmis, o kiekvienas ``-`` pakeičiamas į ``_``. Dvigubi "
+"apatiniai brūkšneliai kyla iš rakto struktūros, ``spi-<spi-name>--<provider-"
+"id>--<option>``, kurią šiam plėtiniui sudaro SPI ``keys``, teikėjas "
+"``nethsm`` ir parinkties pavadinimas."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -5057,6 +5100,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
+"Ryšio profilis nuskaitomas tik tada, kai inicijuojama paslaugų teikėjų "
+"gamykla. Paleiskite „Keycloak“ iš naujo."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5068,10 +5113,13 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
+"Prieš konfigūruodami bet kurią sritį, patikrinkite paleidimo žurnalą. Tai "
+"padės atskirti ryšio ar prisijungimo duomenų problemą nuo srities "
+"konfigūracijos problemos."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
-msgstr ""
+msgstr "Sėkmės atveju:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:126
 #, fuzzy
@@ -5091,6 +5139,8 @@ msgstr "Vartotojai"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
+"Nėra pranešimo arba rodomas derinimo pranešimas, kad paslaugos teikėjas "
+"neveikia"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 #, fuzzy
@@ -5099,17 +5149,19 @@ msgstr "``--country`` ``TEXT``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:136
 msgid "``NetHSM is not reachable or not Operational at startup``"
-msgstr ""
+msgstr "``NetHSM is not reachable or not Operational at startup``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:137
 msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
+"Neteisingas adresas, užblokuotas ugniasienės, sertifikato PIN kodas "
+"nesutampa arba „NetHSM“ yra užrakintas arba nekonfigūruotas"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
-msgstr ""
+msgstr "``NetHSM rejected the configured credential with HTTP 401``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:140
 #, fuzzy
@@ -5118,13 +5170,16 @@ msgstr "Vartotojo slaptažodis"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:144
 msgid "Add the provider to a realm"
-msgstr ""
+msgstr "Pridėti paslaugų teikėją prie srities"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:146
 msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
+"Administravimo konsolėje eikite į „ *“ > „Realm Settings“ → „Keys“ → "
+"„Providers“*, pasirinkite „ **“, spustelėkite „Add provider“** ir "
+"pasirinkite „ ` “ `nethsm``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5133,7 +5188,7 @@ msgstr "*Užrakinta*"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:154
 msgid "Meaning"
-msgstr ""
+msgstr "Reikšmė"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:155
 #, fuzzy
@@ -5142,7 +5197,7 @@ msgstr "Pagrindiniai ID"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:156
 msgid "``sig`` to sign tokens, ``enc`` to decrypt inbound JWE"
-msgstr ""
+msgstr "``sig`` – žetonų pasirašymui, ``enc`` – gaunamų JWE iššifravimui"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:157
 #, fuzzy
@@ -5154,6 +5209,8 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
+"Kiekvienas „NetHSM“ raktas, kurio ID prasideda šia eilute, yra paskelbtas "
+"šioje sferoje"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5164,7 +5221,7 @@ msgstr "Algoritmai"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:160
 msgid "The algorithm these keys are published under"
-msgstr ""
+msgstr "Algoritmas, pagal kurį šie raktų poros yra skelbiamos"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:161
 #, fuzzy
@@ -5173,7 +5230,7 @@ msgstr "Nuosavybė"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:162
 msgid "See `Set the priority above 100`_"
-msgstr ""
+msgstr "Žr. „ `. Nustatykite prioritetą didesnį nei 100`_"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:163
 #, fuzzy
@@ -5182,7 +5239,7 @@ msgstr "Įjungti TLS"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:164
 msgid "Both must be on for a key that should sign"
-msgstr ""
+msgstr "Abu turi būti įjungti, kad raktas galėtų pasirašyti"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:166
 msgid ""
@@ -5191,16 +5248,23 @@ msgid ""
 "components. Keys under the prefix that cannot serve the chosen algorithm "
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
+"Vienas komponentas naudoja vieną algoritmą, atkartodamas „Keycloak“ įdiegtus "
+"raktų teikėjus. Todėl sričiai, kuriai reikalingi tiek RS256, tiek ES256, "
+"reikalingi du komponentai. Raktai su priešdėliu, kurie neatitinka "
+"pasirinktos algoritmo, yra praleidžiami, todėl priešdėlis gali saugiai "
+"atitikti mišrų raktų rinkinį."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
 "Do not point two components at the same key with different algorithms. "
 "Both would publish a JWKS entry under the same ``kid``."
 msgstr ""
+"Nenukreipkite dviejų komponentų į tą patį raktą, naudodami skirtingus "
+"algoritmus. Abu komponentai paskelbtų JWKS įrašą pagal tą patį ``kid``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:178
 msgid "Set the priority above 100"
-msgstr ""
+msgstr "Nustatykite prioritetą didesnį nei 100"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:182
 msgid ""
@@ -5210,14 +5274,21 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
+"Naujai sukurtoje sferoje yra keturi sugeneruoti raktų teikėjai — ``rsa-"
+"generated``, ``rsa-enc-generated``, ``hmac-generated`` ir ``aes-generated`` —"
+" visi su prioritetu **100**. „NetHSM“ komponentas turi turėti aukštesnį "
+"prioritetą, kitaip „Keycloak“ toliau pasirašys sugeneruotu programiniu "
+"raktu, o konfigūracija atrodys veikianti."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
 msgstr ""
+"NetHSM parametrui „ ` “ reikšmė „200` “ yra priimtinas numatytasis "
+"nustatymas."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:191
 msgid "Select the algorithm for the realm"
-msgstr ""
+msgstr "Pasirinkite srities algoritmą"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:193
 msgid ""
@@ -5226,10 +5297,14 @@ msgid ""
 " the component does not publish, Keycloak falls back to a generated key "
 "without reporting an error."
 msgstr ""
+"Nustatykite „ *“ srities parametrus → „Tokens“ → „Default Signature "
+"Algorithm“* taip, kad atitiktų komponente sukonfigūruotą algoritmą. Jei "
+"sritis prašo algoritmo, kurio komponentas neskelbia, „Keycloak“ naudoja "
+"generuotą raktą, nepranešdamas apie klaidą."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
-msgstr ""
+msgstr "Patikrinti"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:201
 #, fuzzy
@@ -5238,13 +5313,15 @@ msgstr "Viešojo rakto įkėlimas"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
-msgstr ""
+msgstr "„ ` “ `kid`` reikšmės turėtų būti „NetHSM“ raktų identifikatoriai."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
 "The conclusive check is an issued token. Request one and decode its "
 "header:"
 msgstr ""
+"Galutinis patikrinimas – tai išduotas žetonas. Paprašykite jo ir "
+"iššifruokite jo antraštę:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:222
 msgid ""
@@ -5252,10 +5329,13 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
+"Jei ``kid`` yra „NetHSM“ rakto identifikatorius, parašas buvo sukurtas HSM "
+"viduje. Taip pat galite lygiagrečiai stebėti „NetHSM“ žurnalą, kuriame "
+"turėtų būti rodomas atitinkamas iškvietimas."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
-msgstr ""
+msgstr "Planas, jei „NetHSM“ neveiks"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:229
 msgid ""
@@ -5263,6 +5343,9 @@ msgid ""
 "no usable keys and token issuance fails, rather than falling back to a "
 "generated software key."
 msgstr ""
+"Jei nepavyksta prisijungti prie „NetHSM“ ir raktų metaduomenų nėra išsaugota "
+"talpykloje, sritis neturi tinkamų naudoti raktų, todėl žetonų išdavimas "
+"nepavyksta, o ne pereina prie generuoto programinio rakto."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5271,6 +5354,10 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
+"Jei srities numatytasis parašo algoritmas yra aptarnaujamas naudojant "
+"„NetHSM“ raktus, o „NetHSM“ tampa nepasiekiamas, taip pat negalima išduoti "
+"tos srities administratorių žetonų. Tokiu atveju administravimo API tampa "
+"neprieinamas, todėl problemos išspręsti neįmanoma."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5278,6 +5365,9 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
+"Atkūrimas atliekamas per serverio konfigūraciją, o ne per administratoriaus "
+"konsolę: nustatykite „ ` “ į „spi-keys--nethsm--on-unavailable=degrade` “ ir "
+"paleiskite iš naujo arba išjunkite komponentą."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
 msgid ""
@@ -5285,6 +5375,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
+"Dėl šios priežasties pirmiausia sukonfigūruokite bandomąją sritį, o sritį „ `"
+" “ `master`` palikite su pačios „Keycloak“ sugeneruotais raktas, kad "
+"administratoriaus konsolė liktų pasiekiama."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -42868,4 +42961,3 @@ msgstr "Pažymėti apkarpytą išvestį"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "\"Windows\" diegimas"
-
