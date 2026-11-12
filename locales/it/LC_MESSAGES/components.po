@@ -29,17 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-03 16:50+0000\n"
+"POT-Creation-Date: 2026-11-12 10:15+0000\n"
 "PO-Revision-Date: 2026-11-10 12:37+0000\n"
 "Last-Translator: Jan Suhr <jan@nitrokey.com>\n"
-"Language-Team: Italian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/it/>\n"
 "Language: it\n"
+"Language-Team: Italian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/root/it/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -879,8 +878,8 @@ msgid ""
 "``-t``, ``--type`` "
 "``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|BrainpoolP384|BrainpoolP512]``"
 msgstr ""
-"``-t``, ``--type`` ``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|Br"
-"ainpoolP384|BrainpoolP512]``"
+"``-t``, ``--type`` "
+"``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|BrainpoolP384|BrainpoolP512]``"
 
 #: ../../source/components/nethsm/administration.rst:279
 msgid "The type for the generated key"
@@ -4914,11 +4913,12 @@ msgid ""
 "access tokens and decrypt JWE, you need to install and configure `this "
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
-"Per poter utilizzare `Keycloak <https://www.keycloak.org/>`__ con NetHSM al "
-"fine di archiviare in modo sicuro le chiavi private in NetHSM, consentendo "
-"al contempo a Keycloak di firmare i token di accesso e decrittografare i "
-"JWE, è necessario installare e configurare `questo provider di chiavi "
-"<https://github.com/Nitrokey/nethsm-keycloak>`__ come segue:"
+"Per poter utilizzare `Keycloak <https://www.keycloak.org/>`__ con NetHSM "
+"al fine di archiviare in modo sicuro le chiavi private in NetHSM, "
+"consentendo al contempo a Keycloak di firmare i token di accesso e "
+"decrittografare i JWE, è necessario installare e configurare `questo "
+"provider di chiavi <https://github.com/Nitrokey/nethsm-keycloak>`__ come "
+"segue:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
@@ -4948,8 +4948,8 @@ msgstr ""
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
 msgstr ""
-"Se NetHSM utilizza un certificato autofirmato, registrare la sua impronta "
-"digitale:"
+"Se NetHSM utilizza un certificato autofirmato, registrare la sua impronta"
+" digitale:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
@@ -4964,8 +4964,8 @@ msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
-"L'estensione Keycloak *rileva le chiavi* ma non le crea. `Crea manualmente "
-"le chiavi desiderate <../operation.html#key-management>`__:"
+"L'estensione Keycloak *rileva le chiavi* ma non le crea. `Crea "
+"manualmente le chiavi desiderate <../operation.html#key-management>`__:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4979,10 +4979,10 @@ msgstr ""
 "**L'ID della chiave** deve iniziare con il prefisso che il realm "
 "rivendicherà. Scegli uno schema di denominazione appropriato, come ad "
 "esempio ``kc-<realm>-<purpose>-<year>`` (ad esempio ``kc-staff-sig-"
-"rs256-2026``, ``kc-partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``)"
-". L'ID diventa l'``kid`` pubblicato da Keycloak. La futura rotazione delle "
-"chiavi viene eseguita aggiungendo nuovi ID; per questo motivo consigliamo di "
-"includere l'anno nell'ID della chiave."
+"rs256-2026``, ``kc-partners-sig-es256-2026``, ``kc-customers-enc-"
+"oaep-2026``). L'ID diventa l'``kid`` pubblicato da Keycloak. La futura "
+"rotazione delle chiavi viene eseguita aggiungendo nuovi ID; per questo "
+"motivo consigliamo di includere l'anno nell'ID della chiave."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
@@ -5008,8 +5008,8 @@ msgstr "``EdDSA_Signature``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
-"RS256, RS384, RS512 — indipendenti dall'algoritmo di hash, quindi un'unica "
-"chiave copre tutti e tre"
+"RS256, RS384, RS512 — indipendenti dall'algoritmo di hash, quindi "
+"un'unica chiave copre tutti e tre"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
@@ -5068,9 +5068,10 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
-"Scarica il file JAR del provider Keycloak NetHSM ` <https://github.com/"
-"Nitrokey/nethsm-keycloak/releases>` __, salvalo nella cartella dei provider "
-"di Keycloak, ad esempio ``/opt/keycloak/providers/``"
+"Scarica il file JAR del provider Keycloak NetHSM ` "
+"<https://github.com/Nitrokey/nethsm-keycloak/releases>` __, salvalo nella"
+" cartella dei provider di Keycloak, ad esempio "
+"``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
@@ -5095,11 +5096,11 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
-"Le impostazioni possono essere specificate nel file ` `` `conf/keycloak."
-"conf`` oppure come variabili d'ambiente. Le due forme corrispondono alle "
-"stesse impostazioni; le variabili d'ambiente hanno la precedenza, quindi i "
-"valori non riservati possono essere contenuti nel file, mentre la passphrase "
-"viene inserita solo in fase di esecuzione."
+"Le impostazioni possono essere specificate nel file ` `` "
+"`conf/keycloak.conf`` oppure come variabili d'ambiente. Le due forme "
+"corrispondono alle stesse impostazioni; le variabili d'ambiente hanno la "
+"precedenza, quindi i valori non riservati possono essere contenuti nel "
+"file, mentre la passphrase viene inserita solo in fase di esecuzione."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
@@ -5129,8 +5130,8 @@ msgid ""
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
 "Il nome della variabile d'ambiente viene ricavato automaticamente dalla "
-"chiave di configurazione: si antepone il prefisso ``KC_``, si converte in "
-"maiuscolo e si sostituisce ogni ``-`` con ``_``. I due trattini bassi "
+"chiave di configurazione: si antepone il prefisso ``KC_``, si converte in"
+" maiuscolo e si sostituisce ogni ``-`` con ``_``. I due trattini bassi "
 "consecutivi derivano dalla struttura della chiave, ``spi-<spi-name"
 ">--<provider-id>--<option>``, che per questa estensione è SPI ``keys``, "
 "provider ``nethsm`` e il nome dell'opzione."
@@ -5152,8 +5153,8 @@ msgid ""
 "The connection profile is only read when the provider factory is "
 "initialized. Restart Keycloak."
 msgstr ""
-"Il profilo di connessione viene letto solo al momento dell'inizializzazione "
-"della factory del provider. Riavvia Keycloak."
+"Il profilo di connessione viene letto solo al momento "
+"dell'inizializzazione della factory del provider. Riavvia Keycloak."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:114
 #, fuzzy
@@ -5165,9 +5166,9 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
-"Controlla il log di avvio prima di configurare qualsiasi realm. In questo "
-"modo è possibile distinguere un problema di connessione o di credenziali da "
-"un problema di configurazione del realm."
+"Controlla il log di avvio prima di configurare qualsiasi realm. In questo"
+" modo è possibile distinguere un problema di connessione o di credenziali"
+" da un problema di configurazione del realm."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
@@ -5208,8 +5209,8 @@ msgid ""
 "Wrong address, blocked by a firewall, certificate pin mismatch, or the "
 "NetHSM is Locked or unprovisioned"
 msgstr ""
-"Indirizzo errato, blocco da parte di un firewall, mancata corrispondenza del "
-"PIN del certificato oppure il NetHSM è bloccato o non configurato"
+"Indirizzo errato, blocco da parte di un firewall, mancata corrispondenza "
+"del PIN del certificato oppure il NetHSM è bloccato o non configurato"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:139
 msgid "``NetHSM rejected the configured credential with HTTP 401``"
@@ -5229,8 +5230,8 @@ msgid ""
 "In the admin console, go to *Realm Settings → Keys → Providers*, choose "
 "**Add provider**, and select ``nethsm``."
 msgstr ""
-"Nella console di amministrazione, vai su *Impostazioni del realm → Chiavi → "
-"Provider*, scegli **Aggiungi provider** e seleziona ``nethsm``."
+"Nella console di amministrazione, vai su *Impostazioni del realm → Chiavi"
+" → Provider*, scegli **Aggiungi provider** e seleziona ``nethsm``."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:153
 #, fuzzy
@@ -5260,8 +5261,8 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
-"Ogni chiave NetHSM il cui ID inizia con questa stringa viene pubblicata da "
-"questo realm"
+"Ogni chiave NetHSM il cui ID inizia con questa stringa viene pubblicata "
+"da questo realm"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5325,11 +5326,11 @@ msgid ""
 " higher priority, otherwise Keycloak continues signing with a generated "
 "software key and the configuration appears to work."
 msgstr ""
-"Un regno appena creato contiene quattro provider di chiavi generati — ``rsa-"
-"generated``, ``rsa-enc-generated``, ``hmac-generated`` e ``aes-generated`` — "
-"tutti con priorità **100**. Il componente NetHSM deve avere una priorità più "
-"alta, altrimenti Keycloak continua a firmare con una chiave software "
-"generata e la configurazione sembra funzionare."
+"Un regno appena creato contiene quattro provider di chiavi generati — "
+"``rsa-generated``, ``rsa-enc-generated``, ``hmac-generated`` e ``aes-"
+"generated`` — tutti con priorità **100**. Il componente NetHSM deve avere"
+" una priorità più alta, altrimenti Keycloak continua a firmare con una "
+"chiave software generata e la configurazione sembra funzionare."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
@@ -5349,9 +5350,9 @@ msgid ""
 "without reporting an error."
 msgstr ""
 "Impostare *Realm Settings → Tokens → Default Signature Algorithm* "
-"sull'algoritmo configurato sul componente. Se il realm richiede un algoritmo "
-"che il componente non pubblica, Keycloak ricorre a una chiave generata senza "
-"segnalare alcun errore."
+"sull'algoritmo configurato sul componente. Se il realm richiede un "
+"algoritmo che il componente non pubblica, Keycloak ricorre a una chiave "
+"generata senza segnalare alcun errore."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
@@ -5365,7 +5366,8 @@ msgstr "Caricare la chiave pubblica"
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
 msgstr ""
-"I valori di ` `` e `kid`` devono corrispondere agli ID delle chiavi NetHSM."
+"I valori di ` `` e `kid`` devono corrispondere agli ID delle chiavi "
+"NetHSM."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
@@ -5381,9 +5383,9 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
-"Se ``kid`` è l'ID della chiave NetHSM, la firma è stata generata all'interno "
-"dell'HSM. È inoltre possibile monitorare contemporaneamente il log di "
-"NetHSM, che dovrebbe riportare una chiamata corrispondente."
+"Se ``kid`` è l'ID della chiave NetHSM, la firma è stata generata "
+"all'interno dell'HSM. È inoltre possibile monitorare contemporaneamente "
+"il log di NetHSM, che dovrebbe riportare una chiamata corrispondente."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
@@ -5407,10 +5409,10 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
-"Se l'algoritmo di firma predefinito di un realm è gestito da chiavi NetHSM e "
-"il NetHSM diventa irraggiungibile, non è possibile emettere nemmeno i token "
-"amministrativi per quel realm. L'API amministrativa risulta quindi "
-"indisponibile per risolvere il problema."
+"Se l'algoritmo di firma predefinito di un realm è gestito da chiavi "
+"NetHSM e il NetHSM diventa irraggiungibile, non è possibile emettere "
+"nemmeno i token amministrativi per quel realm. L'API amministrativa "
+"risulta quindi indisponibile per risolvere il problema."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
 msgid ""
@@ -5418,8 +5420,8 @@ msgid ""
 "set ``spi-keys--nethsm--on-unavailable=degrade`` and restart, or disable "
 "the component."
 msgstr ""
-"Il ripristino avviene tramite la configurazione del server anziché tramite "
-"la console di amministrazione: impostare ``spi-keys--nethsm--on-"
+"Il ripristino avviene tramite la configurazione del server anziché "
+"tramite la console di amministrazione: impostare ``spi-keys--nethsm--on-"
 "unavailable=degrade`` e riavviare, oppure disabilitare il componente."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:242
@@ -5428,9 +5430,9 @@ msgid ""
 "realm on Keycloak's own generated keys, so that the admin console remains"
 " reachable."
 msgstr ""
-"Per questo motivo, configura innanzitutto un realm di prova e lascia che il "
-"realm ``master`` utilizzi le chiavi generate automaticamente da Keycloak, in "
-"modo che la console di amministrazione rimanga accessibile."
+"Per questo motivo, configura innanzitutto un realm di prova e lascia che "
+"il realm ``master`` utilizzi le chiavi generate automaticamente da "
+"Keycloak, in modo che la console di amministrazione rimanga accessibile."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -14329,6 +14331,90 @@ msgstr ""
 "Nitrokey Storage è in grado di creare anche volumi nascosti. Consultare "
 "le istruzioni corrispondenti per i volumi nascosti `<hidden.html>`_."
 
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:2
+#, fuzzy
+msgid "Verify Nitrokey Authenticity"
+msgstr "L'autorità di certificazione"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:8
+msgid ""
+"The Nitrokey 3 and Nitrokey Passkey can be verified to be authentic to "
+"ensure it matches the security expectations."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:11
+msgid "Defining Authenticity for Nitrokeys"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:13
+msgid ""
+"Nitrokeys are provisioned with model-specific attestation keys. These "
+"attestation keys can only be provisioned by Nitrokey. The Nitrokey user "
+"applications like pynitrokey and Nitrokey App 2 offer a mechanism to "
+"cryptographically validate these certificates to ensure the device was "
+"not replaced with a malicious, non-Nitrokey device."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:16
+#, fuzzy
+msgid "Verifying Authenticity"
+msgstr "L'autorità di certificazione"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:19
+#, fuzzy
+msgid "With ``nitropy``"
+msgstr "Esegui ``nitropy nk3 update``."
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:21
+msgid ""
+"Connect the Nitrokey and run ``nitropy nk3 test`` or ``nitropy nkpk "
+"test`` for Nitrokey 3 or Nitrokey Passkey respectively. The FIDO2 test "
+"includes the verification test. If the key passes the test, it would "
+"imply the key is authentic."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:38
+msgid "The test ``FIDO2`` here is successful showing the device is authentic."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:41
+#, fuzzy
+msgid "With Nitrokey App 2"
+msgstr "Nitrokey App 2"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:43
+msgid ""
+"The ``Overview`` tab of Nitrokey App 2 offers to check for the "
+"authenticity of the device when it is connected."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:45
+#, fuzzy
+msgid "Overview tab"
+msgstr "Panoramica"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:48
+msgid ""
+"Clicking the ``Check for Authenticity`` validates the attestation "
+"certificate and shows the result."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:50
+#, fuzzy
+msgid "Verification successful"
+msgstr "TESTE: Verifica HOTP riuscita"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:54
+msgid "Note for Hacker Devices"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:56
+msgid ""
+"Nitrokey Hacker devices provisioned with the hacker certificate would "
+"fail the authenticity check. However, the failure reason (shown as a "
+"tool-tip in Nitrokey App 2) explicitly mentions when it is so."
+msgstr ""
+
 #: ../../source/components/nitrokeys/features/fido2/index.rst:6
 msgid "Website Login"
 msgstr "Accesso al sito web"
@@ -14356,6 +14442,11 @@ msgstr "Chiavi dell'elenco"
 #: ../../source/components/nitrokeys/features/fido2/provision-entra.rst:2
 msgid "Nitrokey Provisioning for Entra ID"
 msgstr "Configurazione di Nitrokey per Entra ID"
+
+#: ../../source/components/nitrokeys/features/fido2/index.rst:6
+#, fuzzy
+msgid "Authenticity Verification"
+msgstr "Autenticazione"
 
 #: ../../source/components/nitrokeys/features/fido2/index.rst:2
 #: ../../source/components/nitrokeys/features/index.rst:4
@@ -43389,3 +43480,4 @@ msgstr "Contrassegnare l'uscita ritagliata"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Installazione di Windows"
+

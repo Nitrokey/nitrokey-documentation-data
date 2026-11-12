@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-03 16:50+0000\n"
+"POT-Creation-Date: 2026-11-12 10:15+0000\n"
 "PO-Revision-Date: 2026-11-10 12:37+0000\n"
 "Last-Translator: Jan Suhr <jan@nitrokey.com>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/root/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/root/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: ../../source/components/nethsm/administration.rst:2
@@ -862,8 +861,8 @@ msgid ""
 "``-t``, ``--type`` "
 "``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|BrainpoolP384|BrainpoolP512]``"
 msgstr ""
-"``-t``, ``--type`` ``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|Br"
-"ainpoolP384|BrainpoolP512]``"
+"``-t``, ``--type`` "
+"``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|BrainpoolP384|BrainpoolP512]``"
 
 #: ../../source/components/nethsm/administration.rst:279
 msgid "The type for the generated key"
@@ -4907,10 +4906,10 @@ msgid ""
 "key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:"
 msgstr ""
 "За да използвате `Keycloak <https://www.keycloak.org/>`__ с NetHSM за "
-"сигурно съхранение на частни ключове в NetHSM, като същевременно позволите "
-"на Keycloak да подписва токени за достъп и да декриптира JWE, трябва да "
-"инсталирате и конфигурирате `този доставчик на ключове <https://github.com/"
-"Nitrokey/nethsm-keycloak>`__, както следва:"
+"сигурно съхранение на частни ключове в NetHSM, като същевременно "
+"позволите на Keycloak да подписва токени за достъп и да декриптира JWE, "
+"трябва да инсталирате и конфигурирате `този доставчик на ключове "
+"<https://github.com/Nitrokey/nethsm-keycloak>`__, както следва:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:11
 msgid "AI Disclosure"
@@ -4921,8 +4920,8 @@ msgid ""
 "**This provider was developed and reviewed with substantial AI "
 "assistance.**"
 msgstr ""
-"**Този доставчик е разработен и прегледан със значителна помощ от изкуствен "
-"интелект.**"
+"**Този доставчик е разработен и прегледан със значителна помощ от "
+"изкуствен интелект.**"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:16
 #, fuzzy
@@ -4934,13 +4933,12 @@ msgid ""
 "Prepare the NetHSM as follows. Refer to section `administration "
 "<../administration.html>`__ for detailed instructions."
 msgstr ""
-"Подгответе NetHSM по следния начин. За подробни инструкции вижте раздела „"
-"Администриране на `“ <../administration.html>`__."
+"Подгответе NetHSM по следния начин. За подробни инструкции вижте раздела "
+"„Администриране на `“ <../administration.html>`__."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:20
 msgid "If NetHSM uses a self-signed certificate, record its fingerprint:"
-msgstr ""
-"Ако NetHSM използва самоподписан сертификат, запишете неговия отпечатък:"
+msgstr "Ако NetHSM използва самоподписан сертификат, запишете неговия отпечатък:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:27
 msgid ""
@@ -4955,8 +4953,8 @@ msgid ""
 "The Keycloak extension *discovers* keys but doesn't create them. `Create "
 "the desired keys <../operation.html#key-management>`__ manually:"
 msgstr ""
-"Разширението Keycloak *открива ключове от типа*, но не ги създава. `Създайте "
-"желаните ключове <../operation.html#key-management>`__ ръчно:"
+"Разширението Keycloak *открива ключове от типа*, но не ги създава. "
+"`Създайте желаните ключове <../operation.html#key-management>`__ ръчно:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:30
 msgid ""
@@ -4967,18 +4965,20 @@ msgid ""
 " publishes. Future key rotation is performed by adding new IDs which is "
 "why we suggest to use the year as part of the key ID."
 msgstr ""
-"**Идентификаторът на ключа** трябва да започва с префикса, който реалмът ще "
-"използва. Изберете подходяща схема за именуване, като например "
-"``kc-<realm>-<purpose>-<year>`` (например ``kc-staff-sig-rs256-2026``, ``kc-"
-"partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). Идентификаторът "
-"се превръща в ``kid``, който Keycloak публикува. Бъдещата ротация на "
-"ключовете се извършва чрез добавяне на нови идентификатори, поради което "
-"препоръчваме да използвате годината като част от идентификатора на ключа."
+"**Идентификаторът на ключа** трябва да започва с префикса, който реалмът "
+"ще използва. Изберете подходяща схема за именуване, като например "
+"``kc-<realm>-<purpose>-<year>`` (например ``kc-staff-sig-rs256-2026``, "
+"``kc-partners-sig-es256-2026``, ``kc-customers-enc-oaep-2026``). "
+"Идентификаторът се превръща в ``kid``, който Keycloak публикува. Бъдещата"
+" ротация на ключовете се извършва чрез добавяне на нови идентификатори, "
+"поради което препоръчваме да използвате годината като част от "
+"идентификатора на ключа."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:37
 msgid "**The mechanisms** determine which JOSE algorithms the key can serve:"
 msgstr ""
-"**Механизмите** определят за кои алгоритми JOSE може да се използва ключът:"
+"**Механизмите** определят за кои алгоритми JOSE може да се използва "
+"ключът:"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:43
 #, fuzzy
@@ -4998,8 +4998,8 @@ msgstr "``EdDSA_Signature``"
 #: ../../source/components/nethsm/compatible/keycloak.rst:46
 msgid "RS256, RS384, RS512 — hash-agnostic, so one key covers all three"
 msgstr ""
-"RS256, RS384, RS512 — независими от хеш-алгоритъма, така че един ключ важи "
-"за всичките три"
+"RS256, RS384, RS512 — независими от хеш-алгоритъма, така че един ключ "
+"важи за всичките три"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:47
 msgid "``RSA`` + ``RSA_Signature_PSS_SHA256`` / ``_SHA384`` / ``_SHA512``"
@@ -5060,14 +5060,16 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-keycloak/releases>`__, save it in "
 "Keycloak's provider folder e.g. ``/opt/keycloak/providers/``"
 msgstr ""
-"Изтеглете JAR файла на NetHSM доставчика за Keycloak ` <https://github.com/"
-"Nitrokey/nethsm-keycloak/releases>` __, запазете го в папката с доставчиците "
-"на Keycloak, например ``/opt/keycloak/providers/``"
+"Изтеглете JAR файла на NetHSM доставчика за Keycloak ` "
+"<https://github.com/Nitrokey/nethsm-keycloak/releases>` __, запазете го в"
+" папката с доставчиците на Keycloak, например "
+"``/opt/keycloak/providers/``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:62
 msgid "Rebuild the provider registry: ``/opt/keycloak/bin/kc.sh build``"
 msgstr ""
-"Преизграждане на регистъра на доставчиците: ``/opt/keycloak/bin/kc.sh build``"
+"Преизграждане на регистъра на доставчиците: ``/opt/keycloak/bin/kc.sh "
+"build``"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:66
 #: ../../source/components/nethsm/container/production-image.rst:37
@@ -5088,11 +5090,11 @@ msgid ""
 "take precedence, so non-secret values can live in the file with only the "
 "passphrase injected at runtime."
 msgstr ""
-"Настройките могат да бъдат зададени или във файла ``conf/keycloak.conf``, "
-"или като променливи на средата. Двете форми представляват едни и същи "
+"Настройките могат да бъдат зададени или във файла ``conf/keycloak.conf``,"
+" или като променливи на средата. Двете форми представляват едни и същи "
 "настройки; променливите на средата имат предимство, така че стойностите, "
-"които не са поверителни, могат да се съхраняват във файла, като паролата се "
-"добавя едва по време на изпълнение."
+"които не са поверителни, могат да се съхраняват във файла, като паролата "
+"се добавя едва по време на изпълнение."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:73
 msgid "Using ``conf/keycloak.conf``"
@@ -5110,8 +5112,8 @@ msgid ""
 " file."
 msgstr ""
 "Предпочита се при разгръщане в контейнери, тъй като паролата може да се "
-"предостави чрез секретен ключ на Docker или Kubernetes, вместо да се записва "
-"във файл."
+"предостави чрез секретен ключ на Docker или Kubernetes, вместо да се "
+"записва във файл."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:97
 msgid ""
@@ -5121,11 +5123,12 @@ msgid ""
 "key's structure, ``spi-<spi-name>--<provider-id>--<option>``, which for "
 "this extension is SPI ``keys``, provider ``nethsm``, and the option name."
 msgstr ""
-"Името на променливата на средата се извлича автоматично от конфигурационния "
-"ключ: добавя се префиксът ``KC_``, преобразува се в главни букви и всяко "
-"``-`` се заменя с ``_``. Двойните подчертания произтичат от структурата на "
-"ключа, ``spi-<spi-name>--<provider-id>--<option>``, която за това разширение "
-"е SPI ``keys``, доставчик ``nethsm`` и името на опцията."
+"Името на променливата на средата се извлича автоматично от "
+"конфигурационния ключ: добавя се префиксът ``KC_``, преобразува се в "
+"главни букви и всяко ``-`` се заменя с ``_``. Двойните подчертания "
+"произтичат от структурата на ключа, ``spi-<spi-name>--<provider-"
+"id>--<option>``, която за това разширение е SPI ``keys``, доставчик "
+"``nethsm`` и името на опцията."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:103
 #, fuzzy
@@ -5157,9 +5160,9 @@ msgid ""
 "Check the startup log before configuring any realm. This separates a "
 "connection or credential problem from a realm configuration problem."
 msgstr ""
-"Преди да конфигурирате която и да е област, проверете лога за стартиране. "
-"Това позволява да се разграничи проблем с връзката или с данните за достъп "
-"от проблем с конфигурацията на областта."
+"Преди да конфигурирате която и да е област, проверете лога за стартиране."
+" Това позволява да се разграничи проблем с връзката или с данните за "
+"достъп от проблем с конфигурацията на областта."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:119
 msgid "On success:"
@@ -5183,8 +5186,8 @@ msgstr "Потребители"
 #: ../../source/components/nethsm/compatible/keycloak.rst:134
 msgid "No message, or a debug line stating the provider is inactive"
 msgstr ""
-"Липсва съобщение или се показва отладочен ред, който посочва, че доставчикът "
-"е неактивен"
+"Липсва съобщение или се показва отладочен ред, който посочва, че "
+"доставчикът е неактивен"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:135
 msgid "``url`` is not set"
@@ -5252,8 +5255,8 @@ msgid ""
 "Every NetHSM key whose ID begins with this string is published by this "
 "realm"
 msgstr ""
-"Всеки ключ NetHSM, чийто идентификатор започва с този низ, се публикува от "
-"тази реалма"
+"Всеки ключ NetHSM, чийто идентификатор започва с този низ, се публикува "
+"от тази реалма"
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:159
 #: ../../source/components/nitrokeys/features/openpgp-card/openpgp-keygen-on-device.rst:195
@@ -5292,10 +5295,11 @@ msgid ""
 "are skipped, so a prefix may safely match a mixed set of keys."
 msgstr ""
 "Всеки компонент поддържа един алгоритъм, което отразява вградените "
-"доставчици на ключове в Keycloak. Следователно, една реалма, която се нуждае "
-"както от RS256, така и от ES256, разполага с два компонента. Ключовете под "
-"даден префикс, които не поддържат избрания алгоритъм, се пропускат, така че "
-"един префикс може спокойно да съответства на смесен набор от ключове."
+"доставчици на ключове в Keycloak. Следователно, една реалма, която се "
+"нуждае както от RS256, така и от ES256, разполага с два компонента. "
+"Ключовете под даден префикс, които не поддържат избрания алгоритъм, се "
+"пропускат, така че един префикс може спокойно да съответства на смесен "
+"набор от ключове."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:173
 msgid ""
@@ -5319,9 +5323,9 @@ msgid ""
 msgstr ""
 "В новосъздаденото царство има четири генерирани доставчика на ключове — "
 "``rsa-generated``, ``rsa-enc-generated``, ``hmac-generated`` и ``aes-"
-"generated`` — всички с приоритет **100**. Компонентът NetHSM трябва да има "
-"по-висок приоритет, в противен случай Keycloak продължава да подписва с "
-"генериран софтуерен ключ и конфигурацията изглежда, че работи."
+"generated`` — всички с приоритет **100**. Компонентът NetHSM трябва да "
+"има по-висок приоритет, в противен случай Keycloak продължава да подписва"
+" с генериран софтуерен ключ и конфигурацията изглежда, че работи."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:187
 msgid "A value of ``200`` for NetHSM is a reasonable default."
@@ -5339,9 +5343,10 @@ msgid ""
 "without reporting an error."
 msgstr ""
 "Задайте в „ *“ (Настройки на реалма) → „Tokens“ (Токени) → „Default "
-"Signature Algorithm“ (Алгоритъм за подпис по подразбиране)* на алгоритъма, "
-"конфигуриран в компонента. Ако реалмът изисква алгоритъм, който компонентът "
-"не публикува, Keycloak ще използва генериран ключ, без да отчита грешка."
+"Signature Algorithm“ (Алгоритъм за подпис по подразбиране)* на "
+"алгоритъма, конфигуриран в компонента. Ако реалмът изисква алгоритъм, "
+"който компонентът не публикува, Keycloak ще използва генериран ключ, без "
+"да отчита грешка."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:199
 msgid "Verify"
@@ -5355,8 +5360,8 @@ msgstr "Качване на публичния ключ"
 #: ../../source/components/nethsm/compatible/keycloak.rst:207
 msgid "The ``kid`` values should be the NetHSM key IDs."
 msgstr ""
-"Стойностите в ` `` и `kid`` трябва да бъдат идентификаторите на ключовете "
-"NetHSM."
+"Стойностите в ` `` и `kid`` трябва да бъдат идентификаторите на ключовете"
+" NetHSM."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:209
 msgid ""
@@ -5372,9 +5377,9 @@ msgid ""
 "HSM. You could also watch NetHSM's log in parallel which should show an "
 "appropriate call."
 msgstr ""
-"Ако ``kid`` е идентификаторът на ключа на NetHSM, подписът е бил генериран "
-"вътре в HSM. Можете също така да следите паралелно лога на NetHSM, където би "
-"трябвало да се покаже съответното извикване."
+"Ако ``kid`` е идентификаторът на ключа на NetHSM, подписът е бил "
+"генериран вътре в HSM. Можете също така да следите паралелно лога на "
+"NetHSM, където би трябвало да се покаже съответното извикване."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:227
 msgid "Plan for NetHSM being unavailable"
@@ -5387,8 +5392,8 @@ msgid ""
 "generated software key."
 msgstr ""
 "Ако NetHSM е недостъпен и в кеша няма метаданни за ключове, реалмът не "
-"разполага с използваеми ключове и издаването на токени се проваля, вместо да "
-"се премине към генериран софтуерен ключ."
+"разполага с използваеми ключове и издаването на токени се проваля, вместо"
+" да се премине към генериран софтуерен ключ."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:235
 msgid ""
@@ -5397,9 +5402,9 @@ msgid ""
 "be issued either. The admin API is then unavailable for fixing the "
 "problem."
 msgstr ""
-"Ако алгоритъмът за подпис по подразбиране на дадена област се обслужва от "
-"ключове NetHSM и достъпът до NetHSM бъде прекъснат, административните токени "
-"за тази област също не могат да бъдат издадени. В такъв случай "
+"Ако алгоритъмът за подпис по подразбиране на дадена област се обслужва от"
+" ключове NetHSM и достъпът до NetHSM бъде прекъснат, административните "
+"токени за тази област също не могат да бъдат издадени. В такъв случай "
 "административният API не е достъпен за отстраняване на проблема."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:239
@@ -5419,8 +5424,8 @@ msgid ""
 " reachable."
 msgstr ""
 "Поради тази причина първо конфигурирайте тестова реалм и оставете реалма "
-"``master`` да използва ключовете, генерирани от самата Keycloak, за да може "
-"администраторската конзола да остане достъпна."
+"``master`` да използва ключовете, генерирани от самата Keycloak, за да "
+"може администраторската конзола да остане достъпна."
 
 #: ../../source/components/nethsm/compatible/keycloak.rst:247
 #, fuzzy
@@ -14274,6 +14279,90 @@ msgstr ""
 "Nitrokey Storage може да създава и скрити томове. Моля, разгледайте "
 "съответните инструкции за `скрити томове <hidden.html>`_."
 
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:2
+#, fuzzy
+msgid "Verify Nitrokey Authenticity"
+msgstr "Органът за издаване на удостоверения"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:8
+msgid ""
+"The Nitrokey 3 and Nitrokey Passkey can be verified to be authentic to "
+"ensure it matches the security expectations."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:11
+msgid "Defining Authenticity for Nitrokeys"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:13
+msgid ""
+"Nitrokeys are provisioned with model-specific attestation keys. These "
+"attestation keys can only be provisioned by Nitrokey. The Nitrokey user "
+"applications like pynitrokey and Nitrokey App 2 offer a mechanism to "
+"cryptographically validate these certificates to ensure the device was "
+"not replaced with a malicious, non-Nitrokey device."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:16
+#, fuzzy
+msgid "Verifying Authenticity"
+msgstr "Органът за издаване на удостоверения"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:19
+#, fuzzy
+msgid "With ``nitropy``"
+msgstr "Изпълнете ``nitropy nk3 update``."
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:21
+msgid ""
+"Connect the Nitrokey and run ``nitropy nk3 test`` or ``nitropy nkpk "
+"test`` for Nitrokey 3 or Nitrokey Passkey respectively. The FIDO2 test "
+"includes the verification test. If the key passes the test, it would "
+"imply the key is authentic."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:38
+msgid "The test ``FIDO2`` here is successful showing the device is authentic."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:41
+#, fuzzy
+msgid "With Nitrokey App 2"
+msgstr "Приложение Nitrokey 2"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:43
+msgid ""
+"The ``Overview`` tab of Nitrokey App 2 offers to check for the "
+"authenticity of the device when it is connected."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:45
+#, fuzzy
+msgid "Overview tab"
+msgstr "Преглед"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:48
+msgid ""
+"Clicking the ``Check for Authenticity`` validates the attestation "
+"certificate and shows the result."
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:50
+#, fuzzy
+msgid "Verification successful"
+msgstr "ГЛАВИ: Проверката на HOTP е успешна"
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:54
+msgid "Note for Hacker Devices"
+msgstr ""
+
+#: ../../source/components/nitrokeys/features/fido2/authenticity.rst:56
+msgid ""
+"Nitrokey Hacker devices provisioned with the hacker certificate would "
+"fail the authenticity check. However, the failure reason (shown as a "
+"tool-tip in Nitrokey App 2) explicitly mentions when it is so."
+msgstr ""
+
 #: ../../source/components/nitrokeys/features/fido2/index.rst:6
 msgid "Website Login"
 msgstr "Вход в уебсайта"
@@ -14301,6 +14390,11 @@ msgstr "Списък с ключове"
 #: ../../source/components/nitrokeys/features/fido2/provision-entra.rst:2
 msgid "Nitrokey Provisioning for Entra ID"
 msgstr "Настройка на Nitrokey за Entra ID"
+
+#: ../../source/components/nitrokeys/features/fido2/index.rst:6
+#, fuzzy
+msgid "Authenticity Verification"
+msgstr "Удостоверяване"
 
 #: ../../source/components/nitrokeys/features/fido2/index.rst:2
 #: ../../source/components/nitrokeys/features/index.rst:4
@@ -43330,3 +43424,4 @@ msgstr "Маркирайте изрязаното Изход"
 
 #~ msgid "PIV (Windows only)"
 #~ msgstr "Инсталиране на Windows"
+
