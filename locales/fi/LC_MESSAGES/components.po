@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-25 11:40+0000\n"
-"PO-Revision-Date: 2026-11-20 22:11+0000\n"
+"PO-Revision-Date: 2026-11-25 11:48+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: fi\n"
 "Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../source/components/nethsm/administration.rst:2
 msgid "Administration"
@@ -1046,6 +1047,9 @@ msgid ""
 "certificate>`__, but instead of `--api`, use `--cluster`, and instead of "
 "`/config/tls` use `/cluster/tls`."
 msgstr ""
+"Noudata ohjeita, jotka löytyvät sivulta `TLS Certificate "
+"<administration.html#tls-certificate>`__, mutta käytä `--api`:n sijaan `--"
+"cluster`:ia ja `/config/tls`:n sijaan `/cluster/tls`:ia."
 
 #: ../../source/components/nethsm/administration.rst:372
 msgid ""
@@ -1055,12 +1059,19 @@ msgid ""
 "backward compatibility during a cluster upgrade. A newly provisioned "
 "NetHSM will have distinct TLS API and Cluster keys."
 msgstr ""
+"Tarvittaessa luo TLS-klusteriavain uudelleen kaikissa NetHSM-solmuissa, "
+"jotka haluat liittää klusteriin. Kun päivität ohjelmistoversiosta 5.0 tai "
+"vanhemmasta, TLS-klusteriavain on sama kuin TLS-API-avain taaksepäin "
+"yhteensopivuuden varmistamiseksi klusterin päivityksen aikana. Äskettäin "
+"käyttöönotetulla NetHSM-laitteella on erilliset TLS-API- ja klusteriavaimet."
 
 #: ../../source/components/nethsm/administration.rst:376
 msgid ""
 "Regenerating the key can only be done if a Cluster CA has not been "
 "installed, so it is recommended to perform this step first:"
 msgstr ""
+"Avainta voidaan luoda uudelleen vain, jos klusterin varmentajaa ei ole "
+"asennettu, joten on suositeltavaa suorittaa tämä vaihe ensin:"
 
 #: ../../source/components/nethsm/administration.rst:378
 #, fuzzy
@@ -1094,7 +1105,7 @@ msgstr "Varmenteen allekirjoituspyyntö (CSR) voidaan luoda seuraavasti."
 
 #: ../../source/components/nethsm/administration.rst:414
 msgid "Option                               | Description"
-msgstr ""
+msgstr "Vaihtoehto                               | Kuvaus"
 
 #: ../../source/components/nethsm/administration.rst:416
 #, fuzzy
@@ -1105,7 +1116,7 @@ msgstr "Luo CSR NetHSM TLS -sertifikaattia varten."
 
 #: ../../source/components/nethsm/administration.rst:418
 msgid "``--country`` ``TEXT``               | The country name"
-msgstr ""
+msgstr "``--country`` ``TEXT``               | Maan nimi"
 
 #: ../../source/components/nethsm/administration.rst:420
 #, fuzzy
@@ -1114,7 +1125,7 @@ msgstr "``--state-or-province`` ``TEXT``"
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``--locality`` ``TEXT``              | The locality name"
-msgstr ""
+msgstr "``--locality`` ``TEXT``              | Paikkakunnan nimi"
 
 #: ../../source/components/nethsm/administration.rst:424
 #, fuzzy
@@ -1128,7 +1139,7 @@ msgstr "``--organizational-unit`` ``TEXT``"
 
 #: ../../source/components/nethsm/administration.rst:428
 msgid "``--common-name`` ``TEXT``           | The common name (required)"
-msgstr ""
+msgstr "``--common-name`` ``TEXT``           | Yleisnimi (pakollinen)"
 
 #: ../../source/components/nethsm/administration.rst:430
 #, fuzzy
@@ -1137,7 +1148,7 @@ msgstr "``--email-address`` ``TEXT``"
 
 #: ../../source/components/nethsm/administration.rst:432
 msgid "``--san`` ``IP:A.B.C.D``             | The subject Alternative Names"
-msgstr ""
+msgstr "``--san`` ``IP:A.B.C.D``             | Aihe: Vaihtoehtoiset nimet"
 
 #: ../../source/components/nethsm/administration.rst:452
 #, fuzzy
@@ -1155,14 +1166,16 @@ msgid ""
 "Ask your CA to sign the CSR. If you are using a self-signed then assuming"
 " the CSR is in `nethsm.csr`:"
 msgstr ""
+"Pyydä varmentajaasi allekirjoittamaan CSR. Jos käytät itse allekirjoitettua "
+"varmennetta, oletetaan, että CSR sijaitsee tiedostossa `nethsm.csr`:"
 
 #: ../../source/components/nethsm/administration.rst:462
 msgid "install the obtained ``new_cert.pem``"
-msgstr ""
+msgstr "asenna ladattu tiedosto ``new_cert.pem``"
 
 #: ../../source/components/nethsm/administration.rst:469
 msgid "Option                | Description"
-msgstr ""
+msgstr "Vaihtoehto                | Kuvaus"
 
 #: ../../source/components/nethsm/administration.rst:471
 #, fuzzy
@@ -1187,6 +1200,8 @@ msgid ""
 "install the CA certificate (must be done after installing the signed "
 "certificate, or you'll get an error)"
 msgstr ""
+"asenna varmentajan varmenne (tämä on tehtävä allekirjoitetun varmenteen "
+"asennuksen jälkeen, muuten saat virheilmoituksen)"
 
 #: ../../source/components/nethsm/administration.rst:499
 #: ../../source/components/nethsm/clustering.rst:204
@@ -42930,4 +42945,3 @@ msgstr "Merkitse rajattu tuotos"
 #~ "`API-dokumentaatiosta "
 #~ "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 #~ "/POST_config-tls-csr-pem>`__."
-

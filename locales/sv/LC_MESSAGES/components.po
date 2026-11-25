@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-11-25 11:40+0000\n"
-"PO-Revision-Date: 2026-11-20 22:11+0000\n"
+"PO-Revision-Date: 2026-11-25 11:49+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language: sv\n"
 "Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: ../../source/components/nethsm/administration.rst:2
 msgid "Administration"
@@ -1052,6 +1053,9 @@ msgid ""
 "certificate>`__, but instead of `--api`, use `--cluster`, and instead of "
 "`/config/tls` use `/cluster/tls`."
 msgstr ""
+"Följ anvisningarna i `TLS-certifikat <administration.html#tls-certificate>"
+"`__, men använd `--cluster` istället för `--api` och `/cluster/tls` istället "
+"för `/config/tls`."
 
 #: ../../source/components/nethsm/administration.rst:372
 msgid ""
@@ -1061,12 +1065,19 @@ msgid ""
 "backward compatibility during a cluster upgrade. A newly provisioned "
 "NetHSM will have distinct TLS API and Cluster keys."
 msgstr ""
+"Om så önskas bör du generera en ny TLS-klusternyckel på alla NetHSM-noder "
+"som ska ingå i klustret. Vid uppgradering från programvaruversion 5.0 eller "
+"äldre kommer TLS-klusternyckeln att vara identisk med TLS-API-nyckeln för "
+"bakåtkompatibilitet under klusteruppgraderingen. En nyinstallerad NetHSM har "
+"separata TLS-API- och klusternycklar."
 
 #: ../../source/components/nethsm/administration.rst:376
 msgid ""
 "Regenerating the key can only be done if a Cluster CA has not been "
 "installed, so it is recommended to perform this step first:"
 msgstr ""
+"Nygenerering av nyckeln kan endast utföras om inget kluster-CA har "
+"installerats, därför rekommenderas det att utföra detta steg först:"
 
 #: ../../source/components/nethsm/administration.rst:378
 #, fuzzy
@@ -1102,7 +1113,7 @@ msgstr ""
 
 #: ../../source/components/nethsm/administration.rst:414
 msgid "Option                               | Description"
-msgstr ""
+msgstr "Alternativ                               | Beskrivning"
 
 #: ../../source/components/nethsm/administration.rst:416
 #, fuzzy
@@ -1113,7 +1124,7 @@ msgstr "Generera en CSR för NetHSM TLS-certifikatet"
 
 #: ../../source/components/nethsm/administration.rst:418
 msgid "``--country`` ``TEXT``               | The country name"
-msgstr ""
+msgstr "``--country`` ``TEXT``               | Landets namn"
 
 #: ../../source/components/nethsm/administration.rst:420
 #, fuzzy
@@ -1122,7 +1133,7 @@ msgstr "``--state-or-province`` ``TEXT``"
 
 #: ../../source/components/nethsm/administration.rst:422
 msgid "``--locality`` ``TEXT``              | The locality name"
-msgstr ""
+msgstr "``--locality`` ``TEXT``              | Ortens namn"
 
 #: ../../source/components/nethsm/administration.rst:424
 #, fuzzy
@@ -1137,6 +1148,7 @@ msgstr "``--organizational-unit`` ``TEXT``"
 #: ../../source/components/nethsm/administration.rst:428
 msgid "``--common-name`` ``TEXT``           | The common name (required)"
 msgstr ""
+"``--common-name`` ``TEXT``           | Det vanliga namnet (obligatoriskt)"
 
 #: ../../source/components/nethsm/administration.rst:430
 #, fuzzy
@@ -1145,7 +1157,7 @@ msgstr "``--email-address`` ``TEXT``"
 
 #: ../../source/components/nethsm/administration.rst:432
 msgid "``--san`` ``IP:A.B.C.D``             | The subject Alternative Names"
-msgstr ""
+msgstr "``--san`` ``IP:A.B.C.D``             | Ämne: Alternativa namn"
 
 #: ../../source/components/nethsm/administration.rst:452
 #, fuzzy
@@ -1164,14 +1176,16 @@ msgid ""
 "Ask your CA to sign the CSR. If you are using a self-signed then assuming"
 " the CSR is in `nethsm.csr`:"
 msgstr ""
+"Be din certifikatutfärdare att signera CSR:en. Om du använder ett "
+"självsignerat certifikat och antar att CSR:en finns i `nethsm.csr`:"
 
 #: ../../source/components/nethsm/administration.rst:462
 msgid "install the obtained ``new_cert.pem``"
-msgstr ""
+msgstr "Installera den hämtade filen ``new_cert.pem``"
 
 #: ../../source/components/nethsm/administration.rst:469
 msgid "Option                | Description"
-msgstr ""
+msgstr "Alternativ                | Beskrivning"
 
 #: ../../source/components/nethsm/administration.rst:471
 #, fuzzy
@@ -1197,6 +1211,8 @@ msgid ""
 "install the CA certificate (must be done after installing the signed "
 "certificate, or you'll get an error)"
 msgstr ""
+"Installera CA-certifikatet (detta måste göras efter att det signerade "
+"certifikatet har installerats, annars uppstår ett fel)"
 
 #: ../../source/components/nethsm/administration.rst:499
 #: ../../source/components/nethsm/clustering.rst:204
@@ -42926,4 +42942,3 @@ msgstr "Mark cropped Output"
 #~ "finns i `API-dokumentationen "
 #~ "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 #~ "/POST_config-tls-csr-pem>`__."
-
